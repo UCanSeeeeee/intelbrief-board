@@ -1,5 +1,20 @@
 # intelbrief-board · 简报 Brief
 
+## 当前状态 / Current status
+
+| | |
+|--|--|
+| **Live URL** | https://intelbrief-board.pages.dev |
+| **Repo** | https://github.com/UCanSeeeeee/intelbrief-board （**PRIVATE** · owner `UCanSeeeeee`） |
+| **Hosting** | Cloudflare Pages · project `intelbrief-board` · free `*.pages.dev` · **no custom domain** |
+| **Cloudflare account** | `982304048@qq.com` · account id `654fc092fc71c4dc81184933d5b808b9` |
+| **Data mode** | `placeholder`（演示 JSON；live API 仍为 stub） |
+| **AI / 接手文档** | **先读 [`CONTEXT.md`](./CONTEXT.md)** · 短指针见 [`AGENTS.md`](./AGENTS.md) |
+
+向 `master` push 后 Pages 会自动部署。国内网络偶发打不开 `pages.dev`，换网络或代理即可。
+
+---
+
 Linear 冷静密度风格的个人情报看板：**名人时间流** + **美股三时段情报**（夜盘结束 / 盘前 / 开盘前）。默认使用占位数据，无需任何 API Key 即可本地打开或部署到 **Cloudflare Pages**。
 
 > 本仓库完全自包含：任何人克隆后都能用 Node ≥ 18 跑通「拉数 → 静态页 → 部署」流水线，不依赖 Grok Bot 或其它私有运行时。
@@ -17,6 +32,9 @@ Linear 冷静密度风格的个人情报看板：**名人时间流** + **美股�
 
 ```
 intelbrief-board/
+├── CONTEXT.md              # AI/人类接手全文（优先阅读）
+├── AGENTS.md               # 短指针 → CONTEXT.md
+├── README.md               # 本说明
 ├── index.html              # 首页
 ├── stocks.html             # 美股时段页
 ├── styles.css              # Linear 深色主题
@@ -31,8 +49,7 @@ intelbrief-board/
 │   └── fetch-stock-sessions.js
 ├── package.json
 ├── wrangler.toml           # Cloudflare Pages 静态根目录 = .
-├── .env.example
-└── README.md
+└── .env.example
 ```
 
 ## 快速开始（本地）
