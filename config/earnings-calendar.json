@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "timezone": "Asia/Shanghai",
+  "source": {
+    "id": "nasdaq-calendar-earnings",
+    "name": "Nasdaq Earnings Calendar",
+    "endpoint": "https://api.nasdaq.com/api/calendar/earnings",
+    "notes": "稳定主源。按交易日查询；请求需浏览器 UA、Origin、Referer。X 博主仅作可选交叉核对，不作系统真源。"
+  },
+  "important": {
+    "minMarketCapUsd": 50000000000,
+    "maxPerDay": 12,
+    "alwaysInclude": ["NVDA", "TSLA", "AAPL", "MSFT", "META", "GOOGL", "AMZN", "AVGO", "TSM", "ASML"]
+  },
+  "displayDays": 5
+}

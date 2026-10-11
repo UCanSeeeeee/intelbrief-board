@@ -77,9 +77,22 @@ for (const key of ['knowledgeBase','collectionSop']) {
   else if (fs.readFileSync(file,'utf8').length < 1000) fail(`research guidance ${key} is unexpectedly empty`);
 }
 
+const earningsConfig = readJson(path.join(ROOT, 'config/earnings-calendar.json'));
+const earnings = readJson(path.join(ROOT, 'data/earnings-calendar.json'));
+if (earningsConfig?.source?.endpoint !== 'https://api.nasdaq.com/api/calendar/earnings') fail('earnings source endpoint unexpected');
+if (!Array.isArray(earnings.days)) fail('earnings calendar missing days');
+for (const [index, day] of earnings.days.entries()) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(day.date || '')) fail(`earnings.days[${index}] invalid date`);
+  if (!Array.isArray(day.items)) fail(`earnings.days[${index}] missing items`);
+  for (const [j, item] of day.items.entries()) {
+    if (!item.symbol || !item.timeLabel) fail(`earnings.days[${index}].items[${j}] incomplete`);
+  }
+}
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);
   console.log(`[validate-data] OK: ${peopleTabs.size} people tabs, ${eventKeys.size} selected events`);
   console.log('[validate-data] OK: project research knowledge and Grok SOP');
+  console.log(\`[validate-data] OK: earnings calendar ${earnings.counts?.important||0} important / ${earnings.counts?.raw||0} raw\`);
 }

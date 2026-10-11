@@ -20,7 +20,8 @@
     "updates:setup": "node scripts/setup-updates.js",
     "updates:start": "node scripts/update-runner.js",
     "updates:schedule": "node scripts/schedule-update.js",
-    "dev:updates": "node scripts/local-updates.js"
+    "dev:updates": "node scripts/local-updates.js",
+    "fetch:earnings": "node scripts/fetch-earnings.js"
   },
   "engines": {
     "node": ">=20"

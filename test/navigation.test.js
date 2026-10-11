@@ -5,14 +5,16 @@ const path = require('node:path');
 
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 
-test('primary pages expose exactly two sidebar tabs', () => {
-  for (const file of ['index.html', 'people.html']) {
+test('primary pages expose news, people, and bottom earnings tabs', () => {
+  for (const file of ['index.html', 'people.html', 'earnings.html']) {
     const html = read(file);
     const items = [...html.matchAll(/<a href="([^"]+)" data-nav="([^"]+)"/g)].map(match => match.slice(1));
-    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people']]);
+    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['earnings.html', 'earnings']]);
     assert.doesNotMatch(html, /X 情报总览|来源与评分|data-stock-tab/);
+    assert.match(html, /nav-bottom/);
   }
   assert.doesNotMatch(read('index.html'), /role="tab"/);
+  assert.match(read('earnings.html'), /data-page="earnings"/);
 });
 
 test('news is the home page and people is an independent page', () => {

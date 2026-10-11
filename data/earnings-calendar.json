@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-11T16:58:35.903Z",
+  "timezone": "Asia/Shanghai",
+  "weekStart": "2026-10-12",
+  "weekEnd": "2026-10-16",
+  "source": {
+    "id": "nasdaq-calendar-earnings",
+    "name": "Nasdaq Earnings Calendar",
+    "endpoint": "https://api.nasdaq.com/api/calendar/earnings",
+    "fetchedDates": [
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16"
+    ]
+  },
+  "policy": {
+    "minMarketCapUsd": 50000000000,
+    "maxPerDay": 12,
+    "alwaysInclude": [
+      "NVDA",
+      "TSLA",
+      "AAPL",
+      "MSFT",
+      "META",
+      "GOOGL",
+      "AMZN",
+      "AVGO",
+      "TSM",
+      "ASML"
+    ]
+  },
+  "counts": {
+    "days": 5,
+    "raw": 70,
+    "important": 23
+  },
+  "days": [
+    {
+      "date": "2026-10-12",
+      "weekday": "周一",
+      "rawCount": 3,
+      "items": []
+    },
+    {
+      "date": "2026-10-13",
+      "weekday": "周二",
+      "rawCount": 14,
+      "items": [
+        {
+          "symbol": "JPM",
+          "name": "J P Morgan Chase & Co",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$880,976,070,000",
+          "marketCapUsd": 880976070000,
+          "epsForecast": "$5.94",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Johnson & Johnson",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$618,090,790,000",
+          "marketCapUsd": 618090790000,
+          "epsForecast": "$2.53",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "UNH",
+          "name": "UnitedHealth Group Incorporated",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$332,962,824,000",
+          "marketCapUsd": 332962824000,
+          "epsForecast": "$4.12",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "GS",
+          "name": "The Goldman Sachs Group, Inc.",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$256,984,973,000",
+          "marketCapUsd": 256984973000,
+          "epsForecast": "$12.90",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "WFC",
+          "name": "Wells Fargo & Company",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$248,058,659,000",
+          "marketCapUsd": 248058659000,
+          "epsForecast": "$1.85",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "C",
+          "name": "Citigroup Inc.",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$214,846,095,000",
+          "marketCapUsd": 214846095000,
+          "epsForecast": "$2.66",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "weekday": "周三",
+      "rawCount": 12,
+      "items": [
+        {
+          "symbol": "ASML",
+          "name": "ASML Holding N.V.",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$682,108,320,000",
+          "marketCapUsd": 682108320000,
+          "epsForecast": "$12.47",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": true,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "BAC",
+          "name": "Bank of America Corporation",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$374,881,255,000",
+          "marketCapUsd": 374881255000,
+          "epsForecast": "$1.11",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "MS",
+          "name": "Morgan Stanley",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$294,386,958,000",
+          "marketCapUsd": 294386958000,
+          "epsForecast": "$2.83",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "BLK",
+          "name": "BlackRock, Inc.",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$164,989,960,000",
+          "marketCapUsd": 164989960000,
+          "epsForecast": "$14.01",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "PGR",
+          "name": "Progressive Corporation (The)",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$127,163,449,000",
+          "marketCapUsd": 127163449000,
+          "epsForecast": "$4.37",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "FAST",
+          "name": "Fastenal Company",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$57,937,154,000",
+          "marketCapUsd": 57937154000,
+          "epsForecast": "$0.34",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "weekday": "周四",
+      "rawCount": 27,
+      "items": [
+        {
+          "symbol": "TSM",
+          "name": "Taiwan Semiconductor Manufacturing Company Ltd.",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$2,375,367,260,000",
+          "marketCapUsd": 2375367260000,
+          "epsForecast": "$4.45",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": true,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "SCHW",
+          "name": "The Charles Schwab Corporation",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$167,520,748,000",
+          "marketCapUsd": 167520748000,
+          "epsForecast": "$1.66",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "PLD",
+          "name": "Prologis, Inc.",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$122,576,749,000",
+          "marketCapUsd": 122576749000,
+          "epsForecast": "$1.58",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "BNY",
+          "name": "The Bank Of New York Mellon Corporation ",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$97,439,982,000",
+          "marketCapUsd": 97439982000,
+          "epsForecast": "$2.26",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "USB",
+          "name": "U.S. Bancorp",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$88,855,675,000",
+          "marketCapUsd": 88855675000,
+          "epsForecast": "$1.32",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "PNC",
+          "name": "PNC Financial Services Group, Inc. (The)",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$87,639,941,000",
+          "marketCapUsd": 87639941000,
+          "epsForecast": "$4.97",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "MRSH",
+          "name": "Marsh",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$84,308,918,000",
+          "marketCapUsd": 84308918000,
+          "epsForecast": "$1.96",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "weekday": "周五",
+      "rawCount": 14,
+      "items": [
+        {
+          "symbol": "HDB",
+          "name": "HDFC Bank Limited",
+          "timeCode": "unspecified",
+          "timeLabel": "时段未公布",
+          "marketCap": "$112,936,010,000",
+          "marketCapUsd": 112936010000,
+          "epsForecast": "$0.40",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "IBN",
+          "name": "ICICI Bank Limited",
+          "timeCode": "unspecified",
+          "timeLabel": "时段未公布",
+          "marketCap": "$99,883,573,000",
+          "marketCapUsd": 99883573000,
+          "epsForecast": "$0.40",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "TRV",
+          "name": "The Travelers Companies, Inc.",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$77,229,072,000",
+          "marketCapUsd": 77229072000,
+          "epsForecast": "$6.86",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        },
+        {
+          "symbol": "TFC",
+          "name": "Truist Financial Corporation",
+          "timeCode": "bmo",
+          "timeLabel": "盘前",
+          "marketCap": "$56,414,695,000",
+          "marketCapUsd": 56414695000,
+          "epsForecast": "$1.17",
+          "fiscalQuarterEnding": "Sep/2026",
+          "forcedInclude": false,
+          "source": "nasdaq"
+        }
+      ]
+    }
+  ]
+}
