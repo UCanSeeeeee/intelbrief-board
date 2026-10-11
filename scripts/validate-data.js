@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const fs = require("fs");
 const path = require("path");
 const { ROOT, readJson, postIdFromUrl, sourceIndex } = require("./lib/x-data");
 const { prepareBrief } = require("./lib/stock-brief");
@@ -68,8 +69,17 @@ for (const tab of peopleTabs.values()) {
   if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
 }
 
+const guidance = readJson(path.join(ROOT, 'config/research-guidance.json'));
+if (JSON.stringify(guidance.priorityOrder) !== JSON.stringify(['半导体','电力','AI 落地'])) fail('research guidance priority order changed unexpectedly');
+for (const key of ['knowledgeBase','collectionSop']) {
+  const file = path.resolve(ROOT, guidance[key] || '');
+  if (!file.startsWith(path.resolve(ROOT) + path.sep) || !fs.existsSync(file)) fail(`research guidance missing ${key}`);
+  else if (fs.readFileSync(file,'utf8').length < 1000) fail(`research guidance ${key} is unexpectedly empty`);
+}
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);
   console.log(`[validate-data] OK: ${peopleTabs.size} people tabs, ${eventKeys.size} selected events`);
+  console.log('[validate-data] OK: project research knowledge and Grok SOP');
 }

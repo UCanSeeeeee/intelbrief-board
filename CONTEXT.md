@@ -43,6 +43,9 @@ Grok Bot App 内固定由「X+github」承担主执行；旧的「推特信息�
 - `updates.js` / `server/updates.mjs` / `scripts/update-runner.js`：页面进度、任务队列与本机执行器。
 
 - `docs/STOCK_BRIEF.md`：美股每天北京时间 09:00 / 16:00 / 21:00 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。
+- `config/research-guidance.json`：项目知识与采集SOP的机器入口；更新提示词会读取它指向的文件并强制注入每次美股和人物采集。
+- `knowledge/US_EQUITY_RESEARCH_KB.md`：用户关注点的项目内当前版本，固定半导体、电力、AI落地及宏观、地缘、市场结构、推理与反证框架。
+- `knowledge/GROK_X_COLLECTION_SOP.md`：把知识库转换成两轮检索、追源、反证、准入、去重、选择和审计记录的执行流程。
 - `us-equity-x-brief-quality`：共享卡片质量技能，统一作者、中文信息摘要、事件时间、反向条件与原帖链接；采集过程只进入证据层。当前 0.1.0 在共享技能库孵化并已链接到本机 Codex。
 - `config/stock-brief.json`：时区、时段、条数与技能标识。
 - `data/stock-briefs/index.json`：最近三期目录；同目录保留的期次文件不可覆盖，写入第四期时移除最旧一期。首期实际定时采集尚待验证。

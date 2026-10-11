@@ -12,7 +12,7 @@ test('runner collects only the chosen page, pushes data, verifies deployed bytes
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'intelbrief-runner-test-'));
   const seed=path.join(dir,'seed'),remote=path.join(dir,'remote.git');fs.mkdirSync(seed);
   const git=(cwd,...args)=>execFileSync('git',args,{cwd,stdio:'pipe'}).toString().trim();
-  for(const item of ['scripts','sources','data','docs','config']) fs.cpSync(path.join(root,item),path.join(seed,item),{recursive:true});
+  for(const item of ['scripts','sources','data','docs','config','knowledge']) fs.cpSync(path.join(root,item),path.join(seed,item),{recursive:true});
   git(seed,'init','-b','master');git(seed,'add','.');git(seed,'-c','user.name=test','-c','user.email=test@example.test','commit','-m','fixture');
   git(dir,'clone','--bare',seed,remote);
   const server=http.createServer((request,response)=> {

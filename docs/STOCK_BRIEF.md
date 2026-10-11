@@ -18,11 +18,11 @@
 
 ## 每次定时执行
 
-1. 在 `/Users/xswang/Documents/intelbrief-board` 读取 `CONTEXT.md` 与本文件，检查 git 状态，保留其他工作。加载 `us-equity-x-intelligence` 和 `us-equity-multidisciplinary-knowledge` 技能及本期需要的参考卡；知识库仍是被动参考，调度在外层。
+1. 在 `/Users/xswang/Documents/intelbrief-board` 读取 `CONTEXT.md`、本文件及 `config/research-guidance.json` 指向的项目知识库与采集 SOP，检查 git 状态，保留其他工作。项目内版本是采集时强制采用的当前快照；共享 `us-equity-x-intelligence`、`us-equity-multidisciplinary-knowledge` 和质量技能用于补充与复核，不能跳过项目 SOP。
 2. 运行 `npm run brief:slot` 确定最近已到期时段。若该期 JSON 已存在，不覆盖。若仅部署未成功，重试该文件发布即可，不重采集。错过多个时段只制作最近一期，明确延迟和漏期，不伪造过去快照。
 3. 信息截止固定为该时段整点。定时采集窗口只从最近一个有结果的**定时期次**截止时间开始；手动测试与手动更新绝不能缩短、推进或替代定时窗口。没有上一期成功的定时简报时，默认检索截止前完整 24 小时。跨多日断档时本期仍只检索近 24 小时，并写明未覆盖空档。旧帖仅作标注的背景/延续；新进展至少一条窗口内原帖。即使采集晚到，整点后发布的帖子也留给下一期。
 4. 严格遵守 [AGENTS.md的采集硬规则](../AGENTS.md)：先通过本机Grok Bot App的「X+github」Bot获取，失败时才用Grok网页版，除此之外全部禁止。旧「推特信息获取」及 App 内其他 Bot 不再用于本项目。两条都失败则报告失败，不改用X API、直访X或普通搜索。不得改动登录、发帖、私信、点赞、关注等；登录失效请用户处理，不从历史对话读取密码。
-5. 用公开问题做广泛主题检索，再找原始来源、相反证据、时间与上下文。不能把私有知识库全文、个人资料或账户信息发送到 Grok。宏观政策、通胀/就业、美元/融资、地缘/能源、AI 产业链/资本开支、市场广度/流动性、预期/行为是检索维度，不是强行填满每类的配额。
+5. 依项目采集 SOP 用公开问题做广泛主题检索，再找原始来源、相反证据、时间与上下文。知识库只在执行上下文用于生成问题，不能把全文、个人资料或账户信息发送到 Grok。半导体、电力、AI 落地三个核心包以及宏观资本成本、地缘能源物流、市场结构行为三个跨学科包必须留下实际查询与覆盖记录；无合格结果可以不入选，不强行填配额。
 6. 必须保留两个独立、可审计的检索阶段：第一轮宽扫并横向比较市场焦点；第二轮先把知识卡转成财政利率、AI 实物基础、地缘能源物流、市场结构与 AI 企业微观等公开问题，再重新检索、追源和寻找反证。不能把第一轮余下候选直接改名为多学科结果，也不能在没有执行第二轮时写 0 条。最后由当前模型完成 5+10 筛选及中文分析，保存两轮各自的检索问题、覆盖缺口与主要落选候选。互动量只描述可观察热度，不能证明事实或因果。记录相对上期的新增/进展/延续。
 7. 用 `apply_patch` 在临时目录准备 JSON；执行 `npm run brief:validate -- FILE`，校验通过后 `npm run brief:publish -- FILE`。程序写入不可覆盖的 `data/stock-briefs/YYYY-MM-DD-HHMM.json` 并更新目录。不把测试夹具或私有材料放入线上数据。
 8. 执行 `npm test` 与 `npm run check`，检查本期中文内容、条数、链接、时间、引用和因果边界。只暂存本期归档与目录的明确路径，提交并推送 `master`（沿用用户维护与发布授权）。发生分支冲突/其他用户改动时不强推、不重置，说明具体阻塞。确认线上对应归档能读取后才称已发布。
@@ -48,7 +48,7 @@
 
 每条事件必填 `eventKey`（同一事件跨期沿用稳定键）、`title`、`fact`（来源具体声称什么）、`impact`（独立判断）、`direction`（利多/利空/双向/待定）、`horizon`、`affected`（数组）、`counterCase`、`selectionReason`、`credibilityReason`、`change`（新增/进展/延续）、`sources`。`eventTime` 是带时区的真实事件时间；未知填 null 并填 `eventTimeNote`，预告未来事件加 `futureEventNote`。延续加 `continuationReason`，窗口前的背景来源加 `contextSourceNote`。
 
-焦点另需 `attentionEvidence`。多学科另需 `knowledgeCards`（知识库 M01–M10、I01–I10、R01–R08 中的适用卡）、`disciplines`（至少两个不同学科）、`knowledgeApplication`（本期条件性传导与知识库适用边界）。不复制共享 skill 本体进仓库。
+焦点另需 `attentionEvidence`。多学科另需 `knowledgeCards`（项目知识库 M01–M10、I01–I10、R01–R08 中的适用卡）、`disciplines`（至少两个不同学科）、`knowledgeApplication`（本期条件性传导与知识库适用边界）。项目知识库是经过整理的执行快照，不把共享 skill 全文、人物原始消息或私密资料复制进仓库。
 
 每个来源必填 `url`（规范 X/Twitter status 链接）、`postId`（字符串）、`username`、`publishedAt`、`checkedAt`、`excerpt`（准确短摘录）、`verification`（`direct` 原帖直读 / `collector-report` 采集器转述）、`verificationNote`。全部日期含时区；核验时间真实记录，原文摘录避免长篇搬运。程序生成可信度，不接受手工虚构高分。
 

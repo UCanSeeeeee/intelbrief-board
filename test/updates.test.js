@@ -80,6 +80,21 @@ test('news collector keeps scheduled windows and requires a separate multidiscip
   assert.match(prompt,/禁止用手动测试或手动更新的时间自行缩短、推进或替代/);
   assert.match(prompt,/必须执行两个可审计的独立阶段/);
   assert.match(prompt,/不得把第一轮余下候选直接改名为多学科结果/);
+  assert.match(prompt,/<project-knowledge-base>/);
+  assert.match(prompt,/P1｜半导体：AI 主线的核心/);
+  assert.match(prompt,/P2｜电力：AI 扩张的第二层约束/);
+  assert.match(prompt,/P3｜AI 落地：收入和利润是否真正兑现/);
+  assert.match(prompt,/<grok-collection-sop>/);
+  assert.match(prompt,/第二轮必须重新生成查询和搜索/);
+  assert.match(prompt,/半导体、电力、AI落地三个核心产业包/);
+});
+
+test('people collector receives the same project knowledge and SOP',()=> {
+  const prompt=collectorPrompt({page:'people',cutoff:'2026-10-11T13:00:00Z'},root,'2026-10-10T13:00:00.000Z',{});
+  assert.match(prompt,/<project-knowledge-base>/);
+  assert.match(prompt,/<grok-collection-sop>/);
+  assert.match(prompt,/必须依照项目知识库与SOP用Grok在X中检索/);
+  assert.match(prompt,/项目知识库留在执行上下文中/);
 });
 
 test('people updates preserve other pages, reject fabricated identity and only advance complete accounts',()=> {

@@ -55,7 +55,7 @@ async function executeJob(job,config,api,{collect}={}) {
     if(!fs.existsSync(checkout)) {
       if(config.mode==='local') {
         fs.mkdirSync(checkout,{recursive:true});
-        for(const name of ['scripts','sources','data','docs','config']) fs.cpSync(path.join(ROOT,name),path.join(checkout,name),{recursive:true});
+        for(const name of ['scripts','sources','data','docs','config','knowledge']) fs.cpSync(path.join(ROOT,name),path.join(checkout,name),{recursive:true});
       } else await run('git',['clone','--single-branch','--branch','master',config.repository,checkout],{signal:abort.signal});
     }
     if(!checkpoint.prepared) {

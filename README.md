@@ -12,6 +12,7 @@
 - 已实现「全部更新」「更新本页」、共享进度与失败重试；云端配置、真实采集验收及本机执行器启用仍待完成，见 [手动更新接入说明](docs/MANUAL_UPDATES.md)。
 
 - 美股板块采用每天北京时间 09:00 / 16:00 / 21:00 的 **5 条市场焦点 + 10 条多学科认知与夜雨知识库洞察**，支持期次归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。首次真实定时采集待验证。
+- 项目内置[美股研究知识库](knowledge/US_EQUITY_RESEARCH_KB.md)和[Grok 采集 SOP](knowledge/GROK_X_COLLECTION_SOP.md)，每次更新由程序自动注入，固定以半导体、电力、AI落地为优先级并要求独立追源与反证。
 - 前台侧边栏只保留「美股讯息」与「具体人物」两个侧边栏 Tab；美股讯息是网站首页，具体人物是独立页面。原帖档案、来源管理和评分作为后台能力保留，不单独提供前台页面。
 
 - 通过本机Grok Bot App采集，失败时才使用Grok网页版
@@ -76,6 +77,9 @@ scripts/fetch-x.js           历史X API实现，已停用
 scripts/import-x.js          Grok Bot / 人工导入
 scripts/build-intelligence.js 可信度计算
 scripts/validate-data.js     数据完整性检查
+config/research-guidance.json 项目知识库与采集SOP入口
+knowledge/US_EQUITY_RESEARCH_KB.md 用户关注点与多学科传导快照
+knowledge/GROK_X_COLLECTION_SOP.md Grok检索、追源、反证和降噪流程
 ```
 
 评分边界、导入格式和人工交叉印证方法见 [`docs/X_DATA_CONTRACT.md`](docs/X_DATA_CONTRACT.md)。
