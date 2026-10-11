@@ -29,7 +29,7 @@ That file is the full handoff for any AI or human taking over this repo: product
 
 ## 财报日历刷新与结果评分
 
-详见 [`docs/EARNINGS_CALENDAR.md`](./docs/EARNINGS_CALENDAR.md)。摘要：北京时间 09:00/16:00/21:00 刷新当周日历，周日晚预览下周；每次美股讯息更新须回看日历股披露结果，按 0～100 分评价（符合预期 60～70，超预期 70～90，远超预期 90+，不及预期 &lt;60）。
+详见 [`docs/EARNINGS_CALENDAR.md`](./docs/EARNINGS_CALENDAR.md)。摘要：日常讯息更新可轻量刷新日历；**结果核验只查「已知已发财报且尚未评价」的公司**，不做全表重复劳动。评分 0～100（符合预期 60～70，超预期 70～90，远超预期 90+，不及预期 &lt;60）。
 
 ## 当前交付顺序
 

@@ -49,7 +49,7 @@
     ],
     "reviewResultsDuringNewsUpdate": true,
     "mondayIncludesWeekendNews": true,
-    "notes": "挂在每日讯息更新上：刷新本周日历并回看已披露结果；周一须覆盖上周六日讯息。不为日历单独搞复杂刷新。"
+    "notes": "挂在每日讯息更新上：可轻量刷新日历；结果核验仅增量（已知已披露且未评价）。周一须覆盖上周六日讯息。"
   },
   "resultScore": {
     "scale": "0-100",
@@ -81,5 +81,11 @@
     ],
     "unknownAllowed": true,
     "notTradingAdvice": true
+  },
+  "resultReview": {
+    "mode": "incremental",
+    "onlyKnownReportedAndUnreviewed": true,
+    "skipAlreadyScoredWithoutNewEvidence": true,
+    "notes": "日常更新不对整周做重复结果检索；只查已知已披露且尚未评价的公司。"
   }
 }
