@@ -27,12 +27,14 @@ GitHub：`UCanSeeeeee/intelbrief-board`（private）
 ## 架构
 
 ```text
-本机Grok Bot App ─> 结构化结果 ─> 校验/去重/归档 ─> 页面
+本机Grok Bot App「X+github」 ─> 结构化结果 ─> 校验/去重/归档 ─> 页面
     失败时才使用 Grok 网页版          ↑
                             sources/x-sources.json
 ```
 
 前端无框架，Cloudflare Pages负责展示；新增受保护的更新接口与D1任务队列，本机Node执行器负责调用只读研究、校验、提交与线上发布核验。接入说明与当前未完成的上线条件见 [手动更新](docs/MANUAL_UPDATES.md)。
+
+Grok Bot App 内固定由「X+github」承担主执行；旧的「推特信息获取」只保留历史对话，不再作为本项目入口。电脑端执行器仅在主执行链路失败后接管，同一任务不得并行执行。
 
 ## 关键文件
 

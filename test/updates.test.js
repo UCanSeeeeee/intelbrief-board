@@ -75,6 +75,8 @@ test('manual editions freeze independently; manual updates never advance schedul
 
 test('news collector keeps scheduled windows and requires a separate multidisciplinary pass',()=> {
   const prompt=collectorPrompt({page:'news',cutoff:'2026-10-11T13:00:00Z'},root,'2026-10-10T13:00:00.000Z',{});
+  assert.match(prompt,/固定使用“X\+github”Bot/);
+  assert.match(prompt,/旧“推特信息获取”Bot仅保留历史对话，不再使用/);
   assert.match(prompt,/禁止用手动测试或手动更新的时间自行缩短、推进或替代/);
   assert.match(prompt,/必须执行两个可审计的独立阶段/);
   assert.match(prompt,/不得把第一轮余下候选直接改名为多学科结果/);
