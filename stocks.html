@@ -1,76 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>美股 X 情报 — 简报 Brief</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body data-page="stocks" data-filter-category="markets">
-  <button class="menu-toggle" type="button" aria-label="菜单">☰</button>
-  <div class="overlay"></div>
-  <div class="app">
-    <aside class="sidebar">
-      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">简报 <span>Brief</span></div></div>
-      <nav class="nav">
-        <a href="index.html" data-nav="home"><span class="nav-icon">◈</span> X 总览</a>
-        <a href="stocks.html" data-nav="stocks"><span class="nav-icon">▣</span> 美股 X 情报</a>
-        <a href="sources.html" data-nav="sources"><span class="nav-icon">◎</span> 来源与评分</a>
-      </nav>
-      <div class="sidebar-footer">仅收录 X 原帖<br />不提供交易指令</div>
-    </aside>
-    <main class="main wide">
-      <header class="page-header">
-        <h1>美股 X 情报</h1>
-        <p class="subtitle">5 条市场焦点 + 10 条多学科洞察。只取自 X，区分已知事实与影响判断。</p>
-        <div class="meta">
-          <span class="badge"><span class="badge-dot"></span> X only</span>
-          <span>北京时间 · 每天 09:00 / 16:00 / 21:00 启动更新</span>
-        </div>
-      </header>
-      <nav class="stock-tabs" role="tablist" aria-label="美股情报视图">
-        <button id="tab-news" type="button" role="tab" aria-selected="true" aria-controls="panel-news" tabindex="0" data-stock-tab="news">美股讯息</button>
-        <button id="tab-people" type="button" role="tab" aria-selected="false" aria-controls="panel-people" tabindex="-1" data-stock-tab="people">具体人物</button>
-      </nav>
-      <div id="panel-news" role="tabpanel" aria-labelledby="tab-news" data-stock-panel="news">
-      <section class="brief-overview" aria-live="polite">
-        <div class="brief-toolbar"><label for="edition-select">简报期次</label><select id="edition-select" disabled><option>正在加载</option></select></div>
-        <p id="brief-state">正在读取期次记录…</p>
-        <div id="brief-summary"></div>
-      </section>
-      <section class="section">
-        <div class="section-header">
-          <h2>市场最关注的五件事 <span id="focus-count">0 / 5</span></h2>
-        </div>
-        <p class="brief-intro">按影响范围、时效与预期差比较；“最关注”是本期检索范围内的判断，不等于全网排名。</p>
-        <div id="brief-focus" class="x-feed"></div>
-      </section>
-      <section class="section">
-        <div class="section-header"><h2>多学科认知与夜雨知识库 <span id="insights-count">0 / 10</span></h2></div>
-        <p class="brief-intro">从宏观、地缘、产业、资金结构与行为视角选出另外十件事，写清传导链与反向条件。</p>
-        <div id="brief-insights" class="x-feed"></div>
-      </section>
-      <div id="brief-audit"></div>
-      <p class="disclaimer">定时简报，不是连续行情终端。可信度为未校准的证据初评，不代表真伪或涨跌概率。采集不足会显示缺额，不用旧闻凑数。<a href="sources.html">查看评分规则 →</a></p>
-      </div>
-      <div id="panel-people" role="tabpanel" aria-labelledby="tab-people" data-stock-panel="people" hidden>
-        <section class="people-overview">
-          <div>
-            <p class="eyebrow">人物情报</p>
-            <h2>具体人物</h2>
-            <p>按人物查看已进入来源表的 X 账号、关注主题和原帖时间线。人物身份只说明“谁在发言”，不自动证明其观点正确。</p>
-          </div>
-          <p id="people-state" aria-live="polite">正在读取人物资料…</p>
-        </section>
-        <div id="people-selector" class="people-selector" aria-label="选择人物"></div>
-        <section id="person-detail" class="person-detail" aria-live="polite"></section>
-        <p class="disclaimer">此页只展示人物本人 X 账号的已采集原帖。机构账号留在来源表；转述、截图和无法核对的内容不冒充本人发言。</p>
-      </div>
-    </main>
-  </div>
-  <script src="app.js"></script>
-  <script src="stock-tabs.js"></script>
-  <script src="briefs.js"></script>
-  <script src="people.js"></script>
+<head><meta charset="UTF-8" /><meta name="robots" content="noindex" /><title>正在前往美股讯息</title></head>
+<body>
+  <p>正在前往<a href="index.html">美股讯息</a>…</p>
+  <script>location.replace((location.hash === '#people' ? 'people.html' : 'index.html') + location.search);</script>
 </body>
 </html>

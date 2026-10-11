@@ -22,12 +22,6 @@
 .brief-source { padding:14px 0; border-top:1px solid var(--border-subtle); }
 .brief-source a { text-decoration:underline; text-underline-offset:3px; }
 .brief-source blockquote { padding-left:12px; border-left:2px solid var(--border); margin:12px 0; color:var(--text-secondary); }
-.stock-tabs { display:flex; gap:4px; border-bottom:1px solid var(--border); margin:-8px 0 28px; }
-.stock-tabs button { appearance:none; border:0; border-bottom:2px solid transparent; background:transparent; color:var(--text-muted); padding:11px 18px; font:inherit; font-size:13px; cursor:pointer; }
-.stock-tabs button:hover { color:var(--text-secondary); }
-.stock-tabs button[aria-selected="true"] { color:var(--text); border-bottom-color:var(--text); }
-.stock-tabs button:focus-visible { outline:2px solid var(--text-secondary); outline-offset:2px; }
-[data-stock-panel][hidden] { display:none; }
 .people-overview { display:flex; justify-content:space-between; gap:24px; align-items:flex-end; border:1px solid var(--border); border-radius:10px; padding:22px; background:var(--bg-elevated); }
 .people-overview h2 { margin:4px 0 8px; font-size:21px; }
 .people-overview p { max-width:720px; color:var(--text-secondary); font-size:13px; line-height:1.75; }
@@ -55,8 +49,6 @@
 .person-post > p { white-space:pre-wrap; color:var(--text-secondary); margin:10px 0; line-height:1.7; }
 .person-post > a { display:inline-block; color:var(--text-secondary); font-size:12px; margin-top:10px; }
 @media (max-width: 700px) {
-  .stock-tabs { margin-top:0; }
-  .stock-tabs button { flex:1; }
   .people-overview { align-items:flex-start; flex-direction:column; }
   #people-state { white-space:normal; }
   .person-post-head { flex-direction:column; gap:3px; }

@@ -39,7 +39,7 @@
     <div class="person-timeline">${personPosts.length ? personPosts.map(timelinePost).join('') : '<div class="empty-state"><strong>尚未采集到该人物原帖</strong><p>人物入口已建立；后续只在取得可核验的本人 X 原帖后加入时间线。</p></div>'}</div>`;
     const url = new URL(location.href);
     url.searchParams.set('person',person.username);
-    history.replaceState(null,'',url.pathname + '?' + url.searchParams.toString() + location.hash);
+    history.replaceState(null,'',url.pathname + '?' + url.searchParams.toString());
   }
   Promise.all([json('sources/x-sources.json'),json('data/x-intelligence.json')]).then(([registry,intelligence])=> {
     const people=(registry.accounts || []).filter(account=>account.enabled && account.category==='people');

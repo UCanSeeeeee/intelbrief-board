@@ -3,57 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>X 情报总览 — 简报 Brief</title>
+  <title>美股讯息 — 简报 Brief</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-page="home">
+<body data-page="news">
   <button class="menu-toggle" type="button" aria-label="菜单">☰</button>
   <div class="overlay"></div>
   <div class="app">
     <aside class="sidebar">
-      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">简报 <span>Brief</span></div></div>
-      <nav class="nav">
-        <a href="index.html" data-nav="home"><span class="nav-icon">◈</span> X 总览</a>
-        <a href="stocks.html" data-nav="stocks"><span class="nav-icon">▣</span> 美股 X 情报</a>
-        <a href="sources.html" data-nav="sources"><span class="nav-icon">◎</span> 来源与评分</a>
+      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">美股情报</div></div>
+      <nav class="nav" aria-label="侧边栏 Tab">
+        <a href="index.html" data-nav="news"><span class="nav-icon">▣</span> 美股讯息</a>
+        <a href="people.html" data-nav="people"><span class="nav-icon">◎</span> 具体人物</a>
       </nav>
-      <div class="sidebar-footer">仅收录 X 原帖<br />无真实数据时保持空白</div>
+      <div class="sidebar-footer">只收录可回到 X 原帖的证据<br />不提供交易指令</div>
     </aside>
-
     <main class="main wide">
       <header class="page-header">
-        <h1>X 情报总览</h1>
-        <p class="subtitle">原帖、时间、出处与可信度依据放在同一条证据链里。</p>
+        <h1>美股讯息</h1>
+        <p class="subtitle">5 条市场焦点 + 10 条多学科洞察。区分已知事实、影响判断与反向条件。</p>
         <div class="meta">
           <span class="badge"><span class="badge-dot"></span> X only</span>
-          <span id="data-state">正在读取数据</span>
-          <span id="updated-at"></span>
+          <span>北京时间 · 每天 09:00 / 16:00 / 21:00 启动更新</span>
         </div>
       </header>
-
-      <section class="score-summary" aria-label="可信度分布">
-        <div><strong id="stat-total">0</strong><span>本期原帖</span></div>
-        <div><strong id="stat-high">0</strong><span>高可信</span></div>
-        <div><strong id="stat-medium">0</strong><span>中等</span></div>
-        <div><strong id="stat-low">0</strong><span>低可信</span></div>
+      <section class="brief-overview" aria-live="polite">
+        <div class="brief-toolbar"><label for="edition-select">简报期次</label><select id="edition-select" disabled><option>正在加载</option></select></div>
+        <p id="brief-state">正在读取期次记录…</p>
+        <div id="brief-summary"></div>
       </section>
-
       <section class="section">
-        <div class="section-header">
-          <h2>最新原帖</h2>
-          <span class="section-note">按发帖时间倒序</span>
-        </div>
-        <div class="filter-row" id="category-filters">
-          <button type="button" data-filter="all" class="active">全部</button>
-          <button type="button" data-filter="markets">美股</button>
-          <button type="button" data-filter="ai">AI</button>
-          <button type="button" data-filter="macro">宏观</button>
-          <button type="button" data-filter="people">人物</button>
-        </div>
-        <div id="x-feed" class="x-feed" aria-live="polite"></div>
+        <div class="section-header"><h2>市场最关注的五件事 <span id="focus-count">0 / 5</span></h2></div>
+        <p class="brief-intro">按影响范围、时效与预期差比较；“最关注”是本期检索范围内的判断，不等于全网排名。</p>
+        <div id="brief-focus" class="x-feed"></div>
       </section>
+      <section class="section">
+        <div class="section-header"><h2>多学科认知与夜雨知识库 <span id="insights-count">0 / 10</span></h2></div>
+        <p class="brief-intro">从宏观、地缘、产业、资金结构与行为视角选出另外十件事，写清传导链与反向条件。</p>
+        <div id="brief-insights" class="x-feed"></div>
+      </section>
+      <div id="brief-audit"></div>
+      <p class="disclaimer">定时简报，不是连续行情终端。可信度为未校准的证据初评，不代表真伪或涨跌概率。采集不足会显示缺额，不用旧闻凑数。</p>
     </main>
   </div>
   <script src="app.js"></script>
+  <script src="briefs.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>具体人物 — 美股情报</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="people">
+  <button class="menu-toggle" type="button" aria-label="菜单">☰</button>
+  <div class="overlay"></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">美股情报</div></div>
+      <nav class="nav" aria-label="侧边栏 Tab">
+        <a href="index.html" data-nav="news"><span class="nav-icon">▣</span> 美股讯息</a>
+        <a href="people.html" data-nav="people"><span class="nav-icon">◎</span> 具体人物</a>
+      </nav>
+      <div class="sidebar-footer">只展示人物本人的 X 原帖<br />不把转述冒充本人发言</div>
+    </aside>
+    <main class="main wide">
+      <header class="page-header">
+        <h1>具体人物</h1>
+        <p class="subtitle">按人物查看本人账号、关注主题和已核验的原帖时间线。</p>
+        <div class="meta"><span class="badge"><span class="badge-dot"></span> X only</span><span id="people-state" aria-live="polite">正在读取人物资料…</span></div>
+      </header>
+      <section class="people-overview">
+        <div><p class="eyebrow">人物情报</p><h2>人物来源与时间线</h2><p>人物身份只说明“谁在发言”，不自动证明其观点正确。只有进入人工来源表并取得可核验原帖的人物才会出现在这里。</p></div>
+      </section>
+      <div id="people-selector" class="people-selector" aria-label="选择人物"></div>
+      <section id="person-detail" class="person-detail" aria-live="polite"></section>
+      <p class="disclaimer">机构账号留在后台来源表；转述、截图和无法核对的内容不冒充本人发言。</p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+  <script src="people.js"></script>
+</body>
+</html>
