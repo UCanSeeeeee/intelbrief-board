@@ -38,5 +38,47 @@
     "autonomousJudgment": true,
     "fixedListIsNotSystemOfRecord": true,
     "docs": "docs/EARNINGS_CALENDAR.md"
+  },
+  "refresh": {
+    "timezone": "Asia/Shanghai",
+    "dailySlots": [
+      "09:00",
+      "16:00",
+      "21:00"
+    ],
+    "sundayPreview": true,
+    "withNewsUpdateReviewResults": true,
+    "notes": "与美股讯息同窗口刷新日历；每次讯息更新须回看已披露结果；周日晚预览下周。"
+  },
+  "resultScore": {
+    "scale": "0-100",
+    "bands": [
+      {
+        "id": "miss",
+        "label": "不及预期",
+        "min": 0,
+        "maxExclusive": 60
+      },
+      {
+        "id": "inline",
+        "label": "符合预期",
+        "min": 60,
+        "maxExclusive": 70
+      },
+      {
+        "id": "beat",
+        "label": "超预期",
+        "min": 70,
+        "maxExclusive": 90
+      },
+      {
+        "id": "smash",
+        "label": "远超预期",
+        "min": 90,
+        "maxInclusive": 100
+      }
+    ],
+    "unknownAllowed": true,
+    "notTradingAdvice": true
   }
 }
