@@ -23,6 +23,10 @@ That file is the full handoff for any AI or human taking over this repo: product
 
 凡涉及本项目的重要产品规则、真源决策、筛选标准、页面行为或长期约定，必须写入仓库（优先 `AGENTS.md` / `CONTEXT.md` / `docs/` / `config/`），不得只留在对话或执行器记忆里。仓库文档优先于历史对话。财报日历的筛选核心见 [`docs/EARNINGS_CALENDAR.md`](./docs/EARNINGS_CALENDAR.md)。
 
+## 周末休市与周一补扫（用户于2026-10-12明确指定）
+
+美股周六、周日不开盘。周一更新必须覆盖**上周六、周日**的讯息，不得因休市漏掉周末窗口。详情见 [`docs/STOCK_BRIEF.md`](./docs/STOCK_BRIEF.md)。
+
 ## 财报日历刷新与结果评分
 
 详见 [`docs/EARNINGS_CALENDAR.md`](./docs/EARNINGS_CALENDAR.md)。摘要：北京时间 09:00/16:00/21:00 刷新当周日历，周日晚预览下周；每次美股讯息更新须回看日历股披露结果，按 0～100 分评价（符合预期 60～70，超预期 70～90，远超预期 90+，不及预期 &lt;60）。

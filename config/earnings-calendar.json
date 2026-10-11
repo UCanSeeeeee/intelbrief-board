@@ -41,14 +41,15 @@
   },
   "refresh": {
     "timezone": "Asia/Shanghai",
+    "tiedToNewsUpdates": true,
     "dailySlots": [
       "09:00",
       "16:00",
       "21:00"
     ],
-    "sundayPreview": true,
-    "withNewsUpdateReviewResults": true,
-    "notes": "与美股讯息同窗口刷新日历；每次讯息更新须回看已披露结果；周日晚预览下周。"
+    "reviewResultsDuringNewsUpdate": true,
+    "mondayIncludesWeekendNews": true,
+    "notes": "挂在每日讯息更新上：刷新本周日历并回看已披露结果；周一须覆盖上周六日讯息。不为日历单独搞复杂刷新。"
   },
   "resultScore": {
     "scale": "0-100",
