@@ -1,46 +1,45 @@
-/* Intel Brief — shared UI + JSON data hydration (portable, no build step) */
+/* X-only intelligence dashboard. Every dynamic string is escaped before insertion. */
 (function () {
-  function dataUrl(name) {
-    // Resolve data/*.json relative to site root from any page depth
-    const depth = (location.pathname.match(/\//g) || []).length;
-    // Heuristic: if path contains /celebrity/, go up one level
-    if (/\/celebrity\//.test(location.pathname) || /\/celebrity$/.test(location.pathname.replace(/\/$/, ""))) {
-      return "../data/" + name;
-    }
-    return "data/" + name;
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
   }
 
-  function formatRelative(date) {
-    const now = Date.now();
-    const then = date.getTime();
-    const sec = Math.round((now - then) / 1000);
-    if (sec < 60) return "刚刚";
-    const min = Math.round(sec / 60);
-    if (min < 60) return min + " 分钟前";
-    const hr = Math.round(min / 60);
-    if (hr < 24) return hr + " 小时前";
-    const day = Math.round(hr / 24);
-    if (day < 7) return day + " 天前";
-    return date.toLocaleDateString("zh-CN", { month: "short", day: "numeric" });
+  function formatRelative(value) {
+    const then = Date.parse(value);
+    if (Number.isNaN(then)) return "时间未知";
+    const seconds = Math.round((Date.now() - then) / 1000);
+    if (seconds < 60) return "刚刚";
+    const minutes = Math.round(seconds / 60);
+    if (minutes < 60) return `${minutes} 分钟前`;
+    const hours = Math.round(minutes / 60);
+    if (hours < 24) return `${hours} 小时前`;
+    const days = Math.round(hours / 24);
+    if (days < 7) return `${days} 天前`;
+    return new Date(then).toLocaleDateString("zh-CN", { month: "short", day: "numeric" });
   }
 
-  function refreshRelativeTimes() {
-    document.querySelectorAll("[data-ts]").forEach(function (el) {
-      const raw = el.getAttribute("data-ts");
-      const d = new Date(raw);
-      if (!isNaN(d.getTime())) {
-        el.textContent = formatRelative(d);
-        el.title = d.toLocaleString("zh-CN", { hour12: false });
-      }
-    });
+  function formatBeijing(value) {
+    if (!value || Number.isNaN(Date.parse(value))) return "";
+    return new Intl.DateTimeFormat("zh-CN", {
+      timeZone: "Asia/Shanghai",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false
+    }).format(new Date(value));
   }
 
   function setActiveNav() {
-    const page = document.body.getAttribute("data-page") || "";
-    document.querySelectorAll(".nav a[data-nav]").forEach(function (a) {
-      const key = a.getAttribute("data-nav");
-      if (key === page) a.classList.add("active");
-      else a.classList.remove("active");
+    const page = document.body.dataset.page || "";
+    document.querySelectorAll(".nav a[data-nav]").forEach((link) => {
+      link.classList.toggle("active", link.dataset.nav === page);
     });
   }
 
@@ -49,217 +48,150 @@
     const sidebar = document.querySelector(".sidebar");
     const overlay = document.querySelector(".overlay");
     if (!toggle || !sidebar) return;
-    function close() {
+    const close = () => {
       sidebar.classList.remove("open");
-      if (overlay) overlay.classList.remove("show");
-    }
-    function open() {
-      sidebar.classList.add("open");
-      if (overlay) overlay.classList.add("show");
-    }
-    toggle.addEventListener("click", function () {
-      if (sidebar.classList.contains("open")) close();
-      else open();
+      overlay?.classList.remove("show");
+    };
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      overlay?.classList.toggle("show", sidebar.classList.contains("open"));
     });
-    if (overlay) overlay.addEventListener("click", close);
+    overlay?.addEventListener("click", close);
   }
 
-  function escapeHtml(s) {
-    return String(s)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
+  function metricText(metrics = {}) {
+    const parts = [];
+    if (Number.isFinite(metrics.like_count)) parts.push(`赞 ${metrics.like_count}`);
+    if (Number.isFinite(metrics.retweet_count)) parts.push(`转发 ${metrics.retweet_count}`);
+    if (Number.isFinite(metrics.reply_count)) parts.push(`回复 ${metrics.reply_count}`);
+    return parts.join(" · ");
   }
 
-  function profileHref(slug) {
-    if (/\/celebrity\//.test(location.pathname)) return slug + ".html";
-    return "celebrity/" + slug + ".html";
+  function scoreLabel(band) {
+    return { high: "高", "medium-high": "中高", medium: "中", low: "低", "very-low": "很低" }[band] || "未评级";
   }
 
-  function renderCelebFeed(feed, mount) {
-    if (!mount || !feed || !feed.length) return;
-    const prefix = /\/celebrity\//.test(location.pathname) ? "" : "celebrity/";
-    mount.innerHTML = feed
-      .slice()
-      .sort(function (a, b) {
-        return new Date(b.ts) - new Date(a.ts);
-      })
-      .map(function (item) {
-        return (
-          '<li><a class="feed-item" href="' +
-          prefix +
-          escapeHtml(item.slug) +
-          '.html">' +
-          '<div class="avatar">' +
-          escapeHtml(item.avatar) +
-          "</div>" +
-          '<div class="feed-body">' +
-          '<div class="feed-name">' +
-          escapeHtml(item.name) +
-          "</div>" +
-          '<div class="feed-update">' +
-          escapeHtml(item.update) +
-          "</div>" +
-          "</div>" +
-          '<time class="feed-time" data-ts="' +
-          escapeHtml(item.ts) +
-          '">—</time>' +
-          "</a></li>"
-        );
-      })
-      .join("");
+  function renderPost(post) {
+    const score = post.credibility || {};
+    const warnings = (score.warnings || []).map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    const reasons = (score.reasons || []).map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    const topics = (post.topics || []).map((item) => `<span>${escapeHtml(item)}</span>`).join("");
+    const metrics = metricText(post.metrics);
+    const b = score.breakdown || {};
+    return `
+      <article class="x-card">
+        <div class="x-card-head">
+          <div class="author-block">
+            <strong>${escapeHtml(post.author?.name || post.author?.username)}</strong>
+            <span>@${escapeHtml(post.author?.username)}</span>
+            <span class="category">${escapeHtml(post.category || "uncategorized")}</span>
+          </div>
+          <div class="score-badge score-${escapeHtml(score.band)}" title="${escapeHtml(score.meaning)}">
+            <strong>${escapeHtml(score.overall ?? "—")}</strong><span>${scoreLabel(score.band)}</span>
+          </div>
+        </div>
+        <p class="x-text">${escapeHtml(post.text)}</p>
+        ${topics ? `<div class="topic-row">${topics}</div>` : ""}
+        <div class="x-meta">
+          <time title="北京时间 ${escapeHtml(formatBeijing(post.createdAt))}">${escapeHtml(formatRelative(post.createdAt))}</time>
+          ${metrics ? `<span>${escapeHtml(metrics)}</span>` : ""}
+          <a href="${escapeHtml(post.url)}" target="_blank" rel="noopener noreferrer">查看 X 原帖 ↗</a>
+        </div>
+        <details class="score-detail">
+          <summary>为什么是 ${escapeHtml(score.overall ?? "—")} 分 · 自动初评</summary>
+          <div class="score-columns">
+            <div>
+              <h3>评分构成</h3>
+              <dl>
+                <div><dt>作者分</dt><dd>${escapeHtml(score.sourceScore ?? "—")}</dd></div>
+                <div><dt>主张分</dt><dd>${escapeHtml(score.claimScore ?? "—")}</dd></div>
+                <div><dt>直接程度</dt><dd>${escapeHtml(b.directness ?? "—")}/30</dd></div>
+                <div><dt>可追溯证据</dt><dd>${escapeHtml(b.traceableEvidence ?? "—")}/25</dd></div>
+                <div><dt>独立印证</dt><dd>${escapeHtml(b.independentCorroboration ?? "—")}/25</dd></div>
+                <div><dt>具体性</dt><dd>${escapeHtml(b.specificity ?? "—")}/10</dd></div>
+              </dl>
+            </div>
+            <div><h3>加分依据</h3><ul>${reasons || "<li>暂无额外依据</li>"}</ul></div>
+            <div><h3>证据缺口</h3><ul>${warnings || "<li>未识别到明显缺口</li>"}</ul></div>
+          </div>
+          <p class="score-limit">分数衡量可追溯性与当前证据强弱，不等于真伪概率，也不代表股价方向。</p>
+        </details>
+      </article>`;
   }
 
-  function renderCheckpoints(data, mount, useFullLabels) {
-    if (!mount || !data || !data.checkpoints) return;
-    mount.innerHTML = data.checkpoints
-      .map(function (cp) {
-        const items = (cp.items || [])
-          .map(function (it) {
-            const cls = it.tagClass ? " " + it.tagClass : "";
-            return (
-              '<li class="intel-item"><span class="tag' +
-              cls +
-              '">' +
-              escapeHtml(it.tag) +
-              "</span> " +
-              escapeHtml(it.text) +
-              "</li>"
-            );
-          })
-          .join("");
-        const label = useFullLabels ? cp.labelFull || cp.label : cp.label;
-        const time = useFullLabels ? cp.timeHintFull || cp.timeHint : cp.timeHint;
-        const statusCls = cp.status === "done" ? "done" : "pending";
-        const statusText = cp.status === "done" ? "已汇总" : "待更新";
-        return (
-          '<div class="checkpoint">' +
-          '<div class="checkpoint-head">' +
-          '<span class="checkpoint-label">' +
-          escapeHtml(label) +
-          "</span>" +
-          '<span class="checkpoint-time">' +
-          escapeHtml(time) +
-          "</span>" +
-          '<span class="checkpoint-status ' +
-          statusCls +
-          '">' +
-          statusText +
-          "</span>" +
-          "</div>" +
-          '<ul class="intel-list">' +
-          items +
-          "</ul>" +
-          '<div class="watchlist-note">' +
-          (cp.watchlistNote || "") +
-          "</div>" +
-          "</div>"
-        );
-      })
-      .join("");
+  function updateStats(stats = {}) {
+    const total = document.getElementById("stat-total");
+    const high = document.getElementById("stat-high");
+    const medium = document.getElementById("stat-medium");
+    const low = document.getElementById("stat-low");
+    if (total) total.textContent = stats.total || 0;
+    if (high) high.textContent = stats.high || 0;
+    if (medium) medium.textContent = (stats.mediumHigh || 0) + (stats.medium || 0);
+    if (low) low.textContent = (stats.low || 0) + (stats.veryLow || 0);
   }
 
-  function renderOtherCelebs(profiles, currentSlug, mount) {
-    if (!mount || !profiles) return;
-    const cards = Object.keys(profiles)
-      .filter(function (slug) {
-        return slug !== currentSlug;
-      })
-      .map(function (slug) {
-        const p = profiles[slug];
-        return (
-          '<a class="celeb-card" href="' +
-          escapeHtml(slug) +
-          '.html">' +
-          '<div class="avatar">' +
-          escapeHtml(p.avatar) +
-          "</div>" +
-          "<div><div class=\"name\">" +
-          escapeHtml(p.name) +
-          '</div><div class="role">' +
-          escapeHtml((p.role || "").split("·")[0].trim()) +
-          "</div></div></a>"
-        );
+  function emptyState(message) {
+    return `<div class="empty-state"><strong>暂无真实 X 数据</strong><p>${escapeHtml(message)}</p><p>系统不会用占位新闻填充这里。</p></div>`;
+  }
+
+  async function hydrateFeed() {
+    const mount = document.getElementById("x-feed");
+    if (!mount) return;
+    const state = document.getElementById("data-state");
+    const updated = document.getElementById("updated-at");
+    try {
+      const response = await fetch("data/x-intelligence.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      let posts = Array.isArray(data.posts) ? data.posts : [];
+      const fixedCategory = document.body.dataset.filterCategory;
+      if (fixedCategory) posts = posts.filter((post) => post.category === fixedCategory);
+      updateStats(data.stats);
+      if (state) state.textContent = `${posts.length} 条真实原帖`;
+      if (updated) updated.textContent = data.updatedAt ? `构建于 ${formatBeijing(data.updatedAt)} 北京时间` : "尚未构建";
+
+      const render = (category) => {
+        const visible = category && category !== "all" ? posts.filter((post) => post.category === category) : posts;
+        mount.innerHTML = visible.length
+          ? visible.map(renderPost).join("")
+          : emptyState(category && category !== "all" ? "当前分类没有已采集原帖。" : "请运行 X API 采集或导入 Grok Bot 的结构化原帖。");
+      };
+      render("all");
+      document.querySelectorAll("#category-filters button").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("#category-filters button").forEach((item) => item.classList.remove("active"));
+          button.classList.add("active");
+          render(button.dataset.filter);
+        });
       });
-    mount.innerHTML = cards.join("");
+    } catch (error) {
+      if (state) state.textContent = "数据读取失败";
+      mount.innerHTML = emptyState(`读取失败：${error.message}`);
+    }
   }
 
-  function hydrateFromJson() {
-    const homeFeed = document.getElementById("home-celeb-feed");
-    const celebFeed = document.getElementById("celeb-feed");
-    const homeStocks = document.getElementById("home-stock-checkpoints");
-    const stocksMount = document.getElementById("stock-checkpoints");
-    const watchlistMount = document.getElementById("watchlist-bar");
-    const otherMount = document.getElementById("other-celebs");
-
-    const needsCelebs = homeFeed || celebFeed || otherMount;
-    const needsStocks = homeStocks || stocksMount || watchlistMount;
-
-    const tasks = [];
-
-    if (needsCelebs) {
-      tasks.push(
-        fetch(dataUrl("celebrities.json"))
-          .then(function (r) {
-            if (!r.ok) throw new Error("celebrities.json " + r.status);
-            return r.json();
-          })
-          .then(function (data) {
-            if (homeFeed) renderCelebFeed(data.feed, homeFeed);
-            if (celebFeed) renderCelebFeed(data.feed, celebFeed);
-            if (otherMount && data.profiles) {
-              const m = location.pathname.match(/\/([^/]+)\.html$/);
-              const slug = m ? m[1] : "";
-              renderOtherCelebs(data.profiles, slug, otherMount);
-            }
-            refreshRelativeTimes();
-          })
-          .catch(function (err) {
-            console.warn("[brief] celebrities hydrate skipped:", err.message);
-          })
-      );
+  async function hydrateSources() {
+    const mount = document.getElementById("source-registry");
+    if (!mount) return;
+    try {
+      const response = await fetch("sources/x-sources.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      mount.innerHTML = (data.accounts || []).map((source) => `
+        <article>
+          <div><strong>${escapeHtml(source.displayName)}</strong><span>@${escapeHtml(source.username)}</span></div>
+          <p>${escapeHtml(source.category)} · ${escapeHtml(source.sourceClass)} · ${escapeHtml(source.trustTier)}</p>
+          <div class="topic-row">${(source.topics || []).map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div>
+        </article>`).join("");
+    } catch (error) {
+      mount.innerHTML = emptyState(`来源表读取失败：${error.message}`);
     }
-
-    if (needsStocks) {
-      tasks.push(
-        fetch(dataUrl("stock-sessions.json"))
-          .then(function (r) {
-            if (!r.ok) throw new Error("stock-sessions.json " + r.status);
-            return r.json();
-          })
-          .then(function (data) {
-            if (homeStocks) renderCheckpoints(data, homeStocks, false);
-            if (stocksMount) renderCheckpoints(data, stocksMount, true);
-            if (watchlistMount && data.watchlist) {
-              watchlistMount.innerHTML =
-                "当前自选：" +
-                data.watchlist
-                  .map(function (t) {
-                    return '<strong style="color: var(--text);">' + escapeHtml(t) + "</strong>";
-                  })
-                  .join("、") +
-                '<br /><span style="font-size: 12px; color: var(--text-muted);">后续可在 .env 的 WATCHLIST 中添加；重新运行 npm run fetch:stocks。</span>';
-            }
-            const metaDay = document.getElementById("trading-day-label");
-            if (metaDay && data.tradingDayLabel) metaDay.textContent = data.tradingDayLabel;
-          })
-          .catch(function (err) {
-            console.warn("[brief] stock hydrate skipped:", err.message);
-          })
-      );
-    }
-
-    return Promise.all(tasks);
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", () => {
     setActiveNav();
-    refreshRelativeTimes();
     initMobileNav();
-    hydrateFromJson().then(function () {
-      refreshRelativeTimes();
-    });
-    setInterval(refreshRelativeTimes, 60000);
+    hydrateFeed();
+    hydrateSources();
   });
 })();

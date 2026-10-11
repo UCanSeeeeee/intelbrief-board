@@ -3,174 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>美股时段情报 — 简报 Brief</title>
+  <title>美股 X 情报 — 简报 Brief</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-page="stocks">
+<body data-page="stocks" data-filter-category="markets">
   <button class="menu-toggle" type="button" aria-label="菜单">☰</button>
   <div class="overlay"></div>
-
   <div class="app">
     <aside class="sidebar">
-      <div class="logo">
-        <div class="logo-mark">简</div>
-        <div class="logo-text">简报 <span>Brief</span></div>
-      </div>
+      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">简报 <span>Brief</span></div></div>
       <nav class="nav">
-        <a href="index.html" data-nav="home"><span class="nav-icon">◈</span> 首页</a>
-        <a href="celebrity/index.html" data-nav="celebrity"><span class="nav-icon">◎</span> 名人</a>
-        <a href="stocks.html" data-nav="stocks"><span class="nav-icon">▣</span> 美股</a>
+        <a href="index.html" data-nav="home"><span class="nav-icon">◈</span> X 总览</a>
+        <a href="stocks.html" data-nav="stocks"><span class="nav-icon">▣</span> 美股 X 情报</a>
+        <a href="sources.html" data-nav="sources"><span class="nav-icon">◎</span> 来源与评分</a>
       </nav>
-      <div class="sidebar-footer">
-        占位数据 · 本地演示<br />
-        2026-10-11 上海
-      </div>
+      <div class="sidebar-footer">仅收录 X 原帖<br />不提供交易指令</div>
     </aside>
-
-    <main class="main">
+    <main class="main wide">
       <header class="page-header">
-        <h1>美股 · 时段情报</h1>
-        <p class="subtitle">按交易节奏汇总：夜盘结束 → 盘前 → 开盘前。不是实时报价板。</p>
+        <h1>美股 X 情报</h1>
+        <p class="subtitle">公司、当事人和宏观机构的原帖证据；不把热度当可信度。</p>
         <div class="meta">
-          <span class="badge"><span class="badge-dot"></span> 演示数据</span>
-          <span id="trading-day-label">交易日 2026-10-10（美东）</span>
+          <span class="badge"><span class="badge-dot"></span> X only</span>
+          <span id="data-state">正在读取数据</span>
+          <span id="updated-at"></span>
         </div>
       </header>
-
       <section class="section">
         <div class="section-header">
-          <h2>自选观察</h2>
+          <h2>市场相关原帖</h2>
+          <a class="more" href="sources.html">查看评分规则 →</a>
         </div>
-        <div class="card" style="padding: 14px 16px;">
-          <p id="watchlist-bar" style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
-            当前自选：<strong style="color: var(--text);">NVDA</strong>、
-            <strong style="color: var(--text);">TSLA</strong>、
-            <strong style="color: var(--text);">AAPL</strong>、
-            <strong style="color: var(--text);">MSFT</strong>、
-            <strong style="color: var(--text);">META</strong>
-            <br />
-            <span style="font-size: 12px; color: var(--text-muted);">后续可在 .env 的 WATCHLIST 中添加；重新运行 npm run fetch:stocks。</span>
-          </p>
-        </div>
+        <div id="x-feed" class="x-feed" aria-live="polite"></div>
       </section>
-
-      <section class="section">
-        <div class="section-header">
-          <h2>三个检查点</h2>
-        </div>
-        <div class="card" id="stock-checkpoints">
-          <div class="checkpoint">
-            <div class="checkpoint-head">
-              <span class="checkpoint-label">① 夜盘结束</span>
-              <span class="checkpoint-time">美股常规时段结束后的亚洲/欧洲衔接窗口 · 约北京 05:00</span>
-              <span class="checkpoint-status done">已汇总</span>
-            </div>
-            <ul class="intel-list">
-              <li class="intel-item">
-                <span class="tag">指数期货</span>
-                纳指期货夜盘震荡收跌约 0.3%（占位），道指期货接近平盘；风险偏好略降。
-              </li>
-              <li class="intel-item">
-                <span class="tag down">半导体</span>
-                亚洲相关标的偏弱。市场讨论焦点：云厂商资本开支指引是否「已被定价」。
-              </li>
-              <li class="intel-item">
-                <span class="tag">NVDA</span>
-                供应链媒体复读「封装产能」话题，未见正式公司声明；短线视为噪音，记入观察清单。
-              </li>
-              <li class="intel-item">
-                <span class="tag">宏观</span>
-                美元指数微升；美债收益率变化有限。欧盘开盘前流动性偏薄。
-              </li>
-              <li class="intel-item">
-                <span class="tag">能源 / 板块轮动</span>
-                原油期货小幅波动，能源股夜盘无明显方向；资金仍集中在科技叙事。
-              </li>
-            </ul>
-            <div class="watchlist-note">
-              本时段写入自选：<strong>NVDA</strong>（供应链）、<strong>TSLA</strong>（无重大隔夜事件）
-            </div>
-          </div>
-
-          <div class="checkpoint">
-            <div class="checkpoint-head">
-              <span class="checkpoint-label">② 盘前</span>
-              <span class="checkpoint-time">美股盘前交易活跃期 · 约北京 16:00–21:00</span>
-              <span class="checkpoint-status done">已汇总</span>
-            </div>
-            <ul class="intel-list">
-              <li class="intel-item">
-                <span class="tag up">AI 硬件</span>
-                卖方晨报上调部分数据中心相关展望；NVDA 盘前情绪偏暖，关注开盘能否确认量能。
-              </li>
-              <li class="intel-item">
-                <span class="tag">TSLA</span>
-                欧洲部分市场注册数据解读分歧：乐观派看「份额稳定」，谨慎派看「价格战余波」。开盘看量，不看标题。
-              </li>
-              <li class="intel-item">
-                <span class="tag">AAPL</span>
-                新品周期相关供应链调研流传（占位），中性偏正面；对指数权重影响有限。
-              </li>
-              <li class="intel-item">
-                <span class="tag">MSFT / META</span>
-                广告与云业务交叉阅读：机构仍在比较「算力投入 vs 变现节奏」；今日无公司级新闻。
-              </li>
-              <li class="intel-item">
-                <span class="tag">财报日历</span>
-                本交易日盘前无重磅科技财报。焦点转向联储官员讲话与隔夜纪要预期。
-              </li>
-              <li class="intel-item">
-                <span class="tag">板块</span>
-                软件/云偏稳，可选消费分化；金融股跟随收益率小幅波动。
-              </li>
-            </ul>
-            <div class="watchlist-note">
-              本时段重点：<strong>NVDA</strong>、<strong>TSLA</strong>、<strong>MSFT</strong>、<strong>META</strong>、<strong>AAPL</strong>
-            </div>
-          </div>
-
-          <div class="checkpoint">
-            <div class="checkpoint-head">
-              <span class="checkpoint-label">③ 开盘前</span>
-              <span class="checkpoint-time">正式开盘前约 30 分钟 · 约北京 21:00–21:30</span>
-              <span class="checkpoint-status pending">待更新</span>
-            </div>
-            <ul class="intel-list">
-              <li class="intel-item">
-                <span class="tag">预案清单</span>
-                将汇总：期货跳空方向与幅度、热门板块盘前资金流、自选股异动名单。
-              </li>
-              <li class="intel-item">
-                <span class="tag">NVDA / TSLA</span>
-                开盘前自动对比盘前成交活跃度与隔夜新闻密度，避免「标题驱动」下单叙事。
-              </li>
-              <li class="intel-item">
-                <span class="tag">风险开关</span>
-                若 VIX 盘前明显抬升，优先观察指数与期权偏度，再看个股故事。
-              </li>
-              <li class="intel-item">
-                <span class="tag">事件</span>
-                占位：无已排期的重大政策发布；留意盘中突发言论对科技权重的脉冲。
-              </li>
-            </ul>
-            <div class="watchlist-note">
-              开盘前将自动并入全部自选；演示站此卡标记为「待更新」以示流程完整。
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-header">
-          <h2>说明</h2>
-        </div>
-        <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.7;">
-          本页为静态占位演示：不提供实时报价、不下单、不构成投资建议。正式接入数据源后，三个检查点可由定时任务刷新摘要。
-        </p>
-      </section>
+      <p class="disclaimer">可信度分数衡量证据可追溯性，不代表上涨概率，也不构成投资建议。</p>
     </main>
   </div>
-
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+name: Refresh X intelligence
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-x-intelligence
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+      X_MAX_RESULTS: "20"
+      X_LOOKBACK_HOURS: "168"
+      TZ: Asia/Shanghai
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Require protected X token
+        run: test -n "$X_BEARER_TOKEN"
+      - name: Test, fetch and validate
+        run: |
+          npm test
+          npm run fetch
+          npm run check
+      - name: Commit refreshed evidence
+        run: |
+          if git diff --quiet -- data/raw/x-posts.json data/x-intelligence.json; then
+            echo "No data changes"
+            exit 0
+          fi
+          git config user.name "intelbrief-bot"
+          git config user.email "intelbrief-bot@users.noreply.github.com"
+          git add data/raw/x-posts.json data/x-intelligence.json
+          git commit -m "data: refresh X intelligence"
+          git push

@@ -1,148 +1,82 @@
-# intelbrief-board · 简报 Brief
+# intelbrief-board · X 情报简报
 
-## 当前状态 / Current status
+一个只收录 X/Twitter 原帖、保留证据链并提供可解释可信度初评的个人情报看板。
 
-| | |
-|--|--|
-| **Live URL** | https://intelbrief-board.pages.dev |
-| **Repo** | https://github.com/UCanSeeeeee/intelbrief-board （**PRIVATE** · owner `UCanSeeeeee`） |
-| **Hosting** | Cloudflare Pages · project `intelbrief-board` · free `*.pages.dev` · **no custom domain** |
-| **Cloudflare account** | `982304048@qq.com` · account id `654fc092fc71c4dc81184933d5b808b9` |
-| **Data mode** | `placeholder`（演示 JSON；live API 仍为 stub） |
-| **AI / 接手文档** | **先读 [`CONTEXT.md`](./CONTEXT.md)** · 短指针见 [`AGENTS.md`](./AGENTS.md) |
+线上地址：https://intelbrief-board.pages.dev
+仓库：`UCanSeeeeee/intelbrief-board`（private）
 
-向 `master` push 后 Pages 会自动部署。国内网络偶发打不开 `pages.dev`，换网络或代理即可。
+## 当前能力
 
----
+- 官方 X API v2 按来源表采集账号时间线
+- 导入 Grok Bot 或人工整理的结构化 X 原帖
+- 按 status ID 去重，保留首次与最近抓取时间
+- 保存原帖链接、完整正文、作者、UTC 时间、引用关系、媒体和抓取时互动量
+- 每条帖子分别计算作者分与主张分，并展示理由、证据缺口和评分限制
+- 总览分类：美股、AI、宏观、人物
+- 无真实数据时显示空状态，不回退到占位新闻
 
-Linear 冷静密度风格的个人情报看板：**名人时间流** + **美股三时段情报**（夜盘结束 / 盘前 / 开盘前）。默认使用占位数据，无需任何 API Key 即可本地打开或部署到 **Cloudflare Pages**。
+系统只读 X，不发帖、不点赞、不转发、不关注、不私信，也不执行交易。
 
-> 本仓库完全自包含：任何人克隆后都能用 Node ≥ 18 跑通「拉数 → 静态页 → 部署」流水线，不依赖 Grok Bot 或其它私有运行时。
+## 快速开始
 
-## 功能
-
-| 模块 | 说明 |
-|------|------|
-| 名人板块 | 按时间排序的动态流，点击进入 `celebrity/<slug>.html` 档案页（6 人） |
-| 美股板块 | **不是**实时报价；三个检查点摘要，自选股（默认 NVDA/TSLA 等）写入各时段 |
-| 数据层 | `data/*.json` 由 `scripts/` 生成；前端 `app.js` 同域 `fetch` 注入 |
-| 主题 | Linear dark：侧栏 + 密信息卡片 |
-
-## 仓库结构
-
-```
-intelbrief-board/
-├── CONTEXT.md              # AI/人类接手全文（优先阅读）
-├── AGENTS.md               # 短指针 → CONTEXT.md
-├── README.md               # 本说明
-├── index.html              # 首页
-├── stocks.html             # 美股时段页
-├── styles.css              # Linear 深色主题
-├── app.js                  # 导航 / 相对时间 / JSON 注入
-├── celebrity/              # 名人档案 + index
-├── data/
-│   ├── celebrities.json    # 名人 feed + profiles
-│   └── stock-sessions.json # 三时段情报 + watchlist
-├── scripts/
-│   ├── load-env.js         # 无依赖读取 .env
-│   ├── fetch-celebrities.js
-│   └── fetch-stock-sessions.js
-├── package.json
-├── wrangler.toml           # Cloudflare Pages 静态根目录 = .
-└── .env.example
-```
-
-## 快速开始（本地）
+需要 Node.js 20 或更高版本。
 
 ```bash
 git clone https://github.com/UCanSeeeeee/intelbrief-board.git
 cd intelbrief-board
-cp .env.example .env          # 默认 MODE=placeholder，可不改
-npm run fetch                 # 刷新 data/*.json 时间戳（占位模式）
-npm run dev                   # http://localhost:8787
+cp .env.example .env
+# 在 .env 写入 X_BEARER_TOKEN，不要提交
+npm test
+npm run fetch
+npm run check
+npm run dev
 ```
 
-无 Node 时也可直接双击打开 `index.html`，但 `fetch` JSON 在部分浏览器的 `file://` 下会被拦；推荐用 `npm run dev` 或任意静态服务器。
+打开 http://localhost:8787。
 
-### npm scripts
+### 没有 X API Token
 
-| 命令 | 作用 |
-|------|------|
-| `npm run fetch` | 跑名人 + 美股两个脚本 |
-| `npm run fetch:celebrities` | 只更新 `data/celebrities.json` |
-| `npm run fetch:stocks` | 只更新 `data/stock-sessions.json` |
-| `npm run build` | 等同 `fetch`（Pages 可设为构建命令） |
-| `npm run dev` | 本地静态服务 :8787 |
-| `npm run pages:dev` | Wrangler Pages 本地预览 |
-| `npm run deploy` | CLI 部署到 Cloudflare Pages（需 Token） |
-
-## 环境变量
-
-复制 `.env.example` → `.env`。**不要提交 `.env`。**
-
-| 变量 | 默认 | 说明 |
-|------|------|------|
-| `MODE` | `placeholder` | `placeholder` 只用仓内演示数据；`live` 走外部 API（需 Key，脚本内仍为可扩展 stub） |
-| `X_BEARER_TOKEN` | 空 | `MODE=live` 时名人动态用（X API） |
-| `STOCK_NEWS_API_KEY` | 空 | `MODE=live` 时美股新闻 |
-| `STOCK_NEWS_API_BASE` | 示例 URL | 新闻 API Base |
-| `WATCHLIST` | `NVDA,TSLA,AAPL,MSFT,META` | 写入每个时段的自选 |
-| `TZ` | `Asia/Shanghai` | 脚本记录用时区 |
-| `CLOUDFLARE_API_TOKEN` | 空 | 仅 CLI `npm run deploy` |
-| `CLOUDFLARE_ACCOUNT_ID` | 空 | 仅 CLI 部署 |
-| `SITE_URL` | 空 | 部署后的公开地址（文档用） |
-
-## 数据契约
-
-### `data/celebrities.json`
-
-- **输入**：`MODE`、`X_BEARER_TOKEN`、`TZ`
-- **输出字段**：`updatedAt`, `mode`, `feed[]`（`slug,name,avatar,update,ts`）, `profiles{slug→…}`
-- **消费方**：首页 / 名人 index 的时间流；档案页「其他名人」网格
-
-### `data/stock-sessions.json`
-
-- **输入**：`MODE`、新闻 API、`WATCHLIST`、`TZ`
-- **输出字段**：`checkpoints[]`（`night-close` / `pre-market` / `pre-open`）, `watchlist[]`
-- **消费方**：首页美股摘要、`stocks.html` 完整三时段
-
-占位模式下脚本**不会清空**已有 JSON，只刷新 `updatedAt` / `mode` / `watchlist`，保证演示内容稳定。
-
-## 部署到 Cloudflare Pages（推荐）
-
-### 方式 A：Dashboard 连接 Git（推荐）
-
-1. 打开 [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
-2. 授权并选择仓库 `UCanSeeeeee/intelbrief-board`
-3. 构建设置：
-   - **Framework preset**: None
-   - **Build command**: `npm run build`（或留空）
-   - **Build output directory**: `/`（仓库根目录；与 `wrangler.toml` 中 `pages_build_output_dir = "."` 一致）
-4. 保存并部署 → 获得 `*.pages.dev` 地址
-5. （可选）自定义域：Pages 项目 → **Custom domains** → 按提示加 CNAME（域名购买另议，本仓库不负责付款）
-
-### 方式 B：Wrangler CLI
+让 Grok Bot 输出符合 [`docs/X_DATA_CONTRACT.md`](docs/X_DATA_CONTRACT.md) 的 JSON，然后：
 
 ```bash
-cp .env.example .env
-# 填入 CLOUDFLARE_API_TOKEN、CLOUDFLARE_ACCOUNT_ID
-npm run deploy
+npm run import:x -- /absolute/path/to/x-export.json
+npm run score
+npm run check
 ```
 
-### DNS（自有域名时）
+导入器缺少原帖 URL、准确时间或完整正文时会失败，不补写缺失内容。
 
-| 记录 | 名称 | 目标 |
-|------|------|------|
-| CNAME | `@` 或 `www` | `<project>.pages.dev` |
+## 常用命令
 
-在 Cloudflare 上托管 DNS 时可一键验证；其它注册商按 Pages 控制台给出的记录添加即可。
+| 命令 | 作用 |
+|---|---|
+| `npm run fetch` | 从官方 X API 采集并重新评分 |
+| `npm run fetch:x` | 只采集，不重建展示数据 |
+| `npm run import:x -- FILE` | 导入 Grok Bot/人工结构化 JSON |
+| `npm run score` | 从原始归档重建评分数据 |
+| `npm run check` | 校验 ID、URL、时间、去重和评分范围 |
+| `npm test` | 测试评分不变量 |
+| `npm run dev` | 本地预览 |
+| `npm run deploy` | 部署 Cloudflare Pages |
 
-## 本地开发提示
+## 数据路径
 
-- 改文案：可直接改 `data/*.json`，刷新浏览器；或改脚本后再 `npm run fetch`
-- 改 UI：编辑 `styles.css` / HTML；无需打包
-- 接真数据：设 `MODE=live` 并在 `scripts/fetch-*.js` 的 stub 处接入 API，保持输出 JSON 形状不变
+```text
+sources/x-sources.json       人工维护的来源身份、类别与信任等级
+data/raw/x-posts.json        原始 X 帖归档（按 status ID 去重）
+data/x-intelligence.json     面向页面的评分结果
+scripts/fetch-x.js           官方 X API 采集
+scripts/import-x.js          Grok Bot / 人工导入
+scripts/build-intelligence.js 可信度计算
+scripts/validate-data.js     数据完整性检查
+```
 
-## 许可与声明
+评分边界、导入格式和人工交叉印证方法见 [`docs/X_DATA_CONTRACT.md`](docs/X_DATA_CONTRACT.md)。
 
-演示内容均为**占位数据**，不构成投资建议，不提供实时行情。代码可按需自用与修改。
+## 部署
+
+Cloudflare Pages 连接 `master`，站点根目录就是仓库根目录。构建命令可以留空或使用 `npm run build`；构建阶段只重建已提交数据，不需要把 X Token 暴露给浏览器。
+
+真实采集应在本地或受保护的定时任务中运行，再提交生成的数据。`.env`、Token 和本地日志均不得提交。
+
+仓库包含一个**仅手动触发**的 GitHub Actions 工作流 `Refresh X intelligence`。在仓库 Secrets 配置 `X_BEARER_TOKEN` 后，可从 Actions 页面手动执行；工作流会测试、采集、校验并提交更新。当前没有开启定时采集，避免在未确认 API 额度和频率前产生费用。

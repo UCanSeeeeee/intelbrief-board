@@ -3,194 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>简报 Brief — 每日情报</title>
+  <title>X 情报总览 — 简报 Brief</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="home">
   <button class="menu-toggle" type="button" aria-label="菜单">☰</button>
   <div class="overlay"></div>
-
   <div class="app">
     <aside class="sidebar">
-      <div class="logo">
-        <div class="logo-mark">简</div>
-        <div class="logo-text">简报 <span>Brief</span></div>
-      </div>
+      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">简报 <span>Brief</span></div></div>
       <nav class="nav">
-        <a href="index.html" data-nav="home"><span class="nav-icon">◈</span> 首页</a>
-        <a href="celebrity/index.html" data-nav="celebrity"><span class="nav-icon">◎</span> 名人</a>
-        <a href="stocks.html" data-nav="stocks"><span class="nav-icon">▣</span> 美股</a>
+        <a href="index.html" data-nav="home"><span class="nav-icon">◈</span> X 总览</a>
+        <a href="stocks.html" data-nav="stocks"><span class="nav-icon">▣</span> 美股 X 情报</a>
+        <a href="sources.html" data-nav="sources"><span class="nav-icon">◎</span> 来源与评分</a>
       </nav>
-      <div class="sidebar-footer">
-        占位数据 · 本地演示<br />
-        2026-10-11 上海
-      </div>
+      <div class="sidebar-footer">仅收录 X 原帖<br />无真实数据时保持空白</div>
     </aside>
 
-    <main class="main">
+    <main class="main wide">
       <header class="page-header">
-        <h1>每日简报</h1>
-        <p class="subtitle">名人动态 · 美股情报 · 一屏扫完</p>
+        <h1>X 情报总览</h1>
+        <p class="subtitle">原帖、时间、出处与可信度依据放在同一条证据链里。</p>
         <div class="meta">
-          <span class="badge"><span class="badge-dot"></span> 演示数据</span>
-          <span>更新于 2026-10-11 13:40 CST</span>
+          <span class="badge"><span class="badge-dot"></span> X only</span>
+          <span id="data-state">正在读取数据</span>
+          <span id="updated-at"></span>
         </div>
       </header>
 
-      <!-- 名人板块 -->
-      <section class="section">
-        <div class="section-header">
-          <h2>名人板块</h2>
-          <a class="more" href="celebrity/index.html">查看档案 →</a>
-        </div>
-        <div class="card">
-          <ul class="feed-list" id="home-celeb-feed">
-            <li>
-              <a class="feed-item" href="celebrity/elon-musk.html">
-                <div class="avatar">EM</div>
-                <div class="feed-body">
-                  <div class="feed-name">Elon Musk</div>
-                  <div class="feed-update">转发 SpaceX 星舰试飞片段，称「下一次静火测试窗口已锁定」</div>
-                </div>
-                <time class="feed-time" data-ts="2026-10-11T12:55:00+08:00">—</time>
-              </a>
-            </li>
-            <li>
-              <a class="feed-item" href="celebrity/jensen-huang.html">
-                <div class="avatar">JH</div>
-                <div class="feed-body">
-                  <div class="feed-name">黄仁勋 Jensen Huang</div>
-                  <div class="feed-update">接受访谈：强调推理侧算力需求「仍被低估」，回应 Blackwell 交付节奏</div>
-                </div>
-                <time class="feed-time" data-ts="2026-10-11T11:20:00+08:00">—</time>
-              </a>
-            </li>
-            <li>
-              <a class="feed-item" href="celebrity/sam-altman.html">
-                <div class="avatar">SA</div>
-                <div class="feed-body">
-                  <div class="feed-name">Sam Altman</div>
-                  <div class="feed-update">发帖预告下周开发者活动，暗示 Agent 相关 API 将有「可见进展」</div>
-                </div>
-                <time class="feed-time" data-ts="2026-10-11T10:05:00+08:00">—</time>
-              </a>
-            </li>
-            <li>
-              <a class="feed-item" href="celebrity/lei-jun.html">
-                <div class="avatar">雷</div>
-                <div class="feed-body">
-                  <div class="feed-name">雷军</div>
-                  <div class="feed-update">微博晒小米汽车门店周末客流，称「交付节奏按计划推进」</div>
-                </div>
-                <time class="feed-time" data-ts="2026-10-11T09:30:00+08:00">—</time>
-              </a>
-            </li>
-            <li>
-              <a class="feed-item" href="celebrity/warren-buffett.html">
-                <div class="avatar">WB</div>
-                <div class="feed-body">
-                  <div class="feed-name">Warren Buffett</div>
-                  <div class="feed-update">伯克希尔 13F 摘要流传：科技仓位微调，现金占比仍处高位（未官方确认）</div>
-                </div>
-                <time class="feed-time" data-ts="2026-10-11T08:15:00+08:00">—</time>
-              </a>
-            </li>
-            <li>
-              <a class="feed-item" href="celebrity/jack-ma.html">
-                <div class="avatar">马</div>
-                <div class="feed-body">
-                  <div class="feed-name">马云</div>
-                  <div class="feed-update">出席教育公益活动露面，未谈商业议题；媒体聚焦其近期公开行程</div>
-                </div>
-                <time class="feed-time" data-ts="2026-10-10T21:40:00+08:00">—</time>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <section class="score-summary" aria-label="可信度分布">
+        <div><strong id="stat-total">0</strong><span>本期原帖</span></div>
+        <div><strong id="stat-high">0</strong><span>高可信</span></div>
+        <div><strong id="stat-medium">0</strong><span>中等</span></div>
+        <div><strong id="stat-low">0</strong><span>低可信</span></div>
       </section>
 
-      <!-- 美股板块 -->
       <section class="section">
         <div class="section-header">
-          <h2>美股板块 · 时段情报</h2>
-          <a class="more" href="stocks.html">完整时段 →</a>
+          <h2>最新原帖</h2>
+          <span class="section-note">按发帖时间倒序</span>
         </div>
-        <div class="card" id="home-stock-checkpoints">
-          <div class="checkpoint">
-            <div class="checkpoint-head">
-              <span class="checkpoint-label">夜盘结束</span>
-              <span class="checkpoint-time">约北京时间 05:00</span>
-              <span class="checkpoint-status done">已汇总</span>
-            </div>
-            <ul class="intel-list">
-              <li class="intel-item">
-                <span class="tag">期货</span>
-                纳指期货夜盘小幅回落，科技权重承压；道指期货相对抗跌。
-              </li>
-              <li class="intel-item">
-                <span class="tag down">半导体</span>
-                亚洲盘相关 ADR 偏弱，市场消化「订单能见度」分歧；关注 NVDA 供应链传闻。
-              </li>
-              <li class="intel-item">
-                <span class="tag">宏观</span>
-                欧盘开盘前，美元指数微升；债市收益率变化不大。
-              </li>
-            </ul>
-            <div class="watchlist-note">
-              自选关注：<strong>NVDA</strong> 供应链节奏、<strong>TSLA</strong> 交付预期、<strong>AAPL</strong> 新品周期
-            </div>
-          </div>
-
-          <div class="checkpoint">
-            <div class="checkpoint-head">
-              <span class="checkpoint-label">盘前</span>
-              <span class="checkpoint-time">约北京时间 16:00–21:00</span>
-              <span class="checkpoint-status done">已汇总</span>
-            </div>
-            <ul class="intel-list">
-              <li class="intel-item">
-                <span class="tag up">AI 硬件</span>
-                盘前综述：多家卖方上调数据中心资本开支展望；NVDA 盘前情绪偏暖（占位）。
-              </li>
-              <li class="intel-item">
-                <span class="tag">汽车</span>
-                TSLA：欧洲注册数据解读分歧，短线关注开盘量能而非隔夜新闻标题。
-              </li>
-              <li class="intel-item">
-                <span class="tag">财报季</span>
-                今日盘前无重磅科技财报，焦点转向联储官员讲话纪要预期。
-              </li>
-            </ul>
-            <div class="watchlist-note">
-              自选写入本时段：<strong>NVDA</strong>、<strong>TSLA</strong>、<strong>MSFT</strong>、<strong>META</strong>
-            </div>
-          </div>
-
-          <div class="checkpoint">
-            <div class="checkpoint-head">
-              <span class="checkpoint-label">开盘前</span>
-              <span class="checkpoint-time">约北京时间 21:00–21:30</span>
-              <span class="checkpoint-status pending">待更新</span>
-            </div>
-            <ul class="intel-list">
-              <li class="intel-item">
-                <span class="tag">预案</span>
-                开盘前 30 分钟将汇总：期货跳空方向、热门板块资金流、自选股盘前异动。
-              </li>
-              <li class="intel-item">
-                <span class="tag">风险</span>
-                占位提醒：若 VIX 盘前抬升，优先看指数而非个股叙事。
-              </li>
-            </ul>
-            <div class="watchlist-note">
-              将自动并入：<strong>NVDA</strong>、<strong>TSLA</strong> 及你后续添加的标的
-            </div>
-          </div>
+        <div class="filter-row" id="category-filters">
+          <button type="button" data-filter="all" class="active">全部</button>
+          <button type="button" data-filter="markets">美股</button>
+          <button type="button" data-filter="ai">AI</button>
+          <button type="button" data-filter="macro">宏观</button>
+          <button type="button" data-filter="people">人物</button>
         </div>
+        <div id="x-feed" class="x-feed" aria-live="polite"></div>
       </section>
     </main>
   </div>
-
   <script src="app.js"></script>
 </body>
 </html>

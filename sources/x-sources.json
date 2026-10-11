@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-11T00:00:00+08:00",
+  "policy": {
+    "network": "x",
+    "contentOnlyFromX": true,
+    "excludeRetweets": true,
+    "defaultLookbackHours": 168,
+    "defaultMaxPostsPerAccount": 20,
+    "notes": "蓝标不是可信度依据；trustTier 来自人工维护的身份与职责判断。"
+  },
+  "accounts": [
+    {
+      "username": "OpenAI",
+      "displayName": "OpenAI",
+      "category": "ai",
+      "sourceClass": "official-organization",
+      "trustTier": "primary",
+      "topics": ["AI", "OpenAI", "MSFT"],
+      "enabled": true
+    },
+    {
+      "username": "NVIDIA",
+      "displayName": "NVIDIA",
+      "category": "markets",
+      "sourceClass": "official-organization",
+      "trustTier": "primary",
+      "topics": ["NVDA", "AI", "semiconductors"],
+      "enabled": true
+    },
+    {
+      "username": "Tesla",
+      "displayName": "Tesla",
+      "category": "markets",
+      "sourceClass": "official-organization",
+      "trustTier": "primary",
+      "topics": ["TSLA", "EV", "energy"],
+      "enabled": true
+    },
+    {
+      "username": "Microsoft",
+      "displayName": "Microsoft",
+      "category": "markets",
+      "sourceClass": "official-organization",
+      "trustTier": "primary",
+      "topics": ["MSFT", "AI", "cloud"],
+      "enabled": true
+    },
+    {
+      "username": "Meta",
+      "displayName": "Meta",
+      "category": "markets",
+      "sourceClass": "official-organization",
+      "trustTier": "primary",
+      "topics": ["META", "AI", "advertising"],
+      "enabled": true
+    },
+    {
+      "username": "Apple",
+      "displayName": "Apple",
+      "category": "markets",
+      "sourceClass": "official-organization",
+      "trustTier": "primary",
+      "topics": ["AAPL", "devices", "AI"],
+      "enabled": true
+    },
+    {
+      "username": "elonmusk",
+      "displayName": "Elon Musk",
+      "category": "people",
+      "sourceClass": "named-insider",
+      "trustTier": "direct",
+      "topics": ["TSLA", "SpaceX", "xAI"],
+      "enabled": true
+    },
+    {
+      "username": "sama",
+      "displayName": "Sam Altman",
+      "category": "people",
+      "sourceClass": "named-insider",
+      "trustTier": "direct",
+      "topics": ["OpenAI", "AI"],
+      "enabled": true
+    },
+    {
+      "username": "federalreserve",
+      "displayName": "Federal Reserve",
+      "category": "macro",
+      "sourceClass": "official-institution",
+      "trustTier": "primary",
+      "topics": ["Fed", "rates", "macro"],
+      "enabled": true
+    },
+    {
+      "username": "USTreasury",
+      "displayName": "U.S. Treasury",
+      "category": "macro",
+      "sourceClass": "official-institution",
+      "trustTier": "primary",
+      "topics": ["Treasury", "rates", "macro"],
+      "enabled": true
+    }
+  ],
+  "searches": [
+    {
+      "id": "watchlist-cashtags",
+      "label": "美股自选代码",
+      "category": "markets",
+      "query": "($NVDA OR $TSLA OR $AAPL OR $MSFT OR $META OR $GOOGL OR $AVGO) -is:retweet",
+      "enabled": false,
+      "reason": "默认关闭，避免未筛选搜索结果消耗额度并引入大量噪音；需要时人工开启。"
+    }
+  ]
+}
