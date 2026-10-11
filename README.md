@@ -7,6 +7,8 @@
 
 ## 当前能力
 
+- 美股板块采用每天北京时间 09:00 / 16:00 / 21:00 的 **5 条市场焦点 + 10 条多学科认知与夜雨知识库洞察**，支持期次归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。首次真实定时采集待验证。
+
 - 官方 X API v2 按来源表采集账号时间线
 - 导入 Grok Bot 或人工整理的结构化 X 原帖
 - 按 status ID 去重，保留首次与最近抓取时间
@@ -55,6 +57,9 @@ npm run check
 | `npm run import:x -- FILE` | 导入 Grok Bot/人工结构化 JSON |
 | `npm run score` | 从原始归档重建评分数据 |
 | `npm run check` | 校验 ID、URL、时间、去重和评分范围 |
+| `npm run brief:slot` | 查看最近已到期与下一期时间 |
+| `npm run brief:validate -- FILE` | 校验 5+10 简报、证据截止与知识卡 |
+| `npm run brief:publish -- FILE` | 冻结简报归档并更新历史目录 |
 | `npm test` | 测试评分不变量 |
 | `npm run dev` | 本地预览 |
 | `npm run deploy` | 部署 Cloudflare Pages |
@@ -79,4 +84,4 @@ Cloudflare Pages 连接 `master`，站点根目录就是仓库根目录。构建
 
 真实采集应在本地或受保护的定时任务中运行，再提交生成的数据。`.env`、Token 和本地日志均不得提交。
 
-仓库包含一个**仅手动触发**的 GitHub Actions 工作流 `Refresh X intelligence`。在仓库 Secrets 配置 `X_BEARER_TOKEN` 后，可从 Actions 页面手动执行；工作流会测试、采集、校验并提交更新。当前没有开启定时采集，避免在未确认 API 额度和频率前产生费用。
+仓库包含一个**仅手动触发**的 GitHub Actions 工作流 `Refresh X intelligence`。在仓库 Secrets 配置 `X_BEARER_TOKEN` 且确认额度后，可从 Actions 页面手动执行。美股三次简报通过应用原生对话定时任务调度，使用已授权可用的采集方式；不是 GitHub 定时任务，不会自动购买 API 服务。任务启用状态以应用为准，本地电脑/应用及登录需可用。

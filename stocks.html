@@ -22,23 +22,34 @@
     <main class="main wide">
       <header class="page-header">
         <h1>美股 X 情报</h1>
-        <p class="subtitle">公司、当事人和宏观机构的原帖证据；不把热度当可信度。</p>
+        <p class="subtitle">5 条市场焦点 + 10 条多学科洞察。只取自 X，区分已知事实与影响判断。</p>
         <div class="meta">
           <span class="badge"><span class="badge-dot"></span> X only</span>
-          <span id="data-state">正在读取数据</span>
-          <span id="updated-at"></span>
+          <span>北京时间 · 每天 09:00 / 16:00 / 21:00 启动更新</span>
         </div>
       </header>
+      <section class="brief-overview" aria-live="polite">
+        <div class="brief-toolbar"><label for="edition-select">简报期次</label><select id="edition-select" disabled><option>正在加载</option></select></div>
+        <p id="brief-state">正在读取期次记录…</p>
+        <div id="brief-summary"></div>
+      </section>
       <section class="section">
         <div class="section-header">
-          <h2>市场相关原帖</h2>
-          <a class="more" href="sources.html">查看评分规则 →</a>
+          <h2>市场最关注的五件事 <span id="focus-count">0 / 5</span></h2>
         </div>
-        <div id="x-feed" class="x-feed" aria-live="polite"></div>
+        <p class="brief-intro">按影响范围、时效与预期差比较；“最关注”是本期检索范围内的判断，不等于全网排名。</p>
+        <div id="brief-focus" class="x-feed"></div>
       </section>
-      <p class="disclaimer">可信度分数衡量证据可追溯性，不代表上涨概率，也不构成投资建议。</p>
+      <section class="section">
+        <div class="section-header"><h2>多学科认知与夜雨知识库 <span id="insights-count">0 / 10</span></h2></div>
+        <p class="brief-intro">从宏观、地缘、产业、资金结构与行为视角选出另外十件事，写清传导链与反向条件。</p>
+        <div id="brief-insights" class="x-feed"></div>
+      </section>
+      <div id="brief-audit"></div>
+      <p class="disclaimer">定时简报，不是连续行情终端。可信度为未校准的证据初评，不代表真伪或涨跌概率。采集不足会显示缺额，不用旧闻凑数。<a href="sources.html">查看评分规则 →</a></p>
     </main>
   </div>
   <script src="app.js"></script>
+  <script src="briefs.js"></script>
 </body>
 </html>

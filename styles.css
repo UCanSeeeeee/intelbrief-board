@@ -1,4 +1,27 @@
 /* Intel Brief — Linear calm-density dark theme */
+.brief-overview { border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 30px; background: var(--bg-elevated); }
+.brief-toolbar { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px; }
+.brief-toolbar select { max-width:100%; padding:8px; color:var(--text); background:var(--bg-card); border:1px solid var(--border); border-radius:6px; }
+#brief-state, .brief-small, .brief-intro { color:var(--text-secondary); font-size:12px; line-height:1.7; }
+.brief-intro { margin:-6px 0 16px; }
+#brief-summary h2 { margin:16px 0 8px; font-size:18px; }
+.brief-warning { color:var(--amber); margin-top:12px; }
+.section-header h2 span { font-size:12px; color:var(--text-muted); white-space:nowrap; }
+.brief-card { overflow-wrap:anywhere; }
+.brief-card-top { display:flex; align-items:baseline; gap:12px; margin-bottom:12px; }
+.brief-card-top h3 { flex:1; font-size:17px; }
+.brief-rank { color:var(--text-muted); font-variant-numeric:tabular-nums; }
+.brief-card p { margin:10px 0; line-height:1.8; }
+.brief-card p strong { color:var(--text-secondary); margin-right:6px; font-weight:500; }
+.brief-knowledge { padding:12px 16px; border-left:2px solid #8ca9a0; background:var(--bg-elevated); margin:14px 0; }
+.brief-knowledge small { color:var(--text-secondary); }
+.brief-evidence { border-top:1px solid var(--border); margin-top:16px; padding:12px 0; font-size:13px; }
+.brief-evidence summary { cursor:pointer; color:var(--text-secondary); }
+.brief-evidence ul { margin:12px 0; padding-left:20px; color:var(--text-secondary); }
+.brief-evidence h3 { font-size:13px; margin-top:14px; }
+.brief-source { padding:14px 0; border-top:1px solid var(--border-subtle); }
+.brief-source a { text-decoration:underline; text-underline-offset:3px; }
+.brief-source blockquote { padding-left:12px; border-left:2px solid var(--border); margin:12px 0; color:var(--text-secondary); }
 :root {
   --bg: #0a0a0b;
   --bg-elevated: #111113;

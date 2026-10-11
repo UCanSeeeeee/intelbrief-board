@@ -33,6 +33,11 @@ Grok JSON ┘                ↑
 
 ## 关键文件
 
+- `docs/STOCK_BRIEF.md`：美股每天北京时间 09:00 / 16:00 / 21:00 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。
+- `config/stock-brief.json`：时区、时段、条数与技能标识。
+- `data/stock-briefs/index.json`：历史目录；同目录期次文件是不可覆盖的历史快照。首期实际定时采集尚待验证。
+- `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
+
 - `sources/x-sources.json`：账号来源表。身份等级必须人工维护，账号变化后需要复核。
 - `data/raw/x-posts.json`：原始归档。status ID 是去重主键。
 - `data/x-intelligence.json`：显示数据，随时可由原始归档重建。
@@ -63,7 +68,7 @@ npm run dev
 
 Cloudflare Pages 从 `master` 自动部署。静态构建不采集 X，以免在构建日志或浏览器端暴露 Token。采集在本地或受保护环境运行，生成数据经校验后再提交。
 
-`.github/workflows/refresh-x.yml` 提供手动触发的完整刷新，但没有 cron。先在 GitHub Secrets 配置 `X_BEARER_TOKEN`；未核实 API 额度与用户期望频率前，不要擅自加入定时计划。
+`.github/workflows/refresh-x.yml` 提供手动刷新，没有 cron。美股简报的三次频率已获用户授权，通过应用原生对话定时任务执行，以应用内状态为准；不要另建重复调度。API 费用尚未获授权，默认沿用已登录 Grok Bot 的只读能力；当前实现不代表 API 或完整定时采集已经实测成功。
 
 ## 接手检查清单
 

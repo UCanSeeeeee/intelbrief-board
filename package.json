@@ -11,6 +11,9 @@
     "build": "npm run score",
     "test": "node --test test/*.test.js",
     "check": "node scripts/validate-data.js",
+    "brief:slot": "node scripts/stock-brief.js slot",
+    "brief:validate": "node scripts/stock-brief.js validate",
+    "brief:publish": "node scripts/stock-brief.js publish",
     "dev": "npx --yes serve -l 8787 .",
     "pages:dev": "npx --yes wrangler pages dev . --port 8787",
     "deploy": "npx --yes wrangler pages deploy . --project-name=intelbrief-board"
