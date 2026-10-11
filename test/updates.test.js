@@ -122,7 +122,7 @@ test('people intelligence enforces per-tab limits, weekly ranks and real X evide
   const result=preparePeopleIntelligence({checkedAt:now.toISOString(),tabs,items:[item]},config,{items:[]},cutoff,now);
   assert.equal(result.status,'complete');assert.equal(result.data.items.length,1);
   const tooMany=Array.from({length:11},(_,index)=>({...item,eventKey:`event-${index}`,url:`https://x.com/example/status/${100+index}`,weeklyRanks:{}}));
-  assert.throws(()=>preparePeopleIntelligence({checkedAt:now.toISOString(),tabs,items:tooMany},config,{items:[]},cutoff,now),/24小时条目超过上限/);
+  assert.throws(()=>preparePeopleIntelligence({checkedAt:now.toISOString(),tabs,items:tooMany},config,{items:[]},cutoff,now),/近\d+天条目超过上限/);
   const bad=structuredClone(item);bad.url='https://example.com/post/100';
   assert.throws(()=>preparePeopleIntelligence({checkedAt:now.toISOString(),tabs,items:[bad]},config,{items:[]},cutoff,now),/真实或唯一X原帖/);
 });
