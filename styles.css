@@ -22,6 +22,45 @@
 .brief-source { padding:14px 0; border-top:1px solid var(--border-subtle); }
 .brief-source a { text-decoration:underline; text-underline-offset:3px; }
 .brief-source blockquote { padding-left:12px; border-left:2px solid var(--border); margin:12px 0; color:var(--text-secondary); }
+.stock-tabs { display:flex; gap:4px; border-bottom:1px solid var(--border); margin:-8px 0 28px; }
+.stock-tabs button { appearance:none; border:0; border-bottom:2px solid transparent; background:transparent; color:var(--text-muted); padding:11px 18px; font:inherit; font-size:13px; cursor:pointer; }
+.stock-tabs button:hover { color:var(--text-secondary); }
+.stock-tabs button[aria-selected="true"] { color:var(--text); border-bottom-color:var(--text); }
+.stock-tabs button:focus-visible { outline:2px solid var(--text-secondary); outline-offset:2px; }
+[data-stock-panel][hidden] { display:none; }
+.people-overview { display:flex; justify-content:space-between; gap:24px; align-items:flex-end; border:1px solid var(--border); border-radius:10px; padding:22px; background:var(--bg-elevated); }
+.people-overview h2 { margin:4px 0 8px; font-size:21px; }
+.people-overview p { max-width:720px; color:var(--text-secondary); font-size:13px; line-height:1.75; }
+.people-overview .eyebrow { color:var(--text-muted); font-size:10px; letter-spacing:.12em; }
+#people-state { white-space:nowrap; }
+.people-selector { display:flex; gap:8px; overflow-x:auto; padding:18px 0; }
+.people-selector button { min-width:155px; text-align:left; border:1px solid var(--border); border-radius:8px; background:var(--bg-card); color:var(--text); padding:12px 14px; cursor:pointer; }
+.people-selector button.active { border-color:#71717a; background:var(--bg-hover); }
+.people-selector strong,.people-selector span { display:block; }
+.people-selector span { color:var(--text-muted); font-size:11px; margin-top:3px; }
+.person-detail { border:1px solid var(--border); border-radius:10px; background:var(--bg-card); overflow:hidden; }
+.person-profile { display:flex; align-items:center; gap:14px; padding:20px; border-bottom:1px solid var(--border); }
+.person-profile h2 { font-size:18px; }
+.person-profile a,.person-profile p { color:var(--text-muted); font-size:12px; }
+.person-avatar { width:46px; height:46px; display:grid; place-items:center; border:1px solid var(--border); border-radius:50%; background:var(--bg-elevated); font-weight:600; }
+.person-count { margin-left:auto; text-align:right; }
+.person-count strong,.person-count span { display:block; }
+.person-count strong { font-size:20px; }
+.person-count span { color:var(--text-muted); font-size:10px; }
+.person-topics { padding:14px 20px; border-bottom:1px solid var(--border-subtle); }
+.person-timeline { padding:0 20px 20px; }
+.person-post { padding:18px 0; border-bottom:1px solid var(--border-subtle); }
+.person-post:last-child { border-bottom:0; }
+.person-post-head { display:flex; justify-content:space-between; gap:12px; color:var(--text-muted); font-size:11px; }
+.person-post > p { white-space:pre-wrap; color:var(--text-secondary); margin:10px 0; line-height:1.7; }
+.person-post > a { display:inline-block; color:var(--text-secondary); font-size:12px; margin-top:10px; }
+@media (max-width: 700px) {
+  .stock-tabs { margin-top:0; }
+  .stock-tabs button { flex:1; }
+  .people-overview { align-items:flex-start; flex-direction:column; }
+  #people-state { white-space:normal; }
+  .person-post-head { flex-direction:column; gap:3px; }
+}
 :root {
   --bg: #0a0a0b;
   --bg-elevated: #111113;

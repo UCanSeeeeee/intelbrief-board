@@ -28,6 +28,11 @@
           <span>北京时间 · 每天 09:00 / 16:00 / 21:00 启动更新</span>
         </div>
       </header>
+      <nav class="stock-tabs" role="tablist" aria-label="美股情报视图">
+        <button id="tab-news" type="button" role="tab" aria-selected="true" aria-controls="panel-news" tabindex="0" data-stock-tab="news">美股讯息</button>
+        <button id="tab-people" type="button" role="tab" aria-selected="false" aria-controls="panel-people" tabindex="-1" data-stock-tab="people">具体人物</button>
+      </nav>
+      <div id="panel-news" role="tabpanel" aria-labelledby="tab-news" data-stock-panel="news">
       <section class="brief-overview" aria-live="polite">
         <div class="brief-toolbar"><label for="edition-select">简报期次</label><select id="edition-select" disabled><option>正在加载</option></select></div>
         <p id="brief-state">正在读取期次记录…</p>
@@ -47,9 +52,25 @@
       </section>
       <div id="brief-audit"></div>
       <p class="disclaimer">定时简报，不是连续行情终端。可信度为未校准的证据初评，不代表真伪或涨跌概率。采集不足会显示缺额，不用旧闻凑数。<a href="sources.html">查看评分规则 →</a></p>
+      </div>
+      <div id="panel-people" role="tabpanel" aria-labelledby="tab-people" data-stock-panel="people" hidden>
+        <section class="people-overview">
+          <div>
+            <p class="eyebrow">人物情报</p>
+            <h2>具体人物</h2>
+            <p>按人物查看已进入来源表的 X 账号、关注主题和原帖时间线。人物身份只说明“谁在发言”，不自动证明其观点正确。</p>
+          </div>
+          <p id="people-state" aria-live="polite">正在读取人物资料…</p>
+        </section>
+        <div id="people-selector" class="people-selector" aria-label="选择人物"></div>
+        <section id="person-detail" class="person-detail" aria-live="polite"></section>
+        <p class="disclaimer">此页只展示人物本人 X 账号的已采集原帖。机构账号留在来源表；转述、截图和无法核对的内容不冒充本人发言。</p>
+      </div>
     </main>
   </div>
   <script src="app.js"></script>
+  <script src="stock-tabs.js"></script>
   <script src="briefs.js"></script>
+  <script src="people.js"></script>
 </body>
 </html>

@@ -37,6 +37,7 @@ Grok JSON ┘                ↑
 - `config/stock-brief.json`：时区、时段、条数与技能标识。
 - `data/stock-briefs/index.json`：历史目录；同目录期次文件是不可覆盖的历史快照。首期实际定时采集尚待验证。
 - `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
+- `stock-tabs.js` / `people.js`：美股页内的「美股讯息 / 具体人物」切换，以及人物来源表与原帖时间线。人物名单由 `sources/x-sources.json` 中启用且分类为 `people` 的账号维护。
 
 - `sources/x-sources.json`：账号来源表。身份等级必须人工维护，账号变化后需要复核。
 - `data/raw/x-posts.json`：原始归档。status ID 是去重主键。
