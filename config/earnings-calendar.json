@@ -5,12 +5,38 @@
     "id": "nasdaq-calendar-earnings",
     "name": "Nasdaq Earnings Calendar",
     "endpoint": "https://api.nasdaq.com/api/calendar/earnings",
-    "notes": "稳定主源。按交易日查询；请求需浏览器 UA、Origin、Referer。X 博主仅作可选交叉核对，不作系统真源。"
+    "notes": "稳定主源。按交易日查询；请求需浏览器 UA、Origin、Referer。X 仅可选核对。筛选核心见 selectionCore 与 docs/EARNINGS_CALENDAR.md。"
   },
   "important": {
     "minMarketCapUsd": 50000000000,
     "maxPerDay": 12,
-    "alwaysInclude": ["NVDA", "TSLA", "AAPL", "MSFT", "META", "GOOGL", "AMZN", "AVGO", "TSM", "ASML"]
+    "alwaysInclude": [
+      "NVDA",
+      "TSLA",
+      "AAPL",
+      "MSFT",
+      "META",
+      "GOOGL",
+      "AMZN",
+      "AVGO",
+      "TSM",
+      "ASML"
+    ],
+    "role": "辅助种子与粗筛，不能替代主题池与自主判断"
   },
-  "displayDays": 5
+  "displayDays": 5,
+  "selectionCore": {
+    "adoptedAt": "2026-10-12",
+    "summary": "必看主题池 + 自主判断；不是仅市值或仅死名单",
+    "mustCoverThemes": [
+      "AI半导体",
+      "电力",
+      "软件",
+      "老牛股/质量股",
+      "新兴科技"
+    ],
+    "autonomousJudgment": true,
+    "fixedListIsNotSystemOfRecord": true,
+    "docs": "docs/EARNINGS_CALENDAR.md"
+  }
 }
