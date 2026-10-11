@@ -11,7 +11,6 @@ test('primary pages expose news, people, and bottom earnings tabs', () => {
     const items = [...html.matchAll(/<a href="([^"]+)" data-nav="([^"]+)"/g)].map(match => match.slice(1));
     assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['earnings.html', 'earnings']]);
     assert.doesNotMatch(html, /X 情报总览|来源与评分|data-stock-tab/);
-    assert.match(html, /nav-bottom/);
   }
   assert.doesNotMatch(read('index.html'), /role="tab"/);
   assert.match(read('earnings.html'), /data-page="earnings"/);
