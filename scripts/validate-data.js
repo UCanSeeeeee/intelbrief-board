@@ -93,6 +93,26 @@ for (const week of earnings.weeks) {
   }
 }
 
+{
+  const todayBj = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai' }).format(new Date());
+  const bandOf = (s) => (s < 60 ? 'miss' : s < 70 ? 'inline' : s < 90 ? 'beat' : 'smash');
+  for (const week of earnings.weeks || []) {
+    for (const day of week.days || []) {
+      for (const item of day.items || []) {
+        const r = item.result || { status: 'unreviewed' };
+        const where = `earnings ${day.date} ${item.symbol}`;
+        if (day.date < todayBj && r.status === 'unreviewed') fail(`${where}: 已过披露日但未评价，须评分或标 unknown`);
+        if (r.status === 'scored') {
+          if (!Number.isFinite(r.score) || r.score < 0 || r.score > 100) fail(`${where}: 分数须为 0-100`);
+          else if (r.band !== bandOf(r.score)) fail(`${where}: 档位 ${r.band} 与分数 ${r.score} 不一致`);
+          if (!r.summary || !Array.isArray(r.sources) || !r.sources.length) fail(`${where}: 缺总结或来源`);
+        }
+        if (r.status === 'unknown' && !r.summary) fail(`${where}: unknown 须写明原因`);
+      }
+    }
+  }
+}
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);

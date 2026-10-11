@@ -221,8 +221,26 @@ async function main() {
     },
     weeks
   };
+  const todayBj = beijingParts().date;
+  const pendingReview = [];
+  for (const week of weeks) {
+    for (const day of week.days) {
+      for (const item of day.items) {
+        if (day.date < todayBj && (!item.result || item.result.status === 'unreviewed')) {
+          pendingReview.push({ week: week.id, date: day.date, symbol: item.symbol, name: item.name, timeLabel: item.timeLabel });
+        }
+      }
+    }
+  }
+  output.pendingReview = pendingReview;
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(output, null, 2) + '\n');
+  if (pendingReview.length) {
+    console.log(`待评价 ${pendingReview.length} 家（已过披露日、尚未评分），须立即查询结果并评分：`);
+    for (const p of pendingReview) console.log(`  - ${p.date} ${p.symbol} ${p.name}`);
+  } else {
+    console.log('待评价 0 家');
+  }
   for (const week of weeks) {
     console.log(
       `${week.label} ${week.weekStart}→${week.weekEnd}: ${week.counts.important} important / ${week.counts.raw} raw`
