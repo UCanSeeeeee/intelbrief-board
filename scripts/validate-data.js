@@ -80,12 +80,16 @@ for (const key of ['knowledgeBase','collectionSop']) {
 const earningsConfig = readJson(path.join(ROOT, 'config/earnings-calendar.json'));
 const earnings = readJson(path.join(ROOT, 'data/earnings-calendar.json'));
 if (earningsConfig?.source?.endpoint !== 'https://api.nasdaq.com/api/calendar/earnings') fail('earnings source endpoint unexpected');
-  console.log(`[validate-data] OK: earnings calendar ${earnings.counts?.important||0} important / ${earnings.counts?.raw||0} raw`);
-for (const [index, day] of earnings.days.entries()) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(day.date || '')) fail(`earnings.days[${index}] invalid date`);
-  if (!Array.isArray(day.items)) fail(`earnings.days[${index}] missing items`);
-  for (const [j, item] of day.items.entries()) {
-    if (!item.symbol || !item.timeLabel) fail(`earnings.days[${index}].items[${j}] incomplete`);
+if (!Array.isArray(earnings.weeks) || earnings.weeks.length < 3) fail('earnings calendar needs last/current/next weeks');
+for (const week of earnings.weeks) {
+  if (!['last','current','next'].includes(week.id)) fail(`earnings week id invalid: ${week.id}`);
+  if (!Array.isArray(week.days)) fail(`earnings week ${week.id} missing days`);
+  for (const [index, day] of week.days.entries()) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(day.date || '')) fail(`earnings.${week.id}.days[${index}] invalid date`);
+    if (!Array.isArray(day.items)) fail(`earnings.${week.id}.days[${index}] missing items`);
+    for (const [j, item] of day.items.entries()) {
+      if (!item.symbol || !item.timeLabel) fail(`earnings.${week.id}.days[${index}].items[${j}] incomplete`);
+    }
   }
 }
 
@@ -94,5 +98,5 @@ if (!process.exitCode) {
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);
   console.log(`[validate-data] OK: ${peopleTabs.size} people tabs, ${eventKeys.size} selected events`);
   console.log('[validate-data] OK: project research knowledge and Grok SOP');
-  console.log(`[validate-data] OK: earnings calendar ${earnings.counts?.important||0} important / ${earnings.counts?.raw||0} raw`);
+  console.log(`[validate-data] OK: earnings calendar ${earnings.weeks?.length||0} weeks, ${earnings.counts?.important||0} important / ${earnings.counts?.raw||0} raw`);
 }

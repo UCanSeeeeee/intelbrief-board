@@ -63,4 +63,4 @@ npm run fetch:earnings
 
 ## 页面
 
-侧栏顺序：美股讯息 → 具体人物 → 财报日历（`earnings.html`）。构建时随 `npm run build` 进入 `dist`。
+侧栏顺序：美股讯息 → 具体人物 → 财报日历（`earnings.html`）。页内顶部 Tab：**上周 / 本周 / 下周**，默认打开本周。构建时随 `npm run build` 进入 `dist`。

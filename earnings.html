@@ -22,15 +22,16 @@
     <main class="main wide">
       <header class="page-header">
         <h1>财报日历</h1>
-        <p class="subtitle">整理本周重要公司财报日。主源为 Nasdaq 公开日历，按市值与观察名单筛选，不为凑数补公司。</p>
+        <p class="subtitle">按上周 / 本周 / 下周查看重点公司财报日。主源 Nasdaq；筛选以 AI 半导体、电力、软件、老牛股与新兴科技为主，其余自主判断。</p>
         <div class="meta">
           <span class="badge"><span class="badge-dot"></span> Nasdaq</span>
           <span id="earnings-state" aria-live="polite">正在读取财报日历…</span>
         </div>
       </header>
+      <div id="earnings-week-tabs" class="people-selector earnings-week-tabs" role="tablist" aria-label="财报周次"></div>
       <section id="earnings-summary" class="earnings-summary" aria-live="polite"></section>
       <section id="earnings-board" class="earnings-board" aria-live="polite"></section>
-      <p class="disclaimer">披露时间可能调整；盘前/盘后以 Nasdaq 字段为准。市值筛选阈值见配置，不等于投资建议。</p>
+      <p class="disclaimer">披露时间可能调整；盘前/盘后以 Nasdaq 为准。结果评分在已知披露且未评价时增量回看，不等于投资建议。</p>
     </main>
   </div>
   <script src="app.js"></script>

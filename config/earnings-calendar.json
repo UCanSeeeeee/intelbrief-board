@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "timezone": "Asia/Shanghai",
   "source": {
     "id": "nasdaq-calendar-earnings",
@@ -7,85 +7,67 @@
     "endpoint": "https://api.nasdaq.com/api/calendar/earnings",
     "notes": "稳定主源。按交易日查询；请求需浏览器 UA、Origin、Referer。X 仅可选核对。筛选核心见 selectionCore 与 docs/EARNINGS_CALENDAR.md。"
   },
-  "important": {
-    "minMarketCapUsd": 50000000000,
-    "maxPerDay": 12,
-    "alwaysInclude": [
-      "NVDA",
-      "TSLA",
-      "AAPL",
-      "MSFT",
-      "META",
-      "GOOGL",
-      "AMZN",
-      "AVGO",
-      "TSM",
-      "ASML"
-    ],
-    "role": "辅助种子与粗筛，不能替代主题池与自主判断"
-  },
-  "displayDays": 5,
   "selectionCore": {
     "adoptedAt": "2026-10-12",
     "summary": "必看主题池 + 自主判断；不是仅市值或仅死名单",
-    "mustCoverThemes": [
-      "AI半导体",
-      "电力",
-      "软件",
-      "老牛股/质量股",
-      "新兴科技"
-    ],
+    "mustCoverThemes": ["AI半导体", "电力", "软件", "老牛股/质量股", "新兴科技"],
     "autonomousJudgment": true,
     "fixedListIsNotSystemOfRecord": true,
     "docs": "docs/EARNINGS_CALENDAR.md"
   },
+  "themes": {
+    "semiconductor": {
+      "label": "AI半导体",
+      "tickers": ["NVDA", "AVGO", "TSM", "ASML", "AMD", "INTC", "MU", "AMAT", "LRCX", "KLAC", "ADI", "TXN", "QCOM", "MRVL", "SNPS", "CDNS", "ARM", "SMCI", "DELL", "HPE", "ANET", "CRDO", "ALAB", "VRT", "COHR", "MPWR", "ON", "SWKS"]
+    },
+    "power": {
+      "label": "电力",
+      "tickers": ["CEG", "VST", "NEE", "SO", "DUK", "SRE", "AEP", "EXC", "XEL", "PCG", "ETR", "D", "GEV", "PWR", "ETN", "EMR", "HUBB", "GNRC", "FSLR", "ENPH", "SEDG", "BE", "PLUG", "CCJ", "OKLO", "SMR", "TLN", "CEG"]
+    },
+    "software": {
+      "label": "软件",
+      "tickers": ["MSFT", "ORCL", "CRM", "NOW", "ADBE", "INTU", "SNOW", "PLTR", "PANW", "CRWD", "DDOG", "NET", "ZS", "FTNT", "WDAY", "TEAM", "SHOP", "SQ", "UBER", "ABNB", "META", "GOOGL", "GOOG", "AMZN", "AAPL"]
+    },
+    "quality": {
+      "label": "老牛股/质量股",
+      "tickers": ["UNH", "JNJ", "PG", "KO", "PEP", "COST", "WMT", "HD", "MCD", "V", "MA", "BRK.B", "JPM", "BRK-B"]
+    },
+    "emerging": {
+      "label": "新兴科技",
+      "tickers": ["TSLA", "SPACE", "RKLB", "ASTS", "IONQ", "RGTI", "SOUN", "PATH", "AI", "BBAI", "TEM", "HIMS", "UPST", "AFRM", "COIN", "HOOD", "MSTR", "APP", "MDB"]
+    }
+  },
+  "important": {
+    "minMarketCapUsd": 80000000000,
+    "maxPerDay": 15,
+    "autonomousMinMarketCapUsd": 150000000000,
+    "role": "主题命中优先；其余大市值由自主判断阈值辅助，不能替代主题池"
+  },
+  "weeks": ["last", "current", "next"],
+  "displayDays": 5,
   "refresh": {
     "timezone": "Asia/Shanghai",
     "tiedToNewsUpdates": true,
-    "dailySlots": [
-      "09:00",
-      "16:00",
-      "21:00"
-    ],
+    "dailySlots": ["09:00", "16:00", "21:00"],
     "reviewResultsDuringNewsUpdate": true,
     "mondayIncludesWeekendNews": true,
-    "notes": "挂在每日讯息更新上：可轻量刷新日历；结果核验仅增量（已知已披露且未评价）。周一须覆盖上周六日讯息。"
-  },
-  "resultScore": {
-    "scale": "0-100",
-    "bands": [
-      {
-        "id": "miss",
-        "label": "不及预期",
-        "min": 0,
-        "maxExclusive": 60
-      },
-      {
-        "id": "inline",
-        "label": "符合预期",
-        "min": 60,
-        "maxExclusive": 70
-      },
-      {
-        "id": "beat",
-        "label": "超预期",
-        "min": 70,
-        "maxExclusive": 90
-      },
-      {
-        "id": "smash",
-        "label": "远超预期",
-        "min": 90,
-        "maxInclusive": 100
-      }
-    ],
-    "unknownAllowed": true,
-    "notTradingAdvice": true
+    "notes": "挂在每日讯息更新上：可轻量刷新三周日历；结果核验仅增量（已知已披露且未评价）。周一须覆盖上周六日讯息。"
   },
   "resultReview": {
     "mode": "incremental",
     "onlyKnownReportedAndUnreviewed": true,
     "skipAlreadyScoredWithoutNewEvidence": true,
     "notes": "日常更新不对整周做重复结果检索；只查已知已披露且尚未评价的公司。"
+  },
+  "resultScore": {
+    "scale": "0-100",
+    "bands": [
+      { "id": "miss", "label": "不及预期", "min": 0, "maxExclusive": 60 },
+      { "id": "inline", "label": "符合预期", "min": 60, "maxExclusive": 70 },
+      { "id": "beat", "label": "超预期", "min": 70, "maxExclusive": 90 },
+      { "id": "smash", "label": "远超预期", "min": 90, "maxInclusive": 100 }
+    ],
+    "unknownAllowed": true,
+    "notTradingAdvice": true
   }
 }

@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 /**
- * Pull the upcoming US earnings week from Nasdaq's public calendar API.
- * This page is calendar data, not the X-only intel pipeline.
+ * Pull last / current / next US earnings weeks from Nasdaq.
+ * Selection: theme pools first, then autonomous large-cap judgment.
  */
 const fs = require('node:fs');
 const path = require('node:path');
 const ROOT = path.resolve(__dirname, '..');
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/earnings-calendar.json'), 'utf8'));
+const OUT = path.join(ROOT, 'data/earnings-calendar.json');
 
 function parseCap(text) {
   if (!text || typeof text !== 'string') return null;
@@ -44,13 +45,24 @@ function weekdaysFrom(startIso, count) {
   return out;
 }
 
-function upcomingWeekStart(now = new Date()) {
+function currentWeekStart(now = new Date()) {
   const { date, weekday } = beijingParts(now);
-  // If Sat/Sun in Beijing, start next Monday; else start this week's Monday (US calendar dates still YYYY-MM-DD).
   const map = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
   const offset = map[weekday] ?? 0;
-  if (offset >= 5) return addDays(date, 8 - offset); // next Monday
+  if (offset >= 5) return addDays(date, 8 - offset);
   return addDays(date, -offset);
+}
+
+function themeIndex() {
+  const map = new Map();
+  for (const [id, theme] of Object.entries(config.themes || {})) {
+    for (const ticker of theme.tickers || []) {
+      const symbol = String(ticker).toUpperCase();
+      if (!map.has(symbol)) map.set(symbol, []);
+      map.get(symbol).push({ id, label: theme.label });
+    }
+  }
+  return map;
 }
 
 async function fetchDay(date) {
@@ -76,41 +88,73 @@ function normalizeTime(value) {
   return { code: 'unspecified', label: '时段未公布' };
 }
 
-function pickImportant(rows) {
-  const always = new Set((config.important.alwaysInclude || []).map((s) => s.toUpperCase()));
-  const minCap = config.important.minMarketCapUsd || 0;
+function pickImportant(rows, themes) {
+  const minThemeCap = config.important.minMarketCapUsd || 0;
+  const autoCap = config.important.autonomousMinMarketCapUsd || minThemeCap;
   const scored = rows.map((row) => {
     const symbol = String(row.symbol || '').toUpperCase();
     const marketCapUsd = parseCap(row.marketCap);
-    const forced = always.has(symbol);
-    const important = forced || (marketCapUsd != null && marketCapUsd >= minCap);
-    return { row, symbol, marketCapUsd, forced, important };
+    const hitThemes = themes.get(symbol) || [];
+    const themeHit = hitThemes.length > 0;
+    const autonomous =
+      !themeHit && marketCapUsd != null && marketCapUsd >= autoCap;
+    const important =
+      themeHit || autonomous || (marketCapUsd != null && marketCapUsd >= minThemeCap && themeHit);
+    // Prefer theme hits always; autonomous large caps; avoid flooding with mid-cap non-theme
+    const keep = themeHit || autonomous;
+    let reason = '';
+    if (themeHit) reason = `主题：${hitThemes.map((t) => t.label).join('、')}`;
+    else if (autonomous) reason = '自主判断：超大市值，可能影响指数/板块定价';
+    return { row, symbol, marketCapUsd, hitThemes, themeHit, autonomous, keep, reason };
   });
-  const selected = scored
-    .filter((item) => item.important)
-    .sort((a, b) => (b.marketCapUsd || 0) - (a.marketCapUsd || 0))
-    .slice(0, config.important.maxPerDay || 12);
-  return selected;
+  return scored
+    .filter((item) => item.keep)
+    .sort((a, b) => {
+      if (a.themeHit !== b.themeHit) return a.themeHit ? -1 : 1;
+      return (b.marketCapUsd || 0) - (a.marketCapUsd || 0);
+    })
+    .slice(0, config.important.maxPerDay || 15);
 }
 
-async function main() {
-  const weekStart = upcomingWeekStart();
+function previousResults() {
+  try {
+    const prev = JSON.parse(fs.readFileSync(OUT, 'utf8'));
+    const map = new Map();
+    for (const week of prev.weeks || []) {
+      for (const day of week.days || []) {
+        for (const item of day.items || []) {
+          if (item.result && item.result.status && item.result.status !== 'unreviewed') {
+            map.set(`${day.date}:${item.symbol}`, item.result);
+          }
+        }
+      }
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
+}
+
+async function buildWeek(id, label, weekStart, themes, resultMap) {
   const days = weekdaysFrom(weekStart, config.displayDays || 5);
   const dayBlocks = [];
-  let totalRaw = 0;
-  let totalImportant = 0;
-
+  let raw = 0;
+  let important = 0;
   for (const date of days) {
     const rows = await fetchDay(date);
-    totalRaw += rows.length;
-    const picked = pickImportant(rows);
-    totalImportant += picked.length;
+    raw += rows.length;
+    const picked = pickImportant(rows, themes);
+    important += picked.length;
     dayBlocks.push({
       date,
-      weekday: new Intl.DateTimeFormat('zh-CN', { timeZone: 'UTC', weekday: 'short' }).format(new Date(date + 'T12:00:00Z')),
+      weekday: new Intl.DateTimeFormat('zh-CN', { timeZone: 'UTC', weekday: 'short' }).format(
+        new Date(date + 'T12:00:00Z')
+      ),
       rawCount: rows.length,
-      items: picked.map(({ row, symbol, marketCapUsd, forced }) => {
+      items: picked.map(({ row, symbol, marketCapUsd, hitThemes, themeHit, autonomous, reason }) => {
         const timing = normalizeTime(row.time);
+        const key = `${date}:${symbol}`;
+        const prior = resultMap.get(key);
         return {
           symbol,
           name: row.name || symbol,
@@ -120,38 +164,71 @@ async function main() {
           marketCapUsd,
           epsForecast: row.epsForecast || null,
           fiscalQuarterEnding: row.fiscalQuarterEnding || null,
-          forcedInclude: forced,
-          source: 'nasdaq'
+          themes: hitThemes.map((t) => t.label),
+          selection: themeHit ? 'theme' : autonomous ? 'autonomous' : 'other',
+          selectionReason: reason,
+          source: 'nasdaq',
+          result: prior || { status: 'unreviewed', score: null, band: null, summary: null, checkedAt: null }
         };
       })
     });
+    await new Promise((r) => setTimeout(r, 200));
   }
-
-  const output = {
-    schemaVersion: 1,
-    updatedAt: new Date().toISOString(),
-    timezone: config.timezone,
+  return {
+    id,
+    label,
     weekStart,
     weekEnd: days[days.length - 1],
+    counts: { days: days.length, raw, important },
+    days: dayBlocks
+  };
+}
+
+async function main() {
+  const themes = themeIndex();
+  const resultMap = previousResults();
+  const currentStart = currentWeekStart();
+  const lastStart = addDays(currentStart, -7);
+  const nextStart = addDays(currentStart, 7);
+  const weeks = [
+    await buildWeek('last', '上周', lastStart, themes, resultMap),
+    await buildWeek('current', '本周', currentStart, themes, resultMap),
+    await buildWeek('next', '下周', nextStart, themes, resultMap)
+  ];
+  const output = {
+    schemaVersion: 2,
+    updatedAt: new Date().toISOString(),
+    timezone: config.timezone,
+    activeWeekId: 'current',
     source: {
       id: config.source.id,
       name: config.source.name,
-      endpoint: config.source.endpoint,
-      fetchedDates: days
+      endpoint: config.source.endpoint
     },
+    selectionCore: config.selectionCore,
     policy: {
+      themes: Object.fromEntries(
+        Object.entries(config.themes || {}).map(([id, theme]) => [id, { label: theme.label, size: (theme.tickers || []).length }])
+      ),
       minMarketCapUsd: config.important.minMarketCapUsd,
-      maxPerDay: config.important.maxPerDay,
-      alwaysInclude: config.important.alwaysInclude
+      autonomousMinMarketCapUsd: config.important.autonomousMinMarketCapUsd,
+      maxPerDay: config.important.maxPerDay
     },
-    counts: { days: days.length, raw: totalRaw, important: totalImportant },
-    days: dayBlocks
+    counts: {
+      weeks: weeks.length,
+      raw: weeks.reduce((s, w) => s + w.counts.raw, 0),
+      important: weeks.reduce((s, w) => s + w.counts.important, 0)
+    },
+    weeks
   };
-
-  const outPath = path.join(ROOT, 'data/earnings-calendar.json');
-  fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, JSON.stringify(output, null, 2) + '\n');
-  console.log(`Wrote ${outPath}: ${totalImportant} important / ${totalRaw} raw across ${days.length} days (${weekStart} → ${days.at(-1)})`);
+  fs.mkdirSync(path.dirname(OUT), { recursive: true });
+  fs.writeFileSync(OUT, JSON.stringify(output, null, 2) + '\n');
+  for (const week of weeks) {
+    console.log(
+      `${week.label} ${week.weekStart}→${week.weekEnd}: ${week.counts.important} important / ${week.counts.raw} raw`
+    );
+  }
+  console.log(`Wrote ${OUT}`);
 }
 
 main().catch((error) => {
