@@ -1,0 +1,10 @@
+# Cloudflare Pages — static site at repo root
+# Connect this GitHub repo in Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git
+# Or deploy CLI: npm run deploy  (requires CLOUDFLARE_API_TOKEN + account)
+
+name = "intelbrief-board"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "."
+
+# No build command needed for pure static HTML/CSS/JS.
+# If you add a bundler later, set build command in Dashboard / here accordingly.

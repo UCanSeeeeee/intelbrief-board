@@ -1,0 +1,18 @@
+{
+  "name": "intelbrief-board",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Linear-style intel dashboard: celebrity timeline + US stock session briefs",
+  "scripts": {
+    "fetch": "node scripts/fetch-celebrities.js && node scripts/fetch-stock-sessions.js",
+    "fetch:celebrities": "node scripts/fetch-celebrities.js",
+    "fetch:stocks": "node scripts/fetch-stock-sessions.js",
+    "build": "npm run fetch",
+    "dev": "npx --yes serve -l 8787 .",
+    "pages:dev": "npx --yes wrangler pages dev . --port 8787",
+    "deploy": "npx --yes wrangler pages deploy . --project-name=intelbrief-board"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

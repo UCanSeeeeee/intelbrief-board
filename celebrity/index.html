@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>名人 — 简报 Brief</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body data-page="celebrity">
+  <button class="menu-toggle" type="button" aria-label="菜单">☰</button>
+  <div class="overlay"></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-mark">简</div>
+        <div class="logo-text">简报 <span>Brief</span></div>
+      </div>
+      <nav class="nav">
+        <a href="../index.html" data-nav="home"><span class="nav-icon">◈</span> 首页</a>
+        <a href="index.html" data-nav="celebrity"><span class="nav-icon">◎</span> 名人</a>
+        <a href="../stocks.html" data-nav="stocks"><span class="nav-icon">▣</span> 美股</a>
+      </nav>
+      <div class="sidebar-footer">占位数据 · 本地演示</div>
+    </aside>
+    <main class="main">
+      <header class="page-header">
+        <h1>名人档案</h1>
+        <p class="subtitle">点击进入个人时间线与完整信息</p>
+        <div class="meta">
+          <span class="badge"><span class="badge-dot"></span> 演示数据</span>
+        </div>
+      </header>
+      <section class="section">
+        <div class="celeb-grid" id="celeb-index-grid">
+          <a class="celeb-card" href="elon-musk.html"><div class="avatar">EM</div><div><div class="name">Elon Musk</div><div class="role">Tesla / SpaceX / xAI</div></div></a>
+          <a class="celeb-card" href="jensen-huang.html"><div class="avatar">JH</div><div><div class="name">黄仁勋</div><div class="role">NVIDIA</div></div></a>
+          <a class="celeb-card" href="sam-altman.html"><div class="avatar">SA</div><div><div class="name">Sam Altman</div><div class="role">OpenAI</div></div></a>
+          <a class="celeb-card" href="lei-jun.html"><div class="avatar">雷</div><div><div class="name">雷军</div><div class="role">小米</div></div></a>
+          <a class="celeb-card" href="warren-buffett.html"><div class="avatar">WB</div><div><div class="name">Warren Buffett</div><div class="role">Berkshire</div></div></a>
+          <a class="celeb-card" href="jack-ma.html"><div class="avatar">马</div><div><div class="name">马云</div><div class="role">阿里巴巴</div></div></a>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header"><h2>时间流</h2></div>
+        <div class="card">
+          <ul class="feed-list" id="celeb-feed"></ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../app.js"></script>
+</body>
+</html>
