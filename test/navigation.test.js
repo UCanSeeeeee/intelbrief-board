@@ -27,12 +27,17 @@ test('news is the home page and people is an independent page', () => {
   assert.match(people, /id="person-detail"/);
 });
 
-test('people intelligence has five research tabs and the collection limit is ten', () => {
+test('people intelligence has five research tabs and updated windows', () => {
   const config = JSON.parse(read('config/people-intelligence.json'));
   assert.deepEqual(config.tabs.map(tab => tab.label), ['马斯克', '黄仁勋', '特朗普', '万亿美元公司高层', '机构研报']);
+  const people = config.tabs.filter(tab => tab.type === 'person');
   const collections = config.tabs.filter(tab => tab.type === 'collection');
   assert.equal(collections.length, 2);
-  assert.ok(collections.every(tab => tab.latestLimit === 10 && tab.weeklyLimit === 5));
+  assert.ok(people.every(tab => tab.latestLimit === 5 && tab.latestWindowDays === 1 && tab.weeklyWindowDays === 7));
+  assert.ok(collections.every(tab => tab.latestLimit === 10 && tab.weeklyLimit === 5 && tab.latestWindowDays === 30 && tab.weeklyWindowDays === 30));
+  const trump = config.tabs.find(tab => tab.id === 'donald-trump');
+  assert.equal(trump.handle, 'TrumpDailyPosts');
+  assert.ok(trump.handles.includes('POTUS'));
 });
 
 test('legacy public routes lead to the new information architecture', () => {

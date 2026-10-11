@@ -54,9 +54,20 @@
     </article>`;
   }
 
+  function windowDays(tab, kind) {
+    const value = Number(kind === 'latest' ? tab.latestWindowDays : tab.weeklyWindowDays);
+    return Number.isFinite(value) && value > 0 ? value : (kind === 'latest' ? 1 : 7);
+  }
+  function windowMs(tab, kind) { return windowDays(tab, kind) * 86400000; }
+  function windowLabel(days) {
+    if (days === 1) return '24 小时';
+    if (days === 7) return '滚动 7 天';
+    return `近 ${days} 天`;
+  }
   function emptySection(kind, tab) {
     const limit = kind === 'latest' ? tab.latestLimit : tab.weeklyLimit;
-    return `<div class="empty-state signal-empty"><strong>当前没有达到门槛的信息</strong><p>${kind === 'latest' ? `24 小时区最多 ${limit} 条，但不会为了凑数加入普通动态。` : `滚动一周最多 ${limit} 件；不足时保留实际数量。`}</p></div>`;
+    const days = windowDays(tab, kind);
+    return `<div class="empty-state signal-empty"><strong>当前没有达到门槛的信息</strong><p>${kind === 'latest' ? `${windowLabel(days)}区最多 ${limit} 条，但不会为了凑数加入普通动态。` : `${windowLabel(days)}最多 ${limit} 件；不足时保留实际数量。`}</p></div>`;
   }
 
   function section(title, note, sectionItems, kind, tab, latestKeys) {
@@ -71,8 +82,8 @@
         <div><p class="eyebrow">${escape(note)}</p><h3 id="${escape(tab.id)}-${kind}">${escape(title)}</h3></div>
         <span>${sectionItems.length}/${kind === 'latest' ? tab.latestLimit : tab.weeklyLimit}</span>
       </header>
-      ${duplicateCount ? `<p class="signal-dedup">本周重点中有 ${duplicateCount} 件已在 24 小时区完整展示，这里不重复铺卡。</p>` : ''}
-      <div class="signal-list">${visible.length ? visible.map(item => renderCard(item, kind === 'weekly' && parseTime(item.publishedAt) >= Date.now() - 86400000 ? '24h 新增' : '')).join('') : (duplicateCount ? '' : emptySection(kind, tab))}</div>
+      ${duplicateCount ? `<p class="signal-dedup">重点榜中有 ${duplicateCount} 件已在新增价值区完整展示，这里不重复铺卡。</p>` : ''}
+      <div class="signal-list">${visible.length ? visible.map(item => renderCard(item, kind === 'weekly' && parseTime(item.publishedAt) >= Date.now() - windowMs(tab, 'latest') ? `${windowDays(tab,'latest')===1?'24h':'近窗'}新增` : '')).join('') : (duplicateCount ? '' : emptySection(kind, tab))}</div>
     </section>`;
   }
 
@@ -87,24 +98,29 @@
     const now = Date.now();
     const tabItems = intelligenceItems.filter(item => Array.isArray(item.tabIds) && item.tabIds.includes(tab.id));
     const sorted = [...tabItems].sort((a, b) => parseTime(b.publishedAt) - parseTime(a.publishedAt));
-    const latest = sorted.filter(item => parseTime(item.publishedAt) >= now - 86400000).slice(0, tab.latestLimit);
+    const latestDays = windowDays(tab, 'latest');
+    const weeklyDays = windowDays(tab, 'weekly');
+    const latest = sorted.filter(item => parseTime(item.publishedAt) >= now - windowMs(tab, 'latest')).slice(0, tab.latestLimit);
     const rankFor = item => item.weeklyRanks?.[tab.id] ?? item.weeklyRank;
-    const weekly = sorted.filter(item => parseTime(item.publishedAt) >= now - 7 * 86400000 && rankFor(item) != null)
+    const weekly = sorted.filter(item => parseTime(item.publishedAt) >= now - windowMs(tab, 'weekly') && rankFor(item) != null)
       .sort((a, b) => Number(rankFor(a)) - Number(rankFor(b))).slice(0, tab.weeklyLimit);
     const latestKeys = new Set(latest.map(itemKey));
-    const account = tab.handle ? `<a href="https://x.com/${escape(tab.handle)}" target="_blank" rel="noopener noreferrer">@${escape(tab.handle)} ↗</a>` : '<span>来源名单待维护</span>';
+    const handles = Array.isArray(tab.handles) && tab.handles.length ? tab.handles : (tab.handle ? [tab.handle] : []);
+    const account = handles.length
+      ? handles.map(h => `<a href="https://x.com/${escape(h)}" target="_blank" rel="noopener noreferrer">@${escape(h)} ↗</a>`).join(' · ')
+      : '<span>来源名单待维护</span>';
 
     detail.innerHTML = `<header class="person-profile intelligence-profile">
       <div class="person-avatar" aria-hidden="true">${tab.type === 'collection' ? '合' : escape(tab.label.slice(0, 1))}</div>
       <div class="profile-copy"><p class="eyebrow">${tab.type === 'collection' ? '合集' : '个人'} Tab</p><h2>${escape(tab.label)}</h2><div class="profile-source">${account}</div><p>${escape(tab.identity)}</p></div>
-      <div class="person-count"><strong>${weekly.length}</strong><span>本周入选事件</span></div>
+      <div class="person-count"><strong>${weekly.length}</strong><span>${windowLabel(weeklyDays)}入选</span></div>
     </header>
     <div class="tab-research-rule">
       <p><strong>关注范围</strong>${escape(tab.focus)}</p>
       <p><strong>筛选边界</strong>${escape(tab.sourceRule)}</p>
     </div>
-    ${section('24 小时新增价值', `最多 ${tab.latestLimit} 条`, latest, 'latest', tab, latestKeys)}
-    ${section('本周最重要五件事', '滚动 7 天 · 最多 5 件', weekly, 'weekly', tab, latestKeys)}`;
+    ${section(`${windowLabel(latestDays)}新增价值`, `最多 ${tab.latestLimit} 条`, latest, 'latest', tab, latestKeys)}
+    ${section(`${windowLabel(weeklyDays)}最重要五件事`, `${windowLabel(weeklyDays)} · 最多 ${tab.weeklyLimit} 件`, weekly, 'weekly', tab, latestKeys)}`;
 
     const url = new URL(location.href);
     url.searchParams.delete('person');
@@ -142,7 +158,7 @@
         tabs = Array.isArray(config.tabs) ? config.tabs : [];
         items = Array.isArray(intelligence.items) ? intelligence.items : [];
         state.textContent = `${tabs.length} 个顶部 Tab · ${items.length} 件已入选事件`;
-        selector.innerHTML = tabs.map(tab => `<button type="button" role="tab" id="tab-${escape(tab.id)}" aria-controls="person-detail" aria-selected="false" tabindex="-1" data-tab="${escape(tab.id)}"><strong>${escape(tab.shortLabel || tab.label)}</strong><span>${tab.type === 'collection' ? `合集 · 24h ≤ ${tab.latestLimit}` : `个人 · 24h ≤ ${tab.latestLimit}`}</span></button>`).join('');
+        selector.innerHTML = tabs.map(tab => `<button type="button" role="tab" id="tab-${escape(tab.id)}" aria-controls="person-detail" aria-selected="false" tabindex="-1" data-tab="${escape(tab.id)}"><strong>${escape(tab.shortLabel || tab.label)}</strong><span>${tab.type === 'collection' ? `合集 · ${windowLabel(windowDays(tab,'latest'))} ≤ ${tab.latestLimit}` : `个人 · ${windowLabel(windowDays(tab,'latest'))} ≤ ${tab.latestLimit}`}</span></button>`).join('');
         if (!tabs.length) {
           detail.innerHTML = '<div class="empty-state"><strong>尚未配置顶部 Tab</strong><p>请先维护人物情报配置。</p></div>';
           return;

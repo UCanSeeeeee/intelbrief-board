@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T15:48:56.999Z",
-  "cutoff": "2026-10-11T23:45:00+08:00",
+  "updatedAt": "2026-10-11T16:09:55.000Z",
+  "cutoff": "2026-10-12T00:08:00+08:00",
   "source": "X only",
   "status": "complete",
   "coverage": {
@@ -9,31 +9,75 @@
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "get_users_posts @elonmusk，窗口 cutoff 前 24h 与 7d；收录芯片招聘、Cybercab、Starlink 印度定价。排除住址/邮件隐私帖与纯 Grok Bot 购物演示。"
+        "note": "get_users_posts+search from:elonmusk，窗口 latest≈24h(2026-10-10T16:08Z起)与 weekly7d。入选芯片招聘、Cybercab、Starlink印度定价、Grok Bot下单；周榜另纳入电力指标与频谱直连手机。排除住址/邮件隐私帖与纯促销短帖。24h内高价值仅4条，未凑满5。"
       },
       {
         "id": "jensen-huang",
         "status": "complete",
-        "note": "config.handle=null，本人 X 来源未确认；未用 @nvidia 冒充。检索无合格本人帖，items=0。"
+        "note": "已确认本人账号@JensenHuang；get_users_posts近7日仅1条原创（与纳德拉Windows/CUDA/Azure叙事）。另检索CNBC/Bloomberg/Reuters/nvidia及媒体转述；24h内无达标新产品/供需原话。National Medal与比特币储电等多为二手或仪式性，按门槛未入选最新区。items：本人1条进周榜。"
       },
       {
         "id": "donald-trump",
         "status": "complete",
-        "note": "from:realDonaldTrump 与 get_users_posts 在 cutoff 前 7 日均返回 0 条原创帖；能源停火等政策消息来自第三方转述，按规则不冒充本人 Tab。items=0。"
+        "note": "主源get_users_posts @TrumpDailyPosts（Truth Social同步，非官方）；可执行政策取@WhiteHouse（@POTUS窗口内0条原创）。收录能源停火、柴油EO、核电42亿美元、加班免税。排除Sharia/哥伦布日/选举口水。24h高价值2条，周榜5条。"
       },
       {
         "id": "trillion-leaders",
         "status": "complete",
-        "note": "检索 satyanadella/tim_cook/sundarpichai/Meta/amazon/Apple/Microsoft/Google 等账号 AI/capex 相关原创帖，窗口内无达到传导门槛的本人或核心决策者帖。items=0。"
+        "note": "近30天检索 satyanadella/sundarpichai/tim_cook/Meta/amazon/Google/Microsoft。入选纳德拉Windows智能体与NVIDIA合作、Decision-1、Copilot OS；皮查伊Gemini agent；谷歌Suncatcher太空TPU；亚马逊自研芯片十年与Physical AI。Cook窗口内无AI/半导体/电力传导帖。按事件去重，达门槛才收。"
       },
       {
         "id": "research-reports",
         "status": "complete",
-        "note": "检索 Goldman/UBS/MorganStanley 等价目标与评级变化；窗口内多为二手转述且无法核验付费研报原文，按不绕付费墙与证据门槛落选。items=0。"
+        "note": "近30天检索具名投行评级/目标价变化（MS/BofA/UBS等）。入选：MS重申NVDA顶级半导体并指向电力瓶颈；BofA上调NVDA目标价与TAM；MS上调BorgWarner因AI电力；MS下调Exelon因数据中心负荷能见度。均为X二手转述，fact标明未独立核验付费研报原文；灌水喊单与无法归因帖落选。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "trump-no-tax-on-overtime-2026-10-11",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "白宫宣传：加班费免税承诺落地",
+      "fact": "@WhiteHouse 发帖强调 “NO TAX ON OVERTIME”，并称不同行业美国人已受益，将其表述为承诺兑现。",
+      "whyItMatters": "加班免税改变劳动税负与可支配收入，可能影响消费、服务业成本与财政收入假设。",
+      "counterCase": "若实施细则、覆盖范围或国会文本与宣传不一致，实际税负变化可能小于叙事。",
+      "affected": [
+        "美国消费与劳动力市场",
+        "财政税收"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-11T14:57:38.000Z",
+      "url": "https://x.com/WhiteHouse/status/2109297379577094172",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "donald-trump": 4
+      }
+    },
+    {
+      "eventKey": "trump-energy-ceasefire-oil-refineries-2026-10-11",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "特朗普侧同步：乌俄停打油气与炼油设施（能源停火）",
+      "fact": "@TrumpDailyPosts 发帖称总统宣布乌克兰与俄罗斯将停止以石油和炼油厂为破坏目标；同日 @WhiteHouse 发帖写 “Effective Immediately: An ENERGY CEASEFIRE”。作者为同步/搬运账号，非本人直发。",
+      "whyItMatters": "若双方遵守，可能缓和柴油与成品油供给冲击预期，影响能源价格、通胀与运费成本假设。",
+      "counterCase": "若前线未实际停火、各方否认或袭击继续，则政策宣布难以改变实物供给。",
+      "affected": [
+        "原油与成品油",
+        "航运与通胀预期"
+      ],
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-11T14:24:20.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2109288999026405503",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "donald-trump": 1
+      }
+    },
     {
       "eventKey": "elon-chip-talent-spacex-tesla-2026-10-11",
       "tabIds": [
@@ -41,7 +85,7 @@
       ],
       "title": "马斯克招揽世界级芯片设计与生产工程师加入 SpaceX/Tesla",
       "fact": "马斯克发帖邀请世界级芯片设计或生产工程师加入 SpaceX 或 Tesla，强调可快速迭代设计并定制生产设备。",
-      "whyItMatters": "若转化为真实招聘与产线能力，将强化特斯拉/SpaceX 在 AI 推理、机器人与星座算力上的垂直整合，并加剧芯片人才竞争。",
+      "whyItMatters": "若转化为真实招聘与产线能力，将强化特斯拉/SpaceX 在 AI 推理、机器人与星座算力上的垂直整合，并加剧半导体人才竞争。",
       "counterCase": "若无后续岗位、流片或产能合作的可验证进展，则仅是招聘宣传。",
       "affected": [
         "Tesla",
@@ -76,8 +120,28 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "elon-musk": 3
+        "elon-musk": 4
       }
+    },
+    {
+      "eventKey": "elon-grok-bot-commerce-2026-10-10",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "马斯克展示 Grok Bot：拍照信用卡即可比价下单",
+      "fact": "马斯克称用户可把信用卡拍照丢进聊天，Grok Bot 会在网上搜寻最优价格并下单购买。",
+      "whyItMatters": "若代理购物从演示走到规模化成交，属于 AI 落地的交易闭环信号，并可能改变零售获客与支付入口。",
+      "counterCase": "若缺乏可审计成交量、风控与商户覆盖数据，则仍停留在产品演示。",
+      "affected": [
+        "xAI/Grok",
+        "电商与支付入口"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-10T21:04:52.000Z",
+      "url": "https://x.com/elonmusk/status/2109027407185277123",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
     },
     {
       "eventKey": "elon-starlink-india-affordable-pricing-2026-10-10",
@@ -100,6 +164,442 @@
       "weeklyRanks": {
         "elon-musk": 2
       }
+    },
+    {
+      "eventKey": "elon-electricity-economy-metric-2026-10-10",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "马斯克称发电量是衡量大型经济体真实实力的最佳指标",
+      "fact": "马斯克发帖称 “Electricity production is the best metric for the true strength of any large-scale economy imo”。",
+      "whyItMatters": "把电力供给置于宏观经济核心，强化数据中心、电网与发电资本开支对 AI 扩张约束的叙事权重。",
+      "counterCase": "若无配套的项目、并网或资本开支证据，该观点本身不构成可交易的新增事实。",
+      "affected": [
+        "电力与公用事业",
+        "AI 数据中心扩张"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-10T16:06:22.000Z",
+      "url": "https://x.com/elonmusk/status/2108952286030356925",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 3
+      }
+    },
+    {
+      "eventKey": "nadella-microsoft-decision-1-2026-10-09",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "纳德拉发布 Microsoft-Decision-1：面向快速结构化决策的新模型",
+      "fact": "纳德拉介绍 Microsoft-Decision-1，称在结构化决策任务上延迟与质量优于通用 LLM 及其他决策模型，并已在微软内部事故处理等场景测试。",
+      "whyItMatters": "专用决策模型若进入 Foundry/产品线，体现 AI 从聊天走向工作流变现，影响 Azure AI 客单价与用量。",
+      "counterCase": "若外部客户采用与收入贡献未披露，内部测试不等于商业化成功。",
+      "affected": [
+        "Microsoft Azure AI",
+        "企业工作流软件"
+      ],
+      "author": "satyanadella",
+      "publishedAt": "2026-10-09T18:37:28.000Z",
+      "url": "https://x.com/satyanadella/status/2108627923888754862",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "trillion-leaders": 4
+      }
+    },
+    {
+      "eventKey": "amazon-physical-ai-platform-2026-10-09",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "亚马逊强调 Physical AI：机器人与现实世界部署需要差异化平台",
+      "fact": "@amazon 称物理 AI 并非一刀切，人形机器人、自动驾驶与智能工厂需求不同，并称已构建相应 Physical 能力（正文指向其产品叙事）。",
+      "whyItMatters": "云+边缘+机器人栈若产品化，关系到 AWS 在机器人/工业 AI 的增量场景与芯片/传感器生态。",
+      "counterCase": "若缺少客户合同、用量或毛利披露，Physical AI 仍可能是营销分类。",
+      "affected": [
+        "Amazon AWS",
+        "机器人与工业 AI"
+      ],
+      "author": "amazon",
+      "publishedAt": "2026-10-09T15:29:14.000Z",
+      "url": "https://x.com/amazon/status/2108580556208275716",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "elon-spacex-spectrum-phone-coverage-2026-10-08",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "马斯克称获美国完整手机覆盖所需的最后关键频谱拼图",
+      "fact": "马斯克发帖称这是 SpaceX 在美国提供完整手机覆盖所需频谱拼图的最后关键一块，未在正文列出具体频段编号或交易对价。",
+      "whyItMatters": "直连手机频谱若落地，将改变 Starlink Mobile 的容量与运营商合作格局，影响 SpaceX 通信收入路径。",
+      "counterCase": "若监管批准、频谱交割或网络部署进度无法验证，则仍是叙事性表态。",
+      "affected": [
+        "SpaceX/Starlink Mobile",
+        "美国移动运营商"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-08T20:39:11.000Z",
+      "url": "https://x.com/elonmusk/status/2108296168094544099",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 5
+      }
+    },
+    {
+      "eventKey": "pichai-gemini-agent-at-work-2026-10-08",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "皮查伊：Gemini at Work 推出面向业务上下文的统一 Gemini agent",
+      "fact": "皮查伊称在 NASA Hangar One 与 700+ Google Cloud 客户发布新的 Gemini agent，作为带有全部业务上下文的统一工作代理，可回答问题、处理知识工作等。",
+      "whyItMatters": "企业代理若绑定云与工作区上下文，将强化 Google Cloud/Workspace 的 AI 订阅与用量，并与微软 Copilot 竞争。",
+      "counterCase": "若缺少付费席位、留存或替换竞品的证据，发布会功能难以上修收入预期。",
+      "affected": [
+        "Google Cloud",
+        "企业生产力套件"
+      ],
+      "author": "sundarpichai",
+      "publishedAt": "2026-10-08T18:05:25.000Z",
+      "url": "https://x.com/sundarpichai/status/2108257472553386059",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "trillion-leaders": 3
+      }
+    },
+    {
+      "eventKey": "jensen-microsoft-cuda-azure-windows-2026-10-08",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "黄仁勋回顾与微软：从 Windows/CUDA 到 Azure GPU 超算助力 GPT",
+      "fact": "黄仁勋本人发帖致意纳德拉，回顾 Windows 平台变迁催生 NVIDIA 新产业、可编程着色 GPU 与 DirectX 通向 CUDA，并称双方把 GPU 超算带入 Azure、帮助 OpenAI 训练 GPT。",
+      "whyItMatters": "本人确认 NVIDIA 与微软在 Windows 新篇章及云端训练侧的长期绑定，强化 CUDA/Azure 生态与 AI 算力需求叙事。",
+      "counterCase": "帖文偏历史回顾，若无新的订单、产品规格或收入指引，对短期供需判断增量有限。",
+      "affected": [
+        "NVIDIA",
+        "Microsoft",
+        "云端训练算力"
+      ],
+      "author": "JensenHuang",
+      "publishedAt": "2026-10-08T03:21:39.000Z",
+      "url": "https://x.com/JensenHuang/status/2108035064441520342",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "jensen-huang": 1
+      }
+    },
+    {
+      "eventKey": "nadella-nvidia-windows-partnership-2026-10-07",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "纳德拉官宣与 NVIDIA 合作开启 Windows 下一章",
+      "fact": "纳德拉发帖感谢黄仁勋等到场，称很高兴与 NVIDIA 合作开启 Windows 下一章。",
+      "whyItMatters": "微软—英伟达在 Windows/PC AI 的联合推进强化 CUDA 与 Windows AI PC 绑定，利好双方生态交叉销售。",
+      "counterCase": "若后续缺少可量化的 OEM 出货、驱动或收入拆分，合作停留在发布会层面。",
+      "affected": [
+        "Microsoft",
+        "NVIDIA",
+        "AI PC OEM"
+      ],
+      "author": "satyanadella",
+      "publishedAt": "2026-10-07T21:02:25.000Z",
+      "url": "https://x.com/satyanadella/status/2107939627898400819",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "trillion-leaders": 2
+      }
+    },
+    {
+      "eventKey": "nadella-windows-agents-mai-code-2026-10-07",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "纳德拉：Windows 进入“未计量智能”与安全代理时代，发布 MAI-Code-1.1 Flash",
+      "fact": "纳德拉发帖称要把未计量智能带到每张桌面与家庭，使每台 PC 成为代理可安全代劳的场所，并列出 MAI-Code-1.1 Flash：137B 参数编程模型、256K 上下文等亮点。",
+      "whyItMatters": "PC 端代理与本地/混合推理若放量，将拉动边缘 GPU/NPU、Windows 生态软件收入，并反馈云端模型需求。",
+      "counterCase": "若企业采纳、付费转化与硬件换机数据疲弱，叙事难以兑现为收入。",
+      "affected": [
+        "Microsoft",
+        "PC/边缘 AI 芯片",
+        "独立软件生态"
+      ],
+      "author": "satyanadella",
+      "publishedAt": "2026-10-07T18:17:05.000Z",
+      "url": "https://x.com/satyanadella/status/2107898018112647313",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "trillion-leaders": 1
+      }
+    },
+    {
+      "eventKey": "ms-borgwarner-ai-power-upgrade-2026-10-06",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：摩根士丹利上调 BorgWarner 至增持，押注 AI 数据中心分布式电力",
+      "fact": "@newsinvesting（Investing.com News）称 BorgWarner 在摩根士丹利上调至 Overweight 后上涨，理由是 TurboCell 涡轮发电机或受益于 AI 数据中心电力需求，目标价由 71 提至 95 美元。",
+      "whyItMatters": "体现“电力为 AI 第二瓶颈”向汽车/工业供应商的映射，检验分布式发电主题是否获主流覆盖。",
+      "counterCase": "若订单、认证或数据中心客户进展空白，评级上调可能只是主题交易。",
+      "affected": [
+        "BorgWarner",
+        "AI 数据中心电力设备"
+      ],
+      "author": "newsinvesting",
+      "publishedAt": "2026-10-06T15:53:07.000Z",
+      "url": "https://x.com/newsinvesting/status/2107499402877182415",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "research-reports": 3
+      }
+    },
+    {
+      "eventKey": "ms-after-huang-dram-cycle-2026-10-06",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：摩根士丹利称与黄仁勋交流后认为 DRAM 周期主风险是 AI 减速本身",
+      "fact": "@MentoviaX 称摩根士丹利在与英伟达 CEO 黄仁勋交流后表示，即便 AI 算力买家因供应紧张下调内存规格，美光等 DRAM 厂商并非主要风险；真正风险是 AI 本身减速，新供给“将会被消化”。X 二手转述。",
+      "whyItMatters": "把存储环节从“规格下调受损”转向“AI 需求斜率”，影响 MU 等与 HBM/DRAM 相关定价假设。",
+      "counterCase": "若无法核对 MS 原文或黄仁勋原话语境，或内存厂商指引相悖，则转述不可作为独立证据。",
+      "affected": [
+        "Micron 等 DRAM",
+        "AI 存储需求"
+      ],
+      "author": "MentoviaX",
+      "publishedAt": "2026-10-06T12:39:44.000Z",
+      "url": "https://x.com/MentoviaX/status/2107450733301731393",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "research-reports": 5
+      }
+    },
+    {
+      "eventKey": "trump-diesel-dyed-eo-2026-10-06",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "特朗普签署行政令：临时允许非道路染色柴油上路并给税负纾困",
+      "fact": "@WhiteHouse 称总统刚签署行政令，临时允许非道路“染色”柴油用于公路，降低农民、卡车司机与工人成本；@TrumpDailyPosts 亦同步为 “Emergency Tax Relief on Diesel Fuel”。",
+      "whyItMatters": "直接影响柴油终端成本与物流/农业利润，并与全球炼能紧张叙事联动。",
+      "counterCase": "若仅为短期临时措施且炼能瓶颈未解，对中期柴油价格影响有限。",
+      "affected": [
+        "柴油与炼油",
+        "公路货运与农业"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-06T00:06:57.000Z",
+      "url": "https://x.com/WhiteHouse/status/2107261290838393203",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "donald-trump": 2
+      }
+    },
+    {
+      "eventKey": "trump-energy-42b-nuclear-ohio-pa-2026-10-05",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "白宫转发：能源部宣布 42 亿美元支持俄亥俄与宾州三座核电厂",
+      "fact": "@WhiteHouse 转发报道称 @ENERGY 宣布 42 亿美元用于提升俄亥俄与宾夕法尼亚三座核电厂。",
+      "whyItMatters": "核电出力与许可/投资信号直接影响 AI 数据中心中长期电力供给预期。",
+      "counterCase": "若资金拨付、工期或净增兆瓦未落地，则对近中期电力缺口帮助有限。",
+      "affected": [
+        "核电与公用事业",
+        "AI 数据中心电力"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-05T21:35:04.000Z",
+      "url": "https://x.com/WhiteHouse/status/2107223066614890989",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "donald-trump": 3
+      }
+    },
+    {
+      "eventKey": "trump-working-families-tax-cuts-2026-10-05",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "白宫称工作家庭减税已带动招聘、工资与设备投资",
+      "fact": "@WhiteHouse 称特朗普与共和党推动的 Working Families Tax Cuts 正转化为更多招聘、更高工资、新设备与主街企业扩张。",
+      "whyItMatters": "财政/税收路径变化会影响消费、企业资本开支与赤字—利率联动假设。",
+      "counterCase": "若官方仅有宣传而无可核对的宏观就业/投资数据，则传导强度存疑。",
+      "affected": [
+        "美国财政与消费",
+        "中小企业投资"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-05T18:48:09.000Z",
+      "url": "https://x.com/WhiteHouse/status/2107181063470821742",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "donald-trump": 5
+      }
+    },
+    {
+      "eventKey": "ms-nvda-top-pick-power-bottleneck-2026-10-02",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：摩根士丹利将英伟达重列为半导体首选，目标价 300 美元并指向电力瓶颈",
+      "fact": "@MilkRoadStocks 称摩根士丹利把 NVDA 重列为顶级半导体标的，目标价 300 美元，并认为 AI 瓶颈正转向数据中心电力、场地与融资；NVDA 客户结构宽于超大规模云。X 二手转述，未独立核验研报原文。",
+      "whyItMatters": "若投行共识从“芯片短缺”转向“电力/场地/融资”，估值与产业链受益顺序会重排到公用事业、电力设备与可融资项目。",
+      "counterCase": "若原始报告假设、目标价或样本与转述不符，或电力瓶颈被证伪，则该线索权重下降。",
+      "affected": [
+        "NVIDIA",
+        "数据中心电力与融资"
+      ],
+      "author": "MilkRoadStocks",
+      "publishedAt": "2026-10-02T14:00:55.000Z",
+      "url": "https://x.com/MilkRoadStocks/status/2106021612583846271",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "research-reports": 1
+      }
+    },
+    {
+      "eventKey": "ms-exelon-pt-cut-datacenter-load-2026-09-30",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：摩根士丹利下调 Exelon 目标价，理由含数据中心负荷能见度下降",
+      "fact": "@equityswarmX 称 Exelon 上周跌近 3%，因摩根士丹利将目标价下调至 50 美元，并提及数据中心需求能见度减弱。X 二手转述，未独立核验原文。",
+      "whyItMatters": "公用事业侧对数据中心负荷预期下调，是检验 AI 电力需求是否被过度前移的反向信号。",
+      "counterCase": "若公司后续披露的并网队列或合同负荷回升，该下调可能被证伪。",
+      "affected": [
+        "Exelon",
+        "数据中心用电预期"
+      ],
+      "author": "equityswarmX",
+      "publishedAt": "2026-09-30T00:51:07.000Z",
+      "url": "https://x.com/equityswarmX/status/2105098077451506132",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "research-reports": 4
+      }
+    },
+    {
+      "eventKey": "bofa-nvda-pt-320-tam-2026-09-28",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：美银上调英伟达目标价至 320 美元，2030 年 AI 数据中心系统 TAM 约 1.7 万亿美元",
+      "fact": "@KyleReidhead 称美银维持买入并将 NVDA 目标价提至 320 美元，同时把 2030 年 AI 数据中心系统 TAM 从约 1.4 万亿上修到约 1.7 万亿美元。X 二手转述，未独立核验原文。",
+      "whyItMatters": "TAM 上修延长 AI 基建景气假设，影响半导体与配套电力/网络资本开支的长周期定价。",
+      "counterCase": "若美银后续下调或公开文件无法核对 TAM 口径，转述不能作为硬证据。",
+      "affected": [
+        "NVIDIA",
+        "AI 数据中心供应链"
+      ],
+      "author": "KyleReidhead",
+      "publishedAt": "2026-09-28T20:30:02.000Z",
+      "url": "https://x.com/KyleReidhead/status/2104669988682604601",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "research-reports": 2
+      }
+    },
+    {
+      "eventKey": "meta-muse-ai-agent-2026-09-26",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "Meta 于 Connect 发布个人 AI 代理 Muse",
+      "fact": "@Meta 介绍 Muse 为个人 AI 代理，称了解用户与目标、跨生活场景工作，并强调隐私与安全从第一天内建。",
+      "whyItMatters": "消费级代理若绑定眼镜/社交图，可能打开 Meta 广告与硬件之外的 AI 订阅/互动变现。",
+      "counterCase": "若留存、付费与监管约束不及预期，发布会产品难以改变利润结构。",
+      "affected": [
+        "Meta",
+        "消费级 AI 代理"
+      ],
+      "author": "Meta",
+      "publishedAt": "2026-09-26T17:18:10.000Z",
+      "url": "https://x.com/Meta/status/2103896925007221173",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "nadella-copilot-os-work-update-2026-09-25",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "纳德拉：Copilot 升级为跨模型、形态与任务的“工作操作系统”",
+      "fact": "纳德拉称把 Copilot 建成跨越每个模型、形态与任务的工作 OS，并宣布迄今最大更新，包含面向企业的 Autopilot 长程代理与 Code 等能力。",
+      "whyItMatters": "企业代理平台化直接影响微软 AI 附着率、Azure 消耗与 Office 套餐提价空间。",
+      "counterCase": "若企业试点无法转正付费，Autopilot 叙事对收入贡献有限。",
+      "affected": [
+        "Microsoft",
+        "企业 AI 代理平台"
+      ],
+      "author": "satyanadella",
+      "publishedAt": "2026-09-25T12:05:37.000Z",
+      "url": "https://x.com/satyanadella/status/2103455884366188544",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "google-suncatcher-tpu-space-2026-09-24",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "谷歌：Project Suncatcher 将发射原型卫星测试太空中的 TPU",
+      "fact": "@Google 称经多年研究，Project Suncatcher 计划首次在轨测试，发射原型卫星评估 Google TPU 在太空中的表现。",
+      "whyItMatters": "探索轨道算力与能源约束的长期路径，若可行可能改变对地面电力/土地瓶颈的替代想象，但距商业化仍远。",
+      "counterCase": "原型测试失败或成本过高，则对近中期资本开支与芯片需求无实质影响。",
+      "affected": [
+        "Google TPU",
+        "太空算力概念",
+        "地面电力替代叙事"
+      ],
+      "author": "Google",
+      "publishedAt": "2026-09-24T21:45:31.000Z",
+      "url": "https://x.com/Google/status/2103239433809961276",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "trillion-leaders": 5
+      }
+    },
+    {
+      "eventKey": "amazon-custom-silicon-decade-2026-09-24",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "亚马逊回顾十年自研芯片：Nitro、Graviton、Trainium 均由客户负载倒推",
+      "fact": "@amazon 发帖称亚马逊最初并未打算设计芯片，Nitro、Graviton、Trainium 每一代都始于需要更好方案的真实客户负载。",
+      "whyItMatters": "云厂商自研 ASIC/CPU/训练芯片持续分流部分通用 GPU 需求，影响 NVIDIA 与代工/封装格局的长期份额假设。",
+      "counterCase": "回顾稿若无新的出货、制程或外部销售数据，对短期订单判断增量有限。",
+      "affected": [
+        "Amazon AWS",
+        "自研硅与 GPU 竞争"
+      ],
+      "author": "amazon",
+      "publishedAt": "2026-09-24T13:34:19.000Z",
+      "url": "https://x.com/amazon/status/2103115816166121709",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {}
     }
   ]
 }

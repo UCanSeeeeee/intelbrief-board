@@ -1,36 +1,83 @@
 {
   "schemaVersion": 1,
-  "researchPriorities": ["半导体", "电力", "AI 落地"],
+  "researchPriorities": [
+    "半导体",
+    "电力",
+    "AI 落地"
+  ],
   "tabs": [
     {
-      "id": "elon-musk", "label": "马斯克", "type": "person", "identity": "Elon Musk", "handle": "elonmusk",
-      "latestLimit": 3, "weeklyLimit": 5,
+      "id": "elon-musk",
+      "label": "马斯克",
+      "type": "person",
+      "identity": "Elon Musk",
+      "handle": "elonmusk",
+      "latestLimit": 5,
+      "weeklyLimit": 5,
       "focus": "xAI 算力、Tesla AI 与机器人、SpaceX 基础设施及资本配置",
-      "sourceRule": "只收本人账号或本人明确参与且可回查的公开内容。"
+      "sourceRule": "只收本人账号或本人明确参与且可回查的公开内容。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
     },
     {
-      "id": "jensen-huang", "label": "黄仁勋", "type": "person", "identity": "Jensen Huang", "handle": null,
-      "latestLimit": 3, "weeklyLimit": 5,
-      "focus": "架构路线、产品节奏、供需、客户资本开支、网络与系统生态",
-      "sourceRule": "本人公开 X 来源尚待确认；不以 NVIDIA 机构账号冒充本人发言。"
+      "id": "jensen-huang",
+      "label": "黄仁勋",
+      "type": "person",
+      "identity": "Jensen Huang",
+      "handle": "JensenHuang",
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "架构路线、产品节奏、供需、客户资本开支、网络与系统生态；优先可核验的新事实。",
+      "sourceRule": "可收本人公开发言，以及可回查到原帖的媒体采访、活动实录、实录转述；须标明作者账号，不得把无署名传闻写成黄仁勋本人表态。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
     },
     {
-      "id": "donald-trump", "label": "特朗普", "type": "person", "identity": "Donald Trump", "handle": "realDonaldTrump",
-      "latestLimit": 3, "weeklyLimit": 5,
+      "id": "donald-trump",
+      "label": "特朗普",
+      "type": "person",
+      "identity": "Donald Trump",
+      "handle": "TrumpDailyPosts",
+      "latestLimit": 5,
+      "weeklyLimit": 5,
       "focus": "能影响 AI、半导体、电力、贸易、出口管制、税收、财政、能源或监管的可执行政策",
-      "sourceRule": "一般政治言论不进入；只保留有投资传导的明确政策或进展。"
+      "sourceRule": "本人现以 Truth Social 为主。X 上采用 @TrumpDailyPosts 作为 Truth Social 内容同步源（其简介写明非官方关联，采集时须标注为搬运/同步而非本人直发）；可执行政策亦可取自政府官方账号 @POTUS、@WhiteHouse。只收与 AI、半导体、电力、贸易、出口管制、税收、财政、能源或监管有明确投资传导的可执行政策；普通政治口水排除。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7,
+      "handles": [
+        "TrumpDailyPosts",
+        "POTUS",
+        "WhiteHouse"
+      ]
     },
     {
-      "id": "trillion-leaders", "label": "万亿美元公司高层", "shortLabel": "万亿公司高层", "type": "collection", "identity": "万亿美元美股公司核心决策者", "handle": null,
-      "latestLimit": 10, "weeklyLimit": 5,
+      "id": "trillion-leaders",
+      "label": "万亿美元公司高层",
+      "shortLabel": "万亿公司高层",
+      "type": "collection",
+      "identity": "万亿美元美股公司核心决策者",
+      "handle": null,
+      "latestLimit": 10,
+      "weeklyLimit": 5,
       "focus": "AI 需求、资本开支、产品路线、供应瓶颈、毛利、融资与商业化节奏",
-      "sourceRule": "公司名单按周核验市值；每家公司默认 3 人、最多 5 人，本周通常最多占 2 席。"
+      "sourceRule": "公司名单按月核验市值；每家公司默认 3 人、最多 5 人，近 30 天通常最多占 2 席。只收可回查 X 原帖的高管本人或明确可归因发言。",
+      "latestWindowDays": 30,
+      "weeklyWindowDays": 30
     },
     {
-      "id": "research-reports", "label": "机构研报", "type": "collection", "identity": "公开、可回查的机构与具名分析师研究变化", "handle": null,
-      "latestLimit": 10, "weeklyLimit": 5,
+      "id": "research-reports",
+      "label": "机构研报",
+      "type": "collection",
+      "identity": "公开、可回查的机构与具名分析师研究变化",
+      "handle": null,
+      "latestLimit": 10,
+      "weeklyLimit": 5,
       "focus": "盈利预测、资本开支、供需、评级核心假设与产业判断的实质变化",
-      "sourceRule": "不绕过付费墙；同一事件的多家观点合并，保留分歧而不重复刷屏。"
+      "sourceRule": "不绕过付费墙；同一事件的多家观点合并，保留分歧而不重复刷屏。近 30 天窗口内筛选。",
+      "latestWindowDays": 30,
+      "weeklyWindowDays": 30
     }
-  ]
+  ],
+  "updatedAt": "2026-10-12T00:00:00+08:00",
+  "notes": "个人 Tab：latest 最多 5 条（滚动 24h），周榜 5（7 天）。合集 Tab：latest 与重点榜均按滚动 30 天。"
 }

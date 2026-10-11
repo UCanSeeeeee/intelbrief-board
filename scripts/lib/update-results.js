@@ -68,25 +68,41 @@ function preparePeopleIntelligence(input,config,existing,cutoff,now=new Date()) 
     reports.set(report.id,{id:report.id,status:report.status,note:report.note});
   }
   requireValue(reports.size===allowed.size,'必须报告每个人物情报Tab的检查结果');
+  const dayMs=86400000;
+  const windowDays=tab=>{
+    const latest=Number(tab.latestWindowDays);
+    const weekly=Number(tab.weeklyWindowDays);
+    requireValue(Number.isFinite(latest)&&latest>0&&Number.isFinite(weekly)&&weekly>0,`${tab.label}缺少有效窗口天数`);
+    return {latest,weekly};
+  };
+  const maxWindowDays=Math.max(...configured.map(tab=>Math.max(windowDays(tab).latest,windowDays(tab).weekly)));
   const keys=new Set(),urls=new Set();
   const items=input.items.map(item=> {
     requireValue(typeof item.eventKey==='string'&&item.eventKey.trim()&&!keys.has(item.eventKey),'人物情报事件键无效或重复');keys.add(item.eventKey);
     requireValue(Array.isArray(item.tabIds)&&item.tabIds.length>0&&new Set(item.tabIds).size===item.tabIds.length&&item.tabIds.every(id=>allowed.has(id)&&reports.get(id).status!=='failed'),'人物情报事件包含无效Tab');
     requireValue(typeof item.url==='string'&&/^https:\/\/(?:x|twitter)\.com\/[a-zA-Z0-9_]{1,15}\/status\/\d+$/.test(item.url)&&!urls.has(item.url),'人物情报缺少真实或唯一X原帖');urls.add(item.url);
-    requireValue(date(item.publishedAt)&&Date.parse(item.publishedAt)<=Date.parse(cutoff)&&Date.parse(item.publishedAt)>=Date.parse(cutoff)-7*86400000,'人物情报原帖时间超出滚动7天窗口');
+    requireValue(date(item.publishedAt)&&Date.parse(item.publishedAt)<=Date.parse(cutoff)&&Date.parse(item.publishedAt)>=Date.parse(cutoff)-maxWindowDays*dayMs,'人物情报原帖时间超出配置滚动窗口');
     for(const field of ['title','fact','whyItMatters','counterCase','author']) requireValue(typeof item[field]==='string'&&item[field].trim(),`人物情报缺少${field}`);
     requireValue(item.verification==='collector-report','人物情报必须标明Grok返回、未独立直读');
     requireValue(['must-read','watch'].includes(item.tier),'人物情报价值层级无效');
     requireValue(Array.isArray(item.affected),'人物情报缺少影响对象');
     const ranks=item.weeklyRanks||{};
-    for(const [tabId,rank] of Object.entries(ranks)) requireValue(item.tabIds.includes(tabId)&&Number.isInteger(rank)&&rank>=1&&rank<=5,'人物情报周榜排名无效');
+    for(const [tabId,rank] of Object.entries(ranks)) requireValue(item.tabIds.includes(tabId)&&Number.isInteger(rank)&&rank>=1&&rank<=allowed.get(tabId).weeklyLimit,'人物情报周榜排名无效');
     return {eventKey:item.eventKey.trim(),tabIds:item.tabIds,title:item.title.trim(),fact:item.fact.trim(),whyItMatters:item.whyItMatters.trim(),counterCase:item.counterCase.trim(),affected:item.affected.map(String),author:item.author.trim(),publishedAt:item.publishedAt,url:item.url,verification:'collector-report',tier:item.tier,weeklyRanks:ranks};
   });
   for(const tab of configured) {
+    const {latest,weekly}=windowDays(tab);
     const tabItems=items.filter(item=>item.tabIds.includes(tab.id));
-    requireValue(tabItems.filter(item=>Date.parse(item.publishedAt)>=Date.parse(cutoff)-86400000).length<=tab.latestLimit,`${tab.label}的24小时条目超过上限`);
+    requireValue(tabItems.filter(item=>Date.parse(item.publishedAt)>=Date.parse(cutoff)-latest*dayMs).length<=tab.latestLimit,`${tab.label}的近${latest}天条目超过上限`);
+    for(const item of tabItems) {
+      const hasRank=item.weeklyRanks[tab.id]!=null;
+      const inWeekly=Date.parse(item.publishedAt)>=Date.parse(cutoff)-weekly*dayMs;
+      const inLatest=Date.parse(item.publishedAt)>=Date.parse(cutoff)-latest*dayMs;
+      requireValue(inLatest||(hasRank&&inWeekly),`${tab.label}含有超出该Tab窗口的条目`);
+    }
     const ranked=tabItems.filter(item=>item.weeklyRanks[tab.id]!=null);
-    requireValue(ranked.length<=tab.weeklyLimit&&new Set(ranked.map(item=>item.weeklyRanks[tab.id])).size===ranked.length,`${tab.label}的周榜超过上限或排名重复`);
+    requireValue(ranked.every(item=>Date.parse(item.publishedAt)>=Date.parse(cutoff)-weekly*dayMs),`${tab.label}的重点榜超出窗口`);
+    requireValue(ranked.length<=tab.weeklyLimit&&new Set(ranked.map(item=>item.weeklyRanks[tab.id])).size===ranked.length,`${tab.label}的重点榜超过上限或排名重复`);
   }
   const failures=[...reports.values()].filter(report=>report.status!=='complete');
   const allFailed=failures.length===configured.length&&failures.every(report=>report.status==='failed');
