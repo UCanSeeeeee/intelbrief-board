@@ -19,8 +19,8 @@
     const themes = (item.themes || []).map((t) => `<span class="badge">${escape(t)}</span>`).join('');
     const result = item.result || {};
     const resultText = result.status && result.status !== 'unreviewed'
-      ? `${bandLabel[result.band] || result.band || bandLabel[result.status] || result.status}${Number.isFinite(result.score) ? ` · ${result.score}分` : ''}`
-      : '结果未评价';
+      ? `${escape(result.bandLabel || bandLabel[result.band] || result.band || bandLabel[result.status] || result.status)}${Number.isFinite(result.score) ? ` · ${result.score}分` : ''}`
+      : '结果未评价（尚未回看）';
     return `<article class="earnings-card">
       <div class="earnings-card-top">
         <strong>${escape(item.symbol)}</strong>

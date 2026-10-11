@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-11T18:09:25.102Z",
+  "updatedAt": "2026-10-11T18:26:34.637Z",
   "timezone": "Asia/Shanghai",
   "activeWeekId": "current",
   "source": {
@@ -105,11 +105,24 @@
               "selectionReason": "主题：老牛股/质量股",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 58,
+                "band": "miss",
+                "bandLabel": "不及预期",
+                "summary": "核心 EPS $2.34 高于一致预期约 $2.29，营收约 $252.7 亿亦略超预期；但公司将全年核心恒定货币 EPS 增长指引下调至约 1%–2%（此前为 4%–6% 区间低端），北美利润率压力下前瞻明显弱于预期，故整体评为不及预期。",
+                "facts": {
+                  "reportedCoreEps": 2.34,
+                  "consensusEps": 2.29,
+                  "reportedRevenueUsdBn": 25.27,
+                  "consensusRevenueUsdBnApprox": 24.88,
+                  "guidanceNote": "FY2026 core constant-currency EPS growth cut to ~1%–2% from low end of prior 4%–6%"
+                },
+                "sources": [
+                  "https://investors.pepsico.com/docs/pepsico-5v9wci20/media/Files/investors/q3-2026-earnings-release.pdf",
+                  "https://finance.yahoo.com/markets/stocks/articles/pepsico-q3-earnings-revenues-beat-125500006.html"
+                ],
+                "checkedAt": "2026-10-11T18:26:34.637Z",
+                "scoredAt": "2026-10-11T18:26:34.637Z"
               }
             }
           ]
