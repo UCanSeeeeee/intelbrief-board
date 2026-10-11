@@ -1,0 +1,861 @@
+{
+  "requestId": "4fe5409c-785e-4dc4-bda7-37dcaa389aaa",
+  "trigger": "manual",
+  "scheduledFor": "2026-10-11T23:45:00+08:00",
+  "windowStart": "2026-10-11T21:00:00+08:00",
+  "status": "partial",
+  "summary": "手动更新覆盖上一成功定时期次（21:00）至 23:45 的约 2 小时 45 分钟窗口。美股常规交易休市。市场焦点入选 4 条：俄乌能源停火声明与泽连斯基否认、利雅得机场胡塞升级、欧盟对华混动进口配额、IEA 催促释放柴油。多学科第二轮独立检索入选 5 条，覆盖实际利率、半导体周度分化、美光客户订金融资、双热带气旋电力中断延续、马斯克招揽芯片人才。",
+  "marketContext": "信息截止为北京时间周日 23:45，美股常规交易时段休市；不把上一交易日收盘、帖子中的行情口述或周一开盘预期当作实时行情。",
+  "coverage": {
+    "method": "collectionPath=grok-app。通过本机 Grok Bot App（X+github）只读调用 x.search_posts_all / get_users_posts / get_posts_by_ids。第一轮宽扫宏观财政利率、地缘能源航运、AI/大型公司、市场结构；第二轮独立执行半导体、电力、AI落地、宏观资本成本、地缘能源物流、市场结构行为六包公开查询，并对入选事件做追源与反证。",
+    "queries": [
+      "R1宏观：(Treasury OR term premium OR 10-year OR CPI OR Fed OR deficit OR auction) -is:retweet 2026-10-11T13:00Z–15:45Z",
+      "R1地缘能源：(Hormuz OR Red Sea OR Houthi OR oil OR diesel OR sanctions OR tariff OR shipping OR tanker) -is:retweet",
+      "R1 AI/大公司：(Nvidia OR OpenAI OR Microsoft OR Google OR Meta OR Amazon OR Tesla OR data center OR HBM OR semiconductor OR capex OR guidance) -is:retweet",
+      "R1市场结构：(breadth OR equal weight OR hedge fund OR concentration OR Mag7 OR margin debt OR gamma) -is:retweet",
+      "R1快讯账号：from:DeItaone OR business OR Reuters OR Bloomberg OR FT OR FirstSquawk OR unusual_whales",
+      "R2半导体：(HBM OR advanced packaging OR TSMC OR Micron OR Broadcom OR ASIC OR export control OR AI chip OR NVIDIA) (order OR guidance OR capacity OR ASP OR capex)",
+      "R2电力：(data center OR interconnection OR transformer OR gas turbine OR nuclear OR PPA OR grid) (power OR electricity) (AI OR hyperscaler)",
+      "R2 AI落地：(OpenAI OR Anthropic OR Copilot OR AI agent OR API usage OR inference cost OR ARR OR paid seats) (revenue OR margin OR pricing OR deployment)",
+      "R2宏观资本成本：(term premium OR real yield OR TIPS OR 10-year OR 30-year OR auction OR Bessent OR Treasury supply)",
+      "R2地缘能源物流：(Hormuz OR King Khalid OR Riyadh OR Houthi OR Bab al-Mandab OR Red Sea OR diesel OR tanker) (attack OR shipping OR oil)",
+      "R2市场结构：(breadth OR equal-weight OR SOXX OR concentration OR Mag7 OR credit spread OR CCC OR gamma)",
+      "追源/反证：energy ceasefire Zelensky confirm/deny；EU China hybrid rare earth；IEA diesel release",
+      "人物：get_users_posts elonmusk；from:realDonaldTrump 7d；trillion CEO handles；research analyst notes"
+    ],
+    "gaps": [
+      "手动窗口仅约 2 小时 45 分钟且为周日休市，合格新增事件天然偏少，故 status=partial。",
+      "单次 X 检索最多约 25 条且按相关度/时间排序，不能声称覆盖全部 X。",
+      "德州数据中心并网暂停、Disco/OSAT 设备、OpenAI ARR 等候选缺少窗口内一手官方或主流可核验原文，已落选。",
+      "黄仁勋本人 X handle 未确认，未用 nvidia 机构号冒充；特朗普 realDonaldTrump 近 7 日无原创帖返回。",
+      "万亿美元公司 CEO 本人账号与可回查研报原文在窗口内几乎无结果。",
+      "所有原帖均由 Grok Bot App x 工具返回，本执行者未在 X 页面独立直读。"
+    ]
+  },
+  "selectionRationale": "第一组按影响广度、相对预期变化与跨资产传导，从宽扫候选中选出 4 件独立事件；不足 5 条因周末短窗高价值增量有限，不强行凑数。第二组按知识库六包重新检索后筛选，不与第一组重复占用同一原始事件；入选 5 条均至少连接两个学科并写明反向条件。",
+  "excludedCandidates": [
+    {
+      "eventKey": "texas-datacenter-interconnection-pause-bank-note",
+      "reason": "仅个人账号转述银行研报数字，未见 ERCOT/德州公用事业官方或主流媒体原帖，证据层级不足。"
+    },
+    {
+      "eventKey": "openai-50b-arr-accounting-recycle",
+      "reason": "核心披露发生在 10 月 8 日左右，本窗口多为旧闻复述。"
+    },
+    {
+      "eventKey": "nvidia-reflection-ai-talks-2026-10-10",
+      "reason": "上期已收录；本窗口无公司确认或实质新进展。"
+    },
+    {
+      "eventKey": "citi-treasury-auction-cut-rumor",
+      "reason": "个人账号转述 Citi 观点，缺机构原文与财政部确认。"
+    },
+    {
+      "eventKey": "amazon-msft-datacenter-nda-drop",
+      "reason": "可追溯来源偏弱（聚合账号转 TechCrunch），未取得公司官方 X 披露。"
+    },
+    {
+      "eventKey": "disco-osat-goldman-shipment",
+      "reason": "单一个人账号转述 Goldman，缺研报可核验摘录。"
+    },
+    {
+      "eventKey": "hormuz-tanker-mine-report-2026-10-10",
+      "reason": "上期已作焦点；本窗口多为风险扫描复述，无独立确认增量，避免重复占位。"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
+      "title": "特朗普宣布俄乌能源停火，泽连斯基称事先不知情",
+      "fact": "特朗普周日称俄罗斯与乌克兰已同意立即停止攻击能源基础设施，并要求双方不要打破。随后据 Axios，乌克兰总统泽连斯基表示该宣布对他而言是新闻，并称若俄罗斯同意能源停火乌方也可接受；莫斯科方面尚未确认。",
+      "impact": "若停火兑现，俄罗斯炼油与柴油出口能力的恢复预期可能压低成品油风险溢价，并影响通胀预期与利率路径；若仅是单方面声明，能源波动与避险溢价可能很快回摆。",
+      "direction": "双向",
+      "horizon": "未来数日至两周",
+      "affected": [
+        "柴油与原油",
+        "炼油与能源股",
+        "通胀预期",
+        "美股利率敏感板块"
+      ],
+      "counterCase": "若俄罗斯官方否认停火、能源设施在 48 小时内继续遇袭，或柴油裂解价差未回落，则该声明对供给与通胀的传导应下调。",
+      "selectionReason": "同时牵动地缘冲突、柴油供给、通胀与政策可信度，是窗口内影响面最广的新增事件。",
+      "credibilityReason": "有快讯与 Bloomberg 转述特朗普声明，并有泽连斯基否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "特朗普宣布的准确当地时间未在所用帖文中写明；泽连斯基回应发生在宣布之后不久，精确时刻未知。",
+      "attentionEvidence": "DeItaone 相关快讯在窗口内获得约 14 万次展示，KobeissiLetter 转述泽连斯基回应约 28 万次展示；热度仅作注意力参考，不作事实证明。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2109289408302309790",
+          "postId": "2109289408302309790",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-11T14:25:58.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "TRUMP ANNOUNCES IMMEDIATE RUSSIA-UKRAINE ENERGY CEASEFIRE. Trump says Russia and Ukraine have agreed to halt attacks on energy infrastructure, effective immediately. Moscow and Kyiv have yet to confirm.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/business/status/2109292950714785849",
+          "postId": "2109292950714785849",
+          "username": "business",
+          "publishedAt": "2026-10-11T14:40:02.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "President Donald Trump said Sunday that Russia and Ukraine have agreed to an energy ceasefire effective immediately.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/KobeissiLetter/status/2109295156125983065",
+          "postId": "2109295156125983065",
+          "username": "KobeissiLetter",
+          "publishedAt": "2026-10-11T14:48:48.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "Ukraine's President Zelensky says the energy ceasefire between Ukraine and Russia announced by President Trump just minutes ago is news to me, per Axios.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。 反向材料：泽连斯基否认事先知情。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "有快讯与 Bloomberg 转述特朗普声明，并有泽连斯基否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "riyadh-king-khalid-airport-houthi-strike-2026-10-11",
+      "title": "胡塞袭击利雅得机场后再度警告沙特机场",
+      "fact": "路透社报道，也门胡塞武装在利雅得致命袭击后再度警告远离沙特机场；Bloomberg 称周末对利雅得主机场的致命袭击显示胡塞有能力打击沙特权力中枢，并可能把美国卷入升级。此前报道称袭击造成约 12 人死亡、300 余人受伤。",
+      "impact": "若红海与阿拉伯半岛航运和航空风险溢价上升，运费、保险和能源运输成本可能抬升，并强化美国是否军事介入的政策不确定性，从而影响能源股与风险资产估值。",
+      "direction": "双向",
+      "horizon": "下一个交易日至数周",
+      "affected": [
+        "原油与航运保险",
+        "航空与物流",
+        "中东风险溢价",
+        "国防与能源股"
+      ],
+      "counterCase": "若沙特防空显著压低后续打击成功率、红海通航量与油轮运费未上升，或美方明确排除军事介入，升级溢价应下调。",
+      "selectionReason": "与霍尔木兹叙事叠加后，可能同时冲击能源运输与地缘风险溢价，影响广度大。",
+      "credibilityReason": "Reuters 与 Bloomberg 均在窗口内报道警告与升级风险，但袭击细节、伤亡独立核验与后续打击频率仍不完整。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "袭击被描述为周末发生，精确钟点未知；胡塞续发警告的官方发布时间亦未在帖文给出。",
+      "attentionEvidence": "Reuters 警告帖约 3.6 万次展示，Bloomberg 分析帖约 1.3 万次展示；按潜在影响广度而非社交热度排序。",
+      "sources": [
+        {
+          "url": "https://x.com/Reuters/status/2109292952019153379",
+          "postId": "2109292952019153379",
+          "username": "Reuters",
+          "publishedAt": "2026-10-11T14:40:03.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "Yemen's Houthis renew warning over Saudi airports after deadly Riyadh attack",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/business/status/2109305555164532929",
+          "postId": "2109305555164532929",
+          "username": "business",
+          "publishedAt": "2026-10-11T15:30:08.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "This weekend's deadly attacks on Riyadh's main airport has demonstrated the ability of Yemen's Houthis to strike at the heart of Saudi power, raising the risk of a dangerous escalation that could draw in the US.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Reuters 与 Bloomberg 均在窗口内报道警告与升级风险，但袭击细节、伤亡独立核验与后续打击频率仍不完整。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "eu-china-hybrid-vehicle-import-cap-2026-10-11",
+      "title": "欧盟拟将中国混动车进口上限设为每年 35 万辆",
+      "fact": "Bloomberg 报道，欧盟将把中国混合动力汽车进口上限设为每年 35 万辆，保障措施最早于 12 月 1 日生效。",
+      "impact": "若措施落地，中国车企对欧混动出口量与价格策略可能受限，欧洲本土车企短期份额承压减轻，同时可能推高谈判中的稀土许可、关税与供应链本地化安排，并外溢到美股汽车与供应链预期。",
+      "direction": "双向",
+      "horizon": "至 12 月生效前后及后续一两个季度",
+      "affected": [
+        "欧洲与中国汽车供应链",
+        "混动与新能源车估值",
+        "贸易与本地化资本开支"
+      ],
+      "counterCase": "若最终文本放宽配额、推迟生效，或中国通过本地化生产绕过进口配额且欧盟不再加码，对出口量的约束应下调。",
+      "selectionReason": "属于可执行贸易规则变化，直接改写跨境汽车供给与谈判筹码。",
+      "credibilityReason": "Bloomberg 给出数量与生效日，但未见欧盟委员会官方原文链接，也未见中方正式回应。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "保障措施据报道最早 12 月 1 日生效；欧盟内部通过与正式公告时间未知。",
+      "futureEventNote": "生效日为未来时点，当前仅是政策宣布或报道阶段。",
+      "attentionEvidence": "Bloomberg 帖约 2 万次展示；入选依据是规则可执行性与产业传导，而非互动量。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2109299237557002600",
+          "postId": "2109299237557002600",
+          "username": "business",
+          "publishedAt": "2026-10-11T15:05:01.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "The European Union will cap the import of Chinese hybrid vehicles at 350,000 cars per year, with the safeguard measure taking effect as soon as Dec. 1.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 34,
+        "label": "规则初评，未校准",
+        "reason": "Bloomberg 给出数量与生效日，但未见欧盟委员会官方原文链接，也未见中方正式回应。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "iea-diesel-release-urge-2026-10-11",
+      "title": "IEA 敦促成员国加快并加码柴油库存释放",
+      "fact": "Bloomberg 报道，国际能源署敦促成员国加快已承诺的柴油释放，并在全球市场趋紧时考虑提供更多供应。",
+      "impact": "官方释放意向若转化为实际投放，可能短期缓和柴油裂解价差与运输成本；若库存缓冲已薄且投放有限，则更多是信号而非供给修复，通胀与周期股预期仍可能维持高波动。",
+      "direction": "双向",
+      "horizon": "未来两周至下一次库存报告",
+      "affected": [
+        "柴油",
+        "炼油利润",
+        "运输与航空成本",
+        "通胀预期"
+      ],
+      "counterCase": "若成员国实际释放量显著低于承诺、美国战略与商用柴油库存继续下降，或俄罗斯出口恢复快于预期，IEA 呼吁的价格抑制效果应下调。",
+      "selectionReason": "在俄柴油政策、冲突与高油价并存时，IEA 行动直接连接成品油供给与宏观价格。",
+      "credibilityReason": "Bloomberg 转述 IEA 呼吁，另有分析师贴出 IEA 声明链接，但未见完整官方声明正文被直读。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "IEA 声明的准确发布时间未知；帖文只表明窗口内已有公开呼吁报道。",
+      "attentionEvidence": "Bloomberg 报道展示量约 1.9 万；按对成品油供给的政策含义入选。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2109290436720210024",
+          "postId": "2109290436720210024",
+          "username": "business",
+          "publishedAt": "2026-10-11T14:30:03.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "The International Energy Agency urged members to speed up pledged diesel releases and consider supplying more as global markets tighten.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Bloomberg 转述 IEA 呼吁，另有分析师贴出 IEA 声明链接，但未见完整官方声明正文被直读。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [
+    {
+      "eventKey": "us-real-yield-highest-since-2008-2026-10-11",
+      "title": "10 年实际利率升至 2008 年以来最高区间",
+      "fact": "作者拆解称，今年 10 年美债收益率从约 4.19% 升至 5.24%，其中实际利率（TIPS）从 1.94% 升至 2.91%、通胀补偿仅从 2.25% 到 2.33%，约 92% 的上行来自实际利率，并称 10 年实际利率为 2008 年以来最高。",
+      "impact": "若实际利率维持高位，AI 重资本项目与长久期成长股的折现率上升，可能抑制估值扩张；同时提高债券相对股票的竞争力，改变资金在久期资产间的配置。",
+      "direction": "利空",
+      "horizon": "未来数周至下一次 CPI 与财政部供给",
+      "affected": [
+        "长久期科技股",
+        "AI 资本开支项目回报门槛",
+        "国债与信用资产"
+      ],
+      "counterCase": "若周三 CPI 显著低于预期且 10 年实际利率回落，或财政部明确削减长期供给并被市场消化，折现率压力应下调。",
+      "selectionReason": "把名义收益率拆成实际利率与通胀补偿，直接服务资本成本判断。",
+      "credibilityReason": "给出可检验的分解数字，但作者非官方数据源，未附原表或纽联储模型截图。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "所引收益率水平对应的交易时点未在帖文明确标注。",
+      "knowledgeCards": [
+        "M01",
+        "M02",
+        "R01"
+      ],
+      "disciplines": [
+        "宏观与资本成本",
+        "估值与折现"
+      ],
+      "knowledgeApplication": "M01/M02：区分通胀补偿与实际利率后再谈对股市估值的影响；R01：冲击须经折现率与融资成本传到价格，不能把名义收益率上升直接等同于通胀交易。",
+      "sources": [
+        {
+          "url": "https://x.com/nareshchalla_/status/2109303663776711162",
+          "postId": "2109303663776711162",
+          "username": "nareshchalla_",
+          "publishedAt": "2026-10-11T15:22:37.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "10y treasury yield this year: 4.19% to 5.24%. real yield (tips): 1.94% to 2.91%. inflation comp: 2.25% to 2.33%. so ~92% of the move is real yield, and 10y real is the highest since 2008.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 36,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 37,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 10,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 36,
+        "label": "规则初评，未校准",
+        "reason": "给出可检验的分解数字，但作者非官方数据源，未附原表或纽联储模型截图。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "soxx-igv-weekly-dispersion-2026-10-11",
+      "title": "软件强、半导体弱：周度板块显著分化",
+      "fact": "周度复盘称，标普 500 触及约 7818 后回落至 7765；软件 ETF IGV 当周约 +3.91%，费城半导体 SOXX 约 -5.01%，等权标普约 +1.58%。",
+      "impact": "若分化延续，说明 AI 交易内部利润预期正从硬件交付转向软件变现，或反映对芯片指引与资本开支的再定价；指数点位可能掩盖半导体回撤对广度的拖累。",
+      "direction": "双向",
+      "horizon": "本周财报与半导体指引窗口",
+      "affected": [
+        "半导体设备与设计",
+        "软件与云应用",
+        "市值加权指数解释"
+      ],
+      "counterCase": "若本周大型半导体公司上调指引、SOXX 相对 IGV 迅速收窄跌幅，则硬件让位于软件的再分配解释应下调，更可能是短线仓位调整。",
+      "selectionReason": "用同周期相对表现检验市场结构与产业链利润迁移，而不是只看指数点位。",
+      "credibilityReason": "给出具体 ETF 周涨跌，但账户非主流数据商，未附行情商原始表格。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "对应交易周结束于周五收盘；精确分钟级高低点时间未知。",
+      "knowledgeCards": [
+        "I05",
+        "I06",
+        "R06"
+      ],
+      "disciplines": [
+        "市场结构",
+        "半导体产业链"
+      ],
+      "knowledgeApplication": "I05/I06：等权与板块相对强弱用于判断扩散与利润再分配；R06：周度轮动属于中短时间尺度，不能直接外推为长期半导体需求消失。",
+      "sources": [
+        {
+          "url": "https://x.com/neoreports/status/2109283523773472823",
+          "postId": "2109283523773472823",
+          "username": "neoreports",
+          "publishedAt": "2026-10-11T14:02:35.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "Weekly market review: The S&P 500 touched 7,818 before fading to 7,765. Weekly dispersion was sharp: IGV +3.91% while SOXX fell 5.01%; the equal-weight S&P gained 1.58%.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 36,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 37,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 10,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 36,
+        "label": "规则初评，未校准",
+        "reason": "给出具体 ETF 周涨跌，但账户非主流数据商，未附行情商原始表格。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "micron-customer-deposit-financed-capex-2026-10-11",
+      "title": "美光客户订金超过当季晶圆厂资本开支",
+      "fact": "作者依据 FQ4（约 9 月 30 日披露）称，美光当季收到客户订金约 123 亿美元，高于资本开支约 108 亿美元；并称有约 26 份 take-or-pay、客户承诺约 320 亿美元，订金可退还，本质是客户融资产能而非免费现金。",
+      "impact": "若解读成立，HBM 与存储扩产部分由下游预付款支撑，短期缓解美光自由现金流压力，但也把风险从是否过度扩产转向客户是否持续按峰值价格履约，影响存储周期与上游设备情绪。",
+      "direction": "双向",
+      "horizon": "未来一至两个财季与客户履约节点",
+      "affected": [
+        "美光与存储链",
+        "HBM 供需",
+        "半导体设备订单可持续性"
+      ],
+      "counterCase": "若后续文件显示订金可大规模退还且客户砍单，或 ASP 回落使 take-or-pay 经济性变差，则客户锁定产能的乐观含义应下调。",
+      "selectionReason": "把资本开支双刃剑与循环融资问题落到可核对的订金与产能安排。",
+      "credibilityReason": "数字具体，但是对已披露财报的二手拆解，未附 10-K 或电话会原文页码，作者非公司官方。",
+      "change": "新增",
+      "eventTime": "2026-09-30T00:00:00Z",
+      "eventTimeNote": "财务期间与披露锚定在约 9 月 30 日报告；本窗口新增的是对该结构的公开拆解讨论。",
+      "knowledgeCards": [
+        "I01",
+        "I02",
+        "R04"
+      ],
+      "disciplines": [
+        "半导体",
+        "公司金融与现金流"
+      ],
+      "knowledgeApplication": "I01/I02：供应商扩产可由客户预付支撑，但需追查终端需求是否独立；R04：以客户砍单或退还订金作为事前反证条件。",
+      "sources": [
+        {
+          "url": "https://x.com/yianisz/status/2109304767545843915",
+          "postId": "2109304767545843915",
+          "username": "yianisz",
+          "publishedAt": "2026-10-11T15:27:00.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "MU's customers sent it more cash last quarter than Micron spent on fabs. FQ4: Customer deposits received $12.3B; Capex $10.8B. 26 take-or-pay agreements; deposits are refundable. This is customer-financed capacity.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 34,
+        "label": "规则初评，未校准",
+        "reason": "数字具体，但是对已披露财报的二手拆解，未附 10-K 或电话会原文页码，作者非公司官方。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "hurricane-isaias-power-outages-2026-10-10",
+      "title": "Isaias 与 Rachel 双热带系统继续造成美东电力中断",
+      "fact": "Bloomberg 称，从宾夕法尼亚到佛罗里达仍有住户断电，洪水威胁上升；美国同时面对大西洋 Isaias 残留与太平洋侧 Rachel 进入西南部的罕见双热带威胁。",
+      "impact": "区域停电与洪水会短期扰动公用事业修复开支、零售与物流，并提醒 AI 与数据中心叙事之外，极端天气仍是电力可靠性的独立约束；对全国指数影响通常有限，但对区域公用事业与保险公司更直接。",
+      "direction": "双向",
+      "horizon": "未来数日修复窗口",
+      "affected": [
+        "区域公用事业",
+        "保险",
+        "零售与物流",
+        "电力可靠性预期"
+      ],
+      "counterCase": "若周一开盘前出清住户显著回落、保险损失初估低于预期，则对公用事业与保险股的冲击应下调。",
+      "selectionReason": "延续上期电力实物冲击线索，并用周末双风暴进展更新约束条件。",
+      "credibilityReason": "Bloomberg 报道具可追溯性，但未给出断电户数精确时点统计与官方应急机构原文。",
+      "change": "延续",
+      "continuationReason": "上期已提示 Isaias 电力损失；本窗口 Bloomberg 确认美东仍大范围断电并叠加 Rachel，说明修复与天气约束仍在影响开周定价背景。",
+      "eventTime": null,
+      "eventTimeNote": "停电与风暴影响为持续过程，精确起始时刻未知。",
+      "knowledgeCards": [
+        "I03",
+        "M07",
+        "R02"
+      ],
+      "disciplines": [
+        "电力与基础设施",
+        "天气与能源物流"
+      ],
+      "knowledgeApplication": "I03：电力可用性是 AI 实物约束的一部分；M07：天气冲击通过修复时间与区域供给起作用；R02：需观察抢修是否抵消短期冲击。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2109295464994525233",
+          "postId": "2109295464994525233",
+          "username": "business",
+          "publishedAt": "2026-10-11T14:50:02.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "Homes from Pennsylvania to Florida are without power and flood threats are rising as the US deals with a rare double tropical threat from the remnants of storms Isaias off the Atlantic and Rachel moving into the Southwest from the Pacific",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Bloomberg 报道具可追溯性，但未给出断电户数精确时点统计与官方应急机构原文。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "musk-chip-talent-spacex-tesla-recruit-2026-10-11",
+      "title": "马斯克公开招揽顶级芯片设计与生产工程师",
+      "fact": "埃隆·马斯克发帖称，若你是世界级芯片设计或生产工程师，可考虑加入 SpaceX 或 Tesla，并强调能以极快速度迭代设计与定制生产设备。",
+      "impact": "若招聘转化为实际团队与自研或定制产线能力，长期可能改变特斯拉与 SpaceX 在推理、机器人与星座算力上的垂直整合深度；短期更直接影响半导体人才竞争与市场对汽车或航天公司做芯片叙事的定价。",
+      "direction": "待定",
+      "horizon": "数个季度的人才与产品验证",
+      "affected": [
+        "Tesla",
+        "SpaceX 与星链相关预期",
+        "芯片设计人才市场",
+        "传统芯片公司招聘竞争"
+      ],
+      "counterCase": "若后续没有可验证的团队扩张、流片或产能合作公告，该帖应视为招聘宣传而非供给格局变化。",
+      "selectionReason": "把半导体优先级落到可观察的人才争夺，连接 AI 实物基础与企业微观执行。",
+      "credibilityReason": "本人账号原创帖，意图清晰；但无具体岗位数量、地点或已招聘进度，商业化结果未验证。",
+      "change": "新增",
+      "eventTime": "2026-10-11T13:15:01.000Z",
+      "eventTimeNote": "以发帖时间为公开表态时间。",
+      "knowledgeCards": [
+        "I03",
+        "I04",
+        "R08"
+      ],
+      "disciplines": [
+        "半导体",
+        "AI 落地与机器人"
+      ],
+      "knowledgeApplication": "I03/I04：算力与制造能力最终受人才与设备迭代约束；R08：创始人激励下的招聘宣传需与后续可验证产能分开。",
+      "sources": [
+        {
+          "url": "https://x.com/elonmusk/status/2109271552378220789",
+          "postId": "2109271552378220789",
+          "username": "elonmusk",
+          "publishedAt": "2026-10-11T13:15:01.000Z",
+          "checkedAt": "2026-10-11T15:46:40Z",
+          "excerpt": "If you're a world-class chip design or production engineer, consider joining SpaceX or Tesla. How cool would it be to iterate on designs and customize production machines at lightning speed?",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 49,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 82,
+            "claimScore": 42,
+            "breakdown": {
+              "directness": 25,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "账号在人工来源表中登记为具名当事人"
+            ],
+            "warnings": [
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 49,
+        "label": "规则初评，未校准",
+        "reason": "本人账号原创帖，意图清晰；但无具体岗位数量、地点或已招聘进度，商业化结果未验证。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "shortfallReason": "手动窗口仅约 2 小时 45 分钟且为周日休市，第一轮仅找到 4 条达到焦点门槛的独立事件（不足 5）；第二轮六包均已实际查询，但高价值洞察仅 5 条（不足 10）。德州并网暂停、OpenAI ARR 旧闻、Reflection AI 无新进展、弱来源研报转述等已排除，禁止凑数。",
+  "id": "manual-4fe5409c-785e-4dc4-bda7-37dcaa389aaa",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-11T15:48:56.844Z",
+  "counts": {
+    "focus": 4,
+    "insights": 5,
+    "total": 9
+  }
+}

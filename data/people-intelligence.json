@@ -1,6 +1,105 @@
 {
   "schemaVersion": 1,
-  "updatedAt": null,
+  "updatedAt": "2026-10-11T15:48:56.999Z",
+  "cutoff": "2026-10-11T23:45:00+08:00",
   "source": "X only",
-  "items": []
+  "status": "complete",
+  "coverage": {
+    "tabs": [
+      {
+        "id": "elon-musk",
+        "status": "complete",
+        "note": "get_users_posts @elonmusk，窗口 cutoff 前 24h 与 7d；收录芯片招聘、Cybercab、Starlink 印度定价。排除住址/邮件隐私帖与纯 Grok Bot 购物演示。"
+      },
+      {
+        "id": "jensen-huang",
+        "status": "complete",
+        "note": "config.handle=null，本人 X 来源未确认；未用 @nvidia 冒充。检索无合格本人帖，items=0。"
+      },
+      {
+        "id": "donald-trump",
+        "status": "complete",
+        "note": "from:realDonaldTrump 与 get_users_posts 在 cutoff 前 7 日均返回 0 条原创帖；能源停火等政策消息来自第三方转述，按规则不冒充本人 Tab。items=0。"
+      },
+      {
+        "id": "trillion-leaders",
+        "status": "complete",
+        "note": "检索 satyanadella/tim_cook/sundarpichai/Meta/amazon/Apple/Microsoft/Google 等账号 AI/capex 相关原创帖，窗口内无达到传导门槛的本人或核心决策者帖。items=0。"
+      },
+      {
+        "id": "research-reports",
+        "status": "complete",
+        "note": "检索 Goldman/UBS/MorganStanley 等价目标与评级变化；窗口内多为二手转述且无法核验付费研报原文，按不绕付费墙与证据门槛落选。items=0。"
+      }
+    ]
+  },
+  "items": [
+    {
+      "eventKey": "elon-chip-talent-spacex-tesla-2026-10-11",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "马斯克招揽世界级芯片设计与生产工程师加入 SpaceX/Tesla",
+      "fact": "马斯克发帖邀请世界级芯片设计或生产工程师加入 SpaceX 或 Tesla，强调可快速迭代设计并定制生产设备。",
+      "whyItMatters": "若转化为真实招聘与产线能力，将强化特斯拉/SpaceX 在 AI 推理、机器人与星座算力上的垂直整合，并加剧芯片人才竞争。",
+      "counterCase": "若无后续岗位、流片或产能合作的可验证进展，则仅是招聘宣传。",
+      "affected": [
+        "Tesla",
+        "SpaceX",
+        "芯片人才市场"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-11T13:15:01.000Z",
+      "url": "https://x.com/elonmusk/status/2109271552378220789",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 1
+      }
+    },
+    {
+      "eventKey": "elon-cybercab-scaling-2026-10-11",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "马斯克称 Cybercab 正在扩产/扩展",
+      "fact": "马斯克发帖写到 “Cybercab is scaling”，未在正文给出产量、工厂或交付数字。",
+      "whyItMatters": "Robotaxi 商业化节奏影响 Tesla AI 落地叙事与资本开支回收预期；缺数字时只能作为方向性信号。",
+      "counterCase": "若后续财报或交付数据无法显示 Robotaxi/Cybercab 产能或里程上升，该表态权重应下调。",
+      "affected": [
+        "Tesla",
+        "自动驾驶与机器人供应链"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-11T12:39:29.000Z",
+      "url": "https://x.com/elonmusk/status/2109262612303314986",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "elon-musk": 3
+      }
+    },
+    {
+      "eventKey": "elon-starlink-india-affordable-pricing-2026-10-10",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "马斯克回应印度 Starlink 竞争：必须把价格做到可负担",
+      "fact": "马斯克长文批评所谓 Ambani 网络水军逻辑自相矛盾，并称若 Starlink 在印度太贵就没人买，因此 SpaceX 需要把定价做到可负担，竞争将惠及印度消费者。",
+      "whyItMatters": "涉及 Starlink 在印度的准入、定价与电信竞争，可能影响 SpaceX 收入预期和印度宽带市场格局。",
+      "counterCase": "若印度监管未批准有竞争力的条款，或 SpaceX 无法给出可持续低价，则竞争叙事难以兑现。",
+      "affected": [
+        "SpaceX/Starlink",
+        "印度电信竞争"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-10T18:55:34.000Z",
+      "url": "https://x.com/elonmusk/status/2108994867582095465",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 2
+      }
+    }
+  ]
 }
