@@ -9,10 +9,11 @@
 - 不发帖、不点赞、不转发、不关注、不私信，不执行交易。
 - 没有真实原帖时，页面显示空状态；禁止用占位新闻替代。
 
-## 两种输入
+## 允许的输入
 
-1. 官方 X API v2：`npm run fetch`
-2. Grok Bot 或人工结构化导出：`npm run import:x -- path/to/export.json`
+来源硬规则统一见 [AGENTS.md](../AGENTS.md)：先本机Grok Bot App，失败时才使用Grok网页版。不得从X API、直访X或其他采集器取得新数据。历史脚本与字段不构成例外。
+
+上述两条路径的结构化结果可使用 `npm run import:x -- path/to/export.json` 导入；注明实际获取路径与Grok返回、未独立直读状态。
 
 导入文件可以是数组，也可以是 `{ "posts": [...] }`。最低要求：
 

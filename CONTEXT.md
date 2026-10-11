@@ -4,7 +4,11 @@
 
 ## 产品与边界
 
+**采集路径以 [AGENTS.md的讯息采集硬规则](AGENTS.md) 为唯一维护位置：先本机Grok Bot App，失败才用Grok网页版；除此之外的获取路径全部禁止。所有接手模型、执行器与定时任务均须遵守。** 当前按用户要求先本地验收，不推送或部署。
+
 `intelbrief-board` 是 X-only 情报看板。唯一内容来源是可回到原帖的 X/Twitter 帖子；系统保存证据并做可解释的可信度自动初评。
+
+**数量上限不是交付目标。** 美股 5+10、人物个人／合集的 24 小时区和一周 Top 5 都只收达到价值与证据门槛的内容；不足时保留实际数量并说明缺额，可以为 0 条，禁止用低价值、重复或旧信息补齐。
 
 线上地址：https://intelbrief-board.pages.dev
 
@@ -23,21 +27,26 @@ GitHub：`UCanSeeeeee/intelbrief-board`（private）
 ## 架构
 
 ```text
-X API v2 ─┐
-          ├─> data/raw/x-posts.json ─> build-intelligence ─> data/x-intelligence.json ─> 静态页面
-Grok JSON ┘                ↑
-                    sources/x-sources.json
+本机Grok Bot App ─> 结构化结果 ─> 校验/去重/归档 ─> 页面
+    失败时才使用 Grok 网页版          ↑
+                            sources/x-sources.json
 ```
 
-纯静态前端，无框架、无数据库。Node 脚本负责采集、去重、评分与校验；Cloudflare Pages 负责展示。
+前端无框架，Cloudflare Pages负责展示；新增受保护的更新接口与D1任务队列，本机Node执行器负责调用只读研究、校验、提交与线上发布核验。接入说明与当前未完成的上线条件见 [手动更新](docs/MANUAL_UPDATES.md)。
 
 ## 关键文件
 
+- `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：具体人物顶部 Tab、万亿美元公司高层、机构研报合集、AI 三层研究方向及降噪规则的待办与产品规划。
+- `docs/MANUAL_UPDATES.md`：全部更新、单页更新、云端配置、执行端及验收状态的主要维护位置。
+- `updates.js` / `server/updates.mjs` / `scripts/update-runner.js`：页面进度、任务队列与本机执行器。
+
 - `docs/STOCK_BRIEF.md`：美股每天北京时间 09:00 / 16:00 / 21:00 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。
+- `us-equity-x-brief-quality`：共享卡片质量技能，统一作者、中文信息摘要、事件时间、反向条件与原帖链接；采集过程只进入证据层。当前 0.1.0 在共享技能库孵化并已链接到本机 Codex。
 - `config/stock-brief.json`：时区、时段、条数与技能标识。
-- `data/stock-briefs/index.json`：历史目录；同目录期次文件是不可覆盖的历史快照。首期实际定时采集尚待验证。
+- `data/stock-briefs/index.json`：最近三期目录；同目录保留的期次文件不可覆盖，写入第四期时移除最旧一期。首期实际定时采集尚待验证。
 - `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
-- `index.html` / `people.html`：前台仅有的两个侧边栏 Tab；首页是美股讯息，具体人物为独立页面。`people.js` 负责人物来源表与本人原帖时间线。人物名单由 `sources/x-sources.json` 中启用且分类为 `people` 的账号维护。
+- `index.html` / `people.html`：前台仅有的两个侧边栏 Tab；首页是美股讯息，具体人物为独立页面。`people.js` 负责人物／合集顶部 Tab、24 小时区和一周 Top 5 的展示与跨区去重。
+- `config/people-intelligence.json` / `data/people-intelligence.json`：人物与合集配置及精选事件库；个人 24 小时最多 3 条、合集最多 10 条，周榜最多 5 件，没有高价值内容时保持为空。
 
 - `sources/x-sources.json`：账号来源表。身份等级必须人工维护，账号变化后需要复核。
 - `data/raw/x-posts.json`：原始归档。status ID 是去重主键。
@@ -55,21 +64,18 @@ Grok JSON ┘                ↑
 ## 运行与验证
 
 ```bash
-cp .env.example .env
-# 配置 X_BEARER_TOKEN
+npm ci
 npm test
-npm run fetch
-npm run check
-npm run dev
+npm run dev:updates
 ```
 
-若使用 Grok Bot：按 `docs/X_DATA_CONTRACT.md` 导出 JSON，执行 `npm run import:x -- FILE && npm run score && npm run check`。
+仅导入由允许的Grok路径取得的结果。旧X API脚本保留作历史实现，不得调用；本地完整模式说明见 `docs/MANUAL_UPDATES.md`。
 
 ## 部署
 
-Cloudflare Pages 从 `master` 自动部署。静态构建不采集 X，以免在构建日志或浏览器端暴露 Token。采集在本地或受保护环境运行，生成数据经校验后再提交。
+Cloudflare Pages 从 `master` 自动部署。构建命令必须为 `npm run build`、输出目录 `dist`。构建仅打包允许公开的资源，不采集X、不重新生成内容时间；采集与评分在本机任务内完成，凭证与运行日志保存在仓库外。
 
-`.github/workflows/refresh-x.yml` 提供手动刷新，没有 cron。美股简报的三次频率已获用户授权，通过应用原生对话定时任务执行，以应用内状态为准；不要另建重复调度。API 费用尚未获授权，默认沿用已登录 Grok Bot 的只读能力；当前实现不代表 API 或完整定时采集已经实测成功。
+旧X API手动工作流已停用，不能作为备用采集路径。美股简报的三次频率已获用户授权，通过应用原生对话定时任务执行，以应用内状态为准；不要另建重复调度。采集只允许上述两条Grok路径，真实采集成功仍需单独验证。
 
 ## 接手检查清单
 

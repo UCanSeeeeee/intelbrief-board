@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "researchPriorities": ["半导体", "电力", "AI 落地"],
+  "tabs": [
+    {
+      "id": "elon-musk", "label": "马斯克", "type": "person", "identity": "Elon Musk", "handle": "elonmusk",
+      "latestLimit": 3, "weeklyLimit": 5,
+      "focus": "xAI 算力、Tesla AI 与机器人、SpaceX 基础设施及资本配置",
+      "sourceRule": "只收本人账号或本人明确参与且可回查的公开内容。"
+    },
+    {
+      "id": "jensen-huang", "label": "黄仁勋", "type": "person", "identity": "Jensen Huang", "handle": null,
+      "latestLimit": 3, "weeklyLimit": 5,
+      "focus": "架构路线、产品节奏、供需、客户资本开支、网络与系统生态",
+      "sourceRule": "本人公开 X 来源尚待确认；不以 NVIDIA 机构账号冒充本人发言。"
+    },
+    {
+      "id": "donald-trump", "label": "特朗普", "type": "person", "identity": "Donald Trump", "handle": "realDonaldTrump",
+      "latestLimit": 3, "weeklyLimit": 5,
+      "focus": "能影响 AI、半导体、电力、贸易、出口管制、税收、财政、能源或监管的可执行政策",
+      "sourceRule": "一般政治言论不进入；只保留有投资传导的明确政策或进展。"
+    },
+    {
+      "id": "trillion-leaders", "label": "万亿美元公司高层", "shortLabel": "万亿公司高层", "type": "collection", "identity": "万亿美元美股公司核心决策者", "handle": null,
+      "latestLimit": 10, "weeklyLimit": 5,
+      "focus": "AI 需求、资本开支、产品路线、供应瓶颈、毛利、融资与商业化节奏",
+      "sourceRule": "公司名单按周核验市值；每家公司默认 3 人、最多 5 人，本周通常最多占 2 席。"
+    },
+    {
+      "id": "research-reports", "label": "机构研报", "type": "collection", "identity": "公开、可回查的机构与具名分析师研究变化", "handle": null,
+      "latestLimit": 10, "weeklyLimit": 5,
+      "focus": "盈利预测、资本开支、供需、评级核心假设与产业判断的实质变化",
+      "sourceRule": "不绕过付费墙；同一事件的多家观点合并，保留分歧而不重复刷屏。"
+    }
+  ]
+}

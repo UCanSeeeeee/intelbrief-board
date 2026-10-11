@@ -27,10 +27,8 @@
           <span>北京时间 · 每天 09:00 / 16:00 / 21:00 启动更新</span>
         </div>
       </header>
-      <section class="brief-overview" aria-live="polite">
+      <section class="brief-overview brief-edition-only" aria-label="简报期次">
         <div class="brief-toolbar"><label for="edition-select">简报期次</label><select id="edition-select" disabled><option>正在加载</option></select></div>
-        <p id="brief-state">正在读取期次记录…</p>
-        <div id="brief-summary"></div>
       </section>
       <section class="section">
         <div class="section-header"><h2>市场最关注的五件事 <span id="focus-count">0 / 5</span></h2></div>
@@ -48,5 +46,6 @@
   </div>
   <script src="app.js"></script>
   <script src="briefs.js"></script>
+  <script src="updates.js"></script>
 </body>
 </html>

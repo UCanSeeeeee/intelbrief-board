@@ -1,0 +1,389 @@
+{
+  "trigger": "manual",
+  "requestId": "21a989cf-3076-4cdd-971f-ee3925de4337",
+  "scheduledFor": "2026-10-11T11:19:50Z",
+  "windowStart": "2026-10-10T11:19:50Z",
+  "status": "partial",
+  "summary": "Grok Bot App 已成功取得过去 24 小时内 5 条可能影响美股的 X 原帖线索；本次只验证市场焦点采集链路，多学科 10 条尚未采集。",
+  "marketContext": "信息截止时为周末，美股常规交易时段休市；本期不把前一交易日收盘价或帖子中的行情口述当作实时行情。",
+  "coverage": {
+    "method": "通过本机 Grok Bot App 的“推特信息获取”Bot进行只读检索。Grok称限定原创帖、排除回复和转推；所有来源均标记为采集器返回，本执行器未独立直读原帖。",
+    "queries": [
+      "检索 @DeItaone、@FirstSquawk、@Reuters、@WSJmarkets、@business、@zerohedge 在窗口内的原创帖，最多读取最近 25 条",
+      "全站检索 tariff、Fed、stock futures、Nasdaq、S&P 500、earnings、shutdown、China，限定认证账号和英文",
+      "检索 @realDonaldTrump、@WhiteHouse、@SecScottBessent、@federalreserve、@USTreasury",
+      "检索 Trump diesel，并覆盖主要新闻账号",
+      "在主要新闻账号中检索 Fed、tariff、oil、OPEC、Nvidia、Apple、Tesla、China、Treasury、yields、earnings"
+    ],
+    "gaps": [
+      "Grok 每次检索最多返回 25 条，首次账号检索只覆盖窗口内最近约 1.5 小时，不能声称完整覆盖全 X。",
+      "部分官方和媒体账号在窗口内没有返回原创帖，无法判断是确实无帖还是检索遗漏。",
+      "入选内容包含媒体和聚合账号的二手转述，未取得俄罗斯政府声明、伊朗事件独立确认、美联储官员原始讲话、FT 原文或美国专利调查文件。",
+      "本次只测试 5 条市场焦点，没有执行多学科知识库的第二轮 10 条检索与比较。"
+    ]
+  },
+  "selectionRationale": "在 Grok 返回的候选中，优先保留对能源供给、航运咽喉、利率路径、AI 龙头资本动作和数据中心供应链具有较直接传导路径的五件事。排序仅代表本次有限检索范围内的影响判断，不是全网关注度排名；由于没有独立直读与原始文件核验，全部仅作待核验线索。",
+  "excludedCandidates": [
+    {
+      "eventKey": "eu-china-hybrid-import-plan-2026-10-11",
+      "reason": "与当前美股整体方向的直接联系弱于入选候选，且本次没有补足受影响美股公司的业务暴露。"
+    },
+    {
+      "eventKey": "trump-ukraine-refinery-request-2026-10-11",
+      "reason": "与俄罗斯柴油出口事件属于同一能源与谈判链条，避免拆成两个名额。"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "russia-partial-diesel-export-relief-2026-10-10",
+      "title": "俄罗斯据报部分解除柴油出口禁令",
+      "fact": "俄罗斯政府宣布允许 50 万吨燃料进入国际市场，并将这一变化与普京和特朗普达成的协议联系起来。",
+      "impact": "若额外柴油供应实际进入国际市场，可能压低部分燃料和运输成本，并改变炼油利润预期；但影响取决于交付节奏、制裁执行和替代供应。",
+      "direction": "双向",
+      "horizon": "未来两周",
+      "affected": [
+        "能源",
+        "炼油",
+        "航空与物流",
+        "通胀预期"
+      ],
+      "counterCase": "若出口规模未兑现、制裁并未放松或市场早已计价，燃料成本和相关股票可能没有持续反应。",
+      "selectionReason": "能源供应变化可同时影响企业成本、通胀和风险资产折现率，传导范围大于本轮多数候选。",
+      "credibilityReason": "具名媒体账号给出数量和政府声明线索，但属于 Grok 转述且未取得政府原文。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "俄罗斯政府声明的准确发布时间尚未查明；Bloomberg 发帖时间仅作为首次发现线索",
+      "attentionEvidence": "涉及俄罗斯燃料出口、制裁和国际能源供给；本轮没有可靠互动量或跨来源统计，不能称为客观热度第一。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2109006087210844290",
+          "postId": "2109006087210844290",
+          "username": "business",
+          "publishedAt": "2026-10-10T19:40:09Z",
+          "checkedAt": "2026-10-11T19:21:38+08:00",
+          "excerpt": "Russia partially lifted its ban on diesel exports, allowing 500,000 metric tons of fuel to reach international markets following an agreement between Putin and Trump, according to a Russian government statement https://t.co/c2Jd0NLDuW",
+          "verification": "collector-report",
+          "verificationNote": "本机 Grok Bot App 返回并称来自 X 原创帖；本执行器未独立打开原帖或俄罗斯政府声明。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 33,
+        "label": "规则初评，未校准",
+        "reason": "具名媒体账号给出数量和政府声明线索，但属于 Grok 转述且未取得政府原文。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "hormuz-tanker-mine-report-2026-10-10",
+      "title": "伊朗媒体称霍尔木兹海峡油轮触雷爆炸",
+      "fact": "据伊朗官方媒体和革命卫队，一艘身份不明的油轮在穿越霍尔木兹海峡时触雷并爆炸起火。",
+      "impact": "若事件得到独立确认并提高航运风险，可能推高石油运输和保险成本，支持能源股但增加通胀与利率压力。",
+      "direction": "双向",
+      "horizon": "未来两周",
+      "affected": [
+        "原油",
+        "能源股",
+        "航运与保险",
+        "美股指数估值"
+      ],
+      "counterCase": "若事件被否认、影响仅限单船且航道未受扰动，风险溢价可能快速回落。",
+      "selectionReason": "霍尔木兹海峡是关键能源运输咽喉，潜在影响横跨商品、通胀和股票估值。",
+      "credibilityReason": "帖子提供具体地点和初步细节，但消息源只有伊朗官方媒体，缺少船舶身份与独立确认。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "原帖没有给出油轮触雷的准确发生时间",
+      "attentionEvidence": "涉及全球能源运输咽喉，潜在影响广；本轮没有可核验的油价实时反应或跨来源热度数据。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2108970700769825185",
+          "postId": "2108970700769825185",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-10T17:19:32Z",
+          "checkedAt": "2026-10-11T19:21:38+08:00",
+          "excerpt": "OIL TANKER EXPLODES AFTER REPORTED MINE STRIKE IN STRAIT OF HORMUZ\n\nIran's Revolutionary Guards say an oil tanker exploded and caught fire after striking a naval mine while crossing the Strait of Hormuz, according to Iranian state media. The vessel's identity and flag remain unknown, with no immediate details on casualties or damage.",
+          "verification": "collector-report",
+          "verificationNote": "本机 Grok Bot App 返回；本执行器未独立打开原帖，也未取得船舶或第三方确认。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "帖子提供具体地点和初步细节，但消息源只有伊朗官方媒体，缺少船舶身份与独立确认。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "fed-further-tightening-aggregate-2026-10-11",
+      "title": "聚合帖称多位美联储官员倾向进一步紧缩",
+      "fact": "一则汇总信息显示，Anna Paulson、John Williams 和 Michael Barr 近期分别表达了继续紧缩或加息的倾向；三段讲话是否都发生在本期窗口仍待核对。",
+      "impact": "若官员原始讲话确实强化继续加息的路径，可能抬高利率预期并压制久期较长的成长股、小盘股和地产；但该帖没有证明讲话都发生在本窗口。",
+      "direction": "利空",
+      "horizon": "未来两周",
+      "affected": [
+        "纳斯达克",
+        "成长股",
+        "小盘股",
+        "房地产"
+      ],
+      "counterCase": "若讲话是旧闻、被断章取义，或后续数据使政策预期转弱，则该聚合帖对利率和股票的边际影响有限。",
+      "selectionReason": "利率路径对美股估值具有广泛影响，因此保留为高影响但低确认度的待核验候选。",
+      "credibilityReason": "具名聚合账号提供官员姓名和引语，但缺少原始讲话链接、场合与准确时间。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "三位官员原始讲话的准确发生时间尚未查明",
+      "attentionEvidence": "主题直接影响折现率和成长股估值，但没有独立热度统计，且可能混入窗口外讲话。",
+      "sources": [
+        {
+          "url": "https://x.com/unusual_whales/status/2109071732309172547",
+          "postId": "2109071732309172547",
+          "username": "unusual_whales",
+          "publishedAt": "2026-10-11T00:01:00Z",
+          "checkedAt": "2026-10-11T19:21:38+08:00",
+          "excerpt": "The Fed may not be done hiking.\n\nPhiladelphia Fed President Anna Paulson says \"some modest further tightening may be warranted,\" with inflation still \"stubbornly elevated.\" New York Fed President John Williams says the Fed \"still\" has \"a lot of work to do.\" Fed Governor Michael Barr has also said more hikes are needed. The Fed raised rates last month to 3.75%-4%, its first hike since 2023.",
+          "verification": "collector-report",
+          "verificationNote": "本机 Grok Bot App 返回；本执行器未独立打开原帖或三位官员的原始讲话。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 34,
+        "label": "规则初评，未校准",
+        "reason": "具名聚合账号提供官员姓名和引语，但缺少原始讲话链接、场合与准确时间。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "nvidia-reflection-ai-talks-2026-10-10",
+      "title": "英伟达据报洽谈收购或追加投资 Reflection AI",
+      "fact": "据 Financial Times，英伟达正与开源权重模型开发商 Reflection AI 进行早期收购或追加投资谈判。",
+      "impact": "交易若推进，可能扩大英伟达在 AI 模型层的资本配置并影响行业竞争叙事；短期也可能带来估值、整合和监管讨论。",
+      "direction": "待定",
+      "horizon": "未来两周",
+      "affected": [
+        "NVDA",
+        "AI 模型公司",
+        "半导体与云计算"
+      ],
+      "counterCase": "谈判可能终止，金额可能不具重要性；即使完成，也不一定在两周内改变英伟达收入或现金流预期。",
+      "selectionReason": "英伟达指数权重高，资本动作可能影响 AI 板块情绪，但当前只属于早期谈判线索。",
+      "credibilityReason": "Bloomberg 账号援引 FT 报道，但未取得 FT 原文、交易金额或英伟达确认。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "谈判发生时间未知；以 Bloomberg 发帖时间作为公开线索时间",
+      "attentionEvidence": "涉及美股高权重 AI 龙头和潜在收购；本轮没有可靠互动量或价格反应数据。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2108998539950846010",
+          "postId": "2108998539950846010",
+          "username": "business",
+          "publishedAt": "2026-10-10T19:10:09Z",
+          "checkedAt": "2026-10-11T19:21:38+08:00",
+          "excerpt": "Nvidia is in early-stage negotiations to acquire or further invest in startup Reflection AI, an American developer of open-weight models, the Financial Times reported https://t.co/eseQTIrej5",
+          "verification": "collector-report",
+          "verificationNote": "本机 Grok Bot App 返回并称来自 X 原创帖；本执行器未独立打开原帖或 FT 报道。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Bloomberg 账号援引 FT 报道，但未取得 FT 原文、交易金额或英伟达确认。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "luxshare-vicor-patent-investigation-2026-10-11",
+      "title": "苹果供应商立讯精密据报面临美国专利调查",
+      "fact": "Vicor 提出侵权指控后，立讯精密在美国面临一项涉及数据中心电源技术的专利调查。",
+      "impact": "若调查涉及进口限制或关键数据中心电源产品，可能直接影响 Vicor，并通过供应链不确定性影响苹果和 AI 数据中心相关公司。",
+      "direction": "双向",
+      "horizon": "未来两周",
+      "affected": [
+        "VICR",
+        "AAPL 供应链",
+        "数据中心电源"
+      ],
+      "counterCase": "若调查范围有限、产品可替代或最终不产生进口限制，对相关美股收入和供应链的影响可能很小。",
+      "selectionReason": "这是本轮少数同时连接美股上市公司、苹果供应链和 AI 数据中心基础设施的具体事件。",
+      "credibilityReason": "媒体账号称依据周六文件，但未核验调查机构、文件编号、产品范围或救济请求。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "相关文件的准确提交时间尚未查明；Bloomberg 发帖时间仅作为公开线索",
+      "attentionEvidence": "涉及美股 Vicor 及苹果和数据中心供应链，但本轮没有跨来源热度或价格反应数据。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2109126881253498921",
+          "postId": "2109126881253498921",
+          "username": "business",
+          "publishedAt": "2026-10-11T03:40:08Z",
+          "checkedAt": "2026-10-11T19:21:38+08:00",
+          "excerpt": "Apple supplier Luxshare is facing a US patent investigation into data-center power technologies following infringement allegations by Vicor, according to a filing on Saturday https://t.co/I2axk5WEpM",
+          "verification": "collector-report",
+          "verificationNote": "本机 Grok Bot App 返回并称来自 X 原创帖；本执行器未独立打开原帖或调查文件。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "媒体账号称依据周六文件，但未核验调查机构、文件编号、产品范围或救济请求。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [],
+  "shortfallReason": "本次只测试 Grok Bot App 的市场焦点采集，取得 5 条待核验线索；尚未执行多学科认知与夜雨知识库的第二轮检索，因此缺少 10 条多学科洞察。",
+  "id": "manual-21a989cf-3076-4cdd-971f-ee3925de4337",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-11T11:22:43.981Z",
+  "counts": {
+    "focus": 5,
+    "insights": 0,
+    "total": 5
+  }
+}

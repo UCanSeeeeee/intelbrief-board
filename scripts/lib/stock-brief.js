@@ -31,10 +31,13 @@ function slotAt(now = new Date()) {
 function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
   requireValue(input && typeof input === 'object', '需要简报对象');
   const brief = structuredClone(input);
-  requireValue(/^\d{4}-\d{2}-\d{2}T(?:09|16|21):00:00\+08:00$/.test(brief.scheduledFor), '期次只能是北京时间 09:00、16:00、21:00');
+  brief.trigger = brief.trigger || 'scheduled';
+  requireValue(['manual','scheduled'].includes(brief.trigger), '期次类型无效');
+  if (brief.trigger === 'scheduled') requireValue(/^\d{4}-\d{2}-\d{2}T(?:09|16|21):00:00\+08:00$/.test(brief.scheduledFor), '期次只能是北京时间 09:00、16:00、21:00');
+  else requireValue(/^[a-f0-9-]{36}$/.test(brief.requestId), '手动期次需要任务编号');
   const cutoff = timestamp(brief.scheduledFor, 'scheduledFor');
   requireValue(cutoff <= new Date(now).getTime(), '不能提前发布未来期次');
-  brief.id = brief.scheduledFor.slice(0, 10) + '-' + brief.scheduledFor.slice(11, 16).replace(':', '');
+  brief.id = brief.trigger === 'manual' ? `manual-${brief.requestId}` : brief.scheduledFor.slice(0, 10) + '-' + brief.scheduledFor.slice(11, 16).replace(':', '');
   brief.timezone = config.timezone;
   brief.schemaVersion = 1;
   brief.generatedAt = new Date(now).toISOString();
@@ -58,6 +61,7 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
       for (const key of ['eventKey', 'title', 'fact', 'impact', 'direction', 'horizon', 'counterCase', 'selectionReason', 'change', 'credibilityReason']) {
         requireValue(nonempty(event[key]), `事件缺少 ${key}`);
       }
+      requireValue(!/(?:Grok\s*返回|Grok\s*称|采集器(?:返回|称)|原帖(?:汇总)?称)/i.test(event.fact), '信息摘要不能包含采集过程话术');
       requireValue(['利多', '利空', '双向', '待定'].includes(event.direction), '影响方向无效');
       requireValue(['新增', '进展', '延续'].includes(event.change), '事件变化标记无效');
       if (event.change === '延续') requireValue(nonempty(event.continuationReason), '延续事件需要说明当前仍有影响的原因');
@@ -66,7 +70,10 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
       requireValue(!eventKeys.has(normalizedKey) && !titles.has(normalizedTitle), '两组事件不可重复');
       eventKeys.add(normalizedKey); titles.add(normalizedTitle);
       if (event.eventTime !== null) requireValue(timestamp(event.eventTime, 'eventTime') <= cutoff || nonempty(event.futureEventNote), '未来事件需要预告说明');
-      else requireValue(nonempty(event.eventTimeNote), '实际事件时间未知时需注明');
+      else {
+        requireValue(nonempty(event.eventTimeNote), '实际事件时间未知时需注明');
+        requireValue(!/(?:Grok|采集器)(?:\s*返回|\s*未提供|\s*称)/i.test(event.eventTimeNote), '事件时间说明不能包含采集过程话术');
+      }
       requireValue(Array.isArray(event.affected) && event.affected.length && event.affected.every(nonempty), '需要受影响指数、行业或公司');
       requireValue(Array.isArray(event.sources) && event.sources.length, '每条事件需要 X 原帖证据');
       const scores = [];
@@ -118,7 +125,7 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
 }
 
 function saveBrief(brief, root = ROOT) {
-  requireValue(/^\d{4}-\d{2}-\d{2}-(?:0900|1600|2100)$/.test(brief.id), '无效归档 ID');
+  requireValue(/^(?:\d{4}-\d{2}-\d{2}-(?:0900|1600|2100)|manual-[a-f0-9-]{36})$/.test(brief.id), '无效归档 ID');
   const dir = path.join(root, 'data/stock-briefs');
   fs.mkdirSync(dir, { recursive: true });
   const archive = path.join(dir, `${brief.id}.json`);
@@ -128,8 +135,13 @@ function saveBrief(brief, root = ROOT) {
   } else fs.writeFileSync(archive, serialized, { flag: 'wx' });
   const indexFile = path.join(dir, 'index.json');
   const index = fs.existsSync(indexFile) ? readJson(indexFile) : { schemaVersion: 1, editions: [] };
-  const entry = { id: brief.id, scheduledFor: brief.scheduledFor, generatedAt: brief.generatedAt, status: brief.status, counts: brief.counts, file: `${brief.id}.json` };
-  index.editions = [entry, ...index.editions.filter(e => e.id !== brief.id)].sort((a,b) => b.scheduledFor.localeCompare(a.scheduledFor));
+  const entry = { id: brief.id, trigger: brief.trigger || 'scheduled', scheduledFor: brief.scheduledFor, generatedAt: brief.generatedAt, status: brief.status, counts: brief.counts, file: `${brief.id}.json` };
+  const sorted = [entry, ...index.editions.filter(e => e.id !== brief.id)].sort((a,b) => Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor));
+  index.editions = sorted.slice(0, config.historyLimit || 3);
+  for (const expired of sorted.slice(config.historyLimit || 3)) {
+    const expiredFile = path.join(dir, expired.file);
+    if (fs.existsSync(expiredFile)) fs.rmSync(expiredFile);
+  }
   const temporary = `${indexFile}.${process.pid}.tmp`;
   fs.writeFileSync(temporary, JSON.stringify(index, null, 2) + '\n');
   fs.renameSync(temporary, indexFile);

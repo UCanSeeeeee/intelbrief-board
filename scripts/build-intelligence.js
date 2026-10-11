@@ -34,13 +34,20 @@ function main() {
   const allById = new Map((raw.posts || []).map((post) => [String(post.id), post]));
   const cutoff = Date.now() - lookbackHours * 60 * 60 * 1000;
   const posts = (raw.posts || [])
-    .filter((post) => Date.parse(post.createdAt) >= cutoff)
+    .filter((post) => post.category === 'people' || Date.parse(post.createdAt) >= cutoff)
     .map((post) => {
       const source = sources.get(post.author?.username?.toLowerCase()) || {
         trustTier: "unknown",
         sourceClass: "unregistered"
       };
       const normalized = { ...post, assessment: validateAssessment(post, allById) };
+      const credibility=scorePost(normalized,source);
+      if(post.verification==='collector-report') {
+        credibility.overall=Math.min(credibility.overall,49);
+        credibility.band=credibility.overall<30?'very-low':'low';
+        credibility.meaning='Grok返回，原帖未独立直读';
+        credibility.warnings.push('原帖未经本系统独立直读');
+      }
       return {
         ...normalized,
         sourceProfile: {
@@ -48,7 +55,7 @@ function main() {
           sourceClass: source.sourceClass || "unregistered",
           maintained: sources.has(post.author?.username?.toLowerCase())
         },
-        credibility: scorePost(normalized, source)
+        credibility
       };
     })
     .sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));

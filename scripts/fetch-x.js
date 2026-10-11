@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+// Historical implementation retained for traceability. User's 2026-10-11 source rule forbids this path.
+console.error('X API采集已停用：必须先使用本机Grok Bot App，失败时才使用Grok网页版。见AGENTS.md。');
+process.exit(2);
 const { loadEnv } = require("./load-env");
 const {
   SOURCES_PATH,

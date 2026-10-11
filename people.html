@@ -16,23 +16,21 @@
         <a href="index.html" data-nav="news"><span class="nav-icon">▣</span> 美股讯息</a>
         <a href="people.html" data-nav="people"><span class="nav-icon">◎</span> 具体人物</a>
       </nav>
-      <div class="sidebar-footer">只展示人物本人的 X 原帖<br />不把转述冒充本人发言</div>
+      <div class="sidebar-footer">个人与合集都只收可回查的 X 证据<br />不拿旧闻和重复转述凑数</div>
     </aside>
     <main class="main wide">
       <header class="page-header">
         <h1>具体人物</h1>
-        <p class="subtitle">按人物查看本人账号、关注主题和已核验的原帖时间线。</p>
+        <p class="subtitle">追踪关键人物与机构的新增判断，只保留能影响 AI 产业与美股的内容。</p>
         <div class="meta"><span class="badge"><span class="badge-dot"></span> X only</span><span id="people-state" aria-live="polite">正在读取人物资料…</span></div>
       </header>
-      <section class="people-overview">
-        <div><p class="eyebrow">人物情报</p><h2>人物来源与时间线</h2><p>人物身份只说明“谁在发言”，不自动证明其观点正确。只有进入人工来源表并取得可核验原帖的人物才会出现在这里。</p></div>
-      </section>
-      <div id="people-selector" class="people-selector" aria-label="选择人物"></div>
+      <div id="people-selector" class="people-selector" role="tablist" aria-label="具体人物顶部 Tab"></div>
       <section id="person-detail" class="person-detail" aria-live="polite"></section>
-      <p class="disclaimer">机构账号留在后台来源表；转述、截图和无法核对的内容不冒充本人发言。</p>
+      <p class="disclaimer">事实、当事人观点与模型判断分开；转述、截图和无法核对的内容不冒充一手信息。</p>
     </main>
   </div>
   <script src="app.js"></script>
   <script src="people.js"></script>
+  <script src="updates.js"></script>
 </body>
 </html>

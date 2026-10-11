@@ -36,6 +36,12 @@ test('reject duplicated event, title or evidence across groups',()=> {
   }
   const b=fixture(); b.insights[0].sources=b.focus[0].sources; assert.throws(()=>prepare(b),/多个名额/);
 });
+test('fact is a reader-facing summary, not a collector report',()=> {
+  const b=fixture();b.focus[0].fact='Grok 返回的 Example 原帖称，测试消息';
+  assert.throws(()=>prepare(b),/采集过程话术/);
+  const c=fixture();c.focus[0].eventTimeNote='Grok 未提供事件时间';
+  assert.throws(()=>prepare(c),/事件时间说明/);
+});
 test('future posts, bad links and missing publication time are rejected',()=> {
   const mutations=[s=>s.publishedAt='2026-10-11T21:01:00+08:00',s=>s.url='https://example.com/a',s=>delete s.publishedAt,s=>s.postId=1000,s=>s.checkedAt='2026-10-12T21:01:00+08:00'];
   for (const mutate of mutations) { const b=fixture(); mutate(b.focus[0].sources[0]); assert.throws(()=>prepare(b)); }
@@ -62,7 +68,7 @@ test('partial and failed editions carry explicit shortfall',()=> {
   assert.throws(()=>prepare(b),/缺额/); b.shortfallReason='只有两条符合条件'; assert.equal(prepare(b).counts.total,2);
   b.status='failed'; assert.throws(()=>prepare(b),/失败/); b.focus=[]; assert.equal(prepare(b).counts.total,0);
 });
-test('archives are immutable, manifest sorted, identical save idempotent',()=> {
+test('archives are immutable and only the latest three editions are retained',()=> {
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'stock-brief-test-'));
   try {
     const b=prepare(fixture()); saveBrief(b,dir); saveBrief(b,dir);
@@ -70,8 +76,14 @@ test('archives are immutable, manifest sorted, identical save idempotent',()=> {
     const earlier=fixture(); earlier.scheduledFor='2026-10-11T16:00:00+08:00'; earlier.windowStart='2026-10-11T09:00:00+08:00';
     for (const e of [...earlier.focus,...earlier.insights]) e.sources[0].publishedAt='2026-10-11T15:00:00+08:00';
     saveBrief(prepare(earlier),dir);
+    for (const [scheduledFor,windowStart] of [['2026-10-11T09:00:00+08:00','2026-10-10T21:00:00+08:00'],['2026-10-10T21:00:00+08:00','2026-10-10T16:00:00+08:00']]) {
+      const old=fixture();old.scheduledFor=scheduledFor;old.windowStart=windowStart;
+      for(const e of [...old.focus,...old.insights]) e.sources[0].publishedAt=windowStart;
+      saveBrief(prepareBrief(old,{now:new Date('2026-10-11T21:12:00+08:00')}),dir);
+    }
     const index=JSON.parse(fs.readFileSync(path.join(dir,'data/stock-briefs/index.json'),'utf8'));
-    assert.deepEqual(index.editions.map(e=>e.id),['2026-10-11-2100','2026-10-11-1600']);
+    assert.deepEqual(index.editions.map(e=>e.id),['2026-10-11-2100','2026-10-11-1600','2026-10-11-0900']);
+    assert.equal(fs.existsSync(path.join(dir,'data/stock-briefs/2026-10-10-2100.json')),false);
     assert.throws(()=>saveBrief({...b,id:'../../escape'},dir),/无效/);
   } finally { fs.rmSync(dir,{recursive:true,force:true}); }
 });
@@ -97,9 +109,12 @@ test('browser renderer shows 5+10, escapes content, and clears failed edition',a
   assert.doesNotMatch(element('brief-focus').innerHTML,/<img/);
   assert.match(element('brief-insights').innerHTML,/宏观经济 × 行为金融/);
   assert.match(element('brief-insights').innerHTML,/采集器返回，未独立直读/);
+  assert.match(element('brief-focus').innerHTML,/作者/);
+  assert.match(element('brief-focus').innerHTML,/信息摘要/);
+  assert.match(element('brief-focus').innerHTML,/事件时间/);
+  assert.match(element('brief-focus').innerHTML,/原文链接/);
   element('edition-select').value=second.id;
   element('edition-select').listeners.change();
   await new Promise(resolve=>setImmediate(resolve));
-  assert.match(element('brief-state').textContent,/读取失败/);
-  assert.equal(element('brief-focus').innerHTML,'');
+  assert.match(element('brief-focus').innerHTML,/读取失败/);
 });

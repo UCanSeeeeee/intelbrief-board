@@ -1,67 +1,164 @@
-/* Person profiles are sourced from the maintained registry; timelines use archived X posts only. */
+/* High-signal people and institution intelligence. All dynamic strings are escaped. */
 (function () {
   const selector = document.getElementById('people-selector');
   const detail = document.getElementById('person-detail');
   const state = document.getElementById('people-state');
   if (!selector || !detail || !state) return;
-  const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const time = value => value && Number.isFinite(Date.parse(value)) ? new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(value)) : '时间未查明';
-  const tier = {primary:'机构一手',direct:'本人直接发言',established:'成熟来源',specialist:'垂直研究者',monitored:'观察中',unknown:'未登记'};
-  const sourceClass = {'named-insider':'具名当事人','official-organization':'官方机构','official-institution':'公共机构'};
-  const safeUrl = value => /^https:\/\/(?:x|twitter)\.com\/[a-zA-Z0-9_]{1,15}\/status\/\d+$/.test(value || '') ? value : '#';
+
+  const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[character]));
+  const parseTime = value => value && Number.isFinite(Date.parse(value)) ? Date.parse(value) : 0;
+  const formatTime = value => parseTime(value) ? new Intl.DateTimeFormat('zh-CN', {
+    timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+  }).format(new Date(value)) : '时间未查明';
+  const safeUrl = value => /^https:\/\/(?:x|twitter)\.com\/[a-zA-Z0-9_]{1,15}\/status\/\d+$/.test(value || '') ? value : '';
+
   async function json(url) {
-    const response = await fetch(url,{cache:'no-store'});
-    if (!response.ok) throw new Error('读取失败');
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`读取 ${url} 失败`);
     return response.json();
   }
-  function timelinePost(post) {
-    const score = post.credibility || {};
-    return `<article class="person-post">
-      <div class="person-post-head"><time>${escape(time(post.createdAt))}（北京时间）</time><span>可信度初评 ${escape(score.overall ?? '—')}/100 · 未校准</span></div>
-      <p>${escape(post.text)}</p>
-      <div class="topic-row">${(post.topics || []).map(topic=>`<span>${escape(topic)}</span>`).join('')}</div>
-      <a href="${escape(safeUrl(post.url))}" target="_blank" rel="noopener noreferrer">查看 X 原帖 ↗</a>
+
+  function itemKey(item) {
+    return item.eventKey || item.id || item.url || `${item.title || ''}-${item.publishedAt || ''}`;
+  }
+
+  function evidenceLabel(item) {
+    return {
+      primary: '一手来源',
+      corroborated: '已交叉核验',
+      'collector-report': 'Grok 返回，原帖待独立直读',
+      partial: '证据尚有缺口'
+    }[item.verification] || '核验状态待注明';
+  }
+
+  function renderCard(item, extraBadge) {
+    const url = safeUrl(item.url);
+    const affected = Array.isArray(item.affected) ? item.affected : [];
+    return `<article class="signal-card">
+      <div class="signal-card-head">
+        <div class="signal-badges">
+          <span class="signal-tier signal-${escape(item.tier || 'watch')}">${item.tier === 'must-read' ? '必须看' : '值得跟踪'}</span>
+          ${extraBadge ? `<span class="signal-new">${escape(extraBadge)}</span>` : ''}
+        </div>
+        <time>${escape(formatTime(item.publishedAt))}（北京时间）</time>
+      </div>
+      <h4>${escape(item.title || '未命名事件')}</h4>
+      <p><strong>新增事实</strong>${escape(item.fact || '尚未写明')}</p>
+      <p><strong>为何重要</strong>${escape(item.whyItMatters || '尚未写明')}</p>
+      ${affected.length ? `<div class="topic-row">${affected.map(value => `<span>${escape(value)}</span>`).join('')}</div>` : ''}
+      ${item.counterCase ? `<p class="signal-counter"><strong>反向条件</strong>${escape(item.counterCase)}</p>` : ''}
+      <footer><span>${escape(item.author || '来源待注明')} · ${escape(evidenceLabel(item))}</span>${url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">查看 X 原帖 ↗</a>` : '<span>原帖链接待核验</span>'}</footer>
     </article>`;
   }
-  function render(person, posts) {
-    const personPosts = posts.filter(post => String(post.author?.username).toLowerCase() === person.username.toLowerCase()).sort((a,b)=>Date.parse(b.createdAt)-Date.parse(a.createdAt));
-    selector.querySelectorAll('button').forEach(button => {
-      const active = button.dataset.person === person.username.toLowerCase();
-      button.classList.toggle('active',active);
-      button.setAttribute('aria-pressed',String(active));
-    });
-    detail.innerHTML = `<header class="person-profile">
-      <div class="person-avatar" aria-hidden="true">${escape((person.displayName || person.username).slice(0,1).toUpperCase())}</div>
-      <div><h2>${escape(person.displayName || person.username)}</h2><a href="https://x.com/${escape(person.username)}" target="_blank" rel="noopener noreferrer">@${escape(person.username)} ↗</a><p>${escape(tier[person.trustTier] || '来源等级未登记')} · ${escape(sourceClass[person.sourceClass] || '身份类别待核对')}</p></div>
-      <div class="person-count"><strong>${personPosts.length}</strong><span>已采集原帖</span></div>
-    </header>
-    <div class="topic-row person-topics">${(person.topics || []).map(topic=>`<span>${escape(topic)}</span>`).join('')}</div>
-    <div class="person-timeline">${personPosts.length ? personPosts.map(timelinePost).join('') : '<div class="empty-state"><strong>尚未采集到该人物原帖</strong><p>人物入口已建立；后续只在取得可核验的本人 X 原帖后加入时间线。</p></div>'}</div>`;
-    const url = new URL(location.href);
-    url.searchParams.set('person',person.username);
-    history.replaceState(null,'',url.pathname + '?' + url.searchParams.toString());
+
+  function emptySection(kind, tab) {
+    const limit = kind === 'latest' ? tab.latestLimit : tab.weeklyLimit;
+    return `<div class="empty-state signal-empty"><strong>当前没有达到门槛的信息</strong><p>${kind === 'latest' ? `24 小时区最多 ${limit} 条，但不会为了凑数加入普通动态。` : `滚动一周最多 ${limit} 件；不足时保留实际数量。`}</p></div>`;
   }
-  Promise.all([json('sources/x-sources.json'),json('data/x-intelligence.json')]).then(([registry,intelligence])=> {
-    const people=(registry.accounts || []).filter(account=>account.enabled && account.category==='people');
-    const posts=Array.isArray(intelligence.posts) ? intelligence.posts : [];
-    state.textContent=`${people.length} 位已登记人物 · ${posts.filter(post=>post.category==='people').length} 条人物原帖`;
-    if (!people.length) {
-      selector.innerHTML='';
-      detail.innerHTML='<div class="empty-state"><strong>尚未登记具体人物</strong><p>在人工来源表核对身份后，人物才会出现在这里。</p></div>';
-      return;
+
+  function section(title, note, sectionItems, kind, tab, latestKeys) {
+    let visible = sectionItems;
+    let duplicateCount = 0;
+    if (kind === 'weekly') {
+      duplicateCount = sectionItems.filter(item => latestKeys.has(itemKey(item))).length;
+      visible = sectionItems.filter(item => !latestKeys.has(itemKey(item)));
     }
-    selector.innerHTML=people.map(person=>`<button type="button" data-person="${escape(person.username.toLowerCase())}" aria-pressed="false"><strong>${escape(person.displayName || person.username)}</strong><span>@${escape(person.username)}</span></button>`).join('');
-    const requested=new URLSearchParams(location.search).get('person')?.toLowerCase();
-    let active=people.find(person=>person.username.toLowerCase()===requested) || people[0];
-    selector.addEventListener('click',event=> {
-      const button=event.target.closest('button[data-person]');
-      if (!button) return;
-      active=people.find(person=>person.username.toLowerCase()===button.dataset.person) || active;
-      render(active,posts);
+    return `<section class="signal-section" aria-labelledby="${escape(tab.id)}-${kind}">
+      <header class="signal-section-head">
+        <div><p class="eyebrow">${escape(note)}</p><h3 id="${escape(tab.id)}-${kind}">${escape(title)}</h3></div>
+        <span>${sectionItems.length}/${kind === 'latest' ? tab.latestLimit : tab.weeklyLimit}</span>
+      </header>
+      ${duplicateCount ? `<p class="signal-dedup">本周重点中有 ${duplicateCount} 件已在 24 小时区完整展示，这里不重复铺卡。</p>` : ''}
+      <div class="signal-list">${visible.length ? visible.map(item => renderCard(item, kind === 'weekly' && parseTime(item.publishedAt) >= Date.now() - 86400000 ? '24h 新增' : '')).join('') : (duplicateCount ? '' : emptySection(kind, tab))}</div>
+    </section>`;
+  }
+
+  function renderTab(tab, intelligenceItems) {
+    selector.querySelectorAll('[role="tab"]').forEach(button => {
+      const isActive = button.dataset.tab === tab.id;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-selected', String(isActive));
+      button.tabIndex = isActive ? 0 : -1;
     });
-    render(active,posts);
-  }).catch(()=> {
-    state.textContent='人物资料读取失败';
-    detail.innerHTML='<div class="empty-state"><strong>无法读取人物资料</strong><p>请稍后重试；未使用旧内容或占位发言。</p></div>';
+
+    const now = Date.now();
+    const tabItems = intelligenceItems.filter(item => Array.isArray(item.tabIds) && item.tabIds.includes(tab.id));
+    const sorted = [...tabItems].sort((a, b) => parseTime(b.publishedAt) - parseTime(a.publishedAt));
+    const latest = sorted.filter(item => parseTime(item.publishedAt) >= now - 86400000).slice(0, tab.latestLimit);
+    const rankFor = item => item.weeklyRanks?.[tab.id] ?? item.weeklyRank;
+    const weekly = sorted.filter(item => parseTime(item.publishedAt) >= now - 7 * 86400000 && rankFor(item) != null)
+      .sort((a, b) => Number(rankFor(a)) - Number(rankFor(b))).slice(0, tab.weeklyLimit);
+    const latestKeys = new Set(latest.map(itemKey));
+    const account = tab.handle ? `<a href="https://x.com/${escape(tab.handle)}" target="_blank" rel="noopener noreferrer">@${escape(tab.handle)} ↗</a>` : '<span>来源名单待维护</span>';
+
+    detail.innerHTML = `<header class="person-profile intelligence-profile">
+      <div class="person-avatar" aria-hidden="true">${tab.type === 'collection' ? '合' : escape(tab.label.slice(0, 1))}</div>
+      <div class="profile-copy"><p class="eyebrow">${tab.type === 'collection' ? '合集' : '个人'} Tab</p><h2>${escape(tab.label)}</h2><div class="profile-source">${account}</div><p>${escape(tab.identity)}</p></div>
+      <div class="person-count"><strong>${weekly.length}</strong><span>本周入选事件</span></div>
+    </header>
+    <div class="tab-research-rule">
+      <p><strong>关注范围</strong>${escape(tab.focus)}</p>
+      <p><strong>筛选边界</strong>${escape(tab.sourceRule)}</p>
+    </div>
+    ${section('24 小时新增价值', `最多 ${tab.latestLimit} 条`, latest, 'latest', tab, latestKeys)}
+    ${section('本周最重要五件事', '滚动 7 天 · 最多 5 件', weekly, 'weekly', tab, latestKeys)}`;
+
+    const url = new URL(location.href);
+    url.searchParams.delete('person');
+    url.searchParams.set('tab', tab.id);
+    history.replaceState(null, '', `${url.pathname}?${url.searchParams.toString()}`);
+  }
+
+  let tabs = [];
+  let items = [];
+  let active;
+
+  function activate(tab, focus) {
+    if (!tab) return;
+    active = tab;
+    renderTab(active, items);
+    if (focus) selector.querySelector(`[data-tab="${CSS.escape(tab.id)}"]`)?.focus();
+  }
+
+  selector.addEventListener('click', event => {
+    const button = event.target.closest('[role="tab"]');
+    if (button) activate(tabs.find(tab => tab.id === button.dataset.tab));
   });
+
+  selector.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    const current = Math.max(0, tabs.findIndex(tab => tab.id === active?.id));
+    const index = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (current + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+    activate(tabs[index], true);
+  });
+
+  function load() {
+    return Promise.all([json('config/people-intelligence.json'), json('data/people-intelligence.json')])
+      .then(([config, intelligence]) => {
+        tabs = Array.isArray(config.tabs) ? config.tabs : [];
+        items = Array.isArray(intelligence.items) ? intelligence.items : [];
+        state.textContent = `${tabs.length} 个顶部 Tab · ${items.length} 件已入选事件`;
+        selector.innerHTML = tabs.map(tab => `<button type="button" role="tab" id="tab-${escape(tab.id)}" aria-controls="person-detail" aria-selected="false" tabindex="-1" data-tab="${escape(tab.id)}"><strong>${escape(tab.shortLabel || tab.label)}</strong><span>${tab.type === 'collection' ? `合集 · 24h ≤ ${tab.latestLimit}` : `个人 · 24h ≤ ${tab.latestLimit}`}</span></button>`).join('');
+        if (!tabs.length) {
+          detail.innerHTML = '<div class="empty-state"><strong>尚未配置顶部 Tab</strong><p>请先维护人物情报配置。</p></div>';
+          return;
+        }
+        const query = new URLSearchParams(location.search);
+        const requested = query.get('tab');
+        const legacyPerson = query.get('person')?.toLowerCase();
+        active = tabs.find(tab => tab.id === requested) || tabs.find(tab => tab.handle?.toLowerCase() === legacyPerson) || tabs[0];
+        renderTab(active, items);
+      })
+      .catch(error => {
+        state.textContent = '人物情报读取失败';
+        detail.innerHTML = `<div class="empty-state"><strong>无法读取人物情报</strong><p>${escape(error.message)}</p></div>`;
+      });
+  }
+
+  document.addEventListener('intelbrief:updated', event => { if (event.detail.page === 'people') load(); });
+  load();
 })();
