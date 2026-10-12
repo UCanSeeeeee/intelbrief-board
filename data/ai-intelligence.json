@@ -1,35 +1,58 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T11:45:00.000Z",
-  "cutoff": "2026-10-12T19:25:00+08:00",
+  "updatedAt": "2026-10-12T17:55:00.000Z",
+  "cutoff": "2026-10-13T01:48:52+08:00",
   "source": "X only",
-  "status": "complete",
+  "status": "partial",
   "collectionPath": "grok-bot-x-search",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
         "status": "complete",
-        "note": "2026-10-12 手动：from:OpenAI/sama 近24h无原创；关键词 OpenAI/ChatGPT/Codex 检索。新增广告代理招聘；$50B ARR 报道为前期事件，排除用户评论与预售合约推广。"
+        "note": "2026-10-13 手动：from:OpenAI 近48h 无原创；ARR 口径争议已在美股页收录，本页 0 新增。"
       },
       {
         "id": "anthropic",
         "status": "complete",
-        "note": "2026-10-12 手动：from:AnthropicAI/claudeai 近24h无原创；关键词检索新增评测断网；IREN 合同已在美股讯息收录。"
+        "note": "2026-10-13 手动：官方近窗无新帖；订阅/API 算力结构为三手转述，未达入库门槛；Cyber Mission/行为报告已过近窗。"
       },
       {
         "id": "goog-ai",
         "status": "complete",
-        "note": "2026-10-12 手动：from:GoogleDeepMind/GeminiApp 近24h无原创；关键词检索新增 Gemini Robotics On-Device 2；Gemini 4 Argon/Carbon 发布传闻排除。"
+        "note": "2026-10-13 手动：近24h 无 Gemini/DeepMind 合格新产品事实，0 新增。"
       },
       {
         "id": "ai-others",
         "status": "complete",
-        "note": "2026-10-12 手动：DeepSeek/Moonshot/Mistral/Qwen/政策关键词。新增白宫恢复 AISI 访问、月之暗面 IPO 纠纷；Mistral Large 4 已收录；Reflection Beam 归个股 NVDA。"
+        "note": "2026-10-13 手动：新增微软 Maia 300 主推理系统公告。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "ai-others-msft-maia-300-primary-inference-2026-10-12",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "微软宣布 Maia 300 并将自研硅定为主推理系统",
+      "fact": "@Microsoft / @satyanadella 宣布 Maia 300，并称自下一自然年起将 Maia 系列扩至多吉瓦、作为自家产品与服务主推理系统，宣称相对领先 GPU 系统约 +40% tokens/MW。",
+      "whyItMatters": "大厂推理侧自研硅改变云 AI 成本曲线与对第三方加速器依赖，是 AI 基础设施竞争的关键产品事实。",
+      "counterCase": "能效与 2027 部署进度待验证；训练侧可能仍用 GPU。",
+      "affected": [
+        "Microsoft Azure",
+        "NVIDIA",
+        "自定义加速器赛道"
+      ],
+      "author": "Microsoft",
+      "publishedAt": "2026-10-12T13:16:10.000Z",
+      "url": "https://x.com/Microsoft/status/2109634232163471782",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "ai-others": 1
+      }
+    },
     {
       "eventKey": "ai-others-moonshot-ipo-shareholder-dispute-2026-10-11",
       "tabIds": [
@@ -149,7 +172,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "openai": 1
+        "openai": 2
       }
     },
     {
@@ -171,7 +194,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 2
+        "openai": 1
       }
     },
     {
@@ -194,7 +217,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "anthropic": 1
+        "anthropic": 2
       }
     },
     {
@@ -216,7 +239,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 2
+        "anthropic": 1
       }
     },
     {
@@ -282,7 +305,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "ai-others": 1
+        "ai-others": 2
       }
     },
     {
@@ -305,7 +328,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 2
+        "ai-others": 3
       }
     }
   ]

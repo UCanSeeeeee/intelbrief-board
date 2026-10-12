@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T11:45:00.000Z",
-  "cutoff": "2026-10-12T19:25:00+08:00",
+  "updatedAt": "2026-10-12T17:55:00.000Z",
+  "cutoff": "2026-10-13T01:48:52+08:00",
   "source": "X only",
   "status": "partial",
   "collectionPath": "grok-bot-x-search",
@@ -10,41 +10,85 @@
       {
         "id": "nvda",
         "status": "complete",
-        "note": "2026-10-12 手动：$NVDA/Nvidia 近24h。新增 Reflection AI 加码洽谈与 Beam；排除荐股与 P/S 刷屏。"
+        "note": "2026-10-13 手动：新增 Maia 主推理竞争压力；Reflection AI 已收录不重复；官方 @nvidia 近窗仅柏林 GTC 宣传。"
       },
       {
         "id": "mu",
         "status": "complete",
-        "note": "2026-10-12 手动：$MU/Micron/DRAM 近24h。新增美银 DDR5 合约价；排除 EPS 喊单与 HBM 份额观点帖。"
+        "note": "2026-10-13 手动：$MU/HBM/DRAM 近24h 无独立于已收录合约价/长约叙事的新事实，0 新增。"
       },
       {
         "id": "intc",
         "status": "complete",
-        "note": "2026-10-12 手动：$INTC/Intel/18A/Foundry 近24h。新增 CPU 涨价；Amkor 松岛工厂系列帖为个人观点，排除。"
+        "note": "2026-10-13 手动：CPU 涨价已收录；无 18A/Foundry 新披露，0 新增。"
       },
       {
         "id": "goog",
-        "status": "partial",
-        "note": "2026-10-12 手动：$GOOG/$GOOGL 组合查询近24h，无股权口径合格新增；Gemini 产品动态归 AI 页。仅一轮组合查询。"
+        "status": "complete",
+        "note": "2026-10-13 手动：股权口径近24h 无合格新增；Gemini 产品归 AI 页。"
       },
       {
         "id": "avgo",
-        "status": "partial",
-        "note": "2026-10-12 手动：$AVGO/Broadcom 组合查询近24h，仅 DSP 分配观点帖，无合格新增。"
+        "status": "complete",
+        "note": "2026-10-13 手动：$AVGO 近24h 无订单/指引级新事实，0 新增。"
       },
       {
         "id": "vrt",
-        "status": "partial",
-        "note": "2026-10-12 手动：$VRT/Vertiv 组合查询近24h，无合格新增。"
+        "status": "complete",
+        "note": "2026-10-13 手动：新增印度液冷/Rubin 工厂供电冷却转述。"
       },
       {
         "id": "tsm",
         "status": "complete",
-        "note": "2026-10-12 手动：$TSM/TSMC 近24h。GF 中介层合约已于10/09收录不重复；N2 毛利预览为观点帖，排除；0 新增。"
+        "note": "2026-10-13 手动：Maia 用 N2P 为间接需求线索，已在新闻洞察展开；无台积电官方新指引帖，股权 Tab 0 新增。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "nvda-msft-maia-custom-inference-pressure-2026-10-12",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "微软 Maia 主推理系统对英伟达推理份额构成潜在压力",
+      "fact": "微软 CEO 宣布自下一自然年起以 Maia 作为自家产品主推理系统并推 Maia 300；技术转述指向 TSMC N2P 与 HBM4。",
+      "whyItMatters": "云巨头推理侧自研硅放量是 NVDA 中期份额与定价权的关键反向条件之一。",
+      "counterCase": "训练侧仍可能高度依赖 GPU；2027 前出货与能效未验证。",
+      "affected": [
+        "NVDA",
+        "MSFT"
+      ],
+      "author": "satyanadella",
+      "publishedAt": "2026-10-12T13:03:45.000Z",
+      "url": "https://x.com/satyanadella/status/2109631106404487523",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "nvda": 1
+      }
+    },
+    {
+      "eventKey": "vrt-india-liquid-cooling-rubin-factory-2026-10-12",
+      "tabIds": [
+        "vrt"
+      ],
+      "title": "Vertiv：印度高密液冷与 Rubin 级 AI 工厂供电冷却方案",
+      "fact": "转述称 Vertiv 部署印度首套高密度液冷数据中心基础设施；另有帖称 Visionbay K-1（800V DC、面向 Vera Rubin）由 Vertiv 提供供电与冷却。",
+      "whyItMatters": "机架功率上行时液冷与高压供电是刚需，增强 VRT 在下一代 AI 工厂 BOM 中的可见度。",
+      "counterCase": "缺少官方原帖与合同金额；可能仅为试点或概念合作。",
+      "affected": [
+        "VRT",
+        "AI 数据中心"
+      ],
+      "author": "GovernanceSmart",
+      "publishedAt": "2026-10-12T13:49:40.000Z",
+      "url": "https://x.com/GovernanceSmart/status/2109642660273373637",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "vrt": 1
+      }
+    },
     {
       "eventKey": "mu-ddr5-contract-48-bofa-2026-10-11",
       "tabIds": [
@@ -126,7 +170,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "nvda": 1
+        "nvda": 2
       }
     },
     {
@@ -148,7 +192,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "nvda": 2
+        "nvda": 3
       }
     },
     {
@@ -192,7 +236,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "mu": 2
+        "mu": 3
       }
     },
     {
@@ -214,7 +258,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "mu": 3
+        "mu": 2
       }
     },
     {
@@ -236,7 +280,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "intc": 1
+        "intc": 2
       }
     },
     {
@@ -260,7 +304,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "intc": 2
+        "intc": 1
       }
     },
     {
@@ -283,7 +327,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "goog": 1
+        "goog": 2
       }
     },
     {
@@ -305,7 +349,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog": 2
+        "goog": 1
       }
     },
     {
@@ -372,7 +416,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "vrt": 1
+        "vrt": 3
       }
     },
     {
@@ -438,7 +482,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 2
+        "tsm": 3
       }
     },
     {
@@ -461,7 +505,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "tsm": 3
+        "tsm": 2
       }
     }
   ]

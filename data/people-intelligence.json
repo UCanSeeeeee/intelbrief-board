@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T11:45:00.000Z",
-  "cutoff": "2026-10-12T19:25:00+08:00",
+  "updatedAt": "2026-10-12T17:55:00.000Z",
+  "cutoff": "2026-10-13T01:48:52+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,31 +9,55 @@
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "2026-10-12 手动：from:elonmusk 近24h（10-11T11:30Z 起）13 条原创。新增 Terafab 招募；其余为 Grok Bot 推广、表情与隐私相关帖，排除。"
+        "note": "2026-10-13 手动：from:elonmusk 近24h 10 条原创。Terafab 招募已收录；其余为政治引用、Grok Bot 推广与安全表态，无达标新事实，0 新增。"
       },
       {
         "id": "jensen-huang",
         "status": "complete",
-        "note": "2026-10-12 手动：from:JensenHuang + \"Jensen Huang\" 近24h。仅见 GTC 10/21 主题演讲预告、“没有 Windows 就没有英伟达”等转述与生活类内容，无达标新事实，本次 0 新增。"
+        "note": "2026-10-13 手动：from:JensenHuang 自 10/05 起仅 10/08 与 Nadella 互动旧帖，近24h 无原创，0 新增。"
       },
       {
         "id": "donald-trump",
         "status": "complete",
-        "note": "2026-10-12 手动：from:TrumpDailyPosts/POTUS/WhiteHouse 近24h。新增贝森特对伊朗孤立行动；能源停火已收录；新闻秘书更替、哥伦布日、政治口水排除。"
+        "note": "2026-10-13 手动：from:TrumpDailyPosts 近24h。能源停火民调/哥伦布日/政治口水为主；无可执行贸易/出口管制/财政新政策，0 新增。"
       },
       {
         "id": "trillion-leaders",
         "status": "partial",
-        "note": "2026-10-12 手动：查 satyanadella/sundarpichai/tim_cook/ajassy/finkd/MSFTCFO/LisaSu 近7日原创，结果均为已收录或仪式性帖（国家科学奖章致谢等），无新增。仅查本人账号，未补查其他高管与媒体转述。"
+        "note": "2026-10-13 手动：覆盖 satyanadella Maia 300 公告并入库；未穷尽全部万亿公司高管账号与媒体转述。"
       },
       {
         "id": "research-reports",
-        "status": "partial",
-        "note": "2026-10-12 手动：查主要投行对英伟达/美光/台积电/博通/存储的评级与目标价变化，返回 2 条无关期权推广帖，无合格新增；检索面窄，标为部分覆盖。"
+        "status": "insufficient",
+        "note": "2026-10-13 手动：投行评级/假设变化检索面窄，未见可回查的盈利预测或供需假设实质新变化；标证据不足。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "satya-maia-300-primary-inference-2026-10-12",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "纳德拉：Maia 将成为微软主推理系统并推 Maia 300",
+      "fact": "@satyanadella 宣布微软加大自研硅押注，自下一自然年起将 Maia 扩至多吉瓦部署并作为自家产品与服务的主推理系统，同时推出 Maia 300（称相对领先 GPU 系统每兆瓦多约 40% 推理 token）。",
+      "whyItMatters": "万亿市值云厂商把推理负载迁到自研硅，会改变对英伟达 GPU 的增量需求，并牵动 TSMC/HBM 产能分配。",
+      "counterCase": "若 2027 部署延后或能效未达承诺，对 GPU 份额冲击有限。",
+      "affected": [
+        "MSFT",
+        "NVDA",
+        "TSMC",
+        "HBM"
+      ],
+      "author": "satyanadella",
+      "publishedAt": "2026-10-12T13:03:45.000Z",
+      "url": "https://x.com/satyanadella/status/2109631106404487523",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "trillion-leaders": 1
+      }
+    },
     {
       "eventKey": "trump-bessent-iran-isolation-campaign-2026-10-11",
       "tabIds": [
@@ -95,7 +119,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "donald-trump": 4
+        "donald-trump": 1
       }
     },
     {
@@ -117,7 +141,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "donald-trump": 1
+        "donald-trump": 2
       }
     },
     {
@@ -162,7 +186,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "elon-musk": 4
+        "elon-musk": 2
       }
     },
     {
@@ -204,7 +228,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "elon-musk": 2
+        "elon-musk": 3
       }
     },
     {
@@ -226,7 +250,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "elon-musk": 3
+        "elon-musk": 4
       }
     },
     {
@@ -248,7 +272,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "trillion-leaders": 4
+        "trillion-leaders": 2
       }
     },
     {
@@ -358,7 +382,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "trillion-leaders": 2
+        "trillion-leaders": 4
       }
     },
     {
@@ -381,7 +405,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "trillion-leaders": 1
+        "trillion-leaders": 5
       }
     },
     {
@@ -403,7 +427,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "research-reports": 3
+        "research-reports": 1
       }
     },
     {
@@ -425,7 +449,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "research-reports": 5
+        "research-reports": 2
       }
     },
     {
@@ -447,7 +471,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "donald-trump": 2
+        "donald-trump": 3
       }
     },
     {
@@ -469,7 +493,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "donald-trump": 3
+        "donald-trump": 4
       }
     },
     {
@@ -513,7 +537,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "research-reports": 1
+        "research-reports": 3
       }
     },
     {
@@ -557,7 +581,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "research-reports": 2
+        "research-reports": 5
       }
     },
     {
@@ -619,9 +643,7 @@
       "url": "https://x.com/Google/status/2103239433809961276",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {
-        "trillion-leaders": 5
-      }
+      "weeklyRanks": {}
     },
     {
       "eventKey": "amazon-custom-silicon-decade-2026-09-24",

@@ -1,30 +1,73 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T11:45:00.000Z",
-  "cutoff": "2026-10-12T19:25:00+08:00",
+  "updatedAt": "2026-10-12T17:55:00.000Z",
+  "cutoff": "2026-10-13T01:48:52+08:00",
   "source": "X only",
-  "status": "complete",
+  "status": "partial",
   "collectionPath": "grok-bot-x-search",
   "coverage": {
     "tabs": [
       {
         "id": "crypto-board",
         "status": "complete",
-        "note": "2026-10-12 手动：bitcoin/crypto × ETF/SEC/监管/交易所/资金流/黑客 近24h + 新闻账号。新增 Ledger 植入事件、Kraken 阿联酋批准；排除行情日报。"
+        "note": "2026-10-13 手动：新增泰国 ETF 规则生效日转述；Ledger/Kraken 已收录不重复。"
       },
       {
         "id": "btc",
         "status": "complete",
-        "note": "2026-10-12 手动：BTC ETF 周度净流出约 6.81 亿美元与已收录 679M 为同一事件，不重复；其余为价格日报，0 新增。"
+        "note": "2026-10-13 手动：新增 ETF 流入降温/流出汇总转述；与上周 6.8 亿周流出相关但口径不同故单列并标注转述。"
       },
       {
         "id": "brew",
         "status": "complete",
-        "note": "2026-10-12 手动：7日窗口 $BREW/合约/Brew token。仍为喊单与上所幻想帖，无达标事实，0 新增。"
+        "note": "2026-10-13 手动：7 日 $BREW/Brew 检索仍为喊单与上所幻想，无合同/审计/监管级事实，0 新增。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "btc-etf-cooling-after-sept-inflows-2026-10-12",
+      "tabIds": [
+        "btc"
+      ],
+      "title": "转述：9 月大额流入后 BTC/ETH ETF 转为净流出",
+      "fact": "转述称 9 月比特币 ETF 约 30 亿美元流入后机构降温：ETH ETF 连续约 9 日流出（7 日约 6.35 亿美元），BTC ETF 同期流出约 5.58 亿美元，稳定币供给仍约 3127 亿美元。",
+      "whyItMatters": "ETF 边际资金方向影响 BTC 价格发现；流出是否持续需对照官方每日数据。",
+      "counterCase": "单一汇总帖可能口径不一；若后续重新流入则“降温”叙事失效。",
+      "affected": [
+        "BTC",
+        "ETH",
+        "现货加密 ETF"
+      ],
+      "author": "AskClash",
+      "publishedAt": "2026-10-12T03:45:00.000Z",
+      "url": "https://x.com/AskClash/status/2109490491578630419",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "btc": 1
+      }
+    },
+    {
+      "eventKey": "crypto-board-thailand-etf-rules-effective-2026-10-16",
+      "tabIds": [
+        "crypto-board"
+      ],
+      "title": "转述：泰国本地加密 ETF 规则将于 10/16 生效",
+      "fact": "窗口内转述泰国 SEC 已敲定本地上市加密 ETF 框架，自 2026-10-16 生效，但并非所有产品对零售全面开放。",
+      "whyItMatters": "新兴市场现货 ETF 通道影响区域配置与合规产品供给，但细节限制决定实际增量。",
+      "counterCase": "若零售准入极窄或尚无发行人申报，则生效日本身难带来即时资金流。",
+      "affected": [
+        "BTC/ETH 区域 ETF",
+        "泰国资管"
+      ],
+      "author": "ANCrypto_",
+      "publishedAt": "2026-10-12T14:22:13.000Z",
+      "url": "https://x.com/ANCrypto_/status/2109650853594558807",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
     {
       "eventKey": "crypto-board-kraken-uae-approval-2026-10-12",
       "tabIds": [
@@ -44,7 +87,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "crypto-board": 3
+        "crypto-board": 2
       }
     },
     {
@@ -88,7 +131,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "crypto-board": 2
+        "crypto-board": 3
       }
     },
     {
@@ -132,7 +175,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "btc": 1
+        "btc": 4
       }
     },
     {
@@ -154,7 +197,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "btc": 2
+        "btc": 3
       }
     },
     {
@@ -176,7 +219,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "btc": 3
+        "btc": 2
       }
     }
   ]
