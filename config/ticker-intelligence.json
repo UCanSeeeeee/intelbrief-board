@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "researchPriorities": [
+    "半导体",
+    "电力",
+    "AI 落地"
+  ],
+  "tabs": [
+    {
+      "id": "nvda",
+      "label": "NVDA",
+      "shortLabel": "NVDA",
+      "type": "ticker",
+      "identity": "NVIDIA Corporation",
+      "symbol": "NVDA",
+      "cashtag": "$NVDA",
+      "handle": "nvidia",
+      "handles": [
+        "nvidia"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "GPU/平台节奏、CUDA 与软件生态、供需与客户资本开支、数据中心与网络系统",
+      "sourceRule": "以 cashtag $NVDA、公司名 NVIDIA 及官方账号 @nvidia 为检索锚点；只收可回查 X 原帖中的新增事实（产品、供需、客户采用、软件支持）。排除纯喊单、目标价刷屏与无实质内容的重复转述。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "mu",
+      "label": "MU",
+      "shortLabel": "MU",
+      "type": "ticker",
+      "identity": "Micron Technology",
+      "symbol": "MU",
+      "cashtag": "$MU",
+      "handle": "MicronTech",
+      "handles": [
+        "MicronTech"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "HBM/DRAM/NAND 供需、产能与长约、毛利与指引、供应链与劳工风险",
+      "sourceRule": "以 $MU、Micron 及 @MicronTech 为锚点；优先可核验的产能、价格、长约与供应缺口事实。排除无假设变化的评级复读。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "intc",
+      "label": "INTC",
+      "shortLabel": "INTC",
+      "type": "ticker",
+      "identity": "Intel Corporation",
+      "symbol": "INTC",
+      "cashtag": "$INTC",
+      "handle": "intel",
+      "handles": [
+        "intel"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "18A/先进制程与封装进度、Foundry 外部客户、AI 加速与代工经济学",
+      "sourceRule": "以 $INTC、Intel 及 @intel 为锚点；只收可回查的制程、封装、客户与收入事实。未证实传闻须标证据缺口，不得写成已签约事实。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "goog",
+      "label": "GOOG",
+      "shortLabel": "GOOG",
+      "type": "ticker",
+      "identity": "Alphabet Inc. (Google)",
+      "symbol": "GOOG",
+      "cashtag": "$GOOG",
+      "handle": "Google",
+      "handles": [
+        "Google",
+        "Alphabet"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "Gemini 产品与变现、TPU/自研芯、Google Cloud 与资本开支、AI 基础设施约束",
+      "sourceRule": "以 $GOOG/$GOOGL、Alphabet/Google 及官方账号为锚点；优先产品策略、capex、云与自研芯的新增事实。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "avgo",
+      "label": "AVGO",
+      "shortLabel": "AVGO",
+      "type": "ticker",
+      "identity": "Broadcom Inc.",
+      "symbol": "AVGO",
+      "cashtag": "$AVGO",
+      "handle": "Broadcom",
+      "handles": [
+        "Broadcom"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "定制 ASIC、以太网交换与光互联、AI 集群网络、客户长约",
+      "sourceRule": "以 $AVGO、Broadcom 及 @Broadcom 为锚点；优先交换机/ASIC 出货、客户与产能事实，排除空洞多空口号。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "vrt",
+      "label": "VRT",
+      "shortLabel": "VRT",
+      "type": "ticker",
+      "identity": "Vertiv Holdings Co",
+      "symbol": "VRT",
+      "cashtag": "$VRT",
+      "handle": "Vertiv",
+      "handles": [
+        "Vertiv",
+        "VertivAP"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "数据中心电力与液冷、单 MW 内容量、订单与产品节奏",
+      "sourceRule": "以 $VRT、Vertiv 及官方账号为锚点；优先冷却/电力产品、订单与可核验研报假设变化。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "tsm",
+      "label": "TSM",
+      "shortLabel": "TSM",
+      "type": "ticker",
+      "identity": "Taiwan Semiconductor Manufacturing (TSMC)",
+      "symbol": "TSM",
+      "cashtag": "$TSM",
+      "handle": "tsmc_news",
+      "handles": [
+        "tsmc_news"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "先进制程与 CoWoS/先进封装产能、月营收与指引、资本开支、客户锁定",
+      "sourceRule": "以 $TSM、TSMC 及可回查官方/权威转述为锚点；优先营收、产能、封装与客户事实。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "btc",
+      "label": "BTC",
+      "shortLabel": "BTC",
+      "type": "ticker",
+      "assetClass": "crypto",
+      "identity": "Bitcoin",
+      "symbol": "BTC",
+      "cashtag": "$BTC",
+      "handle": null,
+      "handles": [],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "供需与矿工/哈希、ETF 与机构资金流、监管与宏观传导、与 AI/电力/半导体相关的交叉事实",
+      "sourceRule": "以 cashtag $BTC、Bitcoin 关键词为检索锚点；只收可回查 X 原帖中的新增事实（ETF 流量、监管动作、矿工/电力、宏观传导）。排除纯喊单、目标价刷屏。本 Tab 为加密资产，非 Nasdaq 股票。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "brew",
+      "label": "Brew",
+      "shortLabel": "Brew",
+      "type": "ticker",
+      "assetClass": "crypto-token",
+      "identity": "Brew token",
+      "symbol": "BREW",
+      "cashtag": "$BREW",
+      "contractAddress": "0xfa6d9b504848606eb9aec04ccc161d169b3f2159",
+      "handle": null,
+      "handles": [],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "协议/代币新增事实、流动性与上市动态、与 AI 或相关生态交叉、可核验链上或官方声明",
+      "sourceRule": "以代币名 Brew、$BREW 及合约地址 0xfa6d9b504848606eb9aec04ccc161d169b3f2159 为检索锚点；只收可回查 X 原帖。本 Tab 为加密代币（非 Nasdaq 股票）；合约地址可作检索与核验线索，不得编造链上数据。排除无实质内容的喊单与刷屏。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    }
+  ],
+  "updatedAt": "2026-10-12T10:45:00+08:00",
+  "notes": "个股/标的 Tab 规则对齐具体人物个人 Tab：latest 最多 5 条（滚动 24h），重点榜最多 5 条（滚动 7 天）。信息来源与人物页相同：仅 Grok Bot App「X+github」→ 失败才用 Grok 网页；禁止 X API / 普通网页搜讯。股权标的以 cashtag + 公司名 + 官方账号为锚点；BTC 以 $BTC/Bitcoin 为锚点；Brew 为加密代币 Tab（非 Nasdaq），另允许按合约地址检索。"
+}

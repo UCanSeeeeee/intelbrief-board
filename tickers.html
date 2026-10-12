@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>具体个股 — 美股情报</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="tickers">
+  <button class="menu-toggle" type="button" aria-label="菜单">☰</button>
+  <div class="overlay"></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">美股情报</div></div>
+      <nav class="nav" aria-label="侧边栏 Tab">
+        <a href="index.html" data-nav="news"><span class="nav-icon">▣</span> 美股讯息</a>
+        <a href="people.html" data-nav="people"><span class="nav-icon">◎</span> 具体人物</a>
+        <a href="tickers.html" data-nav="tickers"><span class="nav-icon">◇</span> 具体个股</a>
+        <a href="earnings.html" data-nav="earnings"><span class="nav-icon">▤</span> 财报日历</a>
+      </nav>
+      <div class="sidebar-footer">个股与加密标的只收可回查的 X 证据<br />不拿喊单和重复转述凑数</div>
+    </aside>
+    <main class="main wide">
+      <header class="page-header">
+        <h1>具体个股</h1>
+        <p class="subtitle">追踪重点股权与加密标的的新增事实，规则对齐具体人物；只保留可核验且有传导的内容。</p>
+        <div class="meta"><span class="badge"><span class="badge-dot"></span> X only</span><span id="tickers-state" aria-live="polite">正在读取个股资料…</span></div>
+      </header>
+      <div id="tickers-selector" class="people-selector tickers-selector" role="tablist" aria-label="具体个股顶部 Tab"></div>
+      <section id="ticker-detail" class="person-detail ticker-detail" aria-live="polite"></section>
+      <p class="disclaimer">事实、发言者观点与模型判断分开；BTC/Brew 等加密标的同样只收可回查 X 证据，不编造链上数据。</p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+  <script src="tickers.js"></script>
+  <script src="updates.js"></script>
+</body>
+</html>

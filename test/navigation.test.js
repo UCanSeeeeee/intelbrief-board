@@ -5,11 +5,11 @@ const path = require('node:path');
 
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 
-test('primary pages expose news, people, and bottom earnings tabs', () => {
-  for (const file of ['index.html', 'people.html', 'earnings.html']) {
+test('primary pages expose news, people, tickers, and earnings tabs', () => {
+  for (const file of ['index.html', 'people.html', 'tickers.html', 'earnings.html']) {
     const html = read(file);
     const items = [...html.matchAll(/<a href="([^"]+)" data-nav="([^"]+)"/g)].map(match => match.slice(1));
-    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['earnings.html', 'earnings']]);
+    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['earnings.html', 'earnings']]);
     assert.doesNotMatch(html, /X 情报总览|来源与评分|data-stock-tab/);
   }
   assert.doesNotMatch(read('index.html'), /role="tab"/);
@@ -46,4 +46,20 @@ test('legacy public routes lead to the new information architecture', () => {
   assert.equal(fs.existsSync(path.join(__dirname, '..', 'sources.html')), false);
   assert.match(read('_worker.js'), /'\/stocks\.html': '\/index\.html'/);
   assert.match(read('_worker.js'), /'\/sources\.html': '\/index\.html'/);
+});
+
+test('tickers page mirrors people windows and seeds required symbols including BTC and Brew', () => {
+  const config = JSON.parse(read('config/ticker-intelligence.json'));
+  assert.deepEqual(config.tabs.map(tab => tab.id), ['nvda', 'mu', 'intc', 'goog', 'avgo', 'vrt', 'tsm', 'btc', 'brew']);
+  assert.ok(config.tabs.every(tab => tab.latestLimit === 5 && tab.weeklyLimit === 5 && tab.latestWindowDays === 1 && tab.weeklyWindowDays === 7));
+  const brew = config.tabs.find(tab => tab.id === 'brew');
+  assert.equal(brew.assetClass, 'crypto-token');
+  assert.equal(brew.contractAddress.toLowerCase(), '0xfa6d9b504848606eb9aec04ccc161d169b3f2159');
+  const btc = config.tabs.find(tab => tab.id === 'btc');
+  assert.equal(btc.assetClass, 'crypto');
+  const html = read('tickers.html');
+  assert.match(html, /data-page="tickers"/);
+  assert.match(html, /id="tickers-selector"/);
+  assert.match(html, /id="ticker-detail"/);
+  assert.match(read('tickers.js'), /ticker-intelligence\.json/);
 });

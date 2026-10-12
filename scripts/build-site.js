@@ -5,8 +5,8 @@ const path=require('node:path');
 const root=path.resolve(__dirname,'..'), output=path.join(root,'dist');
 fs.mkdirSync(output,{recursive:true});
 for(const entry of fs.readdirSync(output)) fs.rmSync(path.join(output,entry),{recursive:true,force:true});
-for(const file of ['index.html','people.html','earnings.html','app.js','briefs.js','people.js','earnings.js','updates.js','styles.css','_worker.js','_routes.json']) fs.copyFileSync(path.join(root,file),path.join(output,file));
-for(const file of ['config/stock-brief.json','config/people-intelligence.json','config/earnings-calendar.json','sources/x-sources.json','data/x-intelligence.json','data/people-intelligence.json','data/earnings-calendar.json','server/updates.mjs']) {
+for(const file of ['index.html','people.html','tickers.html','earnings.html','app.js','briefs.js','people.js','tickers.js','earnings.js','updates.js','styles.css','_worker.js','_routes.json']) fs.copyFileSync(path.join(root,file),path.join(output,file));
+for(const file of ['config/stock-brief.json','config/people-intelligence.json','config/ticker-intelligence.json','config/earnings-calendar.json','sources/x-sources.json','data/x-intelligence.json','data/people-intelligence.json','data/ticker-intelligence.json','data/earnings-calendar.json','server/updates.mjs']) {
   fs.mkdirSync(path.dirname(path.join(output,file)),{recursive:true});fs.copyFileSync(path.join(root,file),path.join(output,file));
 }
 for(const dir of ['data/stock-briefs','data/update-receipts']) if(fs.existsSync(path.join(root,dir))) fs.cpSync(path.join(root,dir),path.join(output,dir),{recursive:true});

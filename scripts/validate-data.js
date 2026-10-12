@@ -69,6 +69,33 @@ for (const tab of peopleTabs.values()) {
   if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
 }
 
+
+const tickerConfig = readJson(path.join(ROOT, 'config/ticker-intelligence.json'));
+const tickerData = readJson(path.join(ROOT, 'data/ticker-intelligence.json'));
+const tickerTabs = new Map((tickerConfig.tabs || []).map(tab => [tab.id, tab]));
+const tickerKeys = new Set();
+const tickerUrls = new Set();
+for (const [index, item] of (tickerData.items || []).entries()) {
+  if (!item.eventKey || tickerKeys.has(item.eventKey)) fail(`tickers.items[${index}] invalid or duplicate eventKey`);
+  tickerKeys.add(item.eventKey);
+  if (!Array.isArray(item.tabIds) || !item.tabIds.length || item.tabIds.some(id => !tickerTabs.has(id))) fail(`tickers.items[${index}] invalid tabIds`);
+  if (!/^https:\/\/(?:x|twitter)\.com\/[a-zA-Z0-9_]{1,15}\/status\/\d+$/.test(item.url || '') || tickerUrls.has(item.url)) fail(`tickers.items[${index}] invalid or duplicate X evidence`);
+  tickerUrls.add(item.url);
+  if (Number.isNaN(Date.parse(item.publishedAt))) fail(`tickers.items[${index}] invalid publishedAt`);
+  if (item.verification !== 'collector-report') fail(`tickers.items[${index}] must retain collector-report verification`);
+  for (const [tabId, rank] of Object.entries(item.weeklyRanks || {})) if (!item.tabIds.includes(tabId) || !Number.isInteger(rank) || rank < 1 || rank > 5) fail(`tickers.items[${index}] invalid weekly rank`);
+}
+const tickerReference = tickerData.cutoff ? Date.parse(tickerData.cutoff) : Date.now();
+for (const tab of tickerTabs.values()) {
+  const tabItems = (tickerData.items || []).filter(item => item.tabIds.includes(tab.id));
+  if (tabItems.filter(item => Date.parse(item.publishedAt) >= tickerReference - 86400000).length > tab.latestLimit) fail(`${tab.label} exceeds latestLimit`);
+  const ranks = tabItems.map(item => item.weeklyRanks?.[tab.id]).filter(rank => rank != null);
+  if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
+}
+const brew = tickerTabs.get('brew');
+if (!brew || brew.assetClass !== 'crypto-token' || !/^0x[a-fA-F0-9]{40}$/.test(brew.contractAddress || '')) fail('brew tab must be crypto-token with valid contractAddress');
+if (!tickerTabs.get('btc') || tickerTabs.get('btc').assetClass !== 'crypto') fail('btc tab must be crypto assetClass');
+
 const guidance = readJson(path.join(ROOT, 'config/research-guidance.json'));
 if (JSON.stringify(guidance.priorityOrder) !== JSON.stringify(['半导体','电力','AI 落地'])) fail('research guidance priority order changed unexpectedly');
 for (const key of ['knowledgeBase','collectionSop']) {
@@ -126,6 +153,7 @@ if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);
   console.log(`[validate-data] OK: ${peopleTabs.size} people tabs, ${eventKeys.size} selected events`);
+  console.log(`[validate-data] OK: ${tickerTabs.size} ticker tabs, ${tickerKeys.size} selected events`);
   console.log('[validate-data] OK: project research knowledge and Grok SOP');
   console.log(`[validate-data] OK: earnings calendar ${earnings.weeks?.length||0} weeks, ${earnings.counts?.important||0} important / ${earnings.counts?.raw||0} raw`);
 }

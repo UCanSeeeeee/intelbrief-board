@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-12T02:45:00.000Z",
+  "cutoff": "2026-10-12T10:45:00+08:00",
+  "source": "X only",
+  "status": "complete",
+  "collectionPath": "grok-app",
+  "coverage": {
+    "tabs": [
+      {
+        "id": "nvda",
+        "status": "complete",
+        "note": "检索 $NVDA/NVIDIA/GPU|HBM|Blackwell；入选 vLLM Rubin 支持与 Surface RTX Spark。排除喊单与无关算力股刷屏。"
+      },
+      {
+        "id": "mu",
+        "status": "complete",
+        "note": "检索 $MU/Micron/HBM；入选 Nomura LTA 结构、JPM 紧平衡至 CY28、台湾罢工授权。排除纯目标价刷屏。"
+      },
+      {
+        "id": "intc",
+        "status": "complete",
+        "note": "检索 $INTC/Intel/18A|foundry；入选 18A HVM/外部收入与 Jeff Pu 封装客户预期。排除未证实 Apple 传闻入选。"
+      },
+      {
+        "id": "goog",
+        "status": "complete",
+        "note": "检索 $GOOG/$GOOGL/Gemini|TPU|capex；入选 ~$200B capex 讨论与免费 Gemini 分层调整。"
+      },
+      {
+        "id": "avgo",
+        "status": "complete",
+        "note": "检索 $AVGO/Broadcom/Tomahawk|ASIC；入选 Tomahawk 6 出货与 Anthropic 租赁支持转述。"
+      },
+      {
+        "id": "vrt",
+        "status": "complete",
+        "note": "检索 $VRT/Vertiv/cooling|power；入选 BMO 覆盖与官方 CoolChip CDU 规格。"
+      },
+      {
+        "id": "tsm",
+        "status": "complete",
+        "note": "检索 $TSM/TSMC/CoWoS|营收；入选 10/15 电话会预告、9 月营收转述、GF 中介层协议。"
+      },
+      {
+        "id": "btc",
+        "status": "complete",
+        "note": "检索 $BTC/Bitcoin/ETF|regulation；入选 10/6 ETF 净流入与泰国加密 ETF 规则。排除纯行情口号。"
+      },
+      {
+        "id": "brew",
+        "status": "complete",
+        "note": "检索 Brew/$BREW/合约 0xfa6d9b504848606eb9aec04ccc161d169b3f2159。窗口内多为促销喊单，无达到门槛的新增事实，items=0，未凑数。"
+      }
+    ]
+  },
+  "items": [
+    {
+      "eventKey": "nvda-vllm-vera-rubin-nvl72-2026-10-09",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "vLLM 宣布支持 NVIDIA Vera Rubin NVL72",
+      "fact": "@eltc9584 称 vLLM 于 10 月 9 日宣布支持 NVIDIA Vera Rubin NVL72，Rubin 属 Blackwell 家族，既有 Blackwell 内核可直接跑，并提到 DeepSeek/Kimi/GLM/MiniMax 等模型可服务。",
+      "whyItMatters": "软件栈提前适配下一代机架级 GPU，影响 NVDA 平台锁定、推理吞吐叙事与客户迁移节奏。",
+      "counterCase": "属第三方转述；需核对 vLLM 官方发布与 Rubin 真实上市时间表。",
+      "affected": [
+        "NVDA",
+        "推理软件生态"
+      ],
+      "author": "eltc9584",
+      "publishedAt": "2026-10-11T13:51:18.000Z",
+      "url": "https://x.com/eltc9584/status/2109280686997754000",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "nvda": 1
+      }
+    },
+    {
+      "eventKey": "nvda-surface-laptop-ultra-rtx-spark-2026-10-07",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "微软 Surface Laptop Ultra 搭载 NVIDIA RTX Spark",
+      "fact": "@DigitalTrends 报道微软正式推出 Surface Laptop Ultra：NVIDIA RTX Spark（Grace CPU + Blackwell GPU，最高约 6144 核、128GB 统一内存），起价约 $2599，号称可本机跑约 120B 参数模型。",
+      "whyItMatters": "把 Blackwell/CUDA 扩展到消费与创作者笔记本，强化端侧 AI 与 CUDA 生态渗透。",
+      "counterCase": "出货量与真实 AI 负载占比未明；可能偏营销规格。",
+      "affected": [
+        "NVDA",
+        "端侧 AI PC"
+      ],
+      "author": "DigitalTrends",
+      "publishedAt": "2026-10-07T18:30:24.000Z",
+      "url": "https://x.com/DigitalTrends/status/2107901370607259816",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "nvda": 2
+      }
+    },
+    {
+      "eventKey": "mu-nomura-lta-supercycle-2026-10-11",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "Nomura：韩厂长约占比高，Micron 现货杠杆更大",
+      "fact": "@BrettSwingLog 转述 Nomura 对存储超级周期：韩厂 50–70% 产能锁定带价格上限的 LTA 至 2026Q3，相对之下 Micron 现货/合同结构不同，影响 2027 周期弹性。",
+      "whyItMatters": "长约与现货敞口差异会改变 MU 相对同行的涨价弹性与盈利上行空间。",
+      "counterCase": "为券商二手转述，未独立核验 Nomura 原文；LTA 细节可能过时。",
+      "affected": [
+        "MU",
+        "HBM/DRAM"
+      ],
+      "author": "BrettSwingLog",
+      "publishedAt": "2026-10-11T13:07:16.000Z",
+      "url": "https://x.com/BrettSwingLog/status/2109269604522713398",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "mu": 1
+      }
+    },
+    {
+      "eventKey": "mu-jpm-memory-tight-through-cy28-2026-10-06",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "JPMorgan：存储紧平衡或延至 CY28",
+      "fact": "@RealNickMugalli 转述 J.P. Morgan Memory Market Update：在 Micron 财报读数后，认为供应紧张可能延伸至 CY28，尚无供需再平衡能见度。",
+      "whyItMatters": "若紧平衡拉长，支撑 HBM/DRAM 价格与 MU 盈利预期，但也提高周期顶点误判风险。",
+      "counterCase": "投行观点；实际扩产与客户砍单可打断叙事。",
+      "affected": [
+        "MU",
+        "存储产业链"
+      ],
+      "author": "RealNickMugalli",
+      "publishedAt": "2026-10-06T10:05:02.000Z",
+      "url": "https://x.com/RealNickMugalli/status/2107411805190426707",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "mu": 2
+      }
+    },
+    {
+      "eventKey": "mu-taiwan-strike-authorize-2026-10-07",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "Micron 台湾员工投票授权罢工",
+      "fact": "@ShaliniRaoSays 称 Micron 台湾员工就利润分享争议，约 99% 投票授权罢工，可能加剧 DRAM/HBM 供应压力。",
+      "whyItMatters": "劳工中断是存储供给的额外尾部风险，短期可影响交期与现货价格。",
+      "counterCase": "授权罢工不等于立即停工；需跟踪实际行动与协商结果。",
+      "affected": [
+        "MU",
+        "存储供给"
+      ],
+      "author": "ShaliniRaoSays",
+      "publishedAt": "2026-10-07T16:05:40.000Z",
+      "url": "https://x.com/ShaliniRaoSays/status/2107864947032232075",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "mu": 3
+      }
+    },
+    {
+      "eventKey": "intc-18a-hvm-foundry-revenue-2026-10-05",
+      "tabIds": [
+        "intc"
+      ],
+      "title": "报道称 Intel 18A 进入量产，外部 Foundry 收入仍低",
+      "fact": "@FINANCIERNEWS 称 Intel 18A 已进入高产能制造、18A-P 进入 risk production，但 Q2 外部 Foundry 收入仅约 $293M。",
+      "whyItMatters": "制程节点进度与外部客户变现是 Foundry 估值核心；量产不等于外部订单兑现。",
+      "counterCase": "媒体转述；需对照公司财报与客户公告核实数字与节点定义。",
+      "affected": [
+        "INTC",
+        "Foundry"
+      ],
+      "author": "FINANCIERNEWS",
+      "publishedAt": "2026-10-05T21:35:43.000Z",
+      "url": "https://x.com/FINANCIERNEWS/status/2107223234035003557",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "intc": 1
+      }
+    },
+    {
+      "eventKey": "intc-jeff-pu-emib-aws-google-2026-10-09",
+      "tabIds": [
+        "intc"
+      ],
+      "title": "分析师勾勒 Intel 封装路线：潜在 AWS/谷歌客户",
+      "fact": "@imnotharsh 转述 GF Securities Jeff Pu：Intel 先进封装/Foundry 路线图中，预期明年初推进 AWS Trainium 3，下半年涉及 Google TPU 与高通 CPU，并提到 18A-P。",
+      "whyItMatters": "若外部 AI 客户落地，将验证 Foundry/封装收入路径，改善市场对 INTC 代工叙事的定价。",
+      "counterCase": "分析师预期而非已签约公告；时间表与客户可能变动。",
+      "affected": [
+        "INTC",
+        "先进封装",
+        "AWS",
+        "Google"
+      ],
+      "author": "imnotharsh",
+      "publishedAt": "2026-10-09T11:27:04.000Z",
+      "url": "https://x.com/imnotharsh/status/2108519611956068425",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "intc": 2
+      }
+    },
+    {
+      "eventKey": "goog-200b-capex-2026e-sonya-2026-10-06",
+      "tabIds": [
+        "goog"
+      ],
+      "title": "报道称 Google 2026E 资本开支约 2000 亿美元量级",
+      "fact": "@sonyatweetybird 写道 AI 基建扩张中，@Google 单独预测 2026E 资本开支约 $200B，并引出对系统级约束的讨论。",
+      "whyItMatters": "超高 capex 同时支撑云/TPU 需求叙事与自由现金流、折旧压力，是 Alphabet 估值核心变量。",
+      "counterCase": "为预测口径；需对照公司指引与实际季度 capex。",
+      "affected": [
+        "GOOG",
+        "AI 基础设施",
+        "电力与设备链"
+      ],
+      "author": "sonyatweetybird",
+      "publishedAt": "2026-10-06T16:30:34.000Z",
+      "url": "https://x.com/sonyatweetybird/status/2107508826442481849",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "goog": 1
+      }
+    },
+    {
+      "eventKey": "goog-gemini-free-tier-auto-2026-10-09",
+      "tabIds": [
+        "goog"
+      ],
+      "title": "免费用户 Gemini Pro 调整为 Auto/Flash-Lite",
+      "fact": "@Granvestor 称自 10 月 9 日起免费 Gemini 走 Auto，多数提示落到 Flash-Lite；Pro/Deep Think 更多放到付费档，并联系 Q2 高额 capex。",
+      "whyItMatters": "产品分层影响推理成本、付费转化与云毛利，是 AI 落地变现的直接观测点。",
+      "counterCase": "地区/账号策略可能不一致；需官方帮助文档核对。",
+      "affected": [
+        "GOOG",
+        "Gemini 变现"
+      ],
+      "author": "Granvestor",
+      "publishedAt": "2026-10-10T14:41:24.000Z",
+      "url": "https://x.com/Granvestor/status/2108930905725166076",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "goog": 2
+      }
+    },
+    {
+      "eventKey": "avgo-tomahawk6-1024t-shipping-2026-10-11",
+      "tabIds": [
+        "avgo"
+      ],
+      "title": "Tomahawk 6 宣称 102.4 Tb/s 并已量产出货",
+      "fact": "@BTC_Chopsticks 称 Broadcom Tomahawk 6 交换容量 102.4 Tb/s（约为 Tomahawk 5 的两倍），并称已进入生产出货；OCP 预览涉交换机、网卡等。",
+      "whyItMatters": "AI 集群规模扩大后网络成为瓶颈；交换芯片出货直接挂钩 AVGO AI 网络收入。",
+      "counterCase": "第三方解读；需对照 Broadcom/OCP 官方材料核实出货状态。",
+      "affected": [
+        "AVGO",
+        "AI 网络"
+      ],
+      "author": "BTC_Chopsticks",
+      "publishedAt": "2026-10-11T18:57:56.000Z",
+      "url": "https://x.com/BTC_Chopsticks/status/2109357852070723838",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "avgo": 1
+      }
+    },
+    {
+      "eventKey": "avgo-anthropic-chip-lease-42b-2026-10-07",
+      "tabIds": [
+        "avgo"
+      ],
+      "title": "转述：Broadcom 或为 Anthropic 芯片租赁提供至多约 420 亿美元支持",
+      "fact": "@thatxhandle 列举 AVGO AI 芯片收入高增速，并称同意借出或担保至多约 $42B 以便 Anthropic 租赁其芯片，同时提到 AI 收入展望。",
+      "whyItMatters": "大客户融资/租赁安排可锁定定制 ASIC 需求，但也引入信用与集中度风险。",
+      "counterCase": "二手归纳，金额与条款需公司或权威财经稿核实。",
+      "affected": [
+        "AVGO",
+        "Anthropic",
+        "定制 ASIC"
+      ],
+      "author": "thatxhandle",
+      "publishedAt": "2026-10-07T10:08:13.000Z",
+      "url": "https://x.com/thatxhandle/status/2107774992473571405",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "avgo": 2
+      }
+    },
+    {
+      "eventKey": "vrt-bmo-outperform-329-2026-10-05",
+      "tabIds": [
+        "vrt"
+      ],
+      "title": "BMO 给予 Vertiv Outperform，目标价 329 美元",
+      "fact": "@Dragon21Soul 称 BMO 给予 $VRT Outperform、目标价 $329，强调约 85% 收入来自数据中心，当前约每 MW $3.5M 内容量，并看好密度提升。",
+      "whyItMatters": "卖方首次覆盖与内容量假设变化，反映市场对液冷/电力基建渗透的定价；属研究观点变化。",
+      "counterCase": "评级与目标价本身非经营事实；电网与交付约束可能限制兑现。",
+      "affected": [
+        "VRT",
+        "数据中心电力冷却"
+      ],
+      "author": "Dragon21Soul",
+      "publishedAt": "2026-10-05T17:57:05.000Z",
+      "url": "https://x.com/Dragon21Soul/status/2107168213188710603",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "vrt": 1
+      }
+    },
+    {
+      "eventKey": "vrt-coolchip-cdu1350-pf-2026-10-09",
+      "tabIds": [
+        "vrt"
+      ],
+      "title": "Vertiv 官方介绍 CoolChip CDU 1350 功率因数",
+      "fact": "@VertivAP 称 AI 数据中心冷却无功功率过高会冲击电力设施；Vertiv CoolChip CDU 1350 标准功率因数 0.89+，可选升级至 0.95+。",
+      "whyItMatters": "产品规格直接对应高密度液冷与电力质量需求，是 VRT 在 AI 机柜侧的可核验供给信号。",
+      "counterCase": "产品宣传；订单转化与份额未在帖中给出。",
+      "affected": [
+        "VRT",
+        "液冷"
+      ],
+      "author": "VertivAP",
+      "publishedAt": "2026-10-09T03:30:00.000Z",
+      "url": "https://x.com/VertivAP/status/2108399552919204189",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "vrt": 2
+      }
+    },
+    {
+      "eventKey": "tsm-oct15-call-preview-2026-10-11",
+      "tabIds": [
+        "tsm"
+      ],
+      "title": "市场关注台积电 10/15 电话会：AI、2nm 与 2027 capex",
+      "fact": "@SemiconductorsX 称 10 月 15 日电话会市场关注 Q4、AI 需求、2nm 爬坡与 2027 capex；并回顾三季度指引营收约 $44.6–45.8B、毛利率 65–67%。",
+      "whyItMatters": "指引与 capex 是先进制程/CoWoS 供给预期的主阀门，传导至整条 AI 半导体链。",
+      "counterCase": "会前预告；以会后官方数字为准。",
+      "affected": [
+        "TSM",
+        "先进制程",
+        "CoWoS"
+      ],
+      "author": "SemiconductorsX",
+      "publishedAt": "2026-10-11T03:03:28.000Z",
+      "url": "https://x.com/SemiconductorsX/status/2109117651247345915",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "tsm": 1
+      }
+    },
+    {
+      "eventKey": "tsm-sep-revenue-filing-2026-10-08",
+      "tabIds": [
+        "tsm"
+      ],
+      "title": "台积电 9 月营收约 NT$5119 亿（转述法定申报）",
+      "fact": "@AZBInvestment 称按 10 月 8 日申报，台积电 9 月营收约 NT$511.9bn，同比约 +54.6%，三季度合计约 NT$1.49tn（约合公司指引所用汇率下的美元营收口径）。",
+      "whyItMatters": "月营收是先进制程需求的高频验证，影响对 AI 晶圆与封装满载度的判断。",
+      "counterCase": "汇率与口径需对照官方英语稿；单月波动不等于盈利指引。",
+      "affected": [
+        "TSM"
+      ],
+      "author": "AZBInvestment",
+      "publishedAt": "2026-10-08T12:49:49.000Z",
+      "url": "https://x.com/AZBInvestment/status/2108178048600232347",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "tsm": 2
+      }
+    },
+    {
+      "eventKey": "tsm-gf-cowos-interposer-malta-2026-10-08",
+      "tabIds": [
+        "tsm"
+      ],
+      "title": "GlobalFoundries 宣布为台积电 CoWoS 生产硅中介层",
+      "fact": "@MosaicLedger 称 GlobalFoundries 于 2026-10-08 宣布多年协议，在纽约 Malta 为台积电 CoWoS 封装生产硅中介层，新闻稿口径约 $20 亿、初始五年。",
+      "whyItMatters": "先进封装瓶颈下中介层外协可缓解 CoWoS 约束，间接影响 TSMC 客户交期与 AI GPU/ASIC 供给。",
+      "counterCase": "金额口径与实际产能爬坡需官方核实；对 TSM 收入的直接贡献不确定。",
+      "affected": [
+        "TSM",
+        "CoWoS",
+        "GFS"
+      ],
+      "author": "MosaicLedger",
+      "publishedAt": "2026-10-09T15:42:45.000Z",
+      "url": "https://x.com/MosaicLedger/status/2108583955863568486",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "tsm": 3
+      }
+    },
+    {
+      "eventKey": "btc-etf-net-flow-2026-10-06",
+      "tabIds": [
+        "btc"
+      ],
+      "title": "10/6 比特币 ETF 单日净流入约 1.188 亿美元",
+      "fact": "@thepfund 称 10/6 Bitcoin ETF 总净流入约 +$118.80m（月至今约 +$321.4m，2026 YTD 约 +$1.25B），其中 $IBIT 约 +$122.00m，并提及监管与宏观日程背景。",
+      "whyItMatters": "ETF 资金流是 BTC 机构需求的可观测代理，影响折现率叙事与风险资产联动。",
+      "counterCase": "单日流入可迅速反转；需对照发行商官方流量。",
+      "affected": [
+        "BTC",
+        "比特币现货 ETF"
+      ],
+      "author": "thepfund",
+      "publishedAt": "2026-10-07T04:21:50.000Z",
+      "url": "https://x.com/thepfund/status/2107687824615182810",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "btc": 1
+      }
+    },
+    {
+      "eventKey": "btc-thailand-crypto-etf-rules-2026-10-11",
+      "tabIds": [
+        "btc"
+      ],
+      "title": "泰国证监为加密 ETF 发布新规通知",
+      "fact": "@HYPERBEASTAI 称泰国 SEC 发布 11 项新通知，为普通投资者在泰国证交所上的比特币与以太坊类 ETF 制定规则。",
+      "whyItMatters": "新兴市场 ETF 监管框架扩展可能打开增量合规需求通道。",
+      "counterCase": "转述新闻；落地时点与产品规模未明。",
+      "affected": [
+        "BTC",
+        "加密 ETF 监管"
+      ],
+      "author": "HYPERBEASTAI",
+      "publishedAt": "2026-10-11T00:00:48.000Z",
+      "url": "https://x.com/HYPERBEASTAI/status/2109071684229894611",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "btc": 2
+      }
+    }
+  ]
+}

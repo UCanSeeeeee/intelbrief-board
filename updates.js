@@ -1,8 +1,8 @@
 /* Shared server-backed updates. No credentials or job state in localStorage. */
 (function () {
   const page=document.body.dataset.page;
-  if (!['news','people'].includes(page)) return;
-  const names={news:'美股讯息',people:'具体人物'};
+  if (!['news','people','tickers'].includes(page)) return;
+  const names={news:'美股讯息',people:'具体人物',tickers:'具体个股'};
   const labels={queued:'等待执行',collecting:'正在采集',validating:'整理与核验',publishing:'正在发布',complete:'更新完成',partial:'部分完成',unchanged:'已检查，暂无新增',failed:'更新失败'};
   const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const time=value=>value ? new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(value)) : '尚无成功更新';
@@ -35,7 +35,7 @@
   function latest(page) { return snapshot?.jobs?.find(j=>j.page===page); }
   function render() {
     const logged=!!snapshot?.authenticated, active=latest(page), sameBatch=latest('news')?.cutoff===latest('people')?.cutoff;
-    const allBusy=['news','people'].every(p=>busy(latest(p))) || (sameBatch && ['news','people'].some(p=>busy(latest(p))));
+    const allBusy=pagesAll.every(p=>busy(latest(p))) || (sameBatch && pagesAll.some(p=>busy(latest(p))));
     $('update-all').disabled=submitting||!available||(logged&&allBusy);
     $('update-page').disabled=submitting||!available||(logged&&busy(active));
     $('update-all').textContent=allBusy?'正在更新…':'↻ 全部更新';
@@ -45,7 +45,7 @@
     if (!logged) { $('update-jobs').innerHTML=''; $('update-retry').hidden=true; return; }
     $('update-connection').textContent=snapshot.online?'执行端在线 · 更新期间可以继续浏览':'执行端离线 · 待电脑与更新程序恢复后继续';
     $('update-last').textContent=`上次成功：${time(snapshot.lastSuccess?.[page])}（北京时间）`;
-    const latestJobs=['news','people'].map(p=>latest(p)).filter(Boolean);
+    const latestJobs=pagesAll.map(p=>latest(p)).filter(Boolean);
     $('update-jobs').innerHTML=latestJobs.length ? latestJobs.map(job=>`<article class="update-job" data-status="${escape(job.status)}"><div><strong>${names[job.page]}</strong><span>${labels[job.stage]||'等待执行'}</span></div><p>${escape(job.message|| (job.status==='queued'&&!snapshot.online?'执行端离线，任务已保存':job.status==='queued'?'任务已保存，等待执行':''))}</p><small>信息截止 ${time(job.cutoff)} · ${job.trigger_type==='scheduled'?'定时':'手动'}更新</small></article>`).join('') : '<p class="update-empty">暂无手动更新记录</p>';
     $('update-retry').hidden=!latestJobs.some(j=>j.status==='failed');
     $('update-retry').disabled=submitting;
@@ -81,12 +81,12 @@
     catch(err) { error(err); }
     finally {submitting=false; render();}
   }
-  $('update-all').onclick=()=>submit(['news','people']);
+  $('update-all').onclick=()=>submit(['news','people','tickers']);
   $('update-page').onclick=()=>submit([page]);
   $('update-retry').onclick=async()=> {
     if(submitting) return;
     submitting=true; render();
-    try { snapshot=await api('/retry',{ids:['news','people'].map(p=>latest(p)).filter(j=>j?.status==='failed').map(j=>j.id)}); $('update-error').textContent=''; }
+    try { snapshot=await api('/retry',{ids:['news','people','tickers'].map(p=>latest(p)).filter(j=>j?.status==='failed').map(j=>j.id)}); $('update-error').textContent=''; }
     catch(err){error(err);} finally{submitting=false;render();}
   };
   $('update-login').onsubmit=async event=> {

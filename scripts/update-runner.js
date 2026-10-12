@@ -6,7 +6,7 @@ const os=require('node:os');
 const crypto=require('node:crypto');
 const {spawn}=require('node:child_process');
 const {setTimeout:delay}=require('node:timers/promises');
-const {prepareNews,preparePeopleIntelligence}=require('./lib/update-results');
+const {prepareNews,preparePeopleIntelligence,prepareTickerIntelligence}=require('./lib/update-results');
 const {windowStart,displayWindow,readCoverage,recordCoverage,uncoveredRanges}=require('./lib/windows');
 const {collectorPrompt}=require('./lib/update-prompt');
 const {saveBrief}=require('./lib/stock-brief');
@@ -115,7 +115,7 @@ async function executeJob(job,config,api,{collect}={}) {
         const saved=readJson(file);
         outcome={status:saved.status==='failed'?'failed':saved.status==='partial'?'partial':'complete',message:saved.status==='failed'?saved.shortfallReason:`已发布 ${saved.counts.focus} 条焦点＋${saved.counts.insights} 条洞察${saved.shortfallReason?'；'+saved.shortfallReason:''}`};
         files=[`data/stock-briefs/${brief.id}.json`,'data/stock-briefs/index.json'];
-      } else {
+      } else if (job.page==='people') {
         const peopleConfig=readJson(path.join(checkout,'config/people-intelligence.json'));
         const peoplePath=path.join(checkout,'data/people-intelligence.json');
         const existing=fs.existsSync(peoplePath)?readJson(peoplePath):{items:[]};
@@ -124,7 +124,16 @@ async function executeJob(job,config,api,{collect}={}) {
         if(result.status==='failed') throw new Error(result.message+'：'+result.failures.map(report=>report.id+' '+report.note).join('；'));
         writeJson(peoplePath,result.data);
         files=['data/people-intelligence.json'];
-      }
+      } else if (job.page==='tickers') {
+        const tickerConfig=readJson(path.join(checkout,'config/ticker-intelligence.json'));
+        const tickerPath=path.join(checkout,'data/ticker-intelligence.json');
+        const existing=fs.existsSync(tickerPath)?readJson(tickerPath):{items:[]};
+        const result=prepareTickerIntelligence(input,tickerConfig,existing,job.cutoff);
+        outcome={status:result.status,message:result.message};
+        if(result.status==='failed') throw new Error(result.message+'：'+result.failures.map(report=>report.id+' '+report.note).join('；'));
+        writeJson(tickerPath,result.data);
+        files=['data/ticker-intelligence.json'];
+      } else throw new Error('未知更新页面：'+job.page);
       // Record which time span and queries this job searched, for later dedupe.
       writeJson(path.join(checkout,'data/search-coverage.json'),recordCoverage(readCoverage(checkout),{jobId:job.id,page:job.page,start,end:job.cutoff,queries:job.page==='news'?(input.coverage?.queries||[]):(input.tabs||[]).map(t=>`${t.id}: ${t.note}`),recordedAt:new Date().toISOString()}));
       files.push('data/search-coverage.json');

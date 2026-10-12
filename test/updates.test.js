@@ -126,3 +126,12 @@ test('people intelligence enforces per-tab limits, weekly ranks and real X evide
   const bad=structuredClone(item);bad.url='https://example.com/post/100';
   assert.throws(()=>preparePeopleIntelligence({checkedAt:now.toISOString(),tabs,items:[bad]},config,{items:[]},cutoff,now),/真实或唯一X原帖/);
 });
+
+test('tickers collector prompt covers cashtag rules and Brew contract', () => {
+  const {collectorPrompt}=require('../scripts/lib/update-prompt');
+  const prompt=collectorPrompt({page:'tickers',cutoff:'2026-10-11T13:00:00Z'},root,'2026-10-10T13:00:00.000Z',{});
+  assert.match(prompt,/只更新“具体个股”/);
+  assert.match(prompt,/\$BTC/);
+  assert.match(prompt,/0xfa6d9b504848606eb9aec04ccc161d169b3f2159/i);
+  assert.match(prompt,/crypto-token|加密代币/);
+});
