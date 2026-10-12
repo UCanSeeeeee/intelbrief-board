@@ -108,7 +108,8 @@ test('browser renderer shows 5+10, escapes content, and clears failed edition',a
   assert.match(element('brief-focus').innerHTML,/&lt;img/);
   assert.doesNotMatch(element('brief-focus').innerHTML,/<img/);
   assert.match(element('brief-insights').innerHTML,/宏观经济 × 行为金融/);
-  assert.match(element('brief-insights').innerHTML,/采集器返回，未独立直读/);
+  assert.doesNotMatch(element('brief-insights').innerHTML,/证据与筛选依据/);
+  assert.doesNotMatch(element('brief-insights').innerHTML,/采集器返回，未独立直读/);
   assert.match(element('brief-focus').innerHTML,/作者/);
   assert.match(element('brief-focus').innerHTML,/信息摘要/);
   assert.match(element('brief-focus').innerHTML,/事件时间/);

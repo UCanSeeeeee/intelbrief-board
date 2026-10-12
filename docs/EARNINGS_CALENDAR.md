@@ -86,3 +86,8 @@ npm run fetch:earnings
 - 主题命中不设市值门槛；非主题公司仅当市值 ≥ `autonomousMinMarketCapUsd` 时自主入选（已删除未生效的 `minMarketCapUsd`）。
 - 每日超过 `maxPerDay` 的公司写入当日 `truncated`，控制台与页面都会提示，不再静默丢弃。
 - `pendingReview` 非空时脚本退出码为 2，`npm run check` 同时拦截已过披露日仍未评价的条目。
+
+## 公司主营一句话
+
+财报卡片在代码下方展示一句中文主营说明，来源 `config/company-blurbs.json`（按 symbol 映射）。只写公认业务范畴，不作投资建议；未收录时显示「主营待补」。新增主题池公司时应同步补 blurbs。
+

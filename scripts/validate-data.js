@@ -205,6 +205,19 @@ for (const week of earnings.weeks) {
   }
 }
 
+
+{
+  const blurbsFile = readJson(path.join(ROOT, 'config/company-blurbs.json'));
+  const blurbs = blurbsFile.blurbs || {};
+  for (const week of earnings.weeks || []) {
+    for (const day of week.days || []) {
+      for (const item of day.items || []) {
+        if (!blurbs[item.symbol] || typeof blurbs[item.symbol] !== 'string') fail(`company blurb missing for ${item.symbol}`);
+      }
+    }
+  }
+}
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);

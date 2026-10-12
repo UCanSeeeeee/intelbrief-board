@@ -86,3 +86,19 @@ test('ai page has OPENAI ANTHROPIC GOOG and 其他 tabs', () => {
   assert.match(read('ai.js'), /ai-intelligence\.json/);
   assert.match(read('docs/AI_INTELLIGENCE.md'), /与具体个股 GOOG 边界/);
 });
+
+test('stock brief cards no longer expose 证据与筛选依据 UI', () => {
+  assert.doesNotMatch(read('briefs.js'), /证据与筛选依据/);
+  assert.match(read('briefs.js'), /原文链接/);
+});
+
+test('earnings page loads company blurbs for calendar symbols', () => {
+  const blurbs = JSON.parse(read('config/company-blurbs.json')).blurbs;
+  const calendar = JSON.parse(read('data/earnings-calendar.json'));
+  const symbols = new Set();
+  for (const week of calendar.weeks || []) for (const day of week.days || []) for (const item of day.items || []) symbols.add(item.symbol);
+  assert.ok(symbols.size > 0);
+  for (const symbol of symbols) assert.equal(typeof blurbs[symbol], 'string');
+  assert.match(read('earnings.js'), /company-blurbs\.json/);
+  assert.match(read('earnings.js'), /earnings-blurb/);
+});

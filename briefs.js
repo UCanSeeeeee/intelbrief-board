@@ -27,15 +27,7 @@
       ${knowledge}
       <p><strong>反向条件</strong> ${escape(event.counterCase)}</p>
       <div class="brief-primary-source"><p><strong>事件时间</strong> ${escape(eventTime)}${event.eventTime?'（北京时间）':''}${event.futureEventNote ? ' · '+escape(event.futureEventNote) : ''}</p>${primaryUrl?`<a href="${escape(primaryUrl)}" target="_blank" rel="noopener noreferrer">原文链接 · @${escape(primary.username)} ↗</a>`:'<span>原文链接待核验</span>'}</div>
-      <details class="brief-evidence"><summary>证据与筛选依据 · 可信度初评 ${escape(event.credibility.score)}/100（未校准）</summary>
-        <p>入选理由：${escape(event.selectionReason)}</p>
-        ${event.attentionEvidence ? `<p>关注依据：${escape(event.attentionEvidence)}</p>`:''}
-        ${event.continuationReason ? `<p>延续原因：${escape(event.continuationReason)}</p>`:''}
-        ${event.contextSourceNote ? `<p>背景证据：${escape(event.contextSourceNote)}</p>`:''}
-        <p>可信度依据：${escape(event.credibility.reason)}</p>
-        <p class="brief-small">${escape(event.credibility.limitation)}</p>
-        ${event.sources.map(source=>`<div class="brief-source"><a href="${escape(originalUrl(source) || '#')}" target="_blank" rel="noopener noreferrer">@${escape(source.username)} · 查看 X 原帖 ↗</a><blockquote>${escape(source.excerpt)}</blockquote><p class="brief-small">发布 ${escape(time(source.publishedAt))} · 核验 ${escape(time(source.checkedAt))}（北京时间）</p><p>${source.verification==='direct'?'已直接读取原帖':'采集器返回，未独立直读'}：${escape(source.verificationNote)}</p><p class="brief-small">来源初评 ${escape(source.credibility.overall)}/100；作者分 ${escape(source.credibility.sourceScore)}，主张分 ${escape(source.credibility.claimScore)}</p>${list(source.credibility.warnings)}</div>`).join('')}
-      </details></article>`;
+    </article>`;
   }
   let manifest, config, generation = 0;
   async function show(entry, preserve=false) {

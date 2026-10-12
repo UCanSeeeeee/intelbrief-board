@@ -14,6 +14,7 @@
 
   let payload = null;
   let activeId = 'current';
+  let blurbs = {};
 
   function card(item) {
     const themes = (item.themes || []).map((t) => `<span class="badge">${escape(t)}</span>`).join('');
@@ -29,6 +30,7 @@
         ${themes}
       </div>
       <p class="earnings-name">${escape(item.name)}</p>
+      <p class="earnings-blurb">${escape(blurbs[item.symbol] || item.businessBlurb || '主营待补：公开常见描述暂未收录。')}</p>
       <p class="earnings-meta">${escape(money(item.marketCapUsd))}${item.epsForecast ? ` · EPS 预期 ${escape(item.epsForecast)}` : ''}</p>
       <p class="earnings-meta">${escape(item.selectionReason || '')}</p>
       <p class="earnings-result"><strong>结果</strong> ${escape(resultText)}${result.summary ? ` · ${escape(result.summary)}` : ''}</p>
@@ -84,13 +86,13 @@
     activate(payload.activeWeekId || 'current');
   }
 
-  fetch('data/earnings-calendar.json', { cache: 'no-store' })
-    .then((r) => {
-      if (!r.ok) throw new Error('读取失败');
-      return r.json();
-    })
-    .then((data) => {
+  Promise.all([
+    fetch('data/earnings-calendar.json', { cache: 'no-store' }).then((r) => { if (!r.ok) throw new Error('读取失败'); return r.json(); }),
+    fetch('config/company-blurbs.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : { blurbs: {} })).catch(() => ({ blurbs: {} }))
+  ])
+    .then(([data, blurbFile]) => {
       payload = data;
+      blurbs = blurbFile.blurbs || {};
       mountTabs();
     })
     .catch(() => {
