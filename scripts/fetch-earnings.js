@@ -53,16 +53,37 @@ function currentWeekStart(now = new Date()) {
   return addDays(date, -offset);
 }
 
+// Nasdaq uses BRK.B style; normalize BRK-B / brk.b variants so they always match.
+function normalizeSymbol(value) {
+  return String(value || '').trim().toUpperCase().replace(/-/g, '.');
+}
+
 function themeIndex() {
   const map = new Map();
   for (const [id, theme] of Object.entries(config.themes || {})) {
     for (const ticker of theme.tickers || []) {
-      const symbol = String(ticker).toUpperCase();
+      const symbol = normalizeSymbol(ticker);
       if (!map.has(symbol)) map.set(symbol, []);
-      map.get(symbol).push({ id, label: theme.label });
+      if (!map.get(symbol).some((t) => t.id === id)) map.get(symbol).push({ id, label: theme.label });
     }
   }
   return map;
+}
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Retry with exponential backoff; the caller falls back to stale prior data on final failure.
+async function fetchDayWithRetry(date, { retries = config.source.retries ?? 3, baseMs = 1000, fetcher = fetchDay } = {}) {
+  let lastError;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      return await fetcher(date);
+    } catch (error) {
+      lastError = error;
+      if (attempt < retries) await sleep(baseMs * 2 ** attempt);
+    }
+  }
+  throw lastError;
 }
 
 async function fetchDay(date) {
@@ -88,32 +109,37 @@ function normalizeTime(value) {
   return { code: 'unspecified', label: '时段未公布' };
 }
 
-function pickImportant(rows, themes) {
-  const minThemeCap = config.important.minMarketCapUsd || 0;
-  const autoCap = config.important.autonomousMinMarketCapUsd || minThemeCap;
+function pickImportant(rows, themes, maxPerDay = config.important.maxPerDay || 15) {
+  const autoCap = config.important.autonomousMinMarketCapUsd || 0;
   const scored = rows.map((row) => {
-    const symbol = String(row.symbol || '').toUpperCase();
+    const symbol = normalizeSymbol(row.symbol);
     const marketCapUsd = parseCap(row.marketCap);
     const hitThemes = themes.get(symbol) || [];
     const themeHit = hitThemes.length > 0;
-    const autonomous =
-      !themeHit && marketCapUsd != null && marketCapUsd >= autoCap;
-    const important =
-      themeHit || autonomous || (marketCapUsd != null && marketCapUsd >= minThemeCap && themeHit);
-    // Prefer theme hits always; autonomous large caps; avoid flooding with mid-cap non-theme
-    const keep = themeHit || autonomous;
+    const autonomous = !themeHit && marketCapUsd != null && marketCapUsd >= autoCap;
     let reason = '';
     if (themeHit) reason = `主题：${hitThemes.map((t) => t.label).join('、')}`;
     else if (autonomous) reason = '自主判断：超大市值，可能影响指数/板块定价';
-    return { row, symbol, marketCapUsd, hitThemes, themeHit, autonomous, keep, reason };
+    return { row, symbol, marketCapUsd, hitThemes, themeHit, autonomous, keep: themeHit || autonomous, reason };
   });
-  return scored
+  const kept = scored
     .filter((item) => item.keep)
     .sort((a, b) => {
       if (a.themeHit !== b.themeHit) return a.themeHit ? -1 : 1;
       return (b.marketCapUsd || 0) - (a.marketCapUsd || 0);
-    })
-    .slice(0, config.important.maxPerDay || 15);
+    });
+  const picked = kept.slice(0, maxPerDay);
+  picked.truncated = kept.slice(maxPerDay).map((item) => item.symbol);
+  return picked;
+}
+
+function previousDays() {
+  const map = new Map();
+  try {
+    const prev = JSON.parse(fs.readFileSync(OUT, 'utf8'));
+    for (const week of prev.weeks || []) for (const day of week.days || []) map.set(day.date, day);
+  } catch {}
+  return map;
 }
 
 function previousResults() {
@@ -135,17 +161,30 @@ function previousResults() {
   }
 }
 
-async function buildWeek(id, label, weekStart, themes, resultMap) {
+async function buildWeek(id, label, weekStart, themes, resultMap, priorDays = new Map(), fetcher) {
   const days = weekdaysFrom(weekStart, config.displayDays || 5);
   const dayBlocks = [];
   let raw = 0;
   let important = 0;
   for (const date of days) {
-    const rows = await fetchDay(date);
+    let rows;
+    try {
+      rows = await fetchDayWithRetry(date, fetcher ? { fetcher, baseMs: 0 } : {});
+    } catch (error) {
+      const prior = priorDays.get(date);
+      console.error(`Nasdaq ${date} 多次重试仍失败：${error.message}；${prior ? '沿用上次数据并标 stale' : '无旧数据，当日留空并标 stale'}`);
+      const stale = prior ? { ...prior, stale: true, staleReason: error.message } : { date, weekday: '', rawCount: 0, items: [], truncated: [], stale: true, staleReason: error.message };
+      raw += stale.rawCount || 0;
+      important += (stale.items || []).length;
+      dayBlocks.push(stale);
+      continue;
+    }
     raw += rows.length;
     const picked = pickImportant(rows, themes);
     important += picked.length;
     dayBlocks.push({
+      truncated: picked.truncated,
+      stale: false,
       date,
       weekday: new Intl.DateTimeFormat('zh-CN', { timeZone: 'UTC', weekday: 'short' }).format(
         new Date(date + 'T12:00:00Z')
@@ -172,7 +211,7 @@ async function buildWeek(id, label, weekStart, themes, resultMap) {
         };
       })
     });
-    await new Promise((r) => setTimeout(r, 200));
+    if (!fetcher) await sleep(200);
   }
   return {
     id,
@@ -187,13 +226,14 @@ async function buildWeek(id, label, weekStart, themes, resultMap) {
 async function main() {
   const themes = themeIndex();
   const resultMap = previousResults();
+  const priorDays = previousDays();
   const currentStart = currentWeekStart();
   const lastStart = addDays(currentStart, -7);
   const nextStart = addDays(currentStart, 7);
   const weeks = [
-    await buildWeek('last', '上周', lastStart, themes, resultMap),
-    await buildWeek('current', '本周', currentStart, themes, resultMap),
-    await buildWeek('next', '下周', nextStart, themes, resultMap)
+    await buildWeek('last', '上周', lastStart, themes, resultMap, priorDays),
+    await buildWeek('current', '本周', currentStart, themes, resultMap, priorDays),
+    await buildWeek('next', '下周', nextStart, themes, resultMap, priorDays)
   ];
   const output = {
     schemaVersion: 2,
@@ -210,7 +250,6 @@ async function main() {
       themes: Object.fromEntries(
         Object.entries(config.themes || {}).map(([id, theme]) => [id, { label: theme.label, size: (theme.tickers || []).length }])
       ),
-      minMarketCapUsd: config.important.minMarketCapUsd,
       autonomousMinMarketCapUsd: config.important.autonomousMinMarketCapUsd,
       maxPerDay: config.important.maxPerDay
     },
@@ -246,10 +285,18 @@ async function main() {
       `${week.label} ${week.weekStart}→${week.weekEnd}: ${week.counts.important} important / ${week.counts.raw} raw`
     );
   }
+  const truncated = weeks.flatMap((w) => w.days.filter((d) => d.truncated?.length).map((d) => `${d.date} 截断 ${d.truncated.length} 家：${d.truncated.join(', ')}`));
+  if (truncated.length) console.log(`超过每日上限被截断：\n  ${truncated.join('\n  ')}`);
+  const stale = weeks.flatMap((w) => w.days.filter((d) => d.stale).map((d) => d.date));
+  if (stale.length) console.log(`以下日期拉取失败，沿用旧数据（stale）：${stale.join(', ')}`);
   console.log(`Wrote ${OUT}`);
+  // Nonzero exit lets automation stop until every past-disclosure company is scored or marked unknown.
+  if (pendingReview.length) process.exitCode = 2;
 }
 
-main().catch((error) => {
+module.exports = { normalizeSymbol, themeIndex, pickImportant, fetchDayWithRetry, buildWeek, currentWeekStart };
+
+if (require.main === module) main().catch((error) => {
   console.error(error.message || error);
   process.exitCode = 1;
 });

@@ -23,4 +23,4 @@ let stopping=false;
 function stop(){if(stopping)return;stopping=true;website.kill('SIGTERM');runner.kill('SIGTERM');}
 process.on('SIGINT',stop);process.on('SIGTERM',stop);
 website.on('exit',()=>{stop();});runner.on('exit',()=>{stop();});
-console.log('本地完整模式：http://localhost:8787 · 本机免登录 · 数据只发布到本地，不推送。');
+console.log('本地完整模式：http://localhost:8787 · 本机免登录 · 调试模式，数据只写本机；需保留的改动请提交并推送。');

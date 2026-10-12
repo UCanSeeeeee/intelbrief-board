@@ -53,9 +53,11 @@
       if (current!==generation) return;
       for (const group of ['focus','insights']) {
         $(group+'-count').textContent = `${brief[group].length} / ${config.targetCounts[group]}`;
-        $('brief-'+group).innerHTML = brief[group].map(card).join('') || empty('本期没有可用条目');
+        const carried = (brief.carriedOver||[]).filter(c=>c.group===group);
+        const carriedHtml = carried.length ? `<div class="brief-carried"><h3>展示窗口内的前序期次条目（本期未重复检索）</h3>${carried.map(c=>`<article class="x-card brief-card"><div class="brief-card-top"><h3>${escape(c.title)}</h3><span class="badge">来自 ${escape(c.fromEdition)}</span></div>${c.fact?`<p>${escape(c.fact)}</p>`:''}${originalUrl(c)?`<a href="${escape(c.url)}" target="_blank" rel="noopener noreferrer">原文链接 ↗</a>`:''}<p class="brief-small">发布 ${escape(time(c.publishedAt))}（北京时间）</p></article>`).join('')}</div>` : '';
+        $('brief-'+group).innerHTML = (brief[group].map(card).join('') || empty('本期没有可用条目')) + carriedHtml;
       }
-      $('brief-audit').innerHTML = `<details class="brief-evidence"><summary>本期检索范围、排序与缺口</summary><p>采集方式：${escape(brief.coverage.method)}</p><p>检索窗口：${escape(time(brief.windowStart))} 至 ${escape(time(brief.scheduledFor))}（北京时间）</p><p>${escape(brief.selectionRationale)}</p><h3>检索问题</h3>${list(brief.coverage.queries)}<h3>覆盖缺口</h3>${list(brief.coverage.gaps.length?brief.coverage.gaps:['未另行报告；不表示覆盖了整个 X'])}<h3>主要落选候选</h3>${list(brief.excludedCandidates.map(c=>`${c.eventKey}：${c.reason}`))}</details>`;
+      $('brief-audit').innerHTML = `<details class="brief-evidence"><summary>本期检索范围、排序与缺口</summary><p>采集方式：${escape(brief.coverage.method)}</p>${brief.displayWindowStart?`<p>展示窗口：${escape(time(brief.displayWindowStart))} 至 ${escape(time(brief.displayWindowEnd))}（北京时间）</p>`:''}<p>检索窗口：${escape(time(brief.windowStart))} 至 ${escape(time(brief.scheduledFor))}（北京时间）</p>${Array.isArray(brief.checklist)?`<h3>检索清单</h3>${list(brief.checklist.map(c=>`${c.item}：${({covered:'已覆盖','no-result':'无结果',insufficient:'证据不足'})[c.status]||c.status}${c.note?'（'+c.note+'）':''}`))}`:''}${Array.isArray(brief.candidates)&&brief.candidates.length?`<h3>候选与入选映射</h3>${list(brief.candidates.map(c=>`第${c.round}轮 ${c.eventKey} → ${c.decision==='selected'?'入选':'落选'}：${c.reason}`))}`:''}<p>${escape(brief.selectionRationale)}</p><h3>检索问题</h3>${list(brief.coverage.queries)}<h3>覆盖缺口</h3>${list(brief.coverage.gaps.length?brief.coverage.gaps:['未另行报告；不表示覆盖了整个 X'])}<h3>主要落选候选</h3>${list(brief.excludedCandidates.map(c=>`${c.eventKey}：${c.reason}`))}</details>`;
     } catch {
       if (current===generation) {
         $('brief-focus').innerHTML=empty('所选期次读取失败，请稍后重试');
@@ -67,7 +69,7 @@
   function load(keepSelection=false) { return Promise.all([json('config/stock-brief.json'),json('data/stock-briefs/index.json')]).then(([settings,index])=> {
     const previousLive=manifest?.editions.find(e=>e.status!=='failed')||manifest?.editions[0];
     const selected=keepSelection && manifest && $('edition-select').value!==previousLive?.id ? $('edition-select').value : null;
-    const editions=(index.editions||[]).slice(0,settings.historyLimit||3);
+    const editions=index.editions||[];
     config=settings; manifest={...index,editions};
     if (!editions.length) {
       $('edition-select').innerHTML = '<option>等待首期</option>';
@@ -75,7 +77,7 @@
       $('brief-insights').innerHTML=empty('等待十条多学科洞察');
       return;
     }
-    $('edition-select').innerHTML=editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status])} · ${escape(e.counts.total)}/15</option>`).join('');
+    $('edition-select').innerHTML=editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status]||e.status)} · ${escape(e.counts.total)}/15</option>`).join('');
     $('edition-select').disabled=false;
     const entry=editions.find(e=>e.id===selected)||editions.find(e=>e.status!=='failed')||editions[0];
     $('edition-select').value=entry.id;

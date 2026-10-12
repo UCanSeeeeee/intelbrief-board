@@ -37,7 +37,7 @@
 
   function renderWeek(week) {
     if (!week) {
-      $('earnings-board').innerHTML = `<div class="empty-state"><strong>暂无该周数据</strong><p>请先运行 npm run fetch:earnings。</p></div>`;
+      $('earnings-board').innerHTML = `<div class="empty-state"><strong>暂无该周数据</strong><p>该周财报日历尚未生成，下一次讯息更新时会自动补上。</p></div>`;
       return;
     }
     const updated = payload.updatedAt
@@ -55,6 +55,8 @@
         : `<div class="empty-state"><strong>当日无入选重点公司</strong><p>原始日历 ${escape(day.rawCount)} 家。</p></div>`;
       return `<section class="earnings-day">
         <header class="earnings-day-head"><h2>${escape(dayLabel(day.date))}</h2><span>${escape(day.items.length)} / ${escape(day.rawCount)}</span></header>
+        ${day.stale ? `<p class="brief-small">当日日历拉取失败，显示的是上次数据（可能过时）。</p>` : ''}
+        ${day.truncated?.length ? `<p class="brief-small">另有 ${escape(day.truncated.length)} 家超出每日上限未展示：${escape(day.truncated.join('、'))}</p>` : ''}
         ${body}
       </section>`;
     }).join('');

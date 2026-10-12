@@ -1,18 +1,13 @@
 const {mergePosts,sha256,canonicalPostUrl}=require('./x-data');
 const {prepareBrief}=require('./stock-brief');
+const {windowStart,beijingIso,displayWindow}=require('./windows');
 const requireValue=(ok,message)=> {if(!ok) throw new Error(message);};
 function date(value) { return typeof value==='string' && /(?:Z|[+-]\d\d:\d\d)$/.test(value) && Number.isFinite(Date.parse(value)); }
-function windowStart(editions,job) {
-  // Manual editions never move the scheduled collection cursor.
-  const candidates=editions.filter(e=>e.status!=='failed' && Date.parse(e.scheduledFor)<Date.parse(job.cutoff) && (job.trigger_type!=='scheduled'||e.trigger!=='manual'));
-  const previous=candidates.sort((a,b)=>Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor))[0];
-  return new Date(Math.max(previous?Date.parse(previous.scheduledFor):0,Date.parse(job.cutoff)-86400000)).toISOString();
-}
-function prepareNews(input,job,start,sources,now=new Date()) {
+function prepareNews(input,job,start,sources,now=new Date(),carried=[]) {
   requireValue(input && typeof input==='object','采集器未返回简报');
   for(const event of [...(input.focus||[]),...(input.insights||[])]) for(const source of event.sources||[]) requireValue(source.verification==='collector-report','Grok来源必须标为采集器转述，不能声称独立直读');
-  const scheduledFor=job.trigger_type==='scheduled' ? new Date(Date.parse(job.cutoff)+8*3600000).toISOString().slice(0,19)+'+08:00' : job.cutoff;
-  return prepareBrief({...input,trigger:job.trigger_type,requestId:job.id,scheduledFor,windowStart:start},{now,sources});
+  const scheduledFor=job.trigger_type==='scheduled' ? beijingIso(job.cutoff) : job.cutoff;
+  return prepareBrief({...input,trigger:job.trigger_type,requestId:job.id,scheduledFor,windowStart:start,...displayWindow(job.cutoff),carriedOver:carried||[]},{now,sources});
 }
 function preparePeople(input,registry,raw,previous,cutoff,now=new Date()) {
   const people=registry.accounts.filter(a=>a.enabled&&a.category==='people');

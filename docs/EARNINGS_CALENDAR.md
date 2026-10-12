@@ -78,3 +78,11 @@ npm run fetch:earnings
 ## 页面
 
 侧栏顺序：美股讯息 → 具体人物 → 财报日历（`earnings.html`）。页内顶部 Tab：**上周 / 本周 / 下周**，默认打开本周。构建时随 `npm run build` 进入 `dist`。
+
+## 拉取健壮性与筛选（2026-10-12 修订）
+
+- 每天的日历请求失败时按指数退避重试（`source.retries`，默认 3 次）；仍失败则沿用上次该日数据并标 `stale`，页面显示“可能过时”，其余日期照常更新。
+- 代码统一规范为 `BRK.B` 格式（`BRK-B` 自动转换），主题池内重复代码已去重。
+- 主题命中不设市值门槛；非主题公司仅当市值 ≥ `autonomousMinMarketCapUsd` 时自主入选（已删除未生效的 `minMarketCapUsd`）。
+- 每日超过 `maxPerDay` 的公司写入当日 `truncated`，控制台与页面都会提示，不再静默丢弃。
+- `pendingReview` 非空时脚本退出码为 2，`npm run check` 同时拦截已过披露日仍未评价的条目。

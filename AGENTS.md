@@ -48,6 +48,27 @@ That file is the full handoff for any AI or human taking over this repo: product
 
 ## 当前交付顺序
 
-用户于2026-10-11要求：先在本地跑通功能并启动网页，验收后再推送让Cloudflare更新。当前阶段不自动推送或部署；后续用户同意进入上线阶段时再沿用下面的提交发布规则。
+用户于2026-10-12明确决定：**没有“本地验收”阶段**。每次改动完成并通过 `npm test`、`npm run check`、`npm run build` 后，必须立即提交并推送 `master`，Cloudflare 随推送自动更新。
 
 After completing and verifying any requested change to this GitHub project, create a focused git commit and push it to `master`. Do not leave finished project changes uncommitted. Preserve unrelated user changes and never force-push.
+
+## 来源例外：财报日历与财报结果（用户于2026-10-12确认）
+
+“只走 Grok App / Grok 网页版”的硬规则适用于 **X 讯息采集**（美股讯息、具体人物）。财报模块是明确例外：
+
+1. 财报日历：`npm run fetch:earnings` 直接请求 Nasdaq 公开日历接口（`config/earnings-calendar.json` 的 `source.endpoint`）。单日失败按指数退避重试；仍失败则沿用上次数据并标 `stale`，不中断其余日期。
+2. 财报结果评分：以公司官方披露为准（新闻稿、8-K/10-Q、管理层讲稿），一致预期可引用公开财经页面；X 只作补充线索。每项评分附来源链接。无法核实时标 `status: "unknown"` 并写明原因，不得编造分数。
+3. `pendingReview` 非空时 `fetch:earnings` 以退出码 2 结束，`npm run check` 对“已过披露日仍 unreviewed”的条目直接失败。
+
+## 单一写入路径与执行锁
+
+同一时刻只允许一条写数据路径。现行路径是应用原生定时任务直接按 STOCK_BRIEF 流程写入并推送；D1 任务队列 + `npm run updates:start` 执行器是目标路径。切换完成前不得同时运行两者写同一期次；切换后原生任务只调用 `npm run updates:schedule`，不再直接写数据。D1 租约（每 20 秒续期、过期作废）只保证队列内单任务执行，不覆盖队列之外的写入，因此必须由本条规则保证互斥。主执行器与桌面备用执行器同样只能经队列领取任务。
+
+## 检索记录与检索前清单
+
+执行器每次采集后把「时间段 × 查询」写入 `data/search-coverage.json`（保留 14 天），下次采集提示会列出尚未检索的时段用于去重。schemaVersion 2 的简报必须带 `checklist`（清单项与 covered/no-result/insufficient 状态）和 `candidates`（两轮候选到入选/落选的映射与理由），校验不通过不得发布。
+
+## 已知数据缺口（如实记录，不补写）
+
+- 2026-10-12 09:00 期（schemaVersion 1）上线 3 条焦点 + 4 条洞察（partial）。当期对话里两轮检索曾交付 10 条和 12 条候选，但归档时未保存候选到入选的映射，落选理由只部分记在 `excludedCandidates`。该期归档已冻结，不回填内容；自 schemaVersion 2 起强制保存 `candidates`。
+- X 讯息采集完全依赖 Grok App/网页版与 X 的可用性（限流、App 授权、浏览器可用性）。这是外部依赖，失败时按规则发布失败记录，不改走其他路径。

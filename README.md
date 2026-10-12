@@ -56,7 +56,7 @@ npm run check
 
 | 命令 | 作用 |
 |---|---|
-| `npm run dev:updates` | 本地网站、更新队列与Grok采集执行器；不推送 |
+| `npm run dev:updates` | 本地调试：网站、更新队列与Grok采集执行器（调试数据只写本机；保留须提交推送） |
 | `npm run import:x -- FILE` | 导入 Grok Bot/人工结构化 JSON |
 | `npm run score` | 从原始归档重建评分数据 |
 | `npm run check` | 校验 ID、URL、时间、去重和评分范围 |

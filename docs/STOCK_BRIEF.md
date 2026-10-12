@@ -2,7 +2,7 @@
 
 采用日期：2026-10-11。用户确认的筛选框架为「多学科认知和夜雨知识库」。本文是简报流程的主要维护位置；频率和条数以 `config/stock-brief.json` 为机器配置。
 
-手动更新新增独立期次，受理时间作为信息截止；不会改变本文件规定的定时期次与定时采集窗口。任务接入、上线状态与发布重试规则见 [手动更新](MANUAL_UPDATES.md)。云端验收前维持本文件现有定时流程，验收后将既有调度切换到同一任务队列。
+手动更新新增独立期次，受理时间作为信息截止；不会改变本文件规定的定时期次与定时采集窗口。任务接入、上线状态与发布重试规则见 [手动更新](MANUAL_UPDATES.md)。云端配置完成前维持本文件现有定时流程，配置完成后将既有调度切换到同一任务队列。
 
 ## 产品规则
 
@@ -20,7 +20,7 @@
 
 ## 每次定时执行
 
-1. 在 `/Users/xswang/Documents/intelbrief-board` 读取 `CONTEXT.md`、本文件及 `config/research-guidance.json` 指向的项目知识库与采集 SOP，检查 git 状态，保留其他工作。项目内版本是采集时强制采用的当前快照；共享 `us-equity-x-intelligence`、`us-equity-multidisciplinary-knowledge` 和质量技能用于补充与复核，不能跳过项目 SOP。
+1. 在本仓库根目录（`git rev-parse --show-toplevel`；不要写死机器路径）读取 `CONTEXT.md`、本文件及 `config/research-guidance.json` 指向的项目知识库与采集 SOP，检查 git 状态，保留其他工作。项目内版本是采集时强制采用的当前快照；共享 `us-equity-x-intelligence`、`us-equity-multidisciplinary-knowledge` 和质量技能用于补充与复核，不能跳过项目 SOP。
 2. 运行 `npm run brief:slot` 确定最近已到期时段。若该期 JSON 已存在，不覆盖。若仅部署未成功，重试该文件发布即可，不重采集。错过多个时段只制作最近一期，明确延迟和漏期，不伪造过去快照。
 3. 信息截止固定为该时段整点。**展示窗口**固定为截止点往前完整 24 小时，期次卡片与页面展示必须覆盖该完整窗口（可用本期新检索结果加上本地已存的既有检索记录拼成）。**检索窗口**由执行器决定：可从最近一个有结果的**定时期次**截止时间起只检索未覆盖时段，避免重复检索；已检索时段须写入本地检索记录（每个时间段做过哪些检索）。手动测试与手动更新绝不能缩短、推进或替代定时窗口。没有上一期成功的定时简报、也没有可用本地记录时，默认检索截止前完整 24 小时。跨多日断档时本期展示仍须标明 24 小时窗口；未能补齐的空档写进 `coverage.gaps`。旧帖仅作标注的背景/延续；新进展至少一条窗口内原帖。即使采集晚到，整点后发布的帖子也留给下一期。
 4. 严格遵守 [AGENTS.md的采集硬规则](../AGENTS.md)：先通过本机Grok Bot App的「X+github」Bot获取，失败时才用Grok网页版，除此之外全部禁止。旧「推特信息获取」及 App 内其他 Bot 不再用于本项目。两条都失败则报告失败，不改用X API、直访X或普通搜索。不得改动登录、发帖、私信、点赞、关注等；登录失效请用户处理，不从历史对话读取密码。
@@ -39,7 +39,11 @@
 | 字段 | 内容 |
 |---|---|
 | `scheduledFor` | 北京时间期次，如 `2026-10-11T21:00:00+08:00` |
-| `windowStart` | 带时区的检索窗口起点 |
+| `windowStart` | 带时区的检索窗口起点（执行器写入；周一截止时至少回到上周六 00:00） |
+| `displayWindowStart` / `displayWindowEnd` | 展示窗口：截止前完整 24 小时（周一含上周六、日），执行器写入；存在时为 schemaVersion 2 |
+| `carriedOver` | 展示窗口内、来自更早期次的条目引用（fromEdition、group、eventKey、title、fact、url、publishedAt），执行器写入 |
+| `checklist` | v2 必填：检索前清单 `[{item,status:covered/no-result/insufficient,note}]`，未覆盖项必须写 note |
+| `candidates` | v2 必填：两轮候选到入选的映射 `[{eventKey,round:1/2,decision:selected/excluded,reason}]` |
 | `status` | `complete` 完整、`partial` 缺额、`failed` 失败 |
 | `summary`, `marketContext` | 市场概览与交易时段/休市背景；保留在数据中供审计，不在期次选择区展示 |
 | `coverage` | `{method:文字, queries:[实际查询], gaps:[缺口]}` |

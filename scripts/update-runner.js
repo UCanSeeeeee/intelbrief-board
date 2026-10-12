@@ -6,13 +6,32 @@ const os=require('node:os');
 const crypto=require('node:crypto');
 const {spawn}=require('node:child_process');
 const {setTimeout:delay}=require('node:timers/promises');
-const {prepareNews,preparePeopleIntelligence,windowStart}=require('./lib/update-results');
+const {prepareNews,preparePeopleIntelligence}=require('./lib/update-results');
+const {windowStart,displayWindow,readCoverage,recordCoverage,uncoveredRanges}=require('./lib/windows');
 const {collectorPrompt}=require('./lib/update-prompt');
 const {saveBrief}=require('./lib/stock-brief');
 const {readJson,writeJson,sourceIndex}=require('./lib/x-data');
 const HOME=process.env.INTELBRIEF_STATE_DIR||path.join(os.homedir(),'.local/share/intelbrief-updates');
 const ROOT=path.resolve(__dirname,'..');
 const CONFIG=process.env.INTELBRIEF_CONFIG||path.join(HOME,'config.json');
+// Items from earlier editions still inside the 24h display window are shown alongside this edition.
+function carriedOver(root,editions,job,start,input) {
+  const {displayWindowStart}=displayWindow(job.cutoff);
+  const fresh=new Set([...(input.focus||[]),...(input.insights||[])].map(e=>String(e.eventKey).trim().toLowerCase()));
+  const out=[];
+  for(const entry of editions.filter(e=>e.status!=='failed'&&Date.parse(e.scheduledFor)<Date.parse(job.cutoff)&&Date.parse(e.scheduledFor)>Date.parse(displayWindowStart))) {
+    const file=path.join(root,'data/stock-briefs',entry.file);
+    if(!fs.existsSync(file)) continue;
+    const old=readJson(file);
+    for(const group of ['focus','insights']) for(const event of old[group]||[]) {
+      const key=String(event.eventKey).trim().toLowerCase();
+      const source=(event.sources||[]).find(s=>Date.parse(s.publishedAt)>=Date.parse(displayWindowStart)&&Date.parse(s.publishedAt)<Date.parse(start));
+      if(!source||fresh.has(key)||out.some(c=>c.eventKey.toLowerCase()===key)) continue;
+      out.push({fromEdition:old.id,group,eventKey:event.eventKey,title:event.title,fact:event.fact,url:source.url,publishedAt:source.publishedAt});
+    }
+  }
+  return out;
+}
 function run(command,args,{cwd=ROOT,stdin,signal,timeout=120000,env=process.env,log}={}) {
   return new Promise((resolve,reject)=> {
     const child=spawn(command,args,{cwd,env,signal,stdio:['pipe','pipe','pipe']});
@@ -65,7 +84,8 @@ async function executeJob(job,config,api,{collect}={}) {
       const previous=fs.existsSync(previousPath)?readJson(previousPath):{accounts:{}};
       const start=windowStart(editions,job);
       if(!fs.existsSync(resultFile)) {
-        const prompt=collectorPrompt(job,checkout,start,previous);
+        const window={...displayWindow(job.cutoff),uncovered:uncoveredRanges(readCoverage(checkout),job.page,start,job.cutoff)};
+        const prompt=collectorPrompt(job,checkout,start,previous,window);
         if(collect) writeJson(resultFile,await collect(job,prompt));
         else {
           const scratch=path.join(dir,'research');fs.mkdirSync(scratch,{recursive:true});
@@ -83,7 +103,7 @@ async function executeJob(job,config,api,{collect}={}) {
       if(!['grok-app','grok-web'].includes(input.collectionPath)) throw new Error('来源不符合要求：只允许本机 Grok Bot App 或 Grok 网页版');
       let outcome,files;
       if(job.page==='news') {
-        const brief=prepareNews(input,job,start,sourceIndex(registry));
+        const brief=prepareNews(input,job,start,sourceIndex(registry),new Date(),carriedOver(checkout,editions,job,start,input));
         const file=path.join(checkout,'data/stock-briefs',brief.id+'.json');
         // On a crash after writing, reuse the frozen edition instead of changing generatedAt.
         if(!fs.existsSync(file)) saveBrief(brief,checkout);
@@ -105,6 +125,9 @@ async function executeJob(job,config,api,{collect}={}) {
         writeJson(peoplePath,result.data);
         files=['data/people-intelligence.json'];
       }
+      // Record which time span and queries this job searched, for later dedupe.
+      writeJson(path.join(checkout,'data/search-coverage.json'),recordCoverage(readCoverage(checkout),{jobId:job.id,page:job.page,start,end:job.cutoff,queries:job.page==='news'?(input.coverage?.queries||[]):(input.tabs||[]).map(t=>`${t.id}: ${t.note}`),recordedAt:new Date().toISOString()}));
+      files.push('data/search-coverage.json');
       const marker=`data/update-receipts/${job.id}.json`;
       writeJson(path.join(checkout,marker),{id:job.id,page:job.page,cutoff:job.cutoff,...outcome,publishedAt:new Date().toISOString()});
       files.push(marker);
@@ -182,4 +205,4 @@ async function main() {
   } while(true);
 }
 if(require.main===module) main().catch(error=>{console.error(error.message);process.exitCode=1;});
-module.exports={run,executeJob,client};
+module.exports={carriedOver,run,executeJob,client};

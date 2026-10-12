@@ -113,6 +113,15 @@ for (const week of earnings.weeks) {
   }
 }
 
+{
+  const covFile = path.join(ROOT, 'data/search-coverage.json');
+  if (fs.existsSync(covFile)) {
+    const cov = readJson(covFile);
+    if (!Array.isArray(cov.records)) fail('search-coverage records missing');
+    for (const r of cov.records || []) if (!r.jobId || !r.page || !(Date.parse(r.start) < Date.parse(r.end)) || !Array.isArray(r.queries)) fail(`search-coverage record invalid: ${r.jobId}`);
+  }
+}
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);

@@ -39,7 +39,9 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
   requireValue(cutoff <= new Date(now).getTime(), '不能提前发布未来期次');
   brief.id = brief.trigger === 'manual' ? `manual-${brief.requestId}` : brief.scheduledFor.slice(0, 10) + '-' + brief.scheduledFor.slice(11, 16).replace(':', '');
   brief.timezone = config.timezone;
-  brief.schemaVersion = 1;
+  // v2 = separated display/search windows, pre-search checklist and candidate mapping are mandatory.
+  const v2 = brief.displayWindowStart !== undefined;
+  brief.schemaVersion = v2 ? 2 : 1;
   brief.generatedAt = new Date(now).toISOString();
   requireValue(['complete', 'partial', 'failed'].includes(brief.status), '无效简报状态');
   requireValue(nonempty(brief.summary), '需要本期市场概览');
@@ -49,6 +51,16 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
   requireValue(nonempty(brief.coverage?.method) && Array.isArray(brief.coverage?.queries) && Array.isArray(brief.coverage?.gaps), '需要采集方式、查询范围及覆盖缺口');
   requireValue(brief.coverage.queries.every(nonempty) && brief.coverage.gaps.every(nonempty), '查询与缺口必须为文字');
   if (brief.status !== 'failed') requireValue(brief.coverage.queries.length > 0, '有结果的期次需要保留实际查询');
+  if (v2) {
+    const ds = timestamp(brief.displayWindowStart, 'displayWindowStart');
+    requireValue(timestamp(brief.displayWindowEnd, 'displayWindowEnd') === cutoff, '展示窗口必须结束于信息截止');
+    requireValue(ds <= cutoff - 86400000, '展示窗口必须覆盖截止前完整 24 小时');
+    requireValue(Array.isArray(brief.checklist) && (brief.status === 'failed' || brief.checklist.length > 0), '需要检索前清单');
+    requireValue(brief.checklist.every(c => nonempty(c.item) && ['covered','no-result','insufficient'].includes(c.status)), '清单每项需要内容与状态（covered/no-result/insufficient）');
+    requireValue(brief.checklist.filter(c => c.status !== 'covered').every(c => nonempty(c.note)), '未覆盖的清单项需要说明');
+    requireValue(Array.isArray(brief.candidates ?? (brief.status === 'failed' ? [] : null)) && (brief.candidates || []).every(c => nonempty(c.eventKey) && [1,2].includes(c.round) && ['selected','excluded'].includes(c.decision) && nonempty(c.reason)), '需要两轮候选到入选的映射与理由');
+    requireValue(Array.isArray(brief.carriedOver) && brief.carriedOver.every(c => nonempty(c.fromEdition) && nonempty(c.eventKey) && nonempty(c.title) && ['focus','insights'].includes(c.group) && timestamp(c.publishedAt, 'carriedOver.publishedAt') >= ds && Date.parse(c.publishedAt) < start), '展示窗口沿用条目必须来自更早期次且位于展示窗口内');
+  }
   requireValue(nonempty(brief.selectionRationale), '需要两组事件的比较与排序依据');
   requireValue(Array.isArray(brief.excludedCandidates), '需要保留主要落选候选及理由');
   requireValue(brief.excludedCandidates.every(c => nonempty(c.eventKey) && nonempty(c.reason)), '落选候选缺少事件或理由');
@@ -137,8 +149,12 @@ function saveBrief(brief, root = ROOT) {
   const index = fs.existsSync(indexFile) ? readJson(indexFile) : { schemaVersion: 1, editions: [] };
   const entry = { id: brief.id, trigger: brief.trigger || 'scheduled', scheduledFor: brief.scheduledFor, generatedAt: brief.generatedAt, status: brief.status, counts: brief.counts, file: `${brief.id}.json` };
   const sorted = [entry, ...index.editions.filter(e => e.id !== brief.id)].sort((a,b) => Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor));
-  index.editions = sorted.slice(0, config.historyLimit || 3);
-  for (const expired of sorted.slice(config.historyLimit || 3)) {
+  // Manual tests never evict scheduled archives: each trigger has its own limit.
+  const limit = trigger => (typeof config.historyLimit === 'object' ? config.historyLimit[trigger] : config.historyLimit) || 3;
+  const kept = [], expiredList = [], seen = { scheduled: 0, manual: 0 };
+  for (const e of sorted) { const t = e.trigger || 'scheduled'; (seen[t]++ < limit(t) ? kept : expiredList).push(e); }
+  index.editions = kept;
+  for (const expired of expiredList) {
     const expiredFile = path.join(dir, expired.file);
     if (fs.existsSync(expiredFile)) fs.rmSync(expiredFile);
   }
@@ -147,4 +163,4 @@ function saveBrief(brief, root = ROOT) {
   fs.renameSync(temporary, indexFile);
   return archive;
 }
-module.exports = { config, slotAt, prepareBrief, saveBrief };
+module.exports = { config, beijingDay, slotAt, prepareBrief, saveBrief };

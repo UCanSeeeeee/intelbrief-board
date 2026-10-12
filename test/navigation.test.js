@@ -42,7 +42,8 @@ test('people intelligence has five research tabs and updated windows', () => {
 });
 
 test('legacy public routes lead to the new information architecture', () => {
-  assert.match(read('stocks.html'), /people\.html/);
-  assert.match(read('stocks.html'), /index\.html/);
-  assert.match(read('sources.html'), /url=index\.html/);
+  assert.equal(fs.existsSync(path.join(__dirname, '..', 'stocks.html')), false);
+  assert.equal(fs.existsSync(path.join(__dirname, '..', 'sources.html')), false);
+  assert.match(read('_worker.js'), /'\/stocks\.html': '\/index\.html'/);
+  assert.match(read('_worker.js'), /'\/sources\.html': '\/index\.html'/);
 });

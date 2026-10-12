@@ -64,7 +64,7 @@ test('real D1 API: auth, CSRF, concurrent deduplication, leases, partial failure
 
 test('manual editions freeze independently; manual updates never advance scheduled window',()=> {
   const cutoff='2026-10-11T10:42:00Z',job={id:crypto.randomUUID(),cutoff,trigger_type:'manual'};
-  const brief=prepareNews({status:'failed',summary:'测试采集失败',marketContext:'测试',coverage:{method:'测试',queries:[],gaps:['无可用来源']},selectionRationale:'测试',excludedCandidates:[],focus:[],insights:[],shortfallReason:'测试失败'},job,'2026-10-11T08:00:00Z',new Map(),new Date('2026-10-11T11:00:00Z'));
+  const brief=prepareNews({status:'failed',summary:'测试采集失败',marketContext:'测试',coverage:{method:'测试',queries:[],gaps:['无可用来源']},selectionRationale:'测试',excludedCandidates:[],focus:[],insights:[],shortfallReason:'测试失败',checklist:[]},job,'2026-10-11T08:00:00Z',new Map(),new Date('2026-10-11T11:00:00Z'));
   assert.equal(brief.id,'manual-'+job.id);
   const dir=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'manual-edition-test-'));
   try {saveBrief(brief,dir);assert.throws(()=>saveBrief({...brief,summary:'changed'},dir),/禁止覆盖/);} finally{fs.rmSync(dir,{recursive:true,force:true});}

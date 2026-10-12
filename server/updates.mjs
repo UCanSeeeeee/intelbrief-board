@@ -65,6 +65,18 @@ async function enqueue(db, input, now, scheduled=false) {
   await db.prepare('INSERT OR IGNORE INTO requests(id,job_ids,created_at) VALUES(?,?,?)').bind(input.requestId,JSON.stringify(ids),now).run();
   return JSON.parse((await db.prepare('SELECT job_ids FROM requests WHERE id=?').bind(input.requestId).first()).job_ids);
 }
+// Best-effort per-isolate login throttle: 5 failures per IP per 10 minutes. Not a global guarantee.
+const LOGIN_WINDOW=600000, LOGIN_MAX=5, loginFailures=new Map();
+export function loginBlocked(ip,now=Date.now()) {
+  const entry=loginFailures.get(ip);
+  if (!entry || now-entry.start>LOGIN_WINDOW) { loginFailures.delete(ip); return false; }
+  return entry.count>=LOGIN_MAX;
+}
+export function noteLoginFailure(ip,now=Date.now()) {
+  const entry=loginFailures.get(ip);
+  if (!entry || now-entry.start>LOGIN_WINDOW) loginFailures.set(ip,{start:now,count:1}); else entry.count++;
+  if (loginFailures.size>5000) loginFailures.clear();
+}
 export async function handleUpdates(request, env) {
   try {
     if (!env.UPDATES_DB || !env.UPDATE_ADMIN_KEY || !env.UPDATE_RUNNER_KEY) return json({error:'更新服务尚未接通，请完成后台配置',configured:false},503);
@@ -75,8 +87,11 @@ export async function handleUpdates(request, env) {
     } else {
       if (request.method!=='GET' && request.headers.get('Origin')!==new URL(request.url).origin) fail('请求来源无效',403);
       if (path==='/api/updates/login' && request.method==='POST') {
+        const ip=request.headers.get('CF-Connecting-IP')||'local';
+        if (loginBlocked(ip,now)) fail('登录失败次数过多，请 10 分钟后再试',429);
         const input=await body(request);
-        if (!await equal(input.key,env.UPDATE_ADMIN_KEY)) fail('管理密钥不正确',401);
+        if (!await equal(input.key,env.UPDATE_ADMIN_KEY)) { noteLoginFailure(ip,now); fail('管理密钥不正确',401); }
+        loginFailures.delete(ip);
         const token=`${now+30*86400000}.${crypto.randomUUID()}`;
         return json({authenticated:true},200,{'Set-Cookie':`${COOKIE}=${token}.${await sign(env.UPDATE_ADMIN_KEY,token)}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=2592000`});
       }
