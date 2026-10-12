@@ -43,7 +43,7 @@
       ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(payload.updatedAt))
       : '未知';
     $('earnings-state').textContent = `更新于 ${updated}（北京时间） · ${week.label} 重要 ${week.counts?.important ?? 0} / 原始 ${week.counts?.raw ?? 0}`;
-    $('earnings-summary').innerHTML = `<details class="reading-rules"><summary>本周范围与筛选规则</summary><div class="earnings-summary-card">
+    $('earnings-summary').innerHTML = `<p class="calendar-range">${escape(week.label)} · ${escape(week.weekStart)} 至 ${escape(week.weekEnd)}（美东日期）</p><details class="reading-rules"><summary>本周范围与筛选规则</summary><div class="earnings-summary-card">
       <p><strong>${escape(week.label)}</strong> ${escape(week.weekStart)} → ${escape(week.weekEnd)}</p>
       <p><strong>主源</strong> ${escape(payload.source?.name || 'Nasdaq')}</p>
       <p><strong>筛选</strong> 主题池（半导体 / 电力 / 软件 / 老牛股 / 新兴科技）优先，其余超大市值自主判断；每日最多 ${escape(payload.policy?.maxPerDay)} 家</p>
@@ -75,7 +75,7 @@
   function mountTabs() {
     const weeks = payload.weeks || [];
     $('earnings-week-tabs').innerHTML = weeks.map((week) =>
-      `<button type="button" role="tab" data-week="${escape(week.id)}" aria-selected="false" tabindex="-1"><strong>${escape(week.label)}</strong><span>${escape(week.weekStart)} → ${escape(week.weekEnd)} · ${escape(week.counts?.important || 0)} 家</span></button>`
+      `<button type="button" role="tab" data-week="${escape(week.id)}" aria-selected="false" tabindex="-1"><strong>${escape(week.label)}</strong></button>`
     ).join('');
     $('earnings-week-tabs').querySelectorAll('[role="tab"]').forEach((button) => {
       button.addEventListener('click', () => activate(button.dataset.week));
