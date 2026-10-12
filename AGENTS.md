@@ -32,7 +32,7 @@
 | 美股简报 | docs/STOCK_BRIEF.md、config/research-guidance.json 指向的知识库与 SOP |
 | 人物/个股/AI/加密 | 对应 docs 页面说明和 config 配置，再读研究知识与 SOP；窗口以上述配置为准 |
 | 财报、宏观日历 | docs/EARNINGS_CALENDAR.md、docs/MACRO_EVENTS.md，适用各自来源例外 |
-| 网页采集按钮/旧执行器 | docs/MANUAL_UPDATES.md；当前未接通，不恢复旧 Codex 采集 |
+| 网页采集按钮/旧执行器 | docs/MANUAL_UPDATES.md；当前未接通，不恢复旧 Codex 采集；只保留「全部更新」，禁止任何轮询/领单任务（2026-10-13） |
 
 只加载本任务需要的技能；仓库外共享技能仅在可用且相关时补充。云端没有本机技能路径时，使用已在仓库维护的知识与 SOP，不把个人目录路径当必备条件。
 

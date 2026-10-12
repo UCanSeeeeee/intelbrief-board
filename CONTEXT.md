@@ -1,6 +1,6 @@
 # CONTEXT.md — 接手说明
 
-最后更新：2026-10-12（Asia/Shanghai）
+最后更新：2026-10-13（Asia/Shanghai）
 
 ## 产品与边界
 
@@ -44,7 +44,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 - `assets/fluent/README.md`：页标题装饰素材的来源版本与许可。
 
 - `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：具体人物顶部 Tab、万亿美元公司高层、机构研报合集、AI 三层研究方向及降噪规则的待办与产品规划。
-- `docs/MANUAL_UPDATES.md`：全部更新、单页更新、云端配置、执行端及验收状态的主要维护位置。
+- `docs/MANUAL_UPDATES.md`：全部更新（2026-10-13起唯一入口，单页已取消）、云端配置、执行端及验收状态的主要维护位置。
 - `update-receipt.js` / `scripts/manual-update-receipt.js`：无平台回调的v2结果凭证与文件摘要核验；网页未直连时提供明确的复制指令交接，不冒充已送达。状态、配置授权与验收边界见MANUAL_UPDATES。
 - `updates.js` / `server/updates.mjs`：页面进度与任务队列代码；`scripts/update-runner.js` 仅保留模拟测试能力，生产入口停用。
 

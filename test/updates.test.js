@@ -5,6 +5,7 @@ const path=require('node:path');
 const crypto=require('node:crypto');
 const {Miniflare,convertV4MiniflareOptions}=require('miniflare');
 const root=path.resolve(__dirname,'..');
+const ALL=['news','people','tickers','ai','crypto'];
 const {preparePeople,preparePeopleIntelligence,prepareNews,windowStart}=require('../scripts/lib/update-results');
 const {collectorPrompt}=require('../scripts/lib/update-prompt');
 const {saveBrief}=require('../scripts/lib/stock-brief');
@@ -23,13 +24,15 @@ test('real D1 API: auth, CSRF, concurrent deduplication, leases, partial failure
     assert.equal((await call('/login',{key:'incorrect'})).status,401);
     const login=await call('/login',{key:'test-only-admin-key'});assert.equal(login.status,200);
     assert.match(login.headers.get('set-cookie'),/HttpOnly; Secure; SameSite=Strict/);cookie=login.headers.get('set-cookie').split(';')[0];
-    assert.equal((await call('',{requestId:crypto.randomUUID(),pages:['news']},false,{Origin:'https://attacker.test'})).status,403);
+    assert.equal((await call('',{requestId:crypto.randomUUID(),pages:ALL},false,{Origin:'https://attacker.test'})).status,403);
     const requestId=crypto.randomUUID();
-    const repeated=await Promise.all(Array.from({length:5},()=>call('',{requestId,pages:['news']})));
+    const repeated=await Promise.all(Array.from({length:5},()=>call('',{requestId,pages:ALL})));
     repeated.forEach(r=>assert.equal(r.status,202));
-    assert.equal(new Set(repeated.map(r=>r.data.jobIds[0])).size,1);
-    const all=await call('',{requestId:crypto.randomUUID(),pages:['news','people']});
-    assert.equal(all.data.jobs.length,2);
+    assert.equal(new Set(repeated.map(r=>r.data.jobIds.join())).size,1);
+    assert.equal(repeated[0].data.jobIds.length,5);
+    // Single-page and subset manual requests are rejected: only '全部更新' exists.
+    for (const subset of [['news'],['news','people'],ALL.slice(1)]) assert.equal((await call('',{requestId:crypto.randomUUID(),pages:subset})).status,400);
+    assert.equal((await call()).data.jobs.length,5);
     const runnerId=crypto.randomUUID();
     await call('/runner/heartbeat',{runnerId},true);
     assert.equal((await call()).data.online,true);
@@ -49,6 +52,7 @@ test('real D1 API: auth, CSRF, concurrent deduplication, leases, partial failure
     assert.equal(state.jobs.find(j=>j.id===second.id).status,'unchanged');
     assert.ok(state.lastSuccess[second.page]);
     assert.equal(state.jobs.some(j=>'lease' in j),false);
+    await db.prepare("UPDATE jobs SET status='failed',stage='failed' WHERE status='queued'").run();
     const retried=await call('/retry',{ids:[job.id]});assert.equal(retried.status,202);
     const retry=(await call('/runner/claim',{runnerId},true)).data.job;
     assert.equal(retry.id,job.id);assert.equal(retry.attempt,2);assert.notEqual(retry.lease,job.lease);
@@ -57,7 +61,7 @@ test('real D1 API: auth, CSRF, concurrent deduplication, leases, partial failure
     assert.equal((await call()).data.jobs.find(j=>j.id===retry.id).status,'failed');
     assert.equal((await call('/runner/progress',{id:retry.id,lease:retry.lease,stage:'publishing'},true)).status,409);
     // A reload restores the same persisted result, without creating anything.
-    assert.equal((await call()).data.jobs.length,2);
+    assert.equal((await call()).data.jobs.length,5);
     // Every live page is accepted by the actual SQL schema, not just the API allowlist.
     const pages=['news','people','tickers','ai','crypto'];
     const batch=await call('',{requestId:crypto.randomUUID(),pages});

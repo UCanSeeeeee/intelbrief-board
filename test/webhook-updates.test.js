@@ -14,7 +14,8 @@ async function setup(bindings,hook){
   return {mf,db,call,login,calls};
 }
 const full={UPDATE_ADMIN_KEY:'test-only-admin',GROK_WEBHOOK_URL:'https://hook.test/fake',GROK_WEBHOOK_KEY:'test-only-key',GROK_WEBHOOK_AUTH_HEADER:'TestScheme test-only-key'};
-const req=(pages=['news'])=>({requestId:crypto.randomUUID(),requestedAt:new Date().toISOString(),pages});
+const ALL=['news','people','tickers','ai','crypto'];
+const req=(pages=ALL)=>({requestId:crypto.randomUUID(),requestedAt:new Date().toISOString(),pages});
 
 test('missing any dependency (incl. auth header) disables dispatch; no Bearer default, no false accepted',async()=>{
   for(const drop of ['GROK_WEBHOOK_URL','GROK_WEBHOOK_KEY','GROK_WEBHOOK_AUTH_HEADER']){
@@ -39,25 +40,32 @@ test('unauthorized, cross-origin, whitelist and arbitrary prompt rejected',async
 test('2xx accepted with exact header/body; double-click and multi-device dedupe',async()=>{
   const t=await setup(full,()=>new Response('ok'));
   try{
-    await t.login();const r=req(['news']);
+    await t.login();const r=req();
     const clicks=await Promise.all(Array.from({length:4},()=>t.call('',r)));
     assert.equal(t.calls.length,1);assert.equal(t.calls[0].auth,full.GROK_WEBHOOK_AUTH_HEADER);
     assert.deepEqual(Object.keys(t.calls[0].body).sort(),['pages','requestId','requestedAt']);
     assert.ok(clicks.every(c=>c.data.requestId===r.requestId||c.status===409));
     assert.equal((await t.call('',r)).data.accepted,true);
-    const other=await t.call('',req(['news']));assert.equal(other.data.merged,true);assert.equal(other.data.requestId,r.requestId);
-    assert.equal((await t.call('',req(['news','people']))).status,409);
-    const all=await t.call('',req(['news','people','tickers','ai','crypto'].slice(1)));assert.equal(all.data.accepted,true);
-    assert.equal(t.calls.length,2);
+    const other=await t.call('',req());assert.equal(other.data.merged,true);assert.equal(other.data.requestId,r.requestId);
+    assert.equal(t.calls.length,1);
   }finally{await t.mf.dispose();}
 });
 test('non-2xx is not accepted; timeout is unconfirmed and never redispatched',async()=>{
   const t=await setup(full,n=>n===1?new Response('no',{status:401}):new Promise(()=>{}));
   try{
     await t.login();
-    const bad=await t.call('',req(['ai']));assert.equal(bad.status,502);assert.equal(bad.data.accepted,false);
-    const r=req(['ai']);const slow=await t.call('',r);
+    const bad=await t.call('',req());assert.equal(bad.status,502);assert.equal(bad.data.accepted,false);
+    const r=req();const slow=await t.call('',r);
     assert.equal(slow.status,202);assert.equal(slow.data.accepted,false);assert.equal(slow.data.unconfirmed,true);assert.equal(slow.data.requestId,r.requestId);
     const again=await t.call('',r);assert.equal(again.data.unconfirmed,true);assert.equal(t.calls.length,2);
+  }finally{await t.mf.dispose();}
+});
+test('server rejects single-page and subset requests; only full update dispatches',async()=>{
+  const t=await setup(full,()=>new Response('ok'));
+  try{
+    await t.login();
+    for(const subset of [['news'],['people'],['news','people'],ALL.slice(1),[...ALL,'news']])assert.equal((await t.call('',req(subset))).status,400);
+    assert.equal(t.calls.length,0);
+    const ok=await t.call('',req());assert.equal(ok.status,202);assert.equal(ok.data.accepted,true);assert.deepEqual(t.calls[0].body.pages,ALL);
   }finally{await t.mf.dispose();}
 });

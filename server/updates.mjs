@@ -43,12 +43,15 @@ async function state(db, now) {
   const latest=await db.prepare('SELECT MAX(seen_at) AS seen FROM runner').first();
   return {authenticated:true,online:!!latest?.seen && now-latest.seen<90000,jobs:jobs.map(publicJob),lastSuccess:Object.fromEntries(PAGES.map(page=>[page,successes.find(j=>j.page===page)?.updated_at || null]))};
 }
-async function enqueue(db, input, now, scheduled=false) {
+// 2026-10-13: manual requests must cover all five pages (single '全部更新' entry); internal retries may reuse one page.
+const allPages=pages=>pages.length===PAGES.length && PAGES.every(p=>pages.includes(p));
+async function enqueue(db, input, now, scheduled=false, internalRetry=false) {
   if (!idOK(input.requestId)) fail('请求编号无效');
   const previous=await db.prepare('SELECT job_ids FROM requests WHERE id=?').bind(input.requestId).first();
   if (previous) return JSON.parse(previous.job_ids);
   const pages=[...new Set(input.pages || [])];
   if (!pages.length || pages.some(p=>!PAGES.includes(p)) || (scheduled && (pages.length!==1 || pages[0]!=='news'))) fail('更新范围无效');
+  if (!scheduled && !internalRetry && !allPages(pages)) fail('只接受全部更新，不接受单页或部分页面');
   if (scheduled && (!/^\d{4}-\d{2}-\d{2}T(?:09|16|21):00:00\+08:00$/.test(input.scheduledFor) || Date.parse(input.scheduledFor)>now)) fail('定时期次无效');
   const cutoff=scheduled ? new Date(input.scheduledFor).toISOString() : new Date(now).toISOString();
   const statements=pages.map(page=>db.prepare('INSERT OR IGNORE INTO jobs(id,page,trigger_type,cutoff,created_at,updated_at) VALUES(?,?,?,?,?,?)').bind(crypto.randomUUID(),page,scheduled?'scheduled':'manual',cutoff,now,now));
@@ -111,7 +114,7 @@ async function legacy(request, env) {
       for (const id of input.ids) {
         const job=await db.prepare('SELECT * FROM jobs WHERE id=?').bind(id).first();
         if (!job || job.status!=='failed') continue;
-        if (job.result) { await enqueue(db,{requestId:crypto.randomUUID(),pages:[job.page]},now); continue; }
+        if (job.result) { await enqueue(db,{requestId:crypto.randomUUID(),pages:[job.page]},now,false,true); continue; }
         // Retry the same cutoff/archive; runner checkpoints prevent recollection after publication failures.
         await db.prepare("UPDATE OR IGNORE jobs SET status='queued',stage='queued',message='',created_at=?,updated_at=?,lease=NULL,lease_until=NULL,attempt=attempt+1 WHERE id=? AND status='failed'").bind(now,now,id).run();
       }
@@ -162,6 +165,7 @@ function webhookInput(input, now) {
   if (!Array.isArray(input.pages)) fail('更新范围无效');
   const pages=PAGES.filter(p=>input.pages.includes(p));
   if (!pages.length || pages.length!==input.pages.length || input.pages.some(p=>!PAGES.includes(p))) fail('更新范围无效');
+  if (!allPages(pages)) fail('只接受全部更新，不接受单页或部分页面');
   return {requestId:input.requestId,requestedAt:input.requestedAt,pages};
 }
 const view=row=>({delivery:'grok-webhook',requestId:row.id,requestedAt:row.requested_at,pages:JSON.parse(row.pages),accepted:row.status==='accepted',unconfirmed:row.status==='unconfirmed'||row.status==='dispatching',status:row.status});
