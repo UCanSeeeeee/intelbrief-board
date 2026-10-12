@@ -68,6 +68,22 @@ test('partial and failed editions carry explicit shortfall',()=> {
   assert.throws(()=>prepare(b),/缺额/); b.shortfallReason='只有两条符合条件'; assert.equal(prepare(b).counts.total,2);
   b.status='failed'; assert.throws(()=>prepare(b),/失败/); b.focus=[]; assert.equal(prepare(b).counts.total,0);
 });
+test('completed searches with zero qualifying events remain partial, not failed',()=> {
+  const b=fixture();
+  Object.assign(b,{status:'partial',focus:[],insights:[],shortfallReason:'两轮已执行，候选无实质新增，未达到价值门槛',displayWindowStart:'2026-10-10T21:00:00+08:00',displayWindowEnd:b.scheduledFor,carriedOver:[],candidates:[],checklist:[{item:'第一轮市场焦点',status:'no-result',note:'仅测试，无合格候选'},{item:'第二轮六包独立检索',status:'no-result',note:'仅测试，无合格候选'}]});
+  b.coverage.queries=['测试第一轮查询','测试第二轮独立查询'];
+  const result=prepare(b);
+  assert.equal(result.status,'partial');
+  assert.equal(result.counts.total,0);
+  assert.equal(result.schemaVersion,2);
+  b.coverage.queries=[];assert.throws(()=>prepare(b),/实际查询/);
+  b.coverage.queries=['测试查询'];b.shortfallReason='';assert.throws(()=>prepare(b),/缺额原因/);
+});
+test('research priority headings are not knowledge card identifiers',()=> {
+  const b=fixture();b.insights[0].knowledgeCards=['P1'];
+  assert.throws(()=>prepare(b),/有效知识卡编号/);
+  b.insights[0].knowledgeCards=['I01','I02'];assert.equal(prepare(b).counts.total,15);
+});
 test('archives are immutable and only the latest three editions are retained',()=> {
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'stock-brief-test-'));
   try {

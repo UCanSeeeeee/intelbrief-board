@@ -130,7 +130,9 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
   }
   const count = brief.focus.length + brief.insights.length;
   if (brief.status === 'complete') requireValue(brief.focus.length === 5 && brief.insights.length === 10, '完整期次必须为 5+10');
-  if (brief.status === 'partial') requireValue(count > 0 && count < 15 && nonempty(brief.shortfallReason), '不完整期次需要实际条目与缺额原因');
+  // A completed search can legitimately yield zero qualifying events. It is not
+  // a collection failure; actual queries and the shortfall explanation remain required.
+  if (brief.status === 'partial') requireValue(count < 15 && nonempty(brief.shortfallReason), '不完整期次需要实际检索记录与缺额原因');
   if (brief.status === 'failed') requireValue(count === 0 && nonempty(brief.shortfallReason), '失败期次不能冒充有结果');
   brief.counts = { focus: brief.focus.length, insights: brief.insights.length, total: count };
   return brief;

@@ -44,7 +44,7 @@
 | `carriedOver` | 展示窗口内、来自更早期次的条目引用（fromEdition、group、eventKey、title、fact、url、publishedAt），执行器写入 |
 | `checklist` | v2 必填：检索前清单 `[{item,status:covered/no-result/insufficient,note}]`，未覆盖项必须写 note |
 | `candidates` | v2 必填：两轮候选到入选的映射 `[{eventKey,round:1/2,decision:selected/excluded,reason}]` |
-| `status` | `complete` 完整、`partial` 缺额、`failed` 失败 |
+| `status` | `complete` 完整、`partial` 缺额（实际检索后0条合格也属此类，须有查询、清单与原因）、`failed` 采集失败；不能因0条就判采集失败 |
 | `summary`, `marketContext` | 市场概览与交易时段/休市背景；保留在数据中供审计，不在期次选择区展示 |
 | `coverage` | `{method:文字, queries:[实际查询], gaps:[缺口]}` |
 | `selectionRationale` | 两组的比较及排序理由 |
