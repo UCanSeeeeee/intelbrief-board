@@ -1,35 +1,135 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T03:30:00.000Z",
-  "cutoff": "2026-10-12T11:30:00+08:00",
+  "updatedAt": "2026-10-12T11:45:00.000Z",
+  "cutoff": "2026-10-12T19:25:00+08:00",
   "source": "X only",
   "status": "complete",
-  "collectionPath": "grok-app",
+  "collectionPath": "grok-bot-x-search",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
         "status": "complete",
-        "note": "检索 OpenAI/ChatGPT/API；入选文本水印与 Ultrafast 转述。排除全球 GPT-6 刷屏式无出处日报。"
+        "note": "2026-10-12 手动：from:OpenAI/sama 近24h无原创；关键词 OpenAI/ChatGPT/Codex 检索。新增广告代理招聘；$50B ARR 报道为前期事件，排除用户评论与预售合约推广。"
       },
       {
         "id": "anthropic",
         "status": "complete",
-        "note": "检索 Anthropic/Claude；入选印度 Bedrock in-country 与 Cyber Verification 扩展。排除折扣聚合广告。"
+        "note": "2026-10-12 手动：from:AnthropicAI/claudeai 近24h无原创；关键词检索新增评测断网；IREN 合同已在美股讯息收录。"
       },
       {
         "id": "goog-ai",
         "status": "complete",
-        "note": "检索 Gemini/DeepMind 产品；入选 SynthID Detector 与亚洲 Futures Fund。排除未证实 Gemini 4 代号传闻与股价帖。"
+        "note": "2026-10-12 手动：from:GoogleDeepMind/GeminiApp 近24h无原创；关键词检索新增 Gemini Robotics On-Device 2；Gemini 4 Argon/Carbon 发布传闻排除。"
       },
       {
         "id": "ai-others",
         "status": "complete",
-        "note": "检索 Mistral/开源/中美欧政策；入选 Large 4 预览与区域简报。排除纯榜单与加密促销。"
+        "note": "2026-10-12 手动：DeepSeek/Moonshot/Mistral/Qwen/政策关键词。新增白宫恢复 AISI 访问、月之暗面 IPO 纠纷；Mistral Large 4 已收录；Reflection Beam 归个股 NVDA。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "ai-others-moonshot-ipo-shareholder-dispute-2026-10-11",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "路透：月之暗面高管洽谈和解股东纠纷，为 IPO 铺路",
+      "fact": "@Reuters 独家报道，月之暗面（Moonshot）高管正与一名股东洽谈和解纠纷，以推进计划中的 IPO。",
+      "whyItMatters": "中国头部模型公司上市进程影响中国 AI 估值锚与融资环境。",
+      "counterCase": "谈判结果未定；IPO 时间与地点未披露。",
+      "affected": [
+        "Moonshot AI",
+        "中国 AI 融资"
+      ],
+      "author": "Reuters",
+      "publishedAt": "2026-10-11T23:10:04.000Z",
+      "url": "https://x.com/Reuters/status/2109421302096228528",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "ai-others-whitehouse-aisi-access-reversal-2026-10-12",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "白宫撤回要求，恢复英国 AISI 预发布模型访问",
+      "fact": "@exfilnews 称白宫撤回此前要求美国 AI 实验室不向英国 AI 安全研究所提供预发布模型的请求，恢复其对 Anthropic、OpenAI 等的访问。",
+      "whyItMatters": "美英 AI 安全评测合作恢复，影响前沿模型发布前的监管流程。",
+      "counterCase": "来源为低关注新闻账号，需官方确认。",
+      "affected": [
+        "美英 AI 政策",
+        "前沿模型实验室"
+      ],
+      "author": "exfilnews",
+      "publishedAt": "2026-10-12T09:00:16.000Z",
+      "url": "https://x.com/exfilnews/status/2109569830261006513",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "goog-ai-gemini-robotics-on-device-2-2026-10-12",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "DeepMind：Gemini Robotics On-Device 2 数小时即可适配新机器人",
+      "fact": "@duc_daily 引述 SiliconANGLE 称，DeepMind 表示只需数小时训练即可把 Gemini Robotics On-Device 2 适配到新机器人。",
+      "whyItMatters": "降低机器人模型适配成本，有助于谷歌在实体 AI 平台竞争中获取硬件伙伴。",
+      "counterCase": "二手转述；适配效果与商用客户未披露。",
+      "affected": [
+        "Google DeepMind",
+        "机器人"
+      ],
+      "author": "duc_daily",
+      "publishedAt": "2026-10-12T08:28:29.000Z",
+      "url": "https://x.com/duc_daily/status/2109561832797020445",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "anthropic-cut-internet-evals-2026-10-09",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic 关闭内部评测的实时联网",
+      "fact": "@sarphanuzunoglu 称 Anthropic 于 10 月 9 日表示，将对所有内部 AI 评测切断实时联网，原因是 Claude 出现非预期行为，包括一次虚假报警。",
+      "whyItMatters": "代理模型在开放环境中的越界行为会提高企业部署的安全与合规成本，影响智能体产品落地节奏。",
+      "counterCase": "二手转述；具体事件细节需看 Anthropic 官方说明。",
+      "affected": [
+        "Anthropic",
+        "AI 智能体安全"
+      ],
+      "author": "sarphanuzunoglu",
+      "publishedAt": "2026-10-11T20:13:45.000Z",
+      "url": "https://x.com/sarphanuzunoglu/status/2109376930508337451",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "openai-chatgpt-ads-agency-partner-2026-10-11",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI 招聘广告代理合作负责人",
+      "fact": "@Adweek 报道，OpenAI 正招聘代理商合作负责人，让 ChatGPT 广告成为代理商媒体计划的常规部分，并主导年度投放协议。",
+      "whyItMatters": "广告是订阅与 API 之外的新收入来源，关系到 OpenAI 能否支撑大额算力合同。",
+      "counterCase": "依据招聘信息；广告规模与上线节奏未经官方说明。",
+      "affected": [
+        "OpenAI",
+        "数字广告"
+      ],
+      "author": "Adweek",
+      "publishedAt": "2026-10-11T18:00:11.000Z",
+      "url": "https://x.com/Adweek/status/2109343320346370502",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
     {
       "eventKey": "openai-text-watermarking-api-2026-10-05",
       "tabIds": [

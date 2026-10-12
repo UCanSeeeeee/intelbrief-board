@@ -1,50 +1,112 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T03:00:00.000Z",
-  "cutoff": "2026-10-12T11:00:00+08:00",
+  "updatedAt": "2026-10-12T11:45:00.000Z",
+  "cutoff": "2026-10-12T19:25:00+08:00",
   "source": "X only",
-  "status": "complete",
-  "collectionPath": "grok-app",
+  "status": "partial",
+  "collectionPath": "grok-bot-x-search",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
         "status": "complete",
-        "note": "检索 $NVDA/NVIDIA/GPU|HBM|Blackwell；入选 vLLM Rubin 支持与 Surface RTX Spark。排除喊单与无关算力股刷屏。"
+        "note": "2026-10-12 手动：$NVDA/Nvidia 近24h。新增 Reflection AI 加码洽谈与 Beam；排除荐股与 P/S 刷屏。"
       },
       {
         "id": "mu",
         "status": "complete",
-        "note": "检索 $MU/Micron/HBM；入选 Nomura LTA 结构、JPM 紧平衡至 CY28、台湾罢工授权。排除纯目标价刷屏。"
+        "note": "2026-10-12 手动：$MU/Micron/DRAM 近24h。新增美银 DDR5 合约价；排除 EPS 喊单与 HBM 份额观点帖。"
       },
       {
         "id": "intc",
         "status": "complete",
-        "note": "检索 $INTC/Intel/18A|foundry；入选 18A HVM/外部收入与 Jeff Pu 封装客户预期。排除未证实 Apple 传闻入选。"
+        "note": "2026-10-12 手动：$INTC/Intel/18A/Foundry 近24h。新增 CPU 涨价；Amkor 松岛工厂系列帖为个人观点，排除。"
       },
       {
         "id": "goog",
-        "status": "complete",
-        "note": "检索 $GOOG/$GOOGL/Gemini|TPU|capex；入选 ~$200B capex 讨论与免费 Gemini 分层调整。"
+        "status": "partial",
+        "note": "2026-10-12 手动：$GOOG/$GOOGL 组合查询近24h，无股权口径合格新增；Gemini 产品动态归 AI 页。仅一轮组合查询。"
       },
       {
         "id": "avgo",
-        "status": "complete",
-        "note": "检索 $AVGO/Broadcom/Tomahawk|ASIC；入选 Tomahawk 6 出货与 Anthropic 租赁支持转述。"
+        "status": "partial",
+        "note": "2026-10-12 手动：$AVGO/Broadcom 组合查询近24h，仅 DSP 分配观点帖，无合格新增。"
       },
       {
         "id": "vrt",
-        "status": "complete",
-        "note": "检索 $VRT/Vertiv/cooling|power；入选 BMO 覆盖与官方 CoolChip CDU 规格。"
+        "status": "partial",
+        "note": "2026-10-12 手动：$VRT/Vertiv 组合查询近24h，无合格新增。"
       },
       {
         "id": "tsm",
         "status": "complete",
-        "note": "检索 $TSM/TSMC/CoWoS|营收；入选 10/15 电话会预告、9 月营收转述、GF 中介层协议。"
+        "note": "2026-10-12 手动：$TSM/TSMC 近24h。GF 中介层合约已于10/09收录不重复；N2 毛利预览为观点帖，排除；0 新增。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "mu-ddr5-contract-48-bofa-2026-10-11",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "美银：9 月 DDR5 合约价环比再涨 3%",
+      "fact": "@OptionKing666 引述美银研究称，主流 16Gb DDR5 合约价 9 月环比上涨 3% 至 48 美元，同比涨幅超过 500%，固定价格未见折让。",
+      "whyItMatters": "合约价持续上行支撑美光 DRAM 毛利与下季指引。",
+      "counterCase": "二手转述美银数据；单月涨幅收窄可能意味着涨势放缓。",
+      "affected": [
+        "MU",
+        "DRAM 合约价"
+      ],
+      "author": "OptionKing666",
+      "publishedAt": "2026-10-11T12:16:54.000Z",
+      "url": "https://x.com/OptionKing666/status/2109256928958521672",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "nvda-reflection-ai-beam-talks-2026-10-12",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "英伟达洽谈加码 Reflection AI，后者发布开放权重模型 Beam",
+      "fact": "@uncommonprofit 称英伟达正洽谈进一步投资 Reflection AI；Reflection 已发布首个开放权重模型 Beam，对标 DeepSeek、Kimi 等低成本模型。",
+      "whyItMatters": "英伟达加码美国开放权重模型，有助于维持 GPU 在开源推理生态中的需求，也属于“供应商投资客户”的循环融资结构。",
+      "counterCase": "投资条款与估值未经双方确认；Beam 实际采用度未知。",
+      "affected": [
+        "NVDA",
+        "开放权重模型生态"
+      ],
+      "author": "uncommonprofit",
+      "publishedAt": "2026-10-12T07:26:46.000Z",
+      "url": "https://x.com/uncommonprofit/status/2109546301801259017",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "intc-cpu-price-hike-tsmc-wafer-2026-10-12",
+      "tabIds": [
+        "intc"
+      ],
+      "title": "英特尔等据报上调 CPU 价格",
+      "fact": "@SemiconductorsX 引述《工商时报》供应链消息称，英特尔、高通与 AMD 均在上调 CPU 价格，共同成本来源是台积电先进晶圆。",
+      "whyItMatters": "涨价可部分抵消外购晶圆成本，影响英特尔客户端与数据中心毛利；也反映 AI 代理带动服务器 CPU 需求。",
+      "counterCase": "二手转述；涨幅、产品线与生效时间未披露，需看英特尔财报与渠道价格。",
+      "affected": [
+        "INTC",
+        "AMD",
+        "QCOM",
+        "PC 供应链"
+      ],
+      "author": "SemiconductorsX",
+      "publishedAt": "2026-10-12T03:17:11.000Z",
+      "url": "https://x.com/SemiconductorsX/status/2109483493793345622",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
     {
       "eventKey": "nvda-vllm-vera-rubin-nvl72-2026-10-09",
       "tabIds": [

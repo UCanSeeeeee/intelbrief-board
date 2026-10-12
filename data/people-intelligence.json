@@ -1,39 +1,81 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T16:09:55.000Z",
-  "cutoff": "2026-10-12T00:08:00+08:00",
+  "updatedAt": "2026-10-12T11:45:00.000Z",
+  "cutoff": "2026-10-12T19:25:00+08:00",
   "source": "X only",
-  "status": "complete",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "get_users_posts+search from:elonmusk，窗口 latest≈24h(2026-10-10T16:08Z起)与 weekly7d。入选芯片招聘、Cybercab、Starlink印度定价、Grok Bot下单；周榜另纳入电力指标与频谱直连手机。排除住址/邮件隐私帖与纯促销短帖。24h内高价值仅4条，未凑满5。"
+        "note": "2026-10-12 手动：from:elonmusk 近24h（10-11T11:30Z 起）13 条原创。新增 Terafab 招募；其余为 Grok Bot 推广、表情与隐私相关帖，排除。"
       },
       {
         "id": "jensen-huang",
         "status": "complete",
-        "note": "已确认本人账号@JensenHuang；get_users_posts近7日仅1条原创（与纳德拉Windows/CUDA/Azure叙事）。另检索CNBC/Bloomberg/Reuters/nvidia及媒体转述；24h内无达标新产品/供需原话。National Medal与比特币储电等多为二手或仪式性，按门槛未入选最新区。items：本人1条进周榜。"
+        "note": "2026-10-12 手动：from:JensenHuang + \"Jensen Huang\" 近24h。仅见 GTC 10/21 主题演讲预告、“没有 Windows 就没有英伟达”等转述与生活类内容，无达标新事实，本次 0 新增。"
       },
       {
         "id": "donald-trump",
         "status": "complete",
-        "note": "主源get_users_posts @TrumpDailyPosts（Truth Social同步，非官方）；可执行政策取@WhiteHouse（@POTUS窗口内0条原创）。收录能源停火、柴油EO、核电42亿美元、加班免税。排除Sharia/哥伦布日/选举口水。24h高价值2条，周榜5条。"
+        "note": "2026-10-12 手动：from:TrumpDailyPosts/POTUS/WhiteHouse 近24h。新增贝森特对伊朗孤立行动；能源停火已收录；新闻秘书更替、哥伦布日、政治口水排除。"
       },
       {
         "id": "trillion-leaders",
-        "status": "complete",
-        "note": "近30天检索 satyanadella/sundarpichai/tim_cook/Meta/amazon/Google/Microsoft。入选纳德拉Windows智能体与NVIDIA合作、Decision-1、Copilot OS；皮查伊Gemini agent；谷歌Suncatcher太空TPU；亚马逊自研芯片十年与Physical AI。Cook窗口内无AI/半导体/电力传导帖。按事件去重，达门槛才收。"
+        "status": "partial",
+        "note": "2026-10-12 手动：查 satyanadella/sundarpichai/tim_cook/ajassy/finkd/MSFTCFO/LisaSu 近7日原创，结果均为已收录或仪式性帖（国家科学奖章致谢等），无新增。仅查本人账号，未补查其他高管与媒体转述。"
       },
       {
         "id": "research-reports",
-        "status": "complete",
-        "note": "近30天检索具名投行评级/目标价变化（MS/BofA/UBS等）。入选：MS重申NVDA顶级半导体并指向电力瓶颈；BofA上调NVDA目标价与TAM；MS上调BorgWarner因AI电力；MS下调Exelon因数据中心负荷能见度。均为X二手转述，fact标明未独立核验付费研报原文；灌水喊单与无法归因帖落选。"
+        "status": "partial",
+        "note": "2026-10-12 手动：查主要投行对英伟达/美光/台积电/博通/存储的评级与目标价变化，返回 2 条无关期权推广帖，无合格新增；检索面窄，标为部分覆盖。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "trump-bessent-iran-isolation-campaign-2026-10-11",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "贝森特公布对伊朗精英“绝对孤立”行动",
+      "fact": "@TrumpDailyPosts（Truth Social 内容搬运账号，非官方）称财长贝森特公布特朗普政府针对伊朗精英的“绝对孤立行动”。",
+      "whyItMatters": "进一步制裁伊朗会影响霍尔木兹航运与原油供给预期，叠加当前油轮袭击，推高能源风险溢价与通胀预期。",
+      "counterCase": "帖子未列出具体制裁对象、生效时间或执行机制；需以财政部 OFAC 正式公告核实。",
+      "affected": [
+        "原油与航运",
+        "能源股",
+        "通胀预期"
+      ],
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-11T21:23:00.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2109394357908574617",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
+    {
+      "eventKey": "elon-terafab-project-recruit-2026-10-12",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "马斯克招募 Terafab 项目人才",
+      "fact": "@elonmusk 发帖称“加入 Terafab 项目”，并称这座巨型设施的产出价值将排进全球国家 GDP 前 20。",
+      "whyItMatters": "延续其自建芯片制造的表态，若落地将改变特斯拉/SpaceX/xAI 对台积电等代工与存储供应的依赖，也是芯片设备与材料需求的潜在增量。",
+      "counterCase": "帖子未给出地点、投资额、工艺节点与时间表；产值说法是愿景表述，不是订单或产能数据。",
+      "affected": [
+        "芯片制造与设备",
+        "TSLA",
+        "xAI 算力供应"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-12T01:50:01.000Z",
+      "url": "https://x.com/elonmusk/status/2109461555066671311",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {}
+    },
     {
       "eventKey": "trump-no-tax-on-overtime-2026-10-11",
       "tabIds": [

@@ -1,44 +1,195 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T01:18:51.018Z",
-  "asOf": "2026-10-12T09:00:00+08:00",
+  "updatedAt": "2026-10-12T11:35:11.546Z",
+  "asOf": "2026-10-12T19:25:00+08:00",
   "events": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
       "firstSeenAt": "2026-10-11T15:48:56.844Z",
       "firstEdition": "manual-4fe5409c-785e-4dc4-bda7-37dcaa389aaa",
-      "history": [],
+      "history": [
+        {
+          "edition": "manual-4fe5409c-785e-4dc4-bda7-37dcaa389aaa",
+          "event": {
+            "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
+            "title": "特朗普宣布俄乌能源停火，泽连斯基称事先不知情",
+            "fact": "特朗普周日称俄罗斯与乌克兰已同意立即停止攻击能源基础设施，并要求双方不要打破。随后据 Axios，乌克兰总统泽连斯基表示该宣布对他而言是新闻，并称若俄罗斯同意能源停火乌方也可接受；莫斯科方面尚未确认。",
+            "impact": "若停火兑现，俄罗斯炼油与柴油出口能力的恢复预期可能压低成品油风险溢价，并影响通胀预期与利率路径；若仅是单方面声明，能源波动与避险溢价可能很快回摆。",
+            "direction": "双向",
+            "horizon": "未来数日至两周",
+            "affected": [
+              "柴油与原油",
+              "炼油与能源股",
+              "通胀预期",
+              "美股利率敏感板块"
+            ],
+            "counterCase": "若俄罗斯官方否认停火、能源设施在 48 小时内继续遇袭，或柴油裂解价差未回落，则该声明对供给与通胀的传导应下调。",
+            "selectionReason": "同时牵动地缘冲突、柴油供给、通胀与政策可信度，是窗口内影响面最广的新增事件。",
+            "credibilityReason": "有快讯与 Bloomberg 转述特朗普声明，并有泽连斯基否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
+            "change": "新增",
+            "eventTime": null,
+            "eventTimeNote": "特朗普宣布的准确当地时间未在所用帖文中写明；泽连斯基回应发生在宣布之后不久，精确时刻未知。",
+            "attentionEvidence": "DeItaone 相关快讯在窗口内获得约 14 万次展示，KobeissiLetter 转述泽连斯基回应约 28 万次展示；热度仅作注意力参考，不作事实证明。",
+            "sources": [
+              {
+                "url": "https://x.com/DeItaone/status/2109289408302309790",
+                "postId": "2109289408302309790",
+                "username": "DeItaone",
+                "publishedAt": "2026-10-11T14:25:58.000Z",
+                "checkedAt": "2026-10-11T15:46:40Z",
+                "excerpt": "TRUMP ANNOUNCES IMMEDIATE RUSSIA-UKRAINE ENERGY CEASEFIRE. Trump says Russia and Ukraine have agreed to halt attacks on energy infrastructure, effective immediately. Moscow and Kyiv have yet to confirm.",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/business/status/2109292950714785849",
+                "postId": "2109292950714785849",
+                "username": "business",
+                "publishedAt": "2026-10-11T14:40:02.000Z",
+                "checkedAt": "2026-10-11T15:46:40Z",
+                "excerpt": "President Donald Trump said Sunday that Russia and Ukraine have agreed to an energy ceasefire effective immediately.",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/KobeissiLetter/status/2109295156125983065",
+                "postId": "2109295156125983065",
+                "username": "KobeissiLetter",
+                "publishedAt": "2026-10-11T14:48:48.000Z",
+                "checkedAt": "2026-10-11T15:46:40Z",
+                "excerpt": "Ukraine's President Zelensky says the energy ceasefire between Ukraine and Russia announced by President Trump just minutes ago is news to me, per Axios.",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。 反向材料：泽连斯基否认事先知情。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "有快讯与 Bloomberg 转述特朗普声明，并有泽连斯基否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-10-12T11:35:11.546Z"
+        }
+      ],
       "group": "focus",
       "event": {
         "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
-        "title": "特朗普宣布俄乌能源停火，泽连斯基称事先不知情",
-        "fact": "特朗普周日称俄罗斯与乌克兰已同意立即停止攻击能源基础设施，并要求双方不要打破。随后据 Axios，乌克兰总统泽连斯基表示该宣布对他而言是新闻，并称若俄罗斯同意能源停火乌方也可接受；莫斯科方面尚未确认。",
-        "impact": "若停火兑现，俄罗斯炼油与柴油出口能力的恢复预期可能压低成品油风险溢价，并影响通胀预期与利率路径；若仅是单方面声明，能源波动与避险溢价可能很快回摆。",
+        "title": "克里姆林宫拒绝确认能源停火，泽连斯基称俄方已违反",
+        "fact": "克里姆林宫发言人佩斯科夫周一表示，关于特朗普所称的俄乌“能源停火”目前没有可宣布的内容，俄美接触仍在继续；泽连斯基同日称俄罗斯已违反该停火，并举出俄方对乌能源设施的打击。",
+        "impact": "停火未获莫斯科确认且已有违约指控，柴油与成品油的供给风险溢价难以持续回落；油价若重新走高，会通过通胀预期和长端利率压制估值敏感板块。",
         "direction": "双向",
         "horizon": "未来数日至两周",
         "affected": [
           "柴油与原油",
           "炼油与能源股",
           "通胀预期",
-          "美股利率敏感板块"
+          "利率敏感板块"
         ],
-        "counterCase": "若俄罗斯官方否认停火、能源设施在 48 小时内继续遇袭，或柴油裂解价差未回落，则该声明对供给与通胀的传导应下调。",
-        "selectionReason": "同时牵动地缘冲突、柴油供给、通胀与政策可信度，是窗口内影响面最广的新增事件。",
-        "credibilityReason": "有快讯与 Bloomberg 转述特朗普声明，并有泽连斯基否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "特朗普宣布的准确当地时间未在所用帖文中写明；泽连斯基回应发生在宣布之后不久，精确时刻未知。",
-        "attentionEvidence": "DeItaone 相关快讯在窗口内获得约 14 万次展示，KobeissiLetter 转述泽连斯基回应约 28 万次展示；热度仅作注意力参考，不作事实证明。",
+        "counterCase": "若俄方正式确认停火范围、双方能源设施在一周内未再遇袭，且柴油裂解价差回落，则供给风险溢价下降的判断成立。",
+        "selectionReason": "周末停火声明是本日油价下跌的主要依据，莫斯科不确认与违约指控直接决定这一跌幅能否维持。",
+        "credibilityReason": "Sky News 与 NOELreports 分别转述佩斯科夫和泽连斯基表态，两者相互独立，但均为媒体转述，未取得克里姆林宫原始文字。",
+        "change": "进展",
+        "eventTime": "2026-10-12T10:09:14Z",
+        "eventTimeNote": "佩斯科夫表态的准确时刻未知，取首个转述帖时间作近似。",
+        "attentionEvidence": "Sky News 帖约 3 万次展示，NOELreports 帖约 1.1 万次展示；仅作注意力参考。",
         "sources": [
           {
-            "url": "https://x.com/DeItaone/status/2109289408302309790",
-            "postId": "2109289408302309790",
-            "username": "DeItaone",
-            "publishedAt": "2026-10-11T14:25:58.000Z",
-            "checkedAt": "2026-10-11T15:46:40Z",
-            "excerpt": "TRUMP ANNOUNCES IMMEDIATE RUSSIA-UKRAINE ENERGY CEASEFIRE. Trump says Russia and Ukraine have agreed to halt attacks on energy infrastructure, effective immediately. Moscow and Kyiv have yet to confirm.",
+            "url": "https://x.com/SkyNews/status/2109587189952578019",
+            "postId": "2109587189952578019",
+            "username": "SkyNews",
+            "publishedAt": "2026-10-12T10:09:14Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "BREAKING: Kremlin spokesperson Dmitry Peskov says 'contacts are continuing' between Russia and the US over Donald Trump's claim of an 'energy ceasefire'.",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
@@ -70,53 +221,14 @@
             }
           },
           {
-            "url": "https://x.com/business/status/2109292950714785849",
-            "postId": "2109292950714785849",
-            "username": "business",
-            "publishedAt": "2026-10-11T14:40:02.000Z",
-            "checkedAt": "2026-10-11T15:46:40Z",
-            "excerpt": "President Donald Trump said Sunday that Russia and Ukraine have agreed to an energy ceasefire effective immediately.",
+            "url": "https://x.com/NOELreports/status/2109566247767560534",
+            "postId": "2109566247767560534",
+            "username": "NOELreports",
+            "publishedAt": "2026-10-12T08:46:01Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "Zelensky says Russia has already violated the energy ceasefire announced by Trump.",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 30,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 27,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 0,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          },
-          {
-            "url": "https://x.com/KobeissiLetter/status/2109295156125983065",
-            "postId": "2109295156125983065",
-            "username": "KobeissiLetter",
-            "publishedAt": "2026-10-11T14:48:48.000Z",
-            "checkedAt": "2026-10-11T15:46:40Z",
-            "excerpt": "Ukraine's President Zelensky says the energy ceasefire between Ukraine and Russia announced by President Trump just minutes ago is news to me, per Axios.",
-            "verification": "collector-report",
-            "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。 反向材料：泽连斯基否认事先知情。",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
@@ -151,15 +263,15 @@
         "credibility": {
           "score": 30,
           "label": "规则初评，未校准",
-          "reason": "有快讯与 Bloomberg 转述特朗普声明，并有泽连斯基否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
+          "reason": "Sky News 与 NOELreports 分别转述佩斯科夫和泽连斯基表态，两者相互独立，但均为媒体转述，未取得克里姆林宫原始文字。",
           "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
         }
       },
       "rank": 0,
-      "lastEdition": "manual-4fe5409c-785e-4dc4-bda7-37dcaa389aaa",
-      "lastCheckedAt": "2026-10-11T15:48:56.844Z",
+      "lastEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "lastCheckedAt": "2026-10-12T11:35:11.546Z",
       "state": "active",
-      "retentionAnchor": "2026-10-11T15:48:56.844Z",
+      "retentionAnchor": "2026-10-12T11:35:11.546Z",
       "retainUntil": "2026-10-13T01:00:00.000Z",
       "lateDiscovery": false,
       "readingDate": "2026-10-12"
@@ -923,39 +1035,151 @@
       "eventKey": "houthi-saudi-tanker-escalation-2026-10-12",
       "firstSeenAt": "2026-10-12T01:18:51.018Z",
       "firstEdition": "2026-10-12-0900",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-10-12-0900",
+          "event": {
+            "eventKey": "houthi-saudi-tanker-escalation-2026-10-12",
+            "title": "胡塞袭击与油轮遇袭令中东能源风险升温",
+            "fact": "Reuters Africa 报道，胡塞武装加大了对沙特的袭击，周末另有两艘油轮遇袭；Institute for the Study of War 补充称，沙特在 10 月 10 日和 11 日通报，达曼法赫德国王国际机场附近和利雅得哈立德国王国际机场一处航站楼遭不明飞行物击中。",
+            "impact": "冲突若继续从霍尔木兹航道向沙特本土与油轮运输扩散，原油、保险和运费风险溢价可能上升，并通过通胀预期和长端利率压低美股估值；能源与国防板块可能相对受益，航空、运输与高估值成长股可能承压。",
+            "direction": "双向",
+            "horizon": "下一个交易日至两周",
+            "affected": [
+              "美股大盘",
+              "原油与能源股",
+              "国防股",
+              "航空与运输股",
+              "长久期成长股"
+            ],
+            "counterCase": "若沙特与美国确认没有进一步军事行动、油轮遇袭未影响实际通航，且原油、战争险和运费没有持续上行，本事件对通胀与美股折现率的传导应明显下调。",
+            "selectionReason": "同一冲突同时触及沙特本土、霍尔木兹航运、原油与通胀，影响范围在本轮候选中最广。",
+            "credibilityReason": "Reuters Africa 与 Institute for the Study of War 提供了相互补充的窗口内帖子，但执行器未独立直读原帖，也未取得沙特、美国或 UKMTO 的官方原始材料。",
+            "change": "新增",
+            "eventTime": null,
+            "eventTimeNote": "沙特通报涉及 2026 年 10 月 10 日和 11 日的袭击；油轮遇袭的准确时间未取得。",
+            "attentionEvidence": "Reuters 将中东升级与周一油价走强联系起来，另有研究机构单独梳理沙特机场遇袭；本轮没有全网互动量或成交量数据，因此只按影响广度判定为焦点。",
+            "sources": [
+              {
+                "url": "https://x.com/ReutersAfrica/status/2109441455588602334",
+                "postId": "2109441455588602334",
+                "username": "ReutersAfrica",
+                "publishedAt": "2026-10-12T00:30:09Z",
+                "checkedAt": "2026-10-12T01:16:47Z",
+                "excerpt": "Oil prices extended gains on Monday as the Middle East conflict escalated after Yemen's Iran-backed Houthis stepped up strikes on Saudi Arabia while two tankers were attacked over the weekend",
+                "verification": "collector-report",
+                "verificationNote": "本机 Grok Bot App 返回了帖文、时间与链接；未在 X 页面独立直读，也未读取 Reuters 外链全文。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/TheStudyofWar/status/2109443964306923773",
+                "postId": "2109443964306923773",
+                "username": "TheStudyofWar",
+                "publishedAt": "2026-10-12T00:40:07Z",
+                "checkedAt": "2026-10-12T01:16:47Z",
+                "excerpt": "Saudi Arabia announced on October 10 and 11 that unidentified projectiles struck near King Fahd International Airport in Dammam and a terminal at King Khalid International Airport in Riyadh",
+                "verification": "collector-report",
+                "verificationNote": "本机 Grok Bot App 返回了帖文、时间与链接；未在 X 页面独立直读，也未取得沙特官方公告。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 33,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 31,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 4,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "Reuters Africa 与 Institute for the Study of War 提供了相互补充的窗口内帖子，但执行器未独立直读原帖，也未取得沙特、美国或 UKMTO 的官方原始材料。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-10-12T11:35:11.546Z"
+        }
+      ],
       "group": "focus",
       "event": {
         "eventKey": "houthi-saudi-tanker-escalation-2026-10-12",
-        "title": "胡塞袭击与油轮遇袭令中东能源风险升温",
-        "fact": "Reuters Africa 报道，胡塞武装加大了对沙特的袭击，周末另有两艘油轮遇袭；Institute for the Study of War 补充称，沙特在 10 月 10 日和 11 日通报，达曼法赫德国王国际机场附近和利雅得哈立德国王国际机场一处航站楼遭不明飞行物击中。",
-        "impact": "冲突若继续从霍尔木兹航道向沙特本土与油轮运输扩散，原油、保险和运费风险溢价可能上升，并通过通胀预期和长端利率压低美股估值；能源与国防板块可能相对受益，航空、运输与高估值成长股可能承压。",
-        "direction": "双向",
-        "horizon": "下一个交易日至两周",
+        "title": "阿曼索哈尔附近油轮遭无人机袭击，海湾航运风险外溢",
+        "fact": "英国海上贸易行动办公室（UKMTO）确认阿曼索哈尔锚地附近一艘油轮遭无人机袭击，印度航运部长称该船为 MT Petro Dolphin，11 名印度船员中 9 人获救、2 人失踪；路透称中东冲突与油轮袭击持续推高油价。",
+        "impact": "袭击范围从霍尔木兹延伸至阿曼湾，会推高油轮保险和运费，抵消停火消息对油价的压制；若持续，将通过能源成本与通胀预期影响美股利率敏感板块和航运、炼化公司。",
+        "direction": "利空",
+        "horizon": "未来数日至两周",
         "affected": [
-          "美股大盘",
-          "原油与能源股",
-          "国防股",
-          "航空与运输股",
-          "长久期成长股"
+          "原油与油轮运价",
+          "航运保险",
+          "能源股",
+          "通胀预期"
         ],
-        "counterCase": "若沙特与美国确认没有进一步军事行动、油轮遇袭未影响实际通航，且原油、战争险和运费没有持续上行，本事件对通胀与美股折现率的传导应明显下调。",
-        "selectionReason": "同一冲突同时触及沙特本土、霍尔木兹航运、原油与通胀，影响范围在本轮候选中最广。",
-        "credibilityReason": "Reuters Africa 与 Institute for the Study of War 提供了相互补充的窗口内帖子，但执行器未独立直读原帖，也未取得沙特、美国或 UKMTO 的官方原始材料。",
-        "change": "新增",
+        "counterCase": "若后续一周无新的商船遇袭、保险费率回落、Brent 回到 100 美元以下，则航运风险外溢的影响应下调。",
+        "selectionReason": "与停火消息方向相反，决定本周油价与通胀预期的另一侧力量。",
+        "credibilityReason": "有路透标题与引述 UKMTO、印度航运部长的帖子；未直接取得 UKMTO 原始通告。",
+        "change": "进展",
         "eventTime": null,
-        "eventTimeNote": "沙特通报涉及 2026 年 10 月 10 日和 11 日的袭击；油轮遇袭的准确时间未取得。",
-        "attentionEvidence": "Reuters 将中东升级与周一油价走强联系起来，另有研究机构单独梳理沙特机场遇袭；本轮没有全网互动量或成交量数据，因此只按影响广度判定为焦点。",
+        "eventTimeNote": "袭击发生在 10 月 11 日，准确时刻未知。",
+        "attentionEvidence": "路透帖约 4.9 万次展示；多个航运与冲突追踪账号同步报道。仅作注意力参考。",
         "sources": [
           {
-            "url": "https://x.com/ReutersAfrica/status/2109441455588602334",
-            "postId": "2109441455588602334",
-            "username": "ReutersAfrica",
-            "publishedAt": "2026-10-12T00:30:09Z",
-            "checkedAt": "2026-10-12T01:16:47Z",
-            "excerpt": "Oil prices extended gains on Monday as the Middle East conflict escalated after Yemen's Iran-backed Houthis stepped up strikes on Saudi Arabia while two tankers were attacked over the weekend",
+            "url": "https://x.com/Reuters/status/2109430114152841601",
+            "postId": "2109430114152841601",
+            "username": "Reuters",
+            "publishedAt": "2026-10-11T23:45:05Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "Oil climbs as Mideast conflict, tanker attacks persist",
             "verification": "collector-report",
-            "verificationNote": "本机 Grok Bot App 返回了帖文、时间与链接；未在 X 页面独立直读，也未读取 Reuters 外链全文。",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
@@ -987,27 +1211,27 @@
             }
           },
           {
-            "url": "https://x.com/TheStudyofWar/status/2109443964306923773",
-            "postId": "2109443964306923773",
-            "username": "TheStudyofWar",
-            "publishedAt": "2026-10-12T00:40:07Z",
-            "checkedAt": "2026-10-12T01:16:47Z",
-            "excerpt": "Saudi Arabia announced on October 10 and 11 that unidentified projectiles struck near King Fahd International Airport in Dammam and a terminal at King Khalid International Airport in Riyadh",
+            "url": "https://x.com/militarysignal/status/2109489461490798891",
+            "postId": "2109489461490798891",
+            "username": "militarysignal",
+            "publishedAt": "2026-10-12T03:40:54Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "UKMTO confirmed a drone strike on a tanker near Sohar, Oman. India's shipping minister identified it as MT Petro Dolphin.",
             "verification": "collector-report",
-            "verificationNote": "本机 Grok Bot App 返回了帖文、时间与链接；未在 X 页面独立直读，也未取得沙特官方公告。",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
-              "overall": 33,
+              "overall": 30,
               "band": "low",
               "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
               "sourceScore": 35,
-              "claimScore": 31,
+              "claimScore": 27,
               "breakdown": {
                 "directness": 10,
                 "traceableEvidence": 7,
                 "independentCorroboration": 0,
-                "specificity": 4,
+                "specificity": 0,
                 "recordIntegrity": 10,
                 "penalties": 0
               },
@@ -1029,15 +1253,15 @@
         "credibility": {
           "score": 30,
           "label": "规则初评，未校准",
-          "reason": "Reuters Africa 与 Institute for the Study of War 提供了相互补充的窗口内帖子，但执行器未独立直读原帖，也未取得沙特、美国或 UKMTO 的官方原始材料。",
+          "reason": "有路透标题与引述 UKMTO、印度航运部长的帖子；未直接取得 UKMTO 原始通告。",
           "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
         }
       },
-      "rank": 0,
-      "lastEdition": "2026-10-12-0900",
-      "lastCheckedAt": "2026-10-12T01:18:51.018Z",
+      "rank": 1,
+      "lastEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "lastCheckedAt": "2026-10-12T11:35:11.546Z",
       "state": "active",
-      "retentionAnchor": "2026-10-12T01:18:51.018Z",
+      "retentionAnchor": "2026-10-12T11:35:11.546Z",
       "retainUntil": "2026-10-13T01:00:00.000Z",
       "lateDiscovery": false,
       "readingDate": "2026-10-12"
@@ -1592,33 +1816,597 @@
       "retainUntil": "2026-10-13T01:00:00.000Z",
       "lateDiscovery": false,
       "readingDate": "2026-10-12"
+    },
+    {
+      "eventKey": "amazon-decart-acquisition-talks-2026-10-11",
+      "firstSeenAt": "2026-10-12T11:35:11.546Z",
+      "firstEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "amazon-decart-acquisition-talks-2026-10-11",
+        "title": "据报亚马逊洽购 AI 初创公司 Decart，估值约 70 亿美元",
+        "fact": "据《华尔街日报》报道，亚马逊正就收购 AI 初创公司 Decart 进行谈判，交易估值约 70 亿美元；交易尚未达成。",
+        "impact": "若成交，亚马逊可借 Decart 的跨芯片推理软件提升自研 Trainium 的可用性，削弱客户对英伟达 GPU 的单一依赖；也显示大型云厂商愿以高溢价收购 AI 软件资产。",
+        "direction": "双向",
+        "horizon": "未来数周",
+        "affected": [
+          "AMZN",
+          "NVDA",
+          "AI 推理软件",
+          "云计算"
+        ],
+        "counterCase": "若谈判破裂、Decart 技术仅限视频生成场景，或 Trainium 客户采用未见加速，则对芯片竞争格局的影响有限。",
+        "selectionReason": "大型云厂商在 AI 软件与芯片生态上的并购动作，直接关系云厂商资本开支回报与英伟达定价权。",
+        "credibilityReason": "路透与 First Squawk 均转述 WSJ 报道，属同一信源；公司未确认。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "报道披露的是谈判进行中，未给出谈判开始或预计完成时间。",
+        "attentionEvidence": "路透帖约 4.8 万次展示，First Squawk 帖约 2.4 万次展示；仅作注意力参考。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2109413754274226545",
+            "postId": "2109413754274226545",
+            "username": "Reuters",
+            "publishedAt": "2026-10-11T22:40:04Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "Amazon in talks to buy AI startup Decart for around $7 billion, WSJ reports",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/FirstSquawk/status/2109428579956412642",
+            "postId": "2109428579956412642",
+            "username": "FirstSquawk",
+            "publishedAt": "2026-10-11T23:38:59Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "AMAZON IN TALKS TO BUY AI STARTUP DECART FOR AROUND $7 BILLION - WSJ",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "路透与 First Squawk 均转述 WSJ 报道，属同一信源；公司未确认。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 2,
+      "lastEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "lastCheckedAt": "2026-10-12T11:35:11.546Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-12T11:35:11.546Z",
+      "readingDate": "2026-10-12",
+      "retainUntil": "2026-10-13T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "canada-max-oil-diesel-exports-us-2026-10-11",
+      "firstSeenAt": "2026-10-12T11:35:11.546Z",
+      "firstEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "canada-max-oil-diesel-exports-us-2026-10-11",
+        "title": "加拿大称将最大化对美石油和柴油出口",
+        "fact": "加拿大总理卡尼办公室表示，卡尼已与特朗普通话，加拿大将最大化对美国的石油和柴油出口，称对美石油出口可产出每日超过 100 万桶柴油；同时表示支持俄乌能源停火。",
+        "impact": "北美内部供给增量若兑现，可缓解美国柴油紧张及其对运输、农业成本的传导，降低通胀预期上行压力；但增量受管道和炼厂产能限制。",
+        "direction": "利多",
+        "horizon": "未来数周至一个季度",
+        "affected": [
+          "美国柴油价格",
+          "炼油股",
+          "运输与物流成本",
+          "通胀预期"
+        ],
+        "counterCase": "若没有具体增量数字、管道与铁路运力不足，或加拿大炼厂已满负荷，则实际柴油供给变化很小。",
+        "selectionReason": "美国柴油短缺是近期通胀与政治焦点，北美供给表态与俄柴油协议共同影响价格。",
+        "credibilityReason": "First Squawk 转述加拿大总理办公室声明，数字为声明口径，未取得官方原文。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "通话时间未披露，声明于北京时间 10 月 12 日早间发布。",
+        "attentionEvidence": "First Squawk 帖约 34 万次展示；仅作注意力参考。",
+        "sources": [
+          {
+            "url": "https://x.com/FirstSquawk/status/2109430149498445950",
+            "postId": "2109430149498445950",
+            "username": "FirstSquawk",
+            "publishedAt": "2026-10-11T23:45:13Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "CANADA PM CARNEY'S OFFICE SAYS CARNEY SPOKE TO TRUMP AND THAT CANADA WILL MAXIMISE EXPORTS OF OIL AND DIESEL TO THE U.S.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "First Squawk 转述加拿大总理办公室声明，数字为声明口径，未取得官方原文。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 3,
+      "lastEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "lastCheckedAt": "2026-10-12T11:35:11.546Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-12T11:35:11.546Z",
+      "readingDate": "2026-10-12",
+      "retainUntil": "2026-10-13T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "taiwan-packaging-cpu-price-hikes-2026-10-12",
+      "firstSeenAt": "2026-10-12T11:35:11.546Z",
+      "firstEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "taiwan-packaging-cpu-price-hikes-2026-10-12",
+        "title": "台湾封测报价据报上调 10–30%，CPU 厂商跟进涨价",
+        "fact": "台湾媒体报道，部分芯片封装测试供应商因 AI 芯片订单堆积，将报价上调 10% 至 30%；《工商时报》引述供应链称，英特尔、高通与 AMD 正在上调 CPU 价格，共同成本来源是台积电先进制程晶圆。",
+        "impact": "封测与先进晶圆成本上升，利润向台积电和封测厂迁移；CPU 与 PC/服务器厂商若不能转嫁，会压缩毛利，若成功转嫁则推高终端设备价格并可能抑制需求。",
+        "direction": "双向",
+        "horizon": "未来一至两个季度",
+        "affected": [
+          "TSM",
+          "INTC",
+          "AMD",
+          "QCOM",
+          "封测供应链",
+          "PC 与服务器 OEM"
+        ],
+        "counterCase": "若涨价仅限个别客户或品类、AI 订单出现放缓，或台积电与封测厂第三季度财报未显示价格上调，则成本传导判断不成立。",
+        "selectionReason": "直接描述 AI 实物瓶颈把成本推向整条半导体链，属于利润再分配的可验证中间变量。",
+        "credibilityReason": "两条帖子均转述台湾媒体，未取得原报道；涨幅区间为媒体口径。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "报价调整生效时间未披露；报道日期为 10 月 12 日。",
+        "knowledgeCards": [
+          "I03",
+          "I06",
+          "R04"
+        ],
+        "disciplines": [
+          "产业经济学",
+          "供应链管理",
+          "公司金融"
+        ],
+        "knowledgeApplication": "I03 把封测与先进晶圆视为 AI 实物瓶颈；I06 用于区分利润在晶圆厂、封测厂与 CPU/OEM 之间的再分配；R04 要求以台积电 10 月 15 日财报和封测厂月营收检验涨价是否落地。",
+        "sources": [
+          {
+            "url": "https://x.com/antfeedapp/status/2109537527350927385",
+            "postId": "2109537527350927385",
+            "username": "antfeedapp",
+            "publishedAt": "2026-10-12T06:51:54Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "AI CHIP PACKAGING PRICES IN TAIWAN ARE JUMPING 10–30% (TW MEDIA)",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 33,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 31,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/SemiconductorsX/status/2109483493793345622",
+            "postId": "2109483493793345622",
+            "username": "SemiconductorsX",
+            "publishedAt": "2026-10-12T03:17:11Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "Intel, Qualcomm and AMD are all raising CPU prices. The common cost is TSMC's advanced wafer.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "两条帖子均转述台湾媒体，未取得原报道；涨幅区间为媒体口径。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "lastCheckedAt": "2026-10-12T11:35:11.546Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-12T11:35:11.546Z",
+      "readingDate": "2026-10-12",
+      "retainUntil": "2026-10-13T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "dimon-rates-credit-ai-financing-2026-10-11",
+      "firstSeenAt": "2026-10-12T11:35:11.546Z",
+      "firstEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "dimon-rates-credit-ai-financing-2026-10-11",
+        "title": "戴蒙：利率与信用利差上行将改变 AI 融资条件",
+        "fact": "摩根大通 CEO 戴蒙表示，更高的利率和更宽的信用利差可能实质改变 AI 与科技公司的估值和融资条件，并称目前尚不清楚通胀是否已被战胜。",
+        "impact": "10 年期美债收益率处于多年高位时，依赖债务和私募信贷的 AI 数据中心项目回报门槛上升；若本周 CPI 偏强，融资成本上行可能先压制高杠杆 AI 基础设施公司，再传导到上游芯片订单。",
+        "direction": "利空",
+        "horizon": "未来两周至一个季度",
+        "affected": [
+          "AI 数据中心运营商",
+          "私募信贷",
+          "高估值科技股",
+          "半导体资本开支链"
+        ],
+        "counterCase": "若周三 CPI 低于预期、长端收益率回落，且 AI 相关信用债发行顺利，则融资约束收紧的判断应下调。",
+        "selectionReason": "把宏观资本成本与 AI 资本开支融资直接连接，且来自大型银行 CEO。",
+        "credibilityReason": "两条帖子分别转述戴蒙不同场合表述，未取得完整采访原文。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "戴蒙发言的具体场合与时间未在帖子中注明。",
+        "knowledgeCards": [
+          "M01",
+          "M05",
+          "I01"
+        ],
+        "disciplines": [
+          "宏观经济学",
+          "公司金融",
+          "信用分析"
+        ],
+        "knowledgeApplication": "M01 用于把通胀与利率路径连接到估值；M05 要求说明信用利差如何经融资渠道传到公开市场；I01 提示供应商订单与采购方融资能力的先后错位。",
+        "sources": [
+          {
+            "url": "https://x.com/TheTranscript_/status/2109328247741915294",
+            "postId": "2109328247741915294",
+            "username": "TheTranscript_",
+            "publishedAt": "2026-10-11T17:00:18Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "$JPM CEO: Higher rates and wider credit spreads can materially change valuations and financing conditions for AI and technology companies.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/unusual_whales/status/2109604240842998039",
+            "postId": "2109604240842998039",
+            "username": "unusual_whales",
+            "publishedAt": "2026-10-12T11:17:00Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "JPMorgan CEO Dimon has said: It's not clear to me we've slayed inflation.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "两条帖子分别转述戴蒙不同场合表述，未取得完整采访原文。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 1,
+      "lastEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "lastCheckedAt": "2026-10-12T11:35:11.546Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-12T11:35:11.546Z",
+      "readingDate": "2026-10-12",
+      "retainUntil": "2026-10-13T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "openai-chatgpt-ads-agency-partner-2026-10-11",
+      "firstSeenAt": "2026-10-12T11:35:11.546Z",
+      "firstEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "openai-chatgpt-ads-agency-partner-2026-10-11",
+        "title": "OpenAI 招聘广告代理合作负责人，推动 ChatGPT 广告常规化",
+        "fact": "据 Adweek，OpenAI 正招聘代理商合作负责人，目标是让 ChatGPT 广告成为代理商媒体计划的常规部分，职责包括建立代理关系和主导年度投放协议。",
+        "impact": "在年化收入据报约 500 亿美元、低于市场传闻之际，广告是独立于订阅与 API 的新收入来源；若广告规模化，可改善 OpenAI 支撑上游算力合同的现金流，同时对谷歌和 Meta 的广告份额构成竞争。",
+        "direction": "双向",
+        "horizon": "未来一至两个季度",
+        "affected": [
+          "OpenAI",
+          "GOOGL",
+          "META",
+          "AI 算力供应链"
+        ],
+        "counterCase": "若广告主预算试投后不扩大、用户体验受损导致活跃度下降，或监管限制对话场景广告，则收入贡献有限。",
+        "selectionReason": "直接对应 AI 落地包中“采用能否转为独立收入”的核心问题。",
+        "credibilityReason": "Adweek 为行业媒体，依据招聘信息报道；未取得 OpenAI 官方说明。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "招聘信息发布日期未注明。",
+        "knowledgeCards": [
+          "I02",
+          "I10"
+        ],
+        "disciplines": [
+          "产业经济学",
+          "市场营销"
+        ],
+        "knowledgeApplication": "I02 追问上游算力合同的资金最终是否来自独立付费方；I10 要求把用户规模经过广告变现、竞争与成本转化为利润判断。",
+        "sources": [
+          {
+            "url": "https://x.com/Adweek/status/2109343320346370502",
+            "postId": "2109343320346370502",
+            "username": "Adweek",
+            "publishedAt": "2026-10-11T18:00:11Z",
+            "checkedAt": "2026-10-12T11:33:00Z",
+            "excerpt": "OpenAI is hiring an Agency Partner to make ChatGPT ads a regular part of agency media plans.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 检索返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行独立直读或取得原始报道全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "Adweek 为行业媒体，依据招聘信息报道；未取得 OpenAI 官方说明。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 2,
+      "lastEdition": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
+      "lastCheckedAt": "2026-10-12T11:35:11.546Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-12T11:35:11.546Z",
+      "readingDate": "2026-10-12",
+      "retainUntil": "2026-10-13T01:00:00.000Z",
+      "lateDiscovery": false
     }
   ],
   "applied": [
     "manual-9eb836af-c349-4a03-bda2-9d1dd777bde9:2026-10-11T13:02:54.158Z",
     "manual-4fe5409c-785e-4dc4-bda7-37dcaa389aaa:2026-10-11T15:48:56.844Z",
-    "2026-10-12-0900:2026-10-12T01:18:51.018Z"
+    "2026-10-12-0900:2026-10-12T01:18:51.018Z",
+    "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e:2026-10-12T11:35:11.546Z"
   ],
   "warnings": [],
   "lastStatus": "partial",
   "selected": {
     "focus": [
-      "houthi-saudi-tanker-escalation-2026-10-12",
-      "anthropic-iren-cloud-deal-2026-10-11",
-      "spx-breadth-weakest-since-2002-2026-10-11",
       "trump-ru-ua-energy-ceasefire-2026-10-11",
-      "riyadh-king-khalid-airport-houthi-strike-2026-10-11"
+      "houthi-saudi-tanker-escalation-2026-10-12",
+      "amazon-decart-acquisition-talks-2026-10-11",
+      "riyadh-king-khalid-airport-houthi-strike-2026-10-11",
+      "canada-max-oil-diesel-exports-us-2026-10-11"
     ],
     "insights": [
-      "trendforce-q4-dram-nand-pricing-2026",
-      "cxmt-ddr5-server-plan-2026",
-      "doe-spr-emergency-exchange-2026-10-10",
-      "hedge-fund-mag7-exposure-22pct-2026",
+      "taiwan-packaging-cpu-price-hikes-2026-10-12",
+      "dimon-rates-credit-ai-financing-2026-10-11",
+      "openai-chatgpt-ads-agency-partner-2026-10-11",
       "us-real-yield-highest-since-2008-2026-10-11",
-      "soxx-igv-weekly-dispersion-2026-10-11",
       "micron-customer-deposit-financed-capex-2026-10-11",
-      "hurricane-isaias-power-outages-2026-10-10",
-      "musk-chip-talent-spacex-tesla-recruit-2026-10-11"
+      "trendforce-q4-dram-nand-pricing-2026",
+      "doe-spr-emergency-exchange-2026-10-10",
+      "soxx-igv-weekly-dispersion-2026-10-11",
+      "hedge-fund-mag7-exposure-22pct-2026",
+      "cxmt-ddr5-server-plan-2026"
     ]
   },
   "migrationNote": "2026-10-12仅迁移现存真实归档，未重新采集或核验。更早已清理归档未恢复，待Grok按缺口补查。",

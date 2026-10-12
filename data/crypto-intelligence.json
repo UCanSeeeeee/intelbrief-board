@@ -1,30 +1,74 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T03:30:00.000Z",
-  "cutoff": "2026-10-12T11:30:00+08:00",
+  "updatedAt": "2026-10-12T11:45:00.000Z",
+  "cutoff": "2026-10-12T19:25:00+08:00",
   "source": "X only",
   "status": "complete",
-  "collectionPath": "grok-app",
+  "collectionPath": "grok-bot-x-search",
   "coverage": {
     "tabs": [
       {
         "id": "crypto-board",
         "status": "complete",
-        "note": "latestWindowDays=7 重采。入选泰国现货 ETF 规则与 SEC 3× ETP 转述。排除喊单直播与纯行情口号。"
+        "note": "2026-10-12 手动：bitcoin/crypto × ETF/SEC/监管/交易所/资金流/黑客 近24h + 新闻账号。新增 Ledger 植入事件、Kraken 阿联酋批准；排除行情日报。"
       },
       {
         "id": "btc",
         "status": "complete",
-        "note": "latestWindowDays=7 重采。入选 10/6 流入、10/7 大额流出与当周净流出汇总。排除 $100K 目标价宣传。"
+        "note": "2026-10-12 手动：BTC ETF 周度净流出约 6.81 亿美元与已收录 679M 为同一事件，不重复；其余为价格日报，0 新增。"
       },
       {
         "id": "brew",
         "status": "complete",
-        "note": "7 日窗口再采 Brew/$BREW/合约。仍几乎全是促销刷屏与上所幻想，无达标事实。items=0。"
+        "note": "2026-10-12 手动：7日窗口 $BREW/合约/Brew token。仍为喊单与上所幻想帖，无达标事实，0 新增。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "crypto-board-kraken-uae-approval-2026-10-12",
+      "tabIds": [
+        "crypto-board"
+      ],
+      "title": "Kraken 获阿联酋完整监管批准",
+      "fact": "@FirstSquawk 称加密交易所 Kraken 在获得完整监管批准后将在阿联酋开展业务。",
+      "whyItMatters": "中东合规通道扩张，增加机构与区域资金入场渠道。",
+      "counterCase": "批准机构与牌照类型未在帖中注明。",
+      "affected": [
+        "Kraken",
+        "中东合规市场"
+      ],
+      "author": "FirstSquawk",
+      "publishedAt": "2026-10-12T10:50:35.000Z",
+      "url": "https://x.com/FirstSquawk/status/2109597592749564062",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "crypto-board": 3
+      }
+    },
+    {
+      "eventKey": "crypto-board-ledger-hardware-implant-2026-10-12",
+      "tabIds": [
+        "crypto-board"
+      ],
+      "title": "Ledger 确认硬件钱包遭未授权植入，损失或超 8600 万美元",
+      "fact": "@zerohedge 称加密钱包厂商 Ledger 确认存在未授权硬件植入，损失可能超过 8600 万美元。",
+      "whyItMatters": "硬件钱包供应链安全事件打击自托管信任，可能推动资金转向托管与 ETF 渠道。",
+      "counterCase": "损失金额为初步口径，受影响批次与范围待 Ledger 正式通告。",
+      "affected": [
+        "硬件钱包",
+        "加密自托管"
+      ],
+      "author": "zerohedge",
+      "publishedAt": "2026-10-12T10:55:06.000Z",
+      "url": "https://x.com/zerohedge/status/2109598732236800160",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "crypto-board": 1
+      }
+    },
     {
       "eventKey": "crypto-board-thailand-spot-etf-rules-2026-10-09",
       "tabIds": [
@@ -44,7 +88,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "crypto-board": 1
+        "crypto-board": 2
       }
     },
     {
@@ -66,7 +110,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "crypto-board": 2
+        "crypto-board": 4
       }
     },
     {
