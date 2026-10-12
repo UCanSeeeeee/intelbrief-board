@@ -1,6 +1,7 @@
 // Display window vs search window. All Beijing-time math goes through Intl, never "+8h string slicing".
 const fs=require('node:fs');
 const path=require('node:path');
+const {readingWindow}=require('./trading-session');
 const TZ='Asia/Shanghai';
 const DAY=86400000;
 function parts(ms) {
@@ -22,20 +23,19 @@ function weekendStart(cutoff) {
   return Date.parse(`${p.year}-${p.month}-${p.day}T00:00:00+08:00`)-2*DAY;
 }
 function displayWindow(cutoff) {
-  const end=Date.parse(cutoff);
-  const weekend=weekendStart(cutoff);
-  const start=Math.min(end-DAY,weekend??Infinity);
-  return {displayWindowStart:beijingIso(start),displayWindowEnd:beijingIso(end)};
+  const window=readingWindow(cutoff);
+  return {displayWindowStart:beijingIso(window.start),displayWindowEnd:beijingIso(window.end)};
 }
-// Search starts at the last successful scheduled cutoff, bounded to 24h, but Monday always includes Sat/Sun.
+// Search covers the trading reading interval and up to fourteen days of missed runs.
 function windowStart(editions,job) {
   // Manual editions never move the scheduled collection cursor.
   const cutoff=Date.parse(job.cutoff);
   const candidates=editions.filter(e=>e.status!=='failed' && Date.parse(e.scheduledFor)<cutoff && (job.trigger_type!=='scheduled'||e.trigger!=='manual'));
   const previous=candidates.sort((a,b)=>Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor))[0];
-  let start=Math.max(previous?Date.parse(previous.scheduledFor):0,cutoff-DAY);
-  const weekend=weekendStart(job.cutoff);
-  if(weekend!=null) start=Math.min(start,weekend);
+  // The display/closed-market interval must not disappear merely because a brief
+  // was partial. Only explicit successful coverage records may skip a query range.
+  let start=Date.parse(displayWindow(job.cutoff).displayWindowStart);
+  if(previous) start=Math.min(start,Math.max(Date.parse(previous.scheduledFor),cutoff-14*DAY));
   return new Date(start).toISOString();
 }
 // Local record of searched time ranges x queries, used to avoid re-searching covered spans.
@@ -55,7 +55,8 @@ function recordCoverage(coverage,record,keepDays=14,now=Date.now()) {
 // Returns sub-ranges of [start,end) not yet covered by any record for this page.
 function uncoveredRanges(coverage,page,start,end) {
   let gaps=[[Date.parse(start),Date.parse(end)]];
-  for(const r of coverage.records.filter(r=>r.page===page)) {
+  // Legacy records without an explicit success marker do not prove coverage.
+  for(const r of coverage.records.filter(r=>r.page===page&&r.status==='complete'&&r.trigger!=='manual')) {
     const a=Date.parse(r.start),b=Date.parse(r.end);
     gaps=gaps.flatMap(([s,e])=>b<=s||a>=e?[[s,e]]:[[s,Math.max(s,a)],[Math.min(e,b),e]].filter(([x,y])=>y>x));
   }

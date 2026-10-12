@@ -13,6 +13,7 @@
     "test": "node --test test/*.test.js",
     "check": "node scripts/validate-data.js",
     "brief:slot": "node scripts/stock-brief.js slot",
+    "brief:context": "node scripts/stock-brief.js context",
     "brief:validate": "node scripts/stock-brief.js validate",
     "brief:publish": "node scripts/stock-brief.js publish",
     "dev": "npx --yes serve -l 8787 .",

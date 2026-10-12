@@ -146,9 +146,24 @@ function saveBrief(brief, root = ROOT) {
   const serialized = JSON.stringify(brief, null, 2) + '\n';
   if (fs.existsSync(archive)) {
     requireValue(fs.readFileSync(archive, 'utf8') === serialized, `期次 ${brief.id} 已冻结，禁止覆盖历史`);
-  } else fs.writeFileSync(archive, serialized, { flag: 'wx' });
+  }
   const indexFile = path.join(dir, 'index.json');
   const index = fs.existsSync(indexFile) ? readJson(indexFile) : { schemaVersion: 1, editions: [] };
+  const reading=require('./reading-board');
+  let board=reading.readBoard(root);
+  // Bootstrap only from real archives; retain full cards before the three-edition purge.
+  if(!board.asOf) for(const old of [...index.editions].sort((a,b)=>Date.parse(a.scheduledFor)-Date.parse(b.scheduledFor))) {
+    if(!/^(?:\d{4}-\d{2}-\d{2}-(?:0900|1600|2100)|manual-[a-f0-9-]{36})\.json$/.test(old.file))throw new Error('无效历史路径');
+    board=reading.advance(board,readJson(path.join(dir,old.file)));
+  }
+  board=reading.advance(board,brief); // reject invalid lifecycle changes before writing the immutable archive
+  const windows=require('./windows');
+  const complete=brief.status!=='failed'&&brief.coverage.status==='complete'&&brief.coverage.queries.length>0&&brief.coverage.gaps.length===0&&brief.checklist?.length>0&&brief.checklist.every(c=>['covered','no-result'].includes(c.status));
+  const coverage=windows.recordCoverage(windows.readCoverage(root),{jobId:brief.id,page:'news',trigger:brief.trigger||'scheduled',start:brief.windowStart,end:brief.scheduledFor,status:brief.status==='failed'?'failed':complete?'complete':'partial',queries:brief.coverage.queries,recordedAt:brief.generatedAt},14,Date.parse(brief.generatedAt));
+  if(!fs.existsSync(archive))fs.writeFileSync(archive, serialized, { flag: 'wx' });
+  reading.writeBoard(root,board);
+  const coverageFile=windows.coveragePath(root);
+  fs.writeFileSync(coverageFile+'.tmp',JSON.stringify(coverage,null,2)+'\n');fs.renameSync(coverageFile+'.tmp',coverageFile);
   const entry = { id: brief.id, trigger: brief.trigger || 'scheduled', scheduledFor: brief.scheduledFor, generatedAt: brief.generatedAt, status: brief.status, counts: brief.counts, file: `${brief.id}.json` };
   const sorted = [entry, ...index.editions.filter(e => e.id !== brief.id)].sort((a,b) => Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor));
   // Manual tests never evict scheduled archives: each trigger has its own limit.

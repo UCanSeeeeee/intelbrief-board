@@ -32,8 +32,31 @@
       <div class="brief-primary-source"><p><strong>事件时间</strong> ${escape(eventTime)}${event.eventTime?'（北京时间）':''}${event.futureEventNote ? ' · '+escape(event.futureEventNote) : ''}</p>${primaryUrl?`<a href="${escape(primaryUrl)}" target="_blank" rel="noopener noreferrer">原文链接 · @${escape(primary.username)} ↗</a>`:'<span>原文链接待核验</span>'}</div>
     </article>`;
   }
-  let manifest, config, generation = 0;
+  let manifest, config, readingBoard, generation = 0;
+  function readingCard(item,index) {
+    const note=`首次收录 ${time(item.firstSeenAt)} · 最近核验 ${time(item.lastCheckedAt)} · ${item.retainUntil?'保留至 '+time(item.retainUntil)+'（北京时间）':'日历待核验，暂不自动移除'}${item.lateDiscovery?' · 延迟发现／早期消息，非刚刚发生':''}`;
+    return `<div><p class="brief-small">${escape(note)}</p>${card(item.event,index)}</div>`;
+  }
+  function showReading() {
+    generation++;
+    const board=readingBoard;
+    const ctx=board.session||{};
+    const ended=ctx.closeAt&&Date.now()>=Date.parse(ctx.closeAt);
+    if($('reading-context'))$('reading-context').textContent=`交易日待阅 · 信息截止 ${time(board.asOf)}（北京时间） · ${ctx.known?'对应美东交易日 '+ctx.date+'，北京时间 '+time(ctx.openAt)+' 开盘':'交易日历待核验'}${ended?' · 该交易时段已结束，等待后续更新；保留上次内容':''}。${(board.warnings||[]).join(' ')}`;
+    for(const group of ['focus','insights']) {
+      const all=board.events.filter(e=>e.state==='active'&&e.group===group);
+      const ids=new Set((board.selected?.[group]||[]).map(String));
+      const selected=(board.selected?.[group]||[]).map(id=>all.find(e=>e.eventKey===id)).filter(Boolean);
+      const more=all.filter(e=>!ids.has(e.eventKey));
+      $(group+'-count').textContent=`待阅精选 ${selected.length} 条 · 另保留 ${more.length} 条`;
+      $('brief-'+group).innerHTML=(selected.map(readingCard).join('')||empty('本交易日暂无精选条目'))+(more.length?`<details class="analysis-details"><summary>其余仍有效的待阅信息（${more.length}条，未删除）</summary>${more.map(readingCard).join('')}</details>`:'');
+    }
+    const reviewed=board.events.filter(e=>e.review&&e.state!=='active'&&e.state!=='served');
+    $('brief-audit').innerHTML=`<details class="brief-evidence"><summary>保留规则与事件复核记录</summary><p>休市与盘后收录的信息保留至对应交易时段结束。简报期次与待阅池独立保存；首次收录、原帖时间与最近核验分开。同一事件合并，不把延续消息冒充新增。</p><p>未提供跨期重排时沿用最近收录顺序，不声称这是全网重要性排名。更新失败不会清空上一批待阅内容；收市后状态为“已展示过对应交易时段”，不代表你已阅读。</p>${reviewed.map(e=>`<p>${escape(e.event.title)}：${escape(({retracted:'已撤回／证伪',superseded:'已被后续信息取代',resolved:'已失效'})[e.state])} · ${escape(e.review.reason)} · ${escape(time(e.review.checkedAt))}</p>`).join('')}</details>`;
+  }
   async function show(entry, preserve=false) {
+    if(entry?.id==='reading'){showReading();return;}
+    if($('reading-context'))$('reading-context').textContent='历史期次快照 · 不随当前待阅状态改写';
     const current = ++generation;
     if (!preserve) {
     $('brief-focus').innerHTML = '';
@@ -61,27 +84,32 @@
       }
     }
   }
-  function load(keepSelection=false) { return Promise.all([json('config/stock-brief.json'),json('data/stock-briefs/index.json')]).then(([settings,index])=> {
+  function load(keepSelection=false) { return Promise.all([json('config/stock-brief.json'),json('data/stock-briefs/index.json'),json('data/reading-board.json').catch(()=>null)]).then(([settings,index,board])=> {
     const previousLive=manifest?.editions.find(e=>e.status!=='failed')||manifest?.editions[0];
     const selected=keepSelection && manifest && $('edition-select').value!==previousLive?.id ? $('edition-select').value : null;
     const editions=index.editions||[];
     config=settings; manifest={...index,editions};
+    const validBoard=Array.isArray(board?.events)&&board.asOf;
+    if(validBoard)readingBoard=board;
+    else if(readingBoard)readingBoard={...readingBoard,warnings:[...(readingBoard.warnings||[]),'待阅池刷新失败，继续显示上次成功加载的内容。']};
     if (!editions.length) {
       $('edition-select').innerHTML = '<option>等待首期</option>';
       $('brief-focus').innerHTML=empty('等待五条市场焦点');
       $('brief-insights').innerHTML=empty('等待十条多学科洞察');
       return;
     }
-    $('edition-select').innerHTML=editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status]||e.status)} · 收录 ${escape(e.counts.total)} 条</option>`).join('');
+    $('edition-select').innerHTML=(readingBoard?'<option value="reading">交易日待阅（跨期保留）</option>':'')+editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status]||e.status)} · 收录 ${escape(e.counts.total)} 条</option>`).join('');
     $('edition-select').disabled=false;
-    const entry=editions.find(e=>e.id===selected)||editions.find(e=>e.status!=='failed')||editions[0];
+    const entry=editions.find(e=>e.id===selected)||(readingBoard?{id:'reading'}:editions.find(e=>e.status!=='failed')||editions[0]);
     $('edition-select').value=entry.id;
     show(entry,keepSelection);
+    if(!validBoard&&!readingBoard&&$('reading-context'))$('reading-context').textContent='待阅池未能加载，暂显示历史期次；跨期保留信息可能不全，请刷新重试。';
   }).catch(()=> {
     $('edition-select').innerHTML='<option>期次目录读取失败</option>';
     $('edition-select').disabled=true;
+    if($('reading-context'))$('reading-context').textContent='本次刷新失败；仍显示上次成功读取的内容，未确认已更新。';
   }); }
-  $('edition-select').addEventListener('change',()=>show(manifest.editions.find(e=>e.id===$('edition-select').value)));
+  $('edition-select').addEventListener('change',()=>show($('edition-select').value==='reading'?{id:'reading'}:manifest.editions.find(e=>e.id===$('edition-select').value)));
   document.addEventListener?.('intelbrief:updated',event=> { if(event.detail.page==='news') load(true); });
   load();
 })();

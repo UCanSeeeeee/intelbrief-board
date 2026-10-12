@@ -69,8 +69,8 @@ test('manual editions freeze independently; manual updates never advance schedul
   const dir=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'manual-edition-test-'));
   try {saveBrief(brief,dir);assert.throws(()=>saveBrief({...brief,summary:'changed'},dir),/禁止覆盖/);} finally{fs.rmSync(dir,{recursive:true,force:true});}
   const editions=[{scheduledFor:'2026-10-11T08:00:00Z',trigger:'scheduled',status:'complete'},{scheduledFor:'2026-10-11T10:00:00Z',trigger:'manual',status:'complete'}];
-  assert.equal(windowStart(editions,{cutoff,trigger_type:'manual'}),'2026-10-11T10:00:00.000Z');
-  assert.equal(windowStart(editions,{cutoff,trigger_type:'scheduled'}),'2026-10-11T08:00:00.000Z');
+  assert.equal(windowStart(editions,{cutoff,trigger_type:'manual'}),'2026-10-09T20:00:00.000Z');
+  assert.equal(windowStart(editions,{cutoff,trigger_type:'scheduled'}),'2026-10-09T20:00:00.000Z');
 });
 
 test('news collector keeps scheduled windows and requires a separate multidisciplinary pass',()=> {

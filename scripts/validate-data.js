@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { ROOT, readJson, postIdFromUrl, sourceIndex } = require("./lib/x-data");
 const { prepareBrief } = require("./lib/stock-brief");
+try { require('./lib/reading-board').readBoard(ROOT); } catch(error) { fail(error.message); }
 
 function fail(message) {
   console.error(`[validate-data] ${message}`);
