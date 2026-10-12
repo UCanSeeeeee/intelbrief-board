@@ -107,7 +107,7 @@ export async function handleUpdates(request, env) {
     }
     if (path==='/api/updates/retry' && request.method==='POST') {
       const input=await body(request);
-      if (!Array.isArray(input.ids)||input.ids.length>2||!input.ids.every(idOK)) fail('重试范围无效');
+      if (!Array.isArray(input.ids)||!input.ids.length||input.ids.length>PAGES.length||!input.ids.every(idOK)||new Set(input.ids).size!==input.ids.length) fail('重试范围无效');
       for (const id of input.ids) {
         const job=await db.prepare('SELECT * FROM jobs WHERE id=?').bind(id).first();
         if (!job || job.status!=='failed') continue;

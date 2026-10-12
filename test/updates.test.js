@@ -58,6 +58,25 @@ test('real D1 API: auth, CSRF, concurrent deduplication, leases, partial failure
     assert.equal((await call('/runner/progress',{id:retry.id,lease:retry.lease,stage:'publishing'},true)).status,409);
     // A reload restores the same persisted result, without creating anything.
     assert.equal((await call()).data.jobs.length,2);
+    // Every live page is accepted by the actual SQL schema, not just the API allowlist.
+    const pages=['news','people','tickers','ai','crypto'];
+    const batch=await call('',{requestId:crypto.randomUUID(),pages});
+    assert.equal(batch.status,202);
+    assert.equal(batch.data.jobIds.length,5);
+    const failedIds=[];
+    for (let i=0;i<pages.length;i++) {
+      const claimed=(await call('/runner/claim',{runnerId},true)).data.job;
+      assert.ok(claimed);
+      failedIds.push(claimed.id);
+      assert.equal((await call('/runner/progress',{id:claimed.id,lease:claimed.lease,stage:'failed',message:'测试五页重试'},true)).status,200);
+    }
+    assert.equal((await call('/retry',{ids:[]})).status,400);
+    assert.equal((await call('/retry',{ids:[failedIds[0],failedIds[0]]})).status,400);
+    assert.equal((await call('/retry',{ids:[...failedIds,crypto.randomUUID()]})).status,400);
+    const retriedAll=await call('/retry',{ids:failedIds});
+    assert.equal(retriedAll.status,202);
+    assert.equal(retriedAll.data.jobs.filter(j=>j.status==='queued').length,5);
+    assert.equal((await call('',{requestId:crypto.randomUUID(),pages:['shorts']})).status,400);
     await call('/logout',{});cookie='';assert.equal((await call()).status,401);
   } finally {await mf.dispose();}
 });

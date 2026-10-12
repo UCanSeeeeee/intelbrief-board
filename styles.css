@@ -3,26 +3,18 @@
 .update-button { border:1px solid var(--border); border-radius:7px; padding:9px 14px; color:var(--text); background:var(--bg-elevated); font:inherit; font-size:12px; cursor:pointer; white-space:normal; }
 .update-button:hover:enabled { background:var(--bg-hover); border-color:var(--text-muted); }
 .update-button:disabled { opacity:.5; cursor:default; }
-.update-status-toggle, #update-close, #update-logout { color:var(--text-secondary); border:0; background:none; cursor:pointer; font:inherit; font-size:12px; }
+#update-logout { color:var(--text-secondary); border:0; background:none; cursor:pointer; font:inherit; font-size:12px; }
 .update-page-toolbar { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; }
 #update-last { color:var(--text-muted); font-size:12px; }
 .update-panel { border:1px solid var(--border); background:var(--bg-elevated); border-radius:10px; padding:20px; margin:0 0 24px; }
 .update-panel[hidden], .update-panel [hidden] { display:none; }
-.update-panel-heading, .update-job > div { display:flex; align-items:center; justify-content:space-between; gap:14px; }
-.update-panel h2 { font-size:15px; }
-#update-close { font-size:24px; line-height:1; padding:4px 8px; }
-#update-connection, #update-login p, .update-empty { font-size:12px; color:var(--text-secondary); margin:12px 0; }
+#update-connection, #update-login p { font-size:12px; color:var(--text-secondary); margin:12px 0; }
 #update-error { color:var(--amber); font-size:12px; margin:10px 0; overflow-wrap:anywhere; }
-.update-job { padding:14px 0; border-top:1px solid var(--border); font-size:13px; }
-.update-job p { color:var(--text-secondary); font-size:12px; margin:6px 0; }
-.update-job small { color:var(--text-muted); font-size:11px; }
-.update-job[data-status="complete"] > div > span, .update-job[data-status="unchanged"] > div > span { color:var(--green); }
-.update-job[data-status="failed"] > div > span, .update-job[data-status="partial"] > div > span { color:var(--amber); }
 .update-panel-actions { display:flex; align-items:center; gap:18px; }
 #update-login label { display:block; font-size:12px; margin:12px 0 8px; }
 .update-login-row { display:flex; gap:10px; max-width:480px; }
 #update-key { min-width:0; flex:1; padding:10px; background:var(--bg-card); color:var(--text); border:1px solid var(--border); border-radius:6px; }
-.update-button:focus-visible, .update-status-toggle:focus-visible, #update-close:focus-visible, #update-key:focus-visible { outline:2px solid var(--text-secondary); outline-offset:3px; }
+.update-button:focus-visible, #update-key:focus-visible { outline:2px solid var(--text-secondary); outline-offset:3px; }
 @media(max-width:700px) { .update-page-toolbar { align-items:flex-start; } .update-panel { padding:16px; } }
 .brief-overview { border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 30px; background: var(--bg-elevated); }
 .brief-toolbar { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px; }

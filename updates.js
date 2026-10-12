@@ -5,12 +5,11 @@
   const names={news:'美股讯息',people:'具体人物',tickers:'具体个股',ai:'AI板块',crypto:'加密'};
   const pagesAll=['news','people','tickers','ai','crypto'];
   const labels={queued:'等待执行',collecting:'正在采集',validating:'整理与核验',publishing:'正在发布',complete:'更新完成',partial:'部分完成',unchanged:'已检查，暂无新增',failed:'更新失败'};
-  const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const time=value=>value ? new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(value)) : '尚无成功更新';
   const busy=job=>job && ['queued','running'].includes(job.status);
   const sidebar=document.createElement('div');
   sidebar.className='update-sidebar';
-  sidebar.innerHTML='<button class="update-button" id="update-all" type="button" disabled>↻ 全部更新</button><button class="update-status-toggle" id="update-toggle" type="button" aria-expanded="true" aria-controls="update-panel">更新记录</button>';
+  sidebar.innerHTML='<button class="update-button" id="update-all" type="button" disabled>↻ 全部更新</button>';
   document.querySelector('.sidebar .nav').after(sidebar);
   const toolbar=document.createElement('div');
   toolbar.className='update-page-toolbar';
@@ -19,14 +18,11 @@
   const panel=document.createElement('section');
   panel.id='update-panel'; panel.className='update-panel'; panel.hidden=false;
   panel.setAttribute('aria-label','内容更新');
-  panel.innerHTML='<div class="update-panel-heading"><h2>内容更新</h2><button id="update-close" type="button" aria-label="收起更新面板">×</button></div><p id="update-connection" role="status"></p><div id="update-error" role="alert"></div><form id="update-login" hidden><label for="update-key">管理密钥</label><div class="update-login-row"><input id="update-key" type="password" autocomplete="current-password" required maxlength="128" placeholder="输入管理密钥"/><button class="update-button" type="submit">登录</button></div><p>登录后可手动更新；密钥不会保存在网页中。</p></form><div id="update-jobs" aria-live="polite"></div><div class="update-panel-actions"><button class="update-button" id="update-retry" type="button" hidden>重试失败项</button><button id="update-logout" type="button" hidden>退出管理</button></div>';
+  panel.innerHTML='<p id="update-connection" role="status"></p><div id="update-error" role="alert"></div><form id="update-login" hidden><label for="update-key">管理密钥</label><div class="update-login-row"><input id="update-key" type="password" autocomplete="current-password" required maxlength="128" placeholder="输入管理密钥"/><button class="update-button" type="submit">登录</button></div><p>登录后可手动更新；密钥不会保存在网页中。</p></form><div class="update-panel-actions"><button class="update-button" id="update-retry" type="button" hidden>重试失败项</button><button id="update-logout" type="button" hidden>退出管理</button></div>';
   document.querySelector('.page-header').after(panel);
   const $=id=>document.getElementById(id);
   let snapshot=null, submitting=false, available=false, requestIntent=null;
   const observed=new Map();
-  function open(value=true) { panel.hidden=!value; $('update-toggle').setAttribute('aria-expanded',String(value)); }
-  $('update-toggle').onclick=()=>open(panel.hidden);
-  $('update-close').onclick=()=>open(false);
   async function api(path='',input) {
     const response=await fetch('/api/updates'+path,{method:input?'POST':'GET',credentials:'same-origin',cache:'no-store',headers:input?{'Content-Type':'application/json'}:{},body:input?JSON.stringify(input):undefined,signal:AbortSignal.timeout(15000)});
     const data=await response.json().catch(()=>({error:'更新服务暂时不可用'}));
@@ -44,11 +40,10 @@
     $('update-page').textContent=busy(active)?labels[active.stage]+'…':'↻ 采集本页';
     $('update-login').hidden=!available||logged;
     $('update-logout').hidden=!logged;
-    if (!logged) { $('update-jobs').innerHTML=''; $('update-retry').hidden=true; return; }
-    $('update-connection').textContent=snapshot.online?'执行端在线 · 更新期间可以继续浏览':'执行端离线 · 待电脑与更新程序恢复后继续';
-    $('update-last').textContent=snapshot.lastSuccess?.[page] ? `上次成功 ${time(snapshot.lastSuccess[page])}（北京时间）` : '尚无成功采集记录';
+    if (!logged) { $('update-retry').hidden=true; return; }
+    $('update-connection').textContent=active?.message || (snapshot.online?'Grok 执行端在线 · 更新期间可以继续浏览':'尚未收到 Grok 执行回执，请检查云端任务');
+    $('update-last').textContent=busy(active) ? `${names[page]} · ${labels[active.stage]||'等待执行'}` : snapshot.lastSuccess?.[page] ? `上次成功 ${time(snapshot.lastSuccess[page])}（北京时间）` : '尚无成功采集记录';
     const latestJobs=pagesAll.map(p=>latest(p)).filter(Boolean);
-    $('update-jobs').innerHTML=latestJobs.length ? latestJobs.map(job=>`<article class="update-job" data-status="${escape(job.status)}"><div><strong>${names[job.page]}</strong><span>${labels[job.stage]||'等待执行'}</span></div><p>${escape(job.message|| (job.status==='queued'&&!snapshot.online?'执行端离线，任务已保存':job.status==='queued'?'任务已保存，等待执行':''))}</p><small>信息截止 ${time(job.cutoff)} · ${job.trigger_type==='scheduled'?'定时':'手动'}更新</small></article>`).join('') : '<p class="update-empty">暂无手动更新记录</p>';
     $('update-retry').hidden=!latestJobs.some(j=>j.status==='failed');
     $('update-retry').disabled=submitting;
     for (const job of latestJobs) {
@@ -61,7 +56,7 @@
   function error(err) {
     $('update-error').textContent=err.message;
     if (err.status===401) { snapshot=null; available=true; $('update-last').textContent='登录后可手动更新'; $('update-connection').textContent='登录后可查看更新进度'; }
-    else if (err.data?.configured===false) { available=false; $('update-last').textContent=err.message; $('update-connection').textContent=err.message; }
+    else if (err.data?.configured===false) { available=false; $('update-last').textContent='网页采集尚未接通 Grok'; $('update-connection').textContent='定时任务由 Grok 独立执行，与网页按钮分开验收。'; }
     render();
   }
   async function poll() {
@@ -73,7 +68,6 @@
     }
   }
   async function submit(pages) {
-    open();
     if(!snapshot?.authenticated) { $('update-key').focus(); return; }
     if(submitting) return;
     submitting=true; $('update-error').textContent=''; render();

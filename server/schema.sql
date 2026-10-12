@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS jobs (
   id TEXT PRIMARY KEY,
-  page TEXT NOT NULL CHECK(page IN ('news','people')),
+  page TEXT NOT NULL CHECK(page IN ('news','people','tickers','ai','crypto')),
   trigger_type TEXT NOT NULL DEFAULT 'manual' CHECK(trigger_type IN ('manual','scheduled')),
   cutoff TEXT NOT NULL,
   created_at INTEGER NOT NULL,

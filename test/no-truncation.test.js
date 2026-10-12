@@ -18,7 +18,7 @@ test('all reading disclosures start open and cards omit counter-condition sectio
   }
   assert.ok(disclosures>=10,'covers reading rules, cards, audit, company and scoring disclosures');
   assert.match(read('updates.js'),/panel\.hidden=false/);
-  assert.match(read('updates.js'),/aria-expanded="true" aria-controls="update-panel"/);
+  assert.doesNotMatch(read('updates.js'),/update-toggle|update-jobs|更新记录/,'removed update history must not return');
 });
 
 test('CSS has no text truncation', () => {
