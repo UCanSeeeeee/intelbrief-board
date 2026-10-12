@@ -121,7 +121,8 @@ test('browser renderer shows 5+10, escapes content, and clears failed edition',a
   await new Promise(resolve=>setImmediate(resolve));
   assert.equal(element('focus-count').textContent,'收录 5 条 · 上限 5 条');
   assert.equal(element('insights-count').textContent,'收录 10 条 · 上限 10 条');
-  assert.match(element('brief-focus').innerHTML,/<details class="analysis-details">/);
+  assert.match(element('brief-focus').innerHTML,/<details open class="analysis-details">/);
+  assert.doesNotMatch(element('brief-focus').innerHTML,/反向条件/);
   assert.match(element('brief-focus').innerHTML,/待独立核验/);
   assert.match(element('brief-focus').innerHTML,/&lt;img/);
   assert.doesNotMatch(element('brief-focus').innerHTML,/<img/);

@@ -37,7 +37,7 @@
       : '未知';
     $('macro-state').textContent = `更新于 ${updated}（北京时间） · ${payload.year} 年共 ${payload.counts?.total ?? 0} 件 · 本季 ${quarter.counts?.total ?? 0} 件 · 低频手动刷新`;
     const byCat = Object.entries(quarter.counts?.byCategory || {}).map(([k, v]) => `${categoryLabel(k, payload.categories)} ${v}`).join(' · ');
-    $('macro-summary').innerHTML = `<p class="calendar-range">${escape(quarter.label)} · ${escape(quarter.start)} 至 ${escape(quarter.end)}</p><details class="reading-rules"><summary>本季度范围与来源</summary><div class="earnings-summary-card">
+    $('macro-summary').innerHTML = `<p class="calendar-range">${escape(quarter.label)} · ${escape(quarter.start)} 至 ${escape(quarter.end)}</p><details open class="reading-rules"><summary>本季度范围与来源</summary><div class="earnings-summary-card">
       <p><strong>${escape(quarter.label)}</strong> ${escape(quarter.start)} → ${escape(quarter.end)}</p>
       <p><strong>焦点</strong> ${escape(payload.focus || '美股宏观')}</p>
       <p><strong>本季构成</strong> ${escape(byCat || '无')}</p>

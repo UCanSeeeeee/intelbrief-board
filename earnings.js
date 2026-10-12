@@ -27,7 +27,7 @@
         ${themes}
       </div>
       <p class="earnings-name">${escape(item.name)}</p>
-      <details class="company-details"><summary>公司与收录说明</summary><p class="earnings-blurb">${escape(blurbs[item.symbol] || item.businessBlurb || '主营信息暂未收录。')}</p><p>${escape(item.selectionReason || '')}</p></details>
+      <details open class="company-details"><summary>公司与收录说明</summary><p class="earnings-blurb">${escape(blurbs[item.symbol] || item.businessBlurb || '主营信息暂未收录。')}</p><p>${escape(item.selectionReason || '')}</p></details>
       <p class="earnings-meta">${escape(money(item.marketCapUsd))}${item.epsForecast ? ` · EPS 预期 ${escape(item.epsForecast)}` : ''}</p>
       <p class="earnings-result"><strong>结果</strong> ${escape(resultText)}${result.summary ? ` · ${escape(result.summary)}` : ''}</p>
       ${Array.isArray(result.sources) ? `<div class="result-sources">${result.sources.map(s => typeof s === 'string' ? { url: s } : s).filter(s => /^https:\/\//.test(s?.url || '')).map((s, i) => `<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.name || s.title || `评分依据 ${i + 1}`)} ↗</a>`).join(' · ')}</div>` : ''}
@@ -43,7 +43,7 @@
       ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(payload.updatedAt))
       : '未知';
     $('earnings-state').textContent = `更新于 ${updated}（北京时间） · ${week.label} 重要 ${week.counts?.important ?? 0} / 原始 ${week.counts?.raw ?? 0}`;
-    $('earnings-summary').innerHTML = `<p class="calendar-range">${escape(week.label)} · ${escape(week.weekStart)} 至 ${escape(week.weekEnd)}（美东日期）</p><details class="reading-rules"><summary>本周范围与筛选规则</summary><div class="earnings-summary-card">
+    $('earnings-summary').innerHTML = `<p class="calendar-range">${escape(week.label)} · ${escape(week.weekStart)} 至 ${escape(week.weekEnd)}（美东日期）</p><details open class="reading-rules"><summary>本周范围与筛选规则</summary><div class="earnings-summary-card">
       <p><strong>${escape(week.label)}</strong> ${escape(week.weekStart)} → ${escape(week.weekEnd)}</p>
       <p><strong>主源</strong> ${escape(payload.source?.name || 'Nasdaq')}</p>
       <p><strong>筛选</strong> 主题池（半导体 / 电力 / 软件 / 老牛股 / 新兴科技）优先，其余超大市值自主判断；每日最多 ${escape(payload.policy?.maxPerDay)} 家</p>

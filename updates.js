@@ -10,14 +10,14 @@
   const busy=job=>job && ['queued','running'].includes(job.status);
   const sidebar=document.createElement('div');
   sidebar.className='update-sidebar';
-  sidebar.innerHTML='<button class="update-button" id="update-all" type="button" disabled>↻ 全部更新</button><button class="update-status-toggle" id="update-toggle" type="button" aria-expanded="false" aria-controls="update-panel">更新记录</button>';
+  sidebar.innerHTML='<button class="update-button" id="update-all" type="button" disabled>↻ 全部更新</button><button class="update-status-toggle" id="update-toggle" type="button" aria-expanded="true" aria-controls="update-panel">更新记录</button>';
   document.querySelector('.sidebar .nav').after(sidebar);
   const toolbar=document.createElement('div');
   toolbar.className='update-page-toolbar';
   toolbar.innerHTML=`<span id="update-last" role="status">正在连接更新服务…</span><button class="update-button" id="update-page" type="button" disabled>↻ 采集本页</button>`;
   document.querySelector('.page-header').append(toolbar);
   const panel=document.createElement('section');
-  panel.id='update-panel'; panel.className='update-panel'; panel.hidden=true;
+  panel.id='update-panel'; panel.className='update-panel'; panel.hidden=false;
   panel.setAttribute('aria-label','内容更新');
   panel.innerHTML='<div class="update-panel-heading"><h2>内容更新</h2><button id="update-close" type="button" aria-label="收起更新面板">×</button></div><p id="update-connection" role="status"></p><div id="update-error" role="alert"></div><form id="update-login" hidden><label for="update-key">管理密钥</label><div class="update-login-row"><input id="update-key" type="password" autocomplete="current-password" required maxlength="128" placeholder="输入管理密钥"/><button class="update-button" type="submit">登录</button></div><p>登录后可手动更新；密钥不会保存在网页中。</p></form><div id="update-jobs" aria-live="polite"></div><div class="update-panel-actions"><button class="update-button" id="update-retry" type="button" hidden>重试失败项</button><button id="update-logout" type="button" hidden>退出管理</button></div>';
   document.querySelector('.page-header').after(panel);

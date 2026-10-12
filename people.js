@@ -48,10 +48,9 @@
       <h4>${escape(item.title || '未命名事件')}</h4>
       <p class="signal-verification">${escape(item.author || '来源待注明')} · ${escape(evidenceLabel(item))}</p>
       <p class="signal-fact"><strong>信息摘要</strong>${escape(item.fact || '尚未写明')}</p>
-      <details class="analysis-details"><summary>影响分析与反向条件</summary>
+      <details open class="analysis-details"><summary>影响分析</summary>
       <p><strong>影响判断</strong>${escape(item.whyItMatters || '尚未写明')}</p>
       ${affected.length ? `<div class="topic-row">${affected.map(value => `<span>${escape(value)}</span>`).join('')}</div>` : ''}
-      ${item.counterCase ? `<p class="signal-counter"><strong>反向条件</strong>${escape(item.counterCase)}</p>` : ''}
       </details>
       <footer><span>${escape(item.author || '来源待注明')} · ${escape(evidenceLabel(item))}</span>${url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">查看 X 原帖 ↗</a>` : '<span>原帖链接待核验</span>'}</footer>
     </article>`;
@@ -118,7 +117,7 @@
       <div class="profile-copy"><p class="eyebrow">${tab.type === 'collection' ? '合集' : '个人'} Tab</p><h2>${escape(tab.label)}</h2><div class="profile-source">${account}</div><p>${escape(tab.identity)}</p></div>
       <div class="person-count"><strong>${latest.length}</strong><span>${windowLabel(latestDays)}收录</span></div>
     </header>
-    <details class="reading-rules"><summary>关注范围与收录规则</summary><div class="tab-research-rule">
+    <details open class="reading-rules"><summary>关注范围与收录规则</summary><div class="tab-research-rule">
       <p><strong>关注范围</strong>${escape(tab.focus)}</p>
       <p><strong>筛选边界</strong>${escape(tab.sourceRule)}</p>
     </div></details>

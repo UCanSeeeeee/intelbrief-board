@@ -24,10 +24,9 @@
       <p class="signal-verification">${primary.verification === 'direct' ? '已直读原帖' : '待独立核验'} · 发布 ${escape(time(primary.publishedAt))}（北京时间）</p>
       <div class="topic-row"><span>${escape(event.direction)}</span><span>${escape(event.horizon)}</span>${event.affected.map(v=>`<span>${escape(v)}</span>`).join('')}</div>
       <p><strong>信息摘要</strong> ${escape(event.fact)}</p>
-      <details class="analysis-details"><summary>影响分析与反向条件</summary>
+      <details open class="analysis-details"><summary>影响分析</summary>
       <p><strong>影响判断</strong> ${escape(event.impact)}</p>
       ${knowledge}
-      <p><strong>反向条件</strong> ${escape(event.counterCase)}</p>
       </details>
       <div class="brief-primary-source"><p><strong>事件时间</strong> ${escape(eventTime)}${event.eventTime?'（北京时间）':''}${event.futureEventNote ? ' · '+escape(event.futureEventNote) : ''}</p>${primaryUrl?`<a href="${escape(primaryUrl)}" target="_blank" rel="noopener noreferrer">原文链接 · @${escape(primary.username)} ↗</a>`:'<span>原文链接待核验</span>'}</div>
     </article>`;
@@ -49,10 +48,10 @@
       const selected=(board.selected?.[group]||[]).map(id=>all.find(e=>e.eventKey===id)).filter(Boolean);
       const more=all.filter(e=>!ids.has(e.eventKey));
       $(group+'-count').textContent=`待阅精选 ${selected.length} 条 · 另保留 ${more.length} 条`;
-      $('brief-'+group).innerHTML=(selected.map(readingCard).join('')||empty('本交易日暂无精选条目'))+(more.length?`<details class="analysis-details"><summary>其余仍有效的待阅信息（${more.length}条，未删除）</summary>${more.map(readingCard).join('')}</details>`:'');
+      $('brief-'+group).innerHTML=(selected.map(readingCard).join('')||empty('本交易日暂无精选条目'))+(more.length?`<details open class="analysis-details"><summary>其余仍有效的待阅信息（${more.length}条，未删除）</summary>${more.map(readingCard).join('')}</details>`:'');
     }
     const reviewed=board.events.filter(e=>e.review&&e.state!=='active'&&e.state!=='served');
-    $('brief-audit').innerHTML=`<details class="brief-evidence"><summary>保留规则与事件复核记录</summary><p>休市与盘后收录的信息保留至对应交易时段结束。简报期次与待阅池独立保存；首次收录、原帖时间与最近核验分开。同一事件合并，不把延续消息冒充新增。</p><p>未提供跨期重排时沿用最近收录顺序，不声称这是全网重要性排名。更新失败不会清空上一批待阅内容；收市后状态为“已展示过对应交易时段”，不代表你已阅读。</p>${reviewed.map(e=>`<p>${escape(e.event.title)}：${escape(({retracted:'已撤回／证伪',superseded:'已被后续信息取代',resolved:'已失效'})[e.state])} · ${escape(e.review.reason)} · ${escape(time(e.review.checkedAt))}</p>`).join('')}</details>`;
+    $('brief-audit').innerHTML=`<details open class="brief-evidence"><summary>保留规则与事件复核记录</summary><p>休市与盘后收录的信息保留至对应交易时段结束。简报期次与待阅池独立保存；首次收录、原帖时间与最近核验分开。同一事件合并，不把延续消息冒充新增。</p><p>未提供跨期重排时沿用最近收录顺序，不声称这是全网重要性排名。更新失败不会清空上一批待阅内容；收市后状态为“已展示过对应交易时段”，不代表你已阅读。</p>${reviewed.map(e=>`<p>${escape(e.event.title)}：${escape(({retracted:'已撤回／证伪',superseded:'已被后续信息取代',resolved:'已失效'})[e.state])} · ${escape(e.review.reason)} · ${escape(time(e.review.checkedAt))}</p>`).join('')}</details>`;
   }
   async function show(entry, preserve=false) {
     if(entry?.id==='reading'){showReading();return;}
@@ -75,7 +74,7 @@
         const carriedHtml = carried.length ? `<div class="brief-carried"><h3>展示窗口内的前序期次条目（本期未重复检索）</h3>${carried.map(c=>`<article class="x-card brief-card"><div class="brief-card-top"><h3>${escape(c.title)}</h3><span class="badge">来自 ${escape(c.fromEdition)}</span></div>${c.fact?`<p>${escape(c.fact)}</p>`:''}${originalUrl(c)?`<a href="${escape(c.url)}" target="_blank" rel="noopener noreferrer">原文链接 ↗</a>`:''}<p class="brief-small">发布 ${escape(time(c.publishedAt))}（北京时间）</p></article>`).join('')}</div>` : '';
         $('brief-'+group).innerHTML = (brief[group].map(card).join('') || empty('本期没有可用条目')) + carriedHtml;
       }
-      $('brief-audit').innerHTML = `<details class="brief-evidence"><summary>本期检索范围、排序与缺口</summary><p>采集方式：${escape(brief.coverage.method)}</p>${brief.displayWindowStart?`<p>展示窗口：${escape(time(brief.displayWindowStart))} 至 ${escape(time(brief.displayWindowEnd))}（北京时间）</p>`:''}<p>检索窗口：${escape(time(brief.windowStart))} 至 ${escape(time(brief.scheduledFor))}（北京时间）</p>${Array.isArray(brief.checklist)?`<h3>检索清单</h3>${list(brief.checklist.map(c=>`${c.item}：${({covered:'已覆盖','no-result':'无结果',insufficient:'证据不足'})[c.status]||c.status}${c.note?'（'+c.note+'）':''}`))}`:''}${Array.isArray(brief.candidates)&&brief.candidates.length?`<h3>候选与入选映射</h3>${list(brief.candidates.map(c=>`第${c.round}轮 ${c.eventKey} → ${c.decision==='selected'?'入选':'落选'}：${c.reason}`))}`:''}<p>${escape(brief.selectionRationale)}</p><h3>检索问题</h3>${list(brief.coverage.queries)}<h3>覆盖缺口</h3>${list(brief.coverage.gaps.length?brief.coverage.gaps:['未另行报告；不表示覆盖了整个 X'])}<h3>主要落选候选</h3>${list(brief.excludedCandidates.map(c=>`${c.eventKey}：${c.reason}`))}</details>`;
+      $('brief-audit').innerHTML = `<details open class="brief-evidence"><summary>本期检索范围、排序与缺口</summary><p>采集方式：${escape(brief.coverage.method)}</p>${brief.displayWindowStart?`<p>展示窗口：${escape(time(brief.displayWindowStart))} 至 ${escape(time(brief.displayWindowEnd))}（北京时间）</p>`:''}<p>检索窗口：${escape(time(brief.windowStart))} 至 ${escape(time(brief.scheduledFor))}（北京时间）</p>${Array.isArray(brief.checklist)?`<h3>检索清单</h3>${list(brief.checklist.map(c=>`${c.item}：${({covered:'已覆盖','no-result':'无结果',insufficient:'证据不足'})[c.status]||c.status}${c.note?'（'+c.note+'）':''}`))}`:''}${Array.isArray(brief.candidates)&&brief.candidates.length?`<h3>候选与入选映射</h3>${list(brief.candidates.map(c=>`第${c.round}轮 ${c.eventKey} → ${c.decision==='selected'?'入选':'落选'}：${c.reason}`))}`:''}<p>${escape(brief.selectionRationale)}</p><h3>检索问题</h3>${list(brief.coverage.queries)}<h3>覆盖缺口</h3>${list(brief.coverage.gaps.length?brief.coverage.gaps:['未另行报告；不表示覆盖了整个 X'])}<h3>主要落选候选</h3>${list(brief.excludedCandidates.map(c=>`${c.eventKey}：${c.reason}`))}</details>`;
     } catch {
       if (current===generation) {
         $('brief-focus').innerHTML=empty('所选期次读取失败，请稍后重试');

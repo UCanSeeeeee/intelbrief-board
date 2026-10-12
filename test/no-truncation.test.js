@@ -4,6 +4,23 @@ const fs = require('fs');
 const path = require('path');
 const read = f => fs.readFileSync(path.join(__dirname, '..', f), 'utf8');
 
+test('all reading disclosures start open and cards omit counter-condition sections', () => {
+  const root=path.join(__dirname,'..');
+  const frontend=fs.readdirSync(root).filter(f=>/\.(?:html|js)$/.test(f));
+  let disclosures=0;
+  for(const file of frontend){
+    const source=read(file);
+    for(const match of source.matchAll(/<details\b[^>]*>/g)){
+      disclosures++;
+      assert.match(match[0],/\sopen(?:\s|>|=)/,`${file}: reading disclosure starts collapsed`);
+    }
+    assert.doesNotMatch(source,/反向条件|event\.counterCase|item\.counterCase/,`${file}: counter-condition UI was restored`);
+  }
+  assert.ok(disclosures>=10,'covers reading rules, cards, audit, company and scoring disclosures');
+  assert.match(read('updates.js'),/panel\.hidden=false/);
+  assert.match(read('updates.js'),/aria-expanded="true" aria-controls="update-panel"/);
+});
+
 test('CSS has no text truncation', () => {
   const css = read('styles.css');
   assert.doesNotMatch(css, /text-overflow\s*:\s*ellipsis/);

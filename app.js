@@ -122,7 +122,7 @@
           ${metrics ? `<span>${escapeHtml(metrics)}</span>` : ""}
           <a href="${escapeHtml(post.url)}" target="_blank" rel="noopener noreferrer">查看 X 原帖 ↗</a>
         </div>
-        <details class="score-detail">
+        <details open class="score-detail">
           <summary>为什么是 ${escapeHtml(score.overall ?? "—")} 分 · 自动初评</summary>
           <div class="score-columns">
             <div>
