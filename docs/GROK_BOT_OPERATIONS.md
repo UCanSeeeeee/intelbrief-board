@@ -12,7 +12,7 @@
 
 每天北京时间（Asia/Shanghai）09:00、16:00、21:00 **启动美股讯息期次**，不是承诺整点已发布。仅保留一套 Grok Bot 原生调度；若平台需拆为三个任务，三个时刻各一项，不额外启用 Codex、OS cron 或 GitHub Actions 调度。
 
-任务开始先安全同步远端，读取 AGENTS.md、CONTEXT.md、docs/STOCK_BRIEF.md、docs/TRADING_DAY_READING.md、config/research-guidance.json 及其指向的知识库/SOP。保留未提交改动；冲突不强推。通过 `npm run brief:slot` 确认最近期次、`npm run brief:context -- CUTOFF` 取得准确回溯窗口与待阅池；已有归档不覆盖、不重采，未确认部署则仅核验发布。
+任务开始先安全同步远端，读取 AGENTS.md、CONTEXT.md、docs/STOCK_BRIEF.md、docs/TRADING_DAY_READING.md、config/research-guidance.json 及其指向的知识库/SOP。保留未提交改动；冲突不强推。通过 `npm run brief:slot` 确认最近期次、`npm run brief:context -- CUTOFF` 取得北京时间批次回溯窗口（周一09:00起覆盖周六00:00以来消息）与待阅池，不等美国开盘；已有归档不覆盖、不重采，未确认部署则仅核验发布。
 
 由 Grok Bot 自己执行两轮独立检索、窗口覆盖与审计、去重和筛选。最多 5 条市场焦点 + 10 条多学科洞察；不足不充数，失败不得冒充无新增。具体质量和时间规则以 STOCK_BRIEF / SOP 为准，不在此复制一套。
 

@@ -5,7 +5,7 @@ try {
   const [command, inputFile] = process.argv.slice(2);
   if (command === 'slot') console.log(JSON.stringify(slotAt(), null, 2));
   else if (command === 'context') {
-    const {readingWindow}=require('./lib/trading-session');
+    const {readingWindow}=require('./lib/reading-period');
     const {readBoard}=require('./lib/reading-board');
     const {ROOT}=require('./lib/x-data');
     const path=require('node:path');

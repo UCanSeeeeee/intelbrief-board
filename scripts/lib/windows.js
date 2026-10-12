@@ -1,7 +1,7 @@
 // Display window vs search window. All Beijing-time math goes through Intl, never "+8h string slicing".
 const fs=require('node:fs');
 const path=require('node:path');
-const {readingWindow}=require('./trading-session');
+const {readingWindow}=require('./reading-period');
 const TZ='Asia/Shanghai';
 const DAY=86400000;
 function parts(ms) {
@@ -26,7 +26,7 @@ function displayWindow(cutoff) {
   const window=readingWindow(cutoff);
   return {displayWindowStart:beijingIso(window.start),displayWindowEnd:beijingIso(window.end)};
 }
-// Search covers the trading reading interval and up to fourteen days of missed runs.
+// Search covers Beijing reading batches and up to fourteen days of missed runs.
 function windowStart(editions,job) {
   // Manual editions never move the scheduled collection cursor.
   const cutoff=Date.parse(job.cutoff);

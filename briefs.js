@@ -33,25 +33,25 @@
   }
   let manifest, config, readingBoard, generation = 0;
   function readingCard(item,index) {
-    const note=`首次收录 ${time(item.firstSeenAt)} · 最近核验 ${time(item.lastCheckedAt)} · ${item.retainUntil?'保留至 '+time(item.retainUntil)+'（北京时间）':'日历待核验，暂不自动移除'}${item.lateDiscovery?' · 延迟发现／早期消息，非刚刚发生':''}`;
+    const note=`首次收录 ${time(item.firstSeenAt)} · 最近核验 ${time(item.lastCheckedAt)} · ${item.retainUntil?'保留至 '+time(item.retainUntil)+'（北京时间）':'待复核，暂不自动移除'}${item.lateDiscovery?' · 延迟发现／早期消息，非刚刚发生':''}`;
     return `<div><p class="brief-small">${escape(note)}</p>${card(item.event,index)}</div>`;
   }
   function showReading() {
     generation++;
     const board=readingBoard;
-    const ctx=board.session||{};
-    const ended=ctx.closeAt&&Date.now()>=Date.parse(ctx.closeAt);
-    if($('reading-context'))$('reading-context').textContent=`交易日待阅 · 以下均为北京时间 · 信息截止 ${time(board.asOf)} · ${ctx.known?time(ctx.openAt)+' 开盘 → '+time(ctx.closeAt)+' 收盘':'交易日历待核验'}${ended?' · 该交易时段已结束，等待后续更新；保留上次内容':''}。${(board.warnings||[]).join(' ')}`;
+    const ctx=board.period||{};
+    const stale=ctx.retainUntil&&Date.now()>=Date.parse(ctx.retainUntil);
+    if($('reading-context'))$('reading-context').textContent=`最新汇总 · 信息截止 ${time(board.asOf)}（北京时间） · 按北京时间更新批次整理${stale?' · 已到下一阅读批次，等待更新；保留上次内容':''}。${(board.warnings||[]).join(' ')}`;
     for(const group of ['focus','insights']) {
       const all=board.events.filter(e=>e.state==='active'&&e.group===group);
       const ids=new Set((board.selected?.[group]||[]).map(String));
       const selected=(board.selected?.[group]||[]).map(id=>all.find(e=>e.eventKey===id)).filter(Boolean);
       const more=all.filter(e=>!ids.has(e.eventKey));
-      $(group+'-count').textContent=`待阅精选 ${selected.length} 条 · 另保留 ${more.length} 条`;
-      $('brief-'+group).innerHTML=(selected.map(readingCard).join('')||empty('本交易日暂无精选条目'))+(more.length?`<details open class="analysis-details"><summary>其余仍有效的待阅信息（${more.length}条，未删除）</summary>${more.map(readingCard).join('')}</details>`:'');
+      $(group+'-count').textContent=`精选 ${selected.length} 条 · 另保留 ${more.length} 条`;
+      $('brief-'+group).innerHTML=(selected.map(readingCard).join('')||empty('本次暂无精选条目'))+(more.length?`<details open class="analysis-details"><summary>其余仍有效的待阅信息（${more.length}条，未删除）</summary>${more.map(readingCard).join('')}</details>`:'');
     }
     const reviewed=board.events.filter(e=>e.review&&e.state!=='active'&&e.state!=='served');
-    $('brief-audit').innerHTML=`<details open class="brief-evidence"><summary>保留规则与事件复核记录</summary><p>休市与盘后收录的信息保留至对应交易时段结束。简报期次与待阅池独立保存；首次收录、原帖时间与最近核验分开。同一事件合并，不把延续消息冒充新增。</p><p>未提供跨期重排时沿用最近收录顺序，不声称这是全网重要性排名。更新失败不会清空上一批待阅内容；收市后状态为“已展示过对应交易时段”，不代表你已阅读。</p>${reviewed.map(e=>`<p>${escape(e.event.title)}：${escape(({retracted:'已撤回／证伪',superseded:'已被后续信息取代',resolved:'已失效'})[e.state])} · ${escape(e.review.reason)} · ${escape(time(e.review.checkedAt))}</p>`).join('')}</details>`;
+    $('brief-audit').innerHTML=`<details open class="brief-evidence"><summary>保留规则与事件复核记录</summary><p>周末重要消息从北京时间周一09:00批次起汇总展示，并在周一后续批次保留，不等待美国开盘。简报期次与待阅池独立保存；首次收录、原帖时间与最近核验分开。同一事件合并，不把延续消息冒充新增。</p><p>未提供跨期重排时沿用最近收录顺序，不声称这是全网重要性排名。更新失败不会清空上一批待阅内容；后续批次接替后的状态为“已展示过对应阅读日”，不代表你已阅读。</p>${reviewed.map(e=>`<p>${escape(e.event.title)}：${escape(({retracted:'已撤回／证伪',superseded:'已被后续信息取代',resolved:'已失效'})[e.state])} · ${escape(e.review.reason)} · ${escape(time(e.review.checkedAt))}</p>`).join('')}</details>`;
   }
   async function show(entry, preserve=false) {
     if(entry?.id==='reading'){showReading();return;}
@@ -97,7 +97,7 @@
       $('brief-insights').innerHTML=empty('等待十条多学科洞察');
       return;
     }
-    $('edition-select').innerHTML=(readingBoard?'<option value="reading">交易日待阅（跨期保留）</option>':'')+editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status]||e.status)} · 收录 ${escape(e.counts.total)} 条</option>`).join('');
+    $('edition-select').innerHTML=(readingBoard?'<option value="reading">最新汇总（跨期保留）</option>':'')+editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status]||e.status)} · 收录 ${escape(e.counts.total)} 条</option>`).join('');
     $('edition-select').disabled=false;
     const entry=editions.find(e=>e.id===selected)||(readingBoard?{id:'reading'}:editions.find(e=>e.status!=='failed')||editions[0]);
     $('edition-select').value=entry.id;

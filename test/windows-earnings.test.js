@@ -16,10 +16,21 @@ test('beijingIso formats via Intl regardless of input offset',()=>{
   assert.equal(w.beijingIso('2026-10-11T20:00:00-05:00'),'2026-10-12T09:00:00+08:00');
 });
 
-test('display window covers 24h and the prior actual close, not arbitrary weekend midnight',()=>{
+test('display window covers 24h and Monday starts at Beijing Saturday midnight',()=>{
   assert.deepEqual(w.displayWindow('2026-10-13T09:00:00+08:00'),{displayWindowStart:'2026-10-12T09:00:00+08:00',displayWindowEnd:'2026-10-13T09:00:00+08:00'});
-  assert.equal(w.displayWindow('2026-10-12T09:00:00+08:00').displayWindowStart,'2026-10-10T04:00:00+08:00');
+  assert.equal(w.displayWindow('2026-10-12T09:00:00+08:00').displayWindowStart,'2026-10-10T00:00:00+08:00');
   assert.equal(w.weekendStart('2026-10-11T21:00:00+08:00'),null);
+});
+
+test('all Monday batches include the full weekend, including US market holidays',()=>{
+  for(const day of ['2026-09-07','2026-10-12','2026-11-02'])for(const hour of ['09','16','21']){
+    const cutoff=`${day}T${hour}:00:00+08:00`;
+    const start=w.weekendStart(cutoff);
+    assert.equal(Date.parse(w.displayWindow(cutoff).displayWindowStart),start);
+    assert.equal(w.displayWindow(cutoff).displayWindowEnd,cutoff);
+  }
+  // Monday in Beijing while it is still Sunday in the US.
+  assert.equal(w.displayWindow('2026-10-12T01:00:00Z').displayWindowStart,'2026-10-10T00:00:00+08:00');
 });
 
 test('search window covers the reading interval; only successful coverage skips queries',()=>{
@@ -27,7 +38,7 @@ test('search window covers the reading interval; only successful coverage skips 
   assert.equal(w.windowStart(editions,{cutoff:'2026-10-13T09:00:00+08:00',trigger_type:'scheduled'}),'2026-10-12T01:00:00.000Z');
   // Monday with a Sunday 21:00 edition still covers Sat/Sun.
   const mon=[{scheduledFor:'2026-10-11T21:00:00+08:00',trigger:'scheduled',status:'complete'}];
-  assert.equal(w.windowStart(mon,{cutoff:'2026-10-12T09:00:00+08:00',trigger_type:'scheduled'}),'2026-10-09T20:00:00.000Z');
+  assert.equal(w.windowStart(mon,{cutoff:'2026-10-12T09:00:00+08:00',trigger_type:'scheduled'}),'2026-10-09T16:00:00.000Z');
   // No prior edition, non-Monday: 24h.
   assert.equal(w.windowStart([],{cutoff:'2026-10-14T09:00:00+08:00',trigger_type:'scheduled'}),'2026-10-13T01:00:00.000Z');
 });
@@ -46,7 +57,7 @@ test('v2 briefs carry display window and require checklist and candidates',()=>{
   const brief=prepareNews(failed,job,'2026-10-11T13:00:00.000Z',new Map(),new Date('2026-10-12T02:00:00Z'));
   assert.equal(brief.schemaVersion,2);
   assert.equal(brief.scheduledFor,'2026-10-12T09:00:00+08:00');
-  assert.equal(brief.displayWindowStart,'2026-10-10T04:00:00+08:00');
+  assert.equal(brief.displayWindowStart,'2026-10-10T00:00:00+08:00');
   const {checklist,...noList}=failed;
   assert.throws(()=>prepareNews(noList,job,'2026-10-11T13:00:00.000Z',new Map(),new Date('2026-10-12T02:00:00Z')),/检索前清单/);
   assert.throws(()=>prepareNews({...failed,checklist:[{item:'就业',status:'no-result'}]},job,'2026-10-11T13:00:00.000Z',new Map(),new Date('2026-10-12T02:00:00Z')),/需要说明/);
@@ -114,7 +125,7 @@ test('login throttle blocks after 5 failures within 10 minutes',async()=>{
 
 test('collector prompt states display/search split, uncovered spans and checklist',()=>{
   const {collectorPrompt}=require('../scripts/lib/update-prompt');
-  const p=collectorPrompt({page:'news',cutoff:'2026-10-12T01:00:00Z'},path.join(__dirname,'..'),'2026-10-09T16:00:00.000Z',{},{displayWindowStart:'2026-10-10T04:00:00+08:00',displayWindowEnd:'2026-10-12T09:00:00+08:00',uncovered:[{start:'a',end:'b'}]});
+  const p=collectorPrompt({page:'news',cutoff:'2026-10-12T01:00:00Z'},path.join(__dirname,'..'),'2026-10-09T16:00:00.000Z',{},{displayWindowStart:'2026-10-10T00:00:00+08:00',displayWindowEnd:'2026-10-12T09:00:00+08:00',uncovered:[{start:'a',end:'b'}]});
   assert.match(p,/展示窗口与检索窗口分离/);
   assert.match(p,/a 至 b/);
   assert.match(p,/checklist/);

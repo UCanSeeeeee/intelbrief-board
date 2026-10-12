@@ -37,7 +37,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 
 ## 关键文件
 
-- `docs/TRADING_DAY_READING.md`：交易日待阅规则的唯一专题入口，覆盖旧的固定24小时/仅周一补扫；`config/us-market-calendar.json`提供官方日历，`data/reading-board.json`独立于三期简报持久保留有效事件。采集前运行`npm run brief:context`。
+- `docs/TRADING_DAY_READING.md`：北京时间批次/周末保留的唯一专题入口（历史文件名沿用）；周一09:00起收录周六00:00以来消息，不按美国开收盘或节假日推迟展示。`scripts/lib/reading-period.js`计算周期，`data/reading-board.json`独立于三期简报保留有效事件。采集前运行`npm run brief:context`。旧交易所日历仍留存供历史追溯，不再驱动讯息展示。
 
 - `docs/DESIGN_SYSTEM.md` / `styles.css`：七页共用的阅读优先布局，所有阅读内容默认展开，卡片不展示反向条件；数量为上限而非任务完成率。历史证据与内部核验不因UI改变。
 - `calendar-time.js`：宏观美东时刻换算北京时间（含夏令时）与财报披露状态展示；测试见 `test/calendar-time.test.js`。
