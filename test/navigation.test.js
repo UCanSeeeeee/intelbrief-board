@@ -68,6 +68,8 @@ test('crypto page has board, BTC, Brew tabs with Brew contract', () => {
   assert.equal(brew.latestWindowDays, 7);
   assert.equal(brew.weeklyWindowDays, 7);
   assert.equal(config.tabs.find(tab => tab.id === 'btc').assetClass, 'crypto');
+  assert.ok(config.tabs.every(tab => tab.latestWindowDays === 7 && tab.weeklyWindowDays === 7));
+  assert.equal(config.tabs.find(tab => tab.id === 'crypto-board').latestLimit, 10);
   assert.match(read('crypto.html'), /data-page="crypto"/);
   assert.match(read('crypto.js'), /crypto-intelligence\.json/);
 });

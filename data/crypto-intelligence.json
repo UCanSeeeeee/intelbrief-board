@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T02:54:00.000Z",
-  "cutoff": "2026-10-12T10:54:00+08:00",
+  "updatedAt": "2026-10-12T03:30:00.000Z",
+  "cutoff": "2026-10-12T11:30:00+08:00",
   "source": "X only",
   "status": "complete",
   "collectionPath": "grok-app",
@@ -10,41 +10,63 @@
       {
         "id": "crypto-board",
         "status": "complete",
-        "note": "板块检索监管/ETF/资金流。入选泰国加密 ETF 新规；不足未凑数。"
+        "note": "latestWindowDays=7 重采。入选泰国现货 ETF 规则与 SEC 3× ETP 转述。排除喊单直播与纯行情口号。"
       },
       {
         "id": "btc",
         "status": "complete",
-        "note": "检索 $BTC/Bitcoin/ETF；入选 10/6 ETF 净流入。泰国监管改归板块讯息 Tab。"
+        "note": "latestWindowDays=7 重采。入选 10/6 流入、10/7 大额流出与当周净流出汇总。排除 $100K 目标价宣传。"
       },
       {
         "id": "brew",
         "status": "complete",
-        "note": "2026-10-12 重采：窗口扩为 latest=7d（与 weekly 同窗）。检索 Brew/$BREW/合约 0xfa6d9b504848606eb9aec04ccc161d169b3f2159（近7日 x MCP 公开读）。命中多为同一账号促销刷屏（moon/hold/keep your eye）、TG Live 重复帖与看图喊单；无协议更新、上架、审计、官方可核验声明等达标事实。items=0，未凑数。"
+        "note": "7 日窗口再采 Brew/$BREW/合约。仍几乎全是促销刷屏与上所幻想，无达标事实。items=0。"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "crypto-board-thailand-etf-rules-2026-10-11",
+      "eventKey": "crypto-board-thailand-spot-etf-rules-2026-10-09",
       "tabIds": [
         "crypto-board"
       ],
-      "title": "泰国证监为加密 ETF 发布新规通知",
-      "fact": "@HYPERBEASTAI 称泰国 SEC 发布 11 项新通知，为普通投资者在泰国证交所上的比特币与以太坊类 ETF 制定规则。",
-      "whyItMatters": "新兴市场 ETF 监管框架扩展可能打开增量合规需求通道。",
-      "counterCase": "转述新闻；落地时点与产品规模未明。",
+      "title": "泰国证监落地本地现货比特币/以太坊 ETF 规则",
+      "fact": "@ArchibaldBollz 称自 10 月 16 日起本地资管可在泰国证交所发行现货比特币与以太坊 ETF；规则包括对单一币种 80%+ 敞口、SEC 牌照托管、禁止保证金贷款等。",
+      "whyItMatters": "亚洲合规现货 ETF 通道扩展，属板块级监管与产品供给变化。",
+      "counterCase": "二手新闻；细则与首批发行人需官方核实。",
       "affected": [
-        "BTC",
-        "加密 ETF 监管"
+        "比特币/以太现货 ETF",
+        "东南亚合规通道"
       ],
-      "author": "HYPERBEASTAI",
-      "publishedAt": "2026-10-11T00:00:48.000Z",
-      "url": "https://x.com/HYPERBEASTAI/status/2109071684229894611",
+      "author": "ArchibaldBollz",
+      "publishedAt": "2026-10-09T14:33:29.000Z",
+      "url": "https://x.com/ArchibaldBollz/status/2108566525674422427",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "crypto-board": 1
+      }
+    },
+    {
+      "eventKey": "crypto-board-sec-3x-btc-eth-etp-2026-10-05",
+      "tabIds": [
+        "crypto-board"
+      ],
+      "title": "转述：SEC 批准 Cboe 上市 3 倍比特币/以太 ETP",
+      "fact": "@tding35x 称 SEC 批准 Cboe 上市 3× Bitcoin 与 3× Ether ETP，强调从争夺现货 ETF 到批准杠杆敞口不足三年。",
+      "whyItMatters": "杠杆 ETP 改变零售/机构风险产品供给与监管边界讨论。",
+      "counterCase": "需对照 SEC/Cboe 官方批准文本；产品上市时点未知。",
+      "affected": [
+        "加密 ETP",
+        "杠杆风险产品"
+      ],
+      "author": "tding35x",
+      "publishedAt": "2026-10-05T23:54:47.000Z",
+      "url": "https://x.com/tding35x/status/2107258229751218258",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "crypto-board": 1
+        "crypto-board": 2
       }
     },
     {
@@ -53,8 +75,8 @@
         "btc"
       ],
       "title": "10/6 比特币 ETF 单日净流入约 1.188 亿美元",
-      "fact": "@thepfund 称 10/6 Bitcoin ETF 总净流入约 +$118.80m（月至今约 +$321.4m，2026 YTD 约 +$1.25B），其中 $IBIT 约 +$122.00m，并提及监管与宏观日程背景。",
-      "whyItMatters": "ETF 资金流是 BTC 机构需求的可观测代理，影响折现率叙事与风险资产联动。",
+      "fact": "@thepfund 称 10/6 Bitcoin ETF 总净流入约 +$118.80m（月至今约 +$321.4m，2026 YTD 约 +$1.25B），其中 $IBIT 约 +$122.00m。",
+      "whyItMatters": "ETF 资金流是 BTC 机构需求的可观测代理。",
       "counterCase": "单日流入可迅速反转；需对照发行商官方流量。",
       "affected": [
         "BTC",
@@ -67,6 +89,50 @@
       "tier": "must-read",
       "weeklyRanks": {
         "btc": 1
+      }
+    },
+    {
+      "eventKey": "btc-etf-outflow-484m-2026-10-07",
+      "tabIds": [
+        "btc"
+      ],
+      "title": "转述：10/7 现货比特币 ETF 单日净流出约 4.85 亿美元",
+      "fact": "@Crypto_Act38 称比特币现货 ETF 在 10 月 7 日录得约净流出 $484.9M，并称无一基金净流入；分项提到 IBIT/FBTC/ARKB 等赎回量级。",
+      "whyItMatters": "大幅赎回打断月初流入，是 BTC 近窗关键资金流事实。",
+      "counterCase": "聚合追踪数据，分基金数字需与 Farside/SoSoValue 等交叉。",
+      "affected": [
+        "BTC",
+        "现货比特币 ETF"
+      ],
+      "author": "Crypto_Act38",
+      "publishedAt": "2026-10-08T08:55:24.000Z",
+      "url": "https://x.com/Crypto_Act38/status/2108119056469340379",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "btc": 2
+      }
+    },
+    {
+      "eventKey": "btc-etf-week-outflow-679m-2026-10-05-09",
+      "tabIds": [
+        "btc"
+      ],
+      "title": "转述：10/5–10/9 现货比特币 ETF 周净流出约 6.8 亿美元",
+      "fact": "@MakroDives 汇总称当周美现货比特币 ETF 净流出约 −$678.9M，并给出逐日与 FBTC/ARKB 等赎回量级。",
+      "whyItMatters": "周度资金流刻画机构再定价节奏，补充单日噪声。",
+      "counterCase": "周度拼表依赖第三方；累计 AUM 口径可能不一致。",
+      "affected": [
+        "BTC",
+        "现货比特币 ETF"
+      ],
+      "author": "MakroDives",
+      "publishedAt": "2026-10-10T07:37:39.000Z",
+      "url": "https://x.com/MakroDives/status/2108824263847231566",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "btc": 3
       }
     }
   ]

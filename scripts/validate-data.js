@@ -120,7 +120,8 @@ for (const [index, item] of (cryptoData.items || []).entries()) {
 const cryptoReference = cryptoData.cutoff ? Date.parse(cryptoData.cutoff) : Date.now();
 for (const tab of cryptoTabs.values()) {
   const tabItems = (cryptoData.items || []).filter(item => item.tabIds.includes(tab.id));
-  if (tabItems.filter(item => Date.parse(item.publishedAt) >= cryptoReference - 86400000).length > tab.latestLimit) fail(`${tab.label} exceeds latestLimit`);
+  const latestDays = Number(tab.latestWindowDays) || 1;
+  if (tabItems.filter(item => Date.parse(item.publishedAt) >= cryptoReference - latestDays * 86400000).length > tab.latestLimit) fail(`${tab.label} exceeds latestLimit`);
   const ranks = tabItems.map(item => item.weeklyRanks?.[tab.id]).filter(rank => rank != null);
   if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
 }
