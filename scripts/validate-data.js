@@ -92,9 +92,38 @@ for (const tab of tickerTabs.values()) {
   const ranks = tabItems.map(item => item.weeklyRanks?.[tab.id]).filter(rank => rank != null);
   if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
 }
-const brew = tickerTabs.get('brew');
-if (!brew || brew.assetClass !== 'crypto-token' || !/^0x[a-fA-F0-9]{40}$/.test(brew.contractAddress || '')) fail('brew tab must be crypto-token with valid contractAddress');
-if (!tickerTabs.get('btc') || tickerTabs.get('btc').assetClass !== 'crypto') fail('btc tab must be crypto assetClass');
+const equityIds = ['nvda','mu','intc','goog','avgo','vrt','tsm'];
+if ([...tickerTabs.keys()].sort().join() !== equityIds.slice().sort().join()) fail('ticker tabs must be equity-only NVDA/MU/INTC/GOOG/AVGO/VRT/TSM');
+for (const tab of tickerTabs.values()) if (tab.assetClass === 'crypto' || tab.assetClass === 'crypto-token' || tab.contractAddress) fail(`${tab.id} crypto fields not allowed on equity ticker page`);
+
+
+const cryptoConfig = readJson(path.join(ROOT, 'config/crypto-intelligence.json'));
+const cryptoData = readJson(path.join(ROOT, 'data/crypto-intelligence.json'));
+const cryptoTabs = new Map((cryptoConfig.tabs || []).map(tab => [tab.id, tab]));
+if ([...cryptoTabs.keys()].join() !== 'crypto-board,btc,brew') fail('crypto tabs must be crypto-board, btc, brew in that config order');
+const brewTab = cryptoTabs.get('brew');
+if (!brewTab || brewTab.assetClass !== 'crypto-token' || !/^0x[a-fA-F0-9]{40}$/i.test(brewTab.contractAddress || '')) fail('brew must be crypto-token with valid contractAddress');
+if (cryptoTabs.get('btc')?.assetClass !== 'crypto') fail('btc must be crypto assetClass');
+if (cryptoTabs.get('crypto-board')?.assetClass !== 'crypto-board') fail('crypto-board assetClass required');
+const cryptoKeys = new Set();
+const cryptoUrls = new Set();
+for (const [index, item] of (cryptoData.items || []).entries()) {
+  if (!item.eventKey || cryptoKeys.has(item.eventKey)) fail(`crypto.items[${index}] invalid or duplicate eventKey`);
+  cryptoKeys.add(item.eventKey);
+  if (!Array.isArray(item.tabIds) || !item.tabIds.length || item.tabIds.some(id => !cryptoTabs.has(id))) fail(`crypto.items[${index}] invalid tabIds`);
+  if (!/^https:\/\/(?:x|twitter)\.com\/[a-zA-Z0-9_]{1,15}\/status\/\d+$/.test(item.url || '') || cryptoUrls.has(item.url)) fail(`crypto.items[${index}] invalid or duplicate X evidence`);
+  cryptoUrls.add(item.url);
+  if (Number.isNaN(Date.parse(item.publishedAt))) fail(`crypto.items[${index}] invalid publishedAt`);
+  if (item.verification !== 'collector-report') fail(`crypto.items[${index}] must retain collector-report verification`);
+  for (const [tabId, rank] of Object.entries(item.weeklyRanks || {})) if (!item.tabIds.includes(tabId) || !Number.isInteger(rank) || rank < 1 || rank > 5) fail(`crypto.items[${index}] invalid weekly rank`);
+}
+const cryptoReference = cryptoData.cutoff ? Date.parse(cryptoData.cutoff) : Date.now();
+for (const tab of cryptoTabs.values()) {
+  const tabItems = (cryptoData.items || []).filter(item => item.tabIds.includes(tab.id));
+  if (tabItems.filter(item => Date.parse(item.publishedAt) >= cryptoReference - 86400000).length > tab.latestLimit) fail(`${tab.label} exceeds latestLimit`);
+  const ranks = tabItems.map(item => item.weeklyRanks?.[tab.id]).filter(rank => rank != null);
+  if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
+}
 
 const guidance = readJson(path.join(ROOT, 'config/research-guidance.json'));
 if (JSON.stringify(guidance.priorityOrder) !== JSON.stringify(['半导体','电力','AI 落地'])) fail('research guidance priority order changed unexpectedly');
@@ -154,6 +183,7 @@ if (!process.exitCode) {
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);
   console.log(`[validate-data] OK: ${peopleTabs.size} people tabs, ${eventKeys.size} selected events`);
   console.log(`[validate-data] OK: ${tickerTabs.size} ticker tabs, ${tickerKeys.size} selected events`);
+  console.log(`[validate-data] OK: ${cryptoTabs.size} crypto tabs, ${cryptoKeys.size} selected events`);
   console.log('[validate-data] OK: project research knowledge and Grok SOP');
   console.log(`[validate-data] OK: earnings calendar ${earnings.weeks?.length||0} weeks, ${earnings.counts?.important||0} important / ${earnings.counts?.raw||0} raw`);
 }

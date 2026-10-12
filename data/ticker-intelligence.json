@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T02:45:00.000Z",
-  "cutoff": "2026-10-12T10:45:00+08:00",
+  "updatedAt": "2026-10-12T03:00:00.000Z",
+  "cutoff": "2026-10-12T11:00:00+08:00",
   "source": "X only",
   "status": "complete",
   "collectionPath": "grok-app",
@@ -41,16 +41,6 @@
         "id": "tsm",
         "status": "complete",
         "note": "检索 $TSM/TSMC/CoWoS|营收；入选 10/15 电话会预告、9 月营收转述、GF 中介层协议。"
-      },
-      {
-        "id": "btc",
-        "status": "complete",
-        "note": "检索 $BTC/Bitcoin/ETF|regulation；入选 10/6 ETF 净流入与泰国加密 ETF 规则。排除纯行情口号。"
-      },
-      {
-        "id": "brew",
-        "status": "complete",
-        "note": "检索 Brew/$BREW/合约 0xfa6d9b504848606eb9aec04ccc161d169b3f2159。窗口内多为促销喊单，无达到门槛的新增事实，items=0，未凑数。"
       }
     ]
   },
@@ -410,50 +400,6 @@
       "tier": "watch",
       "weeklyRanks": {
         "tsm": 3
-      }
-    },
-    {
-      "eventKey": "btc-etf-net-flow-2026-10-06",
-      "tabIds": [
-        "btc"
-      ],
-      "title": "10/6 比特币 ETF 单日净流入约 1.188 亿美元",
-      "fact": "@thepfund 称 10/6 Bitcoin ETF 总净流入约 +$118.80m（月至今约 +$321.4m，2026 YTD 约 +$1.25B），其中 $IBIT 约 +$122.00m，并提及监管与宏观日程背景。",
-      "whyItMatters": "ETF 资金流是 BTC 机构需求的可观测代理，影响折现率叙事与风险资产联动。",
-      "counterCase": "单日流入可迅速反转；需对照发行商官方流量。",
-      "affected": [
-        "BTC",
-        "比特币现货 ETF"
-      ],
-      "author": "thepfund",
-      "publishedAt": "2026-10-07T04:21:50.000Z",
-      "url": "https://x.com/thepfund/status/2107687824615182810",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "btc": 1
-      }
-    },
-    {
-      "eventKey": "btc-thailand-crypto-etf-rules-2026-10-11",
-      "tabIds": [
-        "btc"
-      ],
-      "title": "泰国证监为加密 ETF 发布新规通知",
-      "fact": "@HYPERBEASTAI 称泰国 SEC 发布 11 项新通知，为普通投资者在泰国证交所上的比特币与以太坊类 ETF 制定规则。",
-      "whyItMatters": "新兴市场 ETF 监管框架扩展可能打开增量合规需求通道。",
-      "counterCase": "转述新闻；落地时点与产品规模未明。",
-      "affected": [
-        "BTC",
-        "加密 ETF 监管"
-      ],
-      "author": "HYPERBEASTAI",
-      "publishedAt": "2026-10-11T00:00:48.000Z",
-      "url": "https://x.com/HYPERBEASTAI/status/2109071684229894611",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "btc": 2
       }
     }
   ]

@@ -5,11 +5,11 @@ const path = require('node:path');
 
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 
-test('primary pages expose news, people, tickers, and earnings tabs', () => {
-  for (const file of ['index.html', 'people.html', 'tickers.html', 'earnings.html']) {
+test('primary pages expose news, people, tickers, crypto, and earnings tabs', () => {
+  for (const file of ['index.html', 'people.html', 'tickers.html', 'crypto.html', 'earnings.html']) {
     const html = read(file);
     const items = [...html.matchAll(/<a href="([^"]+)" data-nav="([^"]+)"/g)].map(match => match.slice(1));
-    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['earnings.html', 'earnings']]);
+    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['crypto.html', 'crypto'], ['earnings.html', 'earnings']]);
     assert.doesNotMatch(html, /X 情报总览|来源与评分|data-stock-tab/);
   }
   assert.doesNotMatch(read('index.html'), /role="tab"/);
@@ -48,18 +48,24 @@ test('legacy public routes lead to the new information architecture', () => {
   assert.match(read('_worker.js'), /'\/sources\.html': '\/index\.html'/);
 });
 
-test('tickers page mirrors people windows and seeds required symbols including BTC and Brew', () => {
+test('tickers page is equity-only seven symbols', () => {
   const config = JSON.parse(read('config/ticker-intelligence.json'));
-  assert.deepEqual(config.tabs.map(tab => tab.id), ['nvda', 'mu', 'intc', 'goog', 'avgo', 'vrt', 'tsm', 'btc', 'brew']);
+  assert.deepEqual(config.tabs.map(tab => tab.id), ['nvda', 'mu', 'intc', 'goog', 'avgo', 'vrt', 'tsm']);
   assert.ok(config.tabs.every(tab => tab.latestLimit === 5 && tab.weeklyLimit === 5 && tab.latestWindowDays === 1 && tab.weeklyWindowDays === 7));
+  assert.ok(config.tabs.every(tab => tab.assetClass !== 'crypto' && tab.assetClass !== 'crypto-token' && !tab.contractAddress));
+  assert.match(read('tickers.html'), /data-page="tickers"/);
+  assert.match(read('tickers.js'), /ticker-intelligence\.json/);
+});
+
+test('crypto page has board, BTC, Brew tabs with Brew contract', () => {
+  const config = JSON.parse(read('config/crypto-intelligence.json'));
+  assert.deepEqual(config.tabs.map(tab => tab.id), ['crypto-board', 'btc', 'brew']);
+  assert.equal(config.tabs[0].label, '加密板块讯息');
+  assert.equal(config.tabs[0].latestLimit, 10);
   const brew = config.tabs.find(tab => tab.id === 'brew');
   assert.equal(brew.assetClass, 'crypto-token');
   assert.equal(brew.contractAddress.toLowerCase(), '0xfa6d9b504848606eb9aec04ccc161d169b3f2159');
-  const btc = config.tabs.find(tab => tab.id === 'btc');
-  assert.equal(btc.assetClass, 'crypto');
-  const html = read('tickers.html');
-  assert.match(html, /data-page="tickers"/);
-  assert.match(html, /id="tickers-selector"/);
-  assert.match(html, /id="ticker-detail"/);
-  assert.match(read('tickers.js'), /ticker-intelligence\.json/);
+  assert.equal(config.tabs.find(tab => tab.id === 'btc').assetClass, 'crypto');
+  assert.match(read('crypto.html'), /data-page="crypto"/);
+  assert.match(read('crypto.js'), /crypto-intelligence\.json/);
 });

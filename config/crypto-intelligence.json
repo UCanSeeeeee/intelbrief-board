@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "researchPriorities": [
+    "监管与合规",
+    "资金流与流动性",
+    "基础设施与矿工/电力",
+    "代币与协议新增事实"
+  ],
+  "tabs": [
+    {
+      "id": "crypto-board",
+      "label": "加密板块讯息",
+      "shortLabel": "板块讯息",
+      "type": "collection",
+      "assetClass": "crypto-board",
+      "identity": "加密市场板块级公开讯息",
+      "symbol": null,
+      "cashtag": null,
+      "handle": null,
+      "handles": [],
+      "latestLimit": 10,
+      "weeklyLimit": 5,
+      "focus": "板块级监管、ETF/资金流、宏观与风险偏好、基础设施与跨资产传导；不是单一币种行情复读。",
+      "sourceRule": "只收可回查 X 原帖。以 Bitcoin/crypto ETF/监管/矿工电力等板块关键词检索。排除纯喊单与无实质刷屏。本 Tab 是加密看板合集，不是美股简报 5+10，也不是 Nasdaq 个股。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "btc",
+      "label": "BTC",
+      "shortLabel": "BTC",
+      "type": "ticker",
+      "assetClass": "crypto",
+      "identity": "Bitcoin",
+      "symbol": "BTC",
+      "cashtag": "$BTC",
+      "handle": null,
+      "handles": [],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "ETF 与机构资金流、监管、矿工/哈希与电力、与宏观风险资产的交叉事实",
+      "sourceRule": "以 $BTC、Bitcoin 为锚点；只收可回查 X 新增事实。排除纯行情口号。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    },
+    {
+      "id": "brew",
+      "label": "Brew",
+      "shortLabel": "Brew",
+      "type": "ticker",
+      "assetClass": "crypto-token",
+      "identity": "Brew token",
+      "symbol": "BREW",
+      "cashtag": "$BREW",
+      "contractAddress": "0xfa6d9b504848606eb9aec04ccc161d169b3f2159",
+      "handle": null,
+      "handles": [],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "focus": "协议/代币新增事实、流动性与上市、可核验声明；合约地址可检索不可编造链上数据",
+      "sourceRule": "以 Brew、$BREW 及合约 0xfa6d9b504848606eb9aec04ccc161d169b3f2159 检索；只收可回查 X 原帖。加密代币 Tab，非 Nasdaq。",
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7
+    }
+  ],
+  "updatedAt": "2026-10-12T11:00:00+08:00",
+  "notes": "侧栏「加密」独立于「具体个股」。顶部顺序：加密板块讯息 → BTC → Brew。来源与美股/人物相同：仅 Grok Bot App → Grok 网页。"
+}

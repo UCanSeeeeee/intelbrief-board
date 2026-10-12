@@ -110,4 +110,5 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
 }
 function preparePeopleIntelligence(input,config,existing,cutoff,now=new Date()){return prepareTabbedIntelligence(input,config,existing,cutoff,now,'人物情报');}
 function prepareTickerIntelligence(input,config,existing,cutoff,now=new Date()){return prepareTabbedIntelligence(input,config,existing,cutoff,now,'个股情报');}
-module.exports={prepareNews,preparePeople,preparePeopleIntelligence,prepareTickerIntelligence,prepareTabbedIntelligence,windowStart};
+function prepareCryptoIntelligence(input,config,existing,cutoff,now=new Date()){return prepareTabbedIntelligence(input,config,existing,cutoff,now,'加密情报');}
+module.exports={prepareNews,preparePeople,preparePeopleIntelligence,prepareTickerIntelligence,prepareCryptoIntelligence,prepareTabbedIntelligence,windowStart};
