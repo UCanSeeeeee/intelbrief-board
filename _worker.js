@@ -1,6 +1,6 @@
 import { handleUpdates } from './server/updates.mjs';
 // Retired pages redirect permanently; _redirects is ignored when a Pages _worker.js exists.
-const RETIRED = { '/stocks.html': '/index.html', '/sources.html': '/index.html' };
+const RETIRED = { '/stocks.html': '/index.html', '/sources.html': '/index.html', '/shorts.html': '/index.html', '/shorts': '/index.html' };
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);

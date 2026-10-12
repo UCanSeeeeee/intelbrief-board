@@ -30,7 +30,7 @@
 | 代码/UI/功能维护 | docs/DESIGN_SYSTEM.md、相关页面脚本与测试；改数据结构再读 docs/X_DATA_CONTRACT.md |
 | Grok Bot接管、定时与发布 | docs/GROK_BOT_OPERATIONS.md、docs/AGENT_ENTRY.md |
 | 美股简报 | docs/STOCK_BRIEF.md、config/research-guidance.json 指向的知识库与 SOP |
-| 人物/个股/AI/加密/空头 | 对应 docs 页面说明和 config 配置，再读研究知识与 SOP；窗口以上述配置为准 |
+| 人物/个股/AI/加密 | 对应 docs 页面说明和 config 配置，再读研究知识与 SOP；窗口以上述配置为准 |
 | 财报、宏观日历 | docs/EARNINGS_CALENDAR.md、docs/MACRO_EVENTS.md，适用各自来源例外 |
 | 网页采集按钮/旧执行器 | docs/MANUAL_UPDATES.md；当前未接通，不恢复旧 Codex 采集 |
 
@@ -54,7 +54,7 @@
 
 ## 讯息采集硬规则（用户于2026-10-11明确指定）
 
-本规则适用于本项目所有LLM、Agent、执行器、手动更新与定时任务；包括「美股讯息」「宏观大事」「板块空头」「具体人物」「具体个股」「AI板块」「加密」及以后新增的信息页面。宏观大事为低频官方日历，不跟 09/16/21 简报；板块空头为 X-only 空头/借券情报。
+本规则适用于本项目所有LLM、Agent、执行器、手动更新与定时任务；包括「美股讯息」「宏观大事」「具体人物」「具体个股」「AI板块」「加密」及以后新增的信息页面。宏观大事为低频官方日历，不跟 09/16/21 简报。
 
 1. **第一路径：Grok Bot「X+github」自身的正常 X 检索能力。** 由该 Bot 在其云端执行，不要求 GPT 操作本机 App，也不要求 Bot 再打开自己。不得改用其他 Bot 规避本项目规则。
 2. **唯一备用路径：Grok 网页版（https://grok.com）。** 仅在主路径不可用、操作失败或不能完成本次采集时，由同一个 Grok Bot 使用并记录切换原因；不转交 GPT。
@@ -87,13 +87,15 @@
 
 ## 当前交付顺序
 
+2026-10-12用户取消“板块空头”栏目：不再展示、采集或部署其资产，历史资料仅留仓库追溯，不作为启动任务的依据；旧链接跳转美股讯息。侧栏“宏观大事”紧挨“财报日历”上方，完整顺序见DESIGN_SYSTEM。
+
 用户于2026-10-12明确决定：**没有“本地验收”阶段**。每次改动完成并通过 `npm test`、`npm run check`、`npm run build` 后，必须立即提交并推送 `master`，Cloudflare 随推送自动更新。
 
 After completing and verifying any requested change to this GitHub project, create a focused git commit and push it to `master`. Do not leave finished project changes uncommitted. Preserve unrelated user changes and never force-push.
 
 ## 来源例外：财报日历与财报结果（用户于2026-10-12确认）
 
-“只走 Grok App / Grok 网页版”的硬规则适用于 **X 讯息采集**（美股讯息、板块空头、具体人物、具体个股、AI板块、加密）。AI/加密与美股个股分页采集，不得混入 `tickers` 任务。财报模块是明确例外：
+“只走 Grok App / Grok 网页版”的硬规则适用于 **X 讯息采集**（美股讯息、具体人物、具体个股、AI板块、加密）。AI/加密与美股个股分页采集，不得混入 `tickers` 任务。财报模块是明确例外：
 
 1. 财报日历：`npm run fetch:earnings` 直接请求 Nasdaq 公开日历接口（`config/earnings-calendar.json` 的 `source.endpoint`）。单日失败按指数退避重试；仍失败则沿用上次数据并标 `stale`，不中断其余日期。
 2. 财报结果评分：以公司官方披露为准（新闻稿、8-K/10-Q、管理层讲稿），一致预期可引用公开财经页面；X 只作补充线索。每项评分附来源链接。无法核实时标 `status: "unknown"` 并写明原因，不得编造分数。

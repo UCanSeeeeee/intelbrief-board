@@ -13,11 +13,10 @@ const ROUTES = {
   tickers: ['docs/TICKER_INTELLIGENCE.md', 'config/ticker-intelligence.json'],
   ai: ['docs/AI_INTELLIGENCE.md', 'config/ai-intelligence.json'],
   crypto: ['docs/CRYPTO_INTELLIGENCE.md', 'config/crypto-intelligence.json'],
-  shorts: ['docs/SHORTS_INTELLIGENCE.md', 'config/shorts-intelligence.json'],
   earnings: ['docs/EARNINGS_CALENDAR.md', 'config/earnings-calendar.json'],
   macro: ['docs/MACRO_EVENTS.md', 'config/macro-events.json']
 };
-const contentTasks = new Set(['news','people','tickers','ai','crypto','shorts','earnings','macro']);
+const contentTasks = new Set(['news','people','tickers','ai','crypto','earnings','macro']);
 function entry(role, task, root = ROOT) {
   if (!['gpt','grok'].includes(role)) throw new Error('必须明确角色 --role gpt 或 --role grok；这只是路由声明，不授予权限。');
   if (!Object.hasOwn(ROUTES, task)) throw new Error('未知任务；可选：' + Object.keys(ROUTES).join(', '));
@@ -38,7 +37,7 @@ function entry(role, task, root = ROOT) {
 function main(args) {
   const options = {};
   for (let i = 0; i < args.length; i += 2) {
-    if (!['--role','--task'].includes(args[i]) || !args[i+1]) throw new Error('用法：npm run agent:enter -- --role gpt|grok --task status|code|handoff|news|people|tickers|ai|crypto|shorts|earnings|macro');
+    if (!['--role','--task'].includes(args[i]) || !args[i+1]) throw new Error('用法：npm run agent:enter -- --role gpt|grok --task status|code|handoff|news|people|tickers|ai|crypto|earnings|macro');
     options[args[i].slice(2)] = args[i+1];
   }
   const result = entry(options.role, options.task || 'status');

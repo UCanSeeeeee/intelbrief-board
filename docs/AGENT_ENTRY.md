@@ -8,7 +8,7 @@
 
 `npm run agent:enter -- --role gpt --task code` 是只读辅助：列出本次资料、工作区状态、未完成任务和禁止事项，不调模型、不联网、不拉取、不写文件、不采集、不部署。声明角色只作路由，不是权限认证。真正的拉取、修改、验证和推送由遵守 AGENTS.md 的执行者在对应工具中完成。
 
-任务可选：status、code、handoff、news、people、tickers、ai、crypto、shorts、earnings、macro。GPT 被阻止进入内容执行路线；新角色默认不能运营。问题是查询/诊断时选择 status，即使当前 Bot 是 Grok 也不自动发起检索。
+任务可选：status、code、handoff、news、people、tickers、ai、crypto、earnings、macro。GPT 被阻止进入内容执行路线；新角色默认不能运营。问题是查询/诊断时选择 status，即使当前 Bot 是 Grok 也不自动发起检索。
 
 ## 宿主入口提示（引用规则，不复制规则）
 

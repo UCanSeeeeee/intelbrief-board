@@ -6,10 +6,11 @@ const path = require('node:path');
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 
 test('primary pages expose news, people, tickers, ai, crypto, and earnings tabs', () => {
-  for (const file of ['index.html', 'macro.html', 'shorts.html', 'people.html', 'tickers.html', 'ai.html', 'crypto.html', 'earnings.html']) {
+  for (const file of ['index.html', 'macro.html', 'people.html', 'tickers.html', 'ai.html', 'crypto.html', 'earnings.html']) {
     const html = read(file);
     const items = [...html.matchAll(/<a href="([^"]+)" data-nav="([^"]+)"/g)].map(match => match.slice(1));
-    assert.deepEqual(items, [['index.html', 'news'], ['macro.html', 'macro'], ['shorts.html', 'shorts'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['ai.html', 'ai'], ['crypto.html', 'crypto'], ['earnings.html', 'earnings']]);
+    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['ai.html', 'ai'], ['crypto.html', 'crypto'], ['macro.html', 'macro'], ['earnings.html', 'earnings']]);
+    assert.doesNotMatch(html,/板块空头|data-nav="shorts"/);
     assert.doesNotMatch(html, /X 情报总览|来源与评分|data-stock-tab/);
   }
   assert.doesNotMatch(read('index.html'), /role="tab"/);
@@ -104,7 +105,7 @@ test('earnings page loads company blurbs for calendar symbols', () => {
 });
 
 test('design system: landmarks, skip link, aria-current and tab keyboard support', () => {
-  for (const page of ['index','macro','shorts','people','tickers','ai','crypto','earnings']) {
+  for (const page of ['index','macro','people','tickers','ai','crypto','earnings']) {
     const html = read(page + '.html');
     assert.match(html, /class="skip-link" href="#main"/);
     assert.match(html, /<main[^>]*id="main"/);
@@ -131,12 +132,17 @@ test('macro page has four quarters and stays off brief update queue', () => {
   assert.ok(JSON.parse(read('config/macro-events.json')).refresh.notTiedToBriefSlots);
 });
 
-test('shorts page has three sector tabs and X-only schema', () => {
+test('retired shorts retain history but have no deployment, collection or navigation entry', () => {
   const config = JSON.parse(read('config/shorts-intelligence.json'));
   assert.deepEqual(config.tabs.map(t => t.id), ['semiconductor-shorts', 'power-shorts', 'ai-adoption-shorts']);
   assert.ok(config.tabs.every(t => t.latestWindowDays === 7 && t.weeklyWindowDays === 7));
-  assert.match(read('shorts.html'), /data-page="shorts"/);
-  assert.match(read('shorts.js'), /shorts-intelligence\.json/);
+  assert.match(read('_worker.js'), /'\/shorts\.html': '\/index\.html'/);
+  assert.ok(JSON.parse(read('_routes.json')).include.includes('/shorts'));
+  assert.doesNotMatch(read('scripts/build-site.js'), /shorts/);
+  assert.doesNotMatch(read('updates.js'), /shorts/);
+  assert.doesNotMatch(read('server/updates.mjs'), /shorts/);
+  assert.throws(()=>require('../scripts/agent-entry').entry('grok','shorts'),/未知任务/);
+  assert.throws(()=>require('../scripts/lib/update-prompt').collectorPrompt({page:'shorts'}),/已停用/);
   const data = JSON.parse(read('data/shorts-intelligence.json'));
   assert.ok(Array.isArray(data.items));
 });

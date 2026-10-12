@@ -39,7 +39,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 
 - `docs/TRADING_DAY_READING.md`：交易日待阅规则的唯一专题入口，覆盖旧的固定24小时/仅周一补扫；`config/us-market-calendar.json`提供官方日历，`data/reading-board.json`独立于三期简报持久保留有效事件。采集前运行`npm run brief:context`。
 
-- `docs/DESIGN_SYSTEM.md` / `styles.css`：八页共用的阅读优先布局，所有阅读内容默认展开，卡片不展示反向条件；数量为上限而非任务完成率。历史证据与内部核验不因UI改变。
+- `docs/DESIGN_SYSTEM.md` / `styles.css`：七页共用的阅读优先布局，所有阅读内容默认展开，卡片不展示反向条件；数量为上限而非任务完成率。历史证据与内部核验不因UI改变。
 - `calendar-time.js`：宏观美东时刻换算北京时间（含夏令时）与财报披露状态展示；测试见 `test/calendar-time.test.js`。
 - `assets/fluent/README.md`：页标题装饰素材的来源版本与许可。
 
@@ -55,7 +55,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 - `config/stock-brief.json`：时区、时段、条数与技能标识。
 - `data/stock-briefs/index.json`：最近三期目录；同目录保留的期次文件不可覆盖，写入第四期时移除最旧一期。旧链路有实际期次，不等于新Grok独立调度已验收。
 - `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
-- `index.html` / `people.html` / `tickers.html` / `ai.html` / `crypto.html` / `earnings.html`：侧栏顺序为美股讯息→宏观大事→板块空头→具体人物→具体个股→AI板块→加密→财报日历。宏观大事见 `docs/MACRO_EVENTS.md`（含超关注财报精选）；板块空头见 `docs/SHORTS_INTELLIGENCE.md`。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的；`crypto.js`：板块讯息+BTC+Brew。
+- `index.html` / `people.html` / `tickers.html` / `ai.html` / `crypto.html` / `earnings.html`：侧栏顺序为美股讯息→具体人物→具体个股→AI板块→加密→宏观大事→财报日历。宏观大事见 `docs/MACRO_EVENTS.md`（含超关注财报精选）；板块空头已于2026-10-12停用，仅保留仓库历史资料（`docs/SHORTS_INTELLIGENCE.md`），不再采集或部署。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的；`crypto.js`：板块讯息+BTC+Brew。
 - `config/earnings-calendar.json` / `data/earnings-calendar.json` / `docs/EARNINGS_CALENDAR.md`：侧栏「财报日历」；主源 Nasdaq；卡片主营一句话见 `config/company-blurbs.json`。
 - `config/people-intelligence.json` / `data/people-intelligence.json`：人物与合集配置及精选事件库；个人最新区最多 5 条（滚动约24小时），合集最新区最多 10 条（滚动约30天），重点榜最多 5 件。特朗普 X 同步源为 @TrumpDailyPosts（另可取 @POTUS/@WhiteHouse）；黄仁勋允许可回查媒体来源。
 - `config/ticker-intelligence.json` / `data/ticker-intelligence.json` / `docs/TICKER_INTELLIGENCE.md`：具体个股仅 NVDA/MU/INTC/GOOG/AVGO/VRT/TSM（无加密、无 AI 实验室 Tab）。
