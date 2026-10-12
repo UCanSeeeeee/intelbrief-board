@@ -8,3 +8,9 @@ pages_build_output_dir = "./dist"
 
 # Build command: npm run build  (copies only public assets into ./dist).
 # _worker.js (Pages advanced mode) serves /api/updates* and redirects retired pages listed in _routes.json.
+
+# Manual-update request store (D1 created 2026-10-12 in the Cloudflare dashboard; schema from server/schema.sql applied).
+[[d1_databases]]
+binding = "UPDATES_DB"
+database_name = "intelbrief-updates"
+database_id = "29bd09a0-5610-4952-9dc5-fa1c00f9f16f"
