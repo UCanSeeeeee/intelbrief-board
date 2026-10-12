@@ -241,6 +241,28 @@ for (const week of earnings.weeks) {
   console.log(`[validate-data] OK: macro events ${total} across ${macro.quarters.length} quarters`);
 }
 
+
+{
+  const shortsConfig = readJson(path.join(ROOT, 'config/shorts-intelligence.json'));
+  const shortsData = readJson(path.join(ROOT, 'data/shorts-intelligence.json'));
+  const shortsTabs = new Set((shortsConfig.tabs || []).map(tab => tab.id));
+  if (shortsTabs.size !== 3) fail('shorts needs 3 sector tabs');
+  const expected = ['semiconductor-shorts', 'power-shorts', 'ai-adoption-shorts'];
+  if ([...shortsTabs].join() !== expected.join()) fail('shorts tab order/ids mismatch');
+  for (const tab of shortsConfig.tabs) {
+    if (tab.latestWindowDays !== 7 || tab.weeklyWindowDays !== 7) fail(`shorts window: ${tab.id}`);
+    if (tab.latestLimit > 5 || tab.weeklyLimit > 5) fail(`shorts limit: ${tab.id}`);
+  }
+  const shortsKeys = new Set();
+  for (const item of shortsData.items || []) {
+    if (!item.eventKey || shortsKeys.has(item.eventKey)) fail(`shorts eventKey: ${item.eventKey}`);
+    shortsKeys.add(item.eventKey);
+    if (!Array.isArray(item.tabIds) || !item.tabIds.every(id => shortsTabs.has(id))) fail(`shorts tabIds: ${item.eventKey}`);
+    if (!/^https:\/\/(?:x|twitter)\.com\/\w+\/status\/\d+$/.test(item.url || '')) fail(`shorts url: ${item.eventKey}`);
+  }
+  console.log(`[validate-data] OK: ${shortsTabs.size} shorts tabs, ${shortsKeys.size} selected events`);
+}
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);

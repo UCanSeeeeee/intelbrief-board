@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "year": 2026,
-  "updatedAt": "2026-10-12T13:20:00+08:00",
+  "updatedAt": "2026-10-12T14:50:00+08:00",
   "timezone": "America/New_York",
   "activeQuarterId": "q4",
   "focus": "美股宏观（非加密主线）",
@@ -55,13 +55,17 @@
     {
       "id": "fiscal",
       "label": "债务上限 / 停摆（仅有明确日期时）"
+    },
+    {
+      "id": "mega-earnings",
+      "label": "超关注财报"
     }
   ],
   "omissions": [
     "债务上限 / 政府停摆：目前无已确定的 2026 法定截止日，故未编造条目。",
-    "巨头财报扎堆周：易与现有财报日历重复且噪声大，本次跳过。",
     "2026 年 10 月与 12 月 FOMC 会议纪要发布日：Fed 日历尚未列出 Released 日期，故只收录决议日。",
-    "总统大选：下一次为 2028，本年仅中期选举。"
+    "总统大选：下一次为 2028，本年仅中期选举。",
+    "超关注财报仅从 data/earnings-calendar.json 有日期的精选条目同步（优先 NVDA/AAPL/MSFT/GOOGL/AMZN/META/AVGO/TSM 及半导体/电力/软件/新兴主题命中）；当前日历窗口外的巨头日期不编造。不 dump 全日全市场财报。"
   ],
   "sourcesCatalog": [
     {
@@ -98,13 +102,14 @@
     }
   ],
   "counts": {
-    "total": 64,
+    "total": 71,
     "byCategory": {
       "13f": 4,
       "cpi": 12,
       "election": 1,
       "fomc": 8,
       "fomc-minutes": 6,
+      "mega-earnings": 7,
       "nfp": 12,
       "opex": 4,
       "pce": 13,
@@ -114,7 +119,7 @@
       "q1": 15,
       "q2": 17,
       "q3": 16,
-      "q4": 16
+      "q4": 23
     }
   },
   "quarters": [
@@ -1031,13 +1036,14 @@
       "start": "2026-10-01",
       "end": "2026-12-31",
       "counts": {
-        "total": 16,
+        "total": 23,
         "byCategory": {
           "13f": 1,
           "cpi": 3,
           "election": 1,
           "fomc": 2,
           "fomc-minutes": 1,
+          "mega-earnings": 7,
           "nfp": 3,
           "opex": 1,
           "pce": 3,
@@ -1098,6 +1104,153 @@
             {
               "name": "BLS Schedule of Selected Releases 2026",
               "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "mega-earnings-2026-10-14-ASML",
+          "category": "mega-earnings",
+          "title": "超关注财报 · ASML（ASML Holding N.V.）",
+          "date": "2026-10-14",
+          "timeEt": "盘前",
+          "referencePeriod": "AI半导体",
+          "notes": "来自本站财报日历精选（主题：AI半导体；时段：盘前）。只收录超关注/主题优先标的的有日期披露，不整表搬入宏观页。 EPS 预期 $12.47。",
+          "importance": "standard",
+          "symbol": "ASML",
+          "sources": [
+            {
+              "name": "本站财报日历（Nasdaq 精选入选，非全市场 dump）",
+              "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/data/earnings-calendar.json"
+            },
+            {
+              "name": "Nasdaq earnings calendar (via project earnings module)",
+              "url": "https://www.nasdaq.com/market-activity/earnings"
+            }
+          ]
+        },
+        {
+          "id": "mega-earnings-2026-10-15-TSM",
+          "category": "mega-earnings",
+          "title": "超关注财报 · TSM（Taiwan Semiconductor Manufacturing Company Ltd.）",
+          "date": "2026-10-15",
+          "timeEt": "盘前",
+          "referencePeriod": "AI半导体",
+          "notes": "来自本站财报日历精选（主题：AI半导体；时段：盘前）。只收录超关注/主题优先标的的有日期披露，不整表搬入宏观页。 EPS 预期 $4.45。",
+          "importance": "high",
+          "symbol": "TSM",
+          "sources": [
+            {
+              "name": "本站财报日历（Nasdaq 精选入选，非全市场 dump）",
+              "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/data/earnings-calendar.json"
+            },
+            {
+              "name": "Nasdaq earnings calendar (via project earnings module)",
+              "url": "https://www.nasdaq.com/market-activity/earnings"
+            }
+          ]
+        },
+        {
+          "id": "mega-earnings-2026-10-21-LRCX",
+          "category": "mega-earnings",
+          "title": "超关注财报 · LRCX（Lam Research Corporation）",
+          "date": "2026-10-21",
+          "timeEt": "盘后",
+          "referencePeriod": "AI半导体",
+          "notes": "来自本站财报日历精选（主题：AI半导体；时段：盘后）。只收录超关注/主题优先标的的有日期披露，不整表搬入宏观页。 EPS 预期 $2.17。",
+          "importance": "standard",
+          "symbol": "LRCX",
+          "sources": [
+            {
+              "name": "本站财报日历（Nasdaq 精选入选，非全市场 dump）",
+              "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/data/earnings-calendar.json"
+            },
+            {
+              "name": "Nasdaq earnings calendar (via project earnings module)",
+              "url": "https://www.nasdaq.com/market-activity/earnings"
+            }
+          ]
+        },
+        {
+          "id": "mega-earnings-2026-10-21-NEE",
+          "category": "mega-earnings",
+          "title": "超关注财报 · NEE（NextEra Energy, Inc.）",
+          "date": "2026-10-21",
+          "timeEt": "盘前",
+          "referencePeriod": "电力",
+          "notes": "来自本站财报日历精选（主题：电力；时段：盘前）。只收录超关注/主题优先标的的有日期披露，不整表搬入宏观页。 EPS 预期 $1.20。",
+          "importance": "standard",
+          "symbol": "NEE",
+          "sources": [
+            {
+              "name": "本站财报日历（Nasdaq 精选入选，非全市场 dump）",
+              "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/data/earnings-calendar.json"
+            },
+            {
+              "name": "Nasdaq earnings calendar (via project earnings module)",
+              "url": "https://www.nasdaq.com/market-activity/earnings"
+            }
+          ]
+        },
+        {
+          "id": "mega-earnings-2026-10-21-TSLA",
+          "category": "mega-earnings",
+          "title": "超关注财报 · TSLA（Tesla, Inc.）",
+          "date": "2026-10-21",
+          "timeEt": "盘后",
+          "referencePeriod": "新兴科技",
+          "notes": "来自本站财报日历精选（主题：新兴科技；时段：盘后）。只收录超关注/主题优先标的的有日期披露，不整表搬入宏观页。 EPS 预期 $0.23。",
+          "importance": "standard",
+          "symbol": "TSLA",
+          "sources": [
+            {
+              "name": "本站财报日历（Nasdaq 精选入选，非全市场 dump）",
+              "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/data/earnings-calendar.json"
+            },
+            {
+              "name": "Nasdaq earnings calendar (via project earnings module)",
+              "url": "https://www.nasdaq.com/market-activity/earnings"
+            }
+          ]
+        },
+        {
+          "id": "mega-earnings-2026-10-21-TXN",
+          "category": "mega-earnings",
+          "title": "超关注财报 · TXN（Texas Instruments Incorporated）",
+          "date": "2026-10-21",
+          "timeEt": "盘后",
+          "referencePeriod": "AI半导体",
+          "notes": "来自本站财报日历精选（主题：AI半导体；时段：盘后）。只收录超关注/主题优先标的的有日期披露，不整表搬入宏观页。 EPS 预期 $2.39。",
+          "importance": "standard",
+          "symbol": "TXN",
+          "sources": [
+            {
+              "name": "本站财报日历（Nasdaq 精选入选，非全市场 dump）",
+              "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/data/earnings-calendar.json"
+            },
+            {
+              "name": "Nasdaq earnings calendar (via project earnings module)",
+              "url": "https://www.nasdaq.com/market-activity/earnings"
+            }
+          ]
+        },
+        {
+          "id": "mega-earnings-2026-10-22-PCG",
+          "category": "mega-earnings",
+          "title": "超关注财报 · PCG（PG&E Corp）",
+          "date": "2026-10-22",
+          "timeEt": "盘前",
+          "referencePeriod": "电力",
+          "notes": "来自本站财报日历精选（主题：电力；时段：盘前）。只收录超关注/主题优先标的的有日期披露，不整表搬入宏观页。 EPS 预期 $0.40。",
+          "importance": "standard",
+          "symbol": "PCG",
+          "sources": [
+            {
+              "name": "本站财报日历（Nasdaq 精选入选，非全市场 dump）",
+              "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/data/earnings-calendar.json"
+            },
+            {
+              "name": "Nasdaq earnings calendar (via project earnings module)",
+              "url": "https://www.nasdaq.com/market-activity/earnings"
             }
           ]
         },

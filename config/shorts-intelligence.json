@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "researchPriorities": [
+    "半导体",
+    "电力",
+    "AI落地"
+  ],
+  "notes": "板块空头：关注做空兴趣、借券/硬度、有实质内容的空头报告。采集路径与人物/个股相同（Grok App → Grok 网页；无 X API）。不足可以为 0。",
+  "updatedAt": "2026-10-12T14:50:00+08:00",
+  "tabs": [
+    {
+      "id": "semiconductor-shorts",
+      "label": "半导体",
+      "shortLabel": "半导体",
+      "type": "sector-shorts",
+      "identity": "AI/半导体相关做空与借券",
+      "sector": "半导体",
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "latestWindowDays": 7,
+      "weeklyWindowDays": 7,
+      "focus": "半导体制造、设备、HBM/GPU 供应链上的空头仓位变化、借券费率/可借量、有数据的空头报告",
+      "sourceRule": "X only（Grok App 优先）。检索 short interest / days to cover / borrow / short report 与 NVDA/TSM/AVGO/MU/ASML 等。排除无数据喊空、目标价刷屏与无法回查的截图。",
+      "handles": [],
+      "symbols": [
+        "NVDA",
+        "AVGO",
+        "TSM",
+        "MU",
+        "ASML",
+        "AMD",
+        "INTC"
+      ]
+    },
+    {
+      "id": "power-shorts",
+      "label": "电力",
+      "shortLabel": "电力",
+      "type": "sector-shorts",
+      "identity": "电力与 AI 用电基础设施做空",
+      "sector": "电力",
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "latestWindowDays": 7,
+      "weeklyWindowDays": 7,
+      "focus": "公用事业、独立发电、核电/天然气与数据中心供电相关的空头兴趣与借券",
+      "sourceRule": "X only。检索 short interest/borrow 与 CEG/VST/NEE/VRT/GEV 等。排除无实质空头数据的宏观复读。",
+      "handles": [],
+      "symbols": [
+        "CEG",
+        "VST",
+        "NEE",
+        "VRT",
+        "GEV",
+        "PCG"
+      ]
+    },
+    {
+      "id": "ai-adoption-shorts",
+      "label": "AI落地",
+      "shortLabel": "AI落地",
+      "type": "sector-shorts",
+      "identity": "AI 应用与落地链做空",
+      "sector": "AI落地",
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "latestWindowDays": 7,
+      "weeklyWindowDays": 7,
+      "focus": "AI 软件/应用、推理成本、采用节奏相关空头报告与仓位；排除纯加密与纯喊单",
+      "sourceRule": "X only。检索 AI software / SaaS / adoption 相关 short interest 或有方法的空头报告。排除无证据的叙事空。",
+      "handles": [],
+      "symbols": [
+        "PLTR",
+        "SNOW",
+        "PATH",
+        "CRM",
+        "MSFT"
+      ]
+    }
+  ]
+}

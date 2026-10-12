@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-12T06:50:00.000Z",
+  "cutoff": "2026-10-12T14:50:00+08:00",
+  "source": "X only",
+  "status": "partial",
+  "collectionPath": "x-mcp-public-read",
+  "coverage": {
+    "tabs": [
+      {
+        "id": "semiconductor-shorts",
+        "status": "partial",
+        "note": "检索 short interest/days to cover/borrow + 半导体代号；入选 1 条 Mag7 SI% 图表转述。排除无数据喊空与名单刷屏。"
+      },
+      {
+        "id": "power-shorts",
+        "status": "complete",
+        "note": "同窗检索电力/公用事业借券与空头；无达到门槛的可回查实质帖，保留 0 条。"
+      },
+      {
+        "id": "ai-adoption-shorts",
+        "status": "complete",
+        "note": "同窗检索 AI 落地/SaaS 空头报告；无达到门槛条目，保留 0 条。"
+      }
+    ]
+  },
+  "items": [
+    {
+      "eventKey": "mag7-short-interest-pct-float-2026-10-09",
+      "tabIds": [
+        "semiconductor-shorts"
+      ],
+      "title": "Mag7 流通股空头占比一览（帖称 TSLA 最高约 2.44%）",
+      "fact": "@FarFetched_01 于 10 月 9 日贴出 Mag 7 Short Interest % of Float（标为 Sep 2026），称 TSLA 约 2.44%，其余（含 META/NVDA/GOOGL/MSFT/AAPL/AMZN）低于 1.5%。属图表转述，未附交易所原始表。",
+      "whyItMatters": "给出超大盘科技股空头占比的量级对照；若属实，说明 Mag7 绝对空头占比整体不高，挤压叙事需看可借量与期权而非仅 SI%。",
+      "counterCase": "需核对 FINRA/交易所或券商借券表原始数据与统计日；图表来源与口径（日期、是否含 ETF）未在帖中给出。",
+      "affected": [
+        "NVDA",
+        "Mag7",
+        "空头占比"
+      ],
+      "author": "FarFetched_01",
+      "publishedAt": "2026-10-09T19:32:14.000Z",
+      "url": "https://x.com/FarFetched_01/status/2108641706090676539",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "semiconductor-shorts": 1
+      }
+    }
+  ]
+}

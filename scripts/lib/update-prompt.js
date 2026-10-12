@@ -43,6 +43,12 @@ function collectorPrompt(job,root,start,previous,window={}) {
     return common+guidance+`\n只更新“AI板块”页面（独立于具体个股与加密），顶部Tab配置：${JSON.stringify(aiConfig)}。当前入选事件：${JSON.stringify(current.items||[])}。顺序：OPENAI→ANTHROPIC→GOOG(AI产品)→其他。OPENAI/ANTHROPIC/GOOG 对齐个人窗（24h≤5、7天≤5）；其他为合集（24h≤10、7天≤5）。GOOG Tab 只收 Gemini/DeepMind 等 AI 产品与组织事实，Alphabet 财报/股价归 tickers 的 GOOG，避免重复。其他含较小实验室、中国AI、政府政策、开源模型；排除纯加密与股权喊单。必须用Grok在X检索；不足可为0。\n每个Tab报告 complete/partial/failed。verification=collector-report；真实X status链接。\n仅返回：{"collectionPath":"grok-app或grok-web","checkedAt":"ISO含时区","tabs":[{"id":"配置Tab id","status":"complete或partial或failed","note":"查询与缺口"}],"items":[{"eventKey":"键","tabIds":["id"],"title":"标题","fact":"事实","whyItMatters":"传导","counterCase":"反向","affected":["对象"],"author":"作者","publishedAt":"ISO","url":"https://x.com/账号/status/数字","verification":"collector-report","tier":"must-read或watch","weeklyRanks":{"id":1}}]}。失败不能写成暂无新增。`;
   }
 
+  if(job.page==='shorts') {
+    const shortsConfig=JSON.parse(fs.readFileSync(path.join(root,'config/shorts-intelligence.json'),'utf8'));
+    const currentPath=path.join(root,'data/shorts-intelligence.json');
+    const current=fs.existsSync(currentPath)?JSON.parse(fs.readFileSync(currentPath,'utf8')):{items:[]};
+    return common+guidance+`\n只更新“板块空头”页面，顶部Tab配置：${JSON.stringify(shortsConfig)}。当前入选事件：${JSON.stringify(current.items||[])}。顺序：半导体→电力→AI落地。三个 Tab 均为滚动7天：最新≤5、重点榜≤5。必须用Grok在X检索 short interest / days to cover / borrow / 有方法的 short report；排除无数据喊空与目标价刷屏。不足可为0。\n每个Tab报告 complete/partial/failed。verification=collector-report；真实X status链接。\n仅返回：{"collectionPath":"grok-app或grok-web","checkedAt":"ISO含时区","tabs":[{"id":"配置Tab id","status":"complete或partial或failed","note":"查询与缺口"}],"items":[{"eventKey":"键","tabIds":["id"],"title":"标题","fact":"事实","whyItMatters":"传导","counterCase":"反向","affected":["标的"],"author":"作者","publishedAt":"ISO","url":"https://x.com/账号/status/数字","verification":"collector-report","tier":"must-read或watch","weeklyRanks":{"id":1}}]}。失败不能写成暂无新增。`;
+  }
   throw new Error('未知更新页面：'+job.page);
 }
 module.exports={collectorPrompt,projectGuidance};

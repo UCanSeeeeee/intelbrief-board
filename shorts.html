@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>板块空头 — 美股情报</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="shorts">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-controls="sidebar" aria-expanded="false"><span aria-hidden="true">☰</span></button>
+  <div class="overlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="站点导航">
+      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">美股情报</div></div>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" data-nav="news"><span class="nav-icon" aria-hidden="true">▣</span> 美股讯息</a>
+        <a href="macro.html" data-nav="macro"><span class="nav-icon" aria-hidden="true">◉</span> 宏观大事</a>
+        <a href="shorts.html" data-nav="shorts"><span class="nav-icon" aria-hidden="true">▾</span> 板块空头</a>
+        <a href="people.html" data-nav="people"><span class="nav-icon" aria-hidden="true">◎</span> 具体人物</a>
+        <a href="tickers.html" data-nav="tickers"><span class="nav-icon" aria-hidden="true">◇</span> 具体个股</a>
+        <a href="ai.html" data-nav="ai"><span class="nav-icon" aria-hidden="true">⬡</span> AI板块</a>
+        <a href="crypto.html" data-nav="crypto"><span class="nav-icon" aria-hidden="true">◈</span> 加密</a>
+        <a href="earnings.html" data-nav="earnings"><span class="nav-icon" aria-hidden="true">▤</span> 财报日历</a>
+      </nav>
+      <div class="sidebar-footer">空头关注：借券/做空报告/空头仓位变化<br />X only · 半导体/电力/AI落地</div>
+    </aside>
+    <main class="main wide" id="main" tabindex="-1">
+      <header class="page-header">
+        <h1>板块空头</h1>
+        <p class="subtitle">关注半导体、电力、AI 落地相关标的的做空兴趣、借券成本与值得核验的空头报告；只收可回查 X 原帖，不足可以为 0。</p>
+        <div class="meta"><span class="badge"><span class="badge-dot"></span> X only</span><span id="shorts-state" aria-live="polite">正在读取空头资料…</span></div>
+      </header>
+      <div id="shorts-selector" class="people-selector shorts-selector" role="tablist" aria-label="板块空头顶部 Tab"></div>
+      <section id="shorts-detail" class="person-detail shorts-detail" aria-live="polite"></section>
+      <p class="disclaimer">空头叙事不等于下跌结论；借券与空头仓位数据需核对一手来源。不做交易指令。</p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+  <script src="shorts.js"></script>
+  <script src="updates.js"></script>
+</body>
+</html>

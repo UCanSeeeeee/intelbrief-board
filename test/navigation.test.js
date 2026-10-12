@@ -6,10 +6,10 @@ const path = require('node:path');
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 
 test('primary pages expose news, people, tickers, ai, crypto, and earnings tabs', () => {
-  for (const file of ['index.html', 'macro.html', 'people.html', 'tickers.html', 'ai.html', 'crypto.html', 'earnings.html']) {
+  for (const file of ['index.html', 'macro.html', 'shorts.html', 'people.html', 'tickers.html', 'ai.html', 'crypto.html', 'earnings.html']) {
     const html = read(file);
     const items = [...html.matchAll(/<a href="([^"]+)" data-nav="([^"]+)"/g)].map(match => match.slice(1));
-    assert.deepEqual(items, [['index.html', 'news'], ['macro.html', 'macro'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['ai.html', 'ai'], ['crypto.html', 'crypto'], ['earnings.html', 'earnings']]);
+    assert.deepEqual(items, [['index.html', 'news'], ['macro.html', 'macro'], ['shorts.html', 'shorts'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['ai.html', 'ai'], ['crypto.html', 'crypto'], ['earnings.html', 'earnings']]);
     assert.doesNotMatch(html, /X 情报总览|来源与评分|data-stock-tab/);
   }
   assert.doesNotMatch(read('index.html'), /role="tab"/);
@@ -104,7 +104,7 @@ test('earnings page loads company blurbs for calendar symbols', () => {
 });
 
 test('design system: landmarks, skip link, aria-current and tab keyboard support', () => {
-  for (const page of ['index','macro','people','tickers','ai','crypto','earnings']) {
+  for (const page of ['index','macro','shorts','people','tickers','ai','crypto','earnings']) {
     const html = read(page + '.html');
     assert.match(html, /class="skip-link" href="#main"/);
     assert.match(html, /<main[^>]*id="main"/);
@@ -129,4 +129,22 @@ test('macro page has four quarters and stays off brief update queue', () => {
   assert.doesNotMatch(read('updates.js'), /macro/);
   assert.doesNotMatch(read('server/updates.mjs'), /['"]macro['"]/);
   assert.ok(JSON.parse(read('config/macro-events.json')).refresh.notTiedToBriefSlots);
+});
+
+test('shorts page has three sector tabs and X-only schema', () => {
+  const config = JSON.parse(read('config/shorts-intelligence.json'));
+  assert.deepEqual(config.tabs.map(t => t.id), ['semiconductor-shorts', 'power-shorts', 'ai-adoption-shorts']);
+  assert.ok(config.tabs.every(t => t.latestWindowDays === 7 && t.weeklyWindowDays === 7));
+  assert.match(read('shorts.html'), /data-page="shorts"/);
+  assert.match(read('shorts.js'), /shorts-intelligence\.json/);
+  const data = JSON.parse(read('data/shorts-intelligence.json'));
+  assert.ok(Array.isArray(data.items));
+});
+
+test('macro includes mega-earnings category without dumping full calendar', () => {
+  const data = JSON.parse(read('data/macro-events.json'));
+  const mega = data.quarters.flatMap(q => q.events).filter(e => e.category === 'mega-earnings');
+  assert.ok(mega.length >= 1 && mega.length <= 40);
+  assert.ok(mega.every(e => e.symbol && e.title.includes('超关注财报')));
+  assert.match(read('docs/MACRO_EVENTS.md'), /超关注财报/);
 });

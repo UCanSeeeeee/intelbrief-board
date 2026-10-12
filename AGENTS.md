@@ -6,7 +6,7 @@ That file is the full handoff for any AI or human taking over this repo: product
 
 ## 讯息采集硬规则（用户于2026-10-11明确指定）
 
-本规则适用于本项目所有LLM、Agent、执行器、手动更新与定时任务；包括「美股讯息」「宏观大事」「具体人物」「具体个股」「AI板块」「加密」及以后新增的信息页面。宏观大事为低频官方日历，不跟 09/16/21 简报。
+本规则适用于本项目所有LLM、Agent、执行器、手动更新与定时任务；包括「美股讯息」「宏观大事」「板块空头」「具体人物」「具体个股」「AI板块」「加密」及以后新增的信息页面。宏观大事为低频官方日历，不跟 09/16/21 简报；板块空头为 X-only 空头/借券情报。
 
 1. **第一路径：本机 Grok Bot App。** 必须先通过应用正常界面获取讯息，固定使用已有的「X+github」Bot；它是本项目的主执行 Bot。不得改用同一 App 内的其他 Bot 规避本项目规则。
 2. **唯一备用路径：Grok 网页版（https://grok.com）。** 仅在本机App不可用、操作失败或不能完成本次采集时使用；记录切换原因。
@@ -54,7 +54,7 @@ After completing and verifying any requested change to this GitHub project, crea
 
 ## 来源例外：财报日历与财报结果（用户于2026-10-12确认）
 
-“只走 Grok App / Grok 网页版”的硬规则适用于 **X 讯息采集**（美股讯息、具体人物、具体个股、AI板块、加密）。AI/加密与美股个股分页采集，不得混入 `tickers` 任务。财报模块是明确例外：
+“只走 Grok App / Grok 网页版”的硬规则适用于 **X 讯息采集**（美股讯息、板块空头、具体人物、具体个股、AI板块、加密）。AI/加密与美股个股分页采集，不得混入 `tickers` 任务。财报模块是明确例外：
 
 1. 财报日历：`npm run fetch:earnings` 直接请求 Nasdaq 公开日历接口（`config/earnings-calendar.json` 的 `source.endpoint`）。单日失败按指数退避重试；仍失败则沿用上次数据并标 `stale`，不中断其余日期。
 2. 财报结果评分：以公司官方披露为准（新闻稿、8-K/10-Q、管理层讲稿），一致预期可引用公开财经页面；X 只作补充线索。每项评分附来源链接。无法核实时标 `status: "unknown"` 并写明原因，不得编造分数。
