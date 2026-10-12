@@ -1,6 +1,6 @@
 /* Intel Brief — Linear calm-density dark theme */
 .update-sidebar { margin:20px 14px; display:grid; gap:10px; }
-.update-button { border:1px solid var(--border); border-radius:7px; padding:9px 14px; color:var(--text); background:var(--bg-elevated); font:inherit; font-size:12px; cursor:pointer; white-space:nowrap; }
+.update-button { border:1px solid var(--border); border-radius:7px; padding:9px 14px; color:var(--text); background:var(--bg-elevated); font:inherit; font-size:12px; cursor:pointer; white-space:normal; }
 .update-button:hover:enabled { background:var(--bg-hover); border-color:var(--text-muted); }
 .update-button:disabled { opacity:.5; cursor:default; }
 .update-status-toggle, #update-close, #update-logout { color:var(--text-secondary); border:0; background:none; cursor:pointer; font:inherit; font-size:12px; }
@@ -28,14 +28,14 @@
 .brief-toolbar { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px; }
 .brief-edition-only { padding:14px 16px; }
 .brief-edition-only .brief-toolbar { margin-bottom:0; }
-.brief-edition-only .brief-toolbar label { color:var(--text-secondary); font-size:12px; white-space:nowrap; }
+.brief-edition-only .brief-toolbar label { color:var(--text-secondary); font-size:12px; }
 .brief-edition-only .brief-toolbar select { flex:1; }
 .brief-toolbar select { max-width:100%; padding:8px; color:var(--text); background:var(--bg-card); border:1px solid var(--border); border-radius:6px; }
 #brief-state, .brief-small, .brief-intro { color:var(--text-secondary); font-size:12px; line-height:1.7; }
 .brief-intro { margin:-6px 0 16px; }
 #brief-summary h2 { margin:16px 0 8px; font-size:18px; }
 .brief-warning { color:var(--amber); margin-top:12px; }
-.section-header h2 span { font-size:12px; color:var(--text-muted); white-space:nowrap; }
+.section-header h2 span { font-size:12px; color:var(--text-muted); }
 .brief-card { overflow-wrap:anywhere; }
 .brief-author { display:flex; align-items:center; gap:8px; margin-bottom:10px; color:var(--text-muted); font-size:11px; }
 .brief-author strong { color:var(--text-secondary); font-weight:500; }
@@ -60,18 +60,18 @@
 .people-overview h2 { margin:4px 0 8px; font-size:21px; }
 .people-overview p { max-width:720px; color:var(--text-secondary); font-size:13px; line-height:1.75; }
 .people-overview .eyebrow { color:var(--text-muted); font-size:10px; letter-spacing:.12em; }
-#people-state { white-space:nowrap; }
+#people-state { overflow-wrap:anywhere; }
 .people-selector { display:flex; gap:8px; overflow-x:auto; padding:18px 0; }
 .people-selector button { min-width:155px; text-align:left; border:1px solid var(--border); border-radius:8px; background:var(--bg-card); color:var(--text); padding:12px 14px; cursor:pointer; }
 .people-selector button.active { border-color:#71717a; background:var(--bg-hover); }
 .people-selector button:focus-visible { outline:2px solid var(--text-secondary); outline-offset:2px; }
 .people-selector strong,.people-selector span { display:block; }
 .people-selector span { color:var(--text-muted); font-size:11px; margin-top:3px; }
-.person-detail { border:1px solid var(--border); border-radius:10px; background:var(--bg-card); overflow:hidden; }
+.person-detail { border:1px solid var(--border); border-radius:10px; background:var(--bg-card); }
 .person-profile { display:flex; align-items:center; gap:14px; padding:20px; border-bottom:1px solid var(--border); }
 .person-profile h2 { font-size:18px; }
 .person-profile a,.person-profile p { color:var(--text-muted); font-size:12px; }
-.person-avatar { width:46px; height:46px; display:grid; place-items:center; border:1px solid var(--border); border-radius:50%; background:var(--bg-elevated); font-weight:600; }
+.person-avatar { min-width:46px; min-height:46px; padding:0 6px; border-radius:23px !important; display:grid; place-items:center; border:1px solid var(--border); border-radius:50%; background:var(--bg-elevated); font-weight:600; }
 .person-count { margin-left:auto; text-align:right; }
 .person-count strong,.person-count span { display:block; }
 .person-count strong { font-size:20px; }
@@ -370,7 +370,6 @@ a:hover {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: hidden;
 }
 
 /* Celebrity feed */
@@ -431,7 +430,6 @@ a:hover {
   font-size: 12px;
   color: var(--text-muted);
   flex-shrink: 0;
-  white-space: nowrap;
   padding-top: 2px;
 }
 
@@ -1279,3 +1277,11 @@ main:focus { outline: none; }
 }
 .empty-state p { margin-left: auto; margin-right: auto; }
 .earnings-summary-card p, .page-header .subtitle { max-width: 96ch; }
+
+/* No-truncation rule (docs/DESIGN_SYSTEM.md): wrap long words/URLs; tab rows may scroll horizontally with full labels */
+body { overflow-wrap: anywhere; }
+.people-selector { overflow-x: auto; flex-wrap: nowrap; }
+.people-selector [role="tab"] { flex: 0 0 auto; white-space: normal; }
+.people-selector [role="tab"] strong, .people-selector [role="tab"] span { display: block; }
+.main, .main > *, .person-detail, .people-selector { min-width: 0; max-width: 100%; }
+.people-selector [role="tab"] { max-width: min(320px, 80vw); }

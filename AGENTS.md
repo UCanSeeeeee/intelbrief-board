@@ -72,3 +72,5 @@ After completing and verifying any requested change to this GitHub project, crea
 
 - 2026-10-12 09:00 期（schemaVersion 1）上线 3 条焦点 + 4 条洞察（partial）。当期对话里两轮检索曾交付 10 条和 12 条候选，但归档时未保存候选到入选的映射，落选理由只部分记在 `excludedCandidates`。该期归档已冻结，不回填内容；自 schemaVersion 2 起强制保存 `candidates`。
 - X 讯息采集完全依赖 Grok App/网页版与 X 的可用性（限流、App 授权、浏览器可用性）。这是外部依赖，失败时按规则发布失败记录，不改走其他路径。
+
+- UI 禁止任何文字截断（省略号、line-clamp、裁切、JS 截字）；详见 docs/DESIGN_SYSTEM.md「禁止截断」。

@@ -113,7 +113,7 @@
     const contract = tab.contractAddress ? `<p class="ticker-contract"><strong>合约</strong><code>${escape(tab.contractAddress)}</code></p>` : '';
 
     detail.innerHTML = `<header class="person-profile intelligence-profile">
-      <div class="person-avatar" aria-hidden="true">${escape((tab.symbol || tab.label).slice(0, 3))}</div>
+      <div class="person-avatar" aria-hidden="true">${escape(tab.symbol || tab.label)}</div>
       <div class="profile-copy"><p class="eyebrow">${assetEyebrow}</p><h2>${escape(tab.label)}${tab.cashtag ? ` · ${escape(tab.cashtag)}` : ''}</h2><div class="profile-source">${account}</div><p>${escape(tab.identity)}</p>${contract}</div>
       <div class="person-count"><strong>${weekly.length}</strong><span>${windowLabel(weeklyDays)}入选</span></div>
     </header>

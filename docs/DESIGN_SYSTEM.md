@@ -35,3 +35,6 @@
 - 装饰性图标 `aria-hidden`；按钮有中文 `aria-label`。
 - 尊重 `prefers-reduced-motion`；`forced-colors` 下保留当前位置轮廓。
 - 主题：只维护深色主题（主题），暂不做浅色，避免两套未校验的对比度。
+
+## 禁止截断（硬规则）
+任何界面文字都必须完整可见：禁止 `text-overflow: ellipsis`、`line-clamp` / `-webkit-box` 截行、`overflow: hidden` 裁切文字、固定高度裁切内容、`white-space: nowrap` 导致溢出，以及 JS 用 `.slice/.substring/.substr` 截断展示文本或手工加「…」。长词与 URL 用 `overflow-wrap: anywhere` 换行。顶部 Tab 行允许横向滚动，但每个 Tab 的标签必须完整。条目数量上限（如近窗 ≤5）是内容规则，不属于文字截断。`test/no-truncation.test.js` 强制执行。

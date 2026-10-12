@@ -111,7 +111,7 @@
       : '<span>来源名单待维护</span>';
 
     detail.innerHTML = `<header class="person-profile intelligence-profile">
-      <div class="person-avatar" aria-hidden="true">${tab.type === 'collection' ? '合' : escape(tab.label.slice(0, 1))}</div>
+      <div class="person-avatar" aria-hidden="true">${tab.type === 'collection' ? '合' : '人'}</div>
       <div class="profile-copy"><p class="eyebrow">${tab.type === 'collection' ? '合集' : '个人'} Tab</p><h2>${escape(tab.label)}</h2><div class="profile-source">${account}</div><p>${escape(tab.identity)}</p></div>
       <div class="person-count"><strong>${weekly.length}</strong><span>${windowLabel(weeklyDays)}入选</span></div>
     </header>
