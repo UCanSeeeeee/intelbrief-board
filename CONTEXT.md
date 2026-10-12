@@ -50,7 +50,7 @@ Grok Bot App 内固定由「X+github」承担主执行；旧的「推特信息�
 - `config/stock-brief.json`：时区、时段、条数与技能标识。
 - `data/stock-briefs/index.json`：最近三期目录；同目录保留的期次文件不可覆盖，写入第四期时移除最旧一期。首期实际定时采集尚待验证。
 - `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
-- `index.html` / `people.html` / `tickers.html` / `ai.html` / `crypto.html` / `earnings.html`：侧栏顺序为美股讯息→具体人物→具体个股→AI板块→加密→财报日历。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的；`crypto.js`：板块讯息+BTC+Brew。
+- `index.html` / `people.html` / `tickers.html` / `ai.html` / `crypto.html` / `earnings.html`：侧栏顺序为美股讯息→宏观大事→具体人物→具体个股→AI板块→加密→财报日历。宏观大事见 `docs/MACRO_EVENTS.md`，低频手动刷新，不进简报队列。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的；`crypto.js`：板块讯息+BTC+Brew。
 - `config/earnings-calendar.json` / `data/earnings-calendar.json` / `docs/EARNINGS_CALENDAR.md`：侧栏「财报日历」；主源 Nasdaq；卡片主营一句话见 `config/company-blurbs.json`。
 - `config/people-intelligence.json` / `data/people-intelligence.json`：人物与合集配置及精选事件库；个人最新区最多 5 条（滚动约24小时），合集最新区最多 10 条（滚动约30天），重点榜最多 5 件。特朗普 X 同步源为 @TrumpDailyPosts（另可取 @POTUS/@WhiteHouse）；黄仁勋允许可回查媒体来源。
 - `config/ticker-intelligence.json` / `data/ticker-intelligence.json` / `docs/TICKER_INTELLIGENCE.md`：具体个股仅 NVDA/MU/INTC/GOOG/AVGO/VRT/TSM（无加密、无 AI 实验室 Tab）。

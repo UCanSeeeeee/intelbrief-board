@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "year": 2026,
+  "timezone": "America/New_York",
+  "displayTimezoneNote": "事件日期按美东官方发布日；界面另标北京时间对照日。",
+  "focus": "美股宏观（非加密主线）",
+  "navPosition": "美股讯息之后、具体人物之前",
+  "refresh": {
+    "mode": "low-frequency-manual",
+    "notTiedToBriefSlots": true,
+    "briefSlots": [
+      "09:00",
+      "16:00",
+      "21:00"
+    ],
+    "howTo": "编辑 data/macro-events.json（或运行 npm run macro:refresh 仅做结构校验与统计），通过常规 git commit + push；不进入 09/16/21 简报任务队列。"
+  },
+  "categories": [
+    {
+      "id": "fomc",
+      "label": "FOMC 利率决议"
+    },
+    {
+      "id": "fomc-minutes",
+      "label": "FOMC 会议纪要"
+    },
+    {
+      "id": "cpi",
+      "label": "CPI"
+    },
+    {
+      "id": "pce",
+      "label": "PCE"
+    },
+    {
+      "id": "nfp",
+      "label": "非农就业 NFP"
+    },
+    {
+      "id": "opex",
+      "label": "期权到期 / 三重魔女"
+    },
+    {
+      "id": "rebalance",
+      "label": "季度末再平衡"
+    },
+    {
+      "id": "13f",
+      "label": "13F 披露截止"
+    },
+    {
+      "id": "election",
+      "label": "选举"
+    },
+    {
+      "id": "fiscal",
+      "label": "债务上限 / 停摆（仅有明确日期时）"
+    }
+  ],
+  "omissions": [
+    "债务上限 / 政府停摆：目前无已确定的 2026 法定截止日，故未编造条目。",
+    "巨头财报扎堆周：易与现有财报日历重复且噪声大，本次跳过。",
+    "2026 年 10 月与 12 月 FOMC 会议纪要发布日：Fed 日历尚未列出 Released 日期，故只收录决议日。",
+    "总统大选：下一次为 2028，本年仅中期选举。"
+  ],
+  "sourcesCatalog": [
+    {
+      "name": "Federal Reserve FOMC calendars",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+      "name": "BLS CPI release schedule",
+      "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+    },
+    {
+      "name": "BLS Employment Situation schedule",
+      "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+    },
+    {
+      "name": "BLS Schedule of Selected Releases 2026",
+      "url": "https://www.bls.gov/schedule/2026/"
+    },
+    {
+      "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+      "url": "https://www.bea.gov/news/schedule/full"
+    },
+    {
+      "name": "SEC Form 13F FAQ (filing deadlines)",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/frequently-asked-questions-about-form-13f"
+    },
+    {
+      "name": "CBOE/OCC equity options third-Friday expiration convention (Juneteenth adjustment noted)",
+      "url": "https://www.cboe.com/"
+    },
+    {
+      "name": "U.S. midterm election schedule (first Tuesday after first Monday in November)",
+      "url": "https://www.fec.gov/"
+    }
+  ]
+}

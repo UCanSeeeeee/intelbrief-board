@@ -1285,3 +1285,8 @@ body { overflow-wrap: anywhere; }
 .people-selector [role="tab"] strong, .people-selector [role="tab"] span { display: block; }
 .main, .main > *, .person-detail, .people-selector { min-width: 0; max-width: 100%; }
 .people-selector [role="tab"] { max-width: min(320px, 80vw); }
+
+/* Macro events page */
+.macro-board { display: grid; gap: var(--sp-5); }
+.macro-card .earnings-result a { color: var(--accent-blue); text-decoration: underline; text-underline-offset: 2px; }
+.macro-quarter-tabs [role="tab"] { min-width: 140px; }

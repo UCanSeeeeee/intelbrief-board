@@ -1,6 +1,6 @@
 # 设计系统：Linear Calm Density
 
-本文件是 intelbrief-board 所有前台页面（美股讯息、具体人物、具体个股、AI板块、加密、财报日历）的 UI 标准。新增页面或组件必须复用这里的 token 与组件，不另起配色或间距体系。实现在 `styles.css` 的 `:root` token 与末尾「Design system layer」。
+本文件是 intelbrief-board 所有前台页面（美股讯息、宏观大事、具体人物、具体个股、AI板块、加密、财报日历）的 UI 标准。新增页面或组件必须复用这里的 token 与组件，不另起配色或间距体系。实现在 `styles.css` 的 `:root` token 与末尾「Design system layer」。
 
 ## 原则
 - **安静**：单一深色主题，低饱和；唯一强调色是蓝色 `--accent-blue`，只用于当前位置（激活导航/Tab）与焦点。状态色（绿/琥珀/红）只表达状态。
@@ -20,7 +20,7 @@
 | 阴影 | 仅 `--shadow-1`（1px 内高光 + 微投影） |
 
 ## 组件
-- **侧栏导航**：固定顺序 美股讯息 → 具体人物 → 具体个股 → AI板块 → 加密 → 财报日历；当前项 `aria-current="page"`、左侧 2px 蓝条、加粗。≤768px 变为抽屉，44px 菜单按钮，Esc 关闭，`aria-expanded` 同步。
+- **侧栏导航**：固定顺序 美股讯息 → 宏观大事 → 具体人物 → 具体个股 → AI板块 → 加密 → 财报日历；当前项 `aria-current="page"`、左侧 2px 蓝条、加粗。≤768px 变为抽屉，44px 菜单按钮，Esc 关闭，`aria-expanded` 同步。
 - **顶部 Tab**：`role="tablist"` / `role="tab"` + `aria-selected`；←/→/Home/End 切换（`app.js` 统一处理）；选中态为蓝色描边 + 底部 2px 指示。
 - **卡片**：12px 圆角、1px 边框、24px 内边距（移动端 16px）；作者 → 标题 → 标签行 → 正文 → 反向条件 → 时间与原文链接。
 - **徽章 / 层级**：胶囊描边，12px；不以颜色作为唯一信息载体。

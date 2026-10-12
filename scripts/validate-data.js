@@ -218,6 +218,29 @@ for (const week of earnings.weeks) {
   }
 }
 
+
+{
+  const macro = readJson(path.join(ROOT, 'data/macro-events.json'));
+  const macroCfg = readJson(path.join(ROOT, 'config/macro-events.json'));
+  if (macro.year !== 2026) fail(`macro year unexpected: ${macro.year}`);
+  if (!Array.isArray(macro.quarters) || macro.quarters.length !== 4) fail('macro needs 4 quarters');
+  const ids = new Set();
+  let total = 0;
+  for (const q of macro.quarters) {
+    if (!/^q[1-4]$/.test(q.id) || !Array.isArray(q.events)) fail(`macro quarter invalid: ${q.id}`);
+    for (const e of q.events) {
+      total++;
+      if (!e.id || ids.has(e.id)) fail(`macro event id invalid/dup: ${e.id}`);
+      ids.add(e.id);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date) || !e.title || !e.category) fail(`macro event fields: ${e.id}`);
+      if (!Array.isArray(e.sources) || !e.sources.length || e.sources.some(s => !s.name)) fail(`macro sources: ${e.id}`);
+    }
+  }
+  if (macro.counts?.total !== total) fail(`macro counts.total mismatch ${macro.counts?.total} vs ${total}`);
+  if (!macroCfg.refresh?.notTiedToBriefSlots) fail('macro refresh must stay off brief slots');
+  console.log(`[validate-data] OK: macro events ${total} across ${macro.quarters.length} quarters`);
+}
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);

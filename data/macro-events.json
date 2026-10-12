@@ -1,0 +1,1331 @@
+{
+  "schemaVersion": 1,
+  "year": 2026,
+  "updatedAt": "2026-10-12T13:20:00+08:00",
+  "timezone": "America/New_York",
+  "activeQuarterId": "q4",
+  "focus": "美股宏观（非加密主线）",
+  "refresh": {
+    "mode": "low-frequency-manual",
+    "notTiedToBriefSlots": true,
+    "briefSlots": [
+      "09:00",
+      "16:00",
+      "21:00"
+    ],
+    "howTo": "编辑 data/macro-events.json（或运行 npm run macro:refresh 仅做结构校验与统计），通过常规 git commit + push；不进入 09/16/21 简报任务队列。"
+  },
+  "categories": [
+    {
+      "id": "fomc",
+      "label": "FOMC 利率决议"
+    },
+    {
+      "id": "fomc-minutes",
+      "label": "FOMC 会议纪要"
+    },
+    {
+      "id": "cpi",
+      "label": "CPI"
+    },
+    {
+      "id": "pce",
+      "label": "PCE"
+    },
+    {
+      "id": "nfp",
+      "label": "非农就业 NFP"
+    },
+    {
+      "id": "opex",
+      "label": "期权到期 / 三重魔女"
+    },
+    {
+      "id": "rebalance",
+      "label": "季度末再平衡"
+    },
+    {
+      "id": "13f",
+      "label": "13F 披露截止"
+    },
+    {
+      "id": "election",
+      "label": "选举"
+    },
+    {
+      "id": "fiscal",
+      "label": "债务上限 / 停摆（仅有明确日期时）"
+    }
+  ],
+  "omissions": [
+    "债务上限 / 政府停摆：目前无已确定的 2026 法定截止日，故未编造条目。",
+    "巨头财报扎堆周：易与现有财报日历重复且噪声大，本次跳过。",
+    "2026 年 10 月与 12 月 FOMC 会议纪要发布日：Fed 日历尚未列出 Released 日期，故只收录决议日。",
+    "总统大选：下一次为 2028，本年仅中期选举。"
+  ],
+  "sourcesCatalog": [
+    {
+      "name": "Federal Reserve FOMC calendars",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+      "name": "BLS CPI release schedule",
+      "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+    },
+    {
+      "name": "BLS Employment Situation schedule",
+      "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+    },
+    {
+      "name": "BLS Schedule of Selected Releases 2026",
+      "url": "https://www.bls.gov/schedule/2026/"
+    },
+    {
+      "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+      "url": "https://www.bea.gov/news/schedule/full"
+    },
+    {
+      "name": "SEC Form 13F FAQ (filing deadlines)",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/frequently-asked-questions-about-form-13f"
+    },
+    {
+      "name": "CBOE/OCC equity options third-Friday expiration convention (Juneteenth adjustment noted)",
+      "url": "https://www.cboe.com/"
+    },
+    {
+      "name": "U.S. midterm election schedule (first Tuesday after first Monday in November)",
+      "url": "https://www.fec.gov/"
+    }
+  ],
+  "counts": {
+    "total": 64,
+    "byCategory": {
+      "13f": 4,
+      "cpi": 12,
+      "election": 1,
+      "fomc": 8,
+      "fomc-minutes": 6,
+      "nfp": 12,
+      "opex": 4,
+      "pce": 13,
+      "rebalance": 4
+    },
+    "byQuarter": {
+      "q1": 15,
+      "q2": 17,
+      "q3": 16,
+      "q4": 16
+    }
+  },
+  "quarters": [
+    {
+      "id": "q1",
+      "label": "1季度",
+      "year": 2026,
+      "start": "2026-01-01",
+      "end": "2026-03-31",
+      "counts": {
+        "total": 15,
+        "byCategory": {
+          "13f": 1,
+          "cpi": 3,
+          "fomc": 2,
+          "fomc-minutes": 1,
+          "nfp": 3,
+          "opex": 1,
+          "pce": 3,
+          "rebalance": 1
+        }
+      },
+      "events": [
+        {
+          "id": "nfp-2026-01-09",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2025年12月）",
+          "date": "2026-01-09",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2025年12月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-01-13",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2025年12月）",
+          "date": "2026-01-13",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2025年12月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-01-22",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2025年10–11月）",
+          "date": "2026-01-22",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2025年10–11月",
+          "notes": "同日发布 10 月与 11 月（BEA 排期）。BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "fomc-2026-01-28",
+          "category": "fomc",
+          "title": "FOMC 利率决议（2026-01-27–2026-01-28）",
+          "date": "2026-01-28",
+          "timeEt": "约 14:00 ET 声明 / 14:30 新闻发布会",
+          "referencePeriod": "会议 2026-01-27–2026-01-28",
+          "notes": "联邦公开市场委员会例会利率决议与政策声明。会议为两日，决议日取会议结束日。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "nfp-2026-02-11",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年1月）",
+          "date": "2026-02-11",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年1月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-02-13",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年1月）",
+          "date": "2026-02-13",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年1月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "13f-2026-02-17",
+          "category": "13f",
+          "title": "13F 披露截止（对应持仓季 2025 Q4）",
+          "date": "2026-02-17",
+          "timeEt": "截止日（美东）",
+          "referencePeriod": "2025 Q4",
+          "notes": "机构投资管理人 Form 13F 须在季度结束后 45 日内提交；遇周末/假日顺延至下一工作日。日期取自 SEC FAQ。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "SEC Form 13F FAQ (filing deadlines)",
+              "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/frequently-asked-questions-about-form-13f"
+            }
+          ]
+        },
+        {
+          "id": "fomc-minutes-2026-02-18",
+          "category": "fomc-minutes",
+          "title": "FOMC 会议纪要发布（对应 2026-01-27–2026-01-28 会议）",
+          "date": "2026-02-18",
+          "timeEt": "约 14:00 ET",
+          "referencePeriod": "会议 2026-01-27–2026-01-28",
+          "notes": "美联储在决议约三周后公布会议纪要；日期取自 Fed 官方日历所列 Released 日期。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-02-20",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2025年12月）",
+          "date": "2026-02-20",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2025年12月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "nfp-2026-03-06",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年2月）",
+          "date": "2026-03-06",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年2月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-03-11",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年2月）",
+          "date": "2026-03-11",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年2月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-03-13",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年1月）",
+          "date": "2026-03-13",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年1月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "fomc-2026-03-18",
+          "category": "fomc",
+          "title": "FOMC 利率决议（2026-03-17–2026-03-18）",
+          "date": "2026-03-18",
+          "timeEt": "约 14:00 ET 声明 / 14:30 新闻发布会",
+          "referencePeriod": "会议 2026-03-17–2026-03-18",
+          "notes": "联邦公开市场委员会例会利率决议与政策声明；含经济预测摘要（SEP）。会议为两日，决议日取会议结束日。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "opex-2026-03-20",
+          "category": "opex",
+          "title": "期权到期 / 三重魔女（OPEX）",
+          "date": "2026-03-20",
+          "timeEt": "交易时段内",
+          "referencePeriod": null,
+          "notes": "第三季月周五，通常为三重魔女日（股票/股指期权与股指期货同期到期）。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "CBOE/OCC equity options third-Friday expiration convention (Juneteenth adjustment noted)",
+              "url": "https://www.cboe.com/"
+            }
+          ]
+        },
+        {
+          "id": "qend-2026-03-31",
+          "category": "rebalance",
+          "title": "季度末再平衡窗口（Q1 末）",
+          "date": "2026-03-31",
+          "timeEt": "交易日收盘附近",
+          "referencePeriod": "Q1",
+          "notes": "季度末常见被动/主动再平衡与仓位调整窗口；非单一官方发布，标为结构日。",
+          "importance": "low",
+          "sources": [
+            {
+              "name": "Calendar quarter end (structural market note)",
+              "url": "https://www.nyse.com/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "label": "2季度",
+      "year": 2026,
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "counts": {
+        "total": 17,
+        "byCategory": {
+          "13f": 1,
+          "cpi": 3,
+          "fomc": 2,
+          "fomc-minutes": 2,
+          "nfp": 3,
+          "opex": 1,
+          "pce": 4,
+          "rebalance": 1
+        }
+      },
+      "events": [
+        {
+          "id": "nfp-2026-04-03",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年3月）",
+          "date": "2026-04-03",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年3月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "fomc-minutes-2026-04-08",
+          "category": "fomc-minutes",
+          "title": "FOMC 会议纪要发布（对应 2026-03-17–2026-03-18 会议）",
+          "date": "2026-04-08",
+          "timeEt": "约 14:00 ET",
+          "referencePeriod": "会议 2026-03-17–2026-03-18",
+          "notes": "美联储在决议约三周后公布会议纪要；日期取自 Fed 官方日历所列 Released 日期。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-04-09",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年2月）",
+          "date": "2026-04-09",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年2月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-04-10",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年3月）",
+          "date": "2026-04-10",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年3月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "fomc-2026-04-29",
+          "category": "fomc",
+          "title": "FOMC 利率决议（2026-04-28–2026-04-29）",
+          "date": "2026-04-29",
+          "timeEt": "约 14:00 ET 声明 / 14:30 新闻发布会",
+          "referencePeriod": "会议 2026-04-28–2026-04-29",
+          "notes": "联邦公开市场委员会例会利率决议与政策声明。会议为两日，决议日取会议结束日。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-04-30",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年3月）",
+          "date": "2026-04-30",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年3月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "nfp-2026-05-08",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年4月）",
+          "date": "2026-05-08",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年4月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-05-12",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年4月）",
+          "date": "2026-05-12",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年4月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "13f-2026-05-15",
+          "category": "13f",
+          "title": "13F 披露截止（对应持仓季 2026 Q1）",
+          "date": "2026-05-15",
+          "timeEt": "截止日（美东）",
+          "referencePeriod": "2026 Q1",
+          "notes": "机构投资管理人 Form 13F 须在季度结束后 45 日内提交；遇周末/假日顺延至下一工作日。日期取自 SEC FAQ。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "SEC Form 13F FAQ (filing deadlines)",
+              "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/frequently-asked-questions-about-form-13f"
+            }
+          ]
+        },
+        {
+          "id": "fomc-minutes-2026-05-20",
+          "category": "fomc-minutes",
+          "title": "FOMC 会议纪要发布（对应 2026-04-28–2026-04-29 会议）",
+          "date": "2026-05-20",
+          "timeEt": "约 14:00 ET",
+          "referencePeriod": "会议 2026-04-28–2026-04-29",
+          "notes": "美联储在决议约三周后公布会议纪要；日期取自 Fed 官方日历所列 Released 日期。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-05-28",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年4月）",
+          "date": "2026-05-28",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年4月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "nfp-2026-06-05",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年5月）",
+          "date": "2026-06-05",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年5月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-06-10",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年5月）",
+          "date": "2026-06-10",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年5月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "fomc-2026-06-17",
+          "category": "fomc",
+          "title": "FOMC 利率决议（2026-06-16–2026-06-17）",
+          "date": "2026-06-17",
+          "timeEt": "约 14:00 ET 声明 / 14:30 新闻发布会",
+          "referencePeriod": "会议 2026-06-16–2026-06-17",
+          "notes": "联邦公开市场委员会例会利率决议与政策声明；含经济预测摘要（SEP）。会议为两日，决议日取会议结束日。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "opex-2026-06-18",
+          "category": "opex",
+          "title": "期权到期 / 三重魔女（OPEX）",
+          "date": "2026-06-18",
+          "timeEt": "交易时段内",
+          "referencePeriod": null,
+          "notes": "2026-06-19 为 Juneteenth 联邦假日且恰逢第三周五；按期权到期惯例顺延至前一交易日。请以 CBOE/OCC 最终公告为准。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "CBOE/OCC equity options third-Friday expiration convention (Juneteenth adjustment noted)",
+              "url": "https://www.cboe.com/"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-06-25",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年5月）",
+          "date": "2026-06-25",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年5月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "qend-2026-06-30",
+          "category": "rebalance",
+          "title": "季度末再平衡窗口（Q2 末）",
+          "date": "2026-06-30",
+          "timeEt": "交易日收盘附近",
+          "referencePeriod": "Q2",
+          "notes": "季度末常见被动/主动再平衡与仓位调整窗口；非单一官方发布，标为结构日。",
+          "importance": "low",
+          "sources": [
+            {
+              "name": "Calendar quarter end (structural market note)",
+              "url": "https://www.nyse.com/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "label": "3季度",
+      "year": 2026,
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "counts": {
+        "total": 16,
+        "byCategory": {
+          "13f": 1,
+          "cpi": 3,
+          "fomc": 2,
+          "fomc-minutes": 2,
+          "nfp": 3,
+          "opex": 1,
+          "pce": 3,
+          "rebalance": 1
+        }
+      },
+      "events": [
+        {
+          "id": "nfp-2026-07-02",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年6月）",
+          "date": "2026-07-02",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年6月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "fomc-minutes-2026-07-08",
+          "category": "fomc-minutes",
+          "title": "FOMC 会议纪要发布（对应 2026-06-16–2026-06-17 会议）",
+          "date": "2026-07-08",
+          "timeEt": "约 14:00 ET",
+          "referencePeriod": "会议 2026-06-16–2026-06-17",
+          "notes": "美联储在决议约三周后公布会议纪要；日期取自 Fed 官方日历所列 Released 日期。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-07-14",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年6月）",
+          "date": "2026-07-14",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年6月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "fomc-2026-07-29",
+          "category": "fomc",
+          "title": "FOMC 利率决议（2026-07-28–2026-07-29）",
+          "date": "2026-07-29",
+          "timeEt": "约 14:00 ET 声明 / 14:30 新闻发布会",
+          "referencePeriod": "会议 2026-07-28–2026-07-29",
+          "notes": "联邦公开市场委员会例会利率决议与政策声明。会议为两日，决议日取会议结束日。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-07-30",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年6月）",
+          "date": "2026-07-30",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年6月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "nfp-2026-08-07",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年7月）",
+          "date": "2026-08-07",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年7月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-08-12",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年7月）",
+          "date": "2026-08-12",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年7月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "13f-2026-08-14",
+          "category": "13f",
+          "title": "13F 披露截止（对应持仓季 2026 Q2）",
+          "date": "2026-08-14",
+          "timeEt": "截止日（美东）",
+          "referencePeriod": "2026 Q2",
+          "notes": "机构投资管理人 Form 13F 须在季度结束后 45 日内提交；遇周末/假日顺延至下一工作日。日期取自 SEC FAQ。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "SEC Form 13F FAQ (filing deadlines)",
+              "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/frequently-asked-questions-about-form-13f"
+            }
+          ]
+        },
+        {
+          "id": "fomc-minutes-2026-08-19",
+          "category": "fomc-minutes",
+          "title": "FOMC 会议纪要发布（对应 2026-07-28–2026-07-29 会议）",
+          "date": "2026-08-19",
+          "timeEt": "约 14:00 ET",
+          "referencePeriod": "会议 2026-07-28–2026-07-29",
+          "notes": "美联储在决议约三周后公布会议纪要；日期取自 Fed 官方日历所列 Released 日期。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-08-26",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年7月）",
+          "date": "2026-08-26",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年7月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "nfp-2026-09-04",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年8月）",
+          "date": "2026-09-04",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年8月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-09-11",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年8月）",
+          "date": "2026-09-11",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年8月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "fomc-2026-09-16",
+          "category": "fomc",
+          "title": "FOMC 利率决议（2026-09-15–2026-09-16）",
+          "date": "2026-09-16",
+          "timeEt": "约 14:00 ET 声明 / 14:30 新闻发布会",
+          "referencePeriod": "会议 2026-09-15–2026-09-16",
+          "notes": "联邦公开市场委员会例会利率决议与政策声明；含经济预测摘要（SEP）。会议为两日，决议日取会议结束日。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "opex-2026-09-18",
+          "category": "opex",
+          "title": "期权到期 / 三重魔女（OPEX）",
+          "date": "2026-09-18",
+          "timeEt": "交易时段内",
+          "referencePeriod": null,
+          "notes": "第三季月周五，通常为三重魔女日。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "CBOE/OCC equity options third-Friday expiration convention (Juneteenth adjustment noted)",
+              "url": "https://www.cboe.com/"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-09-30",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年8月）",
+          "date": "2026-09-30",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年8月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "qend-2026-09-30",
+          "category": "rebalance",
+          "title": "季度末再平衡窗口（Q3 末）",
+          "date": "2026-09-30",
+          "timeEt": "交易日收盘附近",
+          "referencePeriod": "Q3",
+          "notes": "季度末常见被动/主动再平衡与仓位调整窗口；非单一官方发布，标为结构日。",
+          "importance": "low",
+          "sources": [
+            {
+              "name": "Calendar quarter end (structural market note)",
+              "url": "https://www.nyse.com/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "label": "4季度",
+      "year": 2026,
+      "start": "2026-10-01",
+      "end": "2026-12-31",
+      "counts": {
+        "total": 16,
+        "byCategory": {
+          "13f": 1,
+          "cpi": 3,
+          "election": 1,
+          "fomc": 2,
+          "fomc-minutes": 1,
+          "nfp": 3,
+          "opex": 1,
+          "pce": 3,
+          "rebalance": 1
+        }
+      },
+      "events": [
+        {
+          "id": "nfp-2026-10-02",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年9月）",
+          "date": "2026-10-02",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年9月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "fomc-minutes-2026-10-07",
+          "category": "fomc-minutes",
+          "title": "FOMC 会议纪要发布（对应 2026-09-15–2026-09-16 会议）",
+          "date": "2026-10-07",
+          "timeEt": "约 14:00 ET",
+          "referencePeriod": "会议 2026-09-15–2026-09-16",
+          "notes": "美联储在决议约三周后公布会议纪要；日期取自 Fed 官方日历所列 Released 日期。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-10-14",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年9月）",
+          "date": "2026-10-14",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年9月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "fomc-2026-10-28",
+          "category": "fomc",
+          "title": "FOMC 利率决议（2026-10-27–2026-10-28）",
+          "date": "2026-10-28",
+          "timeEt": "约 14:00 ET 声明 / 14:30 新闻发布会",
+          "referencePeriod": "会议 2026-10-27–2026-10-28",
+          "notes": "联邦公开市场委员会例会利率决议与政策声明。会议为两日，决议日取会议结束日。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-10-29",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年9月）",
+          "date": "2026-10-29",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年9月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "election-2026-11-03",
+          "category": "election",
+          "title": "美国国会中期选举日",
+          "date": "2026-11-03",
+          "timeEt": "全美投票日",
+          "referencePeriod": "2026 中期",
+          "notes": "2026 年为国会中期选举年；总统大选不在本年。日期按「11 月第一个周一后的第一个周二」规则。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "U.S. midterm election schedule (first Tuesday after first Monday in November)",
+              "url": "https://www.fec.gov/"
+            }
+          ]
+        },
+        {
+          "id": "nfp-2026-11-06",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年10月）",
+          "date": "2026-11-06",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年10月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-11-10",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年10月）",
+          "date": "2026-11-10",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年10月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "13f-2026-11-16",
+          "category": "13f",
+          "title": "13F 披露截止（对应持仓季 2026 Q3）",
+          "date": "2026-11-16",
+          "timeEt": "截止日（美东）",
+          "referencePeriod": "2026 Q3",
+          "notes": "机构投资管理人 Form 13F 须在季度结束后 45 日内提交；遇周末/假日顺延至下一工作日。日期取自 SEC FAQ。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "SEC Form 13F FAQ (filing deadlines)",
+              "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/frequently-asked-questions-about-form-13f"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-11-25",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年10月）",
+          "date": "2026-11-25",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年10月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "nfp-2026-12-04",
+          "category": "nfp",
+          "title": "非农就业（Employment Situation，2026年11月）",
+          "date": "2026-12-04",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年11月",
+          "notes": "BLS《就业形势》报告，含非农就业、失业率与薪资；月初关键宏观数据。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS Employment Situation schedule",
+              "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "fomc-2026-12-09",
+          "category": "fomc",
+          "title": "FOMC 利率决议（2026-12-08–2026-12-09）",
+          "date": "2026-12-09",
+          "timeEt": "约 14:00 ET 声明 / 14:30 新闻发布会",
+          "referencePeriod": "会议 2026-12-08–2026-12-09",
+          "notes": "联邦公开市场委员会例会利率决议与政策声明；含经济预测摘要（SEP）。会议为两日，决议日取会议结束日。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "Federal Reserve FOMC calendars",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            }
+          ]
+        },
+        {
+          "id": "cpi-2026-12-10",
+          "category": "cpi",
+          "title": "CPI 消费者物价指数（2026年11月）",
+          "date": "2026-12-10",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年11月",
+          "notes": "劳工统计局（BLS）月度 CPI；美股开盘前发布，常影响利率预期与估值贴现。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BLS CPI release schedule",
+              "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+            },
+            {
+              "name": "BLS Schedule of Selected Releases 2026",
+              "url": "https://www.bls.gov/schedule/2026/"
+            }
+          ]
+        },
+        {
+          "id": "opex-2026-12-18",
+          "category": "opex",
+          "title": "期权到期 / 三重魔女（OPEX）",
+          "date": "2026-12-18",
+          "timeEt": "交易时段内",
+          "referencePeriod": null,
+          "notes": "第三季月周五，通常为三重魔女日。",
+          "importance": "standard",
+          "sources": [
+            {
+              "name": "CBOE/OCC equity options third-Friday expiration convention (Juneteenth adjustment noted)",
+              "url": "https://www.cboe.com/"
+            }
+          ]
+        },
+        {
+          "id": "pce-2026-12-23",
+          "category": "pce",
+          "title": "PCE 物价指数（个人收入与支出，2026年11月）",
+          "date": "2026-12-23",
+          "timeEt": "08:30 ET",
+          "referencePeriod": "2026年11月",
+          "notes": "BEA《个人收入与支出》报告含 PCE 物价指数，是美联储关注的通胀指标。",
+          "importance": "high",
+          "sources": [
+            {
+              "name": "BEA Release Schedule (Personal Income and Outlays / PCE)",
+              "url": "https://www.bea.gov/news/schedule/full"
+            }
+          ]
+        },
+        {
+          "id": "qend-2026-12-31",
+          "category": "rebalance",
+          "title": "季度末再平衡窗口（Q4 末）",
+          "date": "2026-12-31",
+          "timeEt": "交易日收盘附近",
+          "referencePeriod": "Q4",
+          "notes": "季度末常见被动/主动再平衡与仓位调整窗口；非单一官方发布，标为结构日。",
+          "importance": "low",
+          "sources": [
+            {
+              "name": "Calendar quarter end (structural market note)",
+              "url": "https://www.nyse.com/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

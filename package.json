@@ -21,7 +21,8 @@
     "updates:start": "node scripts/update-runner.js",
     "updates:schedule": "node scripts/schedule-update.js",
     "dev:updates": "node scripts/local-updates.js",
-    "fetch:earnings": "node scripts/fetch-earnings.js"
+    "fetch:earnings": "node scripts/fetch-earnings.js",
+    "macro:refresh": "node scripts/refresh-macro-events.js"
   },
   "engines": {
     "node": ">=20"
