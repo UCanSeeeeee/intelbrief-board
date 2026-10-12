@@ -55,3 +55,10 @@ test('direct acceptance is not completion, ambiguous delivery is never auto-resu
     assert.equal(posts(),1);await e.get('update-confirm').onclick();ui.interval();assert.equal(posts(),1);
   }
 });
+test('webhook unconfirmed keeps same id and never claims accepted',async()=>{
+  const ui=await boot({status:202,body:{authenticated:true,delivery:'grok-webhook',accepted:false,unconfirmed:true}});const e=ui.elements;
+  e.get('update-page').onclick();const id=e.get('update-request-number').textContent;await e.get('update-confirm').onclick();
+  assert.match(e.get('update-result').textContent,/送达未确认/);assert.doesNotMatch(e.get('update-result').textContent,/已受理/);
+  assert.equal(e.get('update-request-number').textContent,id);
+  assert.equal(ui.requests.filter(r=>r.opts?.method==='POST').length,1);
+});

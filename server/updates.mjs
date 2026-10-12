@@ -77,9 +77,9 @@ export function noteLoginFailure(ip,now=Date.now()) {
   if (!entry || now-entry.start>LOGIN_WINDOW) loginFailures.set(ip,{start:now,count:1}); else entry.count++;
   if (loginFailures.size>5000) loginFailures.clear();
 }
-export async function handleUpdates(request, env) {
+async function legacy(request, env) {
   try {
-    if (!env.UPDATES_DB || !env.UPDATE_ADMIN_KEY || !env.UPDATE_RUNNER_KEY) return json({error:'更新服务尚未接通，请完成后台配置',configured:false},503);
+    if (!env.UPDATES_DB || !env.UPDATE_ADMIN_KEY || !env.UPDATE_RUNNER_KEY) return json({error:'网页直连尚未接通：后台配置不完整',configured:false},503);
     const db=env.UPDATES_DB, now=Date.now(), path=new URL(request.url).pathname;
     const runnerPath=path.startsWith('/api/updates/runner/') || path==='/api/updates/schedule';
     if (runnerPath) {
@@ -146,5 +146,76 @@ export async function handleUpdates(request, env) {
       return json({ok:true});
     }
     return json({error:'接口不存在'},404);
+  } catch(error) { return json({error:error.status?error.message:'更新服务暂时不可用，请稍后重试'},error.status||503); }
+}
+
+// Grok webhook mode. All three values are copied verbatim from the routine panel into Cloudflare secrets.
+// GROK_WEBHOOK_AUTH_HEADER is the complete Authorization header value shown in the panel; we never build or default one.
+const ACTIVE_MS=30*60000, DISPATCH_TIMEOUT=10000;
+export const webhookReady=env=>!!(env.UPDATES_DB&&env.UPDATE_ADMIN_KEY&&typeof env.GROK_WEBHOOK_URL==='string'&&/^https:\/\//.test(env.GROK_WEBHOOK_URL)&&env.GROK_WEBHOOK_KEY&&env.GROK_WEBHOOK_AUTH_HEADER);
+function webhookInput(input, now) {
+  if (!input || typeof input!=='object' || Array.isArray(input)) fail('请求内容无效');
+  if (Object.keys(input).some(k=>!['requestId','requestedAt','pages'].includes(k))) fail('只接受请求编号、时间和页面范围');
+  if (!idOK(input.requestId)) fail('请求编号无效');
+  const at=Date.parse(input.requestedAt);
+  if (typeof input.requestedAt!=='string' || !/(Z|[+-]\d{2}:\d{2})$/.test(input.requestedAt) || !Number.isFinite(at) || at>now+5*60000 || at<now-7*86400000) fail('请求时间无效');
+  if (!Array.isArray(input.pages)) fail('更新范围无效');
+  const pages=PAGES.filter(p=>input.pages.includes(p));
+  if (!pages.length || pages.length!==input.pages.length || input.pages.some(p=>!PAGES.includes(p))) fail('更新范围无效');
+  return {requestId:input.requestId,requestedAt:input.requestedAt,pages};
+}
+const view=row=>({delivery:'grok-webhook',requestId:row.id,requestedAt:row.requested_at,pages:JSON.parse(row.pages),accepted:row.status==='accepted',unconfirmed:row.status==='unconfirmed'||row.status==='dispatching',status:row.status});
+async function active(db, now) {
+  await db.prepare("UPDATE webhook_requests SET status='unconfirmed',updated_at=? WHERE status='dispatching' AND updated_at<?").bind(now,now-60000).run();
+  return (await db.prepare("SELECT * FROM webhook_requests WHERE status IN ('dispatching','accepted','unconfirmed') AND created_at>=? ORDER BY created_at").bind(now-ACTIVE_MS).all()).results;
+}
+async function dispatchWebhook(db, env, raw, now) {
+  const input=webhookInput(raw, now);
+  const same=await db.prepare('SELECT * FROM webhook_requests WHERE id=?').bind(input.requestId).first();
+  if (same) return [view(same),200]; // idempotent: never redispatch the same id
+  const merge=async()=>{
+    for (const row of await active(db,now)) {
+      const pages=JSON.parse(row.pages);
+      if (input.pages.every(p=>pages.includes(p))) return [{...view(row),merged:true},200];
+      if (input.pages.some(p=>pages.includes(p))) fail('部分页面已有进行中的请求，请等待其结果后再提交',409);
+    }
+    return null;
+  };
+  const existing=await merge(); if (existing) return existing;
+  const inserted=await db.prepare("INSERT OR IGNORE INTO webhook_requests(id,requested_at,pages,status,created_at,updated_at) VALUES(?,?,?,'dispatching',?,?) RETURNING id").bind(input.requestId,input.requestedAt,JSON.stringify(input.pages),now,now).first();
+  if (!inserted) {
+    const again=await db.prepare('SELECT * FROM webhook_requests WHERE id=?').bind(input.requestId).first();
+    if (again) return [view(again),200];
+    const merged=await merge(); if (merged) return merged;
+    fail('另一台设备正在提交，请稍后刷新',409);
+  }
+  let status='unconfirmed', code=null;
+  try {
+    const response=await fetch(env.GROK_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json','Authorization':env.GROK_WEBHOOK_AUTH_HEADER},body:JSON.stringify(input),signal:AbortSignal.timeout(DISPATCH_TIMEOUT),redirect:'manual'});
+    code=response.status; status=response.ok?'accepted':'rejected';
+  } catch { status='unconfirmed'; }
+  await db.prepare('UPDATE webhook_requests SET status=?,http_status=?,updated_at=? WHERE id=?').bind(status,code,Date.now(),input.requestId).run();
+  const row=await db.prepare('SELECT * FROM webhook_requests WHERE id=?').bind(input.requestId).first();
+  if (status==='rejected') return [{...view(row),error:'Grok 入口未受理（HTTP '+code+'），未开始；可稍后用新请求重试'},502];
+  return [view(row),202];
+}
+async function handleWebhook(request, env) {
+  const db=env.UPDATES_DB, now=Date.now(), url=new URL(request.url), path=url.pathname;
+  if (request.method!=='GET' && request.headers.get('Origin')!==url.origin) fail('请求来源无效',403);
+  if (!await authenticated(request,env)) return json({authenticated:false,delivery:'grok-webhook',error:'登录后可更新内容'},401);
+  if (path==='/api/updates' && request.method==='GET') return json({authenticated:true,delivery:'grok-webhook',active:(await active(db,now)).map(view)});
+  if (path==='/api/updates' && request.method==='POST') { const [data,status]=await dispatchWebhook(db,env,await body(request),now); return json(data,status); }
+  return json({error:'接口不存在'},404);
+}
+export async function handleUpdates(request, env) {
+  try {
+    if (webhookReady(env)) {
+      const path=new URL(request.url).pathname;
+      const isLogin=['/api/updates/login','/api/updates/logout'].includes(path)&&request.method==='POST';
+      if (!isLogin) return await handleWebhook(request,env);
+      if (request.headers.get('Origin')!==new URL(request.url).origin) fail('请求来源无效',403);
+      return await legacy(request,{...env,UPDATE_RUNNER_KEY:'login-only'});
+    }
+    return await legacy(request,env);
   } catch(error) { return json({error:error.status?error.message:'更新服务暂时不可用，请稍后重试'},error.status||503); }
 }

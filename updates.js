@@ -79,8 +79,8 @@
     if(submitting||pending()||receipt)return;
     if(!authenticated){dialog.close();$('update-key').focus();return;}
     submitting=true;intent.delivery='uncertain';save();render();
-    try{const result=await api('',{requestId:intent.requestId,requestedAt:intent.requestedAt,pages:intent.pages});if(result.delivery!=='grok-webhook'||result.accepted!==true)throw new Error('服务器未确认送达 Grok；保留同一编号，请勿重复新建。');intent.delivery='accepted';outcome='入口已受理；等待带编号的线上结果。';}
-    catch(error){outcome=error.message;}finally{submitting=false;save();render();}
+    try{const result=await api('',{requestId:intent.requestId,requestedAt:intent.requestedAt,pages:intent.pages});if(result.delivery!=='grok-webhook')throw new Error('服务器未确认送达 Grok；保留同一编号，请勿重复新建。');if(result.merged&&contract.validIntent({...result,delivery:'accepted'})){intent={requestId:result.requestId,requestedAt:result.requestedAt,pages:result.pages,delivery:'uncertain'};outcome='已有相同范围的请求在处理，已合并到该编号。';}if(result.accepted===true){intent.delivery='accepted';outcome=(outcome?outcome+' ':'')+'入口已受理；等待带编号的线上结果。';}else{intent.delivery='uncertain';outcome=(outcome?outcome+' ':'')+'服务器未确认送达 Grok（送达未确认）：保留同一编号，不会自动重发；请稍后核对。';}}
+    catch(error){const msg=error.message;if(error.status===502)create(intent.pages);else if(error.status===400||error.status===409||error.status===401)intent.delivery='draft';outcome=msg;}finally{submitting=false;save();render();}
   };
   $('update-copy').onclick=async()=>{
     try{await navigator.clipboard.writeText(prompt());outcome='指令已复制，尚未发送。请粘贴到 X+github 后发送；同一编号只执行一次。';}

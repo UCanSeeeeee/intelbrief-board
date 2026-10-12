@@ -19,3 +19,13 @@ CREATE UNIQUE INDEX IF NOT EXISTS one_running_job ON jobs((1)) WHERE status='run
 CREATE UNIQUE INDEX IF NOT EXISTS one_scheduled_edition ON jobs(cutoff) WHERE trigger_type='scheduled';
 CREATE TABLE IF NOT EXISTS requests (id TEXT PRIMARY KEY, job_ids TEXT NOT NULL, created_at INTEGER NOT NULL);
 CREATE TABLE IF NOT EXISTS runner (id TEXT PRIMARY KEY, seen_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS webhook_requests (
+  id TEXT PRIMARY KEY,
+  requested_at TEXT NOT NULL,
+  pages TEXT NOT NULL,
+  status TEXT NOT NULL CHECK(status IN ('dispatching','accepted','unconfirmed','rejected')),
+  http_status INTEGER,
+  created_at INTEGER NOT NULL,
+  updated_at INTEGER NOT NULL
+);
+CREATE UNIQUE INDEX IF NOT EXISTS one_webhook_dispatching ON webhook_requests((1)) WHERE status='dispatching';

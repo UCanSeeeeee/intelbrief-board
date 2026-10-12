@@ -14,6 +14,24 @@
 6. 关弹窗不取消后台工作；在本浏览器保存最近一个请求的编号/范围/时间/交接方式7天，不存密钥或聊天内容。换设备不承诺同步；可在原Grok对话按编号查询。浏览器禁用存储或剪贴板时明确提醒并提供手动复制。只有网页内提醒，不索要通知权限。
 7. 已有待核对请求时两个更新按钮都回到该请求，不生成第二份。结束查看不等于取消，须明确确认；恢复或重试前先查Bot原任务。跨朋友/跨设备真正去重仍须接通服务端后验收，不把本机防连点当分布式锁。
 
+### 运行位置规则（用户2026-10-12确认，唯一维护于此）
+
+本接入及日常运行**完全在Grok云端与Cloudflare**完成，不依赖用户电脑：用户电脑不承担代码执行、本地服务器、队列消费者、采集、定时、发布或故障备用。旧本机执行器/`dev:updates`/`updates:start`不是备用方案。代码由GitHub推送触发Cloudflare Pages自动构建部署；D1绑定与密钥由用户在Cloudflare控制台设置。
+
+### Webhook直连实现（2026-10-12，代码已完成，部署配置与端到端验收待完成）
+
+- 链路：网页 → `/api/updates`（Cloudflare Pages `_worker.js`，管理登录Cookie、同源校验）→ D1 `webhook_requests` 幂等/去重 → POST 原生例行任务「intelbrief 网页手动更新（Webhook）」→ Grok独立采集发布 → v2凭证 → 网页核验。
+- 仅派发 `{requestId,requestedAt,pages}`；页面白名单 news/people/tickers/ai/crypto；多余字段（含任意提示词）一律400。旧runner接口在此模式下404，不启用Codex。
+- 只有当 `UPDATES_DB`、`UPDATE_ADMIN_KEY`、`GROK_WEBHOOK_URL`(https)、`GROK_WEBHOOK_KEY`、`GROK_WEBHOOK_AUTH_HEADER` 全部存在才声明 `delivery=grok-webhook`；任一缺失网页显示“未接通”并保留复制交接。`GROK_WEBHOOK_AUTH_HEADER` 原样作为 `Authorization` 头的完整值，取自例行任务面板“Authorization header”字段；**代码不拼接、不默认Bearer**。
+- 同编号重复提交只返回已存记录，不再派发；30分钟内已有覆盖相同页面的活动请求则合并返回原编号（跨设备）；部分重叠返回409；全局一次只允许一个派发中。Webhook 2xx才返回`accepted=true`；非2xx返回502且不受理（网页换新编号可重试）；超时/网络错误记为“送达未确认”，同编号不自动重发。受理≠开始≠完成，完成只认v2凭证。
+- 隔离测试 `test/webhook-updates.test.js` 使用假Webhook，不写data/、不产生公开凭证。
+
+### 断点：OPS-02剩余阻塞
+
+1. 用户在Cloudflare控制台创建/绑定D1 `UPDATES_DB` 并执行 `server/schema.sql`（已有旧库也需执行以新增 `webhook_requests`）。
+2. 用户设置五个密钥（见上）。Bot云端无Cloudflare权限，不代设置、不读取。
+3. 之后由X+github真实验收：单页真实采集发布闭环、五页串行、连点/多设备去重、未授权拒绝、超时/失败/无新增/部分失败重试、关闭重开恢复，并核验线上凭证。未完成前不得宣布OPS-02完成。
+
 ### Grok执行协议：v2结果凭证（必须遵循）
 
 收到带编号的网页指令后，先安全拉取，读AGENTS/本节/各页SOP，检查同编号凭证及其他正在运行任务。若已有结果，只核对及报告，不重复检索。未完成任务保存实际断点，串行接续，失败阶段最多重试两次；没有平台回调不增加GPT消费者或新定时任务。
