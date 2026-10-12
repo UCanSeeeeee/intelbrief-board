@@ -18,4 +18,5 @@ async function main() {
   const result=await client(config)('schedule',{requestId:`scheduled-${slot.id}`,pages:['news'],scheduledFor:slot.scheduledFor});
   console.log(JSON.stringify({scheduledFor:slot.scheduledFor,jobIds:result.jobIds,online:result.online}));
 }
-main().catch(error=>{console.error(`提交定时期次失败：${error.message}`);process.exitCode=1;});
+console.error('旧队列调度已停用；定时任务由 Grok Bot「X+github」原生调度负责，不转交 Codex。');
+process.exitCode=1;

@@ -54,6 +54,8 @@ function client(config) {
   };
 }
 async function executeJob(job,config,api,{collect}={}) {
+  // Production collection belongs to Grok Bot; injection remains for isolated tests only.
+  if(!collect) throw new Error('旧 Codex 内容执行器已停用；由 Grok Bot「X+github」独立执行。');
   const dir=path.join(config.stateDir||HOME,'jobs',job.id), checkout=path.join(dir,'checkout'), resultFile=path.join(dir,'collector.json'), checkpointFile=path.join(dir,'checkpoint.json');
   fs.mkdirSync(dir,{recursive:true,mode:0o700});
   const abort=new AbortController();
@@ -87,16 +89,6 @@ async function executeJob(job,config,api,{collect}={}) {
         const window={...displayWindow(job.cutoff),uncovered:uncoveredRanges(readCoverage(checkout),job.page,start,job.cutoff)};
         const prompt=collectorPrompt(job,checkout,start,previous,window);
         if(collect) writeJson(resultFile,await collect(job,prompt));
-        else {
-          const scratch=path.join(dir,'research');fs.mkdirSync(scratch,{recursive:true});
-          // The model receives no publishing credentials and has no write permission.
-          const env={...process.env};
-          for(const key of Object.keys(env)) if(/(?:TOKEN|SECRET|API_KEY|RUNNER_KEY|ADMIN_KEY)/i.test(key)) delete env[key];
-          const output=path.join(dir,'collector-output.json');
-          await run(config.codex||'codex',['-c','web_search="disabled"','exec','--ephemeral','--sandbox','read-only','--skip-git-repo-check','-C',scratch,'-o',output,'-'],{cwd:scratch,stdin:prompt,env,signal:abort.signal,timeout:20*60000,log:path.join(dir,'collector.log')});
-          // A failed process or invalid JSON is never treated as completed collection.
-          const parsed=readJson(output);writeJson(resultFile,parsed);
-        }
       }
       await progress('validating','采集已结束，正在核验原帖与数据');
       const input=readJson(resultFile);
@@ -231,5 +223,8 @@ async function main() {
     await delay(15000);
   } while(true);
 }
-if(require.main===module) main().catch(error=>{console.error(error.message);process.exitCode=1;});
+if(require.main===module) {
+  console.error('旧 Codex 内容执行器已停用；请由 Grok Bot「X+github」独立启动、采集和发布。');
+  process.exitCode=1;
+}
 module.exports={carriedOver,run,executeJob,client};

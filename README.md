@@ -2,20 +2,20 @@
 
 一个只收录 X/Twitter 原帖、保留证据链并提供可解释可信度初评的个人情报看板。
 
-**所有LLM接手必读：[AGENTS.md](AGENTS.md)。讯息必须先通过本机Grok Bot App获取，失败才用Grok网页版；禁止任何第三条采集路径。**
+**LLM入口：[AGENTS.md](AGENTS.md) → [当前上下文](CONTEXT.md) → [任务断点](TASKS.md)。** Grok Bot独立运营内容，GPT仅维护代码；改动前拉取，验证后提交推送。入口能力与使用方法见 [AGENT_ENTRY](docs/AGENT_ENTRY.md)。
 
 线上地址：https://intelbrief-board.pages.dev
 仓库：`UCanSeeeeee/intelbrief-board`（private）
 
 ## 当前能力
 
-- 已实现「全部更新」「更新本页」、共享进度与失败重试；云端配置、真实采集验收及本机执行器启用仍待完成，见 [手动更新接入说明](docs/MANUAL_UPDATES.md)。
+- 已有「全部更新」「更新本页」、队列与进度代码，但尚未接通Grok云端执行；旧Codex执行器已停用。不要把按钮可见视为可用，见 [手动更新接入说明](docs/MANUAL_UPDATES.md)。
 
-- 美股板块采用每天北京时间 09:00 / 16:00 / 21:00 的 **5 条市场焦点 + 10 条多学科认知与夜雨知识库洞察**，支持期次归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。首次真实定时采集待验证。
+- 美股板块采用每天北京时间 09:00 / 16:00 / 21:00 的 **5 条市场焦点 + 10 条多学科认知与夜雨知识库洞察**，支持期次归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。旧链路已有期次；新的Grok独立调度与发布仍待验收。
 - 项目内置[美股研究知识库](knowledge/US_EQUITY_RESEARCH_KB.md)和[Grok 采集 SOP](knowledge/GROK_X_COLLECTION_SOP.md)，每次更新由程序自动注入，固定以半导体、电力、AI落地为优先级并要求独立追源与反证。
-- 前台侧边栏七个 Tab：「美股讯息」、「宏观大事」（见 `docs/MACRO_EVENTS.md`）、「板块空头」（见 `docs/SHORTS_INTELLIGENCE.md`）、「具体人物」、「具体个股」（见 `docs/TICKER_INTELLIGENCE.md`）、「AI板块」（见 `docs/AI_INTELLIGENCE.md`）、「加密」（见 `docs/CRYPTO_INTELLIGENCE.md`）、「财报日历」（见 `docs/EARNINGS_CALENDAR.md`）。原帖档案、来源管理和评分作为后台能力保留，不单独提供前台页面。
+- 前台侧边栏八个 Tab：「美股讯息」、「宏观大事」（见 `docs/MACRO_EVENTS.md`）、「板块空头」（见 `docs/SHORTS_INTELLIGENCE.md`）、「具体人物」、「具体个股」（见 `docs/TICKER_INTELLIGENCE.md`）、「AI板块」（见 `docs/AI_INTELLIGENCE.md`）、「加密」（见 `docs/CRYPTO_INTELLIGENCE.md`）、「财报日历」（见 `docs/EARNINGS_CALENDAR.md`）。原帖档案、来源管理和评分作为后台能力保留，不单独提供前台页面。
 
-- 通过本机Grok Bot App采集，失败时才使用Grok网页版
+- 由Grok Bot「X+github」自主采集，失败时才由它使用Grok网页版；调度验收见 [运营记录](docs/GROK_BOT_OPERATIONS.md)
 - 导入上述Grok路径返回的结构化X原帖，并保留未独立直读标记
 - 按 status ID 去重，保留首次与最近抓取时间
 - 保存原帖链接、完整正文、作者、UTC 时间、引用关系、媒体和抓取时互动量
@@ -35,14 +35,15 @@ cd intelbrief-board
 npm ci
 npm test
 npm run check
-npm run dev:updates
+npm run build
+npm run agent:enter -- --role gpt --task code
 ```
 
-打开 http://localhost:8787。
+以上不启动网站。只有用户要求本地预览时才运行 `npm run dev`（http://localhost:8787）。
 
 ### 导入Grok采集结果
 
-让 Grok Bot 输出符合 [`docs/X_DATA_CONTRACT.md`](docs/X_DATA_CONTRACT.md) 的 JSON，然后：
+以下由 Grok Bot 自己执行，GPT不代采集。输出符合 [`docs/X_DATA_CONTRACT.md`](docs/X_DATA_CONTRACT.md) 的 JSON，然后：
 
 ```bash
 npm run import:x -- /absolute/path/to/x-export.json
@@ -56,7 +57,8 @@ npm run check
 
 | 命令 | 作用 |
 |---|---|
-| `npm run dev:updates` | 本地调试：网站、更新队列与Grok采集执行器（调试数据只写本机；保留须提交推送） |
+| `npm run agent:enter -- --role gpt --task code` | 只读任务路由和断点检查；Grok改为 `--role grok --task news` |
+| `npm run dev:updates` / `updates:start` / `updates:schedule` | 旧Codex运营入口，已停用并明确报错 |
 | `npm run import:x -- FILE` | 导入 Grok Bot/人工结构化 JSON |
 | `npm run score` | 从原始归档重建评分数据 |
 | `npm run check` | 校验 ID、URL、时间、去重和评分范围 |
@@ -88,6 +90,6 @@ knowledge/GROK_X_COLLECTION_SOP.md Grok检索、追源、反证和降噪流程
 
 Cloudflare Pages 连接 `master`，构建命令为 `npm run build`，输出目录为 `dist`。构建只打包公开资源，保留数据时间，不采集X。手动更新接口的D1绑定与密钥按 [接入说明](docs/MANUAL_UPDATES.md) 配置。
 
-真实采集应在本地或受保护的定时任务中运行，再提交生成的数据。`.env`、Token 和本地日志均不得提交。
+真实采集由Grok Bot云端任务运行，再提交生成的数据。`.env`、Token和私有日志均不得提交。
 
-旧GitHub Actions的X API采集入口已停用。美股三次简报沿用应用原生对话定时任务，统一遵守AGENTS.md的两条Grok路径。任务启用状态以应用为准，本地电脑、应用及登录需可用。
+旧GitHub Actions采集和Codex定时入口已停用。目标是Grok原生任务独立运行，不依赖用户电脑或GPT在线；是否达到目标以运营记录中的实测为准。

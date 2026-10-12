@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-// Local-only website + persistent queue + research runner. Never pushes to GitHub.
+// Retired before any filesystem, credential, network or process side effects.
+console.error('旧 Codex 本地内容执行入口已停用；由 Grok Bot「X+github」独立执行。仅预览请使用 npm run dev。');
+process.exit(1);
+// Historical local queue implementation below; intentionally unreachable.
 const fs=require('node:fs');
 const path=require('node:path');
 const os=require('node:os');

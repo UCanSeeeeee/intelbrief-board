@@ -94,7 +94,10 @@ test('people collector receives the same project knowledge and SOP',()=> {
   assert.match(prompt,/<project-knowledge-base>/);
   assert.match(prompt,/<grok-collection-sop>/);
   assert.match(prompt,/必须依照项目知识库与SOP用Grok在X中检索/);
-  assert.match(prompt,/项目知识库留在执行上下文中/);
+  assert.match(prompt,/Grok先读取已授权仓库中的项目知识库/);
+  assert.match(prompt,/不得读取或外传仓库外私有知识库/);
+  assert.match(prompt,/后续归档、校验、提交推送及线上核验仍由Grok Bot/);
+  assert.doesNotMatch(prompt,/使用电脑控制工具操作本机/);
 });
 
 test('people updates preserve other pages, reject fabricated identity and only advance complete accounts',()=> {

@@ -4,9 +4,9 @@
 
 ## 产品与边界
 
-**重要产品规则必须写入仓库文档，不得只留在对话记忆。** 采集路径以 [AGENTS.md的讯息采集硬规则](AGENTS.md) 为唯一维护位置：先本机Grok Bot App，失败才用Grok网页版；除此之外的获取路径全部禁止。所有接手模型、执行器与定时任务均须遵守。** 每次改动完成并通过测试、校验、构建后立即提交并推送 master（用户于2026-10-12决定，无本地验收阶段）。
+首次接手读 [AGENTS.md](AGENTS.md) → 本文 → [TASKS.md](TASKS.md)，再按任务加载专题。支持的入口和平台限制见 [Agent 入口](docs/AGENT_ENTRY.md)。重要规则主动入库；每次修改前拉取，验证后自动提交推送，具体 Git 强规则只在 AGENTS.md 维护。
 
-`intelbrief-board` 是 X-only 情报看板。唯一内容来源是可回到原帖的 X/Twitter 帖子；系统保存证据并做可解释的可信度自动初评。
+`intelbrief-board` 的讯息是 X-only；财报和宏观日历沿用 AGENTS.md 中已授权的官方来源例外。系统保存证据并做可解释的可信度自动初评。
 
 **数量上限不是交付目标。** 美股 5+10、人物个人的近窗与周榜、合集的近30天区、个股近窗与周榜、AI板块近窗与周榜、加密板块/标的近窗与周榜 都只收达到价值与证据门槛的内容；不足时保留实际数量并说明缺额，可以为 0 条，禁止用低价值、重复或旧信息补齐。
 
@@ -27,14 +27,13 @@ GitHub：`UCanSeeeeee/intelbrief-board`（private）
 ## 架构
 
 ```text
-本机Grok Bot App「X+github」 ─> 结构化结果 ─> 校验/去重/归档 ─> 页面
-    失败时才使用 Grok 网页版          ↑
-                            sources/x-sources.json
+Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → GitHub → Cloudflare
+    失败时由同一Bot使用Grok网页版；GPT只维护代码，不参与内容运营
 ```
 
-前端无框架，Cloudflare Pages负责展示；新增受保护的更新接口与D1任务队列，本机Node执行器负责调用只读研究、校验、提交与线上发布核验。接入说明与当前未完成的上线条件见 [手动更新](docs/MANUAL_UPDATES.md)。
+前端无框架，Cloudflare Pages负责展示。上述是目标执行归属，不代表调度已跑通；当前验收事实见 [Grok运营记录](docs/GROK_BOT_OPERATIONS.md)。已有受保护更新接口与D1队列代码，但网页按钮尚未接通Grok，见 [手动更新](docs/MANUAL_UPDATES.md)。
 
-Grok Bot App 内固定由「X+github」承担主执行；旧的「推特信息获取」只保留历史对话，不再作为本项目入口。电脑端执行器仅在主执行链路失败后接管，同一任务不得并行执行。
+固定由「X+github」执行；旧「推特信息获取」仅保留历史。旧Codex调度已暂停，电脑端Codex执行器已停用，无GPT故障接管。
 
 ## 关键文件
 
@@ -44,7 +43,7 @@ Grok Bot App 内固定由「X+github」承担主执行；旧的「推特信息�
 
 - `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：具体人物顶部 Tab、万亿美元公司高层、机构研报合集、AI 三层研究方向及降噪规则的待办与产品规划。
 - `docs/MANUAL_UPDATES.md`：全部更新、单页更新、云端配置、执行端及验收状态的主要维护位置。
-- `updates.js` / `server/updates.mjs` / `scripts/update-runner.js`：页面进度、任务队列与本机执行器。
+- `updates.js` / `server/updates.mjs`：页面进度与任务队列代码；`scripts/update-runner.js` 仅保留模拟测试能力，生产入口停用。
 
 - `docs/STOCK_BRIEF.md`：美股每天北京时间 09:00 / 16:00 / 21:00 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。
 - `config/research-guidance.json`：项目知识与采集SOP的机器入口；更新提示词会读取它指向的文件并强制注入每次美股和人物采集。
@@ -52,7 +51,7 @@ Grok Bot App 内固定由「X+github」承担主执行；旧的「推特信息�
 - `knowledge/GROK_X_COLLECTION_SOP.md`：把知识库转换成两轮检索、追源、反证、准入、去重、选择和审计记录的执行流程。
 - `us-equity-x-brief-quality`：共享卡片质量技能，统一作者、中文信息摘要、事件时间、反向条件与原帖链接；采集过程只进入证据层。当前 0.1.0 在共享技能库孵化并已链接到本机 Codex。
 - `config/stock-brief.json`：时区、时段、条数与技能标识。
-- `data/stock-briefs/index.json`：最近三期目录；同目录保留的期次文件不可覆盖，写入第四期时移除最旧一期。首期实际定时采集尚待验证。
+- `data/stock-briefs/index.json`：最近三期目录；同目录保留的期次文件不可覆盖，写入第四期时移除最旧一期。旧链路有实际期次，不等于新Grok独立调度已验收。
 - `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
 - `index.html` / `people.html` / `tickers.html` / `ai.html` / `crypto.html` / `earnings.html`：侧栏顺序为美股讯息→宏观大事→板块空头→具体人物→具体个股→AI板块→加密→财报日历。宏观大事见 `docs/MACRO_EVENTS.md`（含超关注财报精选）；板块空头见 `docs/SHORTS_INTELLIGENCE.md`。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的；`crypto.js`：板块讯息+BTC+Brew。
 - `config/earnings-calendar.json` / `data/earnings-calendar.json` / `docs/EARNINGS_CALENDAR.md`：侧栏「财报日历」；主源 Nasdaq；卡片主营一句话见 `config/company-blurbs.json`。
@@ -80,21 +79,19 @@ Grok Bot App 内固定由「X+github」承担主执行；旧的「推特信息�
 ```bash
 npm ci
 npm test
-npm run dev:updates
+npm run check
+npm run build
+npm run agent:enter -- --role gpt --task code
 ```
 
-仅导入由允许的Grok路径取得的结果。旧X API脚本保留作历史实现，不得调用；本地完整模式说明见 `docs/MANUAL_UPDATES.md`。
+内容导入仅由Grok执行；旧X API脚本不得调用。按用户要求目前不启动本地网站。代码测试使用夹具，不触发真实采集。
 
 ## 部署
 
-Cloudflare Pages 从 `master` 自动部署。构建命令必须为 `npm run build`、输出目录 `dist`。构建仅打包允许公开的资源，不采集X、不重新生成内容时间；采集与评分在本机任务内完成，凭证与运行日志保存在仓库外。
+Cloudflare Pages 从 `master` 自动部署。构建命令为 `npm run build`、输出目录 `dist`。构建只打包允许公开的资源，不采集X、不重新生成内容时间；内容由Grok运营任务生成，凭证和私有运行日志不进入公开构建。
 
-旧X API手动工作流已停用，不能作为备用采集路径。美股简报的三次频率已获用户授权，通过应用原生对话定时任务执行，以应用内状态为准；不要另建重复调度。采集只允许上述两条Grok路径，真实采集成功仍需单独验证。
+旧X API工作流与Codex调度不作为备用路径。Grok原生调度的设置和首个独立发布必须分别核验，不凭页面可访问、提示词已写或任务已创建宣称成功。
 
 ## 接手检查清单
 
-1. 完整阅读本文与 `docs/X_DATA_CONTRACT.md`。
-2. 运行 `npm test && npm run build && npm run check`。
-3. 核对来源表中的账号仍是本人或机构的一手账号。
-4. 采集后抽查原帖 URL、时间和正文一致性。
-5. 不因评分高而直接产生交易结论；先看评分明细和证据缺口。
+按 AGENTS.md 的任务路由与完成条件处理。状态询问只读，代码工作不采集；Grok内容任务再核对账号身份、原帖URL、时间与正文。不因评分高直接产生交易结论。
