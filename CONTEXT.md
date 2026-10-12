@@ -38,6 +38,10 @@ Grok Bot App 内固定由「X+github」承担主执行；旧的「推特信息�
 
 ## 关键文件
 
+- `docs/DESIGN_SYSTEM.md` / `styles.css`：八页共用的阅读优先布局，摘要完整显示、分析可展开、数量为上限而非任务完成率。
+- `calendar-time.js`：宏观美东时刻换算北京时间（含夏令时）与财报披露状态展示；测试见 `test/calendar-time.test.js`。
+- `assets/fluent/README.md`：页标题装饰素材的来源版本与许可。
+
 - `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：具体人物顶部 Tab、万亿美元公司高层、机构研报合集、AI 三层研究方向及降噪规则的待办与产品规划。
 - `docs/MANUAL_UPDATES.md`：全部更新、单页更新、云端配置、执行端及验收状态的主要维护位置。
 - `updates.js` / `server/updates.mjs` / `scripts/update-runner.js`：页面进度、任务队列与本机执行器。

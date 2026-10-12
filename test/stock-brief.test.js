@@ -103,8 +103,10 @@ test('browser renderer shows 5+10, escapes content, and clears failed edition',a
     fetch:async url=>({ok:!url.endsWith(second.file),json:async()=> url.startsWith('config/')?{slots:['09:00','16:00','21:00'],targetCounts:{focus:5,insights:10}}:url.endsWith('index.json')?{editions:[entry,second]}:brief})
   });
   await new Promise(resolve=>setImmediate(resolve));
-  assert.equal(element('focus-count').textContent,'5 / 5');
-  assert.equal(element('insights-count').textContent,'10 / 10');
+  assert.equal(element('focus-count').textContent,'收录 5 条 · 上限 5 条');
+  assert.equal(element('insights-count').textContent,'收录 10 条 · 上限 10 条');
+  assert.match(element('brief-focus').innerHTML,/<details class="analysis-details">/);
+  assert.match(element('brief-focus').innerHTML,/待独立核验/);
   assert.match(element('brief-focus').innerHTML,/&lt;img/);
   assert.doesNotMatch(element('brief-focus').innerHTML,/<img/);
   assert.match(element('brief-insights').innerHTML,/宏观经济 × 行为金融/);

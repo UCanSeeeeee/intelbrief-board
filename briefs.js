@@ -4,7 +4,7 @@
   if (!$('edition-select')) return;
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const time = value => value ? new Intl.DateTimeFormat('zh-CN', {timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(value)) : '未查明';
-  const status = {complete:'完整',partial:'有缺额',failed:'采集失败'};
+  const status = {complete:'已发布',partial:'有缺额',failed:'采集失败'};
   const list = values => `<ul>${values.map(v => `<li>${escape(v)}</li>`).join('')}</ul>`;
   const empty = text => `<div class="empty-state"><strong>${escape(text)}</strong><p>没有可靠原帖证据的内容不会显示在这里。</p></div>`;
   const originalUrl = source => /^https:\/\/(?:x|twitter)\.com\/\w+\/status\/\d+$/.test(source?.url || '') ? source.url : '';
@@ -21,11 +21,14 @@
     return `<article class="x-card brief-card">
       <div class="brief-author"><span>作者</span><strong>@${escape(primary.username || '未查明')}</strong></div>
       <div class="brief-card-top"><span class="brief-rank">${String(index+1).padStart(2,'0')}</span><h3>${escape(event.title)}</h3><span class="badge">${escape(event.change)}</span></div>
+      <p class="signal-verification">${primary.verification === 'direct' ? '已直读原帖' : '待独立核验'} · 发布 ${escape(time(primary.publishedAt))}（北京时间）</p>
       <div class="topic-row"><span>${escape(event.direction)}</span><span>${escape(event.horizon)}</span>${event.affected.map(v=>`<span>${escape(v)}</span>`).join('')}</div>
       <p><strong>信息摘要</strong> ${escape(event.fact)}</p>
+      <details class="analysis-details"><summary>影响分析与反向条件</summary>
       <p><strong>影响判断</strong> ${escape(event.impact)}</p>
       ${knowledge}
       <p><strong>反向条件</strong> ${escape(event.counterCase)}</p>
+      </details>
       <div class="brief-primary-source"><p><strong>事件时间</strong> ${escape(eventTime)}${event.eventTime?'（北京时间）':''}${event.futureEventNote ? ' · '+escape(event.futureEventNote) : ''}</p>${primaryUrl?`<a href="${escape(primaryUrl)}" target="_blank" rel="noopener noreferrer">原文链接 · @${escape(primary.username)} ↗</a>`:'<span>原文链接待核验</span>'}</div>
     </article>`;
   }
@@ -36,15 +39,15 @@
     $('brief-focus').innerHTML = '';
     $('brief-insights').innerHTML = '';
     $('brief-audit').innerHTML = '';
-    $('focus-count').textContent = '— / 5';
-    $('insights-count').textContent = '— / 10';
+    $('focus-count').textContent = '正在读取';
+    $('insights-count').textContent = '正在读取';
     }
     try {
       if (!/^(?:\d{4}-\d{2}-\d{2}-(?:0900|1600|2100)|manual-[a-f0-9-]{36})\.json$/.test(entry.file)) throw new Error('无效期次');
       const brief = await json('data/stock-briefs/'+entry.file);
       if (current!==generation) return;
       for (const group of ['focus','insights']) {
-        $(group+'-count').textContent = `${brief[group].length} / ${config.targetCounts[group]}`;
+        $(group+'-count').textContent = `收录 ${brief[group].length} 条 · 上限 ${config.targetCounts[group]} 条`;
         const carried = (brief.carriedOver||[]).filter(c=>c.group===group);
         const carriedHtml = carried.length ? `<div class="brief-carried"><h3>展示窗口内的前序期次条目（本期未重复检索）</h3>${carried.map(c=>`<article class="x-card brief-card"><div class="brief-card-top"><h3>${escape(c.title)}</h3><span class="badge">来自 ${escape(c.fromEdition)}</span></div>${c.fact?`<p>${escape(c.fact)}</p>`:''}${originalUrl(c)?`<a href="${escape(c.url)}" target="_blank" rel="noopener noreferrer">原文链接 ↗</a>`:''}<p class="brief-small">发布 ${escape(time(c.publishedAt))}（北京时间）</p></article>`).join('')}</div>` : '';
         $('brief-'+group).innerHTML = (brief[group].map(card).join('') || empty('本期没有可用条目')) + carriedHtml;
@@ -69,7 +72,7 @@
       $('brief-insights').innerHTML=empty('等待十条多学科洞察');
       return;
     }
-    $('edition-select').innerHTML=editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status]||e.status)} · ${escape(e.counts.total)}/15</option>`).join('');
+    $('edition-select').innerHTML=editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status]||e.status)} · 收录 ${escape(e.counts.total)} 条</option>`).join('');
     $('edition-select').disabled=false;
     const entry=editions.find(e=>e.id===selected)||editions.find(e=>e.status!=='failed')||editions[0];
     $('edition-select').value=entry.id;

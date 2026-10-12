@@ -71,6 +71,7 @@
   // Roving keyboard support for every role="tablist" (←/→/Home/End), shared by all pages.
   function initTablistKeys() {
     document.addEventListener("keydown", (event) => {
+      if (event.defaultPrevented) return;
       const tab = event.target.closest?.('[role="tab"]');
       const list = tab?.closest('[role="tablist"]');
       if (!list || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;

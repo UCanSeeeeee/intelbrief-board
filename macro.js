@@ -5,11 +5,6 @@
   const escape = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const categoryLabel = (id, catalog) => (catalog.find((c) => c.id === id) || {}).label || id;
   const importanceLabel = { high: '高关注', standard: '常规', low: '结构日' };
-  const beijingDate = (isoDate) => {
-    // Treat calendar date as America/New_York civil date; show same civil date + Beijing label for morning releases.
-    const et = new Date(`${isoDate}T12:00:00-05:00`);
-    return new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short' }).format(et);
-  };
   const dayHead = (isoDate) => new Intl.DateTimeFormat('zh-CN', { timeZone: 'UTC', month: 'numeric', day: 'numeric', weekday: 'short' }).format(new Date(isoDate + 'T12:00:00Z'));
 
   let payload = null;
@@ -26,8 +21,8 @@
       </div>
       <p class="earnings-name">${escape(event.title)}</p>
       <p class="earnings-blurb">${escape(event.notes || '')}</p>
-      <p class="earnings-meta">${escape(event.timeEt || '')}${event.referencePeriod ? ` · 对应 ${escape(event.referencePeriod)}` : ''}</p>
-      <p class="earnings-meta">北京时间对照日：${escape(beijingDate(event.date))}</p>
+      <p class="earnings-meta calendar-time">${escape(IntelCalendar.macroTime(event))}</p>
+      ${event.referencePeriod ? `<p class="earnings-meta">对应 ${escape(event.referencePeriod)}</p>` : ''}
       <p class="earnings-result"><strong>来源</strong> ${sources || '—'}</p>
     </article>`;
   }
@@ -42,12 +37,12 @@
       : '未知';
     $('macro-state').textContent = `更新于 ${updated}（北京时间） · ${payload.year} 年共 ${payload.counts?.total ?? 0} 件 · 本季 ${quarter.counts?.total ?? 0} 件 · 低频手动刷新`;
     const byCat = Object.entries(quarter.counts?.byCategory || {}).map(([k, v]) => `${categoryLabel(k, payload.categories)} ${v}`).join(' · ');
-    $('macro-summary').innerHTML = `<div class="earnings-summary-card">
+    $('macro-summary').innerHTML = `<details class="reading-rules"><summary>本季度范围与来源</summary><div class="earnings-summary-card">
       <p><strong>${escape(quarter.label)}</strong> ${escape(quarter.start)} → ${escape(quarter.end)}</p>
       <p><strong>焦点</strong> ${escape(payload.focus || '美股宏观')}</p>
       <p><strong>本季构成</strong> ${escape(byCat || '无')}</p>
-      <p><strong>刷新</strong> ${escape(payload.refresh?.howTo || '手动更新 data/macro-events.json 后推送')}</p>
-    </div>`;
+      <p>按美东日期分组；具体发布时间换算为北京时间，自动处理夏令时。</p>
+    </div></details>`;
 
     const byDay = new Map();
     for (const event of quarter.events || []) {

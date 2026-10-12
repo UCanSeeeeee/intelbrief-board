@@ -14,7 +14,7 @@
   document.querySelector('.sidebar .nav').after(sidebar);
   const toolbar=document.createElement('div');
   toolbar.className='update-page-toolbar';
-  toolbar.innerHTML=`<span id="update-last">正在连接更新服务…</span><button class="update-button" id="update-page" type="button" disabled>↻ 更新本页</button>`;
+  toolbar.innerHTML=`<span id="update-last" role="status">正在连接更新服务…</span><button class="update-button" id="update-page" type="button" disabled>↻ 采集本页</button>`;
   document.querySelector('.page-header').append(toolbar);
   const panel=document.createElement('section');
   panel.id='update-panel'; panel.className='update-panel'; panel.hidden=true;
@@ -41,12 +41,12 @@
     $('update-all').disabled=submitting||!available||(logged&&allBusy);
     $('update-page').disabled=submitting||!available||(logged&&busy(active));
     $('update-all').textContent=allBusy?'正在更新…':'↻ 全部更新';
-    $('update-page').textContent=busy(active)?labels[active.stage]+'…':'↻ 更新本页';
+    $('update-page').textContent=busy(active)?labels[active.stage]+'…':'↻ 采集本页';
     $('update-login').hidden=!available||logged;
     $('update-logout').hidden=!logged;
     if (!logged) { $('update-jobs').innerHTML=''; $('update-retry').hidden=true; return; }
     $('update-connection').textContent=snapshot.online?'执行端在线 · 更新期间可以继续浏览':'执行端离线 · 待电脑与更新程序恢复后继续';
-    $('update-last').textContent=`上次成功：${time(snapshot.lastSuccess?.[page])}（北京时间）`;
+    $('update-last').textContent=snapshot.lastSuccess?.[page] ? `上次成功 ${time(snapshot.lastSuccess[page])}（北京时间）` : '尚无成功采集记录';
     const latestJobs=pagesAll.map(p=>latest(p)).filter(Boolean);
     $('update-jobs').innerHTML=latestJobs.length ? latestJobs.map(job=>`<article class="update-job" data-status="${escape(job.status)}"><div><strong>${names[job.page]}</strong><span>${labels[job.stage]||'等待执行'}</span></div><p>${escape(job.message|| (job.status==='queued'&&!snapshot.online?'执行端离线，任务已保存':job.status==='queued'?'任务已保存，等待执行':''))}</p><small>信息截止 ${time(job.cutoff)} · ${job.trigger_type==='scheduled'?'定时':'手动'}更新</small></article>`).join('') : '<p class="update-empty">暂无手动更新记录</p>';
     $('update-retry').hidden=!latestJobs.some(j=>j.status==='failed');
