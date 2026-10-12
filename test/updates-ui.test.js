@@ -45,3 +45,13 @@ test('timeout stops automatic polling, does not call it failure or submit again'
   assert.equal(ui.requests.length,before);assert.match(ui.elements.get('update-connection').textContent,/不代表任务失败/);
   await ui.elements.get('update-check').onclick();assert.ok(ui.requests.length>before);
 });
+test('direct acceptance is not completion, ambiguous delivery is never auto-resubmitted',async()=>{
+  for(const accepted of [true,false]){
+    const ui=await boot({status:200,body:{authenticated:true,delivery:'grok-webhook',accepted}}),e=ui.elements;
+    e.get('update-page').onclick();assert.equal(e.get('update-title').focused,true);
+    await e.get('update-confirm').onclick();assert.doesNotMatch(e.get('update-last').textContent,/已核对|更新完成/);
+    assert.match(e.get('update-result').textContent,accepted ? /入口已受理/ : /未确认送达/);
+    const posts=()=>ui.requests.filter(r=>r.opts?.method==='POST').length;
+    assert.equal(posts(),1);await e.get('update-confirm').onclick();ui.interval();assert.equal(posts(),1);
+  }
+});

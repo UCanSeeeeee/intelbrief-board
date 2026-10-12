@@ -48,11 +48,12 @@
     $('update-confirm').hidden=!direct||waiting||!!receipt;$('update-confirm').disabled=submitting;
     const handoff=!direct&&!receipt&&!waiting;
     $('update-copy').hidden=!intent||!!receipt;$('update-copy').disabled=submitting;
-    $('update-copy-label').hidden=!handoff;$('update-prompt').hidden=!handoff;$('update-prompt').value=intent?prompt():'';
+    $('update-copy-label').hidden=!handoff;$('update-prompt').hidden=!handoff;
+    const instruction=intent?prompt():'';if($('update-prompt').value!==instruction)$('update-prompt').value=instruction;
     $('update-sent').hidden=!handoff;$('update-check').hidden=!intent||(!waiting&&!receipt);$('update-check').disabled=checking;
     $('update-retry').hidden=!receipt?.results.some(r=>r.status==='failed');$('update-reset').hidden=!intent||submitting;
   }
-  function open(pages){returnFocus=document.activeElement;selection=pages;if(!intent)create(pages);else if(intent.delivery==='draft'&&intent.pages.join()!==pages.join())create(pages);render();if(!dialog.open)dialog.showModal();}
+  function open(pages){returnFocus=document.activeElement;selection=pages;if(!intent)create(pages);else if(intent.delivery==='draft'&&intent.pages.join()!==pages.join())create(pages);render();if(!dialog.open){dialog.showModal();$('update-title').tabIndex=-1;$('update-title').focus();}}
   async function connection(){
     try{const state=await api();authenticated=!!state.authenticated;direct=state.delivery==='grok-webhook';}
     catch(error){authenticated=false;direct=error.status===401&&error.data?.delivery==='grok-webhook';}
