@@ -132,16 +132,26 @@
   --border: #27272a;
   --border-subtle: #1f1f23;
   --text: #fafafa;
-  --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
+  --text-secondary: #b4b4bd;
+  --text-muted: #8e8e98;
   --accent: #e4e4e7;
   --green: #22c55e;
   --red: #ef4444;
   --amber: #f59e0b;
   --sidebar-w: 220px;
   --radius: 8px;
-  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  /* Design tokens — see docs/DESIGN_SYSTEM.md */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px; --sp-7: 48px;
+  --fs-xs: 12px; --fs-sm: 13px; --fs-md: 15px; --fs-lg: 17px; --fs-xl: 22px; --fs-2xl: 28px;
+  --lh-tight: 1.35; --lh-body: 1.7;
+  --radius-sm: 6px; --radius-lg: 12px;
+  --shadow-1: 0 1px 0 rgba(255,255,255,.03) inset, 0 1px 2px rgba(0,0,0,.4);
+  --focus: #8ab4ff;
+  --accent-blue: #7c9cff;
+  --measure: 72ch;
+  --touch: 44px;
 }
 
 *,
@@ -1191,3 +1201,81 @@ a:hover {
 
 .ticker-contract { margin: 6px 0 0; font-size: 12px; color: var(--text-secondary); }
 .ticker-contract code { font-size: 11px; word-break: break-all; }
+
+
+/* ===== Design system layer (Linear Calm Density + WCAG 2.2 AA) — docs/DESIGN_SYSTEM.md ===== */
+body { font-size: var(--fs-md); line-height: var(--lh-body); font-feature-settings: "tnum" 1; text-rendering: optimizeLegibility; }
+h1 { font-size: var(--fs-2xl); line-height: var(--lh-tight); letter-spacing: -0.01em; font-weight: 650; }
+h2 { font-size: var(--fs-lg); line-height: var(--lh-tight); font-weight: 600; }
+h3 { line-height: var(--lh-tight); }
+p, li, blockquote { max-width: var(--measure); }
+.earnings-grid p, .people-selector p { max-width: none; }
+
+.skip-link { position: absolute; left: var(--sp-3); top: -60px; z-index: 1000; padding: var(--sp-2) var(--sp-4); background: var(--text); color: var(--bg); border-radius: var(--radius-sm); font-weight: 600; }
+.skip-link:focus { top: var(--sp-3); }
+main:focus { outline: none; }
+
+/* Focus: always visible for keyboard users */
+:where(a, button, select, input, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--radius-sm);
+}
+
+/* Sidebar nav */
+.sidebar { border-right: 1px solid var(--border-subtle); }
+.nav a { min-height: 36px; display: flex; align-items: center; gap: var(--sp-2); padding: var(--sp-2) var(--sp-3); border-radius: var(--radius-sm); color: var(--text-secondary); font-size: var(--fs-sm); transition: background-color .12s, color .12s; }
+.nav a:hover { background: var(--bg-hover); color: var(--text); }
+.nav a.active, .nav a[aria-current="page"] { background: var(--bg-hover); color: var(--text); box-shadow: inset 2px 0 0 var(--accent-blue); font-weight: 600; }
+.nav-icon { width: 16px; text-align: center; color: var(--text-muted); }
+.nav a[aria-current="page"] .nav-icon { color: var(--accent-blue); }
+.sidebar-footer { color: var(--text-muted); font-size: var(--fs-xs); line-height: 1.6; }
+
+/* Top tabs (people / tickers / ai / crypto / earnings) */
+.people-selector { gap: var(--sp-2); }
+.people-selector [role="tab"] { min-height: var(--touch); border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg-elevated); color: var(--text-secondary); text-align: left; transition: border-color .12s, background-color .12s; }
+.people-selector [role="tab"]:hover { border-color: var(--text-muted); color: var(--text); }
+.people-selector [role="tab"][aria-selected="true"], .people-selector [role="tab"].active { border-color: var(--accent-blue); background: var(--bg-card); color: var(--text); box-shadow: inset 0 -2px 0 var(--accent-blue); }
+.people-selector [role="tab"] span { color: var(--text-muted); font-size: var(--fs-xs); }
+
+/* Cards */
+.x-card, .earnings-card, .signal-card, .earnings-summary-card, .update-panel { border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-1); }
+.x-card, .signal-card { padding: var(--sp-5); }
+.x-card p, .signal-card p { line-height: var(--lh-body); }
+.x-card strong { color: var(--text); }
+
+/* Badges / tiers */
+.badge { display: inline-flex; align-items: center; gap: var(--sp-1); padding: 2px var(--sp-2); border: 1px solid var(--border); border-radius: 999px; font-size: var(--fs-xs); color: var(--text-secondary); background: transparent; line-height: 1.6; }
+
+/* Earnings */
+.earnings-grid { gap: var(--sp-3); }
+.earnings-card { padding: var(--sp-4); display: flex; flex-direction: column; gap: var(--sp-1); }
+.earnings-card-top { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); }
+.earnings-card-top strong { font-size: var(--fs-lg); letter-spacing: .02em; }
+.earnings-name { color: var(--text-secondary); font-size: var(--fs-sm); }
+.earnings-blurb { color: var(--text); font-size: var(--fs-sm); line-height: 1.6; margin: var(--sp-1) 0; padding-left: var(--sp-2); border-left: 2px solid var(--border); }
+.earnings-meta { color: var(--text-muted); font-size: var(--fs-xs); }
+.earnings-result { margin-top: auto; padding-top: var(--sp-2); border-top: 1px solid var(--border-subtle); font-size: var(--fs-sm); }
+.earnings-day { margin-top: var(--sp-6); }
+.earnings-day-head { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: var(--sp-2); margin-bottom: var(--sp-3); border-bottom: 1px solid var(--border-subtle); }
+.earnings-day-head span { color: var(--text-muted); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; }
+
+/* Empty / error states */
+.empty-state { border: 1px dashed var(--border); border-radius: var(--radius-lg); padding: var(--sp-6) var(--sp-5); text-align: center; color: var(--text-secondary); }
+.empty-state strong { color: var(--text); display: block; margin-bottom: var(--sp-1); }
+
+/* Mobile: sidebar becomes a drawer, toggle is a 44px target in a sticky top bar */
+@media (max-width: 768px) {
+  .menu-toggle { min-width: var(--touch); min-height: var(--touch); position: fixed; top: var(--sp-2); left: var(--sp-2); z-index: 60; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius); background: var(--bg-elevated); border: 1px solid var(--border); color: var(--text); }
+  .main { padding-top: calc(var(--touch) + var(--sp-4)); }
+  .nav a, .people-selector [role="tab"], .update-button, select, summary { min-height: var(--touch); }
+  h1 { font-size: var(--fs-xl); }
+  .x-card, .signal-card { padding: var(--sp-4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+@media (forced-colors: active) {
+  .nav a[aria-current="page"], .people-selector [role="tab"][aria-selected="true"] { outline: 2px solid CanvasText; }
+}
+.empty-state p { margin-left: auto; margin-right: auto; }
+.earnings-summary-card p, .page-header .subtitle { max-width: 96ch; }

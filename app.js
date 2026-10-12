@@ -39,7 +39,10 @@
   function setActiveNav() {
     const page = document.body.dataset.page || "";
     document.querySelectorAll(".nav a[data-nav]").forEach((link) => {
-      link.classList.toggle("active", link.dataset.nav === page);
+      const on = link.dataset.nav === page;
+      link.classList.toggle("active", on);
+      if (on) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
     });
   }
 
@@ -51,12 +54,33 @@
     const close = () => {
       sidebar.classList.remove("open");
       overlay?.classList.remove("show");
+      toggle.setAttribute("aria-expanded", "false");
     };
     toggle.addEventListener("click", () => {
-      sidebar.classList.toggle("open");
-      overlay?.classList.toggle("show", sidebar.classList.contains("open"));
+      const open = sidebar.classList.toggle("open");
+      overlay?.classList.toggle("show", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      if (open) sidebar.querySelector(".nav a")?.focus();
     });
     overlay?.addEventListener("click", close);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && sidebar.classList.contains("open")) { close(); toggle.focus(); }
+    });
+  }
+
+  // Roving keyboard support for every role="tablist" (←/→/Home/End), shared by all pages.
+  function initTablistKeys() {
+    document.addEventListener("keydown", (event) => {
+      const tab = event.target.closest?.('[role="tab"]');
+      const list = tab?.closest('[role="tablist"]');
+      if (!list || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      const tabs = [...list.querySelectorAll('[role="tab"]')];
+      let i = tabs.indexOf(tab);
+      i = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : (i + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+      event.preventDefault();
+      tabs[i].focus();
+      tabs[i].click();
+    });
   }
 
   function metricText(metrics = {}) {
@@ -190,6 +214,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     setActiveNav();
+    initTablistKeys();
     initMobileNav();
     hydrateFeed();
     hydrateSources();

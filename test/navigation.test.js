@@ -102,3 +102,20 @@ test('earnings page loads company blurbs for calendar symbols', () => {
   assert.match(read('earnings.js'), /company-blurbs\.json/);
   assert.match(read('earnings.js'), /earnings-blurb/);
 });
+
+test('design system: landmarks, skip link, aria-current and tab keyboard support', () => {
+  for (const page of ['index','people','tickers','ai','crypto','earnings']) {
+    const html = read(page + '.html');
+    assert.match(html, /class="skip-link" href="#main"/);
+    assert.match(html, /<main[^>]*id="main"/);
+    assert.match(html, /aria-controls="sidebar" aria-expanded="false"/);
+  }
+  const app = read('app.js');
+  assert.match(app, /aria-current/);
+  assert.match(app, /initTablistKeys/);
+  const css = read('styles.css');
+  assert.match(css, /:focus-visible/);
+  assert.match(css, /prefers-reduced-motion/);
+  assert.match(css, /--touch: 44px/);
+  assert.ok(read('docs/DESIGN_SYSTEM.md').includes('Linear Calm Density'));
+});

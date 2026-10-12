@@ -7,22 +7,23 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="ai">
-  <button class="menu-toggle" type="button" aria-label="菜单">☰</button>
-  <div class="overlay"></div>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-controls="sidebar" aria-expanded="false"><span aria-hidden="true">☰</span></button>
+  <div class="overlay" aria-hidden="true"></div>
   <div class="app">
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar" aria-label="站点导航">
       <div class="logo"><div class="logo-mark">简</div><div class="logo-text">美股情报</div></div>
-      <nav class="nav" aria-label="侧边栏 Tab">
-        <a href="index.html" data-nav="news"><span class="nav-icon">▣</span> 美股讯息</a>
-        <a href="people.html" data-nav="people"><span class="nav-icon">◎</span> 具体人物</a>
-        <a href="tickers.html" data-nav="tickers"><span class="nav-icon">◇</span> 具体个股</a>
-        <a href="ai.html" data-nav="ai"><span class="nav-icon">⬡</span> AI板块</a>
-        <a href="crypto.html" data-nav="crypto"><span class="nav-icon">◈</span> 加密</a>
-        <a href="earnings.html" data-nav="earnings"><span class="nav-icon">▤</span> 财报日历</a>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" data-nav="news"><span class="nav-icon" aria-hidden="true">▣</span> 美股讯息</a>
+        <a href="people.html" data-nav="people"><span class="nav-icon" aria-hidden="true">◎</span> 具体人物</a>
+        <a href="tickers.html" data-nav="tickers"><span class="nav-icon" aria-hidden="true">◇</span> 具体个股</a>
+        <a href="ai.html" data-nav="ai"><span class="nav-icon" aria-hidden="true">⬡</span> AI板块</a>
+        <a href="crypto.html" data-nav="crypto"><span class="nav-icon" aria-hidden="true">◈</span> 加密</a>
+        <a href="earnings.html" data-nav="earnings"><span class="nav-icon" aria-hidden="true">▤</span> 财报日历</a>
       </nav>
       <div class="sidebar-footer">AI 实验室与政策只收可回查的 X 证据<br />与股权个股、加密分页</div>
     </aside>
-    <main class="main wide">
+    <main class="main wide" id="main" tabindex="-1">
       <header class="page-header">
         <h1>AI板块</h1>
         <p class="subtitle">OPENAI / ANTHROPIC / GOOG（AI产品） / 其他。来源 Grok only；不并入具体个股列表。</p>
