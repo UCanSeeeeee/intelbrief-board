@@ -264,6 +264,17 @@ for (const week of earnings.weeks) {
   console.log(`[validate-data] OK: ${shortsTabs.size} shorts tabs, ${shortsKeys.size} selected events`);
 }
 
+{
+  const contract=require('../update-receipt');
+  const directory=path.join(ROOT,'data/update-receipts');
+  for(const file of fs.readdirSync(directory).filter(f=>f.endsWith('.json'))){
+    const receipt=readJson(path.join(directory,file));
+    if(receipt.schemaVersion!==2)continue; // frozen legacy receipts
+    try{contract.validate(receipt,receipt);if(file!==receipt.requestId+'.json')throw new Error('文件名与编号不符');}
+    catch(error){fail(`manual receipt ${file}: ${error.message}`);}
+  }
+}
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);

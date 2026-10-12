@@ -10,6 +10,7 @@ for(const file of ['config/stock-brief.json','config/people-intelligence.json','
   fs.mkdirSync(path.dirname(path.join(output,file)),{recursive:true});fs.copyFileSync(path.join(root,file),path.join(output,file));
 }
 fs.copyFileSync(path.join(root,'calendar-time.js'),path.join(output,'calendar-time.js'));
+fs.copyFileSync(path.join(root,'update-receipt.js'),path.join(output,'update-receipt.js'));
 if(fs.existsSync(path.join(root,'data/reading-board.json')))fs.copyFileSync(path.join(root,'data/reading-board.json'),path.join(output,'data/reading-board.json'));
 for(const dir of ['assets/fluent','data/stock-briefs','data/update-receipts']) if(fs.existsSync(path.join(root,dir))) fs.cpSync(path.join(root,dir),path.join(output,dir),{recursive:true});
 // People publication verification includes the archived source and per-account checks.

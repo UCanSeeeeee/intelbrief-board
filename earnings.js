@@ -53,7 +53,7 @@
         ? `<div class="earnings-grid">${day.items.map(item => card(item, day.date)).join('')}</div>`
         : `<p class="calendar-empty">当日无入选重点公司 · 原始日历 ${escape(day.rawCount)} 家</p>`;
       return `<section class="earnings-day${day.items?.length ? '' : ' calendar-empty-day'}">
-        <header class="earnings-day-head"><h2>${escape(dayLabel(day.date))}</h2><span>${escape(day.items.length)} / ${escape(day.rawCount)}</span></header>
+        <header class="earnings-day-head"><h2><time datetime="${escape(day.date)}">${escape(dayLabel(day.date))}</time><small>美东披露日期</small></h2><span>重点 ${escape(day.items.length)} 家 · 日历 ${escape(day.rawCount)} 家</span></header>
         ${day.stale ? `<p class="brief-small">当日日历拉取失败，显示的是上次数据（可能过时）。</p>` : ''}
         ${day.truncated?.length ? `<p class="brief-small">另有 ${escape(day.truncated.length)} 家超出每日上限未展示：${escape(day.truncated.join('、'))}</p>` : ''}
         ${body}

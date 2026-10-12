@@ -12,7 +12,7 @@ test('runner collects only the chosen page, pushes data, verifies deployed bytes
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'intelbrief-runner-test-'));
   const seed=path.join(dir,'seed'),remote=path.join(dir,'remote.git');fs.mkdirSync(seed);
   const git=(cwd,...args)=>execFileSync('git',args,{cwd,stdio:'pipe'}).toString().trim();
-  for(const item of ['scripts','sources','data','docs','config','knowledge','calendar-time.js']) fs.cpSync(path.join(root,item),path.join(seed,item),{recursive:true});
+  for(const item of ['scripts','sources','data','docs','config','knowledge','calendar-time.js','update-receipt.js']) fs.cpSync(path.join(root,item),path.join(seed,item),{recursive:true});
   // 夹具：人物情报从空开始，验证「采集无新增」时状态为 unchanged，不受线上真实数据影响
   {const file=path.join(seed,'data/people-intelligence.json');const data=JSON.parse(fs.readFileSync(file,'utf8'));data.items=[];fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');}
   git(seed,'init','-b','master');git(seed,'add','.');git(seed,'-c','user.name=test','-c','user.email=test@example.test','commit','-m','fixture');

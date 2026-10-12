@@ -1,52 +1,47 @@
-const test=require('node:test');
-const assert=require('node:assert/strict');
-const fs=require('node:fs');
-const path=require('node:path');
-const vm=require('node:vm');
-
-async function boot(status,body) {
-  const elements=new Map(),listeners=new Map();
-  function element() {
-    return {hidden:false,disabled:false,textContent:'',value:'',setAttribute(){},after(){},append(){},focus(){this.focused=true;},
-      set innerHTML(html) {this.html=html; for (const match of html.matchAll(/id="([^"]+)"/g)) elements.set(match[1],element());},
-      get innerHTML(){return this.html||'';}};
-  }
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const contract=require('../update-receipt'),crypto=require('node:crypto');
+async function boot({status=503,body={configured:false},saved=null,receipt=null,clipFails=false,storageFails=false}={}){
+  const elements=new Map(),listeners=new Map(),requests=[],events=[],store=new Map();let interval,clipboard='';
+  if(saved)store.set('intelbrief-manual-request-v2',JSON.stringify(saved));
+  function element(){const ev=new Map();return {hidden:false,disabled:false,textContent:'',value:'',open:false,setAttribute(){},after(){},append(){},focus(){this.focused=true;},select(){this.selected=true;},addEventListener(n,f){ev.set(n,f);},showModal(){this.open=true;},close(){this.open=false;ev.get('close')?.();},
+    set innerHTML(html){this.html=html;for(const match of html.matchAll(/id="([^"]+)"/g))elements.set(match[1],element());},get innerHTML(){return this.html||'';}};}
   const sidebar=element(),header=element(),created=[];
-  const document={body:{dataset:{page:'news'}},hidden:false,
-    createElement(){const node=element();created.push(node);return node;},
-    getElementById(id){return elements.get(id);},
-    querySelector(selector){return selector==='.page-header'?header:sidebar;},
-    addEventListener(name,fn){listeners.set(name,fn);},dispatchEvent(){}};
+  const document={body:{dataset:{page:'news'},append(){}},hidden:false,createElement(){const node=element();created.push(node);return node;},getElementById(id){return elements.get(id);},querySelector(s){return s==='.page-header'?header:sidebar;},addEventListener(n,f){listeners.set(n,f);},dispatchEvent(e){events.push(e);}};
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../updates.js'),'utf8'),{
-    document,Intl,AbortSignal,crypto:require('node:crypto').webcrypto,
-    fetch:async()=>new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json'}}),setInterval(){},
+    document,Intl,AbortSignal,IntelUpdateReceipt:contract,crypto:crypto.webcrypto,CustomEvent:class{constructor(name,opts){this.type=name;this.detail=opts.detail;}},confirm:()=>true,
+    localStorage:{getItem:k=>{if(storageFails)throw Error();return store.get(k);},setItem:(k,v)=>{if(storageFails)throw Error();store.set(k,v);},removeItem:k=>store.delete(k)},navigator:{clipboard:{writeText:async t=>{if(clipFails)throw Error();clipboard=t;}}},
+    fetch:async(url,opts)=>{requests.push({url,opts});if(url.startsWith('/api/'))return new Response(JSON.stringify(body),{status});if(url.startsWith('/data/update-receipts/'))return new Response(JSON.stringify(receipt||{}),{status:receipt?200:404});return new Response('{}');},setInterval(fn){interval=fn;}
   });
-  await new Promise(resolve=>setImmediate(resolve));
-  return {elements,created};
+  await new Promise(r=>setImmediate(r));return {elements,created,requests,events,store,interval,clipboard:()=>clipboard};
 }
-
-test('removed history leaves controls and honest disconnected state',async()=>{
-  const {elements,created}=await boot(503,{configured:false,error:'更新服务尚未接通，请完成后台配置'});
-  assert.equal(elements.has('update-toggle'),false);
-  assert.equal(elements.has('update-jobs'),false);
-  assert.equal(elements.has('update-close'),false);
-  assert.equal(created[2].hidden,false);
-  assert.equal(elements.get('update-all').disabled,true);
-  assert.equal(elements.get('update-page').disabled,true);
-  assert.match(elements.get('update-last').textContent,/尚未接通 Grok/);
-  assert.match(elements.get('update-error').textContent,/尚未接通/);
-  assert.equal(elements.get('update-login').hidden,true);
+test('disconnected action explains copy handoff, never pretends it dispatched',async()=>{
+  const ui=await boot();const e=ui.elements;
+  assert.equal(e.has('update-jobs'),false);assert.equal(ui.created[2].hidden,false);
+  assert.equal(e.get('update-page').disabled,false);e.get('update-page').onclick();
+  assert.equal(ui.created[3].open,true);assert.match(e.get('update-explanation').textContent,/不能直接/);
+  await e.get('update-copy').onclick();assert.match(ui.clipboard(),/请求编号/);assert.match(e.get('update-result').textContent,/尚未发送/);
+  assert.equal(ui.requests.filter(r=>r.opts?.method==='POST').length,0);
+  await e.get('update-sent').onclick();assert.match(e.get('update-last').textContent,/等待本次结果/);
+  const before=e.get('update-request-number').textContent;e.get('update-all').onclick();assert.equal(e.get('update-request-number').textContent,before);
 });
-
-test('unconnected history removal preserves login and live progress',async()=>{
-  const loggedOut=await boot(401,{error:'登录后可更新内容'});
-  assert.equal(loggedOut.elements.get('update-page').disabled,false);
-  assert.equal(loggedOut.elements.get('update-login').hidden,false);
-  await loggedOut.elements.get('update-page').onclick();
-  assert.equal(loggedOut.elements.get('update-key').focused,true);
-  const {elements}=await boot(200,{authenticated:true,online:true,jobs:[{id:'test-job',page:'news',attempt:1,status:'running',stage:'collecting',message:'正在执行本次检索'}]});
-  assert.equal(elements.get('update-login').hidden,true);
-  assert.equal(elements.get('update-page').disabled,true);
-  assert.match(elements.get('update-last').textContent,/正在采集/);
-  assert.equal(elements.get('update-connection').textContent,'正在执行本次检索');
+test('clipboard and storage failures keep a manual escape hatch',async()=>{
+  const {elements:e}=await boot({clipFails:true,storageFails:true});e.get('update-page').onclick();await e.get('update-copy').onclick();
+  assert.equal(e.get('update-prompt').hidden,false);assert.equal(e.get('update-prompt').selected,true);assert.match(e.get('update-explanation').textContent,/无法保存/);
+});
+test('old queue online is not Grok capability; new connection preserves login',async()=>{
+  const old=await boot({status:200,body:{authenticated:true,online:true}});old.elements.get('update-page').onclick();assert.equal(old.elements.get('update-confirm').hidden,true);
+  const live=await boot({status:401,body:{delivery:'grok-webhook'}});const e=live.elements;e.get('update-page').onclick();assert.equal(e.get('update-login').hidden,false);await e.get('update-confirm').onclick();assert.equal(e.get('update-key').focused,true);
+});
+test('receipt can close a request and retry only failures; no callback needed',async()=>{
+  const saved={requestId:'request-12345',requestedAt:new Date().toISOString(),pages:['news','people'],delivery:'manual'};
+  const receipt={schemaVersion:2,requestId:saved.requestId,requestedAt:saved.requestedAt,completedAt:saved.requestedAt,results:[{page:'news',status:'failed',message:'采集失败',artifacts:[]},{page:'people',status:'unchanged',message:'真实核验后无新增',artifacts:[{path:'data/people-intelligence.json',sha256:crypto.createHash('sha256').update('{}').digest('hex')}]}]};
+  const ui=await boot({saved,receipt});await new Promise(r=>setTimeout(r,20));const e=ui.elements;
+  assert.match(e.get('update-last').textContent,/结果已核对/);assert.match(e.get('update-connection').textContent,/更新失败/);assert.equal(ui.events.length,1);
+  e.get('update-retry').onclick();assert.match(e.get('update-scope').textContent,/美股讯息/);assert.doesNotMatch(e.get('update-scope').textContent,/具体人物/);
+});
+test('timeout stops automatic polling, does not call it failure or submit again',async()=>{
+  const saved={requestId:'timeout-request',requestedAt:new Date(Date.now()-31*60000).toISOString(),pages:['news'],delivery:'manual'};
+  const ui=await boot({saved});const before=ui.requests.length;ui.interval();await new Promise(r=>setImmediate(r));
+  assert.equal(ui.requests.length,before);assert.match(ui.elements.get('update-connection').textContent,/不代表任务失败/);
+  await ui.elements.get('update-check').onclick();assert.ok(ui.requests.length>before);
 });

@@ -45,6 +45,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 
 - `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：具体人物顶部 Tab、万亿美元公司高层、机构研报合集、AI 三层研究方向及降噪规则的待办与产品规划。
 - `docs/MANUAL_UPDATES.md`：全部更新、单页更新、云端配置、执行端及验收状态的主要维护位置。
+- `update-receipt.js` / `scripts/manual-update-receipt.js`：无平台回调的v2结果凭证与文件摘要核验；网页未直连时提供明确的复制指令交接，不冒充已送达。状态、配置授权与验收边界见MANUAL_UPDATES。
 - `updates.js` / `server/updates.mjs`：页面进度与任务队列代码；`scripts/update-runner.js` 仅保留模拟测试能力，生产入口停用。
 
 - `docs/STOCK_BRIEF.md`：美股每天北京时间 09:00 / 16:00 / 21:00 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。

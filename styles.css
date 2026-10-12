@@ -1283,7 +1283,7 @@ body { overflow-wrap: anywhere; }
 .macro-card .earnings-result a { color: var(--accent-blue); text-decoration: underline; text-underline-offset: 2px; }
 .macro-quarter-tabs [role="tab"] { min-width: 140px; }
 
-/* Reading-first refinement: shared by all eight sections. */
+/* Reading-first refinement: shared by all seven sections. */
 :root {
   --bg: #0b0d12; --bg-elevated: #11151c; --bg-card: #11151c;
   --bg-hover: #181e28; --border: #2b3341; --border-subtle: #222936;
@@ -1365,6 +1365,34 @@ body { overflow-wrap: anywhere; }
 .calendar-empty-day .earnings-day-head { border: 0; padding-bottom: 2px; }
 .calendar-empty { font-size: 13px; color: var(--text-muted); padding: 4px 0 8px; }
 .signal-empty { margin-bottom: 0; }
+/* Section boundaries: separate content groups, not just individual cards. */
+.main > .section, .signal-section { margin-top: 32px; padding-top: 0; border-top: 2px solid #53617a; }
+.section-header, .signal-section-head { padding: 16px 18px; margin: 0 0 18px; background: #192131; border-left: 4px solid var(--accent-blue); border-radius: 0 0 8px 8px; }
+.section-header h2, .signal-section-head h3 { color: var(--text); }
+.signal-section + .signal-section { margin-top: 40px; }
+.earnings-day { border-top: 2px solid #53617a; }
+.earnings-day-head { background: #192131; padding: 12px 16px; gap: 12px; border-bottom: 1px solid #53617a; }
+.earnings-day-head h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.earnings-day-head small { font-size: 12px; font-weight: 400; color: var(--text-secondary); }
+body[data-page="earnings"] .earnings-day-head { position: sticky; top: 0; z-index: 20; box-shadow: 0 4px 12px #0006; }
+.calendar-empty-day .earnings-day-head { padding: 10px 16px; }
+.earnings-card { padding-left: 16px; padding-right: 16px; }
+.update-dialog { width: min(620px, calc(100% - 28px)); max-height: calc(100dvh - 32px); margin: auto; padding: 24px; overflow: auto; color: var(--text); background: var(--bg-elevated); border: 1px solid #53617a; border-radius: 16px; }
+.update-dialog::backdrop { background: #000b; }
+.update-dialog h2 { font-size: 21px; }
+.update-dialog p { margin: 14px 0; line-height: 1.75; }
+.update-humor { border-left: 3px solid var(--accent-blue); padding: 10px 14px; background: #192131; }
+.update-dialog-actions, .update-panel-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.update-dialog .update-button { min-height: 44px; }
+.update-dialog [hidden] { display: none; }
+#update-prompt { width: 100%; min-height: 180px; resize: vertical; padding: 12px; margin: 8px 0 16px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font: inherit; font-size: 13px; }
+#update-result, #update-connection { white-space: pre-wrap; }
+#update-result { color: var(--accent-blue); }
+@media (max-width: 768px) {
+  body[data-page="earnings"] .earnings-day-head { padding-left: 62px; min-height: 60px; }
+  .section-header, .signal-section-head { padding: 14px 12px; }
+  .update-dialog { padding: 20px 16px; }
+}
 @media (max-width: 768px) {
   .main.wide { margin-left: 0; padding: 68px 18px 36px; }
   .page-header { gap: 6px 10px; }
