@@ -112,6 +112,9 @@ test('reading renderer preserves overflow, warns on failed reload, and supports 
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../briefs.js'),'utf8'),{Intl,Date,document:{getElementById:element,addEventListener:(n,f)=>listeners[n]=f},fetch:async url=>({ok:!(failBoard&&url.endsWith('reading-board.json')),json:async()=>url.startsWith('config/')?{targetCounts:{focus:5,insights:10}}:url.endsWith('index.json')?{editions:[entry]}:url.endsWith('reading-board.json')?board:b})});
   const tick=()=>new Promise(r=>setImmediate(r));await tick();
   assert.equal(element('edition-select').value,'reading');assert.match(element('focus-count').textContent,/精选 5 条 · 另保留 2 条/);assert.equal((element('brief-focus').innerHTML.match(/<article/g)||[]).length,7);
+  assert.match(element('reading-context').textContent,/以下均为北京时间/);
+  assert.match(element('reading-context').textContent,/2026\/09\/08 21:30 开盘 → 2026\/09\/09 04:00 收盘/);
+  assert.doesNotMatch(element('reading-context').textContent,/美东交易日/);
   failBoard=true;listeners['intelbrief:updated']({detail:{page:'news'}});await tick();assert.match(element('reading-context').textContent,/刷新失败/);assert.match(element('brief-focus').innerHTML,/未删除/);
   element('edition-select').value=b.id;element('edition-select').listeners.change();await tick();assert.match(element('reading-context').textContent,/历史期次快照/);assert.equal((element('brief-focus').innerHTML.match(/<article/g)||[]).length,1);
 });

@@ -41,7 +41,7 @@
     const board=readingBoard;
     const ctx=board.session||{};
     const ended=ctx.closeAt&&Date.now()>=Date.parse(ctx.closeAt);
-    if($('reading-context'))$('reading-context').textContent=`交易日待阅 · 信息截止 ${time(board.asOf)}（北京时间） · ${ctx.known?'对应美东交易日 '+ctx.date+'，北京时间 '+time(ctx.openAt)+' 开盘':'交易日历待核验'}${ended?' · 该交易时段已结束，等待后续更新；保留上次内容':''}。${(board.warnings||[]).join(' ')}`;
+    if($('reading-context'))$('reading-context').textContent=`交易日待阅 · 以下均为北京时间 · 信息截止 ${time(board.asOf)} · ${ctx.known?time(ctx.openAt)+' 开盘 → '+time(ctx.closeAt)+' 收盘':'交易日历待核验'}${ended?' · 该交易时段已结束，等待后续更新；保留上次内容':''}。${(board.warnings||[]).join(' ')}`;
     for(const group of ['focus','insights']) {
       const all=board.events.filter(e=>e.state==='active'&&e.group===group);
       const ids=new Set((board.selected?.[group]||[]).map(String));
