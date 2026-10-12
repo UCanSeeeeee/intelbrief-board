@@ -1,4 +1,4 @@
-const PAGES = ['news', 'people', 'tickers', 'crypto'];
+const PAGES = ['news', 'people', 'tickers', 'ai', 'crypto'];
 const ACTIVE = ['queued', 'running'];
 const STAGES = ['collecting', 'validating', 'publishing'];
 const COOKIE = '__Host-intelbrief';

@@ -125,6 +125,32 @@ for (const tab of cryptoTabs.values()) {
   if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
 }
 
+
+const aiConfig = readJson(path.join(ROOT, 'config/ai-intelligence.json'));
+const aiData = readJson(path.join(ROOT, 'data/ai-intelligence.json'));
+const aiTabs = new Map((aiConfig.tabs || []).map(tab => [tab.id, tab]));
+if ([...aiTabs.keys()].join() !== 'openai,anthropic,goog-ai,ai-others') fail('ai tabs must be openai,anthropic,goog-ai,ai-others');
+const aiKeys = new Set();
+const aiUrls = new Set();
+for (const [index, item] of (aiData.items || []).entries()) {
+  if (!item.eventKey || aiKeys.has(item.eventKey)) fail(`ai.items[${index}] invalid or duplicate eventKey`);
+  aiKeys.add(item.eventKey);
+  if (!Array.isArray(item.tabIds) || !item.tabIds.length || item.tabIds.some(id => !aiTabs.has(id))) fail(`ai.items[${index}] invalid tabIds`);
+  if (!/^https:\/\/(?:x|twitter)\.com\/[a-zA-Z0-9_]{1,15}\/status\/\d+$/.test(item.url || '') || aiUrls.has(item.url)) fail(`ai.items[${index}] invalid or duplicate X evidence`);
+  aiUrls.add(item.url);
+  if (Number.isNaN(Date.parse(item.publishedAt))) fail(`ai.items[${index}] invalid publishedAt`);
+  if (item.verification !== 'collector-report') fail(`ai.items[${index}] must retain collector-report verification`);
+  for (const [tabId, rank] of Object.entries(item.weeklyRanks || {})) if (!item.tabIds.includes(tabId) || !Number.isInteger(rank) || rank < 1 || rank > 5) fail(`ai.items[${index}] invalid weekly rank`);
+}
+const aiReference = aiData.cutoff ? Date.parse(aiData.cutoff) : Date.now();
+for (const tab of aiTabs.values()) {
+  const tabItems = (aiData.items || []).filter(item => item.tabIds.includes(tab.id));
+  const latestDays = Number(tab.latestWindowDays) || 1;
+  if (tabItems.filter(item => Date.parse(item.publishedAt) >= aiReference - latestDays * 86400000).length > tab.latestLimit) fail(`${tab.label} exceeds latestLimit`);
+  const ranks = tabItems.map(item => item.weeklyRanks?.[tab.id]).filter(rank => rank != null);
+  if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
+}
+
 const guidance = readJson(path.join(ROOT, 'config/research-guidance.json'));
 if (JSON.stringify(guidance.priorityOrder) !== JSON.stringify(['半导体','电力','AI 落地'])) fail('research guidance priority order changed unexpectedly');
 for (const key of ['knowledgeBase','collectionSop']) {
@@ -184,6 +210,7 @@ if (!process.exitCode) {
   console.log(`[validate-data] OK: ${peopleTabs.size} people tabs, ${eventKeys.size} selected events`);
   console.log(`[validate-data] OK: ${tickerTabs.size} ticker tabs, ${tickerKeys.size} selected events`);
   console.log(`[validate-data] OK: ${cryptoTabs.size} crypto tabs, ${cryptoKeys.size} selected events`);
+  console.log(`[validate-data] OK: ${aiTabs.size} ai tabs, ${aiKeys.size} selected events`);
   console.log('[validate-data] OK: project research knowledge and Grok SOP');
   console.log(`[validate-data] OK: earnings calendar ${earnings.weeks?.length||0} weeks, ${earnings.counts?.important||0} important / ${earnings.counts?.raw||0} raw`);
 }

@@ -1,0 +1,21 @@
+# AI板块情报
+
+记录日期：2026-10-12。侧栏「AI板块」位于「具体个股」与「加密」之间，**不并入具体个股列表**。
+
+## 信息来源
+
+与美股/人物/个股/加密相同：Grok Bot App「X+github」→ 失败才用 Grok 网页。禁止 X API / 普网搜讯。
+
+## 顶部 Tab（固定顺序）
+
+1. **OPENAI**：模型/产品/API、合作、安全与监管。窗口：24h≤5，7 天重点榜≤5。
+2. **ANTHROPIC**：Claude 产品与 API、企业部署、安全/云渠道。窗口同 OPENAI。
+3. **GOOG**（AI 产品）：Gemini / DeepMind / Agent / TPU 等产品与组织动作。  
+   **与具体个股 GOOG 边界**：本 Tab 不收纯股价、估值、一般财报数字；那些归 `tickers` 的 GOOG。同一事实若两边相关，产品细节优先本 Tab，财务传导优先个股页，避免整卡重复。
+4. **其他**（合集）：较小 AI 实验室/初创、中国 AI（公司+政策）、美欧中等政府 AI 政策、重要开源模型发布。排除纯加密与股权喊单。窗口：24h≤10，7 天重点榜≤5。
+
+## 配置与数据
+
+- `config/ai-intelligence.json` / `data/ai-intelligence.json`
+- 前台：`ai.html` / `ai.js`
+- 更新任务 page：`ai`

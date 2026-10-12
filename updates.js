@@ -1,9 +1,9 @@
 /* Shared server-backed updates. No credentials or job state in localStorage. */
 (function () {
   const page=document.body.dataset.page;
-  if (!['news','people','tickers','crypto'].includes(page)) return;
-  const names={news:'美股讯息',people:'具体人物',tickers:'具体个股',crypto:'加密'};
-  const pagesAll=['news','people','tickers','crypto'];
+  if (!['news','people','tickers','ai','crypto'].includes(page)) return;
+  const names={news:'美股讯息',people:'具体人物',tickers:'具体个股',ai:'AI板块',crypto:'加密'};
+  const pagesAll=['news','people','tickers','ai','crypto'];
   const labels={queued:'等待执行',collecting:'正在采集',validating:'整理与核验',publishing:'正在发布',complete:'更新完成',partial:'部分完成',unchanged:'已检查，暂无新增',failed:'更新失败'};
   const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const time=value=>value ? new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(value)) : '尚无成功更新';
@@ -83,12 +83,12 @@
     catch(err) { error(err); }
     finally {submitting=false; render();}
   }
-  $('update-all').onclick=()=>submit(['news','people','tickers','crypto']);
+  $('update-all').onclick=()=>submit(['news','people','tickers','ai','crypto']);
   $('update-page').onclick=()=>submit([page]);
   $('update-retry').onclick=async()=> {
     if(submitting) return;
     submitting=true; render();
-    try { snapshot=await api('/retry',{ids:['news','people','tickers','crypto'].map(p=>latest(p)).filter(j=>j?.status==='failed').map(j=>j.id)}); $('update-error').textContent=''; }
+    try { snapshot=await api('/retry',{ids:['news','people','tickers','ai','crypto'].map(p=>latest(p)).filter(j=>j?.status==='failed').map(j=>j.id)}); $('update-error').textContent=''; }
     catch(err){error(err);} finally{submitting=false;render();}
   };
   $('update-login').onsubmit=async event=> {

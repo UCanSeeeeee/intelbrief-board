@@ -143,3 +143,12 @@ test('crypto collector prompt covers board BTC Brew and contract', () => {
   assert.match(prompt,/\$BTC/);
   assert.match(prompt,/0xfa6d9b504848606eb9aec04ccc161d169b3f2159/i);
 });
+
+test('ai collector prompt covers labs and GOOG boundary', () => {
+  const {collectorPrompt}=require('../scripts/lib/update-prompt');
+  const prompt=collectorPrompt({page:'ai',cutoff:'2026-10-11T13:00:00Z'},root,'2026-10-10T13:00:00.000Z',{});
+  assert.match(prompt,/只更新“AI板块”/);
+  assert.match(prompt,/OPENAI/);
+  assert.match(prompt,/ANTHROPIC/);
+  assert.match(prompt,/避免重复/);
+});

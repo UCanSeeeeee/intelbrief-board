@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "researchPriorities": [
+    "模型与产品发布",
+    "API与商业化",
+    "安全与监管",
+    "开源与区域政策"
+  ],
+  "tabs": [
+    {
+      "id": "openai",
+      "label": "OPENAI",
+      "shortLabel": "OPENAI",
+      "type": "org",
+      "identity": "OpenAI",
+      "handles": [
+        "OpenAI"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7,
+      "focus": "模型/产品/API、企业合作、资本与算力需求、安全与监管相关可核验新增事实",
+      "sourceRule": "以 OpenAI、ChatGPT、GPT、Codex、o 系列等为锚点；只收可回查 X 原帖。排除纯股价/喊单与无出处传闻。"
+    },
+    {
+      "id": "anthropic",
+      "label": "ANTHROPIC",
+      "shortLabel": "ANTHROPIC",
+      "type": "org",
+      "identity": "Anthropic",
+      "handles": [
+        "AnthropicAI"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7,
+      "focus": "Claude 产品与 API、企业部署、安全/对齐、云渠道与合作",
+      "sourceRule": "以 Anthropic、Claude 为锚点；只收可回查 X 原帖。排除榜单刷屏与无实质促销。"
+    },
+    {
+      "id": "goog-ai",
+      "label": "GOOG",
+      "shortLabel": "GOOG",
+      "type": "org",
+      "identity": "Google / DeepMind AI products",
+      "handles": [
+        "Google",
+        "GoogleDeepMind"
+      ],
+      "latestLimit": 5,
+      "weeklyLimit": 5,
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7,
+      "focus": "Gemini/DeepMind/Veo/Agent/TPU 等 AI 产品与组织动作；不是 Alphabet 股价或一般财报叙事",
+      "sourceRule": "本 Tab 聚焦 AI 产品与研究组织。股权财报/估值/纯股价讨论归「具体个股」GOOG Tab，避免重复铺同一事件；若同一事实两边都相关，优先 AI 产品细节放本 Tab，财务传导放个股页。"
+    },
+    {
+      "id": "ai-others",
+      "label": "其他",
+      "shortLabel": "其他",
+      "type": "collection",
+      "identity": "其他 AI 实验室、中国 AI、政府 AI 政策与开源模型",
+      "handles": [],
+      "latestLimit": 10,
+      "weeklyLimit": 5,
+      "latestWindowDays": 1,
+      "weeklyWindowDays": 7,
+      "focus": "较小 AI 实验室/初创、中国公司与政策、美欧中等政府 AI 政策、重要开源模型发布",
+      "sourceRule": "合集 Tab。排除纯加密、纯股权喊单、无实质榜单刷屏。中国与政策内容须可回查原帖并标明出处。"
+    }
+  ],
+  "updatedAt": "2026-10-12T11:30:00+08:00",
+  "notes": "侧栏「AI板块」独立于具体个股与加密。顺序：OPENAI → ANTHROPIC → GOOG(AI产品) → 其他。前三 Tab 对齐人物个人窗（24h≤5、7天≤5）；其他为合集（24h≤10、7天≤5）。来源仅 Grok Bot App → Grok 网页。"
+}

@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-12T03:30:00.000Z",
+  "cutoff": "2026-10-12T11:30:00+08:00",
+  "source": "X only",
+  "status": "complete",
+  "collectionPath": "grok-app",
+  "coverage": {
+    "tabs": [
+      {
+        "id": "openai",
+        "status": "complete",
+        "note": "检索 OpenAI/ChatGPT/API；入选文本水印与 Ultrafast 转述。排除全球 GPT-6 刷屏式无出处日报。"
+      },
+      {
+        "id": "anthropic",
+        "status": "complete",
+        "note": "检索 Anthropic/Claude；入选印度 Bedrock in-country 与 Cyber Verification 扩展。排除折扣聚合广告。"
+      },
+      {
+        "id": "goog-ai",
+        "status": "complete",
+        "note": "检索 Gemini/DeepMind 产品；入选 SynthID Detector 与亚洲 Futures Fund。排除未证实 Gemini 4 代号传闻与股价帖。"
+      },
+      {
+        "id": "ai-others",
+        "status": "complete",
+        "note": "检索 Mistral/开源/中美欧政策；入选 Large 4 预览与区域简报。排除纯榜单与加密促销。"
+      }
+    ]
+  },
+  "items": [
+    {
+      "eventKey": "openai-text-watermarking-api-2026-10-05",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "转述：OpenAI 启动文本水印（API 可选）",
+      "fact": "@MisterSnowCrash 的 AI DAILY 称 OpenAI 开始文本水印：API 在部分模型上全球可选；符合条件的欧盟 ChatGPT/Codex 输出将在随后数周跟进。",
+      "whyItMatters": "水印影响内容溯源、合规与平台滥用治理，也可能改变 API 客户集成成本。",
+      "counterCase": "二手日报；覆盖模型名单与欧盟落地节奏需对照 OpenAI 官方。",
+      "affected": [
+        "OpenAI",
+        "ChatGPT/API 合规"
+      ],
+      "author": "MisterSnowCrash",
+      "publishedAt": "2026-10-06T04:28:24.000Z",
+      "url": "https://x.com/MisterSnowCrash/status/2107327085945471184",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "openai": 1
+      }
+    },
+    {
+      "eventKey": "openai-ultrafast-gpt61-sol-2026-10-08",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "转述：GPT-6.1 Sol Ultrafast 模式在 API/Codex/Work 推出",
+      "fact": "@Chaosai0 称 OpenAI Developers 宣布 Ultrafast 面向 GPT-6.1 Sol 在 API、Codex 与 ChatGPT Work 推出，描述为接近 Astra 的低延迟档。",
+      "whyItMatters": "推理延迟档位影响 agent/编码工作负载定价与用量结构。",
+      "counterCase": "二手转述且型号命名待官方核验；价格倍数说法不一。",
+      "affected": [
+        "OpenAI API",
+        "Codex"
+      ],
+      "author": "Chaosai0",
+      "publishedAt": "2026-10-09T15:24:08.000Z",
+      "url": "https://x.com/Chaosai0/status/2108579272310808713",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "openai": 2
+      }
+    },
+    {
+      "eventKey": "anthropic-claude-india-bedrock-2026-10-05",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "转述：Claude 经 Bedrock 在印度提供 in-country 推理",
+      "fact": "@YashChaudharyAI 称 Anthropic 于 10 月 5 日正式宣布，经 Amazon Bedrock 在印度提供 in-country inference；涉及 Claude Opus 5 / Sonnet 5 等印度配置（AWS 此前 9 月 29 日已公布印度端点）。",
+      "whyItMatters": "数据驻留与区域推理影响企业采购与合规市场扩张。",
+      "counterCase": "需对照 Anthropic/AWS 官方区域列表与型号命名。",
+      "affected": [
+        "Anthropic",
+        "AWS Bedrock",
+        "印度企业AI"
+      ],
+      "author": "YashChaudharyAI",
+      "publishedAt": "2026-10-05T08:54:55.000Z",
+      "url": "https://x.com/YashChaudharyAI/status/2107031768897597520",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 1
+      }
+    },
+    {
+      "eventKey": "anthropic-cyber-verification-glasswing-2026-10-06",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "转述：Anthropic 扩展 Cyber Verification，整合 Project Glasswing",
+      "fact": "@NGLSHMUELI 称 Anthropic 扩展 Cyber Verification Program，将 Project Glasswing 纳入统一三档安全团队方案，并写明各档含 Claude Opus/Sonnet/Mythos 等型号。",
+      "whyItMatters": "安全研究通道与模型分层供给影响红队生态与企业安全采购。",
+      "counterCase": "二手摘要；档位与型号以官方申请页为准。",
+      "affected": [
+        "Anthropic",
+        "安全研究"
+      ],
+      "author": "NGLSHMUELI",
+      "publishedAt": "2026-10-06T19:03:52.000Z",
+      "url": "https://x.com/NGLSHMUELI/status/2107547404451172356",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 2
+      }
+    },
+    {
+      "eventKey": "goog-ai-synthid-detector-open-2026-10-07",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "转述：Google 向公众开放 SynthID Detector",
+      "fact": "@ilushahelp 称 Google 开放 SynthID Detector：可上传图像/视频/音频检测是否由 AI 生成，并称覆盖 Google AI 及部分合作方水印，提到日验证请求量级。",
+      "whyItMatters": "内容真实性工具是平台与监管叙事的关键基础设施，归属 AI 产品而非股价。",
+      "counterCase": "互动数据与合作方名单需官方核实；检测率边界未在帖中给出。",
+      "affected": [
+        "Google DeepMind",
+        "AI 内容溯源"
+      ],
+      "author": "ilushahelp",
+      "publishedAt": "2026-10-07T14:23:04.000Z",
+      "url": "https://x.com/ilushahelp/status/2107839127294984587",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "goog-ai": 1
+      }
+    },
+    {
+      "eventKey": "goog-ai-granite-asia-futures-fund-2026-10-07",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "转述：Google AI Futures Fund 与 Granite Asia 联合投资亚洲 AI 初创",
+      "fact": "@tchsignal 称 Granite Asia 与 Google AI Futures Fund 启动共投计划，单家初创合计最高约 200 万美元，并强调资本以外的支持。",
+      "whyItMatters": "生态投资影响区域 AI 创业供给与 Google 云/模型渗透，属组织动作而非个股财报。",
+      "counterCase": "金额与选拔标准需官方稿核实。",
+      "affected": [
+        "Google",
+        "亚洲 AI 初创"
+      ],
+      "author": "tchsignal",
+      "publishedAt": "2026-10-07T09:22:29.000Z",
+      "url": "https://x.com/tchsignal/status/2107763482456433026",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "goog-ai": 2
+      }
+    },
+    {
+      "eventKey": "ai-others-mistral-large-4-preview-2026-10-06",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "转述：Mistral 预览 Large 4，计划开放权重",
+      "fact": "@MisterSnowCrash 称 Mistral 预览 Large 4：万亿参数级多模态进入公开 API 预览，并计划 10 月底前提供可下载权重。",
+      "whyItMatters": "欧洲开源/半开源前沿模型进展影响开源竞争与企业替代路径。",
+      "counterCase": "参数与时间表为二手日报，需对照 Mistral 官方。",
+      "affected": [
+        "Mistral",
+        "开源模型"
+      ],
+      "author": "MisterSnowCrash",
+      "publishedAt": "2026-10-06T20:59:05.000Z",
+      "url": "https://x.com/MisterSnowCrash/status/2107576402945962397",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "ai-others": 1
+      }
+    },
+    {
+      "eventKey": "ai-others-us-eu-cn-brief-beam-deepseek-2026-10-06",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "转述：美欧中 AI 简报提及 Reflection Beam 与 DeepSeek 融资",
+      "fact": "@El_Mundi_X 的 10 月 6 日简报称 Reflection AI 发布面向 DeepSeek/Qwen 的开源约 501B 模型 Beam；并提到 DeepSeek 接近约 120 亿美元量级融资传闻，以及 OpenAI 在欧盟 AI Act 下对 ChatGPT 文本水印等条目。",
+      "whyItMatters": "开源竞争与中国实验室融资/政策交叉，属于「其他」合集范围。",
+      "counterCase": "多条打包简报，融资数字与模型规格需逐条核验，不得当已证实事实。",
+      "affected": [
+        "开源模型",
+        "DeepSeek",
+        "AI 政策"
+      ],
+      "author": "El_Mundi_X",
+      "publishedAt": "2026-10-06T14:55:36.000Z",
+      "url": "https://x.com/El_Mundi_X/status/2107484928002736469",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "ai-others": 2
+      }
+    }
+  ]
+}

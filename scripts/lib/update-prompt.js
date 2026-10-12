@@ -35,6 +35,14 @@ function collectorPrompt(job,root,start,previous,window={}) {
     return common+guidance+`\n只更新“加密”页面（与美股「具体个股」完全分开），顶部Tab配置：${JSON.stringify(cryptoConfig)}。当前入选事件：${JSON.stringify(current.items||[])}。Tab顺序固定：加密板块讯息（合集）→ BTC → Brew。板块讯息 latest 滚动约24小时最多10条、重点榜7天最多5条；BTC 对齐人物个人Tab（24h≤5、7天≤5）；Brew 最新区与重点榜均为滚动7天各最多5条（配置 latestWindowDays=7）。必须用Grok在X检索。BTC 用 $BTC/Bitcoin；Brew 用 Brew/$BREW 及合约地址检索，不得编造链上数据；板块讯息收监管/ETF/资金流/基础设施等板块级事实。不足可为0，禁止凑数。\n每个Tab报告 complete/partial/failed。同一事件一个item；verification=collector-report；只允许真实X status链接。\n仅返回：{"collectionPath":"grok-app或grok-web","checkedAt":"ISO含时区","tabs":[{"id":"配置Tab id","status":"complete或partial或failed","note":"查询与缺口"}],"items":[{"eventKey":"键","tabIds":["id"],"title":"标题","fact":"事实","whyItMatters":"传导","counterCase":"反向","affected":["标的"],"author":"作者","publishedAt":"ISO","url":"https://x.com/账号/status/数字","verification":"collector-report","tier":"must-read或watch","weeklyRanks":{"id":1}}]}。失败不能写成暂无新增。`;
   }
 
+
+  if(job.page==='ai') {
+    const aiConfig=JSON.parse(fs.readFileSync(path.join(root,'config/ai-intelligence.json'),'utf8'));
+    const currentPath=path.join(root,'data/ai-intelligence.json');
+    const current=fs.existsSync(currentPath)?JSON.parse(fs.readFileSync(currentPath,'utf8')):{items:[]};
+    return common+guidance+`\n只更新“AI板块”页面（独立于具体个股与加密），顶部Tab配置：${JSON.stringify(aiConfig)}。当前入选事件：${JSON.stringify(current.items||[])}。顺序：OPENAI→ANTHROPIC→GOOG(AI产品)→其他。OPENAI/ANTHROPIC/GOOG 对齐个人窗（24h≤5、7天≤5）；其他为合集（24h≤10、7天≤5）。GOOG Tab 只收 Gemini/DeepMind 等 AI 产品与组织事实，Alphabet 财报/股价归 tickers 的 GOOG，避免重复。其他含较小实验室、中国AI、政府政策、开源模型；排除纯加密与股权喊单。必须用Grok在X检索；不足可为0。\n每个Tab报告 complete/partial/failed。verification=collector-report；真实X status链接。\n仅返回：{"collectionPath":"grok-app或grok-web","checkedAt":"ISO含时区","tabs":[{"id":"配置Tab id","status":"complete或partial或failed","note":"查询与缺口"}],"items":[{"eventKey":"键","tabIds":["id"],"title":"标题","fact":"事实","whyItMatters":"传导","counterCase":"反向","affected":["对象"],"author":"作者","publishedAt":"ISO","url":"https://x.com/账号/status/数字","verification":"collector-report","tier":"must-read或watch","weeklyRanks":{"id":1}}]}。失败不能写成暂无新增。`;
+  }
+
   throw new Error('未知更新页面：'+job.page);
 }
 module.exports={collectorPrompt,projectGuidance};

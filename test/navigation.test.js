@@ -5,11 +5,11 @@ const path = require('node:path');
 
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 
-test('primary pages expose news, people, tickers, crypto, and earnings tabs', () => {
-  for (const file of ['index.html', 'people.html', 'tickers.html', 'crypto.html', 'earnings.html']) {
+test('primary pages expose news, people, tickers, ai, crypto, and earnings tabs', () => {
+  for (const file of ['index.html', 'people.html', 'tickers.html', 'ai.html', 'crypto.html', 'earnings.html']) {
     const html = read(file);
     const items = [...html.matchAll(/<a href="([^"]+)" data-nav="([^"]+)"/g)].map(match => match.slice(1));
-    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['crypto.html', 'crypto'], ['earnings.html', 'earnings']]);
+    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['ai.html', 'ai'], ['crypto.html', 'crypto'], ['earnings.html', 'earnings']]);
     assert.doesNotMatch(html, /X 情报总览|来源与评分|data-stock-tab/);
   }
   assert.doesNotMatch(read('index.html'), /role="tab"/);
@@ -70,4 +70,17 @@ test('crypto page has board, BTC, Brew tabs with Brew contract', () => {
   assert.equal(config.tabs.find(tab => tab.id === 'btc').assetClass, 'crypto');
   assert.match(read('crypto.html'), /data-page="crypto"/);
   assert.match(read('crypto.js'), /crypto-intelligence\.json/);
+});
+
+test('ai page has OPENAI ANTHROPIC GOOG and 其他 tabs', () => {
+  const config = JSON.parse(read('config/ai-intelligence.json'));
+  assert.deepEqual(config.tabs.map(tab => tab.id), ['openai', 'anthropic', 'goog-ai', 'ai-others']);
+  assert.equal(config.tabs.find(t => t.id === 'ai-others').latestLimit, 10);
+  assert.ok(['openai', 'anthropic', 'goog-ai'].every(id => {
+    const t = config.tabs.find(x => x.id === id);
+    return t.latestLimit === 5 && t.latestWindowDays === 1 && t.weeklyWindowDays === 7;
+  }));
+  assert.match(read('ai.html'), /data-page="ai"/);
+  assert.match(read('ai.js'), /ai-intelligence\.json/);
+  assert.match(read('docs/AI_INTELLIGENCE.md'), /与具体个股 GOOG 边界/);
 });
