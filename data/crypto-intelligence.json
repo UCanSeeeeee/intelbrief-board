@@ -1,30 +1,54 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T01:55:00.000Z",
-  "cutoff": "2026-10-13T09:00:00+08:00",
+  "updatedAt": "2026-10-13T08:12:58.065Z",
+  "cutoff": "2026-10-13T16:00:00+08:00",
   "source": "X only",
   "status": "partial",
-  "collectionPath": "grok-bot-x-search",
   "coverage": {
     "tabs": [
       {
         "id": "crypto-board",
-        "status": "partial",
-        "note": "2026-10-13-0900：入库上周现货 ETF 净流出汇总。"
+        "status": "complete",
+        "note": "近7日 6 条"
       },
       {
         "id": "btc",
-        "status": "partial",
-        "note": "同源 ETF 流出；无新的链上协议重大事实。"
+        "status": "complete",
+        "note": "近7日 5 条"
       },
       {
         "id": "brew",
-        "status": "no-result",
-        "note": "窗口内无 Brew 合约可核验新事实。"
+        "status": "partial",
+        "note": "同窗无可核验协议/上市新增事实，不编造链上数据。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "btc-eth-etf-outflow-continue-2026-10-13",
+      "tabIds": [
+        "crypto-board",
+        "btc"
+      ],
+      "title": "转述：BTC/ETH 现货 ETF 继续净流出",
+      "fact": "转述称现货 BTC ETF 净流出约 6600 万美元、ETH 约 8600 万美元，合计约 1.52 亿美元。",
+      "whyItMatters": "流出延续削弱短期风险偏好与流动性叙事。",
+      "counterCase": "单日/转述口径错误或次日转流入。",
+      "affected": [
+        "BTC",
+        "ETH"
+      ],
+      "author": "metaverse_promt",
+      "publishedAt": "2026-10-13T07:03:33.000Z",
+      "url": "https://x.com/metaverse_promt/status/2109902849144467481",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "crypto-board": 4,
+        "btc": 4
+      },
+      "people": []
+    },
     {
       "eventKey": "us-spot-crypto-etf-outflows-week-2026-10-12",
       "tabIds": [
@@ -32,8 +56,8 @@
         "btc"
       ],
       "title": "美国现货加密 ETF 上周约 12.5 亿美元净流出",
-      "fact": "CryptoPatel 等汇总：10/5–10/9 美国现货加密 ETF 录得约 12.5 亿美元净流出，黑石/富达等产品在 BTC/ETH 上呈净卖出；具体分项以帖内表格为准，口径可能与其他汇总差数十亿美元。",
-      "whyItMatters": "ETF 资金流是机构风险偏好的可观察代理，流出与高利率/风险资产承压同向。",
+      "fact": "@CryptoPatel 等汇总：10/5–10/9 美国现货加密 ETF 录得约 12.5 亿美元净流出；口径可能与其他汇总有差异。",
+      "whyItMatters": "ETF 资金流是机构风险偏好的可观察代理。",
       "counterCase": "若随后数日转为持续流入，则属周度噪声。",
       "affected": [
         "BTC",
@@ -48,30 +72,6 @@
       "weeklyRanks": {
         "crypto-board": 1,
         "btc": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "btc-etf-cooling-after-sept-inflows-2026-10-12",
-      "tabIds": [
-        "btc"
-      ],
-      "title": "转述：9 月大额流入后 BTC/ETH ETF 转为净流出",
-      "fact": "转述称 9 月比特币 ETF 约 30 亿美元流入后机构降温：ETH ETF 连续约 9 日流出（7 日约 6.35 亿美元），BTC ETF 同期流出约 5.58 亿美元，稳定币供给仍约 3127 亿美元。",
-      "whyItMatters": "ETF 边际资金方向影响 BTC 价格发现；流出是否持续需对照官方每日数据。",
-      "counterCase": "单一汇总帖可能口径不一；若后续重新流入则“降温”叙事失效。",
-      "affected": [
-        "BTC",
-        "ETH",
-        "现货加密 ETF"
-      ],
-      "author": "AskClash",
-      "publishedAt": "2026-10-12T03:45:00.000Z",
-      "url": "https://x.com/AskClash/status/2109490491578630419",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "btc": 2
       },
       "people": []
     },
@@ -93,29 +93,8 @@
       "url": "https://x.com/ANCrypto_/status/2109650853594558807",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "crypto-board-kraken-uae-approval-2026-10-12",
-      "tabIds": [
-        "crypto-board"
-      ],
-      "title": "Kraken 获阿联酋完整监管批准",
-      "fact": "@FirstSquawk 称加密交易所 Kraken 在获得完整监管批准后将在阿联酋开展业务。",
-      "whyItMatters": "中东合规通道扩张，增加机构与区域资金入场渠道。",
-      "counterCase": "批准机构与牌照类型未在帖中注明。",
-      "affected": [
-        "Kraken",
-        "中东合规市场"
-      ],
-      "author": "FirstSquawk",
-      "publishedAt": "2026-10-12T10:50:35.000Z",
-      "url": "https://x.com/FirstSquawk/status/2109597592749564062",
-      "verification": "collector-report",
-      "tier": "watch",
       "weeklyRanks": {
-        "crypto-board": 3
+        "crypto-board": 5
       },
       "people": []
     },
@@ -143,6 +122,51 @@
       "people": []
     },
     {
+      "eventKey": "crypto-board-kraken-uae-approval-2026-10-12",
+      "tabIds": [
+        "crypto-board"
+      ],
+      "title": "Kraken 获阿联酋完整监管批准",
+      "fact": "@FirstSquawk 称加密交易所 Kraken 在获得完整监管批准后将在阿联酋开展业务。",
+      "whyItMatters": "中东合规通道扩张，增加机构与区域资金入场渠道。",
+      "counterCase": "批准机构与牌照类型未在帖中注明。",
+      "affected": [
+        "Kraken",
+        "中东合规市场"
+      ],
+      "author": "FirstSquawk",
+      "publishedAt": "2026-10-12T10:50:35.000Z",
+      "url": "https://x.com/FirstSquawk/status/2109597592749564062",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "btc-etf-cooling-after-sept-inflows-2026-10-12",
+      "tabIds": [
+        "btc"
+      ],
+      "title": "转述：9 月大额流入后 BTC/ETH ETF 转为净流出",
+      "fact": "转述称 9 月比特币 ETF 约 30 亿美元流入后机构降温：ETH ETF 连续约 9 日流出（7 日约 6.35 亿美元），BTC ETF 同期流出约 5.58 亿美元，稳定币供给仍约 3127 亿美元。",
+      "whyItMatters": "ETF 边际资金方向影响 BTC 价格发现；流出是否持续需对照官方每日数据。",
+      "counterCase": "单一汇总帖可能口径不一；若后续重新流入则“降温”叙事失效。",
+      "affected": [
+        "BTC",
+        "ETH",
+        "现货加密 ETF"
+      ],
+      "author": "AskClash",
+      "publishedAt": "2026-10-12T03:45:00.000Z",
+      "url": "https://x.com/AskClash/status/2109490491578630419",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "btc": 5
+      },
+      "people": []
+    },
+    {
       "eventKey": "crypto-board-thailand-spot-etf-rules-2026-10-09",
       "tabIds": [
         "crypto-board"
@@ -161,53 +185,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "crypto-board": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "crypto-board-sec-3x-btc-eth-etp-2026-10-05",
-      "tabIds": [
-        "crypto-board"
-      ],
-      "title": "转述：SEC 批准 Cboe 上市 3 倍比特币/以太 ETP",
-      "fact": "@tding35x 称 SEC 批准 Cboe 上市 3× Bitcoin 与 3× Ether ETP，强调从争夺现货 ETF 到批准杠杆敞口不足三年。",
-      "whyItMatters": "杠杆 ETP 改变零售/机构风险产品供给与监管边界讨论。",
-      "counterCase": "需对照 SEC/Cboe 官方批准文本；产品上市时点未知。",
-      "affected": [
-        "加密 ETP",
-        "杠杆风险产品"
-      ],
-      "author": "tding35x",
-      "publishedAt": "2026-10-05T23:54:47.000Z",
-      "url": "https://x.com/tding35x/status/2107258229751218258",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "crypto-board": 5
-      },
-      "people": []
-    },
-    {
-      "eventKey": "btc-etf-net-flow-2026-10-06",
-      "tabIds": [
-        "btc"
-      ],
-      "title": "10/6 比特币 ETF 单日净流入约 1.188 亿美元",
-      "fact": "@thepfund 称 10/6 Bitcoin ETF 总净流入约 +$118.80m（月至今约 +$321.4m，2026 YTD 约 +$1.25B），其中 $IBIT 约 +$122.00m。",
-      "whyItMatters": "ETF 资金流是 BTC 机构需求的可观测代理。",
-      "counterCase": "单日流入可迅速反转；需对照发行商官方流量。",
-      "affected": [
-        "BTC",
-        "比特币现货 ETF"
-      ],
-      "author": "thepfund",
-      "publishedAt": "2026-10-07T04:21:50.000Z",
-      "url": "https://x.com/thepfund/status/2107687824615182810",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "btc": 5
+        "crypto-board": 3
       },
       "people": []
     },
@@ -230,32 +208,33 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "btc": 4
+        "btc": 2
       },
       "people": []
     },
     {
-      "eventKey": "btc-etf-week-outflow-679m-2026-10-05-09",
+      "eventKey": "btc-etf-net-flow-2026-10-06",
       "tabIds": [
         "btc"
       ],
-      "title": "转述：10/5–10/9 现货比特币 ETF 周净流出约 6.8 亿美元",
-      "fact": "@MakroDives 汇总称当周美现货比特币 ETF 净流出约 −$678.9M，并给出逐日与 FBTC/ARKB 等赎回量级。",
-      "whyItMatters": "周度资金流刻画机构再定价节奏，补充单日噪声。",
-      "counterCase": "周度拼表依赖第三方；累计 AUM 口径可能不一致。",
+      "title": "10/6 比特币 ETF 单日净流入约 1.188 亿美元",
+      "fact": "@thepfund 称 10/6 Bitcoin ETF 总净流入约 +$118.80m（月至今约 +$321.4m，2026 YTD 约 +$1.25B），其中 $IBIT 约 +$122.00m。",
+      "whyItMatters": "ETF 资金流是 BTC 机构需求的可观测代理。",
+      "counterCase": "单日流入可迅速反转；需对照发行商官方流量。",
       "affected": [
         "BTC",
-        "现货比特币 ETF"
+        "比特币现货 ETF"
       ],
-      "author": "MakroDives",
-      "publishedAt": "2026-10-10T07:37:39.000Z",
-      "url": "https://x.com/MakroDives/status/2108824263847231566",
+      "author": "thepfund",
+      "publishedAt": "2026-10-07T04:21:50.000Z",
+      "url": "https://x.com/thepfund/status/2107687824615182810",
       "verification": "collector-report",
-      "tier": "watch",
+      "tier": "must-read",
       "weeklyRanks": {
         "btc": 3
       },
       "people": []
     }
-  ]
+  ],
+  "collectionPath": "grok-bot-x-search"
 }

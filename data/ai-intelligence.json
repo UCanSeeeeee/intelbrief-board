@@ -1,35 +1,57 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T01:55:00.000Z",
-  "cutoff": "2026-10-13T09:00:00+08:00",
+  "updatedAt": "2026-10-13T08:12:58.065Z",
+  "cutoff": "2026-10-13T16:00:00+08:00",
   "source": "X only",
   "status": "partial",
-  "collectionPath": "grok-bot-x-search",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "insufficient",
-        "note": "ARR 口径争议无新原厂披露。"
+        "status": "partial",
+        "note": "@OpenAI 同窗 0 原帖；保留周榜旧条"
       },
       {
         "id": "anthropic",
-        "status": "insufficient",
-        "note": "IREN 合同为泄露链，双方未确认。"
+        "status": "complete",
+        "note": "近窗 1 条"
       },
       {
-        "id": "goog",
-        "status": "no-result",
-        "note": "无 GOOG AI 产品达标新帖。"
+        "id": "goog-ai",
+        "status": "complete",
+        "note": "近窗 1 条"
       },
       {
         "id": "ai-others",
-        "status": "partial",
-        "note": "入库开放 AI 工厂规范转述。"
+        "status": "complete",
+        "note": "近窗 4 条"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "anthropic-distillation-defense-2026-10-12",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic：削弱针对 Claude 的蒸馏攻击",
+      "fact": "@AnthropicAI 称近几个月在降低蒸馏攻击有效性方面取得显著进展并发布说明。",
+      "whyItMatters": "影响模型护城河与 API 经济性。",
+      "counterCase": "技术细节未在帖内展开，或可被绕过。",
+      "affected": [
+        "Anthropic",
+        "模型 API"
+      ],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-12T23:58:35.000Z",
+      "url": "https://x.com/AnthropicAI/status/2109795898909950247",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 1
+      },
+      "people": []
+    },
     {
       "eventKey": "nvda-ocp-open-ai-factory-spec-2026-10-12",
       "tabIds": [
@@ -51,9 +73,38 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 1
+        "ai-others": 3
       },
       "people": []
+    },
+    {
+      "eventKey": "meta-muse-wonder-ai-others-2026-10-12",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "Meta 发布 Muse Wonder frontier 模型族",
+      "fact": "Mark Zuckerberg / @Meta 宣布 Muse Wonder 与 Muse Wonder Full，定位 frontier agent 模型，经 API/Muse Code 分发。",
+      "whyItMatters": "改变 AI 实验室竞争格局与企业 agent 采购选项。",
+      "counterCase": "基准不可复现或分发受限则影响有限。",
+      "affected": [
+        "META",
+        "OpenAI",
+        "Anthropic"
+      ],
+      "author": "finkd",
+      "publishedAt": "2026-10-12T16:55:01.000Z",
+      "url": "https://x.com/finkd/status/2109689305073614918",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "ai-others": 1
+      },
+      "people": [
+        {
+          "name": "Mark Zuckerberg",
+          "intro": "Meta创始人兼CEO"
+        }
+      ]
     },
     {
       "eventKey": "ai-others-msft-maia-300-primary-inference-2026-10-12",
@@ -85,27 +136,6 @@
       ]
     },
     {
-      "eventKey": "ai-others-moonshot-ipo-shareholder-dispute-2026-10-11",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "路透：月之暗面高管洽谈和解股东纠纷，为 IPO 铺路",
-      "fact": "@Reuters 独家报道，月之暗面（Moonshot）高管正与一名股东洽谈和解纠纷，以推进计划中的 IPO。",
-      "whyItMatters": "中国头部模型公司上市进程影响中国 AI 估值锚与融资环境。",
-      "counterCase": "谈判结果未定；IPO 时间与地点未披露。",
-      "affected": [
-        "Moonshot AI",
-        "中国 AI 融资"
-      ],
-      "author": "Reuters",
-      "publishedAt": "2026-10-11T23:10:04.000Z",
-      "url": "https://x.com/Reuters/status/2109421302096228528",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
       "eventKey": "ai-others-whitehouse-aisi-access-reversal-2026-10-12",
       "tabIds": [
         "ai-others"
@@ -123,7 +153,9 @@
       "url": "https://x.com/exfilnews/status/2109569830261006513",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
+      "weeklyRanks": {
+        "ai-others": 4
+      },
       "people": []
     },
     {
@@ -144,7 +176,9 @@
       "url": "https://x.com/duc_daily/status/2109561832797020445",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
+      "weeklyRanks": {
+        "goog-ai": 1
+      },
       "people": []
     },
     {
@@ -165,7 +199,9 @@
       "url": "https://x.com/sarphanuzunoglu/status/2109376930508337451",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
+      "weeklyRanks": {
+        "anthropic": 2
+      },
       "people": []
     },
     {
@@ -186,29 +222,8 @@
       "url": "https://x.com/Adweek/status/2109343320346370502",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "openai-text-watermarking-api-2026-10-05",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "转述：OpenAI 启动文本水印（API 可选）",
-      "fact": "@MisterSnowCrash 的 AI DAILY 称 OpenAI 开始文本水印：API 在部分模型上全球可选；符合条件的欧盟 ChatGPT/Codex 输出将在随后数周跟进。",
-      "whyItMatters": "水印影响内容溯源、合规与平台滥用治理，也可能改变 API 客户集成成本。",
-      "counterCase": "二手日报；覆盖模型名单与欧盟落地节奏需对照 OpenAI 官方。",
-      "affected": [
-        "OpenAI",
-        "ChatGPT/API 合规"
-      ],
-      "author": "MisterSnowCrash",
-      "publishedAt": "2026-10-06T04:28:24.000Z",
-      "url": "https://x.com/MisterSnowCrash/status/2107327085945471184",
-      "verification": "collector-report",
-      "tier": "must-read",
       "weeklyRanks": {
-        "openai": 2
+        "openai": 1
       },
       "people": []
     },
@@ -231,54 +246,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-claude-india-bedrock-2026-10-05",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "转述：Claude 经 Bedrock 在印度提供 in-country 推理",
-      "fact": "@YashChaudharyAI 称 Anthropic 于 10 月 5 日正式宣布，经 Amazon Bedrock 在印度提供 in-country inference；涉及 Claude Opus 5 / Sonnet 5 等印度配置（AWS 此前 9 月 29 日已公布印度端点）。",
-      "whyItMatters": "数据驻留与区域推理影响企业采购与合规市场扩张。",
-      "counterCase": "需对照 Anthropic/AWS 官方区域列表与型号命名。",
-      "affected": [
-        "Anthropic",
-        "AWS Bedrock",
-        "印度企业AI"
-      ],
-      "author": "YashChaudharyAI",
-      "publishedAt": "2026-10-05T08:54:55.000Z",
-      "url": "https://x.com/YashChaudharyAI/status/2107031768897597520",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-cyber-verification-glasswing-2026-10-06",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "转述：Anthropic 扩展 Cyber Verification，整合 Project Glasswing",
-      "fact": "@NGLSHMUELI 称 Anthropic 扩展 Cyber Verification Program，将 Project Glasswing 纳入统一三档安全团队方案，并写明各档含 Claude Opus/Sonnet/Mythos 等型号。",
-      "whyItMatters": "安全研究通道与模型分层供给影响红队生态与企业安全采购。",
-      "counterCase": "二手摘要；档位与型号以官方申请页为准。",
-      "affected": [
-        "Anthropic",
-        "安全研究"
-      ],
-      "author": "NGLSHMUELI",
-      "publishedAt": "2026-10-06T19:03:52.000Z",
-      "url": "https://x.com/NGLSHMUELI/status/2107547404451172356",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 1
+        "openai": 2
       },
       "people": []
     },
@@ -301,7 +269,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "goog-ai": 1
+        "goog-ai": 2
       },
       "people": []
     },
@@ -324,7 +292,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog-ai": 2
+        "goog-ai": 3
       },
       "people": []
     },
@@ -347,33 +315,33 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "ai-others": 3
+        "ai-others": 5
       },
       "people": []
     },
     {
-      "eventKey": "ai-others-us-eu-cn-brief-beam-deepseek-2026-10-06",
+      "eventKey": "anthropic-cyber-verification-glasswing-2026-10-06",
       "tabIds": [
-        "ai-others"
+        "anthropic"
       ],
-      "title": "转述：美欧中 AI 简报提及 Reflection Beam 与 DeepSeek 融资",
-      "fact": "@El_Mundi_X 的 10 月 6 日简报称 Reflection AI 发布面向 DeepSeek/Qwen 的开源约 501B 模型 Beam；并提到 DeepSeek 接近约 120 亿美元量级融资传闻，以及 OpenAI 在欧盟 AI Act 下对 ChatGPT 文本水印等条目。",
-      "whyItMatters": "开源竞争与中国实验室融资/政策交叉，属于「其他」合集范围。",
-      "counterCase": "多条打包简报，融资数字与模型规格需逐条核验，不得当已证实事实。",
+      "title": "转述：Anthropic 扩展 Cyber Verification，整合 Project Glasswing",
+      "fact": "@NGLSHMUELI 称 Anthropic 扩展 Cyber Verification Program，将 Project Glasswing 纳入统一三档安全团队方案，并写明各档含 Claude Opus/Sonnet/Mythos 等型号。",
+      "whyItMatters": "安全研究通道与模型分层供给影响红队生态与企业安全采购。",
+      "counterCase": "二手摘要；档位与型号以官方申请页为准。",
       "affected": [
-        "开源模型",
-        "DeepSeek",
-        "AI 政策"
+        "Anthropic",
+        "安全研究"
       ],
-      "author": "El_Mundi_X",
-      "publishedAt": "2026-10-06T14:55:36.000Z",
-      "url": "https://x.com/El_Mundi_X/status/2107484928002736469",
+      "author": "NGLSHMUELI",
+      "publishedAt": "2026-10-06T19:03:52.000Z",
+      "url": "https://x.com/NGLSHMUELI/status/2107547404451172356",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 4
+        "anthropic": 3
       },
       "people": []
     }
-  ]
+  ],
+  "collectionPath": "grok-bot-x-search"
 }

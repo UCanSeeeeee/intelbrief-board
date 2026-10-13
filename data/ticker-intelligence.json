@@ -1,73 +1,49 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T01:55:00.000Z",
-  "cutoff": "2026-10-13T09:00:00+08:00",
+  "updatedAt": "2026-10-13T08:12:32.085Z",
+  "cutoff": "2026-10-13T16:00:00+08:00",
   "source": "X only",
   "status": "partial",
-  "collectionPath": "grok-bot-x-search",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "partial",
-        "note": "2026-10-13-0900：入库 OCP Vera Rubin 开放机架转述；官方账号仅有 RTX Spark 活动。"
+        "status": "complete",
+        "note": "近1日 2 条"
       },
       {
         "id": "mu",
-        "status": "insufficient",
-        "note": "窗口内多为股价评论；南亚科 DRAM 涨价未直接锚定 MU 官方原帖。"
+        "status": "partial",
+        "note": "近窗可核验新增不足，保留周榜/旧条"
       },
       {
         "id": "intc",
         "status": "partial",
-        "note": "与博通同场资本瓶颈发言已记入 AVGO 卡，未另拆 INTC 重复占位。"
+        "note": "近窗可核验新增不足，保留周榜/旧条"
       },
       {
         "id": "goog",
-        "status": "no-result",
-        "note": "无达标 GOOG 股权新事实。"
+        "status": "partial",
+        "note": "近窗可核验新增不足，保留周榜/旧条"
       },
       {
         "id": "avgo",
-        "status": "partial",
-        "note": "入库 Hock Tan 资本瓶颈。"
+        "status": "complete",
+        "note": "近1日 1 条"
       },
       {
         "id": "vrt",
-        "status": "insufficient",
-        "note": "液冷/印度部署多为弱转述，无公司官方原帖金额。"
+        "status": "complete",
+        "note": "近1日 1 条"
       },
       {
         "id": "tsm",
-        "status": "insufficient",
-        "note": "无新的公司官方产能原帖；等待本周财报。"
+        "status": "partial",
+        "note": "近窗可核验新增不足，保留周榜/旧条"
       }
     ]
   },
   "items": [
-    {
-      "eventKey": "avgo-capital-bottleneck-hock-tan-2026-10-12",
-      "tabIds": [
-        "avgo"
-      ],
-      "title": "Hock Tan：资本与借贷成本或成 AI 扩张瓶颈",
-      "fact": "Techmeme/CNBC 转述：博通 CEO 在新加坡称融资可得性与借贷成本可能超过芯片/内存，成为 AI 基建主约束；英特尔 CEO 同场呼应。",
-      "whyItMatters": "作为定制硅与网络核心供应商，融资瓶颈叙事直接影响 AVGO 客户扩张节奏。",
-      "counterCase": "大客户预付或利率转向可缓解约束。",
-      "affected": [
-        "AVGO",
-        "INTC"
-      ],
-      "author": "Techmeme",
-      "publishedAt": "2026-10-12T12:35:37.000Z",
-      "url": "https://x.com/Techmeme/status/2109624028407488644",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "avgo": 1
-      },
-      "people": []
-    },
     {
       "eventKey": "nvda-ocp-vera-rubin-open-rack-2026-10-12",
       "tabIds": [
@@ -89,6 +65,29 @@
       "tier": "must-read",
       "weeklyRanks": {
         "nvda": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "vrt-india-liquid-cooling-rubin-factory-2026-10-12",
+      "tabIds": [
+        "vrt"
+      ],
+      "title": "Vertiv：印度高密液冷与 Rubin 级 AI 工厂供电冷却方案",
+      "fact": "转述称 Vertiv 部署印度首套高密度液冷数据中心基础设施；另有帖称 Visionbay K-1（800V DC、面向 Vera Rubin）由 Vertiv 提供供电与冷却。",
+      "whyItMatters": "机架功率上行时液冷与高压供电是刚需，增强 VRT 在下一代 AI 工厂 BOM 中的可见度。",
+      "counterCase": "缺少官方原帖与合同金额；可能仅为试点或概念合作。",
+      "affected": [
+        "VRT",
+        "AI 数据中心"
+      ],
+      "author": "GovernanceSmart",
+      "publishedAt": "2026-10-12T13:49:40.000Z",
+      "url": "https://x.com/GovernanceSmart/status/2109642660273373637",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "vrt": 1
       },
       "people": []
     },
@@ -121,91 +120,49 @@
       ]
     },
     {
-      "eventKey": "vrt-india-liquid-cooling-rubin-factory-2026-10-12",
+      "eventKey": "avgo-capital-bottleneck-hock-tan-2026-10-12",
       "tabIds": [
-        "vrt"
+        "avgo"
       ],
-      "title": "Vertiv：印度高密液冷与 Rubin 级 AI 工厂供电冷却方案",
-      "fact": "转述称 Vertiv 部署印度首套高密度液冷数据中心基础设施；另有帖称 Visionbay K-1（800V DC、面向 Vera Rubin）由 Vertiv 提供供电与冷却。",
-      "whyItMatters": "机架功率上行时液冷与高压供电是刚需，增强 VRT 在下一代 AI 工厂 BOM 中的可见度。",
-      "counterCase": "缺少官方原帖与合同金额；可能仅为试点或概念合作。",
+      "title": "Hock Tan：资本与借贷成本或成 AI 扩张瓶颈",
+      "fact": "Techmeme/CNBC 转述：博通 CEO 在新加坡称融资可得性与借贷成本可能超过芯片/内存，成为 AI 基建主约束；英特尔 CEO 同场呼应。",
+      "whyItMatters": "作为定制硅与网络核心供应商，融资瓶颈叙事直接影响 AVGO 客户扩张节奏。",
+      "counterCase": "大客户预付或利率转向可缓解约束。",
       "affected": [
-        "VRT",
-        "AI 数据中心"
+        "AVGO",
+        "INTC"
       ],
-      "author": "GovernanceSmart",
-      "publishedAt": "2026-10-12T13:49:40.000Z",
-      "url": "https://x.com/GovernanceSmart/status/2109642660273373637",
+      "author": "Techmeme",
+      "publishedAt": "2026-10-12T12:35:37.000Z",
+      "url": "https://x.com/Techmeme/status/2109624028407488644",
       "verification": "collector-report",
-      "tier": "watch",
+      "tier": "must-read",
       "weeklyRanks": {
-        "vrt": 1
+        "avgo": 1
       },
       "people": []
     },
     {
-      "eventKey": "mu-ddr5-contract-48-bofa-2026-10-11",
+      "eventKey": "avgo-tomahawk6-1024t-shipping-2026-10-11",
       "tabIds": [
-        "mu"
+        "avgo"
       ],
-      "title": "美银：9 月 DDR5 合约价环比再涨 3%",
-      "fact": "@OptionKing666 引述美银研究称，主流 16Gb DDR5 合约价 9 月环比上涨 3% 至 48 美元，同比涨幅超过 500%，固定价格未见折让。",
-      "whyItMatters": "合约价持续上行支撑美光 DRAM 毛利与下季指引。",
-      "counterCase": "二手转述美银数据；单月涨幅收窄可能意味着涨势放缓。",
+      "title": "Tomahawk 6 宣称 102.4 Tb/s 并已量产出货",
+      "fact": "@BTC_Chopsticks 称 Broadcom Tomahawk 6 交换容量 102.4 Tb/s（约为 Tomahawk 5 的两倍），并称已进入生产出货；OCP 预览涉交换机、网卡等。",
+      "whyItMatters": "AI 集群规模扩大后网络成为瓶颈；交换芯片出货直接挂钩 AVGO AI 网络收入。",
+      "counterCase": "第三方解读；需对照 Broadcom/OCP 官方材料核实出货状态。",
       "affected": [
-        "MU",
-        "DRAM 合约价"
+        "AVGO",
+        "AI 网络"
       ],
-      "author": "OptionKing666",
-      "publishedAt": "2026-10-11T12:16:54.000Z",
-      "url": "https://x.com/OptionKing666/status/2109256928958521672",
+      "author": "BTC_Chopsticks",
+      "publishedAt": "2026-10-11T18:57:56.000Z",
+      "url": "https://x.com/BTC_Chopsticks/status/2109357852070723838",
       "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "nvda-reflection-ai-beam-talks-2026-10-12",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "英伟达洽谈加码 Reflection AI，后者发布开放权重模型 Beam",
-      "fact": "@uncommonprofit 称英伟达正洽谈进一步投资 Reflection AI；Reflection 已发布首个开放权重模型 Beam，对标 DeepSeek、Kimi 等低成本模型。",
-      "whyItMatters": "英伟达加码美国开放权重模型，有助于维持 GPU 在开源推理生态中的需求，也属于“供应商投资客户”的循环融资结构。",
-      "counterCase": "投资条款与估值未经双方确认；Beam 实际采用度未知。",
-      "affected": [
-        "NVDA",
-        "开放权重模型生态"
-      ],
-      "author": "uncommonprofit",
-      "publishedAt": "2026-10-12T07:26:46.000Z",
-      "url": "https://x.com/uncommonprofit/status/2109546301801259017",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "intc-cpu-price-hike-tsmc-wafer-2026-10-12",
-      "tabIds": [
-        "intc"
-      ],
-      "title": "英特尔等据报上调 CPU 价格",
-      "fact": "@SemiconductorsX 引述《工商时报》供应链消息称，英特尔、高通与 AMD 均在上调 CPU 价格，共同成本来源是台积电先进晶圆。",
-      "whyItMatters": "涨价可部分抵消外购晶圆成本，影响英特尔客户端与数据中心毛利；也反映 AI 代理带动服务器 CPU 需求。",
-      "counterCase": "二手转述；涨幅、产品线与生效时间未披露，需看英特尔财报与渠道价格。",
-      "affected": [
-        "INTC",
-        "AMD",
-        "QCOM",
-        "PC 供应链"
-      ],
-      "author": "SemiconductorsX",
-      "publishedAt": "2026-10-12T03:17:11.000Z",
-      "url": "https://x.com/SemiconductorsX/status/2109483493793345622",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
+      "tier": "must-read",
+      "weeklyRanks": {
+        "avgo": 2
+      },
       "people": []
     },
     {
@@ -228,29 +185,6 @@
       "tier": "must-read",
       "weeklyRanks": {
         "nvda": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-surface-laptop-ultra-rtx-spark-2026-10-07",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "微软 Surface Laptop Ultra 搭载 NVIDIA RTX Spark",
-      "fact": "@DigitalTrends 报道微软正式推出 Surface Laptop Ultra：NVIDIA RTX Spark（Grace CPU + Blackwell GPU，最高约 6144 核、128GB 统一内存），起价约 $2599，号称可本机跑约 120B 参数模型。",
-      "whyItMatters": "把 Blackwell/CUDA 扩展到消费与创作者笔记本，强化端侧 AI 与 CUDA 生态渗透。",
-      "counterCase": "出货量与真实 AI 负载占比未明；可能偏营销规格。",
-      "affected": [
-        "NVDA",
-        "端侧 AI PC"
-      ],
-      "author": "DigitalTrends",
-      "publishedAt": "2026-10-07T18:30:24.000Z",
-      "url": "https://x.com/DigitalTrends/status/2107901370607259816",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "nvda": 4
       },
       "people": []
     },
@@ -278,71 +212,73 @@
       "people": []
     },
     {
-      "eventKey": "mu-jpm-memory-tight-through-cy28-2026-10-06",
+      "eventKey": "tsm-oct15-call-preview-2026-10-11",
       "tabIds": [
-        "mu"
+        "tsm"
       ],
-      "title": "JPMorgan：存储紧平衡或延至 CY28",
-      "fact": "@RealNickMugalli 转述 J.P. Morgan Memory Market Update：在 Micron 财报读数后，认为供应紧张可能延伸至 CY28，尚无供需再平衡能见度。",
-      "whyItMatters": "若紧平衡拉长，支撑 HBM/DRAM 价格与 MU 盈利预期，但也提高周期顶点误判风险。",
-      "counterCase": "投行观点；实际扩产与客户砍单可打断叙事。",
+      "title": "市场关注台积电 10/15 电话会：AI、2nm 与 2027 capex",
+      "fact": "@SemiconductorsX 称 10 月 15 日电话会市场关注 Q4、AI 需求、2nm 爬坡与 2027 capex；并回顾三季度指引营收约 $44.6–45.8B、毛利率 65–67%。",
+      "whyItMatters": "指引与 capex 是先进制程/CoWoS 供给预期的主阀门，传导至整条 AI 半导体链。",
+      "counterCase": "会前预告；以会后官方数字为准。",
       "affected": [
-        "MU",
-        "存储产业链"
+        "TSM",
+        "先进制程",
+        "CoWoS"
       ],
-      "author": "RealNickMugalli",
-      "publishedAt": "2026-10-06T10:05:02.000Z",
-      "url": "https://x.com/RealNickMugalli/status/2107411805190426707",
+      "author": "SemiconductorsX",
+      "publishedAt": "2026-10-11T03:03:28.000Z",
+      "url": "https://x.com/SemiconductorsX/status/2109117651247345915",
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "mu": 3
+        "tsm": 1
       },
       "people": []
     },
     {
-      "eventKey": "mu-taiwan-strike-authorize-2026-10-07",
+      "eventKey": "goog-gemini-free-tier-auto-2026-10-09",
       "tabIds": [
-        "mu"
+        "goog"
       ],
-      "title": "Micron 台湾员工投票授权罢工",
-      "fact": "@ShaliniRaoSays 称 Micron 台湾员工就利润分享争议，约 99% 投票授权罢工，可能加剧 DRAM/HBM 供应压力。",
-      "whyItMatters": "劳工中断是存储供给的额外尾部风险，短期可影响交期与现货价格。",
-      "counterCase": "授权罢工不等于立即停工；需跟踪实际行动与协商结果。",
+      "title": "免费用户 Gemini Pro 调整为 Auto/Flash-Lite",
+      "fact": "@Granvestor 称自 10 月 9 日起免费 Gemini 走 Auto，多数提示落到 Flash-Lite；Pro/Deep Think 更多放到付费档，并联系 Q2 高额 capex。",
+      "whyItMatters": "产品分层影响推理成本、付费转化与云毛利，是 AI 落地变现的直接观测点。",
+      "counterCase": "地区/账号策略可能不一致；需官方帮助文档核对。",
       "affected": [
-        "MU",
-        "存储供给"
+        "GOOG",
+        "Gemini 变现"
       ],
-      "author": "ShaliniRaoSays",
-      "publishedAt": "2026-10-07T16:05:40.000Z",
-      "url": "https://x.com/ShaliniRaoSays/status/2107864947032232075",
+      "author": "Granvestor",
+      "publishedAt": "2026-10-10T14:41:24.000Z",
+      "url": "https://x.com/Granvestor/status/2108930905725166076",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "mu": 2
+        "goog": 1
       },
       "people": []
     },
     {
-      "eventKey": "intc-18a-hvm-foundry-revenue-2026-10-05",
+      "eventKey": "tsm-gf-cowos-interposer-malta-2026-10-08",
       "tabIds": [
-        "intc"
+        "tsm"
       ],
-      "title": "报道称 Intel 18A 进入量产，外部 Foundry 收入仍低",
-      "fact": "@FINANCIERNEWS 称 Intel 18A 已进入高产能制造、18A-P 进入 risk production，但 Q2 外部 Foundry 收入仅约 $293M。",
-      "whyItMatters": "制程节点进度与外部客户变现是 Foundry 估值核心；量产不等于外部订单兑现。",
-      "counterCase": "媒体转述；需对照公司财报与客户公告核实数字与节点定义。",
+      "title": "GlobalFoundries 宣布为台积电 CoWoS 生产硅中介层",
+      "fact": "@MosaicLedger 称 GlobalFoundries 于 2026-10-08 宣布多年协议，在纽约 Malta 为台积电 CoWoS 封装生产硅中介层，新闻稿口径约 $20 亿、初始五年。",
+      "whyItMatters": "先进封装瓶颈下中介层外协可缓解 CoWoS 约束，间接影响 TSMC 客户交期与 AI GPU/ASIC 供给。",
+      "counterCase": "金额口径与实际产能爬坡需官方核实；对 TSM 收入的直接贡献不确定。",
       "affected": [
-        "INTC",
-        "Foundry"
+        "TSM",
+        "CoWoS",
+        "GFS"
       ],
-      "author": "FINANCIERNEWS",
-      "publishedAt": "2026-10-05T21:35:43.000Z",
-      "url": "https://x.com/FINANCIERNEWS/status/2107223234035003557",
+      "author": "MosaicLedger",
+      "publishedAt": "2026-10-09T15:42:45.000Z",
+      "url": "https://x.com/MosaicLedger/status/2108583955863568486",
       "verification": "collector-report",
-      "tier": "must-read",
+      "tier": "watch",
       "weeklyRanks": {
-        "intc": 2
+        "tsm": 2
       },
       "people": []
     },
@@ -372,72 +308,93 @@
       "people": []
     },
     {
-      "eventKey": "goog-200b-capex-2026e-sonya-2026-10-06",
+      "eventKey": "vrt-coolchip-cdu1350-pf-2026-10-09",
       "tabIds": [
-        "goog"
+        "vrt"
       ],
-      "title": "报道称 Google 2026E 资本开支约 2000 亿美元量级",
-      "fact": "@sonyatweetybird 写道 AI 基建扩张中，@Google 单独预测 2026E 资本开支约 $200B，并引出对系统级约束的讨论。",
-      "whyItMatters": "超高 capex 同时支撑云/TPU 需求叙事与自由现金流、折旧压力，是 Alphabet 估值核心变量。",
-      "counterCase": "为预测口径；需对照公司指引与实际季度 capex。",
+      "title": "Vertiv 官方介绍 CoolChip CDU 1350 功率因数",
+      "fact": "@VertivAP 称 AI 数据中心冷却无功功率过高会冲击电力设施；Vertiv CoolChip CDU 1350 标准功率因数 0.89+，可选升级至 0.95+。",
+      "whyItMatters": "产品规格直接对应高密度液冷与电力质量需求，是 VRT 在 AI 机柜侧的可核验供给信号。",
+      "counterCase": "产品宣传；订单转化与份额未在帖中给出。",
       "affected": [
-        "GOOG",
-        "AI 基础设施",
-        "电力与设备链"
+        "VRT",
+        "液冷"
       ],
-      "author": "sonyatweetybird",
-      "publishedAt": "2026-10-06T16:30:34.000Z",
-      "url": "https://x.com/sonyatweetybird/status/2107508826442481849",
+      "author": "VertivAP",
+      "publishedAt": "2026-10-09T03:30:00.000Z",
+      "url": "https://x.com/VertivAP/status/2108399552919204189",
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "goog": 2
+        "vrt": 2
       },
       "people": []
     },
     {
-      "eventKey": "goog-gemini-free-tier-auto-2026-10-09",
+      "eventKey": "tsm-sep-revenue-filing-2026-10-08",
       "tabIds": [
-        "goog"
+        "tsm"
       ],
-      "title": "免费用户 Gemini Pro 调整为 Auto/Flash-Lite",
-      "fact": "@Granvestor 称自 10 月 9 日起免费 Gemini 走 Auto，多数提示落到 Flash-Lite；Pro/Deep Think 更多放到付费档，并联系 Q2 高额 capex。",
-      "whyItMatters": "产品分层影响推理成本、付费转化与云毛利，是 AI 落地变现的直接观测点。",
-      "counterCase": "地区/账号策略可能不一致；需官方帮助文档核对。",
+      "title": "台积电 9 月营收约 NT$5119 亿（转述法定申报）",
+      "fact": "@AZBInvestment 称按 10 月 8 日申报，台积电 9 月营收约 NT$511.9bn，同比约 +54.6%，三季度合计约 NT$1.49tn（约合公司指引所用汇率下的美元营收口径）。",
+      "whyItMatters": "月营收是先进制程需求的高频验证，影响对 AI 晶圆与封装满载度的判断。",
+      "counterCase": "汇率与口径需对照官方英语稿；单月波动不等于盈利指引。",
       "affected": [
-        "GOOG",
-        "Gemini 变现"
+        "TSM"
       ],
-      "author": "Granvestor",
-      "publishedAt": "2026-10-10T14:41:24.000Z",
-      "url": "https://x.com/Granvestor/status/2108930905725166076",
+      "author": "AZBInvestment",
+      "publishedAt": "2026-10-08T12:49:49.000Z",
+      "url": "https://x.com/AZBInvestment/status/2108178048600232347",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "tsm": 3
+      },
+      "people": []
+    },
+    {
+      "eventKey": "nvda-surface-laptop-ultra-rtx-spark-2026-10-07",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "微软 Surface Laptop Ultra 搭载 NVIDIA RTX Spark",
+      "fact": "@DigitalTrends 报道微软正式推出 Surface Laptop Ultra：NVIDIA RTX Spark（Grace CPU + Blackwell GPU，最高约 6144 核、128GB 统一内存），起价约 $2599，号称可本机跑约 120B 参数模型。",
+      "whyItMatters": "把 Blackwell/CUDA 扩展到消费与创作者笔记本，强化端侧 AI 与 CUDA 生态渗透。",
+      "counterCase": "出货量与真实 AI 负载占比未明；可能偏营销规格。",
+      "affected": [
+        "NVDA",
+        "端侧 AI PC"
+      ],
+      "author": "DigitalTrends",
+      "publishedAt": "2026-10-07T18:30:24.000Z",
+      "url": "https://x.com/DigitalTrends/status/2107901370607259816",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog": 1
+        "nvda": 4
       },
       "people": []
     },
     {
-      "eventKey": "avgo-tomahawk6-1024t-shipping-2026-10-11",
+      "eventKey": "mu-taiwan-strike-authorize-2026-10-07",
       "tabIds": [
-        "avgo"
+        "mu"
       ],
-      "title": "Tomahawk 6 宣称 102.4 Tb/s 并已量产出货",
-      "fact": "@BTC_Chopsticks 称 Broadcom Tomahawk 6 交换容量 102.4 Tb/s（约为 Tomahawk 5 的两倍），并称已进入生产出货；OCP 预览涉交换机、网卡等。",
-      "whyItMatters": "AI 集群规模扩大后网络成为瓶颈；交换芯片出货直接挂钩 AVGO AI 网络收入。",
-      "counterCase": "第三方解读；需对照 Broadcom/OCP 官方材料核实出货状态。",
+      "title": "Micron 台湾员工投票授权罢工",
+      "fact": "@ShaliniRaoSays 称 Micron 台湾员工就利润分享争议，约 99% 投票授权罢工，可能加剧 DRAM/HBM 供应压力。",
+      "whyItMatters": "劳工中断是存储供给的额外尾部风险，短期可影响交期与现货价格。",
+      "counterCase": "授权罢工不等于立即停工；需跟踪实际行动与协商结果。",
       "affected": [
-        "AVGO",
-        "AI 网络"
+        "MU",
+        "存储供给"
       ],
-      "author": "BTC_Chopsticks",
-      "publishedAt": "2026-10-11T18:57:56.000Z",
-      "url": "https://x.com/BTC_Chopsticks/status/2109357852070723838",
+      "author": "ShaliniRaoSays",
+      "publishedAt": "2026-10-07T16:05:40.000Z",
+      "url": "https://x.com/ShaliniRaoSays/status/2107864947032232075",
       "verification": "collector-report",
-      "tier": "must-read",
+      "tier": "watch",
       "weeklyRanks": {
-        "avgo": 2
+        "mu": 2
       },
       "people": []
     },
@@ -466,120 +423,52 @@
       "people": []
     },
     {
-      "eventKey": "vrt-bmo-outperform-329-2026-10-05",
+      "eventKey": "goog-200b-capex-2026e-sonya-2026-10-06",
       "tabIds": [
-        "vrt"
+        "goog"
       ],
-      "title": "BMO 给予 Vertiv Outperform，目标价 329 美元",
-      "fact": "@Dragon21Soul 称 BMO 给予 $VRT Outperform、目标价 $329，强调约 85% 收入来自数据中心，当前约每 MW $3.5M 内容量，并看好密度提升。",
-      "whyItMatters": "卖方首次覆盖与内容量假设变化，反映市场对液冷/电力基建渗透的定价；属研究观点变化。",
-      "counterCase": "评级与目标价本身非经营事实；电网与交付约束可能限制兑现。",
+      "title": "报道称 Google 2026E 资本开支约 2000 亿美元量级",
+      "fact": "@sonyatweetybird 写道 AI 基建扩张中，@Google 单独预测 2026E 资本开支约 $200B，并引出对系统级约束的讨论。",
+      "whyItMatters": "超高 capex 同时支撑云/TPU 需求叙事与自由现金流、折旧压力，是 Alphabet 估值核心变量。",
+      "counterCase": "为预测口径；需对照公司指引与实际季度 capex。",
       "affected": [
-        "VRT",
-        "数据中心电力冷却"
+        "GOOG",
+        "AI 基础设施",
+        "电力与设备链"
       ],
-      "author": "Dragon21Soul",
-      "publishedAt": "2026-10-05T17:57:05.000Z",
-      "url": "https://x.com/Dragon21Soul/status/2107168213188710603",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "vrt": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "vrt-coolchip-cdu1350-pf-2026-10-09",
-      "tabIds": [
-        "vrt"
-      ],
-      "title": "Vertiv 官方介绍 CoolChip CDU 1350 功率因数",
-      "fact": "@VertivAP 称 AI 数据中心冷却无功功率过高会冲击电力设施；Vertiv CoolChip CDU 1350 标准功率因数 0.89+，可选升级至 0.95+。",
-      "whyItMatters": "产品规格直接对应高密度液冷与电力质量需求，是 VRT 在 AI 机柜侧的可核验供给信号。",
-      "counterCase": "产品宣传；订单转化与份额未在帖中给出。",
-      "affected": [
-        "VRT",
-        "液冷"
-      ],
-      "author": "VertivAP",
-      "publishedAt": "2026-10-09T03:30:00.000Z",
-      "url": "https://x.com/VertivAP/status/2108399552919204189",
+      "author": "sonyatweetybird",
+      "publishedAt": "2026-10-06T16:30:34.000Z",
+      "url": "https://x.com/sonyatweetybird/status/2107508826442481849",
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "vrt": 2
+        "goog": 2
       },
       "people": []
     },
     {
-      "eventKey": "tsm-oct15-call-preview-2026-10-11",
+      "eventKey": "mu-jpm-memory-tight-through-cy28-2026-10-06",
       "tabIds": [
-        "tsm"
+        "mu"
       ],
-      "title": "市场关注台积电 10/15 电话会：AI、2nm 与 2027 capex",
-      "fact": "@SemiconductorsX 称 10 月 15 日电话会市场关注 Q4、AI 需求、2nm 爬坡与 2027 capex；并回顾三季度指引营收约 $44.6–45.8B、毛利率 65–67%。",
-      "whyItMatters": "指引与 capex 是先进制程/CoWoS 供给预期的主阀门，传导至整条 AI 半导体链。",
-      "counterCase": "会前预告；以会后官方数字为准。",
+      "title": "JPMorgan：存储紧平衡或延至 CY28",
+      "fact": "@RealNickMugalli 转述 J.P. Morgan Memory Market Update：在 Micron 财报读数后，认为供应紧张可能延伸至 CY28，尚无供需再平衡能见度。",
+      "whyItMatters": "若紧平衡拉长，支撑 HBM/DRAM 价格与 MU 盈利预期，但也提高周期顶点误判风险。",
+      "counterCase": "投行观点；实际扩产与客户砍单可打断叙事。",
       "affected": [
-        "TSM",
-        "先进制程",
-        "CoWoS"
+        "MU",
+        "存储产业链"
       ],
-      "author": "SemiconductorsX",
-      "publishedAt": "2026-10-11T03:03:28.000Z",
-      "url": "https://x.com/SemiconductorsX/status/2109117651247345915",
+      "author": "RealNickMugalli",
+      "publishedAt": "2026-10-06T10:05:02.000Z",
+      "url": "https://x.com/RealNickMugalli/status/2107411805190426707",
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "tsm-sep-revenue-filing-2026-10-08",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "台积电 9 月营收约 NT$5119 亿（转述法定申报）",
-      "fact": "@AZBInvestment 称按 10 月 8 日申报，台积电 9 月营收约 NT$511.9bn，同比约 +54.6%，三季度合计约 NT$1.49tn（约合公司指引所用汇率下的美元营收口径）。",
-      "whyItMatters": "月营收是先进制程需求的高频验证，影响对 AI 晶圆与封装满载度的判断。",
-      "counterCase": "汇率与口径需对照官方英语稿；单月波动不等于盈利指引。",
-      "affected": [
-        "TSM"
-      ],
-      "author": "AZBInvestment",
-      "publishedAt": "2026-10-08T12:49:49.000Z",
-      "url": "https://x.com/AZBInvestment/status/2108178048600232347",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "tsm": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "tsm-gf-cowos-interposer-malta-2026-10-08",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "GlobalFoundries 宣布为台积电 CoWoS 生产硅中介层",
-      "fact": "@MosaicLedger 称 GlobalFoundries 于 2026-10-08 宣布多年协议，在纽约 Malta 为台积电 CoWoS 封装生产硅中介层，新闻稿口径约 $20 亿、初始五年。",
-      "whyItMatters": "先进封装瓶颈下中介层外协可缓解 CoWoS 约束，间接影响 TSMC 客户交期与 AI GPU/ASIC 供给。",
-      "counterCase": "金额口径与实际产能爬坡需官方核实；对 TSM 收入的直接贡献不确定。",
-      "affected": [
-        "TSM",
-        "CoWoS",
-        "GFS"
-      ],
-      "author": "MosaicLedger",
-      "publishedAt": "2026-10-09T15:42:45.000Z",
-      "url": "https://x.com/MosaicLedger/status/2108583955863568486",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "tsm": 2
+        "mu": 3
       },
       "people": []
     }
-  ]
+  ],
+  "collectionPath": "grok-bot-x-search"
 }

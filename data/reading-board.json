@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T01:52:01.370Z",
-  "asOf": "2026-10-13T09:00:00+08:00",
+  "updatedAt": "2026-10-13T08:11:02.859Z",
+  "asOf": "2026-10-13T16:00:00+08:00",
   "events": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
@@ -1665,39 +1665,200 @@
             "sourceUrl": "https://x.com/zerohedge/status/2109620803067101510",
             "checkedAt": "2026-10-13T01:50:00.000Z"
           }
+        },
+        {
+          "edition": "2026-10-12-2100",
+          "event": {
+            "eventKey": "houthi-saudi-tanker-escalation-2026-10-12",
+            "title": "利雅得空域清空、海湾航空取消航班，胡塞升级推高中东能源风险",
+            "fact": "路透社报道利雅得上空在致命胡塞机场袭击后基本空荡；DeItaone与FirstSquawk转述海湾航空取消10月12–17日往返利雅得航班。Walter Bloomberg另称胡塞导弹与无人机袭击加剧，分析师警告延布（Yanbu）与吉赞等出口枢纽风险，伊朗据报提出为沙特与胡塞斡旋。",
+            "impact": "空域与人员流动中断抬升沙特能源基础设施风险溢价；若袭击外溢至红海出口枢纽，原油供给冲击会推升通胀预期并压制利率敏感板块。伊朗斡旋若落地可能缓和溢价，但尚未证实。",
+            "direction": "双向",
+            "horizon": "未来数日至数周",
+            "affected": [
+              "原油与成品油",
+              "航空与航运保险",
+              "中东暴露能源股",
+              "美股通胀预期与利率敏感板块"
+            ],
+            "counterCase": "若胡塞袭击停止、航班恢复且延布/吉赞出口未中断，油价风险溢价应回落。",
+            "selectionReason": "周一最新可观察进展（航班取消、空域清空、出口枢纽风险点名）直接连接能源供给与全球风险资产定价。",
+            "credibilityReason": "Reuters与多家快讯账号交叉，但延布具体威胁与伊朗斡旋细节仍为媒体转述。",
+            "change": "进展",
+            "eventTime": "2026-10-12T12:45:11Z",
+            "eventTimeNote": "路透社“空域清空”帖时间为近似事件进展标记；航班取消公告精确生效时刻未知。",
+            "attentionEvidence": "DeItaone航班取消帖约7.2万次展示，DeItaone油市风险帖约7.8万次展示；热度仅作注意力参考。",
+            "sources": [
+              {
+                "url": "https://x.com/Reuters/status/2109626435354710497",
+                "postId": "2109626435354710497",
+                "username": "Reuters",
+                "publishedAt": "2026-10-12T12:45:11.000Z",
+                "checkedAt": "2026-10-12T13:33:25Z",
+                "excerpt": "Skies over Saudi capital empty after deadly Houthi airport strikes",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 检索（search_posts_all/get_posts_by_ids）返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行在 X 页面独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/DeItaone/status/2109626439675121852",
+                "postId": "2109626439675121852",
+                "username": "DeItaone",
+                "publishedAt": "2026-10-12T12:45:12.000Z",
+                "checkedAt": "2026-10-12T13:33:25Z",
+                "excerpt": "GULF AIR SAYS IT HAS CANCELLED FLIGHTS TO AND FROM RIYADH FROM OCT 12 TO OCT 17 - POST ON X",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 检索（search_posts_all/get_posts_by_ids）返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行在 X 页面独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 33,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 31,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 4,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/DeItaone/status/2109608453178077267",
+                "postId": "2109608453178077267",
+                "username": "DeItaone",
+                "publishedAt": "2026-10-12T11:33:44.000Z",
+                "checkedAt": "2026-10-12T13:33:25Z",
+                "excerpt": "OIL MARKETS FACE GROWING SUPPLY RISKS AS MIDDLE EAST ATTACKS ESCALATE ... Energy analysts warn that Yanbu and Jizan remain particularly",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 检索（search_posts_all/get_posts_by_ids）返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行在 X 页面独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "Reuters与多家快讯账号交叉，但延布具体威胁与伊朗斡旋细节仍为媒体转述。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            },
+            "people": []
+          },
+          "changedAt": "2026-10-13T08:11:02.859Z"
+        },
+        {
+          "edition": "2026-10-13-1600",
+          "decision": {
+            "eventKey": "houthi-saudi-tanker-escalation-2026-10-12",
+            "action": "keep",
+            "reason": "袭击与伊朗斡旋讨论仍在，风险未解除。",
+            "sourceUrl": "https://x.com/DeItaone/status/2109611622171807791",
+            "checkedAt": "2026-10-13T08:10:58.671Z"
+          }
         }
       ],
       "group": "focus",
       "event": {
         "eventKey": "houthi-saudi-tanker-escalation-2026-10-12",
-        "title": "利雅得空域清空、海湾航空取消航班，胡塞升级推高中东能源风险",
-        "fact": "路透社报道利雅得上空在致命胡塞机场袭击后基本空荡；DeItaone与FirstSquawk转述海湾航空取消10月12–17日往返利雅得航班。Walter Bloomberg另称胡塞导弹与无人机袭击加剧，分析师警告延布（Yanbu）与吉赞等出口枢纽风险，伊朗据报提出为沙特与胡塞斡旋。",
-        "impact": "空域与人员流动中断抬升沙特能源基础设施风险溢价；若袭击外溢至红海出口枢纽，原油供给冲击会推升通胀预期并压制利率敏感板块。伊朗斡旋若落地可能缓和溢价，但尚未证实。",
+        "title": "胡塞袭击沙特相关目标升级，伊朗提出斡旋",
+        "fact": "窗口内多家快讯称胡塞对沙特机场/能源相关目标的袭击仍在延续，并有伊朗提出在沙特与胡塞之间斡旋的转述；油价与红海航运风险溢价讨论同步升温。此前周末利雅得机场遇袭已在 09:00 期收录。",
+        "impact": "若冲突扩大至出口枢纽或红海航运中断，将推高成品油与通胀预期并压制风险资产；若斡旋落地并停火，溢价可能回吐。",
         "direction": "双向",
-        "horizon": "未来数日至数周",
+        "horizon": "数日至数周",
         "affected": [
-          "原油与成品油",
-          "航空与航运保险",
-          "中东暴露能源股",
-          "美股通胀预期与利率敏感板块"
+          "原油与柴油",
+          "航运保险",
+          "美股利率敏感板块",
+          "中东暴露能源股"
         ],
-        "counterCase": "若胡塞袭击停止、航班恢复且延布/吉赞出口未中断，油价风险溢价应回落。",
-        "selectionReason": "周一最新可观察进展（航班取消、空域清空、出口枢纽风险点名）直接连接能源供给与全球风险资产定价。",
-        "credibilityReason": "Reuters与多家快讯账号交叉，但延布具体威胁与伊朗斡旋细节仍为媒体转述。",
+        "counterCase": "若袭击强度下降、Yanbu/出口未受损，或斡旋无实质协议，则供给冲击叙事应下调。",
+        "selectionReason": "在已有机场袭击基础上出现斡旋与持续袭击的新进展，影响油市与宏观共同因子。",
+        "credibilityReason": "DeItaone 等高互动快讯，但缺沙特/伊朗官方 X 原帖。",
         "change": "进展",
-        "eventTime": "2026-10-12T12:45:11Z",
-        "eventTimeNote": "路透社“空域清空”帖时间为近似事件进展标记；航班取消公告精确生效时刻未知。",
-        "attentionEvidence": "DeItaone航班取消帖约7.2万次展示，DeItaone油市风险帖约7.8万次展示；热度仅作注意力参考。",
+        "eventTime": null,
+        "eventTimeNote": "伊朗斡旋与后续袭击的准确当地时间未在所用帖文写明。",
+        "attentionEvidence": "@DeItaone 相关快讯展示约 11–14 万；热度仅参考。",
         "sources": [
           {
-            "url": "https://x.com/Reuters/status/2109626435354710497",
-            "postId": "2109626435354710497",
-            "username": "Reuters",
-            "publishedAt": "2026-10-12T12:45:11.000Z",
-            "checkedAt": "2026-10-12T13:33:25Z",
-            "excerpt": "Skies over Saudi capital empty after deadly Houthi airport strikes",
+            "url": "https://x.com/DeItaone/status/2109608453178077267",
+            "postId": "2109608453178077267",
+            "username": "DeItaone",
+            "publishedAt": "2026-10-12T11:33:44.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "OIL MARKETS FACE GROWING SUPPLY RISKS AS MIDDLE EAST ATTACKS ESCALATE Houthi missile and drone strikes on Saudi Arabia are intensifying",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 检索（search_posts_all/get_posts_by_ids）返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行在 X 页面独立直读。",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
@@ -1729,27 +1890,27 @@
             }
           },
           {
-            "url": "https://x.com/DeItaone/status/2109626439675121852",
-            "postId": "2109626439675121852",
+            "url": "https://x.com/DeItaone/status/2109611622171807791",
+            "postId": "2109611622171807791",
             "username": "DeItaone",
-            "publishedAt": "2026-10-12T12:45:12.000Z",
-            "checkedAt": "2026-10-12T13:33:25Z",
-            "excerpt": "GULF AIR SAYS IT HAS CANCELLED FLIGHTS TO AND FROM RIYADH FROM OCT 12 TO OCT 17 - POST ON X",
+            "publishedAt": "2026-10-12T11:46:20.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "IRAN OFFERS TO MEDIATE AS SAUDI-HOUTHI CONFLICT ESCALATES",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 检索（search_posts_all/get_posts_by_ids）返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行在 X 页面独立直读。",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
-              "overall": 33,
+              "overall": 30,
               "band": "low",
               "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
               "sourceScore": 35,
-              "claimScore": 31,
+              "claimScore": 27,
               "breakdown": {
                 "directness": 10,
                 "traceableEvidence": 7,
                 "independentCorroboration": 0,
-                "specificity": 4,
+                "specificity": 0,
                 "recordIntegrity": 10,
                 "penalties": 0
               },
@@ -1768,14 +1929,14 @@
             }
           },
           {
-            "url": "https://x.com/DeItaone/status/2109608453178077267",
-            "postId": "2109608453178077267",
-            "username": "DeItaone",
-            "publishedAt": "2026-10-12T11:33:44.000Z",
-            "checkedAt": "2026-10-12T13:33:25Z",
-            "excerpt": "OIL MARKETS FACE GROWING SUPPLY RISKS AS MIDDLE EAST ATTACKS ESCALATE ... Energy analysts warn that Yanbu and Jizan remain particularly",
+            "url": "https://x.com/JPLindsley/status/2109698112088395949",
+            "postId": "2109698112088395949",
+            "username": "JPLindsley",
+            "publishedAt": "2026-10-12T17:30:00.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Saudi Airports Under Fire as Trump Weighs Intervention— Yemen’s Iran-backed Houthis have intensified their attacks on Saudi airports",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 检索（search_posts_all/get_posts_by_ids）返回该帖正文、时间与链接；按项目规则标为采集器转述，未另行在 X 页面独立直读。",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
@@ -1807,28 +1968,28 @@
             }
           }
         ],
+        "people": [],
         "credibility": {
           "score": 30,
           "label": "规则初评，未校准",
-          "reason": "Reuters与多家快讯账号交叉，但延布具体威胁与伊朗斡旋细节仍为媒体转述。",
+          "reason": "DeItaone 等高互动快讯，但缺沙特/伊朗官方 X 原帖。",
           "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        },
-        "people": []
+        }
       },
-      "rank": 0,
-      "lastEdition": "2026-10-12-2100",
-      "lastCheckedAt": "2026-10-12T13:34:00.268Z",
+      "rank": 2,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T01:52:01.370Z",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
       "retainUntil": "2026-10-14T01:00:00.000Z",
       "lateDiscovery": false,
       "readingDate": "2026-10-13",
       "review": {
         "eventKey": "houthi-saudi-tanker-escalation-2026-10-12",
         "action": "keep",
-        "reason": "机场袭击续报使沙特/红海能源风险仍有效。",
-        "sourceUrl": "https://x.com/zerohedge/status/2109620803067101510",
-        "checkedAt": "2026-10-13T01:50:00.000Z"
+        "reason": "袭击与伊朗斡旋讨论仍在，风险未解除。",
+        "sourceUrl": "https://x.com/DeItaone/status/2109611622171807791",
+        "checkedAt": "2026-10-13T08:10:58.671Z"
       }
     },
     {
@@ -4037,36 +4198,164 @@
             "sourceUrl": "https://x.com/satyanadella/status/2109631106404487523",
             "checkedAt": "2026-10-13T01:50:00.000Z"
           }
+        },
+        {
+          "edition": "2026-10-13-0900",
+          "event": {
+            "eventKey": "msft-maia-300-primary-inference-2026-10-12",
+            "title": "Satya Nadella：Maia 将成微软主推理系统并推 Maia 300",
+            "fact": "微软 CEO Satya Nadella 宣布加大自研硅押注：自下一自然年起将 Maia 系列扩至多吉瓦部署，并作为自家产品与服务的主推理系统；同时推出 Maia 300，称相对领先 GPU 系统每兆瓦可多约 40% 推理 token。",
+            "impact": "云巨头把推理负载迁到自研硅，会改变对英伟达 GPU 的增量需求结构，并牵动 TSMC 先进制程与 HBM 产能分配；训练侧份额不一定同步下降。",
+            "direction": "双向",
+            "horizon": "2027 年起逐步兑现，未来数季观察订单与能效",
+            "affected": [
+              "MSFT",
+              "NVDA",
+              "TSMC",
+              "HBM 供应链"
+            ],
+            "counterCase": "若 2027 部署延后、能效未达承诺，或训练仍高度绑定 GPU，则对 NVDA 份额冲击有限。",
+            "selectionReason": "窗口内唯一有公司一把手原帖、且直接改写 AI 算力采购结构的新增事实。",
+            "credibilityReason": "有 satyanadella 原帖全文与时间；能效与出货量仍待独立验证。",
+            "change": "进展",
+            "eventTime": "2026-10-12T13:03:45.000Z",
+            "attentionEvidence": "satyanadella 原帖窗口内展示量约 147 万；热度仅作注意力参考，不证明能效承诺。",
+            "sources": [
+              {
+                "url": "https://x.com/satyanadella/status/2109631106404487523",
+                "postId": "2109631106404487523",
+                "username": "satyanadella",
+                "publishedAt": "2026-10-12T13:03:45.000Z",
+                "checkedAt": "2026-10-13T01:50:00.000Z",
+                "excerpt": "Today we are announcing our biggest bet yet on our own silicon. Starting next calendar year, we will scale our Maia family to multi-gigawatt deployments, making it the primary inference system",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "有 satyanadella 原帖全文与时间；能效与出货量仍待独立验证。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            },
+            "people": [
+              {
+                "name": "Satya Nadella",
+                "intro": "微软董事长兼CEO"
+              }
+            ]
+          },
+          "changedAt": "2026-10-13T08:11:02.859Z"
+        },
+        {
+          "edition": "2026-10-13-1600",
+          "decision": {
+            "eventKey": "msft-maia-300-primary-inference-2026-10-12",
+            "action": "keep",
+            "reason": "CEO 原帖仍有效，主推理迁移未被推翻。",
+            "sourceUrl": "https://x.com/satyanadella/status/2109631106404487523",
+            "checkedAt": "2026-10-13T08:10:58.671Z"
+          }
         }
       ],
       "group": "focus",
       "event": {
         "eventKey": "msft-maia-300-primary-inference-2026-10-12",
         "title": "Satya Nadella：Maia 将成微软主推理系统并推 Maia 300",
-        "fact": "微软 CEO Satya Nadella 宣布加大自研硅押注：自下一自然年起将 Maia 系列扩至多吉瓦部署，并作为自家产品与服务的主推理系统；同时推出 Maia 300，称相对领先 GPU 系统每兆瓦可多约 40% 推理 token。",
-        "impact": "云巨头把推理负载迁到自研硅，会改变对英伟达 GPU 的增量需求结构，并牵动 TSMC 先进制程与 HBM 产能分配；训练侧份额不一定同步下降。",
+        "fact": "Satya Nadella 表示微软将把自研 Maia 家族扩展到多吉瓦部署，作为自有产品与服务的主推理系统，并推出声称较领先 GPU 系统每瓦 tokens 高约 40% 的 Maia 300。窗口内讨论仍围绕对 NVDA 依赖与电力约束。",
+        "impact": "若 2027 起放量兑现，将改变云侧 GPU/ASIC 采购结构，并抬升对代工、HBM 与机房电力的争夺。",
         "direction": "双向",
-        "horizon": "2027 年起逐步兑现，未来数季观察订单与能效",
+        "horizon": "2026–2027",
         "affected": [
           "MSFT",
           "NVDA",
           "TSMC",
-          "HBM 供应链"
+          "HBM 供应链",
+          "电力与液冷"
         ],
-        "counterCase": "若 2027 部署延后、能效未达承诺，或训练仍高度绑定 GPU，则对 NVDA 份额冲击有限。",
-        "selectionReason": "窗口内唯一有公司一把手原帖、且直接改写 AI 算力采购结构的新增事实。",
-        "credibilityReason": "有 satyanadella 原帖全文与时间；能效与出货量仍待独立验证。",
-        "change": "进展",
+        "counterCase": "若能效数据不可复核、部署低于“多吉瓦”叙事，或仍大量采购 GPU，则影响应下调。",
+        "selectionReason": "CEO 原帖战略迁移，仍是窗口内影响面最广的硅事件之一。",
+        "credibilityReason": "锚定 @satyanadella 原帖；能效与产能细节多为转述。",
+        "change": "延续",
+        "continuationReason": "09:00 期已收录；16:00 复核原帖仍在，未被推翻，讨论续热。",
         "eventTime": "2026-10-12T13:03:45.000Z",
-        "attentionEvidence": "satyanadella 原帖窗口内展示量约 147 万；热度仅作注意力参考，不证明能效承诺。",
+        "attentionEvidence": "原帖展示约 175 万、点赞约 1.4 万；热度仅参考。",
         "sources": [
           {
             "url": "https://x.com/satyanadella/status/2109631106404487523",
             "postId": "2109631106404487523",
             "username": "satyanadella",
             "publishedAt": "2026-10-12T13:03:45.000Z",
-            "checkedAt": "2026-10-13T01:50:00.000Z",
-            "excerpt": "Today we are announcing our biggest bet yet on our own silicon. Starting next calendar year, we will scale our Maia family to multi-gigawatt deployments, making it the primary inference system",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Today we are announcing our biggest bet yet on our own silicon. Starting next calendar year, we will scale our Maia family to multi-gigawatt deployments",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/edzitron/status/2109674961569009915",
+            "postId": "2109674961569009915",
+            "username": "edzitron",
+            "publishedAt": "2026-10-12T15:58:01.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "“We’ll scale to multi gigawatt deployments” is written specifically so you think they’re doing gigawatts worth rather than installing them across data centers",
             "verification": "collector-report",
             "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
             "credibility": {
@@ -4100,33 +4389,33 @@
             }
           }
         ],
-        "credibility": {
-          "score": 30,
-          "label": "规则初评，未校准",
-          "reason": "有 satyanadella 原帖全文与时间；能效与出货量仍待独立验证。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        },
         "people": [
           {
             "name": "Satya Nadella",
             "intro": "微软董事长兼CEO"
           }
-        ]
+        ],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "锚定 @satyanadella 原帖；能效与产能细节多为转述。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
       },
-      "rank": 0,
-      "lastEdition": "2026-10-13-0900",
-      "lastCheckedAt": "2026-10-13T01:52:01.370Z",
+      "rank": 3,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T01:52:01.370Z",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
       "lateDiscovery": false,
       "review": {
         "eventKey": "msft-maia-300-primary-inference-2026-10-12",
         "action": "keep",
-        "reason": "CEO 原帖仍在窗口内，主推理迁移未被推翻。",
+        "reason": "CEO 原帖仍有效，主推理迁移未被推翻。",
         "sourceUrl": "https://x.com/satyanadella/status/2109631106404487523",
-        "checkedAt": "2026-10-13T01:50:00.000Z"
+        "checkedAt": "2026-10-13T08:10:58.671Z"
       }
     },
     {
@@ -5301,45 +5590,138 @@
       "eventKey": "nanya-dram-asp-margin-surge-2026-10-12",
       "firstSeenAt": "2026-10-13T01:52:01.370Z",
       "firstEdition": "2026-10-13-0900",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-10-13-0900",
+          "event": {
+            "eventKey": "nanya-dram-asp-margin-surge-2026-10-12",
+            "title": "南亚科：DRAM 短缺下 ASP 大涨、毛利率飙升",
+            "fact": "媒体报道转述：南亚科第三季毛利率达 85.7%，DRAM ASP 较第二季升约 60%，营收环比大增，背景是严重 DRAM 短缺与涨价。",
+            "impact": "通用 DRAM 涨价会抬升服务器与 AI 配套成本，强化“存储比逻辑更紧”的瓶颈叙事，利好存储厂短期利润、利空整机毛利。",
+            "direction": "双向",
+            "horizon": "本季至未来两季",
+            "affected": [
+              "MU",
+              "DRAM 厂",
+              "服务器 OEM",
+              "AI 云成本"
+            ],
+            "counterCase": "若报价回落或短缺被证伪，高利润不可持续。",
+            "selectionReason": "可观察的价格/利润数据，直接验证存储瓶颈。",
+            "credibilityReason": "dnystedt 等专业转述，仍非公司英文官方 X 原帖。",
+            "change": "新增",
+            "eventTime": null,
+            "eventTimeNote": "财报/媒体披露精确时刻未在帖文给出。",
+            "knowledgeCards": [
+              "I03",
+              "I06",
+              "R05"
+            ],
+            "disciplines": [
+              "半导体产业",
+              "公司财务"
+            ],
+            "knowledgeApplication": "I03：存储是 AI 实物瓶颈之一；I06：利润在存储与云之间再分配；R05：涨价新闻需区分确认旧预期还是新冲击。",
+            "sources": [
+              {
+                "url": "https://x.com/dnystedt/status/2109774661064265943",
+                "postId": "2109774661064265943",
+                "username": "dnystedt",
+                "publishedAt": "2026-10-12T22:34:11.000Z",
+                "checkedAt": "2026-10-13T01:50:00.000Z",
+                "excerpt": "Nanya Technology’s gross margin hit 85.7% in the 3rd quarter as DRAM average selling prices (ASPs) rose 60% over the second quarter amid a severe DRAM shortage",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 33,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 31,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 4,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "credibility": {
+              "score": 33,
+              "label": "规则初评，未校准",
+              "reason": "dnystedt 等专业转述，仍非公司英文官方 X 原帖。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            },
+            "people": []
+          },
+          "changedAt": "2026-10-13T08:11:02.859Z"
+        },
+        {
+          "edition": "2026-10-13-1600",
+          "decision": {
+            "eventKey": "nanya-dram-asp-margin-surge-2026-10-12",
+            "action": "keep",
+            "reason": "DRAM 短缺定价仍有效。",
+            "sourceUrl": "https://x.com/dnystedt/status/2109774661064265943",
+            "checkedAt": "2026-10-13T08:10:58.671Z"
+          }
+        }
+      ],
       "group": "insights",
       "event": {
         "eventKey": "nanya-dram-asp-margin-surge-2026-10-12",
         "title": "南亚科：DRAM 短缺下 ASP 大涨、毛利率飙升",
-        "fact": "媒体报道转述：南亚科第三季毛利率达 85.7%，DRAM ASP 较第二季升约 60%，营收环比大增，背景是严重 DRAM 短缺与涨价。",
-        "impact": "通用 DRAM 涨价会抬升服务器与 AI 配套成本，强化“存储比逻辑更紧”的瓶颈叙事，利好存储厂短期利润、利空整机毛利。",
+        "fact": "@dnystedt 等转述媒体：南亚科第三季毛利率约 85.7%，DRAM ASP 较二季上升约 60%，营收环比大增，归因严重短缺与涨价。",
+        "impact": "传统 DRAM 涨价验证供给紧张，可能外溢到 HBM 产能分配与消费电子成本。",
         "direction": "双向",
-        "horizon": "本季至未来两季",
+        "horizon": "一至两个季度",
         "affected": [
-          "MU",
           "DRAM 厂",
-          "服务器 OEM",
-          "AI 云成本"
+          "消费电子",
+          "HBM 供给"
         ],
-        "counterCase": "若报价回落或短缺被证伪，高利润不可持续。",
-        "selectionReason": "可观察的价格/利润数据，直接验证存储瓶颈。",
-        "credibilityReason": "dnystedt 等专业转述，仍非公司英文官方 X 原帖。",
-        "change": "新增",
+        "counterCase": "若库存回补结束或需求转弱，ASP 可能回落。",
+        "selectionReason": "半导体包可核验的价格/利润数据点。",
+        "credibilityReason": "具名科技记者转述，缺公司官方 X。",
+        "change": "延续",
+        "continuationReason": "09:00 期已提示短缺；16:00 仍见毛利细节传播。",
         "eventTime": null,
-        "eventTimeNote": "财报/媒体披露精确时刻未在帖文给出。",
+        "eventTimeNote": "财报/媒体报道准确时刻未在帖文写明。",
         "knowledgeCards": [
-          "I03",
+          "I04",
           "I06",
           "R05"
         ],
         "disciplines": [
           "半导体产业",
-          "公司财务"
+          "财务分析"
         ],
-        "knowledgeApplication": "I03：存储是 AI 实物瓶颈之一；I06：利润在存储与云之间再分配；R05：涨价新闻需区分确认旧预期还是新冲击。",
+        "knowledgeApplication": "I04：亚洲厂商线索验证存储周期；I06：利润在存储环节再分配；R05：新闻确认涨价预期。",
         "sources": [
           {
             "url": "https://x.com/dnystedt/status/2109774661064265943",
             "postId": "2109774661064265943",
             "username": "dnystedt",
             "publishedAt": "2026-10-12T22:34:11.000Z",
-            "checkedAt": "2026-10-13T01:50:00.000Z",
-            "excerpt": "Nanya Technology’s gross margin hit 85.7% in the 3rd quarter as DRAM average selling prices (ASPs) rose 60% over the second quarter amid a severe DRAM shortage",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Nanya Technology’s gross margin hit 85.7% in the 3rd quarter as DRAM average selling prices (ASPs) rose 60% over the second quarter",
             "verification": "collector-report",
             "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
             "credibility": {
@@ -5373,22 +5755,29 @@
             }
           }
         ],
+        "people": [],
         "credibility": {
           "score": 33,
           "label": "规则初评，未校准",
-          "reason": "dnystedt 等专业转述，仍非公司英文官方 X 原帖。",
+          "reason": "具名科技记者转述，缺公司官方 X。",
           "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        },
-        "people": []
+        }
       },
-      "rank": 1,
-      "lastEdition": "2026-10-13-0900",
-      "lastCheckedAt": "2026-10-13T01:52:01.370Z",
+      "rank": 2,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T01:52:01.370Z",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
-      "lateDiscovery": false
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "nanya-dram-asp-margin-surge-2026-10-12",
+        "action": "keep",
+        "reason": "DRAM 短缺定价仍有效。",
+        "sourceUrl": "https://x.com/dnystedt/status/2109774661064265943",
+        "checkedAt": "2026-10-13T08:10:58.671Z"
+      }
     },
     {
       "eventKey": "avgo-capital-cost-ai-buildout-2026-10-12",
@@ -5574,6 +5963,1046 @@
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
       "lateDiscovery": false
+    },
+    {
+      "eventKey": "meta-muse-wonder-frontier-2026-10-12",
+      "firstSeenAt": "2026-10-13T08:11:02.859Z",
+      "firstEdition": "2026-10-13-1600",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "meta-muse-wonder-frontier-2026-10-12",
+        "title": "Mark Zuckerberg 发布 Muse Wonder frontier 模型族",
+        "fact": "Mark Zuckerberg 于窗口内宣布 Muse Wonder 与 Muse Wonder Full，称其为 Meta Superintelligence Labs 一年后的 frontier 级模型，面向个人与专业 agent 任务；Muse Wonder 经 Meta Model API 与 Muse Code 提供，Full 版本分发更受限。@Meta 官方亦转发“迄今最强模型”。",
+        "impact": "若采用与付费转化兑现，将抬升 META 在 frontier 竞争中的产品权重，并影响对 OpenAI/Anthropic 的相对叙事与云推理需求结构。",
+        "direction": "双向",
+        "horizon": "数周至数季度",
+        "affected": [
+          "META",
+          "OpenAI",
+          "Anthropic",
+          "云推理需求"
+        ],
+        "counterCase": "若独立评测无法复现公司图表、API 仅提供较弱变体，或付费订阅转化低于预期，则对收入与估值传导应下调。",
+        "selectionReason": "窗口内少有的 CEO 原帖产品发布，横向影响 AI 竞争与商业化预期最广。",
+        "credibilityReason": "锚定 @finkd 与 @Meta 原帖；基准分数与“全球第二”说法多为第三方转述。",
+        "change": "新增",
+        "eventTime": "2026-10-12T16:55:01.000Z",
+        "attentionEvidence": "@finkd 主帖展示约 430 万、点赞约 3.5 万；热度仅作注意力参考。",
+        "sources": [
+          {
+            "url": "https://x.com/finkd/status/2109689305073614918",
+            "postId": "2109689305073614918",
+            "username": "finkd",
+            "publishedAt": "2026-10-12T16:55:01.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Introducing Muse Wonder, our new family of frontier models with state of the art performance for personal and professional agentic work.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/Meta/status/2109701133744943286",
+            "postId": "2109701133744943286",
+            "username": "Meta",
+            "publishedAt": "2026-10-12T17:42:01.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Check out our most capable models to date",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 49,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 92,
+              "claimScore": 47,
+              "breakdown": {
+                "directness": 30,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "账号在人工来源表中登记为机构一手来源"
+              ],
+              "warnings": [
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/testingcatalog/status/2109693532592013798",
+            "postId": "2109693532592013798",
+            "username": "testingcatalog",
+            "publishedAt": "2026-10-12T17:11:49.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "META: Muse Wonder Full scores second on the Artificial Analysis Index, just 2 points behind Claude Opus 5.5",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 33,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 31,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [
+          {
+            "name": "Mark Zuckerberg",
+            "intro": "Meta创始人兼CEO"
+          }
+        ],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "锚定 @finkd 与 @Meta 原帖；基准分数与“全球第二”说法多为第三方转述。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "ter-form-300m-hbm-test-collab-2026-10-12",
+      "firstSeenAt": "2026-10-13T08:11:02.859Z",
+      "firstEdition": "2026-10-13-1600",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "ter-form-300m-hbm-test-collab-2026-10-12",
+        "title": "Teradyne 拟向 FormFactor 战略入股约 3 亿美元并联手 HBM 测试",
+        "fact": "多家财经账号转述：Teradyne 同意向 FormFactor 普通股投资约 3 亿美元，并开展涵盖 HPC、先进封装、HBM 与硅光的探针/接口与自动测试协作；交易仍待监管批准。盘后 FORM 股价抬头的报道并存。",
+        "impact": "若落地，测试设备与探针卡更深绑定，可能缓解或重新定价 AI 加速器量产测试瓶颈，影响 HBM/先进封装交付节奏与相关设备商份额。",
+        "direction": "双向",
+        "horizon": "数月（交割与产品联调）",
+        "affected": [
+          "FORM",
+          "TER",
+          "HBM 供应链",
+          "先进封装"
+        ],
+        "counterCase": "若监管否决、协作停留在意向，或客户导入缓慢，则对瓶颈缓解叙事应下调。",
+        "selectionReason": "把“测得出”写成可观察的资本与组织动作，直接落在 HBM/封装量产约束。",
+        "credibilityReason": "多源财经转述一致，但缺 TER/FORM 官方 X 原帖。",
+        "change": "新增",
+        "eventTime": "2026-10-12T20:36:54.000Z",
+        "eventTimeNote": "公司新闻稿准确时刻未在所用帖文写明；转述集中在 10/12 美股盘后。",
+        "attentionEvidence": "@outliercapx 等转述帖展示数千；热度仅参考。",
+        "sources": [
+          {
+            "url": "https://x.com/outliercapx/status/2109745145369301410",
+            "postId": "2109745145369301410",
+            "username": "outliercapx",
+            "publishedAt": "2026-10-12T20:36:54.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": " is ripping +6% AH after  dropped 00M into the company and locked in a deep partnership... HPC, advanced packaging, HBM, and silicon photonics.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/skylabintel/status/2109848842762178649",
+            "postId": "2109848842762178649",
+            "username": "skylabintel",
+            "publishedAt": "2026-10-13T03:28:57.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Teradyne agreed to invest 00 million in FormFactor alongside a joint development program... HBM, advanced",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "多源财经转述一致，但缺 TER/FORM 官方 X 原帖。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 1,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "ocp-open-datacenter-power-spec-2026-10-12",
+      "firstSeenAt": "2026-10-13T08:11:02.859Z",
+      "firstEdition": "2026-10-13-1600",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "ocp-open-datacenter-power-spec-2026-10-12",
+        "title": "OCP：开放 AI 机房规范并强调电网故障穿越",
+        "fact": "Open Compute Project 账号讨论开放数据中心生态愿景，称机架功率密度逼近兆瓦级；转述指 Google/Meta/Microsoft/NVIDIA 等推动规范，要求电网故障后短时间内恢复近满载，以避免类似 2024 年约 1500MW 负荷脱落事件。英伟达同日 OCP 相关开放机架/网络叙事仍在传播。",
+        "impact": "统一机房与电网接口有望缩短 AI 工厂交付周期，但也把并网、电力电子与备用电源推到关键路径；规范落地速度将影响电力设备与液冷需求节奏。",
+        "direction": "利多",
+        "horizon": "数季度",
+        "affected": [
+          "电力设备与开关",
+          "液冷与机房工程",
+          "NVDA",
+          "云厂商资本开支"
+        ],
+        "counterCase": "若规范停留在草案、公用事业接入仍卡住，则对交付加速叙事应下调。",
+        "selectionReason": "把 AI 扩张约束从芯片转到可执行的机房/电网接口。",
+        "credibilityReason": "有 @OpenComputePrj 原帖；电网 1500MW 案例与厂商名单多为转述。",
+        "change": "新增",
+        "eventTime": "2026-10-12T20:41:35.000Z",
+        "attentionEvidence": "OCP 原帖互动有限；华尔街引擎等 NVDA OCP 转述展示约 7 万。",
+        "sources": [
+          {
+            "url": "https://x.com/OpenComputePrj/status/2109746322438033607",
+            "postId": "2109746322438033607",
+            "username": "OpenComputePrj",
+            "publishedAt": "2026-10-12T20:41:35.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Realizing the OCP Open Data Center Ecosystem Vision... rack power densities approach 1MW",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/IndiffSpectator/status/2109742641092891107",
+            "postId": "2109742641092891107",
+            "username": "IndiffSpectator",
+            "publishedAt": "2026-10-12T20:26:57.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "AI data centers just got grid rules. Google, Meta, Microsoft and Nvidia published a spec at the OCP summit: ride through grid faults, back to near-full load in under 2 seconds.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "有 @OpenComputePrj 原帖；电网 1500MW 案例与厂商名单多为转述。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 4,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "maia-300-hbm-tsmc-rebalance-2026-10-12",
+      "firstSeenAt": "2026-10-13T08:11:02.859Z",
+      "firstEdition": "2026-10-13-1600",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "maia-300-hbm-tsmc-rebalance-2026-10-12",
+        "title": "Maia 300 部署叙事指向 HBM/代工再平衡",
+        "fact": "围绕 Nadella 公告的讨论强调多吉瓦自研推理会争夺先进制程与高带宽内存，而不只是替代 GPU 采购名额。",
+        "impact": "ASIC 放量可能抬升封装/HBM 结构性需求，使存储与代工相对 GPU 品牌的议价变化。",
+        "direction": "双向",
+        "horizon": "2026–2027",
+        "affected": [
+          "TSMC",
+          "HBM 三厂",
+          "NVDA",
+          "MSFT"
+        ],
+        "counterCase": "若 Maia 用量低于预期，传导弱于叙事。",
+        "selectionReason": "把公司战略落到半导体实物瓶颈。",
+        "credibilityReason": "锚定 CEO 原帖；工艺细节多为转述。",
+        "change": "延续",
+        "continuationReason": "主推理迁移仍待 2027 验证，产能讨论在窗口内继续。",
+        "eventTime": "2026-10-12T13:03:45.000Z",
+        "knowledgeCards": [
+          "I01",
+          "I03",
+          "I04"
+        ],
+        "disciplines": [
+          "半导体产业",
+          "供应链管理"
+        ],
+        "knowledgeApplication": "I01/I03：采购方自研降低对单一 GPU 依赖，却把瓶颈推向代工与 HBM；I04：需亚洲供应链线索交叉验证。",
+        "sources": [
+          {
+            "url": "https://x.com/Ishaan1806/status/2109656258026582042",
+            "postId": "2109656258026582042",
+            "username": "Ishaan1806",
+            "publishedAt": "2026-10-12T14:43:42.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Every hyperscaler now runs its own AI chip... When power is the bottleneck, efficiency decides the silicon. Whoever designs these, TSMC makes them",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/StockSavvyShay/status/2109633803027370104",
+            "postId": "2109633803027370104",
+            "username": "StockSavvyShay",
+            "publishedAt": "2026-10-12T13:14:28.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "$MSFT CEO Satya Nadella says Maia its “biggest bet yet on our own silicon” with multi-GW deployments starting next year and Maia 300 delivering 40% more tokens per watt",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 34,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 33,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 6,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [
+          {
+            "name": "Satya Nadella",
+            "intro": "微软董事长兼CEO"
+          }
+        ],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "锚定 CEO 原帖；工艺细节多为转述。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "form-ter-test-bottleneck-insight-2026-10-12",
+      "firstSeenAt": "2026-10-13T08:11:02.859Z",
+      "firstEdition": "2026-10-13-1600",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "form-ter-test-bottleneck-insight-2026-10-12",
+        "title": "探针卡与 ATE 联盟凸显 AI 量产“测得出”瓶颈",
+        "fact": "TER–FORM 协作明示覆盖 HBM、先进封装与硅光测试；市场解读为 AI 加速器良率与交付越来越受测试环节约束，而非只受晶圆产能约束。",
+        "impact": "测试资本开支与交期可能成为与 CoWoS/HBM 并列的卡点，相关设备商订单弹性上升。",
+        "direction": "利多",
+        "horizon": "数个季度",
+        "affected": [
+          "FORM",
+          "TER",
+          "HBM",
+          "OSAT"
+        ],
+        "counterCase": "若客户自建测试或竞争方案更快放量，联盟溢价有限。",
+        "selectionReason": "第二轮半导体包：把瓶颈从“造得出”延伸到“测得出”。",
+        "credibilityReason": "交易细节来自转述；机制判断为条件性。",
+        "change": "新增",
+        "eventTime": "2026-10-12T20:36:54.000Z",
+        "knowledgeCards": [
+          "I03",
+          "I01",
+          "R01"
+        ],
+        "disciplines": [
+          "半导体产业",
+          "运营管理"
+        ],
+        "knowledgeApplication": "I03：实物瓶颈在测试；I01：设备商先获订单，客户资本开支承压；R01：冲击经交期/良率传到利润。",
+        "sources": [
+          {
+            "url": "https://x.com/HyperTechInvest/status/2109884602097783010",
+            "postId": "2109884602097783010",
+            "username": "HyperTechInvest",
+            "publishedAt": "2026-10-13T05:51:03.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "$TER invests $300M in $FORM to advance AI semiconductor testing",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 33,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 31,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/LIWEI_TWCapital/status/2109880218131521741",
+            "postId": "2109880218131521741",
+            "username": "LIWEI_TWCapital",
+            "publishedAt": "2026-10-13T05:33:38.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "$TER Backs $FORM With a $300M Investment Agreement",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 33,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 31,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 33,
+          "label": "规则初评，未校准",
+          "reason": "交易细节来自转述；机制判断为条件性。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 1,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "anthropic-distillation-defense-2026-10-12",
+      "firstSeenAt": "2026-10-13T08:11:02.859Z",
+      "firstEdition": "2026-10-13-1600",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "anthropic-distillation-defense-2026-10-12",
+        "title": "Anthropic：称显著削弱针对 Claude 的蒸馏攻击",
+        "fact": "@AnthropicAI 发帖称近几个月在降低针对 Claude 的蒸馏攻击有效性方面取得显著进展，并链向说明文章。",
+        "impact": "若技术成立，有助于保护模型权重与 API 经济性，影响开源复制与竞争对手追赶成本。",
+        "direction": "利多",
+        "horizon": "数月",
+        "affected": [
+          "Anthropic",
+          "模型 API 竞争",
+          "开源复现路径"
+        ],
+        "counterCase": "若攻击方很快绕过，或文章缺乏可复核实验，则护城河叙事弱。",
+        "selectionReason": "AI 落地包：从发布转向可防御的商业化资产。",
+        "credibilityReason": "公司官方原帖；技术细节在外链未在 X 全文展开。",
+        "change": "新增",
+        "eventTime": "2026-10-12T23:58:35.000Z",
+        "knowledgeCards": [
+          "R08",
+          "I02",
+          "R04"
+        ],
+        "disciplines": [
+          "信息安全",
+          "产业组织"
+        ],
+        "knowledgeApplication": "R08：作者激励需折扣；I02：护城河是否转化为付费；R04：需独立复现才能确认。",
+        "sources": [
+          {
+            "url": "https://x.com/AnthropicAI/status/2109795898909950247",
+            "postId": "2109795898909950247",
+            "username": "AnthropicAI",
+            "publishedAt": "2026-10-12T23:58:35.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Over the last few months, we’ve made significant progress in reducing the effectiveness of distillation attacks against Claude.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "公司官方原帖；技术细节在外链未在 X 全文展开。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 3,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "spx-equal-weight-corr-record-low-2026-10-12",
+      "firstSeenAt": "2026-10-13T08:11:02.859Z",
+      "firstEdition": "2026-10-13-1600",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "spx-equal-weight-corr-record-low-2026-10-12",
+        "title": "转述：标普等权与市值加权相关度创纪录低位",
+        "fact": "多条帖文转述称标普等权与市值加权 52 周相关度约 0.67、创纪录低位，并指仅少数成分股推动指数；周一收盘标普近乎平盘而半导体/存储偏弱的结构亦被提及。",
+        "impact": "指数创新高不再代表典型股票健康，主动风险与等权/中小盘暴露的解释力上升；AI 权重股波动对指数的杠杆更大。",
+        "direction": "待定",
+        "horizon": "数周",
+        "affected": [
+          "美股指数解读",
+          "均等权 ETF",
+          "主动权益"
+        ],
+        "counterCase": "若统计口径错误或随后相关度回升，则“隐秘熊市”叙事过度。",
+        "selectionReason": "市场结构包：提醒共同因子与宽度。",
+        "credibilityReason": "缺指数编制方或一级研究原帖，仅为条件性转述。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "相关度统计的原始报告时间未在帖文给出。",
+        "knowledgeCards": [
+          "I05",
+          "R07",
+          "R05"
+        ],
+        "disciplines": [
+          "市场微观结构",
+          "行为金融"
+        ],
+        "knowledgeApplication": "I05：市值加权可被少数权重托住；R07：同因子而非代码数量；R05：媒体复述同一统计仍是一份证据。",
+        "sources": [
+          {
+            "url": "https://x.com/joy_gajjar27/status/2109771292698378512",
+            "postId": "2109771292698378512",
+            "username": "joy_gajjar27",
+            "publishedAt": "2026-10-12T22:20:48.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "The 52-week correlation between the equal-weight and cap-weight S&P 500 fell to 0.67, its lowest on record.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 34,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 33,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 6,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/InvestmentGuru_/status/2109699099830239586",
+            "postId": "2109699099830239586",
+            "username": "InvestmentGuru_",
+            "publishedAt": "2026-10-12T17:33:56.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "Only 25% of S&P 500 stocks are above their 50-day average",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 34,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 33,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 6,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 34,
+          "label": "规则初评，未校准",
+          "reason": "缺指数编制方或一级研究原帖，仅为条件性转述。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 4,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "ocp-grid-ride-through-insight-2026-10-12",
+      "firstSeenAt": "2026-10-13T08:11:02.859Z",
+      "firstEdition": "2026-10-13-1600",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "ocp-grid-ride-through-insight-2026-10-12",
+        "title": "电网故障穿越规范把电力接口写成 AI 工厂标准件",
+        "fact": "转述称新规范要求数据中心在电网故障后约 2 秒内回到近满载，背景包括曾出现约 1500MW 负荷脱落；OCP 同步讨论高功率机架。",
+        "impact": "电力电子、储能与快速响应电源需求可能随规范推广而前置，公用事业互联审批仍是长周期约束。",
+        "direction": "利多",
+        "horizon": "一至三年",
+        "affected": [
+          "电力设备",
+          "储能",
+          "数据中心 EPC"
+        ],
+        "counterCase": "若运营商不采用或电网侧无法配合，规范难成订单。",
+        "selectionReason": "电力包：把“缺电”写成可执行接口标准。",
+        "credibilityReason": "机制清楚，但 1500MW 案例与厂商名单为转述。",
+        "change": "新增",
+        "eventTime": "2026-10-12T20:26:57.000Z",
+        "knowledgeCards": [
+          "I03",
+          "M07",
+          "R01"
+        ],
+        "disciplines": [
+          "能源电力",
+          "工程管理"
+        ],
+        "knowledgeApplication": "I03：电力是 AI 实物瓶颈；M07：供应/接口损失取决于替代与修复时间；R01：经并网约束传到资本开支。",
+        "sources": [
+          {
+            "url": "https://x.com/MikeLongTerm/status/2109717334289977451",
+            "postId": "2109717334289977451",
+            "username": "MikeLongTerm",
+            "publishedAt": "2026-10-12T18:46:23.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "BREAKING $AMD $NVDA $GOOGL $META team up to standardize AI data center (“AI factory”) design and improve power resilience",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 35,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 35,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 8,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/udnagdeote/status/2109837675549086180",
+            "postId": "2109837675549086180",
+            "username": "udnagdeote",
+            "publishedAt": "2026-10-13T02:44:35.000Z",
+            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "excerpt": "the data-center buildout gets shared blueprints",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "机制清楚，但 1500MW 案例与厂商名单为转述。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 5,
+      "lastEdition": "2026-10-13-1600",
+      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
     }
   ],
   "applied": [
@@ -5583,26 +7012,30 @@
     "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e:2026-10-12T11:35:11.546Z",
     "2026-10-12-2100:2026-10-12T13:34:00.268Z",
     "manual-6f720182-4b4b-43cd-ad0b-5663ce6a4dba:2026-10-12T17:55:00.000Z",
-    "2026-10-13-0900:2026-10-13T01:52:01.370Z"
+    "2026-10-13-0900:2026-10-13T01:52:01.370Z",
+    "2026-10-13-1600:2026-10-13T08:11:02.859Z"
   ],
   "warnings": [],
   "lastStatus": "partial",
   "selected": {
     "focus": [
+      "meta-muse-wonder-frontier-2026-10-12",
+      "ter-form-300m-hbm-test-collab-2026-10-12",
+      "houthi-saudi-tanker-escalation-2026-10-12",
       "msft-maia-300-primary-inference-2026-10-12",
-      "houthi-saudi-airport-escalation-2026-10-12",
-      "avgo-intc-capital-bottleneck-2026-10-12",
-      "nvda-ocp-vera-rubin-open-rack-2026-10-12",
-      "zelenskyy-russia-broke-energy-ceasefire-2026-10-12"
+      "ocp-open-datacenter-power-spec-2026-10-12"
     ],
     "insights": [
-      "maia-300-hbm4-tsmc-n2p-custom-silicon-2026-10-12",
+      "maia-300-hbm-tsmc-rebalance-2026-10-12",
+      "form-ter-test-bottleneck-insight-2026-10-12",
       "nanya-dram-asp-margin-surge-2026-10-12",
+      "anthropic-distillation-defense-2026-10-12",
+      "spx-equal-weight-corr-record-low-2026-10-12",
+      "ocp-grid-ride-through-insight-2026-10-12",
+      "maia-300-hbm4-tsmc-n2p-custom-silicon-2026-10-12",
       "avgo-capital-cost-ai-buildout-2026-10-12",
       "cxmt-denser-dram-target-2026-10-12",
-      "flex-factory-built-ai-dc-modules-2026-10-12",
-      "vertiv-india-liquid-cooling-ai-factory-2026-10-12",
-      "anthropic-api-vs-subscription-compute-mix-2026-10-12"
+      "flex-factory-built-ai-dc-modules-2026-10-12"
     ]
   },
   "migrationNote": "2026-10-12仅迁移现存真实归档，未重新采集或核验。更早已清理归档未恢复，待Grok按缺口补查。",
