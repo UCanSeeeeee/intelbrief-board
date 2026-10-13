@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-13T21:19:21+08:00",
-  "updatedAt": "2026-10-13T21:31:08+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-13T21:32:04+08:00",
+  "finishedAt": "2026-10-13T21:32:04+08:00",
   "gitHeadAtStart": "e421c7de329c85dc1db9862c4f4fe56c4906fbde",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-13T21:31:24+08:00",
+      "detail": "pushed 10ea019"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-13T21:32:04+08:00",
+      "detail": "live 2100/people/index SHA matched 10ea019"
     }
   ],
   "pages": {
@@ -81,8 +81,8 @@
       "detail": "no new regular collection"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "10ea019",
   "notes": []
 }
