@@ -28,7 +28,7 @@
 |---|---|
 | 当前状态、接手与恢复 | CONTEXT.md、TASKS.md；只查相关 Git/平台证据 |
 | 代码/UI/功能维护 | docs/DESIGN_SYSTEM.md、相关页面脚本与测试；改数据结构再读 docs/X_DATA_CONTRACT.md |
-| Grok Bot接管、定时与发布 | docs/GROK_BOT_OPERATIONS.md、docs/AGENT_ENTRY.md |
+| Grok Bot接管、定时与发布 | docs/GROK_BOT_OPERATIONS.md、docs/AGENT_ENTRY.md；运行日志 `npm run ops:run` → `data/ops-runs/`（无日志≈平台在进代码前失败） |
 | 美股简报 | docs/STOCK_BRIEF.md、config/research-guidance.json 指向的知识库与 SOP |
 | 人物/个股/AI/加密 | 对应 docs 页面说明和 config 配置，再读研究知识与 SOP；窗口以上述配置为准 |
 | 财报、宏观日历 | docs/EARNINGS_CALENDAR.md、docs/MACRO_EVENTS.md，适用各自来源例外 |

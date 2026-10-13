@@ -275,6 +275,26 @@ for (const week of earnings.weeks) {
   }
 }
 
+
+{
+  const opsDir = path.join(ROOT, 'data/ops-runs');
+  if (fs.existsSync(opsDir)) {
+    const ops = require('./lib/ops-run');
+    for (const file of fs.readdirSync(opsDir).filter(f => f.endsWith('.json'))) {
+      const data = readJson(path.join(opsDir, file));
+      if (file === 'latest.json') {
+        if (!data.period || !data.status || !data.file) fail(`ops-runs latest.json incomplete`);
+        continue;
+      }
+      if (data.schemaVersion !== 1) fail(`ops-runs ${file}: unsupported schema`);
+      try { ops.assertPeriod(data.period); } catch (e) { fail(`ops-runs ${file}: ${e.message}`); }
+      if (!ops.RUN_STATUS.includes(data.status)) fail(`ops-runs ${file}: bad status`);
+      if (!Array.isArray(data.stages) || data.stages.length !== ops.STAGES.length) fail(`ops-runs ${file}: stages`);
+      if (file !== data.period + '.json') fail(`ops-runs ${file}: filename must match period`);
+    }
+  }
+}
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);

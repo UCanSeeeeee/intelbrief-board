@@ -96,3 +96,46 @@ Grok回报完整读取AGENTS.md、CONTEXT.md、TASKS.md、本文、STOCK_BRIEF.m
 **配置已启用不等于首跑已成功。** 平台任务存在、启用状态、三个时刻和已存提示词由GPT正常UI直接核验；云端拉取、任务ID、时区、下一次运行及不依赖用户电脑来自Grok回执，尚未通过真实无人值守运行验证。待首个实际期次留下采集审计、Git提交和线上一致性证据后，再更新首跑验收。
 
 “首跑待验收”是记录状态，不是暂停许可或等待GPT触发的条件。Grok应在已启用任务到期时自主执行；权限、额度、网络或代码故障仍须照实报告，不伪造成功。后续维护修改此任务，不另建重复调度。
+
+## 运营运行日志（ops-runs，2026-10-13）
+
+目的：定时或手动内容跑失败时，能区分「平台在进仓库代码前就挂了」与「采集/校验/推送某一阶段失败」。
+
+### 日志位置
+
+| 路径 | 含义 |
+|---|---|
+| `data/ops-runs/<period>.json` | 单次运行完整里程碑（开始时间 Asia/Shanghai、period、git HEAD、各 stage、各页状态、错误摘要、成功时 commit） |
+| `data/ops-runs/latest.json` | 最近一次写出的摘要指针 |
+
+period 例：`2026-10-13-0900`（定时）、`manual-<uuid>`（手动）、补跑可用同一定时 period 或 `catchup-…`。**不进 Cloudflare 公开构建**（`build-site` 不复制本目录）；可随内容提交进 Git 便于事后排查。禁止写入 token、Webhook key、PAT、Bearer 等密钥（CLI/库会脱敏）。
+
+### 命令
+
+```bash
+npm run ops:run -- start  --period 2026-10-13-0900 --trigger scheduled
+npm run ops:run -- stage  --period 2026-10-13-0900 --name pull --status ok
+npm run ops:run -- page   --period 2026-10-13-0900 --page news --status partial --detail "3+4"
+npm run ops:run -- fail   --period 2026-10-13-0900 --stage search --message "…"
+npm run ops:run -- finish --period 2026-10-13-0900 --status partial --commit <hash>
+npm run ops:run -- latest
+```
+
+stage 固定为：`pull` → `read` → `search` → `write` → `validate` → `push` → `verify`。
+
+### 如何读失败
+
+1. **仓库没有对应 `<period>.json`，且 `latest.json` 也不是该期**：平台很可能在拉起 box/执行仓库脚本之前就失败（例如界面只显示 `Activity task failed`）。本日志帮不上忙；查平台运行历史、例行任务是否启用、是否额度/登录问题。不要把「无日志」说成「采集返回 0 条」。
+2. **有 start、停在某一 stage=failed**：读该文件的 `error.message` / `stackSnippet` 与 `pages`，可知卡在 pull/检索/校验/推送哪一步。
+3. **有 finish 且带 commitHash**：再核线上 JSON 与提交是否一致；Git 推送成功仍不等于 Pages 已刷新。
+
+### 例行任务提示词附录（供粘贴；本执行器不改 UpdateRoutine）
+
+把下面整段追加到 `intelbrief-09-16-21` 提示词末尾（由有 UpdateRoutine 权限的父代理粘贴；本仓库只存文案）：
+
+> 【ops-run 日志】每次触发后、开始 pull 之前：先 `npm run ops:run -- start --period <本期 id，如 2026-10-13-0900> --trigger scheduled`。随后每个可区分阶段（pull/read/search/write/validate/push/verify）用 `ops:run stage` 标记 ok/failed/skipped。任一 catchable 失败：先 `ops:run fail --period … --stage … --message "…"`（可附 --stack），再退出；不要静默结束。成功或部分成功推送后：`ops:run finish --period … --status success|partial --commit <hash>`，并把该 `data/ops-runs/<period>.json` 与 `latest.json` 随内容一并提交。汇报时必须写清 period、最后完成的 stage、是否已有 commit。若平台在脚本启动前失败，仓库不会有本日志——如实报告「无 ops-run，疑似平台 Activity task failed」，不得伪造采集结果。
+
+### 2026-10-13 09:00 空档
+
+- 平台运行记录：约 09:05 `Activity task failed`；仓库无 `2026-10-13-0900` 提交与 ops-run（日志能力当日稍后才入库）。
+- 处理：先落地本日志工具；再按 STOCK_BRIEF 补跑该期（catchup），不新建轮询例行任务。

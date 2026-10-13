@@ -54,6 +54,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 - `knowledge/GROK_X_COLLECTION_SOP.md`：把知识库转换成两轮检索、追源、反证、准入、去重、选择和审计记录的执行流程。
 - `us-equity-x-brief-quality`：共享卡片质量技能，统一作者、中文信息摘要、事件时间、反向条件与原帖链接；采集过程只进入证据层。当前 0.1.0 在共享技能库孵化并已链接到本机 Codex。
 - `config/stock-brief.json`：时区、时段、条数与技能标识。
+- `data/ops-runs/`：内容运行里程碑日志（`npm run ops:run`）；排查定时失败时先看这里，缺文件通常表示平台未跑到仓库脚本。规则见 docs/GROK_BOT_OPERATIONS.md「运营运行日志」。
 - `data/stock-briefs/index.json`：最近三期目录；同目录保留的期次文件不可覆盖，写入第四期时移除最旧一期。旧链路有实际期次，不等于新Grok独立调度已验收。
 - `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
 - `index.html` / `people.html` / `tickers.html` / `ai.html` / `crypto.html` / `earnings.html`：侧栏顺序为美股讯息→具体人物→具体个股→AI板块→加密→宏观大事→财报日历。宏观大事见 `docs/MACRO_EVENTS.md`（含超关注财报精选）；板块空头已于2026-10-12停用，仅保留仓库历史资料（`docs/SHORTS_INTELLIGENCE.md`），不再采集或部署。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的；`crypto.js`：板块讯息+BTC+Brew。
