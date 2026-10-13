@@ -9,7 +9,7 @@
   "carriedOver": [],
   "collectionPath": "grok-bot-x-search",
   "status": "partial",
-  "summary": "周一美股常规交易进行、美债现金市场因哥伦布日休市。周末胡塞袭击利雅得机场的后续在周一继续发酵：航班取消、空域空荡、油市波动，伊朗提出调解；特朗普所称俄乌“能源停火”遭克里姆林宫拒绝确认后油价回弹，美方据报以暂停军援施压乌克兰停止打击俄能源设施。OpenAI 年化收入口径澄清至约500亿美元、台积电有望连续第六季创利、台湾封测报价上调与存储短缺预期，继续牵动AI链估值与实物瓶颈定价。",
+  "summary": "周一美股常规交易进行、美债现金市场因哥伦布日休市。周末胡塞袭击利雅得机场的后续在周一继续发酵：航班取消、空域空荡、油市波动，伊朗提出调解；Donald Trump 所称俄乌“能源停火”遭克里姆林宫拒绝确认后油价回弹，美方据报以暂停军援施压乌克兰停止打击俄能源设施。OpenAI 年化收入口径澄清至约500亿美元、台积电有望连续第六季创利、台湾封测报价上调与存储短缺预期，继续牵动AI链估值与实物瓶颈定价。",
   "marketContext": "北京时间阅读日2026-10-12（周一）。展示窗口自周六00:00至本期截止21:00，覆盖整个周末。美国哥伦布日美债现金市场休市，美股仍交易；不等美国开盘或假日结束。16:00定时期次未产出，本期仅制作最近到期的21:00期，不伪造补齐16:00。",
   "coverage": {
     "method": "Grok Bot X+github 自身 X 工具（search_posts_all / get_posts_by_ids）两轮独立检索；首批并行调用曾遇共享429后改串行，未切换 grok.com。含追源与反证查询。",
@@ -342,12 +342,13 @@
         "label": "规则初评，未校准",
         "reason": "Reuters与多家快讯账号交叉，但延布具体威胁与伊朗斡旋细节仍为媒体转述。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
       "title": "克里姆林宫拒绝确认能源停火，油价在叙事瓦解后回弹",
-      "fact": "Sky News转述克里姆林宫发言人佩斯科夫称围绕特朗普“能源停火”声明的俄美接触仍在继续，并称俄方寻求的是持久和平而非停火；zerohedge摘要称期货走平、油价在停火叙事瓦解后回弹、存储股下跌。此前路透曾报道油价因停火供应预期下跌。",
+      "fact": "Sky News转述克里姆林宫发言人 Dmitry Peskov 称围绕 Donald Trump“能源停火”声明的俄美接触仍在继续，并称俄方寻求的是持久和平而非停火；zerohedge摘要称期货走平、油价在停火叙事瓦解后回弹、存储股下跌。此前路透曾报道油价因停火供应预期下跌。",
       "impact": "停火未获莫斯科确认使成品油供给改善预期退潮，油价回弹会重新推高通胀预期与长端利率压力，并削弱周末风险偏好修复。",
       "direction": "双向",
       "horizon": "未来数日至两周",
@@ -359,10 +360,10 @@
       ],
       "counterCase": "若俄方正式确认停火范围且双方能源设施一周内未再遇袭，供给风险溢价下降判断可恢复。",
       "selectionReason": "停火叙事是周末油价下跌主因，周一官方不确认与油价回摆决定该交易能否延续。",
-      "credibilityReason": "Sky News对佩斯科夫的转述与市场结果摘要相互独立；仍缺克里姆林宫原始文字稿。",
+      "credibilityReason": "Sky News对 Dmitry Peskov 的转述与市场结果摘要相互独立；仍缺克里姆林宫原始文字稿。",
       "change": "进展",
       "eventTime": "2026-10-12T10:09:14Z",
-      "eventTimeNote": "以Sky News发布佩斯科夫转述的时间为近似。",
+      "eventTimeNote": "以Sky News发布 Dmitry Peskov 转述的时间为近似。",
       "attentionEvidence": "Sky News帖约6.7万次展示；zerohedge标题帖约4.5万次展示。",
       "sources": [
         {
@@ -486,14 +487,24 @@
       "credibility": {
         "score": 30,
         "label": "规则初评，未校准",
-        "reason": "Sky News对佩斯科夫的转述与市场结果摘要相互独立；仍缺克里姆林宫原始文字稿。",
+        "reason": "Sky News对 Dmitry Peskov 的转述与市场结果摘要相互独立；仍缺克里姆林宫原始文字稿。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        },
+        {
+          "name": "Dmitry Peskov",
+          "intro": "克里姆林宫发言人"
+        }
+      ]
     },
     {
       "eventKey": "us-ukraine-weapons-halt-threat-2026-10-11",
       "title": "美方据报以暂停军援施压乌克兰停止打击俄能源设施",
-      "fact": "KobeissiLetter援引英国《金融时报》称特朗普政府正威胁暂停对乌克兰武器供应，以迫使泽连斯基停止打击俄罗斯能源基础设施，并据报游说欧洲国家配合结束相关打击。",
+      "fact": "KobeissiLetter援引英国《金融时报》称 Donald Trump 政府正威胁暂停对乌克兰武器供应，以迫使 Volodymyr Zelensky 停止打击俄罗斯能源基础设施，并据报游说欧洲国家配合结束相关打击。",
       "impact": "若军援威胁兑现，乌方对俄炼厂打击能力下降可能改善俄成品油出口预期、压低柴油裂解；若乌方坚持打击或欧洲不配合，地缘与能源波动将延续，并增加美欧政策分裂溢价。",
       "direction": "双向",
       "horizon": "未来两周",
@@ -556,7 +567,17 @@
         "label": "规则初评，未校准",
         "reason": "单一高互动转述账号援引FT，未见FT原链或白宫确认，证据层级为媒体转述。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        },
+        {
+          "name": "Volodymyr Zelensky",
+          "intro": "乌克兰总统"
+        }
+      ]
     },
     {
       "eventKey": "openai-arr-50b-clarification-2026-10-10",
@@ -666,7 +687,8 @@
         "label": "规则初评，未校准",
         "reason": "多为二手转述FT/The Information等，未见OpenAI原始投资者材料；口径解释仍有分歧。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "us-real-yield-highest-since-2008-2026-10-11",
@@ -777,7 +799,8 @@
         "label": "规则初评，未校准",
         "reason": "Bilello为常见市场数据评论者，给出明确数字；未在本期独立核验财政部/TIPS原始报价界面。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     }
   ],
   "insights": [
@@ -858,7 +881,8 @@
         "label": "规则初评，未校准",
         "reason": "转述台媒，缺公司具名报价单；与周末封测涨价主题一致但证据仍间接。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "tsmc-record-profit-ai-expectation-2026-10-12",
@@ -937,7 +961,8 @@
         "label": "规则初评，未校准",
         "reason": "路透预期性报道，非公司已披露财报数字。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "citi-nand-deficit-2027-2028-2026-10-10",
@@ -1016,7 +1041,8 @@
         "label": "规则初评，未校准",
         "reason": "二手转述银行展望附图，未见花旗原文完整报告。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "gelsinger-gas-turbine-leadtime-dc-default-2026-10-09",
@@ -1094,7 +1120,8 @@
         "label": "规则初评，未校准",
         "reason": "转述播客观点，非新增项目合同或OEM订单数据。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "google-wyoming-blackhills-gas-microgrid-2026-10-09",
@@ -1213,7 +1240,8 @@
         "label": "规则初评，未校准",
         "reason": "行业媒体转述，投资与容量数字需以公司监管申报为准。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "micron-hbm-contracted-pricing-2026-10-10",
@@ -1291,7 +1319,8 @@
         "label": "规则初评，未校准",
         "reason": "个人投资者转述管理层口径，缺美光原文纪要链接。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     }
   ],
   "readingSelection": {

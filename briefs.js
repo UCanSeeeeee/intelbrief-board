@@ -13,6 +13,11 @@
     if (!response.ok) throw new Error('读取失败');
     return response.json();
   }
+  function peopleNote(list) {
+    // Person intros from config/person-registry.json; shown in full, never truncated.
+    if (!Array.isArray(list) || !list.length) return '';
+    return `<p class="card-people"><strong>相关人物</strong>${list.map(p => `<span class="person-chip"><span class="person-chip-name">${escape(p.name)}</span><span class="person-chip-intro">${escape(p.intro)}</span></span>`).join('')}</p>`;
+  }
   function card(event, index) {
     const knowledge = event.knowledgeApplication ? `<div class="brief-knowledge"><strong>${escape(event.disciplines.join(' × '))}</strong><p>${escape(event.knowledgeApplication)}</p><small>知识卡：${escape(event.knowledgeCards.join('、'))} · 条件性参考，不是事实证明</small></div>` : '';
     const primary = event.sources[0] || {};
@@ -21,6 +26,7 @@
     return `<article class="x-card brief-card">
       <div class="brief-author"><span>作者</span><strong>@${escape(primary.username || '未查明')}</strong></div>
       <div class="brief-card-top"><span class="brief-rank">${String(index+1).padStart(2,'0')}</span><h3>${escape(event.title)}</h3><span class="badge">${escape(event.change)}</span></div>
+      ${peopleNote(event.people)}
       <p class="signal-verification">${primary.verification === 'direct' ? '已直读原帖' : '待独立核验'} · 发布 ${escape(time(primary.publishedAt))}（北京时间）</p>
       <div class="topic-row"><span>${escape(event.direction)}</span><span>${escape(event.horizon)}</span>${event.affected.map(v=>`<span>${escape(v)}</span>`).join('')}</div>
       <p><strong>信息摘要</strong> ${escape(event.fact)}</p>

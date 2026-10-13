@@ -1411,3 +1411,10 @@ body[data-page="earnings"] .earnings-day-head { position: sticky; top: 0; z-inde
   .signal-card-head time { font-size: 12px; }
   .reading-rules .tab-research-rule { grid-template-columns: 1fr; }
 }
+
+/* Card person intros (user rule 2026-10-13): original name + ≤15-char intro, wraps fully, never clipped. */
+.card-people { display:flex; flex-wrap:wrap; align-items:baseline; gap:var(--sp-2, 8px); margin:var(--sp-2, 8px) 0; font-size:13px; line-height:1.7; color:var(--text-secondary); }
+.card-people > strong { color:var(--text-muted); font-weight:500; margin-right:4px; }
+.person-chip { display:inline-flex; flex-wrap:wrap; gap:6px; padding:2px 10px; border:1px solid var(--border); border-radius:999px; overflow-wrap:anywhere; }
+.person-chip-name { color:var(--text); font-weight:500; }
+.person-chip-intro { color:var(--text-muted); }

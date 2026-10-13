@@ -34,6 +34,11 @@
     }[item.verification] || '核验状态待注明';
   }
 
+  function peopleNote(list) {
+    // Person intros from config/person-registry.json; shown in full, never truncated.
+    if (!Array.isArray(list) || !list.length) return '';
+    return `<p class="card-people"><strong>相关人物</strong>${list.map(p => `<span class="person-chip"><span class="person-chip-name">${escape(p.name)}</span><span class="person-chip-intro">${escape(p.intro)}</span></span>`).join('')}</p>`;
+  }
   function renderCard(item, extraBadge) {
     const url = safeUrl(item.url);
     const affected = Array.isArray(item.affected) ? item.affected : [];
@@ -46,6 +51,7 @@
         <time>${escape(formatTime(item.publishedAt))}（北京时间）</time>
       </div>
       <h4>${escape(item.title || '未命名事件')}</h4>
+      ${peopleNote(item.people)}
       <p class="signal-verification">${escape(item.author || '来源待注明')} · ${escape(evidenceLabel(item))}</p>
       <p class="signal-fact"><strong>信息摘要</strong>${escape(item.fact || '尚未写明')}</p>
       <details open class="analysis-details"><summary>影响分析</summary>

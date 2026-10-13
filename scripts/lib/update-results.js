@@ -1,4 +1,5 @@
 const {mergePosts,sha256,canonicalPostUrl}=require('./x-data');
+const {annotateCard}=require('./person-names');
 const {prepareBrief}=require('./stock-brief');
 const {windowStart,beijingIso,displayWindow}=require('./windows');
 const requireValue=(ok,message)=> {if(!ok) throw new Error(message);};
@@ -83,7 +84,9 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     requireValue(Array.isArray(item.affected),`${kind}缺少影响对象`);
     const ranks=item.weeklyRanks||{};
     for(const [tabId,rank] of Object.entries(ranks)) requireValue(item.tabIds.includes(tabId)&&Number.isInteger(rank)&&rank>=1&&rank<=allowed.get(tabId).weeklyLimit,`${kind}周榜排名无效`);
-    return {eventKey:item.eventKey.trim(),tabIds:item.tabIds,title:item.title.trim(),fact:item.fact.trim(),whyItMatters:item.whyItMatters.trim(),counterCase:item.counterCase.trim(),affected:item.affected.map(String),author:item.author.trim(),publishedAt:item.publishedAt,url:item.url,verification:'collector-report',tier:item.tier,weeklyRanks:ranks};
+    const out={eventKey:item.eventKey.trim(),tabIds:item.tabIds,title:item.title.trim(),fact:item.fact.trim(),whyItMatters:item.whyItMatters.trim(),counterCase:item.counterCase.trim(),affected:item.affected.map(String),author:item.author.trim(),publishedAt:item.publishedAt,url:item.url,verification:'collector-report',tier:item.tier,weeklyRanks:ranks};
+    try{annotateCard(out,undefined,`${kind}.${out.eventKey}`);}catch(error){requireValue(false,error.message);}
+    return out;
   });
   for(const tab of configured) {
     const {latest,weekly}=windowDays(tab);

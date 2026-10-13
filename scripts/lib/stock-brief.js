@@ -1,4 +1,5 @@
 const fs = require('node:fs');
+const { annotateCard } = require('./person-names');
 const path = require('node:path');
 const { ROOT, readJson } = require('./x-data');
 const { scorePost } = require('./credibility');
@@ -74,6 +75,7 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
         requireValue(nonempty(event[key]), `事件缺少 ${key}`);
       }
       requireValue(!/(?:Grok\s*返回|Grok\s*称|采集器(?:返回|称)|原帖(?:汇总)?称)/i.test(event.fact), '信息摘要不能包含采集过程话术');
+      try { annotateCard(event, undefined, `${group}.${event.eventKey}`); } catch (error) { requireValue(false, error.message); }
       requireValue(['利多', '利空', '双向', '待定'].includes(event.direction), '影响方向无效');
       requireValue(['新增', '进展', '延续'].includes(event.change), '事件变化标记无效');
       if (event.change === '延续') requireValue(nonempty(event.continuationReason), '延续事件需要说明当前仍有影响的原因');

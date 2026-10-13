@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "rule": "卡片中的人名保留原文写法（英文名用原拼写），不使用中文音译；每张卡片在 people 字段列出提到的人物及 ≤15 字简介。新人物先在此登记经核实的简介。用户2026-10-13指定。",
+  "introMaxChars": 15,
+  "people": [
+    { "name": "Satya Nadella", "intro": "微软董事长兼CEO", "aliases": ["萨蒂亚·纳德拉", "萨提亚·纳德拉", "纳德拉"], "matchTerms": ["Satya Nadella", "Nadella"], "handles": ["satyanadella"] },
+    { "name": "Jensen Huang", "intro": "英伟达创始人兼CEO", "aliases": ["黄仁勋"], "matchTerms": ["Jensen Huang"], "handles": [] },
+    { "name": "Elon Musk", "intro": "特斯拉与SpaceX CEO", "aliases": ["埃隆·马斯克", "马斯克"], "matchTerms": ["Elon Musk", "Musk"], "handles": ["elonmusk"] },
+    { "name": "Donald Trump", "intro": "美国总统", "aliases": ["唐纳德·特朗普", "特朗普"], "matchTerms": ["Donald Trump", "Trump"], "handles": ["realdonaldtrump"] },
+    { "name": "Volodymyr Zelensky", "intro": "乌克兰总统", "aliases": ["弗拉基米尔·泽连斯基", "泽连斯基"], "matchTerms": ["Volodymyr Zelensky", "Zelensky", "Zelenskyy"], "handles": ["zelenskyyua"] },
+    { "name": "Scott Bessent", "intro": "美国财政部长", "aliases": ["斯科特·贝森特", "贝森特"], "matchTerms": ["Scott Bessent", "Bessent"], "handles": [] },
+    { "name": "Sundar Pichai", "intro": "谷歌及Alphabet CEO", "aliases": ["桑达尔·皮查伊", "皮查伊"], "matchTerms": ["Sundar Pichai", "Pichai"], "handles": ["sundarpichai"] },
+    { "name": "Dmitry Peskov", "intro": "克里姆林宫发言人", "aliases": ["德米特里·佩斯科夫", "佩斯科夫"], "matchTerms": ["Dmitry Peskov", "Peskov"], "handles": [] },
+    { "name": "Jamie Dimon", "intro": "摩根大通董事长兼CEO", "aliases": ["杰米·戴蒙", "戴蒙"], "matchTerms": ["Jamie Dimon", "Dimon"], "handles": [] },
+    { "name": "Mark Carney", "intro": "加拿大总理", "aliases": ["马克·卡尼", "卡尼"], "matchTerms": ["Mark Carney", "Carney"], "handles": [] },
+    { "name": "Emmanuel Macron", "intro": "法国总统", "aliases": ["埃马纽埃尔·马克龙", "马克龙"], "matchTerms": ["Emmanuel Macron", "Macron"], "handles": ["emmanuelmacron"] }
+  ]
+}

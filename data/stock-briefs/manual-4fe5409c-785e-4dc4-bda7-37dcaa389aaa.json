@@ -4,7 +4,7 @@
   "scheduledFor": "2026-10-11T23:45:00+08:00",
   "windowStart": "2026-10-11T21:00:00+08:00",
   "status": "partial",
-  "summary": "手动更新覆盖上一成功定时期次（21:00）至 23:45 的约 2 小时 45 分钟窗口。美股常规交易休市。市场焦点入选 4 条：俄乌能源停火声明与泽连斯基否认、利雅得机场胡塞升级、欧盟对华混动进口配额、IEA 催促释放柴油。多学科第二轮独立检索入选 5 条，覆盖实际利率、半导体周度分化、美光客户订金融资、双热带气旋电力中断延续、马斯克招揽芯片人才。",
+  "summary": "手动更新覆盖上一成功定时期次（21:00）至 23:45 的约 2 小时 45 分钟窗口。美股常规交易休市。市场焦点入选 4 条：俄乌能源停火声明与 Volodymyr Zelensky 否认、利雅得机场胡塞升级、欧盟对华混动进口配额、IEA 催促释放柴油。多学科第二轮独立检索入选 5 条，覆盖实际利率、半导体周度分化、美光客户订金融资、双热带气旋电力中断延续、Elon Musk 招揽芯片人才。",
   "marketContext": "信息截止为北京时间周日 23:45，美股常规交易时段休市；不把上一交易日收盘、帖子中的行情口述或周一开盘预期当作实时行情。",
   "coverage": {
     "method": "collectionPath=grok-app。通过本机 Grok Bot App（X+github）只读调用 x.search_posts_all / get_users_posts / get_posts_by_ids。第一轮宽扫宏观财政利率、地缘能源航运、AI/大型公司、市场结构；第二轮独立执行半导体、电力、AI落地、宏观资本成本、地缘能源物流、市场结构行为六包公开查询，并对入选事件做追源与反证。",
@@ -27,7 +27,7 @@
       "手动窗口仅约 2 小时 45 分钟且为周日休市，合格新增事件天然偏少，故 status=partial。",
       "单次 X 检索最多约 25 条且按相关度/时间排序，不能声称覆盖全部 X。",
       "德州数据中心并网暂停、Disco/OSAT 设备、OpenAI ARR 等候选缺少窗口内一手官方或主流可核验原文，已落选。",
-      "黄仁勋本人 X handle 未确认，未用 nvidia 机构号冒充；特朗普 realDonaldTrump 近 7 日无原创帖返回。",
+      "Jensen Huang 本人 X handle 未确认，未用 nvidia 机构号冒充；Donald Trump realDonaldTrump 近 7 日无原创帖返回。",
       "万亿美元公司 CEO 本人账号与可回查研报原文在窗口内几乎无结果。",
       "所有原帖均由 Grok Bot App x 工具返回，本执行者未在 X 页面独立直读。"
     ]
@@ -66,8 +66,8 @@
   "focus": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
-      "title": "特朗普宣布俄乌能源停火，泽连斯基称事先不知情",
-      "fact": "特朗普周日称俄罗斯与乌克兰已同意立即停止攻击能源基础设施，并要求双方不要打破。随后据 Axios，乌克兰总统泽连斯基表示该宣布对他而言是新闻，并称若俄罗斯同意能源停火乌方也可接受；莫斯科方面尚未确认。",
+      "title": "Donald Trump 宣布俄乌能源停火，Volodymyr Zelensky 称事先不知情",
+      "fact": "Donald Trump 周日称俄罗斯与乌克兰已同意立即停止攻击能源基础设施，并要求双方不要打破。随后据 Axios，乌克兰总统 Volodymyr Zelensky 表示该宣布对他而言是新闻，并称若俄罗斯同意能源停火乌方也可接受；莫斯科方面尚未确认。",
       "impact": "若停火兑现，俄罗斯炼油与柴油出口能力的恢复预期可能压低成品油风险溢价，并影响通胀预期与利率路径；若仅是单方面声明，能源波动与避险溢价可能很快回摆。",
       "direction": "双向",
       "horizon": "未来数日至两周",
@@ -79,11 +79,11 @@
       ],
       "counterCase": "若俄罗斯官方否认停火、能源设施在 48 小时内继续遇袭，或柴油裂解价差未回落，则该声明对供给与通胀的传导应下调。",
       "selectionReason": "同时牵动地缘冲突、柴油供给、通胀与政策可信度，是窗口内影响面最广的新增事件。",
-      "credibilityReason": "有快讯与 Bloomberg 转述特朗普声明，并有泽连斯基否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
+      "credibilityReason": "有快讯与 Bloomberg 转述 Donald Trump 声明，并有 Volodymyr Zelensky 否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
       "change": "新增",
       "eventTime": null,
-      "eventTimeNote": "特朗普宣布的准确当地时间未在所用帖文中写明；泽连斯基回应发生在宣布之后不久，精确时刻未知。",
-      "attentionEvidence": "DeItaone 相关快讯在窗口内获得约 14 万次展示，KobeissiLetter 转述泽连斯基回应约 28 万次展示；热度仅作注意力参考，不作事实证明。",
+      "eventTimeNote": "Donald Trump 宣布的准确当地时间未在所用帖文中写明；Volodymyr Zelensky 回应发生在宣布之后不久，精确时刻未知。",
+      "attentionEvidence": "DeItaone 相关快讯在窗口内获得约 14 万次展示，KobeissiLetter 转述 Volodymyr Zelensky 回应约 28 万次展示；热度仅作注意力参考，不作事实证明。",
       "sources": [
         {
           "url": "https://x.com/DeItaone/status/2109289408302309790",
@@ -171,7 +171,7 @@
           "checkedAt": "2026-10-11T15:46:40Z",
           "excerpt": "Ukraine's President Zelensky says the energy ceasefire between Ukraine and Russia announced by President Trump just minutes ago is news to me, per Axios.",
           "verification": "collector-report",
-          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。 反向材料：泽连斯基否认事先知情。",
+          "verificationNote": "Grok Bot App（X+github）经 x 检索返回；未在 X 页面按帖子 ID 独立直读。 反向材料：Volodymyr Zelensky 否认事先知情。",
           "credibility": {
             "version": "1.0.0",
             "status": "auto-provisional",
@@ -206,9 +206,19 @@
       "credibility": {
         "score": 30,
         "label": "规则初评，未校准",
-        "reason": "有快讯与 Bloomberg 转述特朗普声明，并有泽连斯基否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
+        "reason": "有快讯与 Bloomberg 转述 Donald Trump 声明，并有 Volodymyr Zelensky 否认双方已同意的交叉材料；但仍缺莫斯科确认与可观察停火执行。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        },
+        {
+          "name": "Volodymyr Zelensky",
+          "intro": "乌克兰总统"
+        }
+      ]
     },
     {
       "eventKey": "riyadh-king-khalid-airport-houthi-strike-2026-10-11",
@@ -315,7 +325,8 @@
         "label": "规则初评，未校准",
         "reason": "Reuters 与 Bloomberg 均在窗口内报道警告与升级风险，但袭击细节、伤亡独立核验与后续打击频率仍不完整。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "eu-china-hybrid-vehicle-import-cap-2026-10-11",
@@ -385,7 +396,8 @@
         "label": "规则初评，未校准",
         "reason": "Bloomberg 给出数量与生效日，但未见欧盟委员会官方原文链接，也未见中方正式回应。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "iea-diesel-release-urge-2026-10-11",
@@ -453,7 +465,8 @@
         "label": "规则初评，未校准",
         "reason": "Bloomberg 转述 IEA 呼吁，另有分析师贴出 IEA 声明链接，但未见完整官方声明正文被直读。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     }
   ],
   "insights": [
@@ -533,7 +546,8 @@
         "label": "规则初评，未校准",
         "reason": "给出可检验的分解数字，但作者非官方数据源，未附原表或纽联储模型截图。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "soxx-igv-weekly-dispersion-2026-10-11",
@@ -611,7 +625,8 @@
         "label": "规则初评，未校准",
         "reason": "给出具体 ETF 周涨跌，但账户非主流数据商，未附行情商原始表格。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "micron-customer-deposit-financed-capex-2026-10-11",
@@ -689,7 +704,8 @@
         "label": "规则初评，未校准",
         "reason": "数字具体，但是对已披露财报的二手拆解，未附 10-K 或电话会原文页码，作者非公司官方。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "hurricane-isaias-power-outages-2026-10-10",
@@ -767,12 +783,13 @@
         "label": "规则初评，未校准",
         "reason": "Bloomberg 报道具可追溯性，但未给出断电户数精确时点统计与官方应急机构原文。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "musk-chip-talent-spacex-tesla-recruit-2026-10-11",
-      "title": "马斯克公开招揽顶级芯片设计与生产工程师",
-      "fact": "埃隆·马斯克发帖称，若你是世界级芯片设计或生产工程师，可考虑加入 SpaceX 或 Tesla，并强调能以极快速度迭代设计与定制生产设备。",
+      "title": "Elon Musk 公开招揽顶级芯片设计与生产工程师",
+      "fact": "Elon Musk 发帖称，若你是世界级芯片设计或生产工程师，可考虑加入 SpaceX 或 Tesla，并强调能以极快速度迭代设计与定制生产设备。",
       "impact": "若招聘转化为实际团队与自研或定制产线能力，长期可能改变特斯拉与 SpaceX 在推理、机器人与星座算力上的垂直整合深度；短期更直接影响半导体人才竞争与市场对汽车或航天公司做芯片叙事的定价。",
       "direction": "待定",
       "horizon": "数个季度的人才与产品验证",
@@ -845,7 +862,13 @@
         "label": "规则初评，未校准",
         "reason": "本人账号原创帖，意图清晰；但无具体岗位数量、地点或已招聘进度，商业化结果未验证。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
     }
   ],
   "shortfallReason": "手动窗口仅约 2 小时 45 分钟且为周日休市，第一轮仅找到 4 条达到焦点门槛的独立事件（不足 5）；第二轮六包均已实际查询，但高价值洞察仅 5 条（不足 10）。德州并网暂停、OpenAI ARR 旧闻、Reflection AI 无新进展、弱来源研报转述等已排除，禁止凑数。",

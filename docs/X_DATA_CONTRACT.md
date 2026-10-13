@@ -34,6 +34,10 @@
 
 导入器会从 URL 提取 status ID，并按 ID 去重。缺少原帖链接、准确时间或完整正文时拒绝导入，不猜测缺失内容。
 
+## 人物字段（2026-10-13）
+
+每张卡片（简报 focus/insights、待阅池 event、人物/个股/AI/加密 items）带 `people: [{name, intro}]`。人名保留原文写法（如 Satya Nadella、Donald Trump），不写中文音译（纳德拉、特朗普等）；每张卡片的 `people` 列出提到的人物及 ≤15 字简介，来自 `config/person-registry.json`。登记表外的新人物：先在登记表新增原文名、经核实的简介、中文音译别名和匹配词，再发布。校验字段：title、fact、impact/whyItMatters、counterCase、selectionReason、credibilityReason、eventTimeNote、attentionEvidence 等卡片文字；`people` 必须与登记表推导结果一致（按卡片文字中的原文名/姓氏及作者账号匹配）。失败而不是警告：历史归档已一次迁移，因此同一规则覆盖全部已发布数据。
+
 ## 可信度评分
 
 总分为 `作者分 × 40% + 主张分 × 60%`，结果始终标为 `auto-provisional`（自动初评）。

@@ -295,6 +295,30 @@ for (const week of earnings.weeks) {
   }
 }
 
+// Person names: original form in card text + registry intros (user rule 2026-10-13).
+// Applies to current and archived published cards; recorded queries and quotes are exempt.
+let personCards = 0;
+try {
+  const names = require('./lib/person-names');
+  const registry = names.loadRegistry();
+  const files = ['data/reading-board.json','data/people-intelligence.json','data/ticker-intelligence.json','data/ai-intelligence.json','data/crypto-intelligence.json',...fs.readdirSync(path.join(ROOT,'data/stock-briefs')).filter(f=>f.endsWith('.json')&&f!=='index.json').map(f=>'data/stock-briefs/'+f)];
+  const isCard = o => o && typeof o === 'object' && !Array.isArray(o) && typeof o.title === 'string' && typeof o.fact === 'string' && (Array.isArray(o.sources) || typeof o.url === 'string');
+  for (const rel of files) {
+    if (!fs.existsSync(path.join(ROOT, rel))) continue;
+    const walk = (node, where) => {
+      if (Array.isArray(node)) return node.forEach((v, i) => walk(v, `${where}[${i}]`));
+      if (!node || typeof node !== 'object') return;
+      for (const [k, v] of Object.entries(node)) walk(v, `${where}.${k}`);
+      if (!isCard(node)) return;
+      personCards++;
+      for (const field of names.CARD_FIELDS) { const hit = names.findAliases(node[field], registry); if (hit.length) fail(`${rel} ${where}.${field}: 人名中文音译 ${hit.join('、')}，需改为原文写法`); }
+      if (!Array.isArray(node.people)) fail(`${rel} ${where}: 缺少 people 人物简介列表`);
+      else if (!names.samePeople(node.people, names.mentionedPeople(node, registry))) fail(`${rel} ${where}: people 与人物登记表不一致（运行 node scripts/normalize-person-names.js）`);
+    };
+    walk(JSON.parse(fs.readFileSync(path.join(ROOT, rel), 'utf8')), '');
+  }
+} catch (error) { fail(`person registry: ${error.message}`); }
+
 if (!process.exitCode) {
   console.log(`[validate-data] OK: ${ids.size} raw posts, ${(intelligence.posts || []).length} display posts`);
   console.log(`[validate-data] OK: ${editionIds.size} stock brief editions`);
@@ -302,6 +326,7 @@ if (!process.exitCode) {
   console.log(`[validate-data] OK: ${tickerTabs.size} ticker tabs, ${tickerKeys.size} selected events`);
   console.log(`[validate-data] OK: ${cryptoTabs.size} crypto tabs, ${cryptoKeys.size} selected events`);
   console.log(`[validate-data] OK: ${aiTabs.size} ai tabs, ${aiKeys.size} selected events`);
+  console.log(`[validate-data] OK: ${personCards} cards use original person names with registry intros`);
   console.log('[validate-data] OK: project research knowledge and Grok SOP');
   console.log(`[validate-data] OK: earnings calendar ${earnings.weeks?.length||0} weeks, ${earnings.counts?.important||0} important / ${earnings.counts?.raw||0} raw`);
 }

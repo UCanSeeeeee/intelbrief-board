@@ -18,6 +18,8 @@
 - 可信度与市场影响排序分开。自动分数不是概率；当前来源规则尚未经结果校准。事件分数取所附来源初评分最低值，属于保守的证据摘要，不是贝叶斯聚合。仅采集器返回的来源最高 49 分，界面明确标注未独立直读。
 - 每条卡片开头显示 X 作者；`fact` 是忠实翻译或概括后的中文信息摘要，不写“Grok 返回／原帖称”等采集过程；影响判断默认展开，其后显示事件时间与主原帖链接。按用户2026-10-12最新UI要求，前台不展示反向条件，所有阅读内容默认展开；优先于共享质量技能的旧布局约定。采集路径、独立直读缺口和内部反证保留在归档JSON，不删除历史字段。
 
+- 人名（2026-10-13）：人名保留原文写法（如 Satya Nadella、Donald Trump），不写中文音译（纳德拉、特朗普等）；每张卡片的 `people` 列出提到的人物及 ≤15 字简介，来自 `config/person-registry.json`。登记表外的新人物：先在登记表新增原文名、经核实的简介、中文音译别名和匹配词，再发布。由 `prepareBrief` 校验并生成，采集 JSON 无需手写 `people`。
+
 ## 每次定时执行
 
 1. 在本仓库根目录（`git rev-parse --show-toplevel`；不要写死机器路径）按 AGENTS.md 在修改前执行 `git pull --ff-only origin master`，读取 `CONTEXT.md`、`TASKS.md`、本文件及 `config/research-guidance.json` 指向的项目知识库与采集 SOP，检查 git 状态，保留其他工作。项目内版本是采集时强制采用的当前快照；共享 `us-equity-x-intelligence`、`us-equity-multidisciplinary-knowledge` 和质量技能仅在当前环境可用时用于补充与复核；云端无本机技能时直接使用仓库契约，不能跳过项目 SOP。

@@ -8,7 +8,7 @@
   "carriedOver": [],
   "collectionPath": "grok-bot-x-search",
   "status": "partial",
-  "summary": "哥伦布日美债休市、美股照常交易的周一夜间至周二凌晨：微软把 Maia 自研硅提升为主推理系统，成为窗口内最大新增；特朗普能源停火遭泽连斯基“俄方已违反”冲击；英伟达支持的 Firmus 撤回高估值 IPO 提示 AI 基建融资约束。半导体/电力/AI 落地第二轮另录 Maia 规格、FLEX 预制机柜、Vertiv 液冷与 Anthropic 收入结构差。",
+  "summary": "哥伦布日美债休市、美股照常交易的周一夜间至周二凌晨：微软把 Maia 自研硅提升为主推理系统，成为窗口内最大新增；Donald Trump 能源停火遭 Volodymyr Zelensky“俄方已违反”冲击；英伟达支持的 Firmus 撤回高估值 IPO 提示 AI 基建融资约束。半导体/电力/AI 落地第二轮另录 Maia 规格、FLEX 预制机柜、Vertiv 液冷与 Anthropic 收入结构差。",
   "marketContext": "北京时间周二凌晨手动更新；美国周一为哥伦布日，国债市场休市、股票市场交易。油价与 AI 算力叙事仍主导风险偏好，等待周三 CPI 与银行财报周。",
   "coverage": {
     "method": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）两轮独立检索，含追源与反证；未切换 grok.com。",
@@ -40,7 +40,7 @@
     {
       "item": "持久池前期事件复核：能源停火、胡塞/沙特、Decart、OpenAI ARR、实际利率、封测涨价",
       "status": "covered",
-      "note": "停火改为泽连斯基“已打破”进展；胡塞油市风险仍在但本日无独立新焦点卡；Decart/ARR/利率未见推翻材料"
+      "note": "停火改为 Volodymyr Zelensky“已打破”进展；胡塞油市风险仍在但本日无独立新焦点卡；Decart/ARR/利率未见推翻材料"
     },
     {
       "item": "第一轮：宏观政策宽扫",
@@ -90,7 +90,7 @@
     {
       "item": "反证：停火是否真实存在、Maia 能效承诺",
       "status": "covered",
-      "note": "反证侧找到泽连斯基/马克龙质疑停火；Maia 反证仍缺独立实测"
+      "note": "反证侧找到 Volodymyr Zelensky/Emmanuel Macron 质疑停火；Maia 反证仍缺独立实测"
     }
   ],
   "candidates": [
@@ -214,7 +214,7 @@
   "focus": [
     {
       "eventKey": "msft-maia-300-primary-inference-2026-10-12",
-      "title": "纳德拉宣布 Maia 300：自研硅将成微软主推理系统",
+      "title": "Satya Nadella 宣布 Maia 300：自研硅将成微软主推理系统",
       "fact": "@satyanadella 宣布微软加大自研硅押注：自下一自然年起将 Maia 系列扩至多吉瓦部署，并使其成为自家产品与服务的主推理系统；同时推出 Maia 300，相对领先 GPU 系统可多交付约 40% 的每兆瓦推理 token。@Microsoft 同步介绍 Maia 300 相对 Maia 200 机架级吞吐可达约 7 倍。",
       "impact": "若多吉瓦部署兑现，会稀释云厂商对英伟达 GPU 增量依赖，并拉动 TSMC N2P/HBM4 与配套先进封装需求；短期或压制 NVDA 估值溢价，同时抬升自研硅与代工/HBM 链条议价。",
       "direction": "双向",
@@ -319,12 +319,18 @@
         "label": "规则初评，未校准",
         "reason": "有微软 CEO 与官方账号原帖；规格细节另有技术账号转述，量产与能效仍待独立验证。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": [
+        {
+          "name": "Satya Nadella",
+          "intro": "微软董事长兼CEO"
+        }
+      ]
     },
     {
       "eventKey": "zelenskyy-russia-broke-energy-ceasefire-2026-10-12",
-      "title": "泽连斯基称俄方已打破特朗普能源停火",
-      "fact": "@YourAnonCentral 等转述泽连斯基在华沙论坛称乌方遵守特朗普提出的能源停火，而俄罗斯继续轰炸乌克兰能源设施；另有转述称俄方当日袭击多处乌能源设施，法方亦质疑停火是否存在。",
+      "title": "Volodymyr Zelensky 称俄方已打破 Donald Trump 能源停火",
+      "fact": "@YourAnonCentral 等转述 Volodymyr Zelensky 在华沙论坛称乌方遵守 Donald Trump 提出的能源停火，而俄罗斯继续轰炸乌克兰能源设施；另有转述称俄方当日袭击多处乌能源设施，法方亦质疑停火是否存在。",
       "impact": "停火叙事若失效，柴油与炼油风险溢价可能回摆，削弱周末油价下跌交易；同时削弱美方“口头停火”对通胀预期的安抚效果。",
       "direction": "利空",
       "horizon": "未来数日油价与风险溢价",
@@ -336,7 +342,7 @@
       ],
       "counterCase": "若莫斯科公开确认并停止袭击能源设施，或乌方同步停火可核验，则溢价应回落。",
       "selectionReason": "对周末最重要宏观叙事（能源停火）给出周一可核验进展，直接决定油价与风险偏好方向。",
-      "credibilityReason": "多账号转述泽连斯基表态，但缺少乌克兰官方账号原帖与莫斯科确认；袭击细节待交叉。",
+      "credibilityReason": "多账号转述 Volodymyr Zelensky 表态，但缺少乌克兰官方账号原帖与莫斯科确认；袭击细节待交叉。",
       "change": "进展",
       "eventTime": "2026-10-12T14:47:26.000Z",
       "eventTimeNote": null,
@@ -424,9 +430,19 @@
       "credibility": {
         "score": 30,
         "label": "规则初评，未校准",
-        "reason": "多账号转述泽连斯基表态，但缺少乌克兰官方账号原帖与莫斯科确认；袭击细节待交叉。",
+        "reason": "多账号转述 Volodymyr Zelensky 表态，但缺少乌克兰官方账号原帖与莫斯科确认；袭击细节待交叉。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        },
+        {
+          "name": "Volodymyr Zelensky",
+          "intro": "乌克兰总统"
+        }
+      ]
     },
     {
       "eventKey": "firmus-ipo-pulled-ai-dc-valuation-2026-10-10",
@@ -532,7 +548,8 @@
         "label": "规则初评，未校准",
         "reason": "事件本身指向上周五公告，周一讨论帖互动偏低；缺少交易所/公司官方 X 原帖，细节待核。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     }
   ],
   "insights": [
@@ -653,7 +670,8 @@
         "label": "规则初评，未校准",
         "reason": "官方确认产品线；具体 chiplet/HBM 数字来自技术账号转述，非微软规格书原文。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "flex-factory-built-ai-dc-modules-2026-10-12",
@@ -730,7 +748,8 @@
         "label": "规则初评，未校准",
         "reason": "单一财经账号快讯，缺少 FLEX 官方账号原帖与客户名单。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "vertiv-india-liquid-cooling-ai-factory-2026-10-12",
@@ -846,7 +865,8 @@
         "label": "规则初评，未校准",
         "reason": "两则均为转述账号，缺少 Vertiv 官方原帖与合同金额。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "anthropic-api-vs-subscription-compute-mix-2026-10-12",
@@ -925,14 +945,15 @@
         "label": "规则初评，未校准",
         "reason": "三手转述 SemiAnalysis，无 Anthropic 官方确认，数字不确定。",
         "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-      }
+      },
+      "people": []
     }
   ],
   "readingDecisions": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
       "action": "keep",
-      "reason": "泽连斯基“俄方违反”是进展而非证伪原宣布本身；停火是否存在仍待双方执行，周末卡片仍需保留对照。",
+      "reason": "Volodymyr Zelensky“俄方违反”是进展而非证伪原宣布本身；停火是否存在仍待双方执行，周末卡片仍需保留对照。",
       "sourceUrl": "https://x.com/YourAnonCentral/status/2109657197311586745",
       "checkedAt": "2026-10-12T17:54:00.000Z"
     },
