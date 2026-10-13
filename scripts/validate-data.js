@@ -47,6 +47,7 @@ for (const entry of editions) {
   } catch (error) { fail(`edition ${entry.id}: ${error.message}`); }
 }
 
+const { checkTabSelection } = require('./lib/selection-policy');
 const peopleConfig = readJson(path.join(ROOT, 'config/people-intelligence.json'));
 const peopleData = readJson(path.join(ROOT, 'data/people-intelligence.json'));
 const peopleTabs = new Map((peopleConfig.tabs || []).map(tab => [tab.id, tab]));
@@ -66,6 +67,8 @@ const referenceTime = peopleData.cutoff ? Date.parse(peopleData.cutoff) : Date.n
 for (const tab of peopleTabs.values()) {
   const tabItems = (peopleData.items || []).filter(item => item.tabIds.includes(tab.id));
   if (tabItems.filter(item => Date.parse(item.publishedAt) >= referenceTime - 86400000).length > tab.latestLimit) fail(`${tab.label} exceeds latestLimit`);
+  const latestWindow = Number(tab.latestWindowDays) || 1;
+  for (const msg of checkTabSelection(tab, peopleConfig.selectionPolicy, tabItems.filter(item => Date.parse(item.publishedAt) >= referenceTime - latestWindow * 86400000))) fail(`people ${msg}`);
   const ranks = tabItems.map(item => item.weeklyRanks?.[tab.id]).filter(rank => rank != null);
   if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
 }

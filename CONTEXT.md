@@ -8,7 +8,7 @@
 
 `intelbrief-board` 的讯息是 X-only；财报和宏观日历沿用 AGENTS.md 中已授权的官方来源例外。系统保存证据并做可解释的可信度自动初评。
 
-**数量上限不是交付目标。** 美股 5+10、人物个人的近窗与周榜、合集的近30天区、个股近窗与周榜、AI板块近窗与周榜、加密板块/标的近窗与周榜 都只收达到价值与证据门槛的内容；不足时保留实际数量并说明缺额，可以为 0 条，禁止用低价值、重复或旧信息补齐。
+**数量上限不是交付目标。** 美股 5+10、人物个人的近窗与周榜、合集的近30天区、个股近窗与周榜、AI板块近窗与周榜、加密板块/标的近窗与周榜 都只收达到价值与证据门槛的内容；不足时保留实际数量并说明缺额，可以为 0 条，禁止用低价值、重复或旧信息补齐。**例外（2026-10-13）**：具体人物页全部 Tab 改为规则优先 + 本 Tab 热度动态补位（目标 5，无规则条目时 3），见 PEOPLE_INTELLIGENCE_ROADMAP「收录与热度补位」。
 
 线上地址：https://intelbrief-board.pages.dev
 
@@ -59,7 +59,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 - `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
 - `index.html` / `people.html` / `tickers.html` / `ai.html` / `crypto.html` / `earnings.html`：侧栏顺序为美股讯息→具体人物→具体个股→AI板块→加密→宏观大事→财报日历。宏观大事见 `docs/MACRO_EVENTS.md`（含超关注财报精选）；板块空头已于2026-10-12停用，仅保留仓库历史资料（`docs/SHORTS_INTELLIGENCE.md`），不再采集或部署。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的；`crypto.js`：板块讯息+BTC+Brew。
 - `config/earnings-calendar.json` / `data/earnings-calendar.json` / `docs/EARNINGS_CALENDAR.md`：侧栏「财报日历」；主源 Nasdaq；卡片主营一句话见 `config/company-blurbs.json`。
-- `config/people-intelligence.json` / `data/people-intelligence.json`：人物与合集配置及精选事件库；个人最新区最多 5 条（滚动约24小时），合集最新区最多 10 条（滚动约30天），重点榜最多 5 件。特朗普 X 同步源为 @TrumpDailyPosts（另可取 @POTUS/@WhiteHouse）；黄仁勋允许可回查媒体来源。
+- `config/people-intelligence.json` / `data/people-intelligence.json`：人物与合集配置及精选事件库；个人与合集最新区目标均为 5 条（个人滚动约24小时、合集约30天；规则优先+热度补位，selectionPolicy），重点榜最多 5 件且只收规则条目。特朗普 X 同步源为 @TrumpDailyPosts（另可取 @POTUS/@WhiteHouse）；黄仁勋允许可回查媒体来源。
 - `config/ticker-intelligence.json` / `data/ticker-intelligence.json` / `docs/TICKER_INTELLIGENCE.md`：具体个股仅 NVDA/MU/INTC/GOOG/AVGO/VRT/TSM（无加密、无 AI 实验室 Tab）。
 - `config/ai-intelligence.json` / `data/ai-intelligence.json` / `docs/AI_INTELLIGENCE.md`：侧栏「AI板块」：OPENAI→ANTHROPIC→GOOG(AI产品)→其他。
 - `config/crypto-intelligence.json` / `data/crypto-intelligence.json` / `docs/CRYPTO_INTELLIGENCE.md`：侧栏「加密」：板块讯息 → BTC → Brew（合约可检索，不编造链上数据）。

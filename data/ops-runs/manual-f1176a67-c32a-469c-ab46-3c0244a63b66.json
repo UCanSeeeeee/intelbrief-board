@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "period": "manual-f1176a67-c32a-469c-ab46-3c0244a63b66",
+  "trigger": "manual",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-13T10:17:31+08:00",
+  "updatedAt": "2026-10-13T10:23:24+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "03cd6b066d207ffd2df4a172c5b3d60fd0dfcc16",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-13T10:17:31+08:00",
+      "detail": "pull --ff-only up to date at 03cd6b0"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-13T10:17:32+08:00",
+      "detail": "入口文档/配置/SOP 已读"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-13T10:23:23+08:00",
+      "detail": "清单5项已覆盖：Elon R1+R2+追源；Jensen R1无本人发帖、R2仅官方营销→0条；Trump R1两页+R2；万亿高管R1/R2；研报R1/R2"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-13T10:23:24+08:00",
+      "detail": "data/people-intelligence.json 26件 + search-coverage记录"
+    },
+    {
+      "name": "validate",
+      "status": "ok",
+      "at": "2026-10-13T10:23:15+08:00",
+      "detail": "npm-test-112/112、check、build通过"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "pending",
+      "detail": null
+    },
+    "people": {
+      "status": "partial",
+      "detail": "Elon1+4、Jensen0、Trump0+3、万亿5+0、研报5+0"
+    },
+    "tickers": {
+      "status": "pending",
+      "detail": null
+    },
+    "ai": {
+      "status": "pending",
+      "detail": null
+    },
+    "crypto": {
+      "status": "pending",
+      "detail": null
+    },
+    "earnings": {
+      "status": "pending",
+      "detail": null
+    },
+    "macro": {
+      "status": "pending",
+      "detail": null
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [
+    "人物页按新 selectionPolicy 重采（用户 2026-10-13 10:14）"
+  ]
+}

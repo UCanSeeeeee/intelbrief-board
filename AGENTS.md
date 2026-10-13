@@ -79,6 +79,10 @@
 
 适用于所有讯息卡片（美股讯息、人物、个股、AI、加密及以后新增页面）：人名保留原文写法（如 Satya Nadella、Donald Trump），不写中文音译（纳德拉、特朗普等）；每张卡片的 `people` 列出提到的人物及 ≤15 字简介，来自 `config/person-registry.json`。登记表外的新人物：先在登记表新增原文名、经核实的简介、中文音译别名和匹配词，再发布。原帖摘录 `excerpt`、原始帖子正文与已记录的检索问题 `queries` 属于证据/历史记录，不改写。发布流程（`prepareBrief`、各分页 `prepare*Intelligence`）遇到人名音译直接失败，并按登记表自动写入 `people`；`npm run check` 对当前及归档卡片同样失败。旧数据用 `node scripts/normalize-person-names.js` 幂等迁移。人物页顶部 Tab 名（马斯克/黄仁勋/特朗普）属于栏目配置标签，暂保留，用户要求时再改。
 
+## 人物页热度补位（用户2026-10-13明确指定）
+
+人物页所有 Tab 新增区目标 5 条：现有价值规则优先，不足用本 Tab 来源热度最高帖子补足（标「热度动态」），无规则条目时收热度最高 3 条；互动数只记 X 工具返回值。规则与解释见 [PEOPLE_INTELLIGENCE_ROADMAP](docs/PEOPLE_INTELLIGENCE_ROADMAP.md)「收录与热度补位」，配置 `config/people-intelligence.json` 的 `selectionPolicy`。
+
 ## 北京时间批次与周末消息（用户2026-10-12最新澄清）
 
 美股讯息按 [北京时间批次规则](docs/TRADING_DAY_READING.md) 执行，替代按美国开收盘和交易所假日决定展示/保留的旧版。北京时间周一09:00即可收录周六00:00以来的周末消息，周一16/21继续复核保留，不等美股开盘；平时至少回看24小时、断档最多补查14天。三期快照与持久池分离；先运行 `npm run brief:context`，使用period和窗口，不使用旧session。更新失败不清空，原始时间不改写，不因保存三期删待阅消息。

@@ -88,6 +88,25 @@
         "反证 Maia 能效未验证；Hock Tan 融资瓶颈是否被订单证伪；停火执行"
       ],
       "recordedAt": "2026-10-13T01:52:01.370Z"
+    },
+    {
+      "jobId": "manual-f1176a67-c32a-469c-ab46-3c0244a63b66",
+      "page": "people",
+      "trigger": "manual",
+      "start": "2026-10-12T02:18:00.000Z",
+      "end": "2026-10-13T10:18:00+08:00",
+      "status": "partial",
+      "queries": [
+        "R1 from:elonmusk -is:retweet -is:reply（24h，public_metrics）",
+        "R2 from:elonmusk (xAI OR Colossus OR Optimus OR Tesla OR SpaceX OR Starship OR Starlink OR chip OR Terafab OR power OR compute OR GPU OR Cybercab OR FSD)",
+        "R1 from:JensenHuang（24h）",
+        "R2 (from:nvidia OR from:NVIDIAAI OR from:nvidianewsroom OR \"Jensen Huang\") -is:retweet；(from:nvidia OR from:nvidianewsroom OR from:NVIDIAAI OR from:NVIDIADC)",
+        "R1 (from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) -is:retweet（24h，两页）",
+        "R2 (from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) (tariff OR chips OR semiconductor OR energy OR oil OR \"executive order\" OR tax OR China OR AI OR trade OR nuclear) -is:reply",
+        "R1/R2 万亿高管 from:satyanadella/sundarpichai/tim_cook/ajassy/finkd/hocktan/MParekh/demishassabis/kevin_scott/mustafasuleyman 等（10/12 起）",
+        "R1/R2 研报 (Morgan Stanley OR Goldman Sachs OR Nomura OR BofA OR JPMorgan OR Jefferies OR Bernstein OR UBS) × (raises OR cuts OR upgrade OR estimates) × (Nvidia OR HBM OR DRAM OR TSMC OR Broadcom OR data center OR power)",
+        "追源 get_posts_by_ids：Elon 高互动帖引用原文、Muse Wonder、Maia 300、BofA TSMC 转述"
+      ]
     }
   ]
 }

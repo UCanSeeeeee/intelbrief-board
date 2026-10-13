@@ -36,7 +36,7 @@ test('people intelligence has five research tabs and updated windows', () => {
   const collections = config.tabs.filter(tab => tab.type === 'collection');
   assert.equal(collections.length, 2);
   assert.ok(people.every(tab => tab.latestLimit === 5 && tab.latestWindowDays === 1 && tab.weeklyWindowDays === 7));
-  assert.ok(collections.every(tab => tab.latestLimit === 10 && tab.weeklyLimit === 5 && tab.latestWindowDays === 30 && tab.weeklyWindowDays === 30));
+  assert.ok(collections.every(tab => tab.latestLimit === 5 && tab.weeklyLimit === 5 && tab.latestWindowDays === 30 && tab.weeklyWindowDays === 30));
   const trump = config.tabs.find(tab => tab.id === 'donald-trump');
   assert.equal(trump.handle, 'TrumpDailyPosts');
   assert.ok(trump.handles.includes('POTUS'));

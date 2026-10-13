@@ -39,12 +39,28 @@
     if (!Array.isArray(list) || !list.length) return '';
     return `<p class="card-people"><strong>相关人物</strong>${list.map(p => `<span class="person-chip"><span class="person-chip-name">${escape(p.name)}</span><span class="person-chip-intro">${escape(p.intro)}</span></span>`).join('')}</p>`;
   }
+  const numberFormat = new Intl.NumberFormat('zh-CN');
+  function engagementLine(item) {
+    // Only metrics the X tool actually returned; missing fields are omitted, never estimated.
+    const e = item.engagement;
+    if (!e || typeof e !== 'object') return '';
+    const parts = [['likes', '赞'], ['reposts', '转发'], ['replies', '回复'], ['quotes', '引用'], ['views', '浏览']]
+      .filter(([key]) => Number.isInteger(e[key])).map(([key, label]) => `${label} ${numberFormat.format(e[key])}`);
+    if (!parts.length) return '';
+    return `<p class="signal-engagement"><strong>互动数据</strong>${escape(parts.join(' · '))}${e.capturedAt ? `（${escape(formatTime(e.capturedAt))} 抓取）` : ''}</p>`;
+  }
+  function selectionBadge(item) {
+    if (item.selection === 'engagement') return '<span class="signal-selection signal-selection-engagement">热度动态 · 未达高价值规则</span>';
+    if (item.selection === 'rule') return '<span class="signal-selection signal-selection-rule">高价值</span>';
+    return '';
+  }
   function renderCard(item, extraBadge) {
     const url = safeUrl(item.url);
     const affected = Array.isArray(item.affected) ? item.affected : [];
-    return `<article class="signal-card">
+    return `<article class="signal-card${item.selection === 'engagement' ? ' signal-card-engagement' : ''}">
       <div class="signal-card-head">
         <div class="signal-badges">
+          ${selectionBadge(item)}
           <span class="signal-tier signal-${escape(item.tier || 'watch')}">${item.tier === 'must-read' ? '必须看' : '值得跟踪'}</span>
           ${extraBadge ? `<span class="signal-new">${escape(extraBadge)}</span>` : ''}
         </div>
@@ -53,6 +69,7 @@
       <h4>${escape(item.title || '未命名事件')}</h4>
       ${peopleNote(item.people)}
       <p class="signal-verification">${escape(item.author || '来源待注明')} · ${escape(evidenceLabel(item))}</p>
+      ${engagementLine(item)}
       <p class="signal-fact"><strong>信息摘要</strong>${escape(item.fact || '尚未写明')}</p>
       <details open class="analysis-details"><summary>影响分析</summary>
       <p><strong>影响判断</strong>${escape(item.whyItMatters || '尚未写明')}</p>
@@ -75,7 +92,7 @@
   function emptySection(kind, tab) {
     const limit = kind === 'latest' ? tab.latestLimit : tab.weeklyLimit;
     const days = windowDays(tab, kind);
-    return `<div class="empty-state signal-empty"><strong>当前没有达到门槛的信息</strong><p>${kind === 'latest' ? `${windowLabel(days)}区最多 ${limit} 条，但不会为了凑数加入普通动态。` : `${windowLabel(days)}最多 ${limit} 件；不足时保留实际数量。`}</p></div>`;
+    return `<div class="empty-state signal-empty"><strong>当前没有收录内容</strong><p>${kind === 'latest' ? `${windowLabel(days)}区目标 ${limit} 条：高价值优先，不足用本 Tab 热度动态补位；本窗口来源无可收帖子。` : `${windowLabel(days)}最多 ${limit} 件；不足时保留实际数量。`}</p></div>`;
   }
 
   function section(title, note, sectionItems, kind, tab, latestKeys) {
@@ -88,7 +105,7 @@
     return `<section class="signal-section" aria-labelledby="${escape(tab.id)}-${kind}">
       <header class="signal-section-head">
         <div><p class="eyebrow">${escape(note)}</p><h3 id="${escape(tab.id)}-${kind}">${escape(title)}</h3></div>
-        <span>收录 ${sectionItems.length} 条 · 上限 ${kind === 'latest' ? tab.latestLimit : tab.weeklyLimit} 条</span>
+        <span>收录 ${sectionItems.length} 条${kind === 'latest' && sectionItems.some(item => item.selection === 'engagement') ? `（高价值 ${sectionItems.filter(item => item.selection !== 'engagement').length} · 热度动态 ${sectionItems.filter(item => item.selection === 'engagement').length}）` : ''} · 上限 ${kind === 'latest' ? tab.latestLimit : tab.weeklyLimit} 条</span>
       </header>
       ${duplicateCount ? `<p class="signal-dedup">重点榜中有 ${duplicateCount} 件已在新增价值区完整展示，这里不重复铺卡。</p>` : ''}
       <div class="signal-list">${visible.length ? visible.map(item => renderCard(item, kind === 'weekly' && parseTime(item.publishedAt) >= Date.now() - windowMs(tab, 'latest') ? `${windowDays(tab,'latest')===1?'24h':'近窗'}新增` : '')).join('') : (duplicateCount ? '' : emptySection(kind, tab))}</div>
@@ -126,6 +143,7 @@
     <details open class="reading-rules"><summary>关注范围与收录规则</summary><div class="tab-research-rule">
       <p><strong>关注范围</strong>${escape(tab.focus)}</p>
       <p><strong>筛选边界</strong>${escape(tab.sourceRule)}</p>
+      <p><strong>补位规则</strong>先收高价值条目；不足 ${escape(tab.latestLimit)} 条时用本 Tab 来源互动最高的帖子补足，标为「热度动态」；无高价值条目时只收热度最高 3 条。热度动态不进入重点榜。</p>
     </div></details>
     ${section(`${windowLabel(latestDays)}新增价值`, `最多 ${tab.latestLimit} 条`, latest, 'latest', tab, latestKeys)}
     ${section(`${windowLabel(weeklyDays)}最重要五件事`, `${windowLabel(weeklyDays)} · 最多 ${tab.weeklyLimit} 件`, weekly, 'weekly', tab, latestKeys)}`;

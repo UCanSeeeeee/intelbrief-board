@@ -57,10 +57,10 @@
       "type": "collection",
       "identity": "万亿美元美股公司核心决策者",
       "handle": null,
-      "latestLimit": 10,
+      "latestLimit": 5,
       "weeklyLimit": 5,
       "focus": "AI 需求、资本开支、产品路线、供应瓶颈、毛利、融资与商业化节奏",
-      "sourceRule": "公司名单按月核验市值；每家公司默认 3 人、最多 5 人，近 30 天通常最多占 2 席。只收可回查 X 原帖的高管本人或明确可归因发言。",
+      "sourceRule": "公司名单按月核验市值；每家公司默认 3 人、最多 5 人，近 30 天通常最多占 2 席（热度补位同样受此上限）。只收可回查 X 原帖的高管本人或明确可归因发言。",
       "latestWindowDays": 30,
       "weeklyWindowDays": 30
     },
@@ -70,7 +70,7 @@
       "type": "collection",
       "identity": "公开、可回查的机构与具名分析师研究变化",
       "handle": null,
-      "latestLimit": 10,
+      "latestLimit": 5,
       "weeklyLimit": 5,
       "focus": "盈利预测、资本开支、供需、评级核心假设与产业判断的实质变化",
       "sourceRule": "不绕过付费墙；同一事件的多家观点合并，保留分歧而不重复刷屏。近 30 天窗口内筛选。",
@@ -78,6 +78,23 @@
       "weeklyWindowDays": 30
     }
   ],
-  "updatedAt": "2026-10-12T00:00:00+08:00",
-  "notes": "个人 Tab：latest 最多 5 条（滚动 24h），周榜 5（7 天）。合集 Tab：latest 与重点榜均按滚动 30 天。"
+  "updatedAt": "2026-10-13T10:14:00+08:00",
+  "notes": "每个 Tab latest 目标 5 条：规则条目优先，不足用本 Tab 热度动态补到 5；无规则条目时收热度最高 3 条（selectionPolicy）。个人 Tab 滚动 24h、周榜 5（7 天，只收规则条目）。合集 Tab latest 与重点榜按滚动 30 天，上限由 10 改为 5，每家公司近窗默认最多 2 席。",
+  "selectionPolicy": {
+    "version": 1,
+    "adoptedAt": "2026-10-13T10:14:00+08:00",
+    "target": 5,
+    "zeroPassFallback": 3,
+    "order": [
+      "rule",
+      "engagement"
+    ],
+    "rule": "先按现有价值规则（AI/半导体/电力/贸易/监管投资传导、可核验新事实、各 Tab sourceRule）选出 selection=rule 条目；1–4 条通过时，用本 Tab 自身来源窗口内互动量最高的帖子补足到 5 条；0 条通过时只收互动量最高的 3 条。",
+    "engagementRanking": "likes + 2×reposts + replies + quotes（views 仅展示不参与排序）；数字只取 X 检索工具实际返回值，未返回的字段不写。",
+    "engagementConstraints": "热度动态必须来自本 Tab 的来源规则（本人账号/可归因；Trump 为 @TrumpDailyPosts 同步源及 @POTUS/@WhiteHouse），不收匿名传闻；tier 固定 watch，不进入重点榜，不跨 Tab 复用。",
+    "labels": {
+      "rule": "高价值",
+      "engagement": "热度动态"
+    }
+  }
 }

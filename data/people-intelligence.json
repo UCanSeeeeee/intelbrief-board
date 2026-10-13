@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T01:55:00.000Z",
-  "cutoff": "2026-10-13T09:00:00+08:00",
+  "updatedAt": "2026-10-13T02:21:07.015Z",
+  "cutoff": "2026-10-13T10:18:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,31 +9,329 @@
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "2026-10-13-0900：from:elonmusk 窗口内多为 Grok Bot 推广、表情与安全表态；Robotaxi improvements 无新可核验产能/资本事实，0 新增。"
+        "note": "2026-10-13 10:18 人物重采（selectionPolicy v1）：R1 from:elonmusk -is:retweet -is:reply 24h 11 条；R2 关键词（xAI/Tesla/SpaceX/chip/power 等，含回复）12 条。规则通过 1 条（中国制造与 HBM/3D 堆叠判断）；其余多为 Grok 推广、表情与政治表态，按互动（likes+2×reposts+replies+quotes）补 4 条热度动态。"
       },
       {
         "id": "jensen-huang",
-        "status": "complete",
-        "note": "2026-10-13-0900：未拉到 JensenHuang 窗口内达标原创算力/供需帖；@nvidia 仅有 RTX Spark 活动营销，0 新增。"
+        "status": "partial",
+        "note": "2026-10-13 10:18：R1 from:JensenHuang 24h 0 条；R2 @nvidia/@nvidianewsroom/@NVIDIAAI 及“Jensen Huang”关键词：仅官方营销/合作帖与无归因第三方转述，不属本人或可回查采访。本 Tab 来源窗口内无可收帖子，热度补位无来源，0 条。"
       },
       {
         "id": "donald-trump",
         "status": "complete",
-        "note": "2026-10-13-0900：TrumpDailyPosts 以竞选/移民政治口水为主，无可执行贸易/出口管制/财政新政策，0 新增。"
+        "note": "2026-10-13 10:18：R1 TrumpDailyPosts/POTUS/WhiteHouse 原帖 24h 两页约 49 条；R2 政策关键词（tariff/chips/energy/EO/tax/China/AI/trade/nuclear）仅 1 条能源停火民调（属 10/11 已收事件，无新增）。规则通过 0 条 → 收热度最高 3 条（均为 @WhiteHouse）；TrumpDailyPosts 运营者本人回复不属 Trump 同步内容，排除。@POTUS 窗口内无原帖。"
       },
       {
         "id": "trillion-leaders",
-        "status": "partial",
-        "note": "2026-10-13-0900：satyanadella Maia 300 已在库；本窗无其他万亿高管达标新帖。"
+        "status": "complete",
+        "note": "2026-10-13 10:18：新增 Mark Zuckerberg Muse Wonder；Mustafa Suleyman“新芯片每瓦 tokens 多 40%”与 Maia 300 同事件合并；Demis Hassabis 医疗论文、Michael Parekh 播客不收。按新上限 5、每家最多 2 席重排：保留 Maia 300、Decision-1（MSFT 2 席）、Pichai Gemini、Amazon 自研芯片；Nvidia-Windows、MAI-Code、Copilot OS、Suncatcher、Amazon Physical AI、Meta Muse agent 移出前台。5 条均为规则条目，无需热度补位。"
       },
       {
         "id": "research-reports",
-        "status": "insufficient",
-        "note": "2026-10-13-0900：未见可回查的盈利预测/供需假设实质新变化。"
+        "status": "partial",
+        "note": "2026-10-13 10:18：R1 具名机构×上调/下调×AI 半导体/电力；新增美银 TSMC 2nm（转述）。高盛 SEMCO MLCC、摩根士丹利 BorgWarner 按上限 5 让位；研报多为二手转述，原文未取得。5 条均为规则条目。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "bofa-tsmc-pt-620-2nm-ramp-2026-10-12",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：美银上调 TSMC ADR 目标价至 620 美元，2nm 营收占比快速爬升",
+      "fact": "@antfeedapp 转述美银：TSMC 2nm 营收占比由二季度约 3% 升至三季度约 11%，四季度或达 18%，主要由 Apple 新芯片与 AMD Venice 服务器 CPU 推动；ADR 目标价由 590 美元上调至 620 美元，并预期 AI 驱动增长延续至 2026 年以后。",
+      "whyItMatters": "2nm 快速放量抬升 TSMC 先进制程定价与毛利结构，影响 AAPL、AMD 成本与 NVDA 后续节点排产。",
+      "counterCase": "为媒体转述，未见美银原文；四季度 18% 为预测，需 10 月中旬 TSMC 三季报验证。",
+      "affected": [
+        "TSM",
+        "AAPL",
+        "AMD",
+        "NVDA"
+      ],
+      "author": "antfeedapp",
+      "publishedAt": "2026-10-12T21:37:54.000Z",
+      "url": "https://x.com/antfeedapp/status/2109760495536472403",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "research-reports": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 6,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "views": 367,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "elon-musk-documentary-review-2026-10-12",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 用表情回应 The Free Press 对纪录片《Musk》的评论",
+      "fact": "@elonmusk 以“😂”引用 The Free Press 关于四小时纪录片《Musk》的书评帖。",
+      "whyItMatters": "个人舆论互动，无投资传导；按热度补位收录。",
+      "counterCase": "纯表情回应，无事实增量。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-12T17:07:26.000Z",
+      "url": "https://x.com/elonmusk/status/2109692430178255016",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 14782,
+        "reposts": 1392,
+        "replies": 1829,
+        "quotes": 124,
+        "views": 4537050,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-china-scale-hbm-3d-stack-2026-10-12",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：中国量产规模常压倒全球，但新一代 HBM 与 3D 堆叠存储更难追赶",
+      "fact": "@elonmusk 回复一条讨论 CXMT 4F² DRAM 引发存储股抛售的帖子称：中国一旦掌握某产品制造，扩产能力常大于世界其他地区之和（锂电、光伏）；LP5/LP6 等通用标准 DRAM 中国似乎在快速攻克，但更新的 HBM 架构、逻辑下方 SRAM 层及在逻辑上 3D 堆叠存储并解决散热会更难。",
+      "whyItMatters": "大型算力买家判断标准 DRAM 的中国竞争会加快、而 HBM/先进堆叠仍有壁垒，对应 MU、三星、SK hynix 的产品结构溢价与通用 DRAM 价格压力分化。",
+      "counterCase": "属个人观点而非数据；CXMT 4F² 量产良率与 HBM 进展若超预期，壁垒判断会失效。",
+      "affected": [
+        "MU",
+        "SK hynix",
+        "Samsung",
+        "CXMT",
+        "HBM"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-12T17:01:39.000Z",
+      "url": "https://x.com/elonmusk/status/2109690977279426846",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "rule",
+      "engagement": {
+        "likes": 19088,
+        "reposts": 1405,
+        "replies": 1009,
+        "quotes": 260,
+        "views": 2384652,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-troubling-quote-2026-10-12",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 引用政治帖评“Troubling”",
+      "fact": "@elonmusk 引用 Geiger Capital 一条批评德州民主党参议员候选人言论的帖子，仅评论“Troubling”。",
+      "whyItMatters": "政治表态，无 AI/半导体/电力直接传导；按热度补位收录。",
+      "counterCase": "高互动不代表投资相关性。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-12T16:59:04.000Z",
+      "url": "https://x.com/elonmusk/status/2109690326474440765",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 20310,
+        "reposts": 2740,
+        "replies": 1417,
+        "quotes": 138,
+        "views": 4513491,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "zuckerberg-muse-wonder-frontier-2026-10-12",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "Mark Zuckerberg 发布 Muse Wonder 前沿模型家族",
+      "fact": "@finkd 宣布推出 Muse Wonder，称其为 Meta 新的前沿模型家族，在个人与职业 agent 工作上达到最先进水平。",
+      "whyItMatters": "Meta 以自研前沿模型推进 agent 产品，支撑其持续高位 AI 资本开支与 GPU/定制芯片需求，也加剧与 OpenAI、Google 的模型竞争。",
+      "counterCase": "“state of the art”为自称，尚无第三方评测、定价与上线规模数据。",
+      "affected": [
+        "META",
+        "NVDA",
+        "AVGO"
+      ],
+      "author": "finkd",
+      "publishedAt": "2026-10-12T16:55:01.000Z",
+      "url": "https://x.com/finkd/status/2109689305073614918",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "trillion-leaders": 2
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 33478,
+        "reposts": 2637,
+        "replies": 1953,
+        "quotes": 2502,
+        "views": 3646646,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
+      "people": [
+        {
+          "name": "Mark Zuckerberg",
+          "intro": "Meta创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-safety-priority-2026-10-12",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：安全一直是 Tesla 与 SpaceX 的首要任务",
+      "fact": "@elonmusk 引用其母亲一条回忆 Tesla 初创时期“安全第一”的帖子，称“Your safety has always been priority 1 at Tesla and SpaceX”。",
+      "whyItMatters": "品牌表态，无新的产能、资本或产品事实；按热度补位收录。",
+      "counterCase": "不含可核验的新数据。",
+      "affected": [
+        "TSLA"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-12T16:23:11.000Z",
+      "url": "https://x.com/elonmusk/status/2109681296616374289",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 20193,
+        "reposts": 1940,
+        "replies": 1479,
+        "quotes": 160,
+        "views": 2592084,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "whitehouse-getting-country-back-2026-10-12",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "白宫发帖：“We're getting our country back”",
+      "fact": "@WhiteHouse 发帖“We're getting our country back. 🇺🇸”并附视频；视频内容 X 工具未返回。",
+      "whyItMatters": "政治宣传，无可执行贸易、出口管制、税收或能源政策；按热度补位收录。",
+      "counterCase": "视频内容未核验。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-12T16:14:02.000Z",
+      "url": "https://x.com/WhiteHouse/status/2109678991980511407",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 45445,
+        "reposts": 7142,
+        "replies": 10632,
+        "quotes": 1111,
+        "views": 1879770,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "whitehouse-sail-on-columbus-2026-10-12",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "白宫：“Sail On. Columbus Day is back.”",
+      "fact": "@WhiteHouse 发帖“Sail On. Columbus Day is back. 🇺🇸”并附链接与图片。",
+      "whyItMatters": "节日政治表态，无经济传导；按热度补位收录。",
+      "counterCase": "不含政策动作。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-12T14:30:54.000Z",
+      "url": "https://x.com/WhiteHouse/status/2109653038877057425",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 20321,
+        "reposts": 4056,
+        "replies": 2009,
+        "quotes": 472,
+        "views": 517110,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "whitehouse-columbus-hero-2026-10-12",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "白宫：本届政府视 Christopher Columbus 为英雄",
+      "fact": "@WhiteHouse 发帖“In this Administration, Christopher Columbus is a hero! Happy Columbus Day!”。",
+      "whyItMatters": "节日政治表态，无经济传导；按热度补位收录。",
+      "counterCase": "不含政策动作。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-12T13:16:01.000Z",
+      "url": "https://x.com/WhiteHouse/status/2109634195350040688",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 32042,
+        "reposts": 3723,
+        "replies": 1911,
+        "quotes": 418,
+        "views": 743183,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
+      "people": []
+    },
     {
       "eventKey": "satya-maia-300-primary-inference-2026-10-12",
       "tabIds": [
@@ -57,6 +355,16 @@
       "weeklyRanks": {
         "trillion-leaders": 1
       },
+      "selection": "rule",
+      "engagement": {
+        "likes": 12692,
+        "reposts": 1331,
+        "replies": 633,
+        "quotes": 519,
+        "views": 1492811,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
       "people": [
         {
           "name": "Satya Nadella",
@@ -65,56 +373,31 @@
       ]
     },
     {
-      "eventKey": "trump-bessent-iran-isolation-campaign-2026-10-11",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "Scott Bessent 公布对伊朗精英“绝对孤立”行动",
-      "fact": "@TrumpDailyPosts（Truth Social 内容搬运账号，非官方）称财长 Scott Bessent 公布 Donald Trump 政府针对伊朗精英的“绝对孤立行动”。",
-      "whyItMatters": "进一步制裁伊朗会影响霍尔木兹航运与原油供给预期，叠加当前油轮袭击，推高能源风险溢价与通胀预期。",
-      "counterCase": "帖子未列出具体制裁对象、生效时间或执行机制；需以财政部 OFAC 正式公告核实。",
-      "affected": [
-        "原油与航运",
-        "能源股",
-        "通胀预期"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-11T21:23:00.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2109394357908574617",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        },
-        {
-          "name": "Scott Bessent",
-          "intro": "美国财政部长"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-terafab-project-recruit-2026-10-12",
+      "eventKey": "elon-wow-link-2026-10-12",
       "tabIds": [
         "elon-musk"
       ],
-      "title": "Elon Musk 招募 Terafab 项目人才",
-      "fact": "@elonmusk 发帖称“加入 Terafab 项目”，并称这座巨型设施的产出价值将排进全球国家 GDP 前 20。",
-      "whyItMatters": "延续其自建芯片制造的表态，若落地将改变特斯拉/SpaceX/xAI 对台积电等代工与存储供应的依赖，也是芯片设备与材料需求的潜在增量。",
-      "counterCase": "帖子未给出地点、投资额、工艺节点与时间表；产值说法是愿景表述，不是订单或产能数据。",
-      "affected": [
-        "芯片制造与设备",
-        "TSLA",
-        "xAI 算力供应"
-      ],
+      "title": "Elon Musk 发帖“Wow”附链接",
+      "fact": "@elonmusk 发帖“Wow”并附一个链接；X 工具未返回链接所指内容。",
+      "whyItMatters": "内容不明，无法评估投资传导；按热度补位收录。",
+      "counterCase": "链接内容未核验，不能据此推断任何事实。",
+      "affected": [],
       "author": "elonmusk",
-      "publishedAt": "2026-10-12T01:50:01.000Z",
-      "url": "https://x.com/elonmusk/status/2109461555066671311",
+      "publishedAt": "2026-10-12T05:42:15.000Z",
+      "url": "https://x.com/elonmusk/status/2109519998691553639",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 6156,
+        "reposts": 1017,
+        "replies": 1416,
+        "quotes": 114,
+        "views": 1896481,
+        "capturedAt": "2026-10-13T02:20:00Z",
+        "source": "x search_posts_all/get_posts_by_ids public_metrics"
+      },
       "people": [
         {
           "name": "Elon Musk",
@@ -143,6 +426,7 @@
       "weeklyRanks": {
         "donald-trump": 1
       },
+      "selection": "rule",
       "people": []
     },
     {
@@ -166,6 +450,7 @@
       "weeklyRanks": {
         "donald-trump": 2
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Donald Trump",
@@ -195,6 +480,7 @@
       "weeklyRanks": {
         "elon-musk": 1
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Elon Musk",
@@ -223,32 +509,7 @@
       "weeklyRanks": {
         "elon-musk": 2
       },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-grok-bot-commerce-2026-10-10",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 展示 Grok Bot：拍照信用卡即可比价下单",
-      "fact": "Elon Musk 称用户可把信用卡拍照丢进聊天，Grok Bot 会在网上搜寻最优价格并下单购买。",
-      "whyItMatters": "若代理购物从演示走到规模化成交，属于 AI 落地的交易闭环信号，并可能改变零售获客与支付入口。",
-      "counterCase": "若缺乏可审计成交量、风控与商户覆盖数据，则仍停留在产品演示。",
-      "affected": [
-        "xAI/Grok",
-        "电商与支付入口"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-10T21:04:52.000Z",
-      "url": "https://x.com/elonmusk/status/2109027407185277123",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
+      "selection": "rule",
       "people": [
         {
           "name": "Elon Musk",
@@ -277,6 +538,7 @@
       "weeklyRanks": {
         "elon-musk": 3
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Elon Musk",
@@ -305,6 +567,7 @@
       "weeklyRanks": {
         "elon-musk": 4
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Elon Musk",
@@ -331,35 +594,15 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "trillion-leaders": 2
+        "trillion-leaders": 3
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Satya Nadella",
           "intro": "微软董事长兼CEO"
         }
       ]
-    },
-    {
-      "eventKey": "amazon-physical-ai-platform-2026-10-09",
-      "tabIds": [
-        "trillion-leaders"
-      ],
-      "title": "亚马逊强调 Physical AI：机器人与现实世界部署需要差异化平台",
-      "fact": "@amazon 称物理 AI 并非一刀切，人形机器人、自动驾驶与智能工厂需求不同，并称已构建相应 Physical 能力（正文指向其产品叙事）。",
-      "whyItMatters": "云+边缘+机器人栈若产品化，关系到 AWS 在机器人/工业 AI 的增量场景与芯片/传感器生态。",
-      "counterCase": "若缺少客户合同、用量或毛利披露，Physical AI 仍可能是营销分类。",
-      "affected": [
-        "Amazon AWS",
-        "机器人与工业 AI"
-      ],
-      "author": "amazon",
-      "publishedAt": "2026-10-09T15:29:14.000Z",
-      "url": "https://x.com/amazon/status/2108580556208275716",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
     },
     {
       "eventKey": "elon-spacex-spectrum-phone-coverage-2026-10-08",
@@ -382,6 +625,7 @@
       "weeklyRanks": {
         "elon-musk": 5
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Elon Musk",
@@ -408,8 +652,9 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "trillion-leaders": 3
+        "trillion-leaders": 4
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Sundar Pichai",
@@ -439,6 +684,7 @@
       "weeklyRanks": {
         "jensen-huang": 1
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Satya Nadella",
@@ -449,91 +695,6 @@
           "intro": "英伟达创始人兼CEO"
         }
       ]
-    },
-    {
-      "eventKey": "nadella-nvidia-windows-partnership-2026-10-07",
-      "tabIds": [
-        "trillion-leaders"
-      ],
-      "title": "Satya Nadella 官宣与 NVIDIA 合作开启 Windows 下一章",
-      "fact": "Satya Nadella 发帖感谢 Jensen Huang 等到场，称很高兴与 NVIDIA 合作开启 Windows 下一章。",
-      "whyItMatters": "微软—英伟达在 Windows/PC AI 的联合推进强化 CUDA 与 Windows AI PC 绑定，利好双方生态交叉销售。",
-      "counterCase": "若后续缺少可量化的 OEM 出货、驱动或收入拆分，合作停留在发布会层面。",
-      "affected": [
-        "Microsoft",
-        "NVIDIA",
-        "AI PC OEM"
-      ],
-      "author": "satyanadella",
-      "publishedAt": "2026-10-07T21:02:25.000Z",
-      "url": "https://x.com/satyanadella/status/2107939627898400819",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "trillion-leaders": 4
-      },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        },
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "nadella-windows-agents-mai-code-2026-10-07",
-      "tabIds": [
-        "trillion-leaders"
-      ],
-      "title": "Satya Nadella：Windows 进入“未计量智能”与安全代理时代，发布 MAI-Code-1.1 Flash",
-      "fact": "Satya Nadella 发帖称要把未计量智能带到每张桌面与家庭，使每台 PC 成为代理可安全代劳的场所，并列出 MAI-Code-1.1 Flash：137B 参数编程模型、256K 上下文等亮点。",
-      "whyItMatters": "PC 端代理与本地/混合推理若放量，将拉动边缘 GPU/NPU、Windows 生态软件收入，并反馈云端模型需求。",
-      "counterCase": "若企业采纳、付费转化与硬件换机数据疲弱，叙事难以兑现为收入。",
-      "affected": [
-        "Microsoft",
-        "PC/边缘 AI 芯片",
-        "独立软件生态"
-      ],
-      "author": "satyanadella",
-      "publishedAt": "2026-10-07T18:17:05.000Z",
-      "url": "https://x.com/satyanadella/status/2107898018112647313",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "trillion-leaders": 5
-      },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "ms-borgwarner-ai-power-upgrade-2026-10-06",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "转述：摩根士丹利上调 BorgWarner 至增持，押注 AI 数据中心分布式电力",
-      "fact": "@newsinvesting（Investing.com News）称 BorgWarner 在摩根士丹利上调至 Overweight 后上涨，理由是 TurboCell 涡轮发电机或受益于 AI 数据中心电力需求，目标价由 71 提至 95 美元。",
-      "whyItMatters": "体现“电力为 AI 第二瓶颈”向汽车/工业供应商的映射，检验分布式发电主题是否获主流覆盖。",
-      "counterCase": "若订单、认证或数据中心客户进展空白，评级上调可能只是主题交易。",
-      "affected": [
-        "BorgWarner",
-        "AI 数据中心电力设备"
-      ],
-      "author": "newsinvesting",
-      "publishedAt": "2026-10-06T15:53:07.000Z",
-      "url": "https://x.com/newsinvesting/status/2107499402877182415",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "research-reports": 1
-      },
-      "people": []
     },
     {
       "eventKey": "ms-after-huang-dram-cycle-2026-10-06",
@@ -554,91 +715,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "research-reports": 2
+        "research-reports": 4
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Jensen Huang",
           "intro": "英伟达创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "trump-diesel-dyed-eo-2026-10-06",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "Donald Trump 签署行政令：临时允许非道路染色柴油上路并给税负纾困",
-      "fact": "@WhiteHouse 称总统刚签署行政令，临时允许非道路“染色”柴油用于公路，降低农民、卡车司机与工人成本；@TrumpDailyPosts 亦同步为 “Emergency Tax Relief on Diesel Fuel”。",
-      "whyItMatters": "直接影响柴油终端成本与物流/农业利润，并与全球炼能紧张叙事联动。",
-      "counterCase": "若仅为短期临时措施且炼能瓶颈未解，对中期柴油价格影响有限。",
-      "affected": [
-        "柴油与炼油",
-        "公路货运与农业"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-06T00:06:57.000Z",
-      "url": "https://x.com/WhiteHouse/status/2107261290838393203",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "donald-trump": 3
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "trump-energy-42b-nuclear-ohio-pa-2026-10-05",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "白宫转发：能源部宣布 42 亿美元支持俄亥俄与宾州三座核电厂",
-      "fact": "@WhiteHouse 转发报道称 @ENERGY 宣布 42 亿美元用于提升俄亥俄与宾夕法尼亚三座核电厂。",
-      "whyItMatters": "核电出力与许可/投资信号直接影响 AI 数据中心中长期电力供给预期。",
-      "counterCase": "若资金拨付、工期或净增兆瓦未落地，则对近中期电力缺口帮助有限。",
-      "affected": [
-        "核电与公用事业",
-        "AI 数据中心电力"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-05T21:35:04.000Z",
-      "url": "https://x.com/WhiteHouse/status/2107223066614890989",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "donald-trump": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "trump-working-families-tax-cuts-2026-10-05",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "白宫称工作家庭减税已带动招聘、工资与设备投资",
-      "fact": "@WhiteHouse 称 Donald Trump 与共和党推动的 Working Families Tax Cuts 正转化为更多招聘、更高工资、新设备与主街企业扩张。",
-      "whyItMatters": "财政/税收路径变化会影响消费、企业资本开支与赤字—利率联动假设。",
-      "counterCase": "若官方仅有宣传而无可核对的宏观就业/投资数据，则传导强度存疑。",
-      "affected": [
-        "美国财政与消费",
-        "中小企业投资"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-05T18:48:09.000Z",
-      "url": "https://x.com/WhiteHouse/status/2107181063470821742",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "donald-trump": 5
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
         }
       ]
     },
@@ -661,8 +744,9 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "research-reports": 3
+        "research-reports": 2
       },
+      "selection": "rule",
       "people": []
     },
     {
@@ -684,8 +768,9 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "research-reports": 4
+        "research-reports": 5
       },
+      "selection": "rule",
       "people": []
     },
     {
@@ -707,77 +792,9 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "research-reports": 5
+        "research-reports": 3
       },
-      "people": []
-    },
-    {
-      "eventKey": "meta-muse-ai-agent-2026-09-26",
-      "tabIds": [
-        "trillion-leaders"
-      ],
-      "title": "Meta 于 Connect 发布个人 AI 代理 Muse",
-      "fact": "@Meta 介绍 Muse 为个人 AI 代理，称了解用户与目标、跨生活场景工作，并强调隐私与安全从第一天内建。",
-      "whyItMatters": "消费级代理若绑定眼镜/社交图，可能打开 Meta 广告与硬件之外的 AI 订阅/互动变现。",
-      "counterCase": "若留存、付费与监管约束不及预期，发布会产品难以改变利润结构。",
-      "affected": [
-        "Meta",
-        "消费级 AI 代理"
-      ],
-      "author": "Meta",
-      "publishedAt": "2026-09-26T17:18:10.000Z",
-      "url": "https://x.com/Meta/status/2103896925007221173",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "nadella-copilot-os-work-update-2026-09-25",
-      "tabIds": [
-        "trillion-leaders"
-      ],
-      "title": "Satya Nadella：Copilot 升级为跨模型、形态与任务的“工作操作系统”",
-      "fact": "Satya Nadella 称把 Copilot 建成跨越每个模型、形态与任务的工作 OS，并宣布迄今最大更新，包含面向企业的 Autopilot 长程代理与 Code 等能力。",
-      "whyItMatters": "企业代理平台化直接影响微软 AI 附着率、Azure 消耗与 Office 套餐提价空间。",
-      "counterCase": "若企业试点无法转正付费，Autopilot 叙事对收入贡献有限。",
-      "affected": [
-        "Microsoft",
-        "企业 AI 代理平台"
-      ],
-      "author": "satyanadella",
-      "publishedAt": "2026-09-25T12:05:37.000Z",
-      "url": "https://x.com/satyanadella/status/2103455884366188544",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "google-suncatcher-tpu-space-2026-09-24",
-      "tabIds": [
-        "trillion-leaders"
-      ],
-      "title": "谷歌：Project Suncatcher 将发射原型卫星测试太空中的 TPU",
-      "fact": "@Google 称经多年研究，Project Suncatcher 计划首次在轨测试，发射原型卫星评估 Google TPU 在太空中的表现。",
-      "whyItMatters": "探索轨道算力与能源约束的长期路径，若可行可能改变对地面电力/土地瓶颈的替代想象，但距商业化仍远。",
-      "counterCase": "原型测试失败或成本过高，则对近中期资本开支与芯片需求无实质影响。",
-      "affected": [
-        "Google TPU",
-        "太空算力概念",
-        "地面电力替代叙事"
-      ],
-      "author": "Google",
-      "publishedAt": "2026-09-24T21:45:31.000Z",
-      "url": "https://x.com/Google/status/2103239433809961276",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
+      "selection": "rule",
       "people": []
     },
     {
@@ -798,7 +815,10 @@
       "url": "https://x.com/amazon/status/2103115816166121709",
       "verification": "collector-report",
       "tier": "must-read",
-      "weeklyRanks": {},
+      "weeklyRanks": {
+        "trillion-leaders": 5
+      },
+      "selection": "rule",
       "people": []
     }
   ]

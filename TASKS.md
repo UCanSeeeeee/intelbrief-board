@@ -25,6 +25,10 @@
 - 断点（2026-10-13）：按用户最新规则只保留「全部更新」，前端已移除各页“更新本页”，服务端拒绝单页/子集。用户否决任何例行任务/cron轮询领单（任何频率）；Webhook值在手机/mac界面均未找到；GitHub issue事件探针因Cursor账号未连GitHub已暂停（保留，不再申请连接/PAT）。触发链路待GPT重新核验事件驱动方案；未验证链路不部署，派发保持关闭（显示“未接通”）。规则详见MANUAL_UPDATES顶部。
 - 验收：手机提交全部更新、去重/串行、失败报告与重试、最终线上核验均真实跑通。
 
+## 已完成：人物页规则优先 + 热度补位（2026-10-13）
+
+- 全部人物 Tab 目标 5 条，selectionPolicy v1（配置、校验、UI 标签、测试、文档）；按新规则重采人物页。规则见 PEOPLE_INTELLIGENCE_ROADMAP。
+
 ## 已完成：人名原文与人物简介（2026-10-13）
 
 - 登记表 `config/person-registry.json`（11 人）、`scripts/lib/person-names.js`、迁移脚本 `scripts/normalize-person-names.js`；卡片渲染「相关人物」；check 与发布流程对音译失败。人物页 Tab 名暂保留。

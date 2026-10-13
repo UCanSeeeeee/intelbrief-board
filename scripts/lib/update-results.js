@@ -49,6 +49,7 @@ function preparePeople(input,registry,raw,previous,cutoff,now=new Date()) {
   const status=failed.length===people.length && !incoming.length && failed.every(a=>a.status==='failed') && people.length ? 'failed' : failed.length ? 'partial' : added||changed ? 'complete':'unchanged';
   return {posts:mergePosts(raw.posts,incoming),checkpoints:{accounts:checkpoints},status,added,changed,failures:failed.map(a=>({username:a.username,note:a.note})),message:status==='failed'?'所有人物账号采集失败':`新增 ${added} 条，修订 ${changed} 条${failed.length?`；${failed.length} 个账号未完整检查：${failed.map(a=>'@'+a.username+' '+a.note).join('；')}`:''}`};
 }
+const {checkTabSelection}=require('./selection-policy');
 function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),kind='人物情报') {
   requireValue(input&&typeof input==='object',`${kind}采集器没有返回结果`);
   requireValue(date(input.checkedAt)&&Date.parse(input.checkedAt)>=Date.parse(cutoff)&&Date.parse(input.checkedAt)<=+now,`${kind}检查时间无效`);
@@ -85,6 +86,7 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     const ranks=item.weeklyRanks||{};
     for(const [tabId,rank] of Object.entries(ranks)) requireValue(item.tabIds.includes(tabId)&&Number.isInteger(rank)&&rank>=1&&rank<=allowed.get(tabId).weeklyLimit,`${kind}周榜排名无效`);
     const out={eventKey:item.eventKey.trim(),tabIds:item.tabIds,title:item.title.trim(),fact:item.fact.trim(),whyItMatters:item.whyItMatters.trim(),counterCase:item.counterCase.trim(),affected:item.affected.map(String),author:item.author.trim(),publishedAt:item.publishedAt,url:item.url,verification:'collector-report',tier:item.tier,weeklyRanks:ranks};
+    if(config.selectionPolicy){out.selection=item.selection||'rule';if(item.engagement!=null)out.engagement=item.engagement;}
     try{annotateCard(out,undefined,`${kind}.${out.eventKey}`);}catch(error){requireValue(false,error.message);}
     return out;
   });
@@ -98,6 +100,7 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
       const inLatest=Date.parse(item.publishedAt)>=Date.parse(cutoff)-latest*dayMs;
       requireValue(inLatest||(hasRank&&inWeekly),`${tab.label}含有超出该Tab窗口的条目`);
     }
+    if(config.selectionPolicy){const errs=checkTabSelection(tab,config.selectionPolicy,tabItems.filter(item=>Date.parse(item.publishedAt)>=Date.parse(cutoff)-latest*dayMs));requireValue(!errs.length,errs.join('；'));}
     const ranked=tabItems.filter(item=>item.weeklyRanks[tab.id]!=null);
     requireValue(ranked.every(item=>Date.parse(item.publishedAt)>=Date.parse(cutoff)-weekly*dayMs),`${tab.label}的重点榜超出窗口`);
     requireValue(ranked.length<=tab.weeklyLimit&&new Set(ranked.map(item=>item.weeklyRanks[tab.id])).size===ranked.length,`${tab.label}的重点榜超过上限或排名重复`);

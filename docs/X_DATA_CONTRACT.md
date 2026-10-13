@@ -38,6 +38,10 @@
 
 每张卡片（简报 focus/insights、待阅池 event、人物/个股/AI/加密 items）带 `people: [{name, intro}]`。人名保留原文写法（如 Satya Nadella、Donald Trump），不写中文音译（纳德拉、特朗普等）；每张卡片的 `people` 列出提到的人物及 ≤15 字简介，来自 `config/person-registry.json`。登记表外的新人物：先在登记表新增原文名、经核实的简介、中文音译别名和匹配词，再发布。校验字段：title、fact、impact/whyItMatters、counterCase、selectionReason、credibilityReason、eventTimeNote、attentionEvidence 等卡片文字；`people` 必须与登记表推导结果一致（按卡片文字中的原文名/姓氏及作者账号匹配）。失败而不是警告：历史归档已一次迁移，因此同一规则覆盖全部已发布数据。
 
+## 人物页 selection / engagement 字段（2026-10-13）
+
+人物页 items 可带 `selection: "rule" | "engagement"`（缺省视为 rule）与 `engagement: {likes, reposts, replies, quotes, views, bookmarks, capturedAt, source}`。互动数只取 X 工具实际返回的非负整数，至少一项；未返回的字段不写。`engagement` 条目必须 tier=watch、无 weeklyRanks、只属一个 Tab；每 Tab 近窗 rule+engagement ≤ 5，rule 为 0 时 engagement ≤ 3。完整规则见 [PEOPLE_INTELLIGENCE_ROADMAP](PEOPLE_INTELLIGENCE_ROADMAP.md)「收录与热度补位」。互动量只用于热度补位排序和展示，不提高可信度评分（见下文）。
+
 ## 可信度评分
 
 总分为 `作者分 × 40% + 主张分 × 60%`，结果始终标为 `auto-provisional`（自动初评）。
