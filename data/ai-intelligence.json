@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T08:12:58.065Z",
-  "cutoff": "2026-10-13T16:00:00+08:00",
+  "updatedAt": "2026-10-13T13:28:00.000Z",
+  "cutoff": "2026-10-13T21:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,22 +9,22 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "@OpenAI 同窗 0 原帖；保留周榜旧条"
+        "note": "同窗官方原帖0；保留周榜旧条"
       },
       {
         "id": "anthropic",
         "status": "complete",
-        "note": "近窗 1 条"
+        "note": "蒸馏防御官方帖"
       },
       {
         "id": "goog-ai",
-        "status": "complete",
-        "note": "近窗 1 条"
+        "status": "partial",
+        "note": "近窗可核验新增不足"
       },
       {
         "id": "ai-others",
         "status": "complete",
-        "note": "近窗 4 条"
+        "note": "Dimon AI代理风险"
       }
     ]
   },
@@ -341,6 +341,32 @@
         "anthropic": 3
       },
       "people": []
+    },
+    {
+      "eventKey": "dimon-ai-agents-bank-ai-2026-10-13",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "Jamie Dimon 警告AI代理接入银行账户风险",
+      "fact": "财经快讯称 Jamie Dimon 警告AI代理访问银行账户的安全与责任风险。",
+      "whyItMatters": "金融场景Agent落地可能受合规与责任条款约束。",
+      "counterCase": "警告不代表产品停推。",
+      "affected": [
+        "AI代理",
+        "金融科技"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-13T12:52:55.000Z",
+      "url": "https://x.com/DeItaone/status/2109990769532530862",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Jamie Dimon",
+          "intro": "摩根大通董事长兼CEO"
+        }
+      ]
     }
   ],
   "collectionPath": "grok-bot-x-search"

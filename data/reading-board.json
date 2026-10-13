@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T08:11:02.859Z",
-  "asOf": "2026-10-13T16:00:00+08:00",
+  "updatedAt": "2026-10-13T13:29:07.656Z",
+  "asOf": "2026-10-13T21:00:00+08:00",
   "events": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
@@ -1826,6 +1826,16 @@
             "sourceUrl": "https://x.com/DeItaone/status/2109611622171807791",
             "checkedAt": "2026-10-13T08:10:58.671Z"
           }
+        },
+        {
+          "edition": "2026-10-13-2100",
+          "decision": {
+            "eventKey": "houthi-saudi-tanker-escalation-2026-10-12",
+            "action": "keep",
+            "reason": "风险升级为阿美设施警告，未解除。",
+            "sourceUrl": "https://x.com/DeItaone/status/2109987518322217249",
+            "checkedAt": "2026-10-13T13:22:40.000Z"
+          }
         }
       ],
       "group": "focus",
@@ -1980,16 +1990,16 @@
       "lastEdition": "2026-10-13-1600",
       "lastCheckedAt": "2026-10-13T08:11:02.859Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
       "retainUntil": "2026-10-14T01:00:00.000Z",
       "lateDiscovery": false,
       "readingDate": "2026-10-13",
       "review": {
         "eventKey": "houthi-saudi-tanker-escalation-2026-10-12",
         "action": "keep",
-        "reason": "袭击与伊朗斡旋讨论仍在，风险未解除。",
-        "sourceUrl": "https://x.com/DeItaone/status/2109611622171807791",
-        "checkedAt": "2026-10-13T08:10:58.671Z"
+        "reason": "风险升级为阿美设施警告，未解除。",
+        "sourceUrl": "https://x.com/DeItaone/status/2109987518322217249",
+        "checkedAt": "2026-10-13T13:22:40.000Z"
       }
     },
     {
@@ -4285,6 +4295,16 @@
             "sourceUrl": "https://x.com/satyanadella/status/2109631106404487523",
             "checkedAt": "2026-10-13T08:10:58.671Z"
           }
+        },
+        {
+          "edition": "2026-10-13-2100",
+          "decision": {
+            "eventKey": "msft-maia-300-primary-inference-2026-10-12",
+            "action": "keep",
+            "reason": "CEO原帖仍有效，主推理迁移未被推翻。",
+            "sourceUrl": "https://x.com/satyanadella/status/2109631106404487523",
+            "checkedAt": "2026-10-13T13:22:40.000Z"
+          }
         }
       ],
       "group": "focus",
@@ -4406,16 +4426,16 @@
       "lastEdition": "2026-10-13-1600",
       "lastCheckedAt": "2026-10-13T08:11:02.859Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
       "lateDiscovery": false,
       "review": {
         "eventKey": "msft-maia-300-primary-inference-2026-10-12",
         "action": "keep",
-        "reason": "CEO 原帖仍有效，主推理迁移未被推翻。",
+        "reason": "CEO原帖仍有效，主推理迁移未被推翻。",
         "sourceUrl": "https://x.com/satyanadella/status/2109631106404487523",
-        "checkedAt": "2026-10-13T08:10:58.671Z"
+        "checkedAt": "2026-10-13T13:22:40.000Z"
       }
     },
     {
@@ -5682,48 +5702,140 @@
             "sourceUrl": "https://x.com/dnystedt/status/2109774661064265943",
             "checkedAt": "2026-10-13T08:10:58.671Z"
           }
+        },
+        {
+          "edition": "2026-10-13-1600",
+          "event": {
+            "eventKey": "nanya-dram-asp-margin-surge-2026-10-12",
+            "title": "南亚科：DRAM 短缺下 ASP 大涨、毛利率飙升",
+            "fact": "@dnystedt 等转述媒体：南亚科第三季毛利率约 85.7%，DRAM ASP 较二季上升约 60%，营收环比大增，归因严重短缺与涨价。",
+            "impact": "传统 DRAM 涨价验证供给紧张，可能外溢到 HBM 产能分配与消费电子成本。",
+            "direction": "双向",
+            "horizon": "一至两个季度",
+            "affected": [
+              "DRAM 厂",
+              "消费电子",
+              "HBM 供给"
+            ],
+            "counterCase": "若库存回补结束或需求转弱，ASP 可能回落。",
+            "selectionReason": "半导体包可核验的价格/利润数据点。",
+            "credibilityReason": "具名科技记者转述，缺公司官方 X。",
+            "change": "延续",
+            "continuationReason": "09:00 期已提示短缺；16:00 仍见毛利细节传播。",
+            "eventTime": null,
+            "eventTimeNote": "财报/媒体报道准确时刻未在帖文写明。",
+            "knowledgeCards": [
+              "I04",
+              "I06",
+              "R05"
+            ],
+            "disciplines": [
+              "半导体产业",
+              "财务分析"
+            ],
+            "knowledgeApplication": "I04：亚洲厂商线索验证存储周期；I06：利润在存储环节再分配；R05：新闻确认涨价预期。",
+            "sources": [
+              {
+                "url": "https://x.com/dnystedt/status/2109774661064265943",
+                "postId": "2109774661064265943",
+                "username": "dnystedt",
+                "publishedAt": "2026-10-12T22:34:11.000Z",
+                "checkedAt": "2026-10-13T08:10:58.671Z",
+                "excerpt": "Nanya Technology’s gross margin hit 85.7% in the 3rd quarter as DRAM average selling prices (ASPs) rose 60% over the second quarter",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 33,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 31,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 4,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "people": [],
+            "credibility": {
+              "score": 33,
+              "label": "规则初评，未校准",
+              "reason": "具名科技记者转述，缺公司官方 X。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-10-13T13:29:07.656Z"
+        },
+        {
+          "edition": "2026-10-13-2100",
+          "decision": {
+            "eventKey": "nanya-dram-asp-margin-surge-2026-10-12",
+            "action": "keep",
+            "reason": "DRAM短缺定价仍有效。",
+            "sourceUrl": "https://x.com/dnystedt/status/2109774661064265943",
+            "checkedAt": "2026-10-13T13:22:40.000Z"
+          }
         }
       ],
       "group": "insights",
       "event": {
         "eventKey": "nanya-dram-asp-margin-surge-2026-10-12",
-        "title": "南亚科：DRAM 短缺下 ASP 大涨、毛利率飙升",
-        "fact": "@dnystedt 等转述媒体：南亚科第三季毛利率约 85.7%，DRAM ASP 较二季上升约 60%，营收环比大增，归因严重短缺与涨价。",
-        "impact": "传统 DRAM 涨价验证供给紧张，可能外溢到 HBM 产能分配与消费电子成本。",
+        "title": "南亚科毛利率飙升映射DRAM短缺涨价",
+        "fact": "媒体人转述南亚科第三季毛利率达85.7%，DRAM ASP较第二季升约60%，营收环比大增，归因严重DRAM短缺与涨价。",
+        "impact": "通用DRAM涨价与HBM争产能共振，可能抬升服务器BOM并影响MU等存储股利润弹性，同时挤压部分OEM毛利。",
         "direction": "双向",
-        "horizon": "一至两个季度",
+        "horizon": "本季至2027供给释放",
         "affected": [
-          "DRAM 厂",
-          "消费电子",
-          "HBM 供给"
+          "MU",
+          "DRAM产业链",
+          "服务器OEM"
         ],
-        "counterCase": "若库存回补结束或需求转弱，ASP 可能回落。",
-        "selectionReason": "半导体包可核验的价格/利润数据点。",
-        "credibilityReason": "具名科技记者转述，缺公司官方 X。",
+        "counterCase": "若现货回落或客户砍单，涨价周期可能短于预期。",
+        "selectionReason": "用可观察ASP与毛利把存储短缺落到利润变量。",
+        "credibilityReason": "资深科技记者转述；缺公司英文官方X原帖。",
         "change": "延续",
-        "continuationReason": "09:00 期已提示短缺；16:00 仍见毛利细节传播。",
+        "continuationReason": "短缺定价未被推翻，本窗仍有讨论与亚洲存储股波动。",
         "eventTime": null,
-        "eventTimeNote": "财报/媒体报道准确时刻未在帖文写明。",
+        "eventTimeNote": "第三季财务结果披露的精确发布时间未在所用帖文写明。",
         "knowledgeCards": [
-          "I04",
-          "I06",
-          "R05"
+          "I02",
+          "I05",
+          "M03"
         ],
         "disciplines": [
-          "半导体产业",
-          "财务分析"
+          "半导体周期",
+          "成本会计"
         ],
-        "knowledgeApplication": "I04：亚洲厂商线索验证存储周期；I06：利润在存储环节再分配；R05：新闻确认涨价预期。",
+        "knowledgeApplication": "I02：短缺期ASP是利润主变量；M03：成本上升向下游传导取决于议价。",
         "sources": [
           {
             "url": "https://x.com/dnystedt/status/2109774661064265943",
             "postId": "2109774661064265943",
             "username": "dnystedt",
             "publishedAt": "2026-10-12T22:34:11.000Z",
-            "checkedAt": "2026-10-13T08:10:58.671Z",
-            "excerpt": "Nanya Technology’s gross margin hit 85.7% in the 3rd quarter as DRAM average selling prices (ASPs) rose 60% over the second quarter",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "Nanya Technology’s gross margin hit 85.7% in the 3rd quarter as DRAM average selling prices (ASPs) rose 60% over the second quarter amid a severe DRAM shortage and rising prices",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
@@ -5759,24 +5871,24 @@
         "credibility": {
           "score": 33,
           "label": "规则初评，未校准",
-          "reason": "具名科技记者转述，缺公司官方 X。",
+          "reason": "资深科技记者转述；缺公司英文官方X原帖。",
           "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
         }
       },
-      "rank": 2,
-      "lastEdition": "2026-10-13-1600",
-      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "rank": 3,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
       "lateDiscovery": false,
       "review": {
         "eventKey": "nanya-dram-asp-margin-surge-2026-10-12",
         "action": "keep",
-        "reason": "DRAM 短缺定价仍有效。",
+        "reason": "DRAM短缺定价仍有效。",
         "sourceUrl": "https://x.com/dnystedt/status/2109774661064265943",
-        "checkedAt": "2026-10-13T08:10:58.671Z"
+        "checkedAt": "2026-10-13T13:22:40.000Z"
       }
     },
     {
@@ -5968,7 +6080,18 @@
       "eventKey": "meta-muse-wonder-frontier-2026-10-12",
       "firstSeenAt": "2026-10-13T08:11:02.859Z",
       "firstEdition": "2026-10-13-1600",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-10-13-2100",
+          "decision": {
+            "eventKey": "meta-muse-wonder-frontier-2026-10-12",
+            "action": "keep",
+            "reason": "产品发布未被撤回，窗口内仍有讨论。",
+            "sourceUrl": "https://x.com/finkd/status/2109689305073614918",
+            "checkedAt": "2026-10-13T13:22:40.000Z"
+          }
+        }
+      ],
       "group": "focus",
       "event": {
         "eventKey": "meta-muse-wonder-frontier-2026-10-12",
@@ -6126,10 +6249,17 @@
       "lastEdition": "2026-10-13-1600",
       "lastCheckedAt": "2026-10-13T08:11:02.859Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
-      "lateDiscovery": false
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "meta-muse-wonder-frontier-2026-10-12",
+        "action": "keep",
+        "reason": "产品发布未被撤回，窗口内仍有讨论。",
+        "sourceUrl": "https://x.com/finkd/status/2109689305073614918",
+        "checkedAt": "2026-10-13T13:22:40.000Z"
+      }
     },
     {
       "eventKey": "ter-form-300m-hbm-test-collab-2026-10-12",
@@ -6258,7 +6388,18 @@
       "eventKey": "ocp-open-datacenter-power-spec-2026-10-12",
       "firstSeenAt": "2026-10-13T08:11:02.859Z",
       "firstEdition": "2026-10-13-1600",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-10-13-2100",
+          "decision": {
+            "eventKey": "ocp-open-datacenter-power-spec-2026-10-12",
+            "action": "keep",
+            "reason": "开放机房/电力规范讨论仍在。",
+            "sourceUrl": "https://x.com/MikeLongTerm/status/2109717334289977451",
+            "checkedAt": "2026-10-13T13:22:40.000Z"
+          }
+        }
+      ],
       "group": "focus",
       "event": {
         "eventKey": "ocp-open-datacenter-power-spec-2026-10-12",
@@ -6371,35 +6512,171 @@
       "lastEdition": "2026-10-13-1600",
       "lastCheckedAt": "2026-10-13T08:11:02.859Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
-      "lateDiscovery": false
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "ocp-open-datacenter-power-spec-2026-10-12",
+        "action": "keep",
+        "reason": "开放机房/电力规范讨论仍在。",
+        "sourceUrl": "https://x.com/MikeLongTerm/status/2109717334289977451",
+        "checkedAt": "2026-10-13T13:22:40.000Z"
+      }
     },
     {
       "eventKey": "maia-300-hbm-tsmc-rebalance-2026-10-12",
       "firstSeenAt": "2026-10-13T08:11:02.859Z",
       "firstEdition": "2026-10-13-1600",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-10-13-1600",
+          "event": {
+            "eventKey": "maia-300-hbm-tsmc-rebalance-2026-10-12",
+            "title": "Maia 300 部署叙事指向 HBM/代工再平衡",
+            "fact": "围绕 Nadella 公告的讨论强调多吉瓦自研推理会争夺先进制程与高带宽内存，而不只是替代 GPU 采购名额。",
+            "impact": "ASIC 放量可能抬升封装/HBM 结构性需求，使存储与代工相对 GPU 品牌的议价变化。",
+            "direction": "双向",
+            "horizon": "2026–2027",
+            "affected": [
+              "TSMC",
+              "HBM 三厂",
+              "NVDA",
+              "MSFT"
+            ],
+            "counterCase": "若 Maia 用量低于预期，传导弱于叙事。",
+            "selectionReason": "把公司战略落到半导体实物瓶颈。",
+            "credibilityReason": "锚定 CEO 原帖；工艺细节多为转述。",
+            "change": "延续",
+            "continuationReason": "主推理迁移仍待 2027 验证，产能讨论在窗口内继续。",
+            "eventTime": "2026-10-12T13:03:45.000Z",
+            "knowledgeCards": [
+              "I01",
+              "I03",
+              "I04"
+            ],
+            "disciplines": [
+              "半导体产业",
+              "供应链管理"
+            ],
+            "knowledgeApplication": "I01/I03：采购方自研降低对单一 GPU 依赖，却把瓶颈推向代工与 HBM；I04：需亚洲供应链线索交叉验证。",
+            "sources": [
+              {
+                "url": "https://x.com/Ishaan1806/status/2109656258026582042",
+                "postId": "2109656258026582042",
+                "username": "Ishaan1806",
+                "publishedAt": "2026-10-12T14:43:42.000Z",
+                "checkedAt": "2026-10-13T08:10:58.671Z",
+                "excerpt": "Every hyperscaler now runs its own AI chip... When power is the bottleneck, efficiency decides the silicon. Whoever designs these, TSMC makes them",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/StockSavvyShay/status/2109633803027370104",
+                "postId": "2109633803027370104",
+                "username": "StockSavvyShay",
+                "publishedAt": "2026-10-12T13:14:28.000Z",
+                "checkedAt": "2026-10-13T08:10:58.671Z",
+                "excerpt": "$MSFT CEO Satya Nadella says Maia its “biggest bet yet on our own silicon” with multi-GW deployments starting next year and Maia 300 delivering 40% more tokens per watt",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 34,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 33,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 6,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [
+                    "主张包含较具体、可核验的对象或数字"
+                  ],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "people": [
+              {
+                "name": "Satya Nadella",
+                "intro": "微软董事长兼CEO"
+              }
+            ],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "锚定 CEO 原帖；工艺细节多为转述。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-10-13T13:29:07.656Z"
+        }
+      ],
       "group": "insights",
       "event": {
         "eventKey": "maia-300-hbm-tsmc-rebalance-2026-10-12",
-        "title": "Maia 300 部署叙事指向 HBM/代工再平衡",
-        "fact": "围绕 Nadella 公告的讨论强调多吉瓦自研推理会争夺先进制程与高带宽内存，而不只是替代 GPU 采购名额。",
-        "impact": "ASIC 放量可能抬升封装/HBM 结构性需求，使存储与代工相对 GPU 品牌的议价变化。",
+        "title": "Maia 主推理迁移叙事继续指向HBM与代工再平衡",
+        "fact": "Satya Nadella 窗口内公告仍被讨论：微软将把Maia家族扩至多吉瓦并作自有产品主推理系统；市场评论强调自研芯片放量会争夺先进制程与高带宽内存，而不只是替代GPU采购名额。",
+        "impact": "ASIC放量可能抬升封装与HBM结构性需求，使存储与代工相对GPU品牌的议价变化。",
         "direction": "双向",
         "horizon": "2026–2027",
         "affected": [
           "TSMC",
-          "HBM 三厂",
+          "HBM三厂",
           "NVDA",
           "MSFT"
         ],
-        "counterCase": "若 Maia 用量低于预期，传导弱于叙事。",
+        "counterCase": "若Maia用量低于预期或N2P/HBM配额不足，传导弱于叙事。",
         "selectionReason": "把公司战略落到半导体实物瓶颈。",
-        "credibilityReason": "锚定 CEO 原帖；工艺细节多为转述。",
+        "credibilityReason": "锚定CEO原帖；工艺细节多为转述。",
         "change": "延续",
-        "continuationReason": "主推理迁移仍待 2027 验证，产能讨论在窗口内继续。",
+        "continuationReason": "主推理迁移仍待2027验证，产能与电力讨论在本窗继续。",
         "eventTime": "2026-10-12T13:03:45.000Z",
         "knowledgeCards": [
           "I01",
@@ -6410,17 +6687,17 @@
           "半导体产业",
           "供应链管理"
         ],
-        "knowledgeApplication": "I01/I03：采购方自研降低对单一 GPU 依赖，却把瓶颈推向代工与 HBM；I04：需亚洲供应链线索交叉验证。",
+        "knowledgeApplication": "I01/I03：采购方自研降低对单一GPU依赖，却把瓶颈推向代工与HBM；I04：需亚洲供应链线索交叉验证。",
         "sources": [
           {
-            "url": "https://x.com/Ishaan1806/status/2109656258026582042",
-            "postId": "2109656258026582042",
-            "username": "Ishaan1806",
-            "publishedAt": "2026-10-12T14:43:42.000Z",
-            "checkedAt": "2026-10-13T08:10:58.671Z",
-            "excerpt": "Every hyperscaler now runs its own AI chip... When power is the bottleneck, efficiency decides the silicon. Whoever designs these, TSMC makes them",
+            "url": "https://x.com/satyanadella/status/2109631106404487523",
+            "postId": "2109631106404487523",
+            "username": "satyanadella",
+            "publishedAt": "2026-10-12T13:03:45.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "Today we are announcing our biggest bet yet on our own silicon. Starting next calendar year, we will scale our Maia family to multi-gigawatt deployments, making it the primary inference system",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
@@ -6452,33 +6729,31 @@
             }
           },
           {
-            "url": "https://x.com/StockSavvyShay/status/2109633803027370104",
-            "postId": "2109633803027370104",
-            "username": "StockSavvyShay",
-            "publishedAt": "2026-10-12T13:14:28.000Z",
-            "checkedAt": "2026-10-13T08:10:58.671Z",
-            "excerpt": "$MSFT CEO Satya Nadella says Maia its “biggest bet yet on our own silicon” with multi-GW deployments starting next year and Maia 300 delivering 40% more tokens per watt",
+            "url": "https://x.com/LiebermanAustin/status/2109959820082118792",
+            "postId": "2109959820082118792",
+            "username": "LiebermanAustin",
+            "publishedAt": "2026-10-13T10:49:56.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "Microsoft just made its biggest bet yet on custom silicon: Maia becomes the primary inference system for Copilot, Teams & their AI services at multi-gigawatt scale starting 2027.",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
-              "overall": 34,
+              "overall": 31,
               "band": "low",
               "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
               "sourceScore": 35,
-              "claimScore": 33,
+              "claimScore": 29,
               "breakdown": {
                 "directness": 10,
                 "traceableEvidence": 7,
                 "independentCorroboration": 0,
-                "specificity": 6,
+                "specificity": 2,
                 "recordIntegrity": 10,
                 "penalties": 0
               },
-              "reasons": [
-                "主张包含较具体、可核验的对象或数字"
-              ],
+              "reasons": [],
               "warnings": [
                 "作者未进入人工维护的来源表",
                 "帖子所附可追溯证据有限",
@@ -6502,15 +6777,15 @@
         "credibility": {
           "score": 30,
           "label": "规则初评，未校准",
-          "reason": "锚定 CEO 原帖；工艺细节多为转述。",
+          "reason": "锚定CEO原帖；工艺细节多为转述。",
           "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
         }
       },
-      "rank": 0,
-      "lastEdition": "2026-10-13-1600",
-      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "rank": 1,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
       "lateDiscovery": false
@@ -6650,45 +6925,127 @@
       "eventKey": "anthropic-distillation-defense-2026-10-12",
       "firstSeenAt": "2026-10-13T08:11:02.859Z",
       "firstEdition": "2026-10-13-1600",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-10-13-1600",
+          "event": {
+            "eventKey": "anthropic-distillation-defense-2026-10-12",
+            "title": "Anthropic：称显著削弱针对 Claude 的蒸馏攻击",
+            "fact": "@AnthropicAI 发帖称近几个月在降低针对 Claude 的蒸馏攻击有效性方面取得显著进展，并链向说明文章。",
+            "impact": "若技术成立，有助于保护模型权重与 API 经济性，影响开源复制与竞争对手追赶成本。",
+            "direction": "利多",
+            "horizon": "数月",
+            "affected": [
+              "Anthropic",
+              "模型 API 竞争",
+              "开源复现路径"
+            ],
+            "counterCase": "若攻击方很快绕过，或文章缺乏可复核实验，则护城河叙事弱。",
+            "selectionReason": "AI 落地包：从发布转向可防御的商业化资产。",
+            "credibilityReason": "公司官方原帖；技术细节在外链未在 X 全文展开。",
+            "change": "新增",
+            "eventTime": "2026-10-12T23:58:35.000Z",
+            "knowledgeCards": [
+              "R08",
+              "I02",
+              "R04"
+            ],
+            "disciplines": [
+              "信息安全",
+              "产业组织"
+            ],
+            "knowledgeApplication": "R08：作者激励需折扣；I02：护城河是否转化为付费；R04：需独立复现才能确认。",
+            "sources": [
+              {
+                "url": "https://x.com/AnthropicAI/status/2109795898909950247",
+                "postId": "2109795898909950247",
+                "username": "AnthropicAI",
+                "publishedAt": "2026-10-12T23:58:35.000Z",
+                "checkedAt": "2026-10-13T08:10:58.671Z",
+                "excerpt": "Over the last few months, we’ve made significant progress in reducing the effectiveness of distillation attacks against Claude.",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "people": [],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "公司官方原帖；技术细节在外链未在 X 全文展开。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-10-13T13:29:07.656Z"
+        }
+      ],
       "group": "insights",
       "event": {
         "eventKey": "anthropic-distillation-defense-2026-10-12",
-        "title": "Anthropic：称显著削弱针对 Claude 的蒸馏攻击",
-        "fact": "@AnthropicAI 发帖称近几个月在降低针对 Claude 的蒸馏攻击有效性方面取得显著进展，并链向说明文章。",
-        "impact": "若技术成立，有助于保护模型权重与 API 经济性，影响开源复制与竞争对手追赶成本。",
-        "direction": "利多",
-        "horizon": "数月",
+        "title": "Anthropic 称已显著降低针对Claude的蒸馏攻击效果",
+        "fact": "Anthropic 官方发帖称过去数月在降低针对Claude的蒸馏（distillation）攻击有效性方面取得显著进展，并链出技术说明。",
+        "impact": "若防护成立，有助于保护模型差异化与定价能力；亦可能改变开源蒸馏竞争策略与企业采购对可复制性的评估。",
+        "direction": "双向",
+        "horizon": "数季度",
         "affected": [
           "Anthropic",
-          "模型 API 竞争",
-          "开源复现路径"
+          "OpenAI",
+          "开源模型生态"
         ],
-        "counterCase": "若攻击方很快绕过，或文章缺乏可复核实验，则护城河叙事弱。",
-        "selectionReason": "AI 落地包：从发布转向可防御的商业化资产。",
-        "credibilityReason": "公司官方原帖；技术细节在外链未在 X 全文展开。",
-        "change": "新增",
+        "counterCase": "若独立复现仍可蒸馏出接近性能，或客户更在意成本，则护城河叙事削弱。",
+        "selectionReason": "官方原帖直接触及AI落地竞争壁垒。",
+        "credibilityReason": "AnthropicAI 官方原帖；技术有效性待第三方验证。",
+        "change": "延续",
+        "continuationReason": "蒸馏攻防仍是窗口内可核验的官方进展，影响商业化壁垒判断。",
         "eventTime": "2026-10-12T23:58:35.000Z",
         "knowledgeCards": [
-          "R08",
-          "I02",
-          "R04"
+          "I07",
+          "I09",
+          "R02"
         ],
         "disciplines": [
-          "信息安全",
+          "AI安全与对齐",
           "产业组织"
         ],
-        "knowledgeApplication": "R08：作者激励需折扣；I02：护城河是否转化为付费；R04：需独立复现才能确认。",
+        "knowledgeApplication": "I07：安全投入改变可复制性；R02：竞争策略从参数规模转向防护与分发控制。",
         "sources": [
           {
             "url": "https://x.com/AnthropicAI/status/2109795898909950247",
             "postId": "2109795898909950247",
             "username": "AnthropicAI",
             "publishedAt": "2026-10-12T23:58:35.000Z",
-            "checkedAt": "2026-10-13T08:10:58.671Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
             "excerpt": "Over the last few months, we’ve made significant progress in reducing the effectiveness of distillation attacks against Claude.",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / get_posts_by_ids）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
@@ -6724,15 +7081,15 @@
         "credibility": {
           "score": 30,
           "label": "规则初评，未校准",
-          "reason": "公司官方原帖；技术细节在外链未在 X 全文展开。",
+          "reason": "AnthropicAI 官方原帖；技术有效性待第三方验证。",
           "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
         }
       },
-      "rank": 3,
-      "lastEdition": "2026-10-13-1600",
-      "lastCheckedAt": "2026-10-13T08:11:02.859Z",
+      "rank": 2,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
       "state": "active",
-      "retentionAnchor": "2026-10-13T08:11:02.859Z",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
       "lateDiscovery": false
@@ -7003,6 +7360,987 @@
       "readingDate": "2026-10-13",
       "retainUntil": "2026-10-14T01:00:00.000Z",
       "lateDiscovery": false
+    },
+    {
+      "eventKey": "houthi-aramco-evacuate-warn-2026-10-13",
+      "firstSeenAt": "2026-10-13T13:29:07.656Z",
+      "firstEdition": "2026-10-13-2100",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "houthi-aramco-evacuate-warn-2026-10-13",
+        "title": "胡塞警告撤离沙特阿美设施附近并称其为合法目标",
+        "fact": "财经快讯称也门胡塞武装要求雇员与平民撤离沙特阿美石油设施附近区域，并宣称这些设施为合法军事目标；同窗另有埃尔多安与沙特王储通话讨论胡塞袭击的转述。",
+        "impact": "若威胁兑现或保险/航运溢价再抬升，原油与柴油风险溢价可能推高通胀预期与利率路径，压制美股风险偏好；即使未打击成功，警告本身也可放大油市波动。",
+        "direction": "利空",
+        "horizon": "数日至数周",
+        "affected": [
+          "原油与柴油",
+          "能源股",
+          "通胀预期",
+          "美股利率敏感板块"
+        ],
+        "counterCase": "若48小时内无针对阿美设施的可核验袭击、沙特官方否认受威胁或油价回落，则应下调供给冲击权重。",
+        "selectionReason": "窗口内对全球油设威胁的最直接新增升级，影响面广于单股。",
+        "credibilityReason": "锚定 DeItaone/FirstSquawk 快讯；缺胡塞与阿美官方原帖交叉。",
+        "change": "进展",
+        "eventTime": "2026-10-13T12:40:00.000Z",
+        "attentionEvidence": "DeItaone 相关快讯展示约6万级；热度仅作注意力参考。",
+        "sources": [
+          {
+            "url": "https://x.com/DeItaone/status/2109987518322217249",
+            "postId": "2109987518322217249",
+            "username": "DeItaone",
+            "publishedAt": "2026-10-13T12:40:00.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "YEMEN'S HOUTHIS WARN EMPLOYEES AND CIVILIANS TO EVACUATE AREAS NEAR ARAMCO OIL FACILITIES, SAY THEY ARE LEGITIMATE TARGETS - HOUTHI MILITARY",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/DeItaone/status/2109990924730175903",
+            "postId": "2109990924730175903",
+            "username": "DeItaone",
+            "publishedAt": "2026-10-13T12:53:32.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "HOUTHIS WARN OF NEW ATTACKS ON SAUDI OIL FACILITIES. Yemen's Houthis have warned workers to stay away from Saudi oil facilities, citing potential military strikes.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "锚定 DeItaone/FirstSquawk 快讯；缺胡塞与阿美官方原帖交叉。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "jpm-gs-earnings-split-2026-10-13",
+      "firstSeenAt": "2026-10-13T13:29:07.656Z",
+      "firstEdition": "2026-10-13-2100",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "jpm-gs-earnings-split-2026-10-13",
+        "title": "美股银行季报开局：摩根大通逊预期、高盛大幅超预期",
+        "fact": "快讯显示摩根大通公布调整后EPS约5.75美元、营收约509亿美元，低于市场预估，盘前约跌2.8%；高盛EPS约17.01美元、营收约186.8亿美元，显著高于预估，股票交易收入强、固收偏弱。花旗亦披露营收略超预期的明细。",
+        "impact": "银行季报是信用与资本市场活动的晴雨表：大行分化可能压低金融板块一致性，同时交易与投行流水仍提供风险偏好线索。",
+        "direction": "双向",
+        "horizon": "本周至本季",
+        "affected": [
+          "JPM",
+          "GS",
+          "C",
+          "金融板块",
+          "美股风险偏好"
+        ],
+        "counterCase": "若指引强调管道稳健且信用成本可控，市场可能快速消化营收miss；若拨备与净息差恶化，冲击可能外溢。",
+        "selectionReason": "窗口内最重要的跨资产基本面开局事件。",
+        "credibilityReason": "多条财经快讯交叉；完整10-Q细节仍待公司文件。",
+        "change": "新增",
+        "eventTime": "2026-10-13T10:37:24.000Z",
+        "attentionEvidence": "DeItaone JPM/GS 快讯展示约8至9万；热度仅作参考。",
+        "sources": [
+          {
+            "url": "https://x.com/DeItaone/status/2109956665642553626",
+            "postId": "2109956665642553626",
+            "username": "DeItaone",
+            "publishedAt": "2026-10-13T10:37:24.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "JPMORGAN ($JPM ) MISSES Q3 EPS & REVENUE ESTIMATES — SHARES -2.8% PREMARKET. Adj. EPS: $5.75 vs. $5.94 est.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 35,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 35,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 8,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/DeItaone/status/2109969127334924731",
+            "postId": "2109969127334924731",
+            "username": "DeItaone",
+            "publishedAt": "2026-10-13T11:26:55.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "GOLDMAN SACHS ($GS ) Q3 EARNINGS BEAT ESTIMATES. EPS: $17.01 vs. $13.02 est. Revenue: $18.68B vs. $16.71B est.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 36,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 37,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 10,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 35,
+          "label": "规则初评，未校准",
+          "reason": "多条财经快讯交叉；完整10-Q细节仍待公司文件。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 1,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "hassett-fed-hold-signal-2026-10-13",
+      "firstSeenAt": "2026-10-13T13:29:07.656Z",
+      "firstEdition": "2026-10-13-2100",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "hassett-fed-hold-signal-2026-10-13",
+        "title": "Hassett：联储或把通胀放缓视为按兵不动的理由",
+        "fact": "快讯援引国家经济委员会 Kevin Hassett 称，联储可能把通胀放缓视为维持利率不变的理由，并称联储应控制通胀而非扼杀经济；另称市场对新任联储主席有信心。",
+        "impact": "在CPI公布前，白宫顾问偏控通胀但不杀经济、或可按兵不动的表述可能扰动降息交易与长端收益率预期，进而影响成长股估值。",
+        "direction": "双向",
+        "horizon": "至本周CPI与下次FOMC",
+        "affected": [
+          "美债收益率",
+          "利率敏感成长股",
+          "美元",
+          "金融条件"
+        ],
+        "counterCase": "若周三CPI显著偏离、或联储官员随后否认该解读，则该言论权重应下调。",
+        "selectionReason": "政策路径新信号，覆盖面大于单一公司。",
+        "credibilityReason": "DeItaone/FirstSquawk 同步；非FOMC官方声明。",
+        "change": "新增",
+        "eventTime": "2026-10-13T12:13:15.000Z",
+        "attentionEvidence": "DeItaone Hassett 相关快讯展示约7万；热度仅作参考。",
+        "sources": [
+          {
+            "url": "https://x.com/DeItaone/status/2109980783934918722",
+            "postId": "2109980783934918722",
+            "username": "DeItaone",
+            "publishedAt": "2026-10-13T12:13:15.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "HASSETT: FED MAY SEE INFLATION SLOWDOWN AS REASON TO HOLD",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/DeItaone/status/2109980619161702753",
+            "postId": "2109980619161702753",
+            "username": "DeItaone",
+            "publishedAt": "2026-10-13T12:12:35.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "HASSETT: FED TO KEEP INFLATION IN CONTROL, NOT KILL THE ECONOMY.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "DeItaone/FirstSquawk 同步；非FOMC官方声明。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 2,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "asia-ai-chip-selloff-cracks-2026-10-13",
+      "firstSeenAt": "2026-10-13T13:29:07.656Z",
+      "firstEdition": "2026-10-13-2100",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "asia-ai-chip-selloff-cracks-2026-10-13",
+        "title": "亚洲芯片股回撤，媒体称AI多头叙事出现裂缝",
+        "fact": "Bloomberg 发文称芯片股剧烈波动、澳大利亚一大型数据中心IPO被撤回，并讨论AI多头逻辑裂缝；另有财经账号称三星、SK海力士等亚洲交易中大幅下跌、台积电亦承压，并提及台积电已报第三季营收纪录。",
+        "impact": "若资本开支与IPO融资受阻被市场定价为AI周期顶，可能压制NVDA/存储与AI基建估值，并反馈到美股科技权重。",
+        "direction": "利空",
+        "horizon": "数日至数周",
+        "affected": [
+          "NVDA",
+          "TSM",
+          "MU",
+          "亚洲半导体",
+          "AI基建"
+        ],
+        "counterCase": "若回撤被解释为仓位调整且后续财报重申需求，或撤回IPO属个案，则传导有限。",
+        "selectionReason": "把AI质疑从叙事落到可观察的股价与融资事件。",
+        "credibilityReason": "Bloomberg 账号原帖加财经转述；跌幅数字需交易所核验。",
+        "change": "新增",
+        "eventTime": "2026-10-13T12:59:49.000Z",
+        "attentionEvidence": "business 帖展示约1万；热度有限，入选因主题广度。",
+        "sources": [
+          {
+            "url": "https://x.com/business/status/2109992502442746274",
+            "postId": "2109992502442746274",
+            "username": "business",
+            "publishedAt": "2026-10-13T12:59:49.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "Chipmaking stocks have been on a rollercoaster ride; a big data centre IPO in Australia has been pulled; and competition is intensifying across the industry. The cracks are starting to appear in the bull case for AI.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/moomoo/status/2109969901192696299",
+            "postId": "2109969901192696299",
+            "username": "moomoo",
+            "publishedAt": "2026-10-13T11:30:00.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "AI chip stocks are heading into earnings season under pressure. Samsung fell 7.4%, SK hynix dropped 10.1%, and TSMC lost around 2% in Tuesday's Asian trading.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 34,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 33,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 6,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "Bloomberg 账号原帖加财经转述；跌幅数字需交易所核验。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 3,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "doe-pjm-emergency-grid-2026-10-13",
+      "firstSeenAt": "2026-10-13T13:29:07.656Z",
+      "firstEdition": "2026-10-13-2100",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "doe-pjm-emergency-grid-2026-10-13",
+        "title": "能源部据报对PJM电网发布数日应急调度令",
+        "fact": "多家账号转述美国能源部于10月12日依据联邦电力法第202(c)条发布Order 202-26-50，覆盖PJM互联约13州及华盛顿特区，授权在10月13至16日调度指定机组及必要时备用发电，以维护电网可靠性；部分帖文将其与数据中心负荷压力并提。",
+        "impact": "若属实，说明中大西洋电网短期可靠性压力上升，可能推高区域电价与AI数据中心并网扩容摩擦，强化电力瓶颈约束算力投放的定价。",
+        "direction": "双向",
+        "horizon": "本周至数月并网周期",
+        "affected": [
+          "公用事业",
+          "数据中心运营商",
+          "VRT等电力设备",
+          "AI资本开支节奏"
+        ],
+        "counterCase": "若官方文本显示仅为例行可靠性调度、与数据中心无直接关系，或四日后未展期，则不应外推为系统性限电。",
+        "selectionReason": "把AI电力瓶颈落到可观察的联邦应急动作。",
+        "credibilityReason": "第三方转述为主，缺ENERGY官方X原帖；命令编号被多家复述。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "转述称命令于2026-10-12签发、13至16日生效；精确发布时间未在所用帖文中写明。",
+        "attentionEvidence": "相关讨论帖互动分化；入选依据机制重要性而非热度。",
+        "sources": [
+          {
+            "url": "https://x.com/theinformant_x/status/2109973871457685695",
+            "postId": "2109973871457685695",
+            "username": "theinformant_x",
+            "publishedAt": "2026-10-13T11:45:47.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "DOE issues a four-day emergency order for the PJM grid (13 states plus DC): it authorizes dispatching specified plants and, as a last resort, backup generation — not blackouts. Order No. 202-26-50 on Oct. 12 under Section 202(c)",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 36,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 37,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 10,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/Investinc_Intel/status/2109775128024301603",
+            "postId": "2109775128024301603",
+            "username": "Investinc_Intel",
+            "publishedAt": "2026-10-12T22:36:02.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "Today, the Department of Energy approved an emergency request from PJM Interconnection to help prevent grid reliability emergencies.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "第三方转述为主，缺ENERGY官方X原帖；命令编号被多家复述。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 4,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "dimon-ai-agents-bank-liability-2026-10-13",
+      "firstSeenAt": "2026-10-13T13:29:07.656Z",
+      "firstEdition": "2026-10-13-2100",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "dimon-ai-agents-bank-liability-2026-10-13",
+        "title": "Jamie Dimon 警告AI代理接入银行账户的责任风险",
+        "fact": "快讯称摩根大通首席执行官 Jamie Dimon 警告，让AI代理访问银行账户会带来严重安全与法律责任风险，并强调客户需理解误用时责任可能发生转移。",
+        "impact": "若大行收紧代理接入与责任条款，可能减慢Agent支付理财产品落地速度，并影响金融科技与大模型企业客户收入节奏。",
+        "direction": "双向",
+        "horizon": "数季度",
+        "affected": [
+          "JPM",
+          "金融科技",
+          "AI代理产品",
+          "OpenAI/Anthropic企业渠道"
+        ],
+        "counterCase": "若仅为定性警告而产品仍推进，或监管给出清晰责任框架，则落地延迟有限。",
+        "selectionReason": "把AI落地卡在金融合规与责任分配。",
+        "credibilityReason": "DeItaone 快讯；完整电话会原文未直读。",
+        "change": "新增",
+        "eventTime": "2026-10-13T12:52:55.000Z",
+        "knowledgeCards": [
+          "I07",
+          "I08",
+          "R03"
+        ],
+        "disciplines": [
+          "AI产品与商业化",
+          "金融监管"
+        ],
+        "knowledgeApplication": "I07/I08：采用需转为可审计流程；R03：责任边界不清时企业采购放缓。",
+        "sources": [
+          {
+            "url": "https://x.com/DeItaone/status/2109990769532530862",
+            "postId": "2109990769532530862",
+            "username": "DeItaone",
+            "publishedAt": "2026-10-13T12:52:55.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "JPMORGAN CEO JAMIE DIMON WARNS OF RISKS FROM AI AGENTS ACCESSING BANK ACCOUNTS. Jamie Dimon warns that giving AI agents access to bank accounts carries serious security and liability risks.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [
+          {
+            "name": "Jamie Dimon",
+            "intro": "摩根大通董事长兼CEO"
+          }
+        ],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "DeItaone 快讯；完整电话会原文未直读。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "imf-ai-growth-double-edge-2026-10-13",
+      "firstSeenAt": "2026-10-13T13:29:07.656Z",
+      "firstEdition": "2026-10-13-2100",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "imf-ai-growth-double-edge-2026-10-13",
+        "title": "IMF上调全球增长并称AI既是动力也是最大风险",
+        "fact": "Reuters 称IMF上调全球增长预测，并指AI景气帮助贸易与经济活动；同时播客援引称AI是增长稳住的原因，也是最大风险，双刃剑。",
+        "impact": "官方多边机构把AI同时写入增长上修与风险清单，可能强化资本开支可持续性辩论，影响长端利率与科技估值讨论框架。",
+        "direction": "双向",
+        "horizon": "数季度",
+        "affected": [
+          "全球增长预期",
+          "科技股估值",
+          "风险资产"
+        ],
+        "counterCase": "若后续数据证明AI对生产率贡献有限，或风险事件未现，市场可能忽略该表述。",
+        "selectionReason": "宏观层面对AI资本开支叙事的权威标注。",
+        "credibilityReason": "Reuters 账号原帖；完整WEO表格未在帖内。",
+        "change": "新增",
+        "eventTime": "2026-10-13T12:30:13.000Z",
+        "knowledgeCards": [
+          "M01",
+          "I01",
+          "R01"
+        ],
+        "disciplines": [
+          "宏观经济学",
+          "技术采纳"
+        ],
+        "knowledgeApplication": "M01：增长上修与风险溢价可并存；I01：资本开支双刃需看融资与回报验证。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2109988811551699013",
+            "postId": "2109988811551699013",
+            "username": "Reuters",
+            "publishedAt": "2026-10-13T12:45:09.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "The IMF has raised its global growth forecasts and says the AI boom is helping drive trade and economic activity.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/Reuters/status/2109985054969500048",
+            "postId": "2109985054969500048",
+            "username": "Reuters",
+            "publishedAt": "2026-10-13T12:30:13.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "The IMF says AI is the reason global growth is holding steady at 3.1%. But it’s also its biggest risk. ‘It's a double-edged sword,’",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "Reuters 账号原帖；完整WEO表格未在帖内。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 4,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "btc-etf-flow-stress-2026-10-13",
+      "firstSeenAt": "2026-10-13T13:29:07.656Z",
+      "firstEdition": "2026-10-13-2100",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "btc-etf-flow-stress-2026-10-13",
+        "title": "比特币现货ETF近期出现显著净流出记录",
+        "fact": "跟踪账号披露10月7至8日现货比特币ETF连续大幅净流出（如约-5820 BTC、-2986 BTC），多只基金同向流出；另有周度复盘称BTC基金约流失6.8亿美元量级。本窗亦有收益率上行压制风险资产的讨论。",
+        "impact": "ETF流出叠加美债收益率偏高，可能维持加密与高beta科技的联动抛压，直到流入恢复或宏观路径明朗。",
+        "direction": "利空",
+        "horizon": "数日至数周",
+        "affected": [
+          "BTC",
+          "加密风险资产",
+          "高beta科技"
+        ],
+        "counterCase": "若后续交易日转为净流入或宏观缓和，抛压可能迅速缓解。",
+        "selectionReason": "把加密资金流与美债收益率风险偏好连起来。",
+        "credibilityReason": "流量跟踪账号；非ETF发行方官方披露。",
+        "change": "延续",
+        "eventTime": "2026-10-08T12:48:15.000Z",
+        "knowledgeCards": [
+          "M04",
+          "R05",
+          "I06"
+        ],
+        "disciplines": [
+          "市场微观结构",
+          "宏观流动性"
+        ],
+        "knowledgeApplication": "M04：资金流与利率共同定价风险资产；R05：ETF是可观察的边际买家。",
+        "sources": [
+          {
+            "url": "https://x.com/tradingdiff/status/2108177654994100351",
+            "postId": "2108177654994100351",
+            "username": "tradingdiff",
+            "publishedAt": "2026-10-08T12:48:15.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "Spot Bitcoin ETF Flows (Oct 7) Net flow: -5,820 BTC. Every fund with flows had outflows.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 34,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 33,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 6,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/PhantomEcho007/status/2109023144644096407",
+            "postId": "2109023144644096407",
+            "username": "PhantomEcho007",
+            "publishedAt": "2026-10-10T20:47:56.000Z",
+            "checkedAt": "2026-10-13T13:22:40.000Z",
+            "excerpt": "Spot ETH ETFs shed $542.1M last week. BTC funds lost $681.1M. broad risk-off flow across majors.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 33,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 31,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "continuationReason": "ETF净流出与收益率压制风险资产的机制在本窗仍被讨论，未见流入全面逆转证据。",
+        "people": [],
+        "credibility": {
+          "score": 33,
+          "label": "规则初评，未校准",
+          "reason": "流量跟踪账号；非ETF发行方官方披露。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 5,
+      "lastEdition": "2026-10-13-2100",
+      "lastCheckedAt": "2026-10-13T13:29:07.656Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-13T13:29:07.656Z",
+      "readingDate": "2026-10-13",
+      "retainUntil": "2026-10-14T01:00:00.000Z",
+      "lateDiscovery": true
     }
   ],
   "applied": [
@@ -7013,29 +8351,30 @@
     "2026-10-12-2100:2026-10-12T13:34:00.268Z",
     "manual-6f720182-4b4b-43cd-ad0b-5663ce6a4dba:2026-10-12T17:55:00.000Z",
     "2026-10-13-0900:2026-10-13T01:52:01.370Z",
-    "2026-10-13-1600:2026-10-13T08:11:02.859Z"
+    "2026-10-13-1600:2026-10-13T08:11:02.859Z",
+    "2026-10-13-2100:2026-10-13T13:29:07.656Z"
   ],
   "warnings": [],
   "lastStatus": "partial",
   "selected": {
     "focus": [
-      "meta-muse-wonder-frontier-2026-10-12",
-      "ter-form-300m-hbm-test-collab-2026-10-12",
-      "houthi-saudi-tanker-escalation-2026-10-12",
-      "msft-maia-300-primary-inference-2026-10-12",
-      "ocp-open-datacenter-power-spec-2026-10-12"
+      "houthi-aramco-evacuate-warn-2026-10-13",
+      "jpm-gs-earnings-split-2026-10-13",
+      "hassett-fed-hold-signal-2026-10-13",
+      "asia-ai-chip-selloff-cracks-2026-10-13",
+      "doe-pjm-emergency-grid-2026-10-13"
     ],
     "insights": [
+      "dimon-ai-agents-bank-liability-2026-10-13",
       "maia-300-hbm-tsmc-rebalance-2026-10-12",
-      "form-ter-test-bottleneck-insight-2026-10-12",
-      "nanya-dram-asp-margin-surge-2026-10-12",
       "anthropic-distillation-defense-2026-10-12",
+      "nanya-dram-asp-margin-surge-2026-10-12",
+      "imf-ai-growth-double-edge-2026-10-13",
+      "btc-etf-flow-stress-2026-10-13",
+      "form-ter-test-bottleneck-insight-2026-10-12",
       "spx-equal-weight-corr-record-low-2026-10-12",
       "ocp-grid-ride-through-insight-2026-10-12",
-      "maia-300-hbm4-tsmc-n2p-custom-silicon-2026-10-12",
-      "avgo-capital-cost-ai-buildout-2026-10-12",
-      "cxmt-denser-dram-target-2026-10-12",
-      "flex-factory-built-ai-dc-modules-2026-10-12"
+      "maia-300-hbm4-tsmc-n2p-custom-silicon-2026-10-12"
     ]
   },
   "migrationNote": "2026-10-12仅迁移现存真实归档，未重新采集或核验。更早已清理归档未恢复，待Grok按缺口补查。",

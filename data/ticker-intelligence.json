@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T08:12:32.085Z",
-  "cutoff": "2026-10-13T16:00:00+08:00",
+  "updatedAt": "2026-10-13T13:28:00.000Z",
+  "cutoff": "2026-10-13T21:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,7 +9,7 @@
       {
         "id": "nvda",
         "status": "complete",
-        "note": "近1日 2 条"
+        "note": "近1日新增 Maia 竞争讨论"
       },
       {
         "id": "mu",
@@ -28,18 +28,18 @@
       },
       {
         "id": "avgo",
-        "status": "complete",
-        "note": "近1日 1 条"
+        "status": "partial",
+        "note": "近窗可核验新增不足，保留周榜/旧条"
       },
       {
         "id": "vrt",
-        "status": "complete",
-        "note": "近1日 1 条"
+        "status": "partial",
+        "note": "近窗可核验新增不足，保留周榜/旧条"
       },
       {
         "id": "tsm",
-        "status": "partial",
-        "note": "近窗可核验新增不足，保留周榜/旧条"
+        "status": "complete",
+        "note": "近1日亚洲芯片回撤转述"
       }
     ]
   },
@@ -467,6 +467,53 @@
       "weeklyRanks": {
         "mu": 3
       },
+      "people": []
+    },
+    {
+      "eventKey": "nvda-maia-customer-asic-risk-2026-10-13",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "市场讨论 Maia 放量对 NVDA 推理份额的压力",
+      "fact": "评论援引 Satya Nadella Maia 多吉瓦主推理公告，称微软自研芯片放量对 NVDA/AMD 推理份额构成竞争压力。",
+      "whyItMatters": "客户自研ASIC是NVDA长期份额风险的可观察进展。",
+      "counterCase": "训练与CUDA生态仍可支撑需求；Maia 2027前用量未知。",
+      "affected": [
+        "NVDA",
+        "MSFT"
+      ],
+      "author": "LiebermanAustin",
+      "publishedAt": "2026-10-13T10:49:56.000Z",
+      "url": "https://x.com/LiebermanAustin/status/2109959820082118792",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Satya Nadella",
+          "intro": "微软董事长兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "tsm-asia-ai-chip-pressure-2026-10-13",
+      "tabIds": [
+        "tsm"
+      ],
+      "title": "亚洲交易中台积电随AI芯片股承压",
+      "fact": "财经账号称亚洲交易中三星、SK海力士大跌，台积电约跌2%，并提及台积电已报第三季营收纪录、即将迎财报。",
+      "whyItMatters": "AI资本开支质疑若持续，可能压制代工估值与订单预期。",
+      "counterCase": "若财报重申需求，回撤或短暂。",
+      "affected": [
+        "TSM",
+        "亚洲半导体"
+      ],
+      "author": "moomoo",
+      "publishedAt": "2026-10-13T11:30:00.000Z",
+      "url": "https://x.com/moomoo/status/2109969901192696299",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
       "people": []
     }
   ],

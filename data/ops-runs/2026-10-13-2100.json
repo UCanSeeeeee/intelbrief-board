@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-13-2100",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-13T21:19:21+08:00",
+  "updatedAt": "2026-10-13T21:31:08+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "e421c7de329c85dc1db9862c4f4fe56c4906fbde",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-13T21:19:27+08:00",
+      "detail": "ff-only to e421c7d"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-13T21:20:26+08:00",
+      "detail": "read AGENTS/CONTEXT/STOCK_BRIEF/MANUAL top/research-guidance/SOP; no 2100 archive; pendingReview=0; window 10-12 21:00→10-13 21:00"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-13T21:29:08+08:00",
+      "detail": "R1+R2 X searches done; checklist audited"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-13T21:29:08+08:00",
+      "detail": "brief 5+6 draft + people/tickers/ai/crypto refresh"
+    },
+    {
+      "name": "validate",
+      "status": "ok",
+      "at": "2026-10-13T21:31:08+08:00",
+      "detail": "112 tests + check + build"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "5+6"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "elon5 trump3heat; jensen0-24h"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "nvda+tsm new; others retain"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "anthropic+dimon; openai0"
+    },
+    "crypto": {
+      "status": "partial",
+      "detail": "btc etf outflow; brew none"
+    },
+    "earnings": {
+      "status": "unchanged",
+      "detail": "pendingReview=0"
+    },
+    "macro": {
+      "status": "skipped",
+      "detail": "no new regular collection"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": []
+}

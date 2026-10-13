@@ -1,77 +1,39 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T08:11:55.277Z",
-  "cutoff": "2026-10-13T16:00:00+08:00",
-  "source": "X only",
+  "updatedAt": "2026-10-13T13:28:00.000Z",
+  "cutoff": "2026-10-13T21:00:00+08:00",
+  "source": "grok-bot-x-search",
   "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "R1 from:elonmusk 24h；规则 2 条（中国制造/HBM、Robotaxi）；热度补 3 条。"
+        "note": "R1 from:elonmusk 24h；规则1条 Robotaxi；热度补4条至5。"
       },
       {
         "id": "jensen-huang",
         "status": "partial",
-        "note": "from:JensenHuang 24h 0 条；官方/媒体无本人可回查新采访。最新区 0；保留 7 日重点榜旧条。"
+        "note": "from:JensenHuang 24h 0条；保留7日重点榜旧条。"
       },
       {
         "id": "donald-trump",
         "status": "complete",
-        "note": "政策关键词无新增可执行规则条目；按 selectionPolicy 收 WhiteHouse 热度最高 3 条；7 日重点榜保留能源停火等。"
+        "note": "可执行政策规则0条；按selectionPolicy收WhiteHouse热度最高3条。"
       },
       {
         "id": "trillion-leaders",
         "status": "complete",
-        "note": "新增/复核 Muse Wonder 与 Maia；30 日合集 5 条规则条目。"
+        "note": "保留Maia/Muse等30日合集；本窗无新合格高管原帖占满。"
       },
       {
         "id": "research-reports",
         "status": "partial",
-        "note": "窗口内新增有限；保留美银 TSMC 等 5 条；机构原文多在付费墙外。"
+        "note": "窗口内新增有限；保留既有机构条目。"
       }
     ]
   },
   "items": [
-    {
-      "eventKey": "elon-robotaxi-improvements-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Robotaxi 改进进展",
-      "fact": "@elonmusk 发帖 “Robotaxi improvements” 并附图/视频说明 Robotaxi 产品改进。",
-      "whyItMatters": "Robotaxi 进度影响 Tesla AI/自动驾驶商业化叙事与算力需求预期。",
-      "counterCase": "帖文缺少可核验的里程/监管/收入数据，或仅为营销切片。",
-      "affected": [
-        "TSLA",
-        "Robotaxi"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T00:30:23.000Z",
-      "url": "https://x.com/elonmusk/status/2109803903256502307",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "elon-musk": 2
-      },
-      "selection": "rule",
-      "engagement": {
-        "likes": 8846,
-        "reposts": 723,
-        "replies": 680,
-        "quotes": 56,
-        "views": 1383326,
-        "capturedAt": "2026-10-13T08:11:55.277Z",
-        "source": "x get_users_posts/search_posts_all public_metrics"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
     {
       "eventKey": "bofa-tsmc-pt-620-2nm-ramp-2026-10-12",
       "tabIds": [
@@ -106,115 +68,6 @@
         "source": "x search_posts_all/get_posts_by_ids public_metrics"
       },
       "people": []
-    },
-    {
-      "eventKey": "elon-musk-documentary-review-2026-10-12",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 表情回复高互动帖（热度动态）",
-      "fact": "@elonmusk 以表情符号回复一条高曝光内容。",
-      "whyItMatters": "热度动态补位。",
-      "counterCase": "无产业事实。",
-      "affected": [
-        "注意力"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-12T17:07:26.000Z",
-      "url": "https://x.com/elonmusk/status/2109692430178255016",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 17592,
-        "reposts": 1762,
-        "replies": 2180,
-        "quotes": 135,
-        "views": 6694977,
-        "capturedAt": "2026-10-13T08:11:55.277Z",
-        "source": "x get_users_posts/search_posts_all public_metrics"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-china-scale-hbm-3d-stack-2026-10-12",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：中国量产规模常压倒全球，但新一代 HBM 与 3D 堆叠更难追赶",
-      "fact": "@elonmusk 回复讨论称：中国一旦掌握某产品制造，扩产能力常大于世界其他地区之和（锂电、光伏）；通用标准 DRAM 中国似乎在快速攻克，但更新的 HBM 架构与 3D 堆叠并解决散热会更难。",
-      "whyItMatters": "大型算力买家判断标准 DRAM 竞争加快、HBM/先进堆叠仍有壁垒，影响存储厂产品结构溢价。",
-      "counterCase": "属个人观点；若中国 HBM 进展超预期，壁垒判断失效。",
-      "affected": [
-        "MU",
-        "HBM 供应链",
-        "DRAM"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-12T17:01:39.000Z",
-      "url": "https://x.com/elonmusk/status/2109690977279426846",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 1
-      },
-      "selection": "rule",
-      "engagement": {
-        "likes": 22294,
-        "reposts": 1699,
-        "replies": 1133,
-        "quotes": 357,
-        "views": 3341150,
-        "capturedAt": "2026-10-13T08:11:55.277Z",
-        "source": "x get_users_posts/search_posts_all public_metrics"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-troubling-quote-2026-10-12",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 转发“Troubling”评论（热度动态）",
-      "fact": "@elonmusk 发帖 “Troubling” 并引用外部内容，互动量很高。",
-      "whyItMatters": "热度动态补位；本身无新增可核验产业事实。",
-      "counterCase": "无投资传导细节。",
-      "affected": [
-        "注意力"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-12T16:59:04.000Z",
-      "url": "https://x.com/elonmusk/status/2109690326474440765",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 23705,
-        "reposts": 3141,
-        "replies": 1609,
-        "quotes": 148,
-        "views": 6064369,
-        "capturedAt": "2026-10-13T08:11:55.277Z",
-        "source": "x get_users_posts/search_posts_all public_metrics"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
     },
     {
       "eventKey": "zuckerberg-muse-wonder-frontier-2026-10-12",
@@ -256,132 +109,6 @@
       ]
     },
     {
-      "eventKey": "elon-safety-priority-2026-10-12",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Tesla 与 SpaceX 安全优先（热度动态）",
-      "fact": "@elonmusk 称 “Your safety has always been priority 1 at Tesla and SpaceX”。",
-      "whyItMatters": "热度动态补位；品牌/安全叙事。",
-      "counterCase": "无新增量化事实。",
-      "affected": [
-        "TSLA",
-        "SpaceX"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-12T16:23:11.000Z",
-      "url": "https://x.com/elonmusk/status/2109681296616374289",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 23703,
-        "reposts": 2224,
-        "replies": 1598,
-        "quotes": 177,
-        "views": 2964662,
-        "capturedAt": "2026-10-13T08:11:55.277Z",
-        "source": "x get_users_posts/search_posts_all public_metrics"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "whitehouse-getting-country-back-2026-10-12",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse：We’re getting our country back（热度动态）",
-      "fact": "@WhiteHouse 发帖 “We're getting our country back.” 配视频，互动量居窗口前列。",
-      "whyItMatters": "热度动态补位；非 AI/半导体/贸易可执行政策。",
-      "counterCase": "无具体政策条文。",
-      "affected": [
-        "政治注意力"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-12T16:14:02.000Z",
-      "url": "https://x.com/WhiteHouse/status/2109678991980511407",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 52173,
-        "reposts": 8135,
-        "replies": 11765,
-        "quotes": 1242,
-        "views": 2326909,
-        "capturedAt": "2026-10-13T08:11:55.277Z",
-        "source": "x get_users_posts/search_posts_all public_metrics"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "whitehouse-sail-on-columbus-2026-10-12",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse：Sail On. Columbus Day is back（热度动态）",
-      "fact": "@WhiteHouse 宣布 Columbus Day is back。",
-      "whyItMatters": "热度动态补位。",
-      "counterCase": "无投资传导。",
-      "affected": [
-        "政治注意力"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-12T14:30:54.000Z",
-      "url": "https://x.com/WhiteHouse/status/2109653038877057425",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 22221,
-        "reposts": 4373,
-        "replies": 2087,
-        "quotes": 493,
-        "views": 568414,
-        "capturedAt": "2026-10-13T08:11:55.277Z",
-        "source": "x get_users_posts/search_posts_all public_metrics"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "whitehouse-columbus-hero-2026-10-12",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse：Christopher Columbus is a hero（热度动态）",
-      "fact": "@WhiteHouse 发哥伦布日相关帖，称 Christopher Columbus 为英雄。",
-      "whyItMatters": "热度动态补位。",
-      "counterCase": "无投资传导。",
-      "affected": [
-        "政治注意力"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-12T13:16:01.000Z",
-      "url": "https://x.com/WhiteHouse/status/2109634195350040688",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 35044,
-        "reposts": 4064,
-        "replies": 1987,
-        "quotes": 430,
-        "views": 814073,
-        "capturedAt": "2026-10-13T08:11:55.277Z",
-        "source": "x get_users_posts/search_posts_all public_metrics"
-      },
-      "people": []
-    },
-    {
       "eventKey": "satya-maia-300-primary-inference-2026-10-12",
       "tabIds": [
         "trillion-leaders"
@@ -418,147 +145,6 @@
         {
           "name": "Satya Nadella",
           "intro": "微软董事长兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "trump-no-tax-on-overtime-2026-10-11",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "白宫宣传：加班费免税承诺落地",
-      "fact": "@WhiteHouse 发帖强调 “NO TAX ON OVERTIME”，并称不同行业美国人已受益，将其表述为承诺兑现。",
-      "whyItMatters": "加班免税改变劳动税负与可支配收入，可能影响消费、服务业成本与财政收入假设。",
-      "counterCase": "若实施细则、覆盖范围或国会文本与宣传不一致，实际税负变化可能小于叙事。",
-      "affected": [
-        "美国消费与劳动力市场",
-        "财政税收"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-11T14:57:38.000Z",
-      "url": "https://x.com/WhiteHouse/status/2109297379577094172",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "donald-trump": 1
-      },
-      "selection": "rule",
-      "people": []
-    },
-    {
-      "eventKey": "trump-energy-ceasefire-oil-refineries-2026-10-11",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "Donald Trump 侧同步：乌俄停打油气与炼油设施（能源停火）",
-      "fact": "@TrumpDailyPosts 发帖称总统宣布乌克兰与俄罗斯将停止以石油和炼油厂为破坏目标；同日 @WhiteHouse 发帖写 “Effective Immediately: An ENERGY CEASEFIRE”。作者为同步/搬运账号，非本人直发。",
-      "whyItMatters": "若双方遵守，可能缓和柴油与成品油供给冲击预期，影响能源价格、通胀与运费成本假设。",
-      "counterCase": "若前线未实际停火、各方否认或袭击继续，则政策宣布难以改变实物供给。",
-      "affected": [
-        "原油与成品油",
-        "航运与通胀预期"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-11T14:24:20.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2109288999026405503",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "donald-trump": 2
-      },
-      "selection": "rule",
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-chip-talent-spacex-tesla-2026-10-11",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 招揽世界级芯片设计与生产工程师加入 SpaceX/Tesla",
-      "fact": "Elon Musk 发帖邀请世界级芯片设计或生产工程师加入 SpaceX 或 Tesla，强调可快速迭代设计并定制生产设备。",
-      "whyItMatters": "若转化为真实招聘与产线能力，将强化特斯拉/SpaceX 在 AI 推理、机器人与星座算力上的垂直整合，并加剧半导体人才竞争。",
-      "counterCase": "若无后续岗位、流片或产能合作的可验证进展，则仅是招聘宣传。",
-      "affected": [
-        "Tesla",
-        "SpaceX",
-        "芯片人才市场"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-11T13:15:01.000Z",
-      "url": "https://x.com/elonmusk/status/2109271552378220789",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 3
-      },
-      "selection": "rule",
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-cybercab-scaling-2026-10-11",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 称 Cybercab 正在扩产/扩展",
-      "fact": "Elon Musk 发帖写到 “Cybercab is scaling”，未在正文给出产量、工厂或交付数字。",
-      "whyItMatters": "Robotaxi 商业化节奏影响 Tesla AI 落地叙事与资本开支回收预期；缺数字时只能作为方向性信号。",
-      "counterCase": "若后续财报或交付数据无法显示 Robotaxi/Cybercab 产能或里程上升，该表态权重应下调。",
-      "affected": [
-        "Tesla",
-        "自动驾驶与机器人供应链"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-11T12:39:29.000Z",
-      "url": "https://x.com/elonmusk/status/2109262612303314986",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "elon-musk": 4
-      },
-      "selection": "rule",
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-starlink-india-affordable-pricing-2026-10-10",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 回应印度 Starlink 竞争：必须把价格做到可负担",
-      "fact": "Elon Musk 长文批评所谓 Ambani 网络水军逻辑自相矛盾，并称若 Starlink 在印度太贵就没人买，因此 SpaceX 需要把定价做到可负担，竞争将惠及印度消费者。",
-      "whyItMatters": "涉及 Starlink 在印度的准入、定价与电信竞争，可能影响 SpaceX 收入预期和印度宽带市场格局。",
-      "counterCase": "若印度监管未批准有竞争力的条款，或 SpaceX 无法给出可持续低价，则竞争叙事难以兑现。",
-      "affected": [
-        "SpaceX/Starlink",
-        "印度电信竞争"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-10T18:55:34.000Z",
-      "url": "https://x.com/elonmusk/status/2108994867582095465",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 5
-      },
-      "selection": "rule",
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
         }
       ]
     },
@@ -777,6 +363,281 @@
         "trillion-leaders": 5
       },
       "selection": "rule",
+      "people": []
+    },
+    {
+      "eventKey": "elon-robotaxi-improvements-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：Robotaxi 改进进展",
+      "fact": "@elonmusk 发帖 “Robotaxi improvements” 并附图/视频说明 Robotaxi 产品改进。",
+      "whyItMatters": "Robotaxi 进度影响 Tesla AI/自动驾驶商业化叙事与算力需求预期。",
+      "counterCase": "帖文缺少可核验的里程/监管/收入数据，或仅为营销切片。",
+      "affected": [
+        "TSLA",
+        "Robotaxi"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T00:30:23.000Z",
+      "url": "https://x.com/elonmusk/status/2109803903256502307",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "elon-musk": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 10844,
+        "reposts": 892,
+        "replies": 731,
+        "quotes": 67,
+        "capturedAt": "2026-10-13T13:28:00.000Z",
+        "source": "x get_users_posts/search_posts_all public_metrics",
+        "views": 1760771,
+        "bookmarks": 168
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-grok-bot-hire-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：Grok Bot 像雇超级聪明员工",
+      "fact": "@elonmusk 发帖称 “Grok @Bot is like hiring a super smart employee”。",
+      "whyItMatters": "反映 xAI/Grok 产品推广重点，影响 AI 助手商业化注意力。",
+      "counterCase": "营销话术，无收入/用量数据。",
+      "affected": [
+        "xAI",
+        "TSLA叙事"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T10:31:46.000Z",
+      "url": "https://x.com/elonmusk/status/2109955246923641259",
+      "verification": "collector-report",
+      "tier": "watch",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 3434,
+        "reposts": 492,
+        "replies": 984,
+        "quotes": 83,
+        "capturedAt": "2026-10-13T13:28:00.000Z",
+        "source": "x get_users_posts/search_posts_all public_metrics",
+        "views": 1081675,
+        "bookmarks": 162
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-of-course-quote-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 热度帖：Of course",
+      "fact": "@elonmusk 引用回复 “Of course”。",
+      "whyItMatters": "热度动态补位；本身无独立产业事实。",
+      "counterCase": "无投资传导细节。",
+      "affected": [
+        "注意力"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T04:41:11.000Z",
+      "url": "https://x.com/elonmusk/status/2109867020091072915",
+      "verification": "collector-report",
+      "tier": "watch",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 19469,
+        "reposts": 1405,
+        "replies": 574,
+        "quotes": 67,
+        "capturedAt": "2026-10-13T13:28:00.000Z",
+        "source": "x get_users_posts/search_posts_all public_metrics",
+        "views": 2696848,
+        "bookmarks": 167
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-try-grok-bot-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：Try Grok Bot",
+      "fact": "@elonmusk 发帖 “Try Grok @Bot”。",
+      "whyItMatters": "热度动态补位。",
+      "counterCase": "无用量数据。",
+      "affected": [
+        "xAI"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T05:37:13.000Z",
+      "url": "https://x.com/elonmusk/status/2109881121047781430",
+      "verification": "collector-report",
+      "tier": "watch",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 3584,
+        "reposts": 458,
+        "replies": 846,
+        "quotes": 60,
+        "capturedAt": "2026-10-13T13:28:00.000Z",
+        "source": "x get_users_posts/search_posts_all public_metrics",
+        "views": 1804716,
+        "bookmarks": 134
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-grok-memory-transfer-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：Grok Bot memory transfer",
+      "fact": "@elonmusk 发帖 “Grok @Bot memory transfer”。",
+      "whyItMatters": "可能暗示 Bot 记忆能力；缺技术细节。",
+      "counterCase": "无法核验产品能力边界。",
+      "affected": [
+        "xAI"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T04:43:10.000Z",
+      "url": "https://x.com/elonmusk/status/2109867516646637579",
+      "verification": "collector-report",
+      "tier": "watch",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 4622,
+        "reposts": 481,
+        "replies": 658,
+        "quotes": 84,
+        "capturedAt": "2026-10-13T13:28:00.000Z",
+        "source": "x get_users_posts/search_posts_all public_metrics",
+        "views": 2406285,
+        "bookmarks": 847
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "wh-columbus-day-2026-10-12",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse：哥伦布日祝贺",
+      "fact": "@WhiteHouse 发帖祝贺哥伦布日。",
+      "whyItMatters": "热度动态；非 AI/半导体/贸易可执行政策。",
+      "counterCase": "无投资传导。",
+      "affected": [
+        "政治注意力"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-12T20:59:30.000Z",
+      "url": "https://x.com/WhiteHouse/status/2109750831922958573",
+      "verification": "collector-report",
+      "tier": "watch",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 14644,
+        "reposts": 2197,
+        "replies": 803,
+        "quotes": 94,
+        "capturedAt": "2026-10-13T13:28:00.000Z",
+        "source": "x get_users_posts/search_posts_all public_metrics",
+        "views": 232223,
+        "bookmarks": 255
+      },
+      "people": []
+    },
+    {
+      "eventKey": "wh-admin-wins-2026-10-12",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse：本届政府成果盘点",
+      "fact": "@WhiteHouse 发帖汇总 “Top wins from the Trump Administration”。",
+      "whyItMatters": "热度动态；缺可核验新政策细则。",
+      "counterCase": "宣传性质。",
+      "affected": [
+        "政策叙事"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-12T17:20:16.000Z",
+      "url": "https://x.com/WhiteHouse/status/2109695662082380063",
+      "verification": "collector-report",
+      "tier": "watch",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 9437,
+        "reposts": 2571,
+        "replies": 2407,
+        "quotes": 146,
+        "capturedAt": "2026-10-13T13:28:00.000Z",
+        "source": "x get_users_posts/search_posts_all public_metrics",
+        "views": 560635,
+        "bookmarks": 384
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
+    {
+      "eventKey": "wh-farmers-thanks-2026-10-12",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse：致谢美国农民",
+      "fact": "@WhiteHouse 发帖感谢美国农民。",
+      "whyItMatters": "热度动态。",
+      "counterCase": "无新补贴/关税细则。",
+      "affected": [
+        "农业叙事"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-12T22:35:44.000Z",
+      "url": "https://x.com/WhiteHouse/status/2109775050287243699",
+      "verification": "collector-report",
+      "tier": "watch",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 7731,
+        "reposts": 1868,
+        "replies": 1020,
+        "quotes": 141,
+        "capturedAt": "2026-10-13T13:28:00.000Z",
+        "source": "x get_users_posts/search_posts_all public_metrics",
+        "views": 154355,
+        "bookmarks": 131
+      },
       "people": []
     }
   ]
