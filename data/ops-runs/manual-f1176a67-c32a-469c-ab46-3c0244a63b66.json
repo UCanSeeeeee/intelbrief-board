@@ -4,8 +4,8 @@
   "trigger": "manual",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-13T10:17:31+08:00",
-  "updatedAt": "2026-10-13T10:23:24+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-13T10:25:12+08:00",
+  "finishedAt": "2026-10-13T10:25:12+08:00",
   "gitHeadAtStart": "03cd6b066d207ffd2df4a172c5b3d60fd0dfcc16",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-13T10:25:11+08:00",
+      "detail": "ad6cba7 pushed"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-13T10:25:12+08:00",
+      "detail": "live people-intelligence.json SHA256 a56395e3 匹配；people.js/config/styles 匹配；headless 渲染热度动态标签"
     }
   ],
   "pages": {
@@ -81,10 +81,11 @@
       "detail": null
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "ad6cba7",
   "notes": [
-    "人物页按新 selectionPolicy 重采（用户 2026-10-13 10:14）"
+    "人物页按新 selectionPolicy 重采（用户 2026-10-13 10:14）",
+    "Jensen 0 条（本人24h无发帖）、研报为二手转述"
   ]
 }
