@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-13-0900",
+  "trigger": "catchup",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-13T09:48:23+08:00",
+  "updatedAt": "2026-10-13T09:52:49+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "f4bd89721c8651f57684bddf4674ad7085aa7694",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-13T09:48:24+08:00",
+      "detail": "ff-only at f4bd897"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-13T09:48:35+08:00",
+      "detail": "STOCK_BRIEF+KB+SOP+configs+prior editions"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-13T09:48:51+08:00",
+      "detail": "starting two-round X search"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-13T09:52:01+08:00",
+      "detail": "brief published 5+4; updating pages"
+    },
+    {
+      "name": "validate",
+      "status": "ok",
+      "at": "2026-10-13T09:52:49+08:00",
+      "detail": "check passed pending test/build"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "5+4"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "0 new; coverage refreshed"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "NVDA OCP + AVGO capital"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "open DC spec"
+    },
+    "crypto": {
+      "status": "partial",
+      "detail": "ETF outflows"
+    },
+    "earnings": {
+      "status": "unchanged",
+      "detail": "pendingReview empty"
+    },
+    "macro": {
+      "status": "skipped",
+      "detail": "light rules; no refresh"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [
+    "补跑：平台 09:00 Activity task failed，无原提交"
+  ]
+}

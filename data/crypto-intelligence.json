@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T17:55:00.000Z",
-  "cutoff": "2026-10-13T01:48:52+08:00",
+  "updatedAt": "2026-10-13T01:55:00.000Z",
+  "cutoff": "2026-10-13T09:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "collectionPath": "grok-bot-x-search",
@@ -9,22 +9,47 @@
     "tabs": [
       {
         "id": "crypto-board",
-        "status": "complete",
-        "note": "2026-10-13 手动：新增泰国 ETF 规则生效日转述；Ledger/Kraken 已收录不重复。"
+        "status": "partial",
+        "note": "2026-10-13-0900：入库上周现货 ETF 净流出汇总。"
       },
       {
         "id": "btc",
-        "status": "complete",
-        "note": "2026-10-13 手动：新增 ETF 流入降温/流出汇总转述；与上周 6.8 亿周流出相关但口径不同故单列并标注转述。"
+        "status": "partial",
+        "note": "同源 ETF 流出；无新的链上协议重大事实。"
       },
       {
         "id": "brew",
-        "status": "complete",
-        "note": "2026-10-13 手动：7 日 $BREW/Brew 检索仍为喊单与上所幻想，无合同/审计/监管级事实，0 新增。"
+        "status": "no-result",
+        "note": "窗口内无 Brew 合约可核验新事实。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "us-spot-crypto-etf-outflows-week-2026-10-12",
+      "tabIds": [
+        "crypto-board",
+        "btc"
+      ],
+      "title": "美国现货加密 ETF 上周约 12.5 亿美元净流出",
+      "fact": "CryptoPatel 等汇总：10/5–10/9 美国现货加密 ETF 录得约 12.5 亿美元净流出，黑石/富达等产品在 BTC/ETH 上呈净卖出；具体分项以帖内表格为准，口径可能与其他汇总差数十亿美元。",
+      "whyItMatters": "ETF 资金流是机构风险偏好的可观察代理，流出与高利率/风险资产承压同向。",
+      "counterCase": "若随后数日转为持续流入，则属周度噪声。",
+      "affected": [
+        "BTC",
+        "ETH",
+        "加密风险偏好"
+      ],
+      "author": "CryptoPatel",
+      "publishedAt": "2026-10-12T17:30:00.000Z",
+      "url": "https://x.com/CryptoPatel/status/2109698109873992114",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "crypto-board": 1,
+        "btc": 1
+      }
+    },
     {
       "eventKey": "btc-etf-cooling-after-sept-inflows-2026-10-12",
       "tabIds": [
@@ -45,7 +70,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "btc": 1
+        "btc": 2
       }
     },
     {
@@ -87,7 +112,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "crypto-board": 2
+        "crypto-board": 3
       }
     },
     {
@@ -109,7 +134,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "crypto-board": 1
+        "crypto-board": 2
       }
     },
     {
@@ -131,7 +156,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "crypto-board": 3
+        "crypto-board": 4
       }
     },
     {
@@ -153,7 +178,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "crypto-board": 4
+        "crypto-board": 5
       }
     },
     {
@@ -175,7 +200,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "btc": 4
+        "btc": 5
       }
     },
     {
@@ -197,7 +222,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "btc": 3
+        "btc": 4
       }
     },
     {
@@ -219,7 +244,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "btc": 2
+        "btc": 3
       }
     }
   ]

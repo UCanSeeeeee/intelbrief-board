@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T17:55:00.000Z",
-  "cutoff": "2026-10-13T01:48:52+08:00",
+  "updatedAt": "2026-10-13T01:55:00.000Z",
+  "cutoff": "2026-10-13T09:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "collectionPath": "grok-bot-x-search",
@@ -9,27 +9,51 @@
     "tabs": [
       {
         "id": "openai",
-        "status": "complete",
-        "note": "2026-10-13 手动：from:OpenAI 近48h 无原创；ARR 口径争议已在美股页收录，本页 0 新增。"
+        "status": "insufficient",
+        "note": "ARR 口径争议无新原厂披露。"
       },
       {
         "id": "anthropic",
-        "status": "complete",
-        "note": "2026-10-13 手动：官方近窗无新帖；订阅/API 算力结构为三手转述，未达入库门槛；Cyber Mission/行为报告已过近窗。"
+        "status": "insufficient",
+        "note": "IREN 合同为泄露链，双方未确认。"
       },
       {
-        "id": "goog-ai",
-        "status": "complete",
-        "note": "2026-10-13 手动：近24h 无 Gemini/DeepMind 合格新产品事实，0 新增。"
+        "id": "goog",
+        "status": "no-result",
+        "note": "无 GOOG AI 产品达标新帖。"
       },
       {
         "id": "ai-others",
-        "status": "complete",
-        "note": "2026-10-13 手动：新增微软 Maia 300 主推理系统公告。"
+        "status": "partial",
+        "note": "入库开放 AI 工厂规范转述。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "nvda-ocp-open-ai-factory-spec-2026-10-12",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "AMD/NVDA/GOOGL/META 推动 AI 工厂开放数据中心规范",
+      "fact": "转述称多家公司推动 Open Data Center Specification v0.7，覆盖物理布局与电力韧性，旨在加快 AI 数据中心建设。",
+      "whyItMatters": "标准化可能缩短交付周期，但也摊薄专有集成溢价。",
+      "counterCase": "规范若无大客户落地则影响有限。",
+      "affected": [
+        "NVDA",
+        "AMD",
+        "GOOGL",
+        "META"
+      ],
+      "author": "MikeLongTerm",
+      "publishedAt": "2026-10-12T18:46:23.000Z",
+      "url": "https://x.com/MikeLongTerm/status/2109717334289977451",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "ai-others": 1
+      }
+    },
     {
       "eventKey": "ai-others-msft-maia-300-primary-inference-2026-10-12",
       "tabIds": [
@@ -50,7 +74,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "ai-others": 1
+        "ai-others": 2
       }
     },
     {
@@ -305,7 +329,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "ai-others": 2
+        "ai-others": 3
       }
     },
     {
@@ -328,7 +352,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 3
+        "ai-others": 4
       }
     }
   ]
