@@ -11,9 +11,9 @@
 
 - [交易日待阅](docs/TRADING_DAY_READING.md)：休市/盘后重要信息持续到下个实际交易时段结束，跨期池与三期快照分开；默认展示待阅精选，其他有效信息可展开，不把延续消息冒充新增。
 
-- 已有「全部更新」「更新本页」、队列与进度代码，但尚未接通Grok云端执行；旧Codex执行器已停用。不要把按钮可见视为可用，见 [手动更新接入说明](docs/MANUAL_UPDATES.md)。
+- 前端只保留「全部更新」（各页「更新本页」已取消）；队列与进度代码仍在，但尚未接通Grok云端执行；旧Codex执行器已停用。不要把按钮可见视为可用，见 [手动更新接入说明](docs/MANUAL_UPDATES.md)。
 
-- 美股板块采用每天北京时间 09:00 / 16:00 / 21:00 的 **5 条市场焦点 + 10 条多学科认知与夜雨知识库洞察**，支持期次归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。旧链路已有期次；新的Grok独立调度与发布仍待验收。
+- 美股板块采用每天北京时间 09:00 / 16:00 / 21:00 的 **5 条市场焦点 + 10 条多学科认知与夜雨知识库洞察**，支持期次归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。Grok 原生定时已有成功样本（如 `410dd11` 的 2026-10-12 21:00）；可靠性、空跑与 OPS-01 状态以 [运营记录](docs/GROK_BOT_OPERATIONS.md) 为准，不因单次成功宣称稳定闭环。
 - 项目内置[美股研究知识库](knowledge/US_EQUITY_RESEARCH_KB.md)和[Grok 采集 SOP](knowledge/GROK_X_COLLECTION_SOP.md)，每次更新由程序自动注入，固定以半导体、电力、AI落地为优先级并要求独立追源与反证。
 - 前台侧边栏七个 Tab：「美股讯息」、「具体人物」、「具体个股」（见 `docs/TICKER_INTELLIGENCE.md`）、「AI板块」（见 `docs/AI_INTELLIGENCE.md`）、「加密」（见 `docs/CRYPTO_INTELLIGENCE.md`）、「宏观大事」（见 `docs/MACRO_EVENTS.md`）、「财报日历」（见 `docs/EARNINGS_CALENDAR.md`）。原帖档案、来源管理和评分作为后台能力保留，不单独提供前台页面。
 
