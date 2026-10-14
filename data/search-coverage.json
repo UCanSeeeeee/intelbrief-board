@@ -196,34 +196,26 @@
         "counter: Meloni diesel vs ceasefire; ASML rev miss vs guidance raise; PJM emergency vs blackout claims"
       ],
       "recordedAt": "2026-10-14T08:15:02.211Z"
-    }
-  ],
-  "entries": [
+    },
     {
-      "period": "2026-10-14-1600",
-      "checkedAt": "2026-10-14T08:25:00.000Z",
-      "windowStart": "2026-10-13T08:00:00.000Z",
-      "windowEnd": "2026-10-14T08:00:00.000Z",
-      "path": "grok-x-mcp",
+      "jobId": "2026-10-14-2100",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-13T13:00:00.000Z",
+      "end": "2026-10-14T21:00:00+08:00",
+      "status": "partial",
       "queries": [
-        "R1 macro",
-        "R1 geo",
-        "R1 AI",
-        "R1 structure",
-        "wire FirstSquawk/LiveSquawk/Reuters/business",
-        "R2 ASML/HBM",
-        "R2 OpenAI arrest",
-        "R2 power PJM",
-        "R2 BTC ETF",
-        "people handles",
-        "nvidia/micron"
+        "R1 macro CPI Fed Treasury",
+        "R1 geopolitics energy ceasefire Houthi diesel LNG",
+        "R1 AI mega-cap NVIDIA OpenAI ASML",
+        "wires DeItaone FirstSquawk Reuters CPI ASML Starlink BAC",
+        "R2 semiconductor HBM CoWoS ASML capacity",
+        "R2 power data center PPA turbine grid",
+        "people elonmusk nvidia TrumpDailyPosts WhiteHouse",
+        "ai AnthropicAI OpenAI",
+        "crypto BTC ETF Brew 7d"
       ],
-      "gaps": [
-        "US CPI final not out before cutoff",
-        "PJM DOE official post missing",
-        "JensenHuang 0 posts",
-        "Brew no-result"
-      ]
+      "recordedAt": "2026-10-14T13:14:53.103Z"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14T08:25:00.000Z",
-  "cutoff": "2026-10-14T16:00:00+08:00",
+  "updatedAt": "2026-10-14T13:14:38.471Z",
+  "cutoff": "2026-10-14T21:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,61 +9,41 @@
       {
         "id": "crypto-board",
         "status": "partial",
-        "note": "Wintermute/ETF 流出讨论。"
+        "note": "泰国 SEC 加密 ETF 框架；美现货 ETF 流出多为二手"
       },
       {
         "id": "btc",
         "status": "partial",
-        "note": "ETF 资金流转述；口径不一。"
+        "note": "泰国框架覆盖 BTC；流量数字证据弱"
       },
       {
         "id": "brew",
         "status": "partial",
-        "note": "Brew 高价值帖 no-result。"
+        "note": "7 日窗 Brew/合约无合格原帖"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "btc-etf-inflow-oct13-claim-2026-10-14",
-      "tabIds": [
-        "btc"
-      ],
-      "title": "有账号称 10/13 现货 BTC ETF 净流入约 1.76 亿美元",
-      "fact": "@strategy_inv1 称 SoSoValue 口径下 10/13 美国现货 BTC ETF 净流入约 1.756 亿美元，ETH ETF 约 2480 万美元。",
-      "whyItMatters": "若属实则与周度流出叙事对冲，需与主力数据源交叉。",
-      "counterCase": "非 Farside 等主力数据源。",
-      "affected": [
-        "BTC ETF"
-      ],
-      "author": "strategy_inv1",
-      "publishedAt": "2026-10-14T07:24:49.000Z",
-      "url": "https://x.com/strategy_inv1/status/2110270585356026223",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "wintermute-etf-flow-support-2026-10-13",
+      "eventKey": "thailand-sec-crypto-etf-rules-2026-10-13",
       "tabIds": [
         "crypto-board",
         "btc"
       ],
-      "title": "WuBlockchain 转述 Wintermute：ETF 流出令加密失去资金流支撑",
-      "fact": "@WuBlockchain 转述 Wintermute 称加密正失去资金流支撑；上周现货 BTC/ETH ETF 录得约 6.79 亿美元等量级流出，期间 BTC 约跌 3.2%、ETH 约跌 7%。",
-      "whyItMatters": "ETF 净流是机构风险偏好的可观察代理，流出时加密与高利率风险资产相关性可能上升。",
-      "counterCase": "单周流出可能被后续流入扭转；口径依赖第三方。",
+      "title": "转述：泰国 SEC 加密 ETF 规则将于 10/16 生效，首批限 BTC/ETH",
+      "fact": "@SHATOSHI_BTC 等称泰国 SEC 通知将于 10 月 16 日生效，首阶段仅 Bitcoin 与 Ethereum、被动、平均净敞口至少约 80%；强调规则生效不等于 SET 已上市产品。",
+      "whyItMatters": "亚洲受监管现货通道影响区域资金准入预期。",
+      "counterCase": "仍需管理人获批；非美国 SEC 行动。",
       "affected": [
         "BTC",
         "ETH",
-        "加密风险偏好"
+        "亚洲加密ETF"
       ],
-      "author": "WuBlockchain",
-      "publishedAt": "2026-10-13T12:13:24.000Z",
-      "url": "https://x.com/WuBlockchain/status/2109980821759393907",
+      "author": "SHATOSHI_BTC",
+      "publishedAt": "2026-10-13T19:35:26.000Z",
+      "url": "https://x.com/SHATOSHI_BTC/status/2110092065388290463",
       "verification": "collector-report",
-      "tier": "must-read",
+      "tier": "watch",
       "weeklyRanks": {
         "crypto-board": 1,
         "btc": 1

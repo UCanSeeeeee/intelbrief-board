@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14T08:25:00.000Z",
-  "cutoff": "2026-10-14T16:00:00+08:00",
+  "updatedAt": "2026-10-14T13:14:38.471Z",
+  "cutoff": "2026-10-14T21:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,37 +9,37 @@
       {
         "id": "nvda",
         "status": "complete",
-        "note": "官方巴黎与英国算力访问。"
+        "note": "官号英国算力+巴黎 Macron 线"
       },
       {
         "id": "mu",
         "status": "partial",
-        "note": "MicronTech 官方窗口0帖。"
+        "note": "窗口内无 Micron 官方新财务事实"
       },
       {
         "id": "intc",
         "status": "partial",
-        "note": "无官方新财务事实。"
+        "note": "窗口内无 Intel 官方新财务事实"
       },
       {
         "id": "goog",
         "status": "partial",
-        "note": "无官方新财务事实。"
+        "note": "窗口内无 Alphabet/Google 股权一手新事实"
       },
       {
         "id": "avgo",
         "status": "partial",
-        "note": "无官方新财务事实。"
+        "note": "窗口内无 Broadcom 官方新财务事实"
       },
       {
         "id": "vrt",
         "status": "partial",
-        "note": "无官方新财务事实。"
+        "note": "窗口内无 Vertiv 官方新订单事实"
       },
       {
         "id": "tsm",
         "status": "partial",
-        "note": "官方账号未解析到新帖。"
+        "note": "tsmc_news 账号未解析到；先进封装多为二手"
       }
     ]
   },
@@ -50,7 +50,7 @@
         "nvda"
       ],
       "title": "NVIDIA：五年向英国提供约 2.5 亿美元算力访问",
-      "fact": "@nvidia 称英国从企业到 Earthshot 正使用 NVIDIA，并承诺五年内 2.5 亿美元算力访问，以支持医疗、银行与公共服务 AI。",
+      "fact": "@nvidia 称英国从企业到 Earthshot 正使用 NVIDIA，并承诺五年内 2.5 亿美元算力访问，以支持医疗、银行与公共服务 AI 及 agent 安全研究。",
       "whyItMatters": "区域算力可获得性影响本地 AI 应用落地与生态绑定，也可能转化为增量 GPU/云需求。",
       "counterCase": "「算力访问」可能是额度/折扣而非新增采购订单。",
       "affected": [
@@ -68,39 +68,14 @@
       "people": []
     },
     {
-      "eventKey": "nvda-macron-quote-react-2026-10-14",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA 转发 Emmanuel Macron 合作加速表态",
-      "fact": "@nvidia 引用 Emmanuel Macron 关于法国 AI 吸引力及与 NVIDIA 合作加速的帖文。",
-      "whyItMatters": "政治背书强化欧洲扩张预期。",
-      "counterCase": "转发不含新合同。",
-      "affected": [
-        "NVDA"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-14T01:15:35.000Z",
-      "url": "https://x.com/nvidia/status/2110177664791396359",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Emmanuel Macron",
-          "intro": "法国总统"
-        }
-      ]
-    },
-    {
       "eventKey": "nvda-macron-elysee-2026-10-13",
       "tabIds": [
         "nvda"
       ],
-      "title": "NVIDIA：Jensen Huang 与 Emmanuel Macron 讨论法国 AI 投资",
-      "fact": "@nvidia 称 Jensen Huang 在爱丽舍宫与 Emmanuel Macron 讨论英伟达在法国 AI 生态、开源与安全投资。",
-      "whyItMatters": "高层会晤常伴随本地化算力与伙伴承诺，影响欧洲订单预期。",
-      "counterCase": "未披露新增合同金额。",
+      "title": "NVIDIA：Jensen Huang 会见 Emmanuel Macron 谈法国 AI 投资",
+      "fact": "@nvidia：Jensen Huang 在爱丽舍宫会见 Emmanuel Macron，讨论在法国 AI 生态、开源与 AI 安全投资。",
+      "whyItMatters": "主权 AI 合作可能影响欧洲算力采购与开源策略。",
+      "counterCase": "会见无合同金额。",
       "affected": [
         "NVDA",
         "欧洲AI"
@@ -121,51 +96,6 @@
         {
           "name": "Emmanuel Macron",
           "intro": "法国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "nvda-paris-evening-2026-10-13",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA：巴黎创始人与研究者晚宴",
-      "fact": "@nvidia 展示 Jensen 与法国创始人、研究者晚宴。",
-      "whyItMatters": "欧洲生态活动，证明区域拓展仍在推进。",
-      "counterCase": "无财务数字。",
-      "affected": [
-        "NVDA"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-13T17:04:39.000Z",
-      "url": "https://x.com/nvidia/status/2110054117595066796",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "nvda-build-claw-2026-10-13",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA：Jensen Huang 现身巴黎 Build-A-Claw",
-      "fact": "@nvidia 称 Jensen Huang 到访 Build-A-Claw，开发者用开源模型搭建 agent。",
-      "whyItMatters": "开源与开发者生态叙事。",
-      "counterCase": "无产品发布细节。",
-      "affected": [
-        "NVDA"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-13T14:00:58.000Z",
-      "url": "https://x.com/nvidia/status/2110007892313321595",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
         }
       ]
     }
