@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-14-0900",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-14T09:02:47+08:00",
+  "updatedAt": "2026-10-14T09:27:04+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "900e6ac955a0ba06eb3cc02b09ac83aae6177936",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-14T09:02:54+08:00",
+      "detail": "ff-only origin master @ 900e6ac"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-14T09:04:25+08:00",
+      "detail": "AGENTS/CONTEXT/TASKS/AGENT_ENTRY/GROK_BOT_OPERATIONS/STOCK_BRIEF/TRADING_DAY_READING/MANUAL_UPDATES顶部/页面docs/SOP/KB已读；brief:context ok"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-14T09:14:21+08:00",
+      "detail": "两轮检索+追源/反证完成；X 读约 40 次；Reuters/IDC 原帖 0 结果改用转述"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-14T09:23:07+08:00",
+      "detail": "brief 5+10；people/tickers/ai/crypto 写入"
+    },
+    {
+      "name": "validate",
+      "status": "ok",
+      "at": "2026-10-14T09:27:01+08:00",
+      "detail": "npm test 112/112（首轮一次 update-runner 用例失败，复跑全部通过）+ check + build"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "ok",
+      "detail": "见 data/audit/2026-10-14-0900-checklist.md"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "见 data/audit/2026-10-14-0900-checklist.md"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "见 data/audit/2026-10-14-0900-checklist.md"
+    },
+    "ai": {
+      "status": "ok",
+      "detail": "见 data/audit/2026-10-14-0900-checklist.md"
+    },
+    "crypto": {
+      "status": "partial",
+      "detail": "见 data/audit/2026-10-14-0900-checklist.md"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "见 data/audit/2026-10-14-0900-checklist.md"
+    },
+    "macro": {
+      "status": "skipped",
+      "detail": "见 data/audit/2026-10-14-0900-checklist.md"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [
+    "Beijing 09:00 scheduled batch"
+  ]
+}

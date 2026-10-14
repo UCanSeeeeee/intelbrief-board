@@ -186,11 +186,24 @@
               "selectionReason": "主题：老牛股/质量股",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 55,
+                "band": "miss",
+                "bandLabel": "不及预期",
+                "summary": "官方稿：三季度摊薄 EPS $5.57（剔除 6.58 亿美元证券投资净亏损后 $5.75），均低于 Nasdaq 一致预期 $5.94；管理口径营收 $509 亿同比 +8%，净利息收入 $271 亿 +13%，但费用 $273 亿同比 +12%，信用成本 $27 亿。收入增长稳健，但 EPS 明显低于预期且费用增速快于收入，评为不及预期。",
+                "facts": {
+                  "reportedEps": 5.57,
+                  "adjustedEps": 5.75,
+                  "consensusEps": 5.94,
+                  "managedRevenueUsdBn": 50.9,
+                  "expenseUsdBn": 27.3
+                },
+                "sources": [
+                  "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/6c1f8114-1be4-4174-8292-f75bbb59bc21.pdf",
+                  "https://www.sec.gov/Archives/edgar/data/19617/000162828026065582/jpm-20261013.htm"
+                ],
+                "checkedAt": "2026-10-14T01:25:13.646Z",
+                "scoredAt": "2026-10-14T01:25:13.646Z"
               }
             },
             {
@@ -209,11 +222,24 @@
               "selectionReason": "主题：老牛股/质量股",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 74,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "官方稿：三季度销售额 $254 亿同比 +5.9%（运营口径 +6.0%），调整后 EPS $2.59，高于 Nasdaq 一致预期 $2.53；GAAP EPS $0.09 受滑石粉诉讼和解拟议费用及并购影响；全年调整后 EPS 指引中值上调 $0.06 至 $11.10，销售指引中值 $1012 亿。业绩与指引小幅好于预期，评为超预期。",
+                "facts": {
+                  "reportedEps": 0.09,
+                  "adjustedEps": 2.59,
+                  "consensusEps": 2.53,
+                  "salesUsdBn": 25.4,
+                  "guidanceNote": "FY2026 adjusted EPS midpoint raised $0.06 to $11.10"
+                },
+                "sources": [
+                  "https://www.jnj.com/media-center/press-releases/johnson-johnson-reports-q3-2026-results-raises-2026-guidance",
+                  "https://www.investor.jnj.com/investor-news/news-details/2026/Johnson--Johnson-reports-Q3-2026-results-raises-2026-guidance/default.aspx"
+                ],
+                "checkedAt": "2026-10-14T01:25:13.646Z",
+                "scoredAt": "2026-10-14T01:25:13.646Z"
               }
             },
             {
@@ -232,11 +258,24 @@
               "selectionReason": "主题：老牛股/质量股",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 88,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "官方稿：三季度营收 $1127 亿，GAAP EPS $4.56、调整后 EPS $4.69，明显高于 Nasdaq 一致预期 $4.12；医疗成本率 88.4%，经营现金流 51 亿美元；上调全年调整后 EPS 指引至至少 $20.50。EPS 大幅超预期并上调指引，评为超预期（接近远超预期，但利润率仍处修复期）。",
+                "facts": {
+                  "reportedEps": 4.56,
+                  "adjustedEps": 4.69,
+                  "consensusEps": 4.12,
+                  "revenueUsdBn": 112.7,
+                  "guidanceNote": "FY2026 adjusted EPS raised to at least $20.50"
+                },
+                "sources": [
+                  "https://www.unitedhealthgroup.com/newsroom/2026/2026-10-13-uhg-reports-third-quarter-2026-results.html",
+                  "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2026/unh-reports-third-quarter-2026-results.pdf"
+                ],
+                "checkedAt": "2026-10-14T01:25:13.646Z",
+                "scoredAt": "2026-10-14T01:25:13.646Z"
               }
             },
             {
@@ -253,11 +292,22 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 85,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "官方稿：三季度摊薄 EPS $17.01，同比 +39%，大幅高于 Nasdaq 一致预期 $12.90；净营收 $186.8 亿同比 +23%（环比 -8%），主要由全球银行与市场业务驱动，年初至今净营收创纪录，ROE 18.7%。EPS 大幅超预期，但未给出量化指引且环比回落，评为超预期。",
+                "facts": {
+                  "reportedEps": 17.01,
+                  "consensusEps": 12.9,
+                  "netRevenueUsdBn": 18.68
+                },
+                "sources": [
+                  "https://www.sec.gov/Archives/edgar/data/886982/000088698226000529/gs-20261013.htm",
+                  "https://www.pubt.io/view/E05D80CAE09D50DEE0F9128302C1F8857DBAAADC"
+                ],
+                "checkedAt": "2026-10-14T01:25:13.646Z",
+                "scoredAt": "2026-10-14T01:25:13.646Z"
               }
             },
             {
@@ -274,11 +324,24 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 58,
+                "band": "miss",
+                "bandLabel": "不及预期",
+                "summary": "官方稿：三季度摊薄 EPS $1.87（同比 +13%），略高于 Nasdaq 一致预期 $1.85，但含 1.7 亿美元一次性税收收益；总营收 $218.7 亿同比 +2%、环比 -3%，净利息收入 $125.2 亿，财经快讯所引营收预期约 $223 亿、净利息收入预期约 $126.3 亿，均未达；拨备同比 +51%。EPS 达标主要靠税项，收入端弱于预期，评为不及预期。",
+                "facts": {
+                  "reportedEps": 1.87,
+                  "consensusEps": 1.85,
+                  "revenueUsdBn": 21.87,
+                  "consensusRevenueUsdBnApprox": 22.3,
+                  "discreteTaxBenefitUsdMn": 170
+                },
+                "sources": [
+                  "https://www.wellsfargo.com/assets/pdf/about/investor-relations/earnings/third-quarter-2026-earnings.pdf",
+                  "https://x.com/DeItaone/status/2109955230146191642"
+                ],
+                "checkedAt": "2026-10-14T01:25:13.646Z",
+                "scoredAt": "2026-10-14T01:25:13.646Z"
               }
             },
             {
@@ -295,11 +358,23 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 76,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "官方稿：三季度摊薄 EPS $2.85（同比 +53%，剔除上年一次性项目后 +27%），高于 Nasdaq 一致预期 $2.66；营收 $238.5 亿同比 +8%，净利息收入 +14%，CET1 12.8%，回购与分红 41 亿美元。财经快讯所引营收预期约 $237.2 亿，营收小幅超出。EPS 与营收均好于预期，评为超预期。",
+                "facts": {
+                  "reportedEps": 2.85,
+                  "consensusEps": 2.66,
+                  "revenueUsdBn": 23.85,
+                  "consensusRevenueUsdBnApprox": 23.72
+                },
+                "sources": [
+                  "https://www.citigroup.com/rcs/citigpa/storage/public/Earnings/Q32026/2026prqtr3rslt.pdf",
+                  "https://www.sec.gov/Archives/edgar/data/831001/000110465926115323/c-20261013x8k.htm"
+                ],
+                "checkedAt": "2026-10-14T01:25:13.646Z",
+                "scoredAt": "2026-10-14T01:25:13.646Z"
               }
             }
           ]

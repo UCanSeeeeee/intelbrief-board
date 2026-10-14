@@ -1,29 +1,74 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T13:28:00.000Z",
-  "cutoff": "2026-10-13T21:00:00+08:00",
+  "updatedAt": "2026-10-14T01:23:01.310Z",
+  "cutoff": "2026-10-14T09:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "crypto-board",
-        "status": "partial",
-        "note": "7日窗复核ETF流出等既有条目；无更高价值监管新增"
+        "status": "complete",
+        "note": "7 日窗；新增富国银行稳定币表态；ETH ETF 连续第 10 日流出已由既有条目覆盖。"
       },
       {
         "id": "btc",
         "status": "complete",
-        "note": "7日窗保留ETF资金流条目"
+        "note": "新增 8.1 万美元下探与爆仓；Farside 10/12 净流出 6540 万美元与既有 ETF 流出条目同口径；移出超窗的 10/6 流入条目。"
       },
       {
         "id": "brew",
         "status": "partial",
-        "note": "7日窗无可核验新增事实，保留旧条"
+        "note": "Brew（0xfa6d9b504848606eb9aec04ccc161d169b3f2159）7 日窗检索仅见推广/刷屏帖，无可核验新增事实，记 no-result。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "btc-81k-flush-liquidations-2026-10-13",
+      "tabIds": [
+        "btc"
+      ],
+      "title": "BTC 盘中跌至约 8.1 万美元，加密市场爆仓逾 7 亿美元",
+      "fact": "@CryptoPulseXgl 称比特币隔夜在广泛避险（含韩国股市因 AI 担忧大跌）与现货 ETF 持续流出下一度跌至约 8.1 万美元，触发逾 7.7 亿美元加密爆仓（多为多头）；@CryptoLab_1 统计 24 小时爆仓约 7.3 亿美元，其中多头约 5.9 亿美元，价格随后反弹至约 8.35 万美元。",
+      "whyItMatters": "BTC 与 AI/半导体风险资产同步去杠杆，显示加密与科技股的风险偏好联动。",
+      "counterCase": "爆仓统计口径不一；价格已收复部分跌幅，资金费率仍为正。",
+      "affected": [
+        "BTC",
+        "IBIT",
+        "MSTR",
+        "COIN"
+      ],
+      "author": "CryptoPulseXgl",
+      "publishedAt": "2026-10-13T15:38:39.000Z",
+      "url": "https://x.com/CryptoPulseXgl/status/2110032478287335856",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "crypto-board-wells-fargo-stablecoin-2026-10-13",
+      "tabIds": [
+        "crypto-board"
+      ],
+      "title": "富国银行 CEO：正为美国稳定币潜在机会做准备",
+      "fact": "@WatcherGuru 称富国银行首席执行官表示，银行正在为美国潜在的加密稳定币业务机会做准备。",
+      "whyItMatters": "美国大型银行进入稳定币领域，可能改变支付与存款格局，并为稳定币监管框架落地后的发行与托管竞争定调。",
+      "counterCase": "为财报电话会表态转述，无具体产品或时间表。",
+      "affected": [
+        "WFC",
+        "稳定币发行商",
+        "COIN"
+      ],
+      "author": "WatcherGuru",
+      "publishedAt": "2026-10-13T14:20:53.000Z",
+      "url": "https://x.com/WatcherGuru/status/2110012906574365018",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
     {
       "eventKey": "btc-eth-etf-outflow-continue-2026-10-13",
       "tabIds": [
@@ -211,30 +256,6 @@
         "btc": 2
       },
       "people": []
-    },
-    {
-      "eventKey": "btc-etf-net-flow-2026-10-06",
-      "tabIds": [
-        "btc"
-      ],
-      "title": "10/6 比特币 ETF 单日净流入约 1.188 亿美元",
-      "fact": "@thepfund 称 10/6 Bitcoin ETF 总净流入约 +$118.80m（月至今约 +$321.4m，2026 YTD 约 +$1.25B），其中 $IBIT 约 +$122.00m。",
-      "whyItMatters": "ETF 资金流是 BTC 机构需求的可观测代理。",
-      "counterCase": "单日流入可迅速反转；需对照发行商官方流量。",
-      "affected": [
-        "BTC",
-        "比特币现货 ETF"
-      ],
-      "author": "thepfund",
-      "publishedAt": "2026-10-07T04:21:50.000Z",
-      "url": "https://x.com/thepfund/status/2107687824615182810",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "btc": 3
-      },
-      "people": []
     }
-  ],
-  "collectionPath": "grok-bot-x-search"
+  ]
 }

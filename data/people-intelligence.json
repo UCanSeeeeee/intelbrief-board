@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T13:28:00.000Z",
-  "cutoff": "2026-10-13T21:00:00+08:00",
+  "updatedAt": "2026-10-14T01:21:07.675Z",
+  "cutoff": "2026-10-14T09:00:00+08:00",
   "source": "grok-bot-x-search",
   "status": "partial",
   "coverage": {
@@ -9,31 +9,777 @@
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "R1 from:elonmusk 24h；规则1条 Robotaxi；热度补4条至5。"
+        "note": "from:elonmusk 24h；规则2条（美光定价、数据中心融资）；热度补3条至5；Robotaxi 仅留重点榜。"
       },
       {
         "id": "jensen-huang",
         "status": "partial",
-        "note": "from:JensenHuang 24h 0条；保留7日重点榜旧条。"
+        "note": "24h 无 Jensen Huang 本人帖；规则1条（巴黎欧洲投资，Bloomberg）；用可归因媒体帖热度补4条至5。"
       },
       {
         "id": "donald-trump",
         "status": "complete",
-        "note": "可执行政策规则0条；按selectionPolicy收WhiteHouse热度最高3条。"
+        "note": "TrumpDailyPosts/POTUS/WhiteHouse 24h；POTUS 0 帖；规则1条（阿拉斯加 LNG）；热度补4条至5。"
       },
       {
         "id": "trillion-leaders",
         "status": "complete",
-        "note": "保留Maia/Muse等30日合集；本窗无新合格高管原帖占满。"
+        "note": "新增 Sundar Pichai Gemini 4 Argon；为保持5条移出 10/09 Nadella 帖。"
       },
       {
         "id": "research-reports",
-        "status": "partial",
-        "note": "窗口内新增有限；保留既有机构条目。"
+        "status": "complete",
+        "note": "新增 JPM-MU、花旗-CAT、瑞银-WDC 转述；为保持5条移出较旧的大摩/美银报告。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "wh-alaska-lng-pipeline-2026-10-14",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "白宫：Donald Trump 已“确保”800 英里阿拉斯加 LNG 管道",
+      "fact": "@WhiteHouse 称 Donald Trump 做到了其他总统未能做到的事，确保了 800 英里的阿拉斯加 LNG 管道，称其为阿拉斯加史上最大能源基础设施项目。",
+      "whyItMatters": "若推进，将扩大美国 LNG 出口能力并带动管道钢材、压缩与工程需求，也与亚洲买家的能源采购谈判相关。",
+      "counterCase": "帖子未给出融资、承购或最终投资决定细节，“确保”的含义需看项目方公告。",
+      "affected": [
+        "LNG 出口",
+        "管道与工程",
+        "天然气"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-14T00:54:40.000Z",
+      "url": "https://x.com/WhiteHouse/status/2110172400595673249",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "donald-trump": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 624,
+        "reposts": 148,
+        "replies": 52,
+        "quotes": 32,
+        "views": 19226,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 18
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
+    {
+      "eventKey": "jensen-doctolib-stake-2026-10-13",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "热度：Jensen Huang 称英伟达将少数股权入股 Doctolib",
+      "fact": "@TheInsiderPaper 称 Jensen Huang 周二表示，英伟达将入股法国医疗网站 Doctolib 的少数股权，后者计划用相关技术改善医疗服务。",
+      "whyItMatters": "热度参考；属欧洲投资的一部分。",
+      "counterCase": "金额未披露。",
+      "affected": [
+        "NVDA"
+      ],
+      "author": "TheInsiderPaper",
+      "publishedAt": "2026-10-13T23:00:01.000Z",
+      "url": "https://x.com/TheInsiderPaper/status/2110143549698162879",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 19,
+        "reposts": 9,
+        "replies": 3,
+        "quotes": 0,
+        "views": 7582,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 3
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-micron-memory-pricing-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：美光在未来内存定价上“合理”，其他厂商“敲竹杠”",
+      "fact": "Elon Musk 回复转述摩根大通存储报告的帖子称，美光在未来内存价格上一直合理，而其他厂商漫天要价，客户不会忘记；美光的做法有利于长期客户忠诚度。被回复帖称 MU 已签 26 份长期协议、覆盖 2030 年前逾 35% 收入。",
+      "whyItMatters": "特斯拉/xAI 是大型存储买家，公开区分供应商定价态度，可能影响长约份额分配，并为存储股大跌当日提供客户侧视角。",
+      "counterCase": "采购方表态带有压价激励；长约价格条款未披露，“合理定价”也可能意味着 MU 让渡现货高价利润。",
+      "affected": [
+        "MU",
+        "SK 海力士",
+        "三星电子",
+        "TSLA"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T21:52:48.000Z",
+      "url": "https://x.com/elonmusk/status/2110126632572756339",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 10905,
+        "reposts": 831,
+        "replies": 365,
+        "quotes": 316,
+        "views": 783530,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 830
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-dc-financing-not-doing-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 回应数据中心债抛售：拿到钱不等于建得出来",
+      "fact": "针对 zerohedge 关于数据中心债券遭抛售的帖子，Elon Musk 回复称超算数据中心需求确实很高，但为建设需要大规模电力、冷却与网络的复杂硬件系统筹到钱，并不等于能把它做出来，并称 SpaceX 团队执行力领先。",
+      "whyItMatters": "把 AI 数据中心风险从“需求”转向“执行与融资”，与 CoreWeave、Oracle 信用利差走阔同时出现。",
+      "counterCase": "带有为自家公司背书的激励；未提供具体项目或数据。",
+      "affected": [
+        "CRWV",
+        "ORCL",
+        "xAI",
+        "AI 数据中心开发商"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T21:35:30.000Z",
+      "url": "https://x.com/elonmusk/status/2110122281603326170",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "elon-musk": 2
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 7518,
+        "reposts": 494,
+        "replies": 300,
+        "quotes": 59,
+        "views": 447317,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 423
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "wh-trust-the-process-2026-10-13",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "热度：白宫发布“Trust the process.”",
+      "fact": "@WhiteHouse 发帖“Trust the process.”并附图片（图片内容未读取）。",
+      "whyItMatters": "热度参考。",
+      "counterCase": "无可核验内容。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-13T21:33:52.000Z",
+      "url": "https://x.com/WhiteHouse/status/2110121868757737967",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 14117,
+        "reposts": 2862,
+        "replies": 2870,
+        "quotes": 682,
+        "views": 502025,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 692
+      },
+      "people": []
+    },
+    {
+      "eventKey": "wh-trump-ilhan-omar-net-worth-2026-10-13",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "热度：Donald Trump 质疑 Ilhan Omar 财产申报",
+      "fact": "@WhiteHouse 引述 Donald Trump 称，Ilhan Omar 不久前申报净资产最高 3000 万美元，随后又称申报有误、实际约 10 万美元，美国需要答案。",
+      "whyItMatters": "政治类热度帖，仅作注意力参考。",
+      "counterCase": "无投资增量信息。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-13T20:46:14.000Z",
+      "url": "https://x.com/WhiteHouse/status/2110109884142260696",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 22821,
+        "reposts": 4135,
+        "replies": 1524,
+        "quotes": 216,
+        "views": 335572,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 369
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        },
+        {
+          "name": "Ilhan Omar",
+          "intro": "美国民主党众议员"
+        }
+      ]
+    },
+    {
+      "eventKey": "jpm-mu-26-lta-150b-backlog-2026-10-13",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：摩根大通称 MU 已签 26 份长约、合同积压 1500 亿美元",
+      "fact": "@RealNickMugalli 转述摩根大通最新存储报告：MU 已签 26 份长期协议、覆盖 2030 年前逾 35% 收入，合同积压约 1500 亿美元，客户已承诺约 320 亿美元现金，明年产能逾 75% 已售出。",
+      "whyItMatters": "在存储股因 CXMT 担忧大跌当日，长约与预付款提高 MU 收入可见度，是周期见顶论的主要反证。",
+      "counterCase": "报告原文未直读；长约价格条款不详，若现货价走弱客户可能重谈。",
+      "affected": [
+        "MU",
+        "SK 海力士",
+        "SNDK"
+      ],
+      "author": "RealNickMugalli",
+      "publishedAt": "2026-10-13T20:43:25.000Z",
+      "url": "https://x.com/RealNickMugalli/status/2110109173048299981",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "research-reports": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 1197,
+        "reposts": 134,
+        "replies": 33,
+        "quotes": 19,
+        "views": 155166,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 370
+      },
+      "people": []
+    },
+    {
+      "eventKey": "jensen-demand-exceeds-supply-5-10y-2026-10-13",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "热度：Jensen Huang 称 AI 行业并未建设过快，供需或需 5–10 年平衡",
+      "fact": "@TFTC21 转述 Jensen Huang 称 AI 行业并非建得太快，“需求远大于供给”，并预测供需可能在 5 到 10 年后才趋于平衡。",
+      "whyItMatters": "热度参考；回应 AI 资本开支泡沫质疑。",
+      "counterCase": "供应商立场，带有需求背书激励。",
+      "affected": [
+        "NVDA"
+      ],
+      "author": "TFTC21",
+      "publishedAt": "2026-10-13T20:28:59.000Z",
+      "url": "https://x.com/TFTC21/status/2110105541750182136",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 3,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 0,
+        "views": 1877,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 0
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "citi-cat-pt-cut-dc-power-2026-10-13",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：花旗下调 CAT 目标价至 950 美元，质疑数据中心电力估值",
+      "fact": "@TTradDashboard 称花旗将卡特彼勒目标价由 1100 美元下调至 950 美元，理由是对其数据中心电力业务估值存疑；CAT 当日跌约 3.3%，跌破 9 月 17 日以来区间下沿。",
+      "whyItMatters": "数据中心电力设备（燃气发电机组）估值开始被券商质疑，与 AI 信用走阔形成同向压力。",
+      "counterCase": "为二手转述；表后燃气发电订单仍在增加（如 Enerflex），基本面需求未见下滑。",
+      "affected": [
+        "CAT",
+        "GEV",
+        "燃气发电设备"
+      ],
+      "author": "TTradDashboard",
+      "publishedAt": "2026-10-13T20:21:30.000Z",
+      "url": "https://x.com/TTradDashboard/status/2110103657702207582",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "research-reports": 3
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "views": 32,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 0
+      },
+      "people": []
+    },
+    {
+      "eventKey": "jensen-paris-europe-2b-investment-2026-10-13",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "Jensen Huang：英伟达下周将宣布 20 亿美元欧洲投资",
+      "fact": "Bloomberg 报道，Jensen Huang 在巴黎活动上表示英伟达计划在下周宣布 20 亿美元的欧洲投资；另有转述称英伟达将入股法国医疗软件 Doctolib、机器人公司 Genesis AI、企业软件 Pigment 与材料化学 AI 公司 Entalpic。",
+      "whyItMatters": "英伟达以投资绑定欧洲主权 AI 与应用生态，扩大 GPU 需求来源并对冲中国份额下滑。",
+      "counterCase": "投资金额相对英伟达现金流较小；具体项目下周才公布，可能部分为已有承诺的重新包装。",
+      "affected": [
+        "NVDA",
+        "欧洲 AI 初创公司",
+        "欧洲数据中心"
+      ],
+      "author": "business",
+      "publishedAt": "2026-10-13T19:40:11.000Z",
+      "url": "https://x.com/business/status/2110093259393409424",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "jensen-huang": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 72,
+        "reposts": 18,
+        "replies": 9,
+        "quotes": 3,
+        "views": 25069,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 3
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-ceos-post-directly-on-x-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "热度：Elon Musk 祝贺 Sundar Pichai 在 X 发布 Gemini 4 Argon",
+      "fact": "Elon Musk 引用 Sundar Pichai 宣布 Gemini 4 Argon 的帖子称“祝贺”，并表示 CEO 与高管直接在 X 上发布信息是传递信息和推动产品销售的最佳方式，远比新闻稿有效。",
+      "whyItMatters": "热度参考；涉及竞争对手模型发布与 X 平台推广。",
+      "counterCase": "不涉及 xAI 或特斯拉业务新事实。",
+      "affected": [
+        "GOOGL",
+        "X"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T18:39:20.000Z",
+      "url": "https://x.com/elonmusk/status/2110077948384735481",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 22089,
+        "reposts": 1338,
+        "replies": 1083,
+        "quotes": 166,
+        "views": 1808006,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 1169
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        },
+        {
+          "name": "Sundar Pichai",
+          "intro": "谷歌及Alphabet CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "jensen-ai-creating-jobs-emily-chang-2026-10-13",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "热度：Jensen Huang 称数据中心为社区带来收入、AI 正在创造就业",
+      "fact": "@emilychangtv 发布采访片段：Jensen Huang 称数据中心正为当地社区带来大量收入，并表示“AI 实际上在创造就业”。",
+      "whyItMatters": "窗口内本 Tab 互动最高的可归因帖之一，仅作热度参考。",
+      "counterCase": "观点表态，无数据支撑。",
+      "affected": [
+        "NVDA"
+      ],
+      "author": "emilychangtv",
+      "publishedAt": "2026-10-13T18:25:43.000Z",
+      "url": "https://x.com/emilychangtv/status/2110074519117299760",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 100,
+        "reposts": 12,
+        "replies": 6,
+        "quotes": 2,
+        "views": 7740,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 8
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "jensen-cant-design-chip-without-ai-2026-10-13",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "热度：Jensen Huang 称“没有 AI 已无法设计芯片”",
+      "fact": "@Benzinga 转述 Jensen Huang 称 AI 已深度嵌入英伟达自身运营，从芯片设计到软件开发与调试，“没有 AI 我们已无法设计芯片”。",
+      "whyItMatters": "热度参考；内部 AI 落地的定性表态。",
+      "counterCase": "无量化数据。",
+      "affected": [
+        "NVDA"
+      ],
+      "author": "Benzinga",
+      "publishedAt": "2026-10-13T17:03:00.000Z",
+      "url": "https://x.com/Benzinga/status/2110053702648377545",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 6,
+        "reposts": 3,
+        "replies": 2,
+        "quotes": 3,
+        "views": 4715,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 0
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "wh-navy-birthday-hormuz-steel-wall-2026-10-13",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "热度：Donald Trump 祝海军生日并称霍尔木兹“钢铁之墙”封锁是历史性成就",
+      "fact": "@WhiteHouse 引述 Donald Trump 祝贺美国海军 251 周年，并称海军在霍尔木兹海峡建立的“坚不可摧的钢铁之墙（有时称为封锁）”是又一项历史性成就。",
+      "whyItMatters": "涉及霍尔木兹航运态势，热度参考。",
+      "counterCase": "表态未提供航运或封锁细节。",
+      "affected": [
+        "原油",
+        "航运"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-13T16:58:30.000Z",
+      "url": "https://x.com/WhiteHouse/status/2110052571725398132",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 7807,
+        "reposts": 1621,
+        "replies": 584,
+        "quotes": 90,
+        "views": 173913,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 144
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
+    {
+      "eventKey": "pichai-gemini-4-argon-launch-2026-10-13",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "Sundar Pichai 发布 Gemini 4 Argon，先面向付费层开放",
+      "fact": "Sundar Pichai 宣布 Gemini 4 Argon 即日起面向全球 Gemini API 与 Gemini 平台付费层开发者和企业、Google Antigravity 的 Ultra 订阅者，以及 Gemini 应用与搜索的 Ultra/Pro 订阅者开放。",
+      "whyItMatters": "头部模型发布先锁定付费层，直接拉动订阅与 API 收入，并增加 TPU 与 HBM 推理需求。",
+      "counterCase": "限量开放显示推理算力受限；模型能力领先带来的用量增益正在下降。",
+      "affected": [
+        "GOOGL",
+        "AVGO",
+        "HBM 供应商"
+      ],
+      "author": "sundarpichai",
+      "publishedAt": "2026-10-13T16:04:10.000Z",
+      "url": "https://x.com/sundarpichai/status/2110038898009407584",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "trillion-leaders": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 18777,
+        "reposts": 1672,
+        "replies": 1071,
+        "quotes": 890,
+        "views": 2638823,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 2606
+      },
+      "people": [
+        {
+          "name": "Sundar Pichai",
+          "intro": "谷歌及Alphabet CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "ubs-wdc-pt-cut-toshiba-2026-10-13",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：瑞银因东芝进入数据中心硬盘市场下调 WDC 目标价至 470 美元",
+      "fact": "@OptionKing666 转述瑞银：东芝进入数据中心硬盘市场带来供给变化，瑞银下调 2028 年定价假设，将 WDC 目标价由 525 美元降至 470 美元，同时上调近期毛利率预测；Tickeron 称 WDC 当日跌约 5.5%。",
+      "whyItMatters": "存储涨价周期中出现新增供给，硬盘定价预期下修与存储股抛售同步。",
+      "counterCase": "目标价仍远高于股价；近期毛利率被上调，影响主要在 2028 年。",
+      "affected": [
+        "WDC",
+        "STX"
+      ],
+      "author": "OptionKing666",
+      "publishedAt": "2026-10-13T15:10:47.000Z",
+      "url": "https://x.com/OptionKing666/status/2110025464345772151",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "research-reports": 4
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 2,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 1,
+        "views": 370,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 0
+      },
+      "people": []
+    },
+    {
+      "eventKey": "wh-press-sec-zacharia-debut-2026-10-13",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "热度：白宫新任新闻秘书 Katie Zacharia 首次登台",
+      "fact": "@WhiteHouse 发布新任白宫新闻秘书 Katie Zacharia 首次在讲台亮相的视频。",
+      "whyItMatters": "窗口内白宫互动最高的帖子，仅作热度参考。",
+      "counterCase": "无政策增量。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-13T14:58:50.000Z",
+      "url": "https://x.com/WhiteHouse/status/2110022454240272456",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 23986,
+        "reposts": 2698,
+        "replies": 5707,
+        "quotes": 517,
+        "views": 1622737,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 1024
+      },
+      "people": [
+        {
+          "name": "Katie Zacharia",
+          "intro": "白宫新闻秘书"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-truss-reply-yes-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "热度：Elon Musk 回复 Liz Truss“Yes”",
+      "fact": "Liz Truss 发帖称“这不再是左与右之争，而是文明与毁灭之争”，Elon Musk 回复“Yes”。",
+      "whyItMatters": "政治表态类热度帖，仅作注意力参考。",
+      "counterCase": "无投资增量信息。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T11:29:35.000Z",
+      "url": "https://x.com/elonmusk/status/2109969797312356746",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 12738,
+        "reposts": 473,
+        "replies": 489,
+        "quotes": 23,
+        "views": 156036,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 76
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        },
+        {
+          "name": "Liz Truss",
+          "intro": "英国前首相"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-of-course-quote-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "热度：Elon Musk 引用 Ron DeSantis 帖回复“Of course”",
+      "fact": "Elon Musk 引用佛罗里达州州长 Ron DeSantis 感谢特斯拉在飓风受灾地区提供免费超充的帖子，回复“Of course”。",
+      "whyItMatters": "窗口内本人互动最高的帖子之一，仅作热度参考。",
+      "counterCase": "无投资增量信息。",
+      "affected": [
+        "TSLA"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T04:41:11.000Z",
+      "url": "https://x.com/elonmusk/status/2109867020091072915",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 40500,
+        "reposts": 3141,
+        "replies": 1055,
+        "quotes": 106,
+        "views": 6108986,
+        "capturedAt": "2026-10-14T01:10:00.000Z",
+        "source": "x-mcp",
+        "bookmarks": 331
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        },
+        {
+          "name": "Ron DeSantis",
+          "intro": "佛罗里达州州长"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-robotaxi-improvements-2026-10-13",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：Robotaxi 改进进展",
+      "fact": "@elonmusk 发帖 “Robotaxi improvements” 并附图/视频说明 Robotaxi 产品改进。",
+      "whyItMatters": "Robotaxi 进度影响 Tesla AI/自动驾驶商业化叙事与算力需求预期。",
+      "counterCase": "帖文缺少可核验的里程/监管/收入数据，或仅为营销切片。",
+      "affected": [
+        "TSLA",
+        "Robotaxi"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-13T00:30:23.000Z",
+      "url": "https://x.com/elonmusk/status/2109803903256502307",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "elon-musk": 3
+      },
+      "selection": "rule",
+      "engagement": {
+        "likes": 10844,
+        "reposts": 892,
+        "replies": 731,
+        "quotes": 67,
+        "capturedAt": "2026-10-13T13:28:00.000Z",
+        "source": "x get_users_posts/search_posts_all public_metrics",
+        "views": 1760771,
+        "bookmarks": 168
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
     {
       "eventKey": "bofa-tsmc-pt-620-2nm-ramp-2026-10-12",
       "tabIds": [
@@ -55,7 +801,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "research-reports": 1
+        "research-reports": 2
       },
       "selection": "rule",
       "engagement": {
@@ -89,7 +835,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "trillion-leaders": 1
+        "trillion-leaders": 2
       },
       "selection": "rule",
       "engagement": {
@@ -129,7 +875,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "trillion-leaders": 2
+        "trillion-leaders": 3
       },
       "selection": "rule",
       "engagement": {
@@ -141,35 +887,6 @@
         "capturedAt": "2026-10-13T02:20:00Z",
         "source": "x search_posts_all/get_posts_by_ids public_metrics"
       },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "nadella-microsoft-decision-1-2026-10-09",
-      "tabIds": [
-        "trillion-leaders"
-      ],
-      "title": "Satya Nadella 发布 Microsoft-Decision-1：面向快速结构化决策的新模型",
-      "fact": "Satya Nadella 介绍 Microsoft-Decision-1，称在结构化决策任务上延迟与质量优于通用 LLM 及其他决策模型，并已在微软内部事故处理等场景测试。",
-      "whyItMatters": "专用决策模型若进入 Foundry/产品线，体现 AI 从聊天走向工作流变现，影响 Azure AI 客单价与用量。",
-      "counterCase": "若外部客户采用与收入贡献未披露，内部测试不等于商业化成功。",
-      "affected": [
-        "Microsoft Azure AI",
-        "企业工作流软件"
-      ],
-      "author": "satyanadella",
-      "publishedAt": "2026-10-09T18:37:28.000Z",
-      "url": "https://x.com/satyanadella/status/2108627923888754862",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "trillion-leaders": 3
-      },
-      "selection": "rule",
       "people": [
         {
           "name": "Satya Nadella",
@@ -226,7 +943,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "jensen-huang": 1
+        "jensen-huang": 2
       },
       "selection": "rule",
       "people": [
@@ -234,35 +951,6 @@
           "name": "Satya Nadella",
           "intro": "微软董事长兼CEO"
         },
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "ms-after-huang-dram-cycle-2026-10-06",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "转述：摩根士丹利称与 Jensen Huang 交流后认为 DRAM 周期主风险是 AI 减速本身",
-      "fact": "@MentoviaX 称摩根士丹利在与英伟达 CEO Jensen Huang 交流后表示，即便 AI 算力买家因供应紧张下调内存规格，美光等 DRAM 厂商并非主要风险；真正风险是 AI 本身减速，新供给“将会被消化”。X 二手转述。",
-      "whyItMatters": "把存储环节从“规格下调受损”转向“AI 需求斜率”，影响 MU 等与 HBM/DRAM 相关定价假设。",
-      "counterCase": "若无法核对 MS 原文或 Jensen Huang 原话语境，或内存厂商指引相悖，则转述不可作为独立证据。",
-      "affected": [
-        "Micron 等 DRAM",
-        "AI 存储需求"
-      ],
-      "author": "MentoviaX",
-      "publishedAt": "2026-10-06T12:39:44.000Z",
-      "url": "https://x.com/MentoviaX/status/2107450733301731393",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "research-reports": 4
-      },
-      "selection": "rule",
-      "people": [
         {
           "name": "Jensen Huang",
           "intro": "英伟达创始人兼CEO"
@@ -288,55 +976,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "research-reports": 2
-      },
-      "selection": "rule",
-      "people": []
-    },
-    {
-      "eventKey": "ms-exelon-pt-cut-datacenter-load-2026-09-30",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "转述：摩根士丹利下调 Exelon 目标价，理由含数据中心负荷能见度下降",
-      "fact": "@equityswarmX 称 Exelon 上周跌近 3%，因摩根士丹利将目标价下调至 50 美元，并提及数据中心需求能见度减弱。X 二手转述，未独立核验原文。",
-      "whyItMatters": "公用事业侧对数据中心负荷预期下调，是检验 AI 电力需求是否被过度前移的反向信号。",
-      "counterCase": "若公司后续披露的并网队列或合同负荷回升，该下调可能被证伪。",
-      "affected": [
-        "Exelon",
-        "数据中心用电预期"
-      ],
-      "author": "equityswarmX",
-      "publishedAt": "2026-09-30T00:51:07.000Z",
-      "url": "https://x.com/equityswarmX/status/2105098077451506132",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
         "research-reports": 5
-      },
-      "selection": "rule",
-      "people": []
-    },
-    {
-      "eventKey": "bofa-nvda-pt-320-tam-2026-09-28",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "转述：美银上调英伟达目标价至 320 美元，2030 年 AI 数据中心系统 TAM 约 1.7 万亿美元",
-      "fact": "@KyleReidhead 称美银维持买入并将 NVDA 目标价提至 320 美元，同时把 2030 年 AI 数据中心系统 TAM 从约 1.4 万亿上修到约 1.7 万亿美元。X 二手转述，未独立核验原文。",
-      "whyItMatters": "TAM 上修延长 AI 基建景气假设，影响半导体与配套电力/网络资本开支的长周期定价。",
-      "counterCase": "若美银后续下调或公开文件无法核对 TAM 口径，转述不能作为硬证据。",
-      "affected": [
-        "NVIDIA",
-        "AI 数据中心供应链"
-      ],
-      "author": "KyleReidhead",
-      "publishedAt": "2026-09-28T20:30:02.000Z",
-      "url": "https://x.com/KyleReidhead/status/2104669988682604601",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "research-reports": 3
       },
       "selection": "rule",
       "people": []
@@ -363,281 +1003,6 @@
         "trillion-leaders": 5
       },
       "selection": "rule",
-      "people": []
-    },
-    {
-      "eventKey": "elon-robotaxi-improvements-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Robotaxi 改进进展",
-      "fact": "@elonmusk 发帖 “Robotaxi improvements” 并附图/视频说明 Robotaxi 产品改进。",
-      "whyItMatters": "Robotaxi 进度影响 Tesla AI/自动驾驶商业化叙事与算力需求预期。",
-      "counterCase": "帖文缺少可核验的里程/监管/收入数据，或仅为营销切片。",
-      "affected": [
-        "TSLA",
-        "Robotaxi"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T00:30:23.000Z",
-      "url": "https://x.com/elonmusk/status/2109803903256502307",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "elon-musk": 1
-      },
-      "selection": "rule",
-      "engagement": {
-        "likes": 10844,
-        "reposts": 892,
-        "replies": 731,
-        "quotes": 67,
-        "capturedAt": "2026-10-13T13:28:00.000Z",
-        "source": "x get_users_posts/search_posts_all public_metrics",
-        "views": 1760771,
-        "bookmarks": 168
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-grok-bot-hire-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Grok Bot 像雇超级聪明员工",
-      "fact": "@elonmusk 发帖称 “Grok @Bot is like hiring a super smart employee”。",
-      "whyItMatters": "反映 xAI/Grok 产品推广重点，影响 AI 助手商业化注意力。",
-      "counterCase": "营销话术，无收入/用量数据。",
-      "affected": [
-        "xAI",
-        "TSLA叙事"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T10:31:46.000Z",
-      "url": "https://x.com/elonmusk/status/2109955246923641259",
-      "verification": "collector-report",
-      "tier": "watch",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 3434,
-        "reposts": 492,
-        "replies": 984,
-        "quotes": 83,
-        "capturedAt": "2026-10-13T13:28:00.000Z",
-        "source": "x get_users_posts/search_posts_all public_metrics",
-        "views": 1081675,
-        "bookmarks": 162
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-of-course-quote-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 热度帖：Of course",
-      "fact": "@elonmusk 引用回复 “Of course”。",
-      "whyItMatters": "热度动态补位；本身无独立产业事实。",
-      "counterCase": "无投资传导细节。",
-      "affected": [
-        "注意力"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T04:41:11.000Z",
-      "url": "https://x.com/elonmusk/status/2109867020091072915",
-      "verification": "collector-report",
-      "tier": "watch",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 19469,
-        "reposts": 1405,
-        "replies": 574,
-        "quotes": 67,
-        "capturedAt": "2026-10-13T13:28:00.000Z",
-        "source": "x get_users_posts/search_posts_all public_metrics",
-        "views": 2696848,
-        "bookmarks": 167
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-try-grok-bot-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Try Grok Bot",
-      "fact": "@elonmusk 发帖 “Try Grok @Bot”。",
-      "whyItMatters": "热度动态补位。",
-      "counterCase": "无用量数据。",
-      "affected": [
-        "xAI"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T05:37:13.000Z",
-      "url": "https://x.com/elonmusk/status/2109881121047781430",
-      "verification": "collector-report",
-      "tier": "watch",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 3584,
-        "reposts": 458,
-        "replies": 846,
-        "quotes": 60,
-        "capturedAt": "2026-10-13T13:28:00.000Z",
-        "source": "x get_users_posts/search_posts_all public_metrics",
-        "views": 1804716,
-        "bookmarks": 134
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-grok-memory-transfer-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Grok Bot memory transfer",
-      "fact": "@elonmusk 发帖 “Grok @Bot memory transfer”。",
-      "whyItMatters": "可能暗示 Bot 记忆能力；缺技术细节。",
-      "counterCase": "无法核验产品能力边界。",
-      "affected": [
-        "xAI"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T04:43:10.000Z",
-      "url": "https://x.com/elonmusk/status/2109867516646637579",
-      "verification": "collector-report",
-      "tier": "watch",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 4622,
-        "reposts": 481,
-        "replies": 658,
-        "quotes": 84,
-        "capturedAt": "2026-10-13T13:28:00.000Z",
-        "source": "x get_users_posts/search_posts_all public_metrics",
-        "views": 2406285,
-        "bookmarks": 847
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "wh-columbus-day-2026-10-12",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse：哥伦布日祝贺",
-      "fact": "@WhiteHouse 发帖祝贺哥伦布日。",
-      "whyItMatters": "热度动态；非 AI/半导体/贸易可执行政策。",
-      "counterCase": "无投资传导。",
-      "affected": [
-        "政治注意力"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-12T20:59:30.000Z",
-      "url": "https://x.com/WhiteHouse/status/2109750831922958573",
-      "verification": "collector-report",
-      "tier": "watch",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 14644,
-        "reposts": 2197,
-        "replies": 803,
-        "quotes": 94,
-        "capturedAt": "2026-10-13T13:28:00.000Z",
-        "source": "x get_users_posts/search_posts_all public_metrics",
-        "views": 232223,
-        "bookmarks": 255
-      },
-      "people": []
-    },
-    {
-      "eventKey": "wh-admin-wins-2026-10-12",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse：本届政府成果盘点",
-      "fact": "@WhiteHouse 发帖汇总 “Top wins from the Trump Administration”。",
-      "whyItMatters": "热度动态；缺可核验新政策细则。",
-      "counterCase": "宣传性质。",
-      "affected": [
-        "政策叙事"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-12T17:20:16.000Z",
-      "url": "https://x.com/WhiteHouse/status/2109695662082380063",
-      "verification": "collector-report",
-      "tier": "watch",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 9437,
-        "reposts": 2571,
-        "replies": 2407,
-        "quotes": 146,
-        "capturedAt": "2026-10-13T13:28:00.000Z",
-        "source": "x get_users_posts/search_posts_all public_metrics",
-        "views": 560635,
-        "bookmarks": 384
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "wh-farmers-thanks-2026-10-12",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse：致谢美国农民",
-      "fact": "@WhiteHouse 发帖感谢美国农民。",
-      "whyItMatters": "热度动态。",
-      "counterCase": "无新补贴/关税细则。",
-      "affected": [
-        "农业叙事"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-12T22:35:44.000Z",
-      "url": "https://x.com/WhiteHouse/status/2109775050287243699",
-      "verification": "collector-report",
-      "tier": "watch",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 7731,
-        "reposts": 1868,
-        "replies": 1020,
-        "quotes": 141,
-        "capturedAt": "2026-10-13T13:28:00.000Z",
-        "source": "x get_users_posts/search_posts_all public_metrics",
-        "views": 154355,
-        "bookmarks": 131
-      },
       "people": []
     }
   ]

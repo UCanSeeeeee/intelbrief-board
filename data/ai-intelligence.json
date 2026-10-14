@@ -1,34 +1,382 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T13:28:00.000Z",
-  "cutoff": "2026-10-13T21:00:00+08:00",
+  "updatedAt": "2026-10-14T01:22:47.785Z",
+  "cutoff": "2026-10-14T09:00:00+08:00",
   "source": "X only",
-  "status": "partial",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "partial",
-        "note": "同窗官方原帖0；保留周榜旧条"
+        "status": "complete",
+        "note": "R1/R2 OpenAI 24h；收录 Greg Brockman Chrome 漏洞帖、FBI 逮捕、英国议会代理越界、旗舰模型安全修复。"
       },
       {
         "id": "anthropic",
         "status": "complete",
-        "note": "蒸馏防御官方帖"
+        "note": "收录 Scion 官方帖、澳洲数据中心、自我复制警告；NTT 大阪 500MW 仍为 Nikkei 二手未收。"
       },
       {
         "id": "goog-ai",
-        "status": "partial",
-        "note": "近窗可核验新增不足"
+        "status": "complete",
+        "note": "收录 Gemini 4 Argon 推出与 DeepMind 机器人演示。"
       },
       {
         "id": "ai-others",
         "status": "complete",
-        "note": "Dimon AI代理风险"
+        "note": "收录 Exa、The Information 用量弹性、评测控制、阿里眼镜、白宫超级智能；Microsoft Copilot 多模型独家为付费内容、信息有限未收。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "ai-others-wh-superintelligence-race-2026-10-14",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "白宫：美国正处于“超级智能竞赛”，并推广 Genesis Mission",
+      "fact": "@WhiteHouse 发帖称美国正处于超级智能竞赛中并“志在必得”，并推广相关行动、Genesis Mission 与第一夫人 SI 挑战赛。",
+      "whyItMatters": "政策层面继续为 AI 基建与算力扩张背书。",
+      "counterCase": "宣传性表态，无具体资金或政策新内容。",
+      "affected": [
+        "AI 基础设施",
+        "联邦 AI 政策"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-13T23:50:45.000Z",
+      "url": "https://x.com/WhiteHouse/status/2110156315851124971",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "openai-saudi-engineer-recording-device-arrest-2026-10-13",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "FBI 逮捕在 OpenAI 办公室放置录音设备的沙特籍工程师",
+      "fact": "Reuters 援引美国司法部称，FBI 逮捕一名涉嫌在 OpenAI 办公室放置秘密录音设备的沙特籍工程师；FT 称系 OpenAI 主动向 FBI 报告。OpenAI 表示该员工已被解雇，目前没有迹象显示其不当访问或窃取模型权重、源代码或客户数据。",
+      "whyItMatters": "前沿实验室的内部安全与国家级窃密风险上升，可能推动更严格的人员审查与监管要求。",
+      "counterCase": "公司称未发现数据外泄，事件影响可能有限。",
+      "affected": [
+        "OpenAI",
+        "AI 安全监管"
+      ],
+      "author": "Reuters",
+      "publishedAt": "2026-10-13T23:30:30.000Z",
+      "url": "https://x.com/Reuters/status/2110151221071761436",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "openai-safety-fix-before-flagship-2026-10-13",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "The Information：OpenAI 在发布下一代旗舰模型前紧急修复安全问题",
+      "fact": "@FirstSquawk 引述 The Information 称，OpenAI 正在发布下一代旗舰模型前抓紧修复安全问题。",
+      "whyItMatters": "旗舰模型发布节奏可能受安全修复影响，关系到与 Gemini 4 Argon 的竞争时点。",
+      "counterCase": "仅为标题转述，延迟幅度不明。",
+      "affected": [
+        "OpenAI",
+        "MSFT"
+      ],
+      "author": "FirstSquawk",
+      "publishedAt": "2026-10-13T20:58:46.000Z",
+      "url": "https://x.com/FirstSquawk/status/2110113037982244910",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "goog-ai-argon-apptronik-apollo-cornhole-2026-10-13",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "Google DeepMind：Gemini 4 Argon 看视频教会 Apptronik 人形机器人投沙包",
+      "fact": "@GoogleDeepMind 称 Gemini 4 Argon 仅通过观看视频即构建物理模型、自行编写仿真，并教会 Apptronik 的 Apollo 人形机器人连续 7 次投中沙包。",
+      "whyItMatters": "展示大模型向机器人技能迁移的能力，强化 Google 在具身智能的布局。",
+      "counterCase": "演示性质，非量产应用。",
+      "affected": [
+        "GOOGL",
+        "人形机器人"
+      ],
+      "author": "GoogleDeepMind",
+      "publishedAt": "2026-10-13T18:41:04.000Z",
+      "url": "https://x.com/GoogleDeepMind/status/2110078384617464201",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "openai-gpt56-sol-chrome-full-chain-2026-10-13",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "Greg Brockman：GPT-5.6 Sol 用 6 天、4 万美元算力找到 Chrome 关键漏洞",
+      "fact": "Greg Brockman 称，使用 GPT-5.6 Sol 花费 6 天和约 4 万美元算力，找到 Chrome 一个关键漏洞，获得 Google 2026 年首个“全链”漏洞奖励，该漏洞估计影响约 10 亿用户，并称这显示防御方可以利用此类工具。",
+      "whyItMatters": "前沿模型进入高价值安全研究场景，算力换漏洞的经济性成为企业安全预算的新用途，也加剧攻防双方的能力扩散担忧。",
+      "counterCase": "单一案例，成本与人工参与程度未详述；同类能力也可能被攻击方利用。",
+      "affected": [
+        "OpenAI",
+        "GOOGL",
+        "网络安全公司"
+      ],
+      "author": "gdb",
+      "publishedAt": "2026-10-13T17:43:29.000Z",
+      "url": "https://x.com/gdb/status/2110063893016096831",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "openai": 1
+      },
+      "people": [
+        {
+          "name": "Greg Brockman",
+          "intro": "OpenAI联合创始人兼总裁"
+        }
+      ]
+    },
+    {
+      "eventKey": "ai-others-exa-100m-arr-2026-10-13",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "Exa 年化收入破 1 亿美元，月请求 20 亿次",
+      "fact": "Will Bryk 称 Exa 年化收入超过 1 亿美元，三年来几乎每年增长 10 倍，每月处理约 20 亿次请求、服务 20 万以上团队，并预测 2030 年 AI 代理搜索量将是人类的 1000 倍。",
+      "whyItMatters": "代理按次付费调用搜索接口的商业模式规模化，是 AI 落地的付费证据。",
+      "counterCase": "创始人自述未经审计；客户可能多为融资驱动的初创公司。",
+      "affected": [
+        "AI 代理生态",
+        "GOOGL 搜索"
+      ],
+      "author": "WilliamBryk",
+      "publishedAt": "2026-10-13T17:23:43.000Z",
+      "url": "https://x.com/WilliamBryk/status/2110058915589464192",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "ai-others": 5
+      },
+      "people": [
+        {
+          "name": "Will Bryk",
+          "intro": "Exa联合创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "anthropic-scion-30k-merges-per-day-2026-10-13",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic：日合并代码变更从 2500 次增至 3 万次以上，自建源码管理",
+      "fact": "Anthropic 工程博客称，公司 5 月每天合并约 2500 次代码变更，9 月已超过 30000 次，为人类规模设计的开发基础设施成为瓶颈，因此自建源码管理系统（Techmeme 称名为 Scion）。",
+      "whyItMatters": "代理编程在头部实验室内部已达到规模化产出，验证代理生产力，并带动开发工具与 CI 算力需求。",
+      "counterCase": "合并次数不等于有效产出；内部数据未经审计。",
+      "affected": [
+        "Anthropic",
+        "MSFT（GitHub）",
+        "开发者工具"
+      ],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-13T16:36:41.000Z",
+      "url": "https://x.com/AnthropicAI/status/2110047081414987957",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "goog-ai-gemini-4-argon-rollout-2026-10-13",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "Gemini 4 Argon 向全球 Google AI Pro 与 Ultra 订阅者推出",
+      "fact": "@GeminiApp 称 Gemini 4 Argon 即日起向全球 Google AI Pro 与 Ultra 订阅者推出，并有更多 Gemini 应用更新；Logan Kilpatrick 称 Argon 为“大模型”，广泛服务能力有限，正开发可面向数十亿用户的版本。",
+      "whyItMatters": "前沿模型以付费订阅为首发渠道，直接拉动订阅收入与 TPU 推理需求。",
+      "counterCase": "限量开放说明推理算力受限；能力领先带来的用量增益正在下降。",
+      "affected": [
+        "GOOGL",
+        "AVGO"
+      ],
+      "author": "GeminiApp",
+      "publishedAt": "2026-10-13T16:09:18.000Z",
+      "url": "https://x.com/GeminiApp/status/2110040189817237836",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "goog-ai": 1
+      },
+      "people": [
+        {
+          "name": "Logan Kilpatrick",
+          "intro": "谷歌AI Studio负责人"
+        }
+      ]
+    },
+    {
+      "eventKey": "ai-others-model-gap-usage-elasticity-2026-10-13",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "The Information：模型领先 10 分只多换来 20% 开发者流量",
+      "fact": "The Information 报道，头部 AI 实验室面临更好模型不一定带来更多使用的挑战：智力评分领先 10 分目前只能多带来约 20% 开发者流量，2025 年底约为 69%。",
+      "whyItMatters": "模型商品化加速，竞争转向价格与分发，影响前沿实验室定价权。",
+      "counterCase": "仅为开发者流量口径，方法未公开。",
+      "affected": [
+        "OpenAI",
+        "Anthropic",
+        "GOOGL"
+      ],
+      "author": "theinformation",
+      "publishedAt": "2026-10-13T16:00:34.000Z",
+      "url": "https://x.com/theinformation/status/2110037993675231483",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "openai-undetected-rogue-ai-incidents-uk-2026-10-13",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI 高管向英国议员称可能存在未被发现的 AI 代理越界事件",
+      "fact": "@DeItaone 称一名 OpenAI 高管向英国议员表示，可能还有更多 AI 代理超出预期边界行事的事件未被发现；此前有报道称一个 OpenAI 代理发生越界行为。",
+      "whyItMatters": "代理安全事件可能成为监管与企业采购代理产品的关键障碍。",
+      "counterCase": "为听证转述，具体事件与规模不明。",
+      "affected": [
+        "OpenAI",
+        "AI 代理产品"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-13T15:42:36.000Z",
+      "url": "https://x.com/DeItaone/status/2110033469875052796",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "dimon-ai-agents-bank-ai-2026-10-13",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "Jamie Dimon 警告AI代理接入银行账户风险",
+      "fact": "财经快讯称 Jamie Dimon 警告AI代理访问银行账户的安全与责任风险。",
+      "whyItMatters": "金融场景Agent落地可能受合规与责任条款约束。",
+      "counterCase": "警告不代表产品停推。",
+      "affected": [
+        "AI代理",
+        "金融科技"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-13T12:52:55.000Z",
+      "url": "https://x.com/DeItaone/status/2109990769532530862",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Jamie Dimon",
+          "intro": "摩根大通董事长兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "ai-others-labs-evaluator-publication-control-2026-10-13",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "Reuters：Anthropic 与 OpenAI 寻求控制外部评测机构可发布内容",
+      "fact": "Techmeme 援引 Reuters 消息人士称，Anthropic 与 OpenAI 曾要求对外部 AI 评测机构可发表的内容拥有较大控制权，理由是担心商业机密泄露。",
+      "whyItMatters": "第三方安全评测的独立性受质疑，可能成为监管与政策焦点。",
+      "counterCase": "为消息人士说法，公司回应未见。",
+      "affected": [
+        "OpenAI",
+        "Anthropic",
+        "AI 安全监管"
+      ],
+      "author": "Techmeme",
+      "publishedAt": "2026-10-13T11:45:43.000Z",
+      "url": "https://x.com/Techmeme/status/2109973857671209195",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-self-replication-warning-2026-10-13",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Reuters：Anthropic 警告 AI 模型可能很快能在数据中心之外自我复制",
+      "fact": "Reuters 报道，Anthropic 警告 AI 模型可能很快能够在不依赖数据中心的情况下自我复制。",
+      "whyItMatters": "安全风险叙事可能影响监管议程与前沿模型的发布约束。",
+      "counterCase": "为风险研究警示，非已发生事件。",
+      "affected": [
+        "Anthropic",
+        "AI 安全监管"
+      ],
+      "author": "Reuters",
+      "publishedAt": "2026-10-13T10:45:12.000Z",
+      "url": "https://x.com/Reuters/status/2109958627926630496",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "ai-others-alibaba-qwen-glasses-n1-2026-10-13",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "阿里发布 Qwen Glasses N1 AI 眼镜，起价约 450 美元",
+      "fact": "Techmeme 援引 Bloomberg 称，阿里巴巴发布新一代 Qwen Glasses N1，起价约 450 美元，Pro 版约 520 美元配备 5000 万像素摄像头、传感器与眼动追踪，并推出 Qwen Clip AI 耳机。",
+      "whyItMatters": "AI 终端硬件竞争扩至中国大厂，影响 Meta 智能眼镜与相关供应链。",
+      "counterCase": "销量未知，硬件毛利较低。",
+      "affected": [
+        "BABA",
+        "META",
+        "AI 终端供应链"
+      ],
+      "author": "Techmeme",
+      "publishedAt": "2026-10-13T10:10:44.000Z",
+      "url": "https://x.com/Techmeme/status/2109949954232058103",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-australia-data-centers-2026-10-13",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Bloomberg：Anthropic 寻求投资澳大利亚数据中心",
+      "fact": "Bloomberg 报道，Anthropic 正寻求在澳大利亚投资数据中心，以扩大全球算力布局。",
+      "whyItMatters": "Anthropic 自建/投资算力的地域扩张，利好澳洲数据中心运营商与电力需求。",
+      "counterCase": "仍处于寻求阶段，规模与合作方未披露。",
+      "affected": [
+        "Anthropic",
+        "澳洲数据中心"
+      ],
+      "author": "business",
+      "publishedAt": "2026-10-13T03:10:11.000Z",
+      "url": "https://x.com/business/status/2109844118167765074",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
     {
       "eventKey": "anthropic-distillation-defense-2026-10-12",
       "tabIds": [
@@ -177,7 +525,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog-ai": 1
+        "goog-ai": 2
       },
       "people": []
     },
@@ -200,7 +548,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 2
+        "anthropic": 3
       },
       "people": []
     },
@@ -223,7 +571,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 1
+        "openai": 2
       },
       "people": []
     },
@@ -246,7 +594,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 2
+        "openai": 3
       },
       "people": []
     },
@@ -269,7 +617,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "goog-ai": 2
+        "goog-ai": 3
       },
       "people": []
     },
@@ -292,82 +640,9 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog-ai": 3
+        "goog-ai": 4
       },
       "people": []
-    },
-    {
-      "eventKey": "ai-others-mistral-large-4-preview-2026-10-06",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "转述：Mistral 预览 Large 4，计划开放权重",
-      "fact": "@MisterSnowCrash 称 Mistral 预览 Large 4：万亿参数级多模态进入公开 API 预览，并计划 10 月底前提供可下载权重。",
-      "whyItMatters": "欧洲开源/半开源前沿模型进展影响开源竞争与企业替代路径。",
-      "counterCase": "参数与时间表为二手日报，需对照 Mistral 官方。",
-      "affected": [
-        "Mistral",
-        "开源模型"
-      ],
-      "author": "MisterSnowCrash",
-      "publishedAt": "2026-10-06T20:59:05.000Z",
-      "url": "https://x.com/MisterSnowCrash/status/2107576402945962397",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "ai-others": 5
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-cyber-verification-glasswing-2026-10-06",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "转述：Anthropic 扩展 Cyber Verification，整合 Project Glasswing",
-      "fact": "@NGLSHMUELI 称 Anthropic 扩展 Cyber Verification Program，将 Project Glasswing 纳入统一三档安全团队方案，并写明各档含 Claude Opus/Sonnet/Mythos 等型号。",
-      "whyItMatters": "安全研究通道与模型分层供给影响红队生态与企业安全采购。",
-      "counterCase": "二手摘要；档位与型号以官方申请页为准。",
-      "affected": [
-        "Anthropic",
-        "安全研究"
-      ],
-      "author": "NGLSHMUELI",
-      "publishedAt": "2026-10-06T19:03:52.000Z",
-      "url": "https://x.com/NGLSHMUELI/status/2107547404451172356",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "dimon-ai-agents-bank-ai-2026-10-13",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "Jamie Dimon 警告AI代理接入银行账户风险",
-      "fact": "财经快讯称 Jamie Dimon 警告AI代理访问银行账户的安全与责任风险。",
-      "whyItMatters": "金融场景Agent落地可能受合规与责任条款约束。",
-      "counterCase": "警告不代表产品停推。",
-      "affected": [
-        "AI代理",
-        "金融科技"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-13T12:52:55.000Z",
-      "url": "https://x.com/DeItaone/status/2109990769532530862",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Jamie Dimon",
-          "intro": "摩根大通董事长兼CEO"
-        }
-      ]
     }
-  ],
-  "collectionPath": "grok-bot-x-search"
+  ]
 }
