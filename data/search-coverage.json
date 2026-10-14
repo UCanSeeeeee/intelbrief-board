@@ -172,6 +172,58 @@
         "反证 Meritz DDR5 现货/JPM 长约；IG AI 信用；CPI nowcast；阿美火情有限"
       ],
       "recordedAt": "2026-10-14T01:19:25.262Z"
+    },
+    {
+      "jobId": "2026-10-14-1600",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-13T08:00:00.000Z",
+      "end": "2026-10-14T16:00:00+08:00",
+      "status": "partial",
+      "queries": [
+        "R1 macro: Fed OR CPI OR Treasury yield OR Powell (window)",
+        "R1 geo/energy: oil OR diesel OR Houthi OR energy ceasefire OR Ukraine OR Russia OR LNG",
+        "R1 AI/bigtech: OpenAI OR Anthropic OR NVIDIA OR Maia OR CAPEX OR HBM",
+        "R1 structure: breadth OR Mag7 OR equal-weight OR ETF OR credit",
+        "wire: from:FirstSquawk|LiveSquawk|business|Reuters|unusual_whales (CPI|ASML|diesel|Meloni|OpenAI|Houthi|Alaska)",
+        "R2 semi: ASML OR HBM OR Micron OR TSMC OR chip selloff OR DRAM",
+        "R2 AI landing: OpenAI OR Anthropic (arrest|engineer|API|ARR)",
+        "R2 power: data center OR gas turbine OR PPA OR DOE OR PJM",
+        "R2 crypto: Bitcoin ETF flows Wintermute WuBlockchain",
+        "people: elonmusk|TrumpDailyPosts|WhiteHouse|POTUS|JensenHuang posts",
+        "tickers: nvidia|MicronTech official posts",
+        "ai: OpenAI official; Gemini 4 Argon search",
+        "counter: Meloni diesel vs ceasefire; ASML rev miss vs guidance raise; PJM emergency vs blackout claims"
+      ],
+      "recordedAt": "2026-10-14T08:15:02.211Z"
+    }
+  ],
+  "entries": [
+    {
+      "period": "2026-10-14-1600",
+      "checkedAt": "2026-10-14T08:25:00.000Z",
+      "windowStart": "2026-10-13T08:00:00.000Z",
+      "windowEnd": "2026-10-14T08:00:00.000Z",
+      "path": "grok-x-mcp",
+      "queries": [
+        "R1 macro",
+        "R1 geo",
+        "R1 AI",
+        "R1 structure",
+        "wire FirstSquawk/LiveSquawk/Reuters/business",
+        "R2 ASML/HBM",
+        "R2 OpenAI arrest",
+        "R2 power PJM",
+        "R2 BTC ETF",
+        "people handles",
+        "nvidia/micron"
+      ],
+      "gaps": [
+        "US CPI final not out before cutoff",
+        "PJM DOE official post missing",
+        "JensenHuang 0 posts",
+        "Brew no-result"
+      ]
     }
   ]
 }

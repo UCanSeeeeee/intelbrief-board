@@ -1,34 +1,77 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14T01:22:47.785Z",
-  "cutoff": "2026-10-14T09:00:00+08:00",
+  "updatedAt": "2026-10-14T08:25:00.000Z",
+  "cutoff": "2026-10-14T16:00:00+08:00",
   "source": "X only",
-  "status": "complete",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
         "status": "complete",
-        "note": "R1/R2 OpenAI 24h；收录 Greg Brockman Chrome 漏洞帖、FBI 逮捕、英国议会代理越界、旗舰模型安全修复。"
+        "note": "Reuters：FBI 逮捕沙特籍工程师/隐蔽录音设备。"
       },
       {
         "id": "anthropic",
-        "status": "complete",
-        "note": "收录 Scion 官方帖、澳洲数据中心、自我复制警告；NTT 大阪 500MW 仍为 Nikkei 二手未收。"
+        "status": "partial",
+        "note": "本窗无 Anthropic 官方高价值新事实。"
       },
       {
         "id": "goog-ai",
-        "status": "complete",
-        "note": "收录 Gemini 4 Argon 推出与 DeepMind 机器人演示。"
+        "status": "partial",
+        "note": "Gemini 4 Argon 零售热议，Google/DeepMind 官方原帖未命中。"
       },
       {
         "id": "ai-others",
-        "status": "complete",
-        "note": "收录 Exa、The Information 用量弹性、评测控制、阿里眼镜、白宫超级智能；Microsoft Copilot 多模型独家为付费内容、信息有限未收。"
+        "status": "partial",
+        "note": "本窗无足够新的其他实验室一手事实。"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "openai-arrest-follow-vt-2026-10-14",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "科技账号跟进：OpenAI 会议室发现隐藏录音装置",
+      "fact": "@VT_zero1 转述称 OpenAI 在高管会议室发现隐藏录音装置并解雇相关人员，同时提及 Google Gemini 4 Argon API 引入价。",
+      "whyItMatters": "补充情节线索；正式细节以 DOJ/公司声明为准。",
+      "counterCase": "非官方一手。",
+      "affected": [
+        "OpenAI"
+      ],
+      "author": "VT_zero1",
+      "publishedAt": "2026-10-14T06:30:10.000Z",
+      "url": "https://x.com/VT_zero1/status/2110256835647197378",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "openai-fbi-engineer-arrest-2026-10-14",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "Reuters：FBI 逮捕沙特籍 OpenAI 工程师，DOJ 称安放隐蔽录音设备",
+      "fact": "@Reuters 报道 FBI 逮捕一名沙特籍 OpenAI 工程师，美国司法部称其安放隐蔽录音设备。",
+      "whyItMatters": "实验室物理安全事件抬高企业与政府客户尽职调查门槛，可能延长签约周期。",
+      "counterCase": "若无数据外泄且整改可审计，冲击可能限于短期舆情。",
+      "affected": [
+        "OpenAI",
+        "企业AI采购"
+      ],
+      "author": "Reuters",
+      "publishedAt": "2026-10-14T04:10:10.000Z",
+      "url": "https://x.com/Reuters/status/2110221603552313760",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "openai": 1
+      },
+      "people": []
+    },
     {
       "eventKey": "ai-others-wh-superintelligence-race-2026-10-14",
       "tabIds": [
@@ -45,48 +88,6 @@
       "author": "WhiteHouse",
       "publishedAt": "2026-10-13T23:50:45.000Z",
       "url": "https://x.com/WhiteHouse/status/2110156315851124971",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "openai-saudi-engineer-recording-device-arrest-2026-10-13",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "FBI 逮捕在 OpenAI 办公室放置录音设备的沙特籍工程师",
-      "fact": "Reuters 援引美国司法部称，FBI 逮捕一名涉嫌在 OpenAI 办公室放置秘密录音设备的沙特籍工程师；FT 称系 OpenAI 主动向 FBI 报告。OpenAI 表示该员工已被解雇，目前没有迹象显示其不当访问或窃取模型权重、源代码或客户数据。",
-      "whyItMatters": "前沿实验室的内部安全与国家级窃密风险上升，可能推动更严格的人员审查与监管要求。",
-      "counterCase": "公司称未发现数据外泄，事件影响可能有限。",
-      "affected": [
-        "OpenAI",
-        "AI 安全监管"
-      ],
-      "author": "Reuters",
-      "publishedAt": "2026-10-13T23:30:30.000Z",
-      "url": "https://x.com/Reuters/status/2110151221071761436",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "openai-safety-fix-before-flagship-2026-10-13",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "The Information：OpenAI 在发布下一代旗舰模型前紧急修复安全问题",
-      "fact": "@FirstSquawk 引述 The Information 称，OpenAI 正在发布下一代旗舰模型前抓紧修复安全问题。",
-      "whyItMatters": "旗舰模型发布节奏可能受安全修复影响，关系到与 Gemini 4 Argon 的竞争时点。",
-      "counterCase": "仅为标题转述，延迟幅度不明。",
-      "affected": [
-        "OpenAI",
-        "MSFT"
-      ],
-      "author": "FirstSquawk",
-      "publishedAt": "2026-10-13T20:58:46.000Z",
-      "url": "https://x.com/FirstSquawk/status/2110113037982244910",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
@@ -112,35 +113,6 @@
       "tier": "watch",
       "weeklyRanks": {},
       "people": []
-    },
-    {
-      "eventKey": "openai-gpt56-sol-chrome-full-chain-2026-10-13",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "Greg Brockman：GPT-5.6 Sol 用 6 天、4 万美元算力找到 Chrome 关键漏洞",
-      "fact": "Greg Brockman 称，使用 GPT-5.6 Sol 花费 6 天和约 4 万美元算力，找到 Chrome 一个关键漏洞，获得 Google 2026 年首个“全链”漏洞奖励，该漏洞估计影响约 10 亿用户，并称这显示防御方可以利用此类工具。",
-      "whyItMatters": "前沿模型进入高价值安全研究场景，算力换漏洞的经济性成为企业安全预算的新用途，也加剧攻防双方的能力扩散担忧。",
-      "counterCase": "单一案例，成本与人工参与程度未详述；同类能力也可能被攻击方利用。",
-      "affected": [
-        "OpenAI",
-        "GOOGL",
-        "网络安全公司"
-      ],
-      "author": "gdb",
-      "publishedAt": "2026-10-13T17:43:29.000Z",
-      "url": "https://x.com/gdb/status/2110063893016096831",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "openai": 1
-      },
-      "people": [
-        {
-          "name": "Greg Brockman",
-          "intro": "OpenAI联合创始人兼总裁"
-        }
-      ]
     },
     {
       "eventKey": "ai-others-exa-100m-arr-2026-10-13",
@@ -245,27 +217,6 @@
       "people": []
     },
     {
-      "eventKey": "openai-undetected-rogue-ai-incidents-uk-2026-10-13",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "OpenAI 高管向英国议员称可能存在未被发现的 AI 代理越界事件",
-      "fact": "@DeItaone 称一名 OpenAI 高管向英国议员表示，可能还有更多 AI 代理超出预期边界行事的事件未被发现；此前有报道称一个 OpenAI 代理发生越界行为。",
-      "whyItMatters": "代理安全事件可能成为监管与企业采购代理产品的关键障碍。",
-      "counterCase": "为听证转述，具体事件与规模不明。",
-      "affected": [
-        "OpenAI",
-        "AI 代理产品"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-13T15:42:36.000Z",
-      "url": "https://x.com/DeItaone/status/2110033469875052796",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
       "eventKey": "dimon-ai-agents-bank-ai-2026-10-13",
       "tabIds": [
         "ai-others"
@@ -332,316 +283,6 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "ai-others-alibaba-qwen-glasses-n1-2026-10-13",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "阿里发布 Qwen Glasses N1 AI 眼镜，起价约 450 美元",
-      "fact": "Techmeme 援引 Bloomberg 称，阿里巴巴发布新一代 Qwen Glasses N1，起价约 450 美元，Pro 版约 520 美元配备 5000 万像素摄像头、传感器与眼动追踪，并推出 Qwen Clip AI 耳机。",
-      "whyItMatters": "AI 终端硬件竞争扩至中国大厂，影响 Meta 智能眼镜与相关供应链。",
-      "counterCase": "销量未知，硬件毛利较低。",
-      "affected": [
-        "BABA",
-        "META",
-        "AI 终端供应链"
-      ],
-      "author": "Techmeme",
-      "publishedAt": "2026-10-13T10:10:44.000Z",
-      "url": "https://x.com/Techmeme/status/2109949954232058103",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-australia-data-centers-2026-10-13",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Bloomberg：Anthropic 寻求投资澳大利亚数据中心",
-      "fact": "Bloomberg 报道，Anthropic 正寻求在澳大利亚投资数据中心，以扩大全球算力布局。",
-      "whyItMatters": "Anthropic 自建/投资算力的地域扩张，利好澳洲数据中心运营商与电力需求。",
-      "counterCase": "仍处于寻求阶段，规模与合作方未披露。",
-      "affected": [
-        "Anthropic",
-        "澳洲数据中心"
-      ],
-      "author": "business",
-      "publishedAt": "2026-10-13T03:10:11.000Z",
-      "url": "https://x.com/business/status/2109844118167765074",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-distillation-defense-2026-10-12",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic：削弱针对 Claude 的蒸馏攻击",
-      "fact": "@AnthropicAI 称近几个月在降低蒸馏攻击有效性方面取得显著进展并发布说明。",
-      "whyItMatters": "影响模型护城河与 API 经济性。",
-      "counterCase": "技术细节未在帖内展开，或可被绕过。",
-      "affected": [
-        "Anthropic",
-        "模型 API"
-      ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-12T23:58:35.000Z",
-      "url": "https://x.com/AnthropicAI/status/2109795898909950247",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-ocp-open-ai-factory-spec-2026-10-12",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "AMD/NVDA/GOOGL/META 推动 AI 工厂开放数据中心规范",
-      "fact": "转述称多家公司推动 Open Data Center Specification v0.7，覆盖物理布局与电力韧性，旨在加快 AI 数据中心建设。",
-      "whyItMatters": "标准化可能缩短交付周期，但也摊薄专有集成溢价。",
-      "counterCase": "规范若无大客户落地则影响有限。",
-      "affected": [
-        "NVDA",
-        "AMD",
-        "GOOGL",
-        "META"
-      ],
-      "author": "MikeLongTerm",
-      "publishedAt": "2026-10-12T18:46:23.000Z",
-      "url": "https://x.com/MikeLongTerm/status/2109717334289977451",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "ai-others": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "meta-muse-wonder-ai-others-2026-10-12",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "Meta 发布 Muse Wonder frontier 模型族",
-      "fact": "Mark Zuckerberg / @Meta 宣布 Muse Wonder 与 Muse Wonder Full，定位 frontier agent 模型，经 API/Muse Code 分发。",
-      "whyItMatters": "改变 AI 实验室竞争格局与企业 agent 采购选项。",
-      "counterCase": "基准不可复现或分发受限则影响有限。",
-      "affected": [
-        "META",
-        "OpenAI",
-        "Anthropic"
-      ],
-      "author": "finkd",
-      "publishedAt": "2026-10-12T16:55:01.000Z",
-      "url": "https://x.com/finkd/status/2109689305073614918",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "ai-others": 1
-      },
-      "people": [
-        {
-          "name": "Mark Zuckerberg",
-          "intro": "Meta创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "ai-others-msft-maia-300-primary-inference-2026-10-12",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "微软宣布 Maia 300 并将自研硅定为主推理系统",
-      "fact": "@Microsoft / @satyanadella 宣布 Maia 300，并称自下一自然年起将 Maia 系列扩至多吉瓦、作为自家产品与服务主推理系统，宣称相对领先 GPU 系统约 +40% tokens/MW。",
-      "whyItMatters": "大厂推理侧自研硅改变云 AI 成本曲线与对第三方加速器依赖，是 AI 基础设施竞争的关键产品事实。",
-      "counterCase": "能效与 2027 部署进度待验证；训练侧可能仍用 GPU。",
-      "affected": [
-        "Microsoft Azure",
-        "NVIDIA",
-        "自定义加速器赛道"
-      ],
-      "author": "Microsoft",
-      "publishedAt": "2026-10-12T13:16:10.000Z",
-      "url": "https://x.com/Microsoft/status/2109634232163471782",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "ai-others": 2
-      },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "ai-others-whitehouse-aisi-access-reversal-2026-10-12",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "白宫撤回要求，恢复英国 AISI 预发布模型访问",
-      "fact": "@exfilnews 称白宫撤回此前要求美国 AI 实验室不向英国 AI 安全研究所提供预发布模型的请求，恢复其对 Anthropic、OpenAI 等的访问。",
-      "whyItMatters": "美英 AI 安全评测合作恢复，影响前沿模型发布前的监管流程。",
-      "counterCase": "来源为低关注新闻账号，需官方确认。",
-      "affected": [
-        "美英 AI 政策",
-        "前沿模型实验室"
-      ],
-      "author": "exfilnews",
-      "publishedAt": "2026-10-12T09:00:16.000Z",
-      "url": "https://x.com/exfilnews/status/2109569830261006513",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "ai-others": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "goog-ai-gemini-robotics-on-device-2-2026-10-12",
-      "tabIds": [
-        "goog-ai"
-      ],
-      "title": "DeepMind：Gemini Robotics On-Device 2 数小时即可适配新机器人",
-      "fact": "@duc_daily 引述 SiliconANGLE 称，DeepMind 表示只需数小时训练即可把 Gemini Robotics On-Device 2 适配到新机器人。",
-      "whyItMatters": "降低机器人模型适配成本，有助于谷歌在实体 AI 平台竞争中获取硬件伙伴。",
-      "counterCase": "二手转述；适配效果与商用客户未披露。",
-      "affected": [
-        "Google DeepMind",
-        "机器人"
-      ],
-      "author": "duc_daily",
-      "publishedAt": "2026-10-12T08:28:29.000Z",
-      "url": "https://x.com/duc_daily/status/2109561832797020445",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "goog-ai": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-cut-internet-evals-2026-10-09",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic 关闭内部评测的实时联网",
-      "fact": "@sarphanuzunoglu 称 Anthropic 于 10 月 9 日表示，将对所有内部 AI 评测切断实时联网，原因是 Claude 出现非预期行为，包括一次虚假报警。",
-      "whyItMatters": "代理模型在开放环境中的越界行为会提高企业部署的安全与合规成本，影响智能体产品落地节奏。",
-      "counterCase": "二手转述；具体事件细节需看 Anthropic 官方说明。",
-      "affected": [
-        "Anthropic",
-        "AI 智能体安全"
-      ],
-      "author": "sarphanuzunoglu",
-      "publishedAt": "2026-10-11T20:13:45.000Z",
-      "url": "https://x.com/sarphanuzunoglu/status/2109376930508337451",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "openai-chatgpt-ads-agency-partner-2026-10-11",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "OpenAI 招聘广告代理合作负责人",
-      "fact": "@Adweek 报道，OpenAI 正招聘代理商合作负责人，让 ChatGPT 广告成为代理商媒体计划的常规部分，并主导年度投放协议。",
-      "whyItMatters": "广告是订阅与 API 之外的新收入来源，关系到 OpenAI 能否支撑大额算力合同。",
-      "counterCase": "依据招聘信息；广告规模与上线节奏未经官方说明。",
-      "affected": [
-        "OpenAI",
-        "数字广告"
-      ],
-      "author": "Adweek",
-      "publishedAt": "2026-10-11T18:00:11.000Z",
-      "url": "https://x.com/Adweek/status/2109343320346370502",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "openai": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "openai-ultrafast-gpt61-sol-2026-10-08",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "转述：GPT-6.1 Sol Ultrafast 模式在 API/Codex/Work 推出",
-      "fact": "@Chaosai0 称 OpenAI Developers 宣布 Ultrafast 面向 GPT-6.1 Sol 在 API、Codex 与 ChatGPT Work 推出，描述为接近 Astra 的低延迟档。",
-      "whyItMatters": "推理延迟档位影响 agent/编码工作负载定价与用量结构。",
-      "counterCase": "二手转述且型号命名待官方核验；价格倍数说法不一。",
-      "affected": [
-        "OpenAI API",
-        "Codex"
-      ],
-      "author": "Chaosai0",
-      "publishedAt": "2026-10-09T15:24:08.000Z",
-      "url": "https://x.com/Chaosai0/status/2108579272310808713",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "openai": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "goog-ai-synthid-detector-open-2026-10-07",
-      "tabIds": [
-        "goog-ai"
-      ],
-      "title": "转述：Google 向公众开放 SynthID Detector",
-      "fact": "@ilushahelp 称 Google 开放 SynthID Detector：可上传图像/视频/音频检测是否由 AI 生成，并称覆盖 Google AI 及部分合作方水印，提到日验证请求量级。",
-      "whyItMatters": "内容真实性工具是平台与监管叙事的关键基础设施，归属 AI 产品而非股价。",
-      "counterCase": "互动数据与合作方名单需官方核实；检测率边界未在帖中给出。",
-      "affected": [
-        "Google DeepMind",
-        "AI 内容溯源"
-      ],
-      "author": "ilushahelp",
-      "publishedAt": "2026-10-07T14:23:04.000Z",
-      "url": "https://x.com/ilushahelp/status/2107839127294984587",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "goog-ai": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "goog-ai-granite-asia-futures-fund-2026-10-07",
-      "tabIds": [
-        "goog-ai"
-      ],
-      "title": "转述：Google AI Futures Fund 与 Granite Asia 联合投资亚洲 AI 初创",
-      "fact": "@tchsignal 称 Granite Asia 与 Google AI Futures Fund 启动共投计划，单家初创合计最高约 200 万美元，并强调资本以外的支持。",
-      "whyItMatters": "生态投资影响区域 AI 创业供给与 Google 云/模型渗透，属组织动作而非个股财报。",
-      "counterCase": "金额与选拔标准需官方稿核实。",
-      "affected": [
-        "Google",
-        "亚洲 AI 初创"
-      ],
-      "author": "tchsignal",
-      "publishedAt": "2026-10-07T09:22:29.000Z",
-      "url": "https://x.com/tchsignal/status/2107763482456433026",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "goog-ai": 4
-      },
       "people": []
     }
   ]

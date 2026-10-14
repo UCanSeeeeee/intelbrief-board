@@ -1,259 +1,72 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14T01:23:01.310Z",
-  "cutoff": "2026-10-14T09:00:00+08:00",
+  "updatedAt": "2026-10-14T08:25:00.000Z",
+  "cutoff": "2026-10-14T16:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "crypto-board",
-        "status": "complete",
-        "note": "7 日窗；新增富国银行稳定币表态；ETH ETF 连续第 10 日流出已由既有条目覆盖。"
+        "status": "partial",
+        "note": "Wintermute/ETF 流出讨论。"
       },
       {
         "id": "btc",
-        "status": "complete",
-        "note": "新增 8.1 万美元下探与爆仓；Farside 10/12 净流出 6540 万美元与既有 ETF 流出条目同口径；移出超窗的 10/6 流入条目。"
+        "status": "partial",
+        "note": "ETF 资金流转述；口径不一。"
       },
       {
         "id": "brew",
         "status": "partial",
-        "note": "Brew（0xfa6d9b504848606eb9aec04ccc161d169b3f2159）7 日窗检索仅见推广/刷屏帖，无可核验新增事实，记 no-result。"
+        "note": "Brew 高价值帖 no-result。"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "btc-81k-flush-liquidations-2026-10-13",
+      "eventKey": "btc-etf-inflow-oct13-claim-2026-10-14",
       "tabIds": [
         "btc"
       ],
-      "title": "BTC 盘中跌至约 8.1 万美元，加密市场爆仓逾 7 亿美元",
-      "fact": "@CryptoPulseXgl 称比特币隔夜在广泛避险（含韩国股市因 AI 担忧大跌）与现货 ETF 持续流出下一度跌至约 8.1 万美元，触发逾 7.7 亿美元加密爆仓（多为多头）；@CryptoLab_1 统计 24 小时爆仓约 7.3 亿美元，其中多头约 5.9 亿美元，价格随后反弹至约 8.35 万美元。",
-      "whyItMatters": "BTC 与 AI/半导体风险资产同步去杠杆，显示加密与科技股的风险偏好联动。",
-      "counterCase": "爆仓统计口径不一；价格已收复部分跌幅，资金费率仍为正。",
+      "title": "有账号称 10/13 现货 BTC ETF 净流入约 1.76 亿美元",
+      "fact": "@strategy_inv1 称 SoSoValue 口径下 10/13 美国现货 BTC ETF 净流入约 1.756 亿美元，ETH ETF 约 2480 万美元。",
+      "whyItMatters": "若属实则与周度流出叙事对冲，需与主力数据源交叉。",
+      "counterCase": "非 Farside 等主力数据源。",
       "affected": [
-        "BTC",
-        "IBIT",
-        "MSTR",
-        "COIN"
+        "BTC ETF"
       ],
-      "author": "CryptoPulseXgl",
-      "publishedAt": "2026-10-13T15:38:39.000Z",
-      "url": "https://x.com/CryptoPulseXgl/status/2110032478287335856",
+      "author": "strategy_inv1",
+      "publishedAt": "2026-10-14T07:24:49.000Z",
+      "url": "https://x.com/strategy_inv1/status/2110270585356026223",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
       "people": []
     },
     {
-      "eventKey": "crypto-board-wells-fargo-stablecoin-2026-10-13",
-      "tabIds": [
-        "crypto-board"
-      ],
-      "title": "富国银行 CEO：正为美国稳定币潜在机会做准备",
-      "fact": "@WatcherGuru 称富国银行首席执行官表示，银行正在为美国潜在的加密稳定币业务机会做准备。",
-      "whyItMatters": "美国大型银行进入稳定币领域，可能改变支付与存款格局，并为稳定币监管框架落地后的发行与托管竞争定调。",
-      "counterCase": "为财报电话会表态转述，无具体产品或时间表。",
-      "affected": [
-        "WFC",
-        "稳定币发行商",
-        "COIN"
-      ],
-      "author": "WatcherGuru",
-      "publishedAt": "2026-10-13T14:20:53.000Z",
-      "url": "https://x.com/WatcherGuru/status/2110012906574365018",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "btc-eth-etf-outflow-continue-2026-10-13",
+      "eventKey": "wintermute-etf-flow-support-2026-10-13",
       "tabIds": [
         "crypto-board",
         "btc"
       ],
-      "title": "转述：BTC/ETH 现货 ETF 继续净流出",
-      "fact": "转述称现货 BTC ETF 净流出约 6600 万美元、ETH 约 8600 万美元，合计约 1.52 亿美元。",
-      "whyItMatters": "流出延续削弱短期风险偏好与流动性叙事。",
-      "counterCase": "单日/转述口径错误或次日转流入。",
-      "affected": [
-        "BTC",
-        "ETH"
-      ],
-      "author": "metaverse_promt",
-      "publishedAt": "2026-10-13T07:03:33.000Z",
-      "url": "https://x.com/metaverse_promt/status/2109902849144467481",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "crypto-board": 4,
-        "btc": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "us-spot-crypto-etf-outflows-week-2026-10-12",
-      "tabIds": [
-        "crypto-board",
-        "btc"
-      ],
-      "title": "美国现货加密 ETF 上周约 12.5 亿美元净流出",
-      "fact": "@CryptoPatel 等汇总：10/5–10/9 美国现货加密 ETF 录得约 12.5 亿美元净流出；口径可能与其他汇总有差异。",
-      "whyItMatters": "ETF 资金流是机构风险偏好的可观察代理。",
-      "counterCase": "若随后数日转为持续流入，则属周度噪声。",
+      "title": "WuBlockchain 转述 Wintermute：ETF 流出令加密失去资金流支撑",
+      "fact": "@WuBlockchain 转述 Wintermute 称加密正失去资金流支撑；上周现货 BTC/ETH ETF 录得约 6.79 亿美元等量级流出，期间 BTC 约跌 3.2%、ETH 约跌 7%。",
+      "whyItMatters": "ETF 净流是机构风险偏好的可观察代理，流出时加密与高利率风险资产相关性可能上升。",
+      "counterCase": "单周流出可能被后续流入扭转；口径依赖第三方。",
       "affected": [
         "BTC",
         "ETH",
         "加密风险偏好"
       ],
-      "author": "CryptoPatel",
-      "publishedAt": "2026-10-12T17:30:00.000Z",
-      "url": "https://x.com/CryptoPatel/status/2109698109873992114",
+      "author": "WuBlockchain",
+      "publishedAt": "2026-10-13T12:13:24.000Z",
+      "url": "https://x.com/WuBlockchain/status/2109980821759393907",
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
         "crypto-board": 1,
         "btc": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "crypto-board-thailand-etf-rules-effective-2026-10-16",
-      "tabIds": [
-        "crypto-board"
-      ],
-      "title": "转述：泰国本地加密 ETF 规则将于 10/16 生效",
-      "fact": "窗口内转述泰国 SEC 已敲定本地上市加密 ETF 框架，自 2026-10-16 生效，但并非所有产品对零售全面开放。",
-      "whyItMatters": "新兴市场现货 ETF 通道影响区域配置与合规产品供给，但细节限制决定实际增量。",
-      "counterCase": "若零售准入极窄或尚无发行人申报，则生效日本身难带来即时资金流。",
-      "affected": [
-        "BTC/ETH 区域 ETF",
-        "泰国资管"
-      ],
-      "author": "ANCrypto_",
-      "publishedAt": "2026-10-12T14:22:13.000Z",
-      "url": "https://x.com/ANCrypto_/status/2109650853594558807",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "crypto-board": 5
-      },
-      "people": []
-    },
-    {
-      "eventKey": "crypto-board-ledger-hardware-implant-2026-10-12",
-      "tabIds": [
-        "crypto-board"
-      ],
-      "title": "Ledger 确认硬件钱包遭未授权植入，损失或超 8600 万美元",
-      "fact": "@zerohedge 称加密钱包厂商 Ledger 确认存在未授权硬件植入，损失可能超过 8600 万美元。",
-      "whyItMatters": "硬件钱包供应链安全事件打击自托管信任，可能推动资金转向托管与 ETF 渠道。",
-      "counterCase": "损失金额为初步口径，受影响批次与范围待 Ledger 正式通告。",
-      "affected": [
-        "硬件钱包",
-        "加密自托管"
-      ],
-      "author": "zerohedge",
-      "publishedAt": "2026-10-12T10:55:06.000Z",
-      "url": "https://x.com/zerohedge/status/2109598732236800160",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "crypto-board": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "crypto-board-kraken-uae-approval-2026-10-12",
-      "tabIds": [
-        "crypto-board"
-      ],
-      "title": "Kraken 获阿联酋完整监管批准",
-      "fact": "@FirstSquawk 称加密交易所 Kraken 在获得完整监管批准后将在阿联酋开展业务。",
-      "whyItMatters": "中东合规通道扩张，增加机构与区域资金入场渠道。",
-      "counterCase": "批准机构与牌照类型未在帖中注明。",
-      "affected": [
-        "Kraken",
-        "中东合规市场"
-      ],
-      "author": "FirstSquawk",
-      "publishedAt": "2026-10-12T10:50:35.000Z",
-      "url": "https://x.com/FirstSquawk/status/2109597592749564062",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "btc-etf-cooling-after-sept-inflows-2026-10-12",
-      "tabIds": [
-        "btc"
-      ],
-      "title": "转述：9 月大额流入后 BTC/ETH ETF 转为净流出",
-      "fact": "转述称 9 月比特币 ETF 约 30 亿美元流入后机构降温：ETH ETF 连续约 9 日流出（7 日约 6.35 亿美元），BTC ETF 同期流出约 5.58 亿美元，稳定币供给仍约 3127 亿美元。",
-      "whyItMatters": "ETF 边际资金方向影响 BTC 价格发现；流出是否持续需对照官方每日数据。",
-      "counterCase": "单一汇总帖可能口径不一；若后续重新流入则“降温”叙事失效。",
-      "affected": [
-        "BTC",
-        "ETH",
-        "现货加密 ETF"
-      ],
-      "author": "AskClash",
-      "publishedAt": "2026-10-12T03:45:00.000Z",
-      "url": "https://x.com/AskClash/status/2109490491578630419",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "btc": 5
-      },
-      "people": []
-    },
-    {
-      "eventKey": "crypto-board-thailand-spot-etf-rules-2026-10-09",
-      "tabIds": [
-        "crypto-board"
-      ],
-      "title": "泰国证监落地本地现货比特币/以太坊 ETF 规则",
-      "fact": "@ArchibaldBollz 称自 10 月 16 日起本地资管可在泰国证交所发行现货比特币与以太坊 ETF；规则包括对单一币种 80%+ 敞口、SEC 牌照托管、禁止保证金贷款等。",
-      "whyItMatters": "亚洲合规现货 ETF 通道扩展，属板块级监管与产品供给变化。",
-      "counterCase": "二手新闻；细则与首批发行人需官方核实。",
-      "affected": [
-        "比特币/以太现货 ETF",
-        "东南亚合规通道"
-      ],
-      "author": "ArchibaldBollz",
-      "publishedAt": "2026-10-09T14:33:29.000Z",
-      "url": "https://x.com/ArchibaldBollz/status/2108566525674422427",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "crypto-board": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "btc-etf-outflow-484m-2026-10-07",
-      "tabIds": [
-        "btc"
-      ],
-      "title": "转述：10/7 现货比特币 ETF 单日净流出约 4.85 亿美元",
-      "fact": "@Crypto_Act38 称比特币现货 ETF 在 10 月 7 日录得约净流出 $484.9M，并称无一基金净流入；分项提到 IBIT/FBTC/ARKB 等赎回量级。",
-      "whyItMatters": "大幅赎回打断月初流入，是 BTC 近窗关键资金流事实。",
-      "counterCase": "聚合追踪数据，分基金数字需与 Farside/SoSoValue 等交叉。",
-      "affected": [
-        "BTC",
-        "现货比特币 ETF"
-      ],
-      "author": "Crypto_Act38",
-      "publishedAt": "2026-10-08T08:55:24.000Z",
-      "url": "https://x.com/Crypto_Act38/status/2108119056469340379",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "btc": 2
       },
       "people": []
     }
