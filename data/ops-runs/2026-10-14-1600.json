@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-14T16:09:14+08:00",
-  "updatedAt": "2026-10-14T16:19:38+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-14T16:20:00+08:00",
+  "finishedAt": "2026-10-14T16:20:00+08:00",
   "gitHeadAtStart": "c649a0e05bc15a6fbd939fff4f995d42ffcc7425",
   "stages": [
     {
@@ -40,9 +40,9 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-14T16:19:48+08:00",
+      "detail": "committing then push"
     },
     {
       "name": "verify",
@@ -81,10 +81,11 @@
       "detail": "lightweight no new cadence"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "8318e74",
   "notes": [
-    "Beijing 16:00 scheduled batch"
+    "Beijing 16:00 scheduled batch",
+    "news 5+8; people/tickers/ai/crypto partial; live verify pending"
   ]
 }
