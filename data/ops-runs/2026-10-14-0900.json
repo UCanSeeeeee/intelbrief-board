@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-14T09:02:47+08:00",
-  "updatedAt": "2026-10-14T09:27:04+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-14T09:28:49+08:00",
+  "finishedAt": "2026-10-14T09:28:49+08:00",
   "gitHeadAtStart": "900e6ac955a0ba06eb3cc02b09ac83aae6177936",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-14T09:27:33+08:00",
+      "detail": "pushed b15e63e (900e6ac..b15e63e, no force)"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-14T09:28:49+08:00",
+      "detail": "live brief/index/reading-board/people/ticker/ai/crypto/earnings SHA256 matched b15e63e; site 200"
     }
   ],
   "pages": {
@@ -81,10 +81,11 @@
       "detail": "见 data/audit/2026-10-14-0900-checklist.md"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "b15e63e",
   "notes": [
-    "Beijing 09:00 scheduled batch"
+    "Beijing 09:00 scheduled batch",
+    "news 5+10 complete; people/tickers/crypto 有 partial Tab（Jensen 本人帖0、INTC/GOOG/VRT 无官方新事实、Brew 无结果）"
   ]
 }
