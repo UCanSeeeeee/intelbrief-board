@@ -1,57 +1,123 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T04:00:00.000Z",
-  "cutoff": "2026-10-15T09:00:00+08:00",
+  "updatedAt": "2026-10-15T08:01:55.667Z",
+  "cutoff": "2026-10-15T16:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "complete",
-        "note": "官号英国线+CUDA-X 快讯；已合并保留未冲突的旧重点榜条目"
+        "status": "partial",
+        "note": "官号伦敦投资与北欧生态；缺新财务指引一手"
       },
       {
         "id": "mu",
         "status": "partial",
-        "note": "窗口内仅基金会叙事，无财务新事实；已保留窗口内既有重点榜条目（防滚动周榜被空窗清空）"
+        "note": "官号基金会内容，无 HBM/ASP 新事实；不足"
       },
       {
         "id": "intc",
         "status": "partial",
-        "note": "无 Intel 官方新财务事实；已保留窗口内既有重点榜条目（防滚动周榜被空窗清空）"
+        "note": "近窗官方新财务事实不足"
       },
       {
         "id": "goog",
         "status": "partial",
-        "note": "股权财报叙事不足；AI 产品见 AI 页；已保留窗口内既有重点榜条目（防滚动周榜被空窗清空）"
+        "note": "股权侧近窗不足；DeepMind 产品归 AI 页"
       },
       {
         "id": "avgo",
         "status": "partial",
-        "note": "无 Broadcom 官方新事实；已保留窗口内既有重点榜条目（防滚动周榜被空窗清空）"
+        "note": "近窗官方新事实不足"
       },
       {
         "id": "vrt",
         "status": "partial",
-        "note": "无 Vertiv 官方新订单；已保留窗口内既有重点榜条目（防滚动周榜被空窗清空）"
+        "note": "近窗官方新事实不足"
       },
       {
         "id": "tsm",
         "status": "partial",
-        "note": "缺台积电官方一手；多为二手预览；已保留窗口内既有重点榜条目（防滚动周榜被空窗清空）"
+        "note": "电话会需求>供给与 CAGR 上修线索入选（财经快讯转述）"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "nvda-uk-builders-invest-2026-10-14",
+      "eventKey": "tsm-demand-exceeds-supply-2026-10-15",
+      "tabIds": [
+        "tsm"
+      ],
+      "title": "台积电：需求显著超过供给，AI 加速器 CAGR 或更高",
+      "fact": "FirstSquawk/Trade_The_News 转述电话会：需求显著超过供货能力；AI 加速器收入 CAGR 指引或上修，未见放缓。",
+      "whyItMatters": "先进制程供给瓶颈与资本开支预期核心更新。",
+      "counterCase": "完整讲稿与指引以公司材料为准。",
+      "affected": [
+        "TSM",
+        "AI 供应链"
+      ],
+      "author": "FirstSquawk",
+      "publishedAt": "2026-10-15T06:58:16.000Z",
+      "url": "https://x.com/FirstSquawk/status/2110626292337111262",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "tsm": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "tsm-a14-n3-us-power-2026-10-15",
+      "tabIds": [
+        "tsm"
+      ],
+      "title": "台积电：台南追加 N3、A14 目标 2028，派员查美国电力",
+      "fact": "FirstSquawk：Plans Additional N3 Fab in Tainan, Targets A14 Mass Production in 2028；派遣团队审查美国电力与数据中心。",
+      "whyItMatters": "产能路线与电力约束交叉。",
+      "counterCase": "资本开支量化仍称过早。",
+      "affected": [
+        "TSM",
+        "电力"
+      ],
+      "author": "FirstSquawk",
+      "publishedAt": "2026-10-15T06:26:54.000Z",
+      "url": "https://x.com/FirstSquawk/status/2110618397746872656",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "tsm": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "nvda-nordics-stockholm-2026-10-15",
       "tabIds": [
         "nvda"
       ],
-      "title": "NVIDIA：Jensen Huang 伦敦宣布英国 AI 生态新投资",
-      "fact": "@nvidia 称 Jensen Huang 在伦敦宣布对多家英国 AI/量子相关公司新投资。",
-      "whyItMatters": "生态与区域算力布局。",
+      "title": "NVIDIA：北欧生态与 GTC Berlin 前瞻",
+      "fact": "@nvidia 介绍 Spotify/ABB 等北欧用例并链向 GTC Berlin。",
+      "whyItMatters": "区域采用叙事。",
+      "counterCase": "营销向。",
+      "affected": [
+        "NVDA"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-15T05:14:07.000Z",
+      "url": "https://x.com/nvidia/status/2110600083892785270",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "nvda-london-uk-invest-2026-10-14",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "NVIDIA 伦敦：宣布多项英国 AI 初创投资",
+      "fact": "@nvidia 宣布 Jensen Huang 在伦敦公布对 boltz_bio 等五家公司的新投资。",
+      "whyItMatters": "生态绑定与区域算力叙事。",
       "counterCase": "金额未披露。",
       "affected": [
         "NVDA"
@@ -60,7 +126,7 @@
       "publishedAt": "2026-10-14T21:37:32.000Z",
       "url": "https://x.com/nvidia/status/2110485178929844666",
       "verification": "collector-report",
-      "tier": "watch",
+      "tier": "must-read",
       "weeklyRanks": {
         "nvda": 1
       },
@@ -440,7 +506,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 1
+        "tsm": 3
       },
       "people": []
     },
@@ -487,7 +553,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "tsm": 2
+        "tsm": 4
       },
       "people": []
     },
@@ -557,7 +623,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 3
+        "tsm": 5
       },
       "people": []
     }

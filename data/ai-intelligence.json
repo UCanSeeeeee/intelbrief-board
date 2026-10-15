@@ -1,34 +1,56 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T04:00:00.000Z",
-  "cutoff": "2026-10-15T09:00:00+08:00",
+  "updatedAt": "2026-10-15T08:01:55.667Z",
+  "cutoff": "2026-10-15T16:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "complete",
-        "note": "官号 agent 报告+州诉讼；已合并保留未冲突的旧重点榜条目"
+        "status": "partial",
+        "note": "官号欧盟 agent 采用；WSJ 间谍/泄密作安全信任线索"
       },
       {
         "id": "anthropic",
-        "status": "complete",
-        "note": "Q3 财务转述+新加坡官号；已合并保留未冲突的旧重点榜条目"
+        "status": "partial",
+        "note": "官号新加坡办公室/MOU；Q3 财务已在新闻页，本 Tab 保留产品侧"
       },
       {
         "id": "goog-ai",
-        "status": "complete",
-        "note": "DeepMind Argon；已合并保留未冲突的旧重点榜条目"
+        "status": "partial",
+        "note": "DeepMind Gemini 4 Argon 科学应用线程"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "窗口内无足够独立其他实验室一手；已从历史快照恢复仍在窗口内的重点榜/近窗条目"
+        "note": "近窗其他实验室/中国政策一手高价值不足"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "openai-spy-playground-2026-10-15",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "WSJ：游乐场接近 OpenAI 员工被指间谍活动",
+      "fact": "WSJ 报道陌生人在游乐场结识 OpenAI 员工并打探工作，称其为间谍。",
+      "whyItMatters": "人员与商业秘密安全冲击企业信任。",
+      "counterCase": "个案未必改变合同条款。",
+      "affected": [
+        "OpenAI"
+      ],
+      "author": "WSJ",
+      "publishedAt": "2026-10-15T03:13:04.000Z",
+      "url": "https://x.com/WSJ/status/2110569618829955384",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "openai": 2
+      },
+      "people": []
+    },
     {
       "eventKey": "anthropic-q3-revenue-ft-2026-10-14",
       "tabIds": [
@@ -48,28 +70,28 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 1
+        "anthropic": 2
       },
       "people": []
     },
     {
-      "eventKey": "openai-eu-agents-report-2026-10-14",
+      "eventKey": "openai-eu-agents-2026-10-14",
       "tabIds": [
         "openai"
       ],
-      "title": "OpenAI：欧盟企业客户逾半 AI 使用涉及 agent",
-      "fact": "@OpenAI 称欧盟企业与商业客户中逾半数 AI 使用涉及 agent 工具，该地区小企业用户增至约 8 倍。",
-      "whyItMatters": "官方采用数据，关乎 API/席位商业化。",
-      "counterCase": "使用≠付费转化。",
+      "title": "OpenAI：欧盟企业 AI agent 使用过半，中小商户用户增 8 倍",
+      "fact": "@OpenAI：More than half of the AI use among our EU enterprise and business customers now involves these tools, and the number of small business users has grown 8x across the region.",
+      "whyItMatters": "采用结构向 agent 倾斜的可核验公司披露。",
+      "counterCase": "未给收入贡献拆分。",
       "affected": [
         "OpenAI",
-        "企业AI"
+        "企业 AI"
       ],
       "author": "OpenAI",
       "publishedAt": "2026-10-14T18:45:57.000Z",
       "url": "https://x.com/OpenAI/status/2110442001749659890",
       "verification": "collector-report",
-      "tier": "watch",
+      "tier": "must-read",
       "weeklyRanks": {
         "openai": 1
       },
@@ -93,28 +115,28 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 2
+        "openai": 3
       },
       "people": []
     },
     {
-      "eventKey": "deepmind-gemini4-argon-science-2026-10-14",
+      "eventKey": "deepmind-argon-science-2026-10-14",
       "tabIds": [
         "goog-ai"
       ],
-      "title": "Google DeepMind：Gemini 4 Argon 用于量子/聚变/蛋白等科研",
-      "fact": "@GoogleDeepMind 称 Gemini 4 Argon 已在量子纠错、核聚变磁场设计、酶工程等方向解锁进展，并向 1 万名科学家提供六个月最高用量层免费访问。",
-      "whyItMatters": "AI 科研产品落地线索。",
-      "counterCase": "公司宣传；独立复现待观察。",
+      "title": "Google DeepMind：Gemini 4 Argon 用于量子、聚变与蛋白设计",
+      "fact": "@GoogleDeepMind：Gemini 4 Argon is already unlocking new scientific breakthroughs in quantum computing, nuclear fusion, protein design and beyond；并提供 1 万科学家半年最高用量档免费。",
+      "whyItMatters": "模型向科研工作流渗透的产品侧证据。",
+      "counterCase": "突破幅度依赖后续同行评议。",
       "affected": [
-        "GOOG",
-        "DeepMind"
+        "Google DeepMind",
+        "科研 AI"
       ],
       "author": "GoogleDeepMind",
       "publishedAt": "2026-10-14T17:25:56.000Z",
       "url": "https://x.com/GoogleDeepMind/status/2110421861435879476",
       "verification": "collector-report",
-      "tier": "watch",
+      "tier": "must-read",
       "weeklyRanks": {
         "goog-ai": 1
       },
@@ -125,20 +147,21 @@
       "tabIds": [
         "anthropic"
       ],
-      "title": "Anthropic：新加坡新办公室并与政府签 AI 安全 MOU",
-      "fact": "@AnthropicAI：开设新加坡办公室（亚太第五个），并与新加坡政府签署 AI 安全与负责任采用备忘录。",
-      "whyItMatters": "区域扩张与安全治理合作。",
-      "counterCase": "MOU 非合同收入。",
+      "title": "Anthropic：开设新加坡办公室并与新加坡政府签署 AI 安全 MOU",
+      "fact": "@AnthropicAI：We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible adoption.",
+      "whyItMatters": "区域落地与安全治理同步推进。",
+      "counterCase": "MOU 非具约束力合同。",
       "affected": [
-        "Anthropic"
+        "Anthropic",
+        "亚太 AI 政策"
       ],
       "author": "AnthropicAI",
       "publishedAt": "2026-10-14T08:40:45.000Z",
       "url": "https://x.com/AnthropicAI/status/2110289695888511368",
       "verification": "collector-report",
-      "tier": "watch",
+      "tier": "must-read",
       "weeklyRanks": {
-        "anthropic": 2
+        "anthropic": 1
       },
       "people": []
     },
@@ -161,7 +184,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "openai": 3
+        "openai": 4
       },
       "people": []
     },
@@ -185,7 +208,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "openai": 4
+        "openai": 5
       },
       "people": [
         {
@@ -446,29 +469,6 @@
       "tier": "watch",
       "weeklyRanks": {
         "anthropic": 5
-      },
-      "people": []
-    },
-    {
-      "eventKey": "openai-chatgpt-ads-agency-partner-2026-10-11",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "OpenAI 招聘广告代理合作负责人",
-      "fact": "@Adweek 报道，OpenAI 正招聘代理商合作负责人，让 ChatGPT 广告成为代理商媒体计划的常规部分，并主导年度投放协议。",
-      "whyItMatters": "广告是订阅与 API 之外的新收入来源，关系到 OpenAI 能否支撑大额算力合同。",
-      "counterCase": "依据招聘信息；广告规模与上线节奏未经官方说明。",
-      "affected": [
-        "OpenAI",
-        "数字广告"
-      ],
-      "author": "Adweek",
-      "publishedAt": "2026-10-11T18:00:11.000Z",
-      "url": "https://x.com/Adweek/status/2109343320346370502",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "openai": 5
       },
       "people": []
     }
