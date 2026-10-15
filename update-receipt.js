@@ -1,9 +1,9 @@
 /* Public result contract: exact request identity plus deployed file hashes. */
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.IntelUpdateReceipt=api;})(globalThis,function(){
-  const pages=['news','people','tickers','ai','crypto'];
-  const paths={news:['data/reading-board.json','data/stock-briefs/index.json'],people:['data/people-intelligence.json'],tickers:['data/ticker-intelligence.json'],ai:['data/ai-intelligence.json'],crypto:['data/crypto-intelligence.json']};
+  const pages=['news','people','tickers','ai'];
+  const paths={news:['data/reading-board.json','data/stock-briefs/index.json'],people:['data/people-intelligence.json'],tickers:['data/ticker-intelligence.json'],ai:['data/ai-intelligence.json']};
   const timeOK=t=>typeof t==='string'&&/(?:Z|[+-]\d\d:\d\d)$/.test(t)&&Number.isFinite(Date.parse(t));
-  function validIntent(i){return !!i&&typeof i.requestId==='string'&&/^[a-zA-Z0-9-]{8,80}$/.test(i.requestId)&&timeOK(i.requestedAt)&&Array.isArray(i.pages)&&i.pages.length>0&&i.pages.length<=5&&new Set(i.pages).size===i.pages.length&&i.pages.every(p=>pages.includes(p));}
+  function validIntent(i){return !!i&&typeof i.requestId==='string'&&/^[a-zA-Z0-9-]{8,80}$/.test(i.requestId)&&timeOK(i.requestedAt)&&Array.isArray(i.pages)&&i.pages.length>0&&i.pages.length<=4&&new Set(i.pages).size===i.pages.length&&i.pages.every(p=>pages.includes(p));}
   function validate(r,i){
     if(!validIntent(i)||r?.schemaVersion!==2||r.requestId!==i.requestId||r.requestedAt!==i.requestedAt)throw new Error('结果凭证与本次请求不匹配');
     if(!timeOK(r.completedAt)||Date.parse(r.completedAt)<Date.parse(i.requestedAt)||Date.parse(r.completedAt)>Date.now()+60000)throw new Error('结果凭证时间无效');

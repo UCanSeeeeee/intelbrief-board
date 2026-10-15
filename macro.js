@@ -56,11 +56,31 @@
     }
     $('macro-board').innerHTML = days.map((date) => {
       const items = byDay.get(date);
-      return `<section class="earnings-day macro-day">
+      return `<section class="earnings-day macro-day" data-macro-date="${escape(date)}" id="macro-day-${escape(date)}">
         <header class="earnings-day-head"><h2>${escape(dayHead(date))}</h2><span>${escape(String(items.length))} 件 · ${escape(date)}</span></header>
         <div class="earnings-grid">${items.map((e) => card(e, payload.categories || [])).join('')}</div>
       </section>`;
     }).join('');
+    scrollToToday(days);
+  }
+
+  function shanghaiDate(date = new Date()) {
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
+  }
+
+  function scrollToToday(days) {
+    const today = shanghaiDate();
+    let target = days.includes(today) ? today : null;
+    if (!target) {
+      // Nearest date on or after today; else latest prior date in this quarter.
+      target = days.find((d) => d >= today) || [...days].reverse().find((d) => d < today) || null;
+    }
+    if (!target) return;
+    const el = document.getElementById(`macro-day-${target}`);
+    if (!el) return;
+    requestAnimationFrame(() => {
+      el.scrollIntoView({ block: 'start', behavior: 'auto' });
+    });
   }
 
   function activate(id) {

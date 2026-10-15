@@ -5,11 +5,13 @@ const path = require('node:path');
 
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 
-test('primary pages expose news, people, tickers, ai, crypto, and earnings tabs', () => {
-  for (const file of ['index.html', 'macro.html', 'people.html', 'tickers.html', 'ai.html', 'crypto.html', 'earnings.html']) {
+test('primary pages expose news, people, tickers, ai, macro, and earnings tabs (crypto paused)', () => {
+  for (const file of ['index.html', 'macro.html', 'people.html', 'tickers.html', 'ai.html', 'earnings.html']) {
     const html = read(file);
     const items = [...html.matchAll(/<a href="([^"]+)" data-nav="([^"]+)"/g)].map(match => match.slice(1));
-    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['ai.html', 'ai'], ['crypto.html', 'crypto'], ['macro.html', 'macro'], ['earnings.html', 'earnings']]);
+    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['ai.html', 'ai'], ['macro.html', 'macro'], ['earnings.html', 'earnings']]);
+    assert.doesNotMatch(html, /data-nav="crypto"/);
+    assert.doesNotMatch(html, /href="crypto\.html"/);
     assert.doesNotMatch(html,/板块空头|data-nav="shorts"/);
     assert.doesNotMatch(html, /X 情报总览|来源与评分|data-stock-tab/);
   }
@@ -58,21 +60,19 @@ test('tickers page is equity-only seven symbols', () => {
   assert.match(read('tickers.js'), /ticker-intelligence\.json/);
 });
 
-test('crypto page has board, BTC, Brew tabs with Brew contract', () => {
+test('crypto retains history but has no deployment, collection or navigation entry', () => {
   const config = JSON.parse(read('config/crypto-intelligence.json'));
   assert.deepEqual(config.tabs.map(tab => tab.id), ['crypto-board', 'btc', 'brew']);
-  assert.equal(config.tabs[0].label, '加密板块讯息');
-  assert.equal(config.tabs[0].latestLimit, 10);
-  const brew = config.tabs.find(tab => tab.id === 'brew');
-  assert.equal(brew.assetClass, 'crypto-token');
-  assert.equal(brew.contractAddress.toLowerCase(), '0xfa6d9b504848606eb9aec04ccc161d169b3f2159');
-  assert.equal(brew.latestWindowDays, 7);
-  assert.equal(brew.weeklyWindowDays, 7);
-  assert.equal(config.tabs.find(tab => tab.id === 'btc').assetClass, 'crypto');
-  assert.ok(config.tabs.every(tab => tab.latestWindowDays === 7 && tab.weeklyWindowDays === 7));
-  assert.equal(config.tabs.find(tab => tab.id === 'crypto-board').latestLimit, 10);
-  assert.match(read('crypto.html'), /data-page="crypto"/);
-  assert.match(read('crypto.js'), /crypto-intelligence\.json/);
+  assert.equal(config.tabs.find(tab => tab.id === 'brew').contractAddress.toLowerCase(), '0xfa6d9b504848606eb9aec04ccc161d169b3f2159');
+  assert.match(read('_worker.js'), /'\/crypto\.html': '\/index\.html'/);
+  assert.ok(JSON.parse(read('_routes.json')).include.includes('/crypto.html'));
+  assert.doesNotMatch(read('scripts/build-site.js'), /crypto\.html|crypto\.js|crypto-intelligence/);
+  assert.doesNotMatch(read('updates.js'), /crypto:'加密'|crypto:\'加密\'/);
+  assert.doesNotMatch(read('server/updates.mjs'), /['"]crypto['"]/);
+  assert.throws(()=>require('../scripts/agent-entry').entry('grok','crypto'),/未知任务/);
+  assert.throws(()=>require('../scripts/lib/update-prompt').collectorPrompt({page:'crypto'}),/已暂时停用/);
+  const data = JSON.parse(read('data/crypto-intelligence.json'));
+  assert.ok(Array.isArray(data.items));
 });
 
 test('ai page has OPENAI ANTHROPIC GOOG and 其他 tabs', () => {
@@ -105,7 +105,7 @@ test('earnings page loads company blurbs for calendar symbols', () => {
 });
 
 test('design system: landmarks, skip link, aria-current and tab keyboard support', () => {
-  for (const page of ['index','macro','people','tickers','ai','crypto','earnings']) {
+  for (const page of ['index','macro','people','tickers','ai','earnings']) {
     const html = read(page + '.html');
     assert.match(html, /class="skip-link" href="#main"/);
     assert.match(html, /<main[^>]*id="main"/);

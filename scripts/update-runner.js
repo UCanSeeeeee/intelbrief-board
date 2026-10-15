@@ -6,7 +6,7 @@ const os=require('node:os');
 const crypto=require('node:crypto');
 const {spawn}=require('node:child_process');
 const {setTimeout:delay}=require('node:timers/promises');
-const {prepareNews,preparePeopleIntelligence,prepareTickerIntelligence,prepareCryptoIntelligence,prepareAiIntelligence,prepareShortsIntelligence}=require('./lib/update-results');
+const {prepareNews,preparePeopleIntelligence,prepareTickerIntelligence,prepareAiIntelligence,prepareShortsIntelligence}=require('./lib/update-results');
 const {windowStart,displayWindow,readCoverage,recordCoverage,uncoveredRanges}=require('./lib/windows');
 const {collectorPrompt}=require('./lib/update-prompt');
 const {saveBrief}=require('./lib/stock-brief');
@@ -126,14 +126,7 @@ async function executeJob(job,config,api,{collect}={}) {
         writeJson(tickerPath,result.data);
         files=['data/ticker-intelligence.json'];
       } else if (job.page==='crypto') {
-        const cryptoConfig=readJson(path.join(checkout,'config/crypto-intelligence.json'));
-        const cryptoPath=path.join(checkout,'data/crypto-intelligence.json');
-        const existing=fs.existsSync(cryptoPath)?readJson(cryptoPath):{items:[]};
-        const result=prepareCryptoIntelligence(input,cryptoConfig,existing,job.cutoff);
-        outcome={status:result.status,message:result.message};
-        if(result.status==='failed') throw new Error(result.message+'：'+result.failures.map(report=>report.id+' '+report.note).join('；'));
-        writeJson(cryptoPath,result.data);
-        files=['data/crypto-intelligence.json'];
+        throw new Error('加密栏目已暂时停用，不再采集');
       } else if (job.page==='ai') {
         const aiConfig=readJson(path.join(checkout,'config/ai-intelligence.json'));
         const aiPath=path.join(checkout,'data/ai-intelligence.json');

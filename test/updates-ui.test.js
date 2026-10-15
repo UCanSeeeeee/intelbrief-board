@@ -33,14 +33,14 @@ test('old queue online is not Grok capability; new connection preserves login',a
   const live=await boot({status:401,body:{delivery:'grok-webhook'}});const e=live.elements;e.get('update-all').onclick();assert.equal(e.get('update-login').hidden,false);await e.get('update-confirm').onclick();assert.equal(e.get('update-key').focused,true);
 });
 test('receipt can close a request and retry only failures; no callback needed',async()=>{
-  const saved={requestId:'request-12345',requestedAt:new Date().toISOString(),pages:['news','people','tickers','ai','crypto'],delivery:'manual'};
-  const receipt={schemaVersion:2,requestId:saved.requestId,requestedAt:saved.requestedAt,completedAt:saved.requestedAt,results:[{page:'news',status:'failed',message:'采集失败',artifacts:[]},{page:'people',status:'unchanged',message:'真实核验后无新增',artifacts:[{path:'data/people-intelligence.json',sha256:crypto.createHash('sha256').update('{}').digest('hex')}]},...['tickers','ai','crypto'].map(page=>({page,status:'failed',message:'测试失败',artifacts:[]}))]};
+  const saved={requestId:'request-12345',requestedAt:new Date().toISOString(),pages:['news','people','tickers','ai'],delivery:'manual'};
+  const receipt={schemaVersion:2,requestId:saved.requestId,requestedAt:saved.requestedAt,completedAt:saved.requestedAt,results:[{page:'news',status:'failed',message:'采集失败',artifacts:[]},{page:'people',status:'unchanged',message:'真实核验后无新增',artifacts:[{path:'data/people-intelligence.json',sha256:crypto.createHash('sha256').update('{}').digest('hex')}]},...['tickers','ai'].map(page=>({page,status:'failed',message:'测试失败',artifacts:[]}))]};
   const ui=await boot({saved,receipt});await new Promise(r=>setTimeout(r,20));const e=ui.elements;
   assert.match(e.get('update-last').textContent,/结果已核对/);assert.match(e.get('update-connection').textContent,/更新失败/);assert.equal(ui.events.length,1);
-  e.get('update-retry').onclick();assert.notEqual(e.get('update-request-number').textContent,'');for(const n of ['美股讯息','具体人物','具体个股','AI板块','加密'])assert.match(e.get('update-scope').textContent,new RegExp(n));
+  e.get('update-retry').onclick();assert.notEqual(e.get('update-request-number').textContent,'');for(const n of ['美股讯息','具体人物','具体个股','AI板块'])assert.match(e.get('update-scope').textContent,new RegExp(n));assert.doesNotMatch(e.get('update-scope').textContent,/加密/);
 });
 test('timeout stops automatic polling, does not call it failure or submit again',async()=>{
-  const saved={requestId:'timeout-request',requestedAt:new Date(Date.now()-31*60000).toISOString(),pages:['news','people','tickers','ai','crypto'],delivery:'manual'};
+  const saved={requestId:'timeout-request',requestedAt:new Date(Date.now()-31*60000).toISOString(),pages:['news','people','tickers','ai'],delivery:'manual'};
   const ui=await boot({saved});const before=ui.requests.length;ui.interval();await new Promise(r=>setImmediate(r));
   assert.equal(ui.requests.length,before);assert.match(ui.elements.get('update-connection').textContent,/不代表任务失败/);
   await ui.elements.get('update-check').onclick();assert.ok(ui.requests.length>before);
@@ -62,12 +62,12 @@ test('webhook unconfirmed keeps same id and never claims accepted',async()=>{
   assert.equal(e.get('update-request-number').textContent,id);
   assert.equal(ui.requests.filter(r=>r.opts?.method==='POST').length,1);
 });
-test('only one full-update entry: no per-page button, every request covers all five pages',async()=>{
+test('only one full-update entry: no per-page button, every request covers all four live pages',async()=>{
   const src=fs.readFileSync(path.join(__dirname,'../updates.js'),'utf8');
   assert.doesNotMatch(src,/更新本页|update-page"|仅重试失败页面/);
   const ui=await boot();const e=ui.elements;assert.equal(e.has('update-page'),false);assert.ok(e.has('update-all'));
-  e.get('update-all').onclick();for(const n of ['美股讯息','具体人物','具体个股','AI板块','加密'])assert.match(e.get('update-scope').textContent,new RegExp(n));
-  await e.get('update-copy').onclick();assert.match(ui.clipboard(),/页面范围：news,people,tickers,ai,crypto/);
+  e.get('update-all').onclick();for(const n of ['美股讯息','具体人物','具体个股','AI板块'])assert.match(e.get('update-scope').textContent,new RegExp(n));assert.doesNotMatch(e.get('update-scope').textContent,/加密/);
+  await e.get('update-copy').onclick();assert.match(ui.clipboard(),/页面范围：news,people,tickers,ai/);
   const subset=await boot({saved:{requestId:'subset-request',requestedAt:new Date().toISOString(),pages:['news'],delivery:'manual'}});
   subset.elements.get('update-all').onclick();assert.doesNotMatch(subset.elements.get('update-request-number').textContent,/subset-request/);
 });

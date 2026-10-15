@@ -21,3 +21,7 @@ NVDA、MU、INTC、GOOG、AVGO、VRT、TSM。
 - `config/ticker-intelligence.json` / `data/ticker-intelligence.json`
 - 前台：`tickers.html` / `tickers.js`
 - 更新任务 page：`tickers`
+
+## 滚动周榜保留（2026-10-15）
+
+采集返回的 `items` 应是完整滚动快照。若某标的本窗确无新事实、`items` 不含该 Tab，执行器会保留该 Tab 仍在 `weeklyWindowDays` 内且带 `weeklyRanks`（或仍在 latest 窗）的旧条目，避免空窗清空 7 天重点榜。禁止用编造帖子凑数。

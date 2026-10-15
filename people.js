@@ -189,10 +189,9 @@
           detail.innerHTML = '<div class="empty-state"><strong>尚未配置顶部 Tab</strong><p>请先维护人物情报配置。</p></div>';
           return;
         }
-        const query = new URLSearchParams(location.search);
-        const requested = query.get('tab');
-        const legacyPerson = query.get('person')?.toLowerCase();
-        active = tabs.find(tab => tab.id === requested) || tabs.find(tab => tab.handle?.toLowerCase() === legacyPerson) || tabs[0];
+        // Product rule 2026-10-15: every entry opens the first configured tab (马斯克).
+        // In-session tab clicks still work; URL deep-links are not restored on load.
+        active = tabs[0];
         renderTab(active, items);
       })
       .catch(error => {

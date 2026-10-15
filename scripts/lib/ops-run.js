@@ -8,7 +8,7 @@ const SCHEMA_VERSION = 1;
 const STAGES = ['pull', 'read', 'search', 'write', 'validate', 'push', 'verify'];
 const STAGE_STATUS = ['pending', 'ok', 'failed', 'skipped'];
 const RUN_STATUS = ['running', 'success', 'partial', 'failed'];
-const PAGE_IDS = ['news', 'people', 'tickers', 'ai', 'crypto', 'earnings', 'macro'];
+const PAGE_IDS = ['news', 'people', 'tickers', 'ai', 'earnings', 'macro'];
 const PAGE_STATUS = ['pending', 'ok', 'partial', 'failed', 'skipped', 'unchanged'];
 const TRIGGERS = ['scheduled', 'manual', 'catchup'];
 

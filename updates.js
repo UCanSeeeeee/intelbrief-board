@@ -2,7 +2,7 @@
 (function(){
   const page=document.body.dataset.page,contract=IntelUpdateReceipt;
   if(!contract.pages.includes(page))return;
-  const names={news:'美股讯息',people:'具体人物',tickers:'具体个股',ai:'AI板块',crypto:'加密'};
+  const names={news:'美股讯息',people:'具体人物',tickers:'具体个股',ai:'AI板块'};
   const labels={complete:'更新完成',partial:'部分完成',unchanged:'已检查，暂无高价值新增',failed:'更新失败'};
   // 2026-10-13 user rule: only one full update entry; no per-page or subset requests.
   const full=pages=>Array.isArray(pages)&&pages.length===contract.pages.length&&contract.pages.every(p=>pages.includes(p));

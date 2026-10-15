@@ -14,7 +14,7 @@ async function setup(bindings,hook){
   return {mf,db,call,login,calls};
 }
 const full={UPDATE_ADMIN_KEY:'test-only-admin',GROK_WEBHOOK_URL:'https://hook.test/fake',GROK_WEBHOOK_KEY:'test-only-key',GROK_WEBHOOK_AUTH_HEADER:'TestScheme test-only-key'};
-const ALL=['news','people','tickers','ai','crypto'];
+const ALL=['news','people','tickers','ai'];
 const req=(pages=ALL)=>({requestId:crypto.randomUUID(),requestedAt:new Date().toISOString(),pages});
 
 test('missing any dependency (incl. auth header) disables dispatch; no Bearer default, no false accepted',async()=>{

@@ -5,7 +5,7 @@ const path=require('node:path');
 const crypto=require('node:crypto');
 const {Miniflare,convertV4MiniflareOptions}=require('miniflare');
 const root=path.resolve(__dirname,'..');
-const ALL=['news','people','tickers','ai','crypto'];
+const ALL=['news','people','tickers','ai'];
 const {preparePeople,preparePeopleIntelligence,prepareNews,windowStart}=require('../scripts/lib/update-results');
 const {collectorPrompt}=require('../scripts/lib/update-prompt');
 const {saveBrief}=require('../scripts/lib/stock-brief');
@@ -29,10 +29,10 @@ test('real D1 API: auth, CSRF, concurrent deduplication, leases, partial failure
     const repeated=await Promise.all(Array.from({length:5},()=>call('',{requestId,pages:ALL})));
     repeated.forEach(r=>assert.equal(r.status,202));
     assert.equal(new Set(repeated.map(r=>r.data.jobIds.join())).size,1);
-    assert.equal(repeated[0].data.jobIds.length,5);
+    assert.equal(repeated[0].data.jobIds.length,4);
     // Single-page and subset manual requests are rejected: only '全部更新' exists.
     for (const subset of [['news'],['news','people'],ALL.slice(1)]) assert.equal((await call('',{requestId:crypto.randomUUID(),pages:subset})).status,400);
-    assert.equal((await call()).data.jobs.length,5);
+    assert.equal((await call()).data.jobs.length,4);
     const runnerId=crypto.randomUUID();
     await call('/runner/heartbeat',{runnerId},true);
     assert.equal((await call()).data.online,true);
@@ -61,25 +61,25 @@ test('real D1 API: auth, CSRF, concurrent deduplication, leases, partial failure
     assert.equal((await call()).data.jobs.find(j=>j.id===retry.id).status,'failed');
     assert.equal((await call('/runner/progress',{id:retry.id,lease:retry.lease,stage:'publishing'},true)).status,409);
     // A reload restores the same persisted result, without creating anything.
-    assert.equal((await call()).data.jobs.length,5);
+    assert.equal((await call()).data.jobs.length,4);
     // Every live page is accepted by the actual SQL schema, not just the API allowlist.
-    const pages=['news','people','tickers','ai','crypto'];
+    const pages=['news','people','tickers','ai'];
     const batch=await call('',{requestId:crypto.randomUUID(),pages});
     assert.equal(batch.status,202);
-    assert.equal(batch.data.jobIds.length,5);
+    assert.equal(batch.data.jobIds.length,4);
     const failedIds=[];
     for (let i=0;i<pages.length;i++) {
       const claimed=(await call('/runner/claim',{runnerId},true)).data.job;
       assert.ok(claimed);
       failedIds.push(claimed.id);
-      assert.equal((await call('/runner/progress',{id:claimed.id,lease:claimed.lease,stage:'failed',message:'测试五页重试'},true)).status,200);
+      assert.equal((await call('/runner/progress',{id:claimed.id,lease:claimed.lease,stage:'failed',message:'测试四页重试'},true)).status,200);
     }
     assert.equal((await call('/retry',{ids:[]})).status,400);
     assert.equal((await call('/retry',{ids:[failedIds[0],failedIds[0]]})).status,400);
     assert.equal((await call('/retry',{ids:[...failedIds,crypto.randomUUID()]})).status,400);
     const retriedAll=await call('/retry',{ids:failedIds});
     assert.equal(retriedAll.status,202);
-    assert.equal(retriedAll.data.jobs.filter(j=>j.status==='queued').length,5);
+    assert.equal(retriedAll.data.jobs.filter(j=>j.status==='queued').length,4);
     assert.equal((await call('',{requestId:crypto.randomUUID(),pages:['shorts']})).status,400);
     await call('/logout',{});cookie='';assert.equal((await call()).status,401);
   } finally {await mf.dispose();}
@@ -161,13 +161,9 @@ test('tickers collector prompt is equity-only and excludes crypto', () => {
   assert.doesNotMatch(prompt,/0xfa6d9b504848606eb9aec04ccc161d169b3f2159/i);
 });
 
-test('crypto collector prompt covers board BTC Brew and contract', () => {
+test('crypto collector prompt is paused', () => {
   const {collectorPrompt}=require('../scripts/lib/update-prompt');
-  const prompt=collectorPrompt({page:'crypto',cutoff:'2026-10-11T13:00:00Z'},root,'2026-10-10T13:00:00.000Z',{});
-  assert.match(prompt,/只更新“加密”/);
-  assert.match(prompt,/加密板块讯息/);
-  assert.match(prompt,/\$BTC/);
-  assert.match(prompt,/0xfa6d9b504848606eb9aec04ccc161d169b3f2159/i);
+  assert.throws(()=>collectorPrompt({page:'crypto',cutoff:'2026-10-11T13:00:00Z'},root,'2026-10-10T13:00:00.000Z',{}),/已暂时停用/);
 });
 
 test('ai collector prompt covers labs and GOOG boundary', () => {
@@ -177,4 +173,32 @@ test('ai collector prompt covers labs and GOOG boundary', () => {
   assert.match(prompt,/OPENAI/);
   assert.match(prompt,/ANTHROPIC/);
   assert.match(prompt,/避免重复/);
+});
+
+
+test('tabbed intelligence retains prior weekly items for tabs with zero incoming', () => {
+  const {prepareTickerIntelligence}=require('../scripts/lib/update-results');
+  const config=JSON.parse(fs.readFileSync(path.join(root,'config/ticker-intelligence.json'),'utf8'));
+  const now=new Date('2026-10-15T01:00:00Z');
+  const cutoff='2026-10-15T09:00:00+08:00';
+  const existingItem={
+    eventKey:'mu-old-1',tabIds:['mu'],title:'旧重点',fact:'仍在7天窗',whyItMatters:'传导',counterCase:'反证',
+    affected:['MU'],author:'MicronTech',publishedAt:'2026-10-12T12:00:00.000Z',
+    url:'https://x.com/MicronTech/status/1999999999999999999',verification:'collector-report',tier:'watch',
+    weeklyRanks:{mu:1},people:[]
+  };
+  const incoming={
+    checkedAt:now.toISOString(),
+    tabs:config.tabs.map(t=>({id:t.id,status:t.id==='nvda'?'complete':'partial',note:t.id==='nvda'?'ok':'本窗无新事实'})),
+    items:[{
+      eventKey:'nvda-new-1',tabIds:['nvda'],title:'新NVDA',fact:'新事实',whyItMatters:'传导',counterCase:'反证',
+      affected:['NVDA'],author:'nvidia',publishedAt:'2026-10-14T12:00:00.000Z',
+      url:'https://x.com/nvidia/status/1888888888888888888',verification:'collector-report',tier:'watch',
+      weeklyRanks:{nvda:1}
+    }]
+  };
+  const result=prepareTickerIntelligence(incoming,config,{items:[existingItem]},cutoff,now);
+  assert.equal(result.data.items.length,2);
+  assert.ok(result.data.items.some(i=>i.eventKey==='mu-old-1'));
+  assert.ok(result.data.items.some(i=>i.eventKey==='nvda-new-1'));
 });

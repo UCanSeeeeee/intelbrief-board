@@ -27,5 +27,5 @@ test('calendar anchors date and section headers are visibly separated',()=>{
   assert.match(css,/body\[data-page="earnings"\] \.earnings-day-head \{ position: sticky; top: 0/);
   assert.match(css,/\.signal-section \+ \.signal-section \{ margin-top: 40px/);
   assert.match(fs.readFileSync(path.join(__dirname,'../earnings.js'),'utf8'),/美东披露日期/);
-  for(const page of ['index','people','tickers','ai','crypto'])assert.match(fs.readFileSync(path.join(__dirname,'../'+page+'.html'),'utf8'),/update-receipt.js[\s\S]*updates.js/);
+  for(const page of ['index','people','tickers','ai'])assert.match(fs.readFileSync(path.join(__dirname,'../'+page+'.html'),'utf8'),/update-receipt.js[\s\S]*updates.js/);
 });

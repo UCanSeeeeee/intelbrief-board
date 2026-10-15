@@ -90,6 +90,39 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     try{annotateCard(out,undefined,`${kind}.${out.eventKey}`);}catch(error){requireValue(false,error.message);}
     return out;
   });
+  // Keep prior rolling-window items for tabs that returned zero new items.
+  // Prevents wiping the 7-day weekly board when a batch only finds fresh posts on one ticker.
+  const tabsWithIncoming=new Set(items.flatMap(item=>item.tabIds));
+  const cutoffMs=Date.parse(cutoff);
+  for(const old of existing?.items||[]) {
+    if(!old||typeof old.eventKey!=='string'||keys.has(old.eventKey)||urls.has(old.url)) continue;
+    if(!Array.isArray(old.tabIds)||!old.tabIds.length) continue;
+    if(!/^https:\/\/(?:x|twitter)\.com\/[a-zA-Z0-9_]{1,15}\/status\/\d+$/.test(old.url||'')) continue;
+    if(!date(old.publishedAt)) continue;
+    const keepTabIds=[];
+    const ranks={};
+    for(const tabId of old.tabIds) {
+      if(!allowed.has(tabId)||tabsWithIncoming.has(tabId)) continue;
+      const tab=allowed.get(tabId);
+      const {latest,weekly}=windowDays(tab);
+      const published=Date.parse(old.publishedAt);
+      const inLatest=published>=cutoffMs-latest*dayMs;
+      const rank=old.weeklyRanks?.[tabId];
+      const hasRank=Number.isInteger(rank);
+      const inWeekly=published>=cutoffMs-weekly*dayMs;
+      if(inLatest||(hasRank&&inWeekly)) {
+        keepTabIds.push(tabId);
+        if(hasRank) ranks[tabId]=rank;
+      }
+    }
+    if(!keepTabIds.length) continue;
+    keys.add(old.eventKey); urls.add(old.url);
+    const retained={eventKey:old.eventKey,tabIds:keepTabIds,title:String(old.title||'').trim(),fact:String(old.fact||'').trim(),whyItMatters:String(old.whyItMatters||'').trim(),counterCase:String(old.counterCase||'').trim(),affected:Array.isArray(old.affected)?old.affected.map(String):[],author:String(old.author||'').trim(),publishedAt:old.publishedAt,url:old.url,verification:'collector-report',tier:old.tier==='must-read'?'must-read':'watch',weeklyRanks:ranks};
+    if(Array.isArray(old.people)) retained.people=old.people;
+    if(config.selectionPolicy){retained.selection=old.selection||'rule';if(old.engagement!=null)retained.engagement=old.engagement;}
+    try{annotateCard(retained,undefined,`${kind}.retained.${retained.eventKey}`);}catch(error){requireValue(false,error.message);}
+    items.push(retained);
+  }
   for(const tab of configured) {
     const {latest,weekly}=windowDays(tab);
     const tabItems=items.filter(item=>item.tabIds.includes(tab.id));

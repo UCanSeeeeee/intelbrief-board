@@ -1,4 +1,4 @@
-const PAGES = ['news', 'people', 'tickers', 'ai', 'crypto'];
+const PAGES = ['news', 'people', 'tickers', 'ai'];
 const ACTIVE = ['queued', 'running'];
 const STAGES = ['collecting', 'validating', 'publishing'];
 const COOKIE = '__Host-intelbrief';
@@ -43,7 +43,7 @@ async function state(db, now) {
   const latest=await db.prepare('SELECT MAX(seen_at) AS seen FROM runner').first();
   return {authenticated:true,online:!!latest?.seen && now-latest.seen<90000,jobs:jobs.map(publicJob),lastSuccess:Object.fromEntries(PAGES.map(page=>[page,successes.find(j=>j.page===page)?.updated_at || null]))};
 }
-// 2026-10-13: manual requests must cover all five pages (single '全部更新' entry); internal retries may reuse one page.
+// 2026-10-15: manual requests must cover all four live pages (news/people/tickers/ai); crypto paused; internal retries may reuse one page.
 const allPages=pages=>pages.length===PAGES.length && PAGES.every(p=>pages.includes(p));
 async function enqueue(db, input, now, scheduled=false, internalRetry=false) {
   if (!idOK(input.requestId)) fail('请求编号无效');

@@ -30,7 +30,7 @@
 | 代码/UI/功能维护 | docs/DESIGN_SYSTEM.md、相关页面脚本与测试；改数据结构再读 docs/X_DATA_CONTRACT.md |
 | Grok Bot接管、定时与发布 | docs/GROK_BOT_OPERATIONS.md、docs/AGENT_ENTRY.md；运行日志 `npm run ops:run` → `data/ops-runs/`（无日志≈平台在进代码前失败） |
 | 美股简报 | docs/STOCK_BRIEF.md、config/research-guidance.json 指向的知识库与 SOP |
-| 人物/个股/AI/加密 | 对应 docs 页面说明和 config 配置，再读研究知识与 SOP；窗口以上述配置为准 |
+| 人物/个股/AI | 对应 docs 页面说明和 config 配置，再读研究知识与 SOP；窗口以上述配置为准；加密已暂时停用 |
 | 财报、宏观日历 | docs/EARNINGS_CALENDAR.md、docs/MACRO_EVENTS.md，适用各自来源例外 |
 | 网页采集按钮/旧执行器 | docs/MANUAL_UPDATES.md；当前未接通，不恢复旧 Codex 采集；只保留「全部更新」，禁止任何轮询/领单任务（2026-10-13） |
 
@@ -49,12 +49,12 @@
 
 - **Grok Bot「X+github」是唯一内容运营执行者。** 所有启动、定时、手动内容更新、检索、筛选、归档、校验、GitHub 数据提交、Cloudflare 发布核验、有限重试与失败报告，均由它在自身云端环境独立完成，不等待 GPT 唤醒或逐步操作。
 - **GPT / Codex 只负责代码功能维护与优化**，包括代码测试、修复和代码发布；不得定时采集、代操作 Grok 获取内容、生产新闻数据或自动故障接管。原 Codex 定时任务 `x-5-10` 已暂停，未经用户新指令不得恢复或另建替代任务。
-- 美股讯息仍在北京时间每天 09:00 / 16:00 / 21:00 由 Grok Bot 原生例行任务启动；不为其他页面新增频率。Grok 手动更新仅「全部更新」（news/people/tickers/ai/crypto 串行），宏观日历维持低频规则。
+- 美股讯息仍在北京时间每天 09:00 / 16:00 / 21:00 由 Grok Bot 原生例行任务启动；不为其他页面新增频率。Grok 手动更新仅「全部更新」（news/people/tickers/ai 串行；加密已暂时停用），宏观日历维持低频规则。
 - 接管配置、执行权限与真实验收状态以 `docs/GROK_BOT_OPERATIONS.md` 为主维护位置。不得把已配置定时任务等同于已跑通无人值守发布。
 
 ## 讯息采集硬规则（用户于2026-10-11明确指定）
 
-本规则适用于本项目所有LLM、Agent、执行器、手动更新与定时任务；包括「美股讯息」「宏观大事」「具体人物」「具体个股」「AI板块」「加密」及以后新增的信息页面。宏观大事为低频官方日历，不跟 09/16/21 简报。
+本规则适用于本项目所有LLM、Agent、执行器、手动更新与定时任务；包括「美股讯息」「宏观大事」「具体人物」「具体个股」「AI板块」及以后新增的信息页面（「加密」2026-10-15起暂时停用）。宏观大事为低频官方日历，不跟 09/16/21 简报。
 
 1. **第一路径：Grok Bot「X+github」自身的正常 X 检索能力。** 由该 Bot 在其云端执行，不要求 GPT 操作本机 App，也不要求 Bot 再打开自己。不得改用其他 Bot 规避本项目规则。
 2. **唯一备用路径：Grok 网页版（https://grok.com）。** 仅在主路径不可用、操作失败或不能完成本次采集时，由同一个 Grok Bot 使用并记录切换原因；不转交 GPT。
@@ -77,7 +77,7 @@
 
 ## 人名原文与人物简介（用户2026-10-13明确指定）
 
-适用于所有讯息卡片（美股讯息、人物、个股、AI、加密及以后新增页面）：人名保留原文写法（如 Satya Nadella、Donald Trump），不写中文音译（纳德拉、特朗普等）；每张卡片的 `people` 列出提到的人物及 ≤15 字简介，来自 `config/person-registry.json`。登记表外的新人物：先在登记表新增原文名、经核实的简介、中文音译别名和匹配词，再发布。原帖摘录 `excerpt`、原始帖子正文与已记录的检索问题 `queries` 属于证据/历史记录，不改写。发布流程（`prepareBrief`、各分页 `prepare*Intelligence`）遇到人名音译直接失败，并按登记表自动写入 `people`；`npm run check` 对当前及归档卡片同样失败。旧数据用 `node scripts/normalize-person-names.js` 幂等迁移。人物页顶部 Tab 名（马斯克/黄仁勋/特朗普）属于栏目配置标签，暂保留，用户要求时再改。
+适用于所有讯息卡片（美股讯息、人物、个股、AI及以后新增页面；加密已暂停）：人名保留原文写法（如 Satya Nadella、Donald Trump），不写中文音译（纳德拉、特朗普等）；每张卡片的 `people` 列出提到的人物及 ≤15 字简介，来自 `config/person-registry.json`。登记表外的新人物：先在登记表新增原文名、经核实的简介、中文音译别名和匹配词，再发布。原帖摘录 `excerpt`、原始帖子正文与已记录的检索问题 `queries` 属于证据/历史记录，不改写。发布流程（`prepareBrief`、各分页 `prepare*Intelligence`）遇到人名音译直接失败，并按登记表自动写入 `people`；`npm run check` 对当前及归档卡片同样失败。旧数据用 `node scripts/normalize-person-names.js` 幂等迁移。人物页顶部 Tab 名（马斯克/黄仁勋/特朗普）属于栏目配置标签，暂保留，用户要求时再改。
 
 ## 人物页热度补位（用户2026-10-13明确指定）
 
@@ -103,7 +103,7 @@ After completing and verifying any requested change to this GitHub project, crea
 
 ## 来源例外：财报日历与财报结果（用户于2026-10-12确认）
 
-“只走 Grok App / Grok 网页版”的硬规则适用于 **X 讯息采集**（美股讯息、具体人物、具体个股、AI板块、加密）。AI/加密与美股个股分页采集，不得混入 `tickers` 任务。财报模块是明确例外：
+“只走 Grok App / Grok 网页版”的硬规则适用于 **X 讯息采集**（美股讯息、具体人物、具体个股、AI板块；加密已暂时停用）。AI与美股个股分页采集，不得混入 `tickers` 任务。财报模块是明确例外：
 
 1. 财报日历：`npm run fetch:earnings` 直接请求 Nasdaq 公开日历接口（`config/earnings-calendar.json` 的 `source.endpoint`）。单日失败按指数退避重试；仍失败则沿用上次数据并标 `stale`，不中断其余日期。
 2. 财报结果评分：以公司官方披露为准（新闻稿、8-K/10-Q、管理层讲稿），一致预期可引用公开财经页面；X 只作补充线索。每项评分附来源链接。无法核实时标 `status: "unknown"` 并写明原因，不得编造分数。
