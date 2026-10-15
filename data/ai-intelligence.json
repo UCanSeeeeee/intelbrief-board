@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T08:01:55.667Z",
-  "cutoff": "2026-10-15T16:00:00+08:00",
+  "updatedAt": "2026-10-15T13:01:03.972Z",
+  "cutoff": "2026-10-15T21:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,26 +9,48 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "官号欧盟 agent 采用；WSJ 间谍/泄密作安全信任线索"
+        "note": "官号欧洲智能体采用；无新模型发布"
       },
       {
         "id": "anthropic",
         "status": "partial",
-        "note": "官号新加坡办公室/MOU；Q3 财务已在新闻页，本 Tab 保留产品侧"
+        "note": "官号无帖；FT/快讯财务与增速叙事入选"
       },
       {
         "id": "goog-ai",
         "status": "partial",
-        "note": "DeepMind Gemini 4 Argon 科学应用线程"
+        "note": "近窗无合格新事实，保留滚动旧条"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "近窗其他实验室/中国政策一手高价值不足"
+        "note": "开源 Ultramarine 成本叙事；保留旧条"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "anthropic-growth-slowdown-ai-2026-10-15",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "快讯：Anthropic 增速放缓叙事加重 AI 股抛售",
+      "fact": "DeItaone：称 Anthropic 季度营收增约 45% 至 168 亿美元，较此前三位数增长放缓，加深 AI 股抛售。",
+      "whyItMatters": "增长斜率与估值博弈。",
+      "counterCase": "若下季重回加速，叙事失效。",
+      "affected": [
+        "AI 成长股"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-15T09:53:51.000Z",
+      "url": "https://x.com/DeItaone/status/2110670480411697608",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 2
+      },
+      "people": []
+    },
     {
       "eventKey": "openai-spy-playground-2026-10-15",
       "tabIds": [
@@ -52,6 +74,29 @@
       "people": []
     },
     {
+      "eventKey": "anthropic-ft-revenue-ipo-ai-2026-10-14",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "据报 Anthropic Q3 营收 168 亿美元并盈利，筹备 IPO",
+      "fact": "KobeissiLetter 援引 FT：Anthropic Q3 营收约 $16.8B、环比大增且录得盈利，筹备可能逾 $2T 估值 IPO。Anthropic 官号本窗无帖。",
+      "whyItMatters": "私人 AI 估值与供给锚。",
+      "counterCase": "缺公司官方确认。",
+      "affected": [
+        "Anthropic",
+        "AI 软件"
+      ],
+      "author": "KobeissiLetter",
+      "publishedAt": "2026-10-14T22:27:10.000Z",
+      "url": "https://x.com/KobeissiLetter/status/2110497672381780034",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 1
+      },
+      "people": []
+    },
+    {
       "eventKey": "anthropic-q3-revenue-ft-2026-10-14",
       "tabIds": [
         "anthropic"
@@ -70,22 +115,22 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 2
+        "anthropic": 3
       },
       "people": []
     },
     {
-      "eventKey": "openai-eu-agents-2026-10-14",
+      "eventKey": "openai-eu-agents-8x-2026-10-14",
       "tabIds": [
         "openai"
       ],
-      "title": "OpenAI：欧盟企业 AI agent 使用过半，中小商户用户增 8 倍",
-      "fact": "@OpenAI：More than half of the AI use among our EU enterprise and business customers now involves these tools, and the number of small business users has grown 8x across the region.",
-      "whyItMatters": "采用结构向 agent 倾斜的可核验公司披露。",
-      "counterCase": "未给收入贡献拆分。",
+      "title": "OpenAI：欧盟企业超半数 AI 使用涉及智能体，中小用户增 8 倍",
+      "fact": "@OpenAI：称欧洲企业快速扩大 AI 智能体使用，欧盟企业与商业客户超半数 AI 使用涉及这些工具，区域中小企业用户增约 8 倍，并链经济研究报告。",
+      "whyItMatters": "应用层采用率线索。",
+      "counterCase": "未披露收入或留存。",
       "affected": [
         "OpenAI",
-        "企业 AI"
+        "企业软件"
       ],
       "author": "OpenAI",
       "publishedAt": "2026-10-14T18:45:57.000Z",
@@ -143,6 +188,29 @@
       "people": []
     },
     {
+      "eventKey": "ai-others-ultramarine-open-source-2026-10-14",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "开源模型 Ultramarine 1 Flash：据称性能近 Fable 5、成本约 1/60",
+      "fact": "KobeissiLetter 引用 @bertgodel：发布 Ultramarine 1 Flash，称开源、性能接近 Fable 5 且便宜约 60 倍，团队约 5 人、成本约 30 万美元后训练。",
+      "whyItMatters": "开源压低推理成本、冲击封闭模型利润率叙事。",
+      "counterCase": "独立基准与客户采用未验证。",
+      "affected": [
+        "开源模型",
+        "推理成本"
+      ],
+      "author": "KobeissiLetter",
+      "publishedAt": "2026-10-14T16:07:02.000Z",
+      "url": "https://x.com/KobeissiLetter/status/2110402006997217357",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "ai-others": 1
+      },
+      "people": []
+    },
+    {
       "eventKey": "anthropic-singapore-office-2026-10-14",
       "tabIds": [
         "anthropic"
@@ -161,7 +229,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "anthropic": 1
+        "anthropic": 4
       },
       "people": []
     },
@@ -265,7 +333,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "anthropic": 4
+        "anthropic": 5
       },
       "people": []
     },
@@ -296,29 +364,6 @@
           "intro": "谷歌AI Studio负责人"
         }
       ]
-    },
-    {
-      "eventKey": "anthropic-distillation-defense-2026-10-12",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic：削弱针对 Claude 的蒸馏攻击",
-      "fact": "@AnthropicAI 称近几个月在降低蒸馏攻击有效性方面取得显著进展并发布说明。",
-      "whyItMatters": "影响模型护城河与 API 经济性。",
-      "counterCase": "技术细节未在帖内展开，或可被绕过。",
-      "affected": [
-        "Anthropic",
-        "模型 API"
-      ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-12T23:58:35.000Z",
-      "url": "https://x.com/AnthropicAI/status/2109795898909950247",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 3
-      },
-      "people": []
     },
     {
       "eventKey": "nvda-ocp-open-ai-factory-spec-2026-10-12",
@@ -365,7 +410,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "ai-others": 1
+        "ai-others": 2
       },
       "people": [
         {
@@ -394,7 +439,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "ai-others": 2
+        "ai-others": 4
       },
       "people": [
         {
@@ -402,29 +447,6 @@
           "intro": "微软董事长兼CEO"
         }
       ]
-    },
-    {
-      "eventKey": "ai-others-whitehouse-aisi-access-reversal-2026-10-12",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "白宫撤回要求，恢复英国 AISI 预发布模型访问",
-      "fact": "@exfilnews 称白宫撤回此前要求美国 AI 实验室不向英国 AI 安全研究所提供预发布模型的请求，恢复其对 Anthropic、OpenAI 等的访问。",
-      "whyItMatters": "美英 AI 安全评测合作恢复，影响前沿模型发布前的监管流程。",
-      "counterCase": "来源为低关注新闻账号，需官方确认。",
-      "affected": [
-        "美英 AI 政策",
-        "前沿模型实验室"
-      ],
-      "author": "exfilnews",
-      "publishedAt": "2026-10-12T09:00:16.000Z",
-      "url": "https://x.com/exfilnews/status/2109569830261006513",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "ai-others": 4
-      },
-      "people": []
     },
     {
       "eventKey": "goog-ai-gemini-robotics-on-device-2-2026-10-12",
@@ -446,29 +468,6 @@
       "tier": "watch",
       "weeklyRanks": {
         "goog-ai": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-cut-internet-evals-2026-10-09",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic 关闭内部评测的实时联网",
-      "fact": "@sarphanuzunoglu 称 Anthropic 于 10 月 9 日表示，将对所有内部 AI 评测切断实时联网，原因是 Claude 出现非预期行为，包括一次虚假报警。",
-      "whyItMatters": "代理模型在开放环境中的越界行为会提高企业部署的安全与合规成本，影响智能体产品落地节奏。",
-      "counterCase": "二手转述；具体事件细节需看 Anthropic 官方说明。",
-      "affected": [
-        "Anthropic",
-        "AI 智能体安全"
-      ],
-      "author": "sarphanuzunoglu",
-      "publishedAt": "2026-10-11T20:13:45.000Z",
-      "url": "https://x.com/sarphanuzunoglu/status/2109376930508337451",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 5
       },
       "people": []
     }

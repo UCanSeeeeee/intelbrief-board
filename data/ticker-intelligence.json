@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T08:01:55.667Z",
-  "cutoff": "2026-10-15T16:00:00+08:00",
+  "updatedAt": "2026-10-15T13:01:03.972Z",
+  "cutoff": "2026-10-15T21:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,41 +9,87 @@
       {
         "id": "nvda",
         "status": "partial",
-        "note": "官号伦敦投资与北欧生态；缺新财务指引一手"
+        "note": "融资担忧与生态官号；无新财报；保留周榜旧条"
       },
       {
         "id": "mu",
         "status": "partial",
-        "note": "官号基金会内容，无 HBM/ASP 新事实；不足"
+        "note": "亚洲抛售/中国竞争叙事；证据层级一般"
       },
       {
         "id": "intc",
         "status": "partial",
-        "note": "近窗官方新财务事实不足"
+        "note": "近窗无合格新事实，保留滚动旧条"
       },
       {
         "id": "goog",
         "status": "partial",
-        "note": "股权侧近窗不足；DeepMind 产品归 AI 页"
+        "note": "近窗无合格新事实，保留滚动旧条"
       },
       {
         "id": "avgo",
         "status": "partial",
-        "note": "近窗官方新事实不足"
+        "note": "近窗无合格新事实，保留滚动旧条"
       },
       {
         "id": "vrt",
         "status": "partial",
-        "note": "近窗官方新事实不足"
+        "note": "近窗无合格新事实，保留滚动旧条"
       },
       {
         "id": "tsm",
-        "status": "partial",
-        "note": "电话会需求>供给与 CAGR 上修线索入选（财经快讯转述）"
+        "status": "complete",
+        "note": "Q3/Q4 数字多源交叉入选"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "nvda-premarket-ai-debt-drag-2026-10-15",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "盘前观察：AI 融资担忧下芯片股承压，NVIDIA 随 CoreWeave 链条波动",
+      "fact": "DeItaone 盘前观察列出 CRWV 续跌与融资担忧；市场讨论将 neocloud 债务压力与 GPU 需求预期挂钩，NVIDIA 官号同期发布北欧/伦敦生态帖但无新财务指引。",
+      "whyItMatters": "需求预期与融资约束的短期博弈。",
+      "counterCase": "若台积电指引被解读为需求仍紧，拖累或有限。",
+      "affected": [
+        "NVDA",
+        "AI 硬件"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-15T10:05:49.000Z",
+      "url": "https://x.com/DeItaone/status/2110673491158515816",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "nvda": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "tsm-q3-print-ticker-2026-10-15",
+      "tabIds": [
+        "tsm"
+      ],
+      "title": "台积电 Q3 营收约 467 亿美元、毛利率 66.4%，Q4 指引上修",
+      "fact": "转述：TSM Q3 营收约 $46.7B、EPS 约 $4.60、毛利率约 66%；Q4 营收指引中枢显著高于原预期，先进制程占比高。",
+      "whyItMatters": "先进制程供给与 AI 需求锚定。",
+      "counterCase": "股价仍可能受利率与亚洲风险偏好压制。",
+      "affected": [
+        "TSM",
+        "AI 供应链"
+      ],
+      "author": "StockSavvyShay",
+      "publishedAt": "2026-10-15T08:05:06.000Z",
+      "url": "https://x.com/StockSavvyShay/status/2110643114268647698",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "tsm": 1
+      },
+      "people": []
+    },
     {
       "eventKey": "tsm-demand-exceeds-supply-2026-10-15",
       "tabIds": [
@@ -63,7 +109,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 1
+        "tsm": 2
       },
       "people": []
     },
@@ -86,28 +132,31 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 2
+        "tsm": 3
       },
       "people": []
     },
     {
-      "eventKey": "nvda-nordics-stockholm-2026-10-15",
+      "eventKey": "mu-china-dram-narrative-2026-10-14",
       "tabIds": [
-        "nvda"
+        "mu"
       ],
-      "title": "NVIDIA：北欧生态与 GTC Berlin 前瞻",
-      "fact": "@nvidia 介绍 Spotify/ABB 等北欧用例并链向 GTC Berlin。",
-      "whyItMatters": "区域采用叙事。",
-      "counterCase": "营销向。",
+      "title": "讨论：Micron 周内承压与中国 DRAM 进步叙事",
+      "fact": "search_news/转述称 Micron 周内显著回撤，市场讨论 CXMT 在更高密度 DRAM 架构与服务器产品进展引发供应担忧。",
+      "whyItMatters": "存储竞争与定价预期。",
+      "counterCase": "缺官方技术对照与客户认证。",
       "affected": [
-        "NVDA"
+        "MU",
+        "DRAM"
       ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-15T05:14:07.000Z",
-      "url": "https://x.com/nvidia/status/2110600083892785270",
+      "author": "Reematendulkar",
+      "publishedAt": "2026-10-15T01:15:48.000Z",
+      "url": "https://x.com/Reematendulkar/status/2110540107019374714",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
+      "weeklyRanks": {
+        "mu": 1
+      },
       "people": []
     },
     {
@@ -128,7 +177,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "nvda": 1
+        "nvda": 2
       },
       "people": [
         {
@@ -178,7 +227,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "nvda": 2
+        "nvda": 4
       },
       "people": []
     },
@@ -228,7 +277,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "mu": 1
+        "mu": 2
       },
       "people": []
     },
@@ -366,30 +415,6 @@
       ]
     },
     {
-      "eventKey": "nvda-ocp-vera-rubin-open-rack-2026-10-12",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "英伟达 OCP 开放 Vera Rubin 机架设计并扩网络伙伴",
-      "fact": "财经转述：英伟达在 OCP Global Summit 公布面向下一代 AI 数据中心的开放机架设计、网络、软件与电力系统贡献，并扩大与 Meta、Google、Cisco 等合作。",
-      "whyItMatters": "开放机架/网络蓝图影响 AI 工厂交付速度与 NVDA 生态黏性。",
-      "counterCase": "若规范停留在宣传或电力接驳仍卡住，交付加速有限。",
-      "affected": [
-        "NVDA",
-        "META",
-        "GOOGL"
-      ],
-      "author": "wallstengine",
-      "publishedAt": "2026-10-12T15:26:20.000Z",
-      "url": "https://x.com/wallstengine/status/2109666989543219475",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 4
-      },
-      "people": []
-    },
-    {
       "eventKey": "vrt-india-liquid-cooling-rubin-factory-2026-10-12",
       "tabIds": [
         "vrt"
@@ -482,7 +507,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "mu": 2
+        "mu": 3
       },
       "people": []
     },
@@ -506,7 +531,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 3
+        "tsm": 4
       },
       "people": []
     },
@@ -553,7 +578,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "tsm": 4
+        "tsm": 5
       },
       "people": []
     },
@@ -602,28 +627,6 @@
       "tier": "must-read",
       "weeklyRanks": {
         "vrt": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "tsm-sep-revenue-filing-2026-10-08",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "台积电 9 月营收约 NT$5119 亿（转述法定申报）",
-      "fact": "@AZBInvestment 称按 10 月 8 日申报，台积电 9 月营收约 NT$511.9bn，同比约 +54.6%，三季度合计约 NT$1.49tn（约合公司指引所用汇率下的美元营收口径）。",
-      "whyItMatters": "月营收是先进制程需求的高频验证，影响对 AI 晶圆与封装满载度的判断。",
-      "counterCase": "汇率与口径需对照官方英语稿；单月波动不等于盈利指引。",
-      "affected": [
-        "TSM"
-      ],
-      "author": "AZBInvestment",
-      "publishedAt": "2026-10-08T12:49:49.000Z",
-      "url": "https://x.com/AZBInvestment/status/2108178048600232347",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "tsm": 5
       },
       "people": []
     }

@@ -3,31 +3,372 @@
   "rule": "卡片中的人名保留原文写法（英文名用原拼写），不使用中文音译；每张卡片在 people 字段列出提到的人物及 ≤15 字简介。新人物先在此登记经核实的简介。用户2026-10-13指定。",
   "introMaxChars": 15,
   "people": [
-    { "name": "Satya Nadella", "intro": "微软董事长兼CEO", "aliases": ["萨蒂亚·纳德拉", "萨提亚·纳德拉", "纳德拉"], "matchTerms": ["Satya Nadella", "Nadella"], "handles": ["satyanadella"] },
-    { "name": "Jensen Huang", "intro": "英伟达创始人兼CEO", "aliases": ["黄仁勋"], "matchTerms": ["Jensen Huang"], "handles": [] },
-    { "name": "Elon Musk", "intro": "特斯拉与SpaceX CEO", "aliases": ["埃隆·马斯克", "马斯克"], "matchTerms": ["Elon Musk", "Musk"], "handles": ["elonmusk"] },
-    { "name": "Donald Trump", "intro": "美国总统", "aliases": ["唐纳德·特朗普", "特朗普"], "matchTerms": ["Donald Trump", "Trump"], "handles": ["realdonaldtrump"] },
-    { "name": "Volodymyr Zelensky", "intro": "乌克兰总统", "aliases": ["弗拉基米尔·泽连斯基", "泽连斯基"], "matchTerms": ["Volodymyr Zelensky", "Zelensky", "Zelenskyy"], "handles": ["zelenskyyua"] },
-    { "name": "Scott Bessent", "intro": "美国财政部长", "aliases": ["斯科特·贝森特", "贝森特"], "matchTerms": ["Scott Bessent", "Bessent"], "handles": [] },
-    { "name": "Sundar Pichai", "intro": "谷歌及Alphabet CEO", "aliases": ["桑达尔·皮查伊", "皮查伊"], "matchTerms": ["Sundar Pichai", "Pichai"], "handles": ["sundarpichai"] },
-    { "name": "Dmitry Peskov", "intro": "克里姆林宫发言人", "aliases": ["德米特里·佩斯科夫", "佩斯科夫"], "matchTerms": ["Dmitry Peskov", "Peskov"], "handles": [] },
-    { "name": "Jamie Dimon", "intro": "摩根大通董事长兼CEO", "aliases": ["杰米·戴蒙", "戴蒙"], "matchTerms": ["Jamie Dimon", "Dimon"], "handles": [] },
-    { "name": "Mark Carney", "intro": "加拿大总理", "aliases": ["马克·卡尼", "卡尼"], "matchTerms": ["Mark Carney", "Carney"], "handles": [] },
-    { "name": "Mark Zuckerberg", "intro": "Meta创始人兼CEO", "aliases": ["马克·扎克伯格", "扎克伯格"], "matchTerms": ["Mark Zuckerberg", "Zuckerberg"], "handles": ["finkd"] },
-    { "name": "Emmanuel Macron", "intro": "法国总统", "aliases": ["埃马纽埃尔·马克龙", "马克龙"], "matchTerms": ["Emmanuel Macron", "Macron"], "handles": ["emmanuelmacron"] },
-    { "name": "John Williams", "intro": "纽约联储主席", "aliases": ["约翰·威廉姆斯", "约翰·威廉斯"], "matchTerms": ["John Williams"], "handles": [] },
-    { "name": "Christopher Waller", "intro": "美联储理事", "aliases": ["克里斯托弗·沃勒", "沃勒"], "matchTerms": ["Christopher Waller", "Waller"], "handles": [] },
-    { "name": "Austan Goolsbee", "intro": "芝加哥联储主席", "aliases": ["奥斯坦·古尔斯比", "古尔斯比"], "matchTerms": ["Austan Goolsbee", "Goolsbee"], "handles": [] },
-    { "name": "Susan Collins", "intro": "波士顿联储主席", "aliases": ["苏珊·柯林斯"], "matchTerms": ["Susan Collins"], "handles": [] },
-    { "name": "Hock Tan", "intro": "博通总裁兼CEO", "aliases": ["陈福阳"], "matchTerms": ["Hock Tan"], "handles": [] },
-    { "name": "Lip-Bu Tan", "intro": "英特尔CEO", "aliases": ["陈立武"], "matchTerms": ["Lip-Bu Tan"], "handles": [] },
-    { "name": "Greg Brockman", "intro": "OpenAI联合创始人兼总裁", "aliases": ["格雷格·布罗克曼", "布罗克曼"], "matchTerms": ["Greg Brockman", "Brockman"], "handles": ["gdb"] },
-    { "name": "Will Bryk", "intro": "Exa联合创始人兼CEO", "aliases": [], "matchTerms": ["Will Bryk", "William Bryk"], "handles": ["WilliamBryk"] },
-    { "name": "Logan Kilpatrick", "intro": "谷歌AI Studio负责人", "aliases": [], "matchTerms": ["Logan Kilpatrick"], "handles": ["OfficialLoganK"] },
-    { "name": "Liz Truss", "intro": "英国前首相", "aliases": ["利兹·特拉斯", "特拉斯"], "matchTerms": ["Liz Truss"], "handles": ["trussliz"] },
-    { "name": "Ron DeSantis", "intro": "佛罗里达州州长", "aliases": ["罗恩·德桑蒂斯", "德桑蒂斯"], "matchTerms": ["Ron DeSantis", "DeSantis"], "handles": ["RonDeSantis"] },
-    { "name": "Katie Zacharia", "intro": "白宫新闻秘书", "aliases": [], "matchTerms": ["Katie Zacharia"], "handles": ["KatieZacharia"] },
-    { "name": "Ilhan Omar", "intro": "美国民主党众议员", "aliases": ["伊尔汗·奥马尔"], "matchTerms": ["Ilhan Omar"], "handles": ["IlhanMN"] },
-    { "name": "Michael Resha", "intro": "Vertiv制造执行副总裁", "aliases": [], "matchTerms": ["Michael Resha"], "handles": [] }
+    {
+      "name": "Satya Nadella",
+      "intro": "微软董事长兼CEO",
+      "aliases": [
+        "萨蒂亚·纳德拉",
+        "萨提亚·纳德拉",
+        "纳德拉"
+      ],
+      "matchTerms": [
+        "Satya Nadella",
+        "Nadella"
+      ],
+      "handles": [
+        "satyanadella"
+      ]
+    },
+    {
+      "name": "Jensen Huang",
+      "intro": "英伟达创始人兼CEO",
+      "aliases": [
+        "黄仁勋"
+      ],
+      "matchTerms": [
+        "Jensen Huang"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Elon Musk",
+      "intro": "特斯拉与SpaceX CEO",
+      "aliases": [
+        "埃隆·马斯克",
+        "马斯克"
+      ],
+      "matchTerms": [
+        "Elon Musk",
+        "Musk"
+      ],
+      "handles": [
+        "elonmusk"
+      ]
+    },
+    {
+      "name": "Donald Trump",
+      "intro": "美国总统",
+      "aliases": [
+        "唐纳德·特朗普",
+        "特朗普"
+      ],
+      "matchTerms": [
+        "Donald Trump",
+        "Trump"
+      ],
+      "handles": [
+        "realdonaldtrump"
+      ]
+    },
+    {
+      "name": "Volodymyr Zelensky",
+      "intro": "乌克兰总统",
+      "aliases": [
+        "弗拉基米尔·泽连斯基",
+        "泽连斯基"
+      ],
+      "matchTerms": [
+        "Volodymyr Zelensky",
+        "Zelensky",
+        "Zelenskyy"
+      ],
+      "handles": [
+        "zelenskyyua"
+      ]
+    },
+    {
+      "name": "Scott Bessent",
+      "intro": "美国财政部长",
+      "aliases": [
+        "斯科特·贝森特",
+        "贝森特"
+      ],
+      "matchTerms": [
+        "Scott Bessent",
+        "Bessent"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Sundar Pichai",
+      "intro": "谷歌及Alphabet CEO",
+      "aliases": [
+        "桑达尔·皮查伊",
+        "皮查伊"
+      ],
+      "matchTerms": [
+        "Sundar Pichai",
+        "Pichai"
+      ],
+      "handles": [
+        "sundarpichai"
+      ]
+    },
+    {
+      "name": "Dmitry Peskov",
+      "intro": "克里姆林宫发言人",
+      "aliases": [
+        "德米特里·佩斯科夫",
+        "佩斯科夫"
+      ],
+      "matchTerms": [
+        "Dmitry Peskov",
+        "Peskov"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Jamie Dimon",
+      "intro": "摩根大通董事长兼CEO",
+      "aliases": [
+        "杰米·戴蒙",
+        "戴蒙"
+      ],
+      "matchTerms": [
+        "Jamie Dimon",
+        "Dimon"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Mark Carney",
+      "intro": "加拿大总理",
+      "aliases": [
+        "马克·卡尼",
+        "卡尼"
+      ],
+      "matchTerms": [
+        "Mark Carney",
+        "Carney"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "intro": "Meta创始人兼CEO",
+      "aliases": [
+        "马克·扎克伯格",
+        "扎克伯格"
+      ],
+      "matchTerms": [
+        "Mark Zuckerberg",
+        "Zuckerberg"
+      ],
+      "handles": [
+        "finkd"
+      ]
+    },
+    {
+      "name": "Emmanuel Macron",
+      "intro": "法国总统",
+      "aliases": [
+        "埃马纽埃尔·马克龙",
+        "马克龙"
+      ],
+      "matchTerms": [
+        "Emmanuel Macron",
+        "Macron"
+      ],
+      "handles": [
+        "emmanuelmacron"
+      ]
+    },
+    {
+      "name": "John Williams",
+      "intro": "纽约联储主席",
+      "aliases": [
+        "约翰·威廉姆斯",
+        "约翰·威廉斯"
+      ],
+      "matchTerms": [
+        "John Williams"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Christopher Waller",
+      "intro": "美联储理事",
+      "aliases": [
+        "克里斯托弗·沃勒",
+        "沃勒"
+      ],
+      "matchTerms": [
+        "Christopher Waller",
+        "Waller"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Austan Goolsbee",
+      "intro": "芝加哥联储主席",
+      "aliases": [
+        "奥斯坦·古尔斯比",
+        "古尔斯比"
+      ],
+      "matchTerms": [
+        "Austan Goolsbee",
+        "Goolsbee"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Susan Collins",
+      "intro": "波士顿联储主席",
+      "aliases": [
+        "苏珊·柯林斯"
+      ],
+      "matchTerms": [
+        "Susan Collins"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Hock Tan",
+      "intro": "博通总裁兼CEO",
+      "aliases": [
+        "陈福阳"
+      ],
+      "matchTerms": [
+        "Hock Tan"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Lip-Bu Tan",
+      "intro": "英特尔CEO",
+      "aliases": [
+        "陈立武"
+      ],
+      "matchTerms": [
+        "Lip-Bu Tan"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Greg Brockman",
+      "intro": "OpenAI联合创始人兼总裁",
+      "aliases": [
+        "格雷格·布罗克曼",
+        "布罗克曼"
+      ],
+      "matchTerms": [
+        "Greg Brockman",
+        "Brockman"
+      ],
+      "handles": [
+        "gdb"
+      ]
+    },
+    {
+      "name": "Will Bryk",
+      "intro": "Exa联合创始人兼CEO",
+      "aliases": [],
+      "matchTerms": [
+        "Will Bryk",
+        "William Bryk"
+      ],
+      "handles": [
+        "WilliamBryk"
+      ]
+    },
+    {
+      "name": "Logan Kilpatrick",
+      "intro": "谷歌AI Studio负责人",
+      "aliases": [],
+      "matchTerms": [
+        "Logan Kilpatrick"
+      ],
+      "handles": [
+        "OfficialLoganK"
+      ]
+    },
+    {
+      "name": "Liz Truss",
+      "intro": "英国前首相",
+      "aliases": [
+        "利兹·特拉斯",
+        "特拉斯"
+      ],
+      "matchTerms": [
+        "Liz Truss"
+      ],
+      "handles": [
+        "trussliz"
+      ]
+    },
+    {
+      "name": "Ron DeSantis",
+      "intro": "佛罗里达州州长",
+      "aliases": [
+        "罗恩·德桑蒂斯",
+        "德桑蒂斯"
+      ],
+      "matchTerms": [
+        "Ron DeSantis",
+        "DeSantis"
+      ],
+      "handles": [
+        "RonDeSantis"
+      ]
+    },
+    {
+      "name": "Katie Zacharia",
+      "intro": "白宫新闻秘书",
+      "aliases": [],
+      "matchTerms": [
+        "Katie Zacharia"
+      ],
+      "handles": [
+        "KatieZacharia"
+      ]
+    },
+    {
+      "name": "Ilhan Omar",
+      "intro": "美国民主党众议员",
+      "aliases": [
+        "伊尔汗·奥马尔"
+      ],
+      "matchTerms": [
+        "Ilhan Omar"
+      ],
+      "handles": [
+        "IlhanMN"
+      ]
+    },
+    {
+      "name": "Michael Resha",
+      "intro": "Vertiv制造执行副总裁",
+      "aliases": [],
+      "matchTerms": [
+        "Michael Resha"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Larry Fink",
+      "intro": "贝莱德CEO",
+      "aliases": [
+        "拉里·芬克",
+        "芬克"
+      ],
+      "matchTerms": [
+        "Larry Fink",
+        "Fink"
+      ],
+      "handles": []
+    },
+    {
+      "name": "Howard Lutnick",
+      "intro": "美国商务部长",
+      "aliases": [
+        "霍华德·卢特尼克",
+        "卢特尼克"
+      ],
+      "matchTerms": [
+        "Howard Lutnick",
+        "Lutnick"
+      ],
+      "handles": []
+    }
   ]
 }

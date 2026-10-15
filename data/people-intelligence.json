@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T08:02:04.198Z",
-  "cutoff": "2026-10-15T16:00:00+08:00",
+  "updatedAt": "2026-10-15T13:01:03.972Z",
+  "cutoff": "2026-10-15T21:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,17 +9,17 @@
       {
         "id": "elon-musk",
         "status": "partial",
-        "note": "近窗本人多条：中国 RAM 2028、Zelensky、Roadster demo、Grok Bot 购物；规则入选 2，热度补位 3；无 xAI 财务一手"
+        "note": "近窗本人 Roadster/Grok Bot 兜底/求真安全；规则 3 + 热度 2；无 xAI 财务一手"
       },
       {
         "id": "jensen-huang",
         "status": "partial",
-        "note": "本人账号窗口内无直发；nvidia 官号伦敦投资可归因；已合并保留旧重点榜"
+        "note": "本人账号无直发；nvidia 官号北欧用例可归因；保留滚动旧重点榜"
       },
       {
         "id": "donald-trump",
         "status": "partial",
-        "note": "TrumpDailyPosts 同步柴油/制裁与 GFS/Alaska LNG；政治口水未入选；POTUS 未单独拉取到政策帖"
+        "note": "TrumpDailyPosts 同步 GFS 晶圆厂与 Alaska LNG；政治口水作热度补位；POTUS 未单拉到新政策帖"
       },
       {
         "id": "trillion-leaders",
@@ -29,11 +29,270 @@
       {
         "id": "research-reports",
         "status": "partial",
-        "note": "Barclays Tesla-SpaceX 合并情景作卖方线索但归新闻页；本 Tab 近窗核心假设变化不足"
+        "note": "DB/Mizuho 对 CoreWeave 评级分歧归新闻页；本 Tab 近窗核心假设变化不足，保留旧条目"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "elon-roadster-unveil-hype-2026-10-15",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：新 Roadster 超越电影与想象，全球将瞩目发布",
+      "fact": "@elonmusk：称新 Roadster “beyond movies, beyond imagination, beyond human, yet still made by humans on Earth”，并引用称全世界将观看此次发布。",
+      "whyItMatters": "产品发布叙事或影响 TSLA 风险偏好与关注度。",
+      "counterCase": "若演示或交付时间表令人失望，热度退潮。",
+      "affected": [
+        "Tesla",
+        "风险偏好"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-15T12:37:09.000Z",
+      "url": "https://x.com/elonmusk/status/2110711574121857208",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "capturedAt": "2026-10-15T13:00:15.000Z",
+        "source": "x-mcp",
+        "likes": 986,
+        "reposts": 128,
+        "replies": 209,
+        "quotes": 23,
+        "views": 270519,
+        "bookmarks": 24
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "trump-heat-birthright-2026-10-15",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "热度：同步源转发出生公民权争议表态",
+      "fact": "@TrumpDailyPosts 同步政治议题帖，互动中等；按规则作热度补位，非半导体/能源新事实。",
+      "whyItMatters": "热度补位。",
+      "counterCase": "无投资传导。",
+      "affected": [
+        "政治注意力"
+      ],
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-15T11:58:00.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2110701722540855724",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "capturedAt": "2026-10-15T13:00:15.000Z",
+        "source": "x-mcp",
+        "likes": 382,
+        "reposts": 87,
+        "replies": 21,
+        "quotes": 2,
+        "views": 40474,
+        "bookmarks": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "elon-ai-truth-seeking-safety-2026-10-15",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：求真是 AI/SI 安全最重要面向",
+      "fact": "@elonmusk：引用讨论称“Truth-seeking is the most important aspect of AI/SI safety”。",
+      "whyItMatters": "xAI 安全与产品定位公开表态。",
+      "counterCase": "无新财务或产品里程碑则影响有限。",
+      "affected": [
+        "xAI",
+        "AI 安全舆论"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-15T11:34:58.000Z",
+      "url": "https://x.com/elonmusk/status/2110695927312777466",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "elon-musk": 3
+      },
+      "selection": "rule",
+      "engagement": {
+        "capturedAt": "2026-10-15T13:00:15.000Z",
+        "source": "x-mcp",
+        "likes": 3871,
+        "reposts": 523,
+        "replies": 818,
+        "quotes": 84,
+        "views": 667506,
+        "bookmarks": 193
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-heat-early-openai-quote-2026-10-15",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "热度：Elon Musk 转发早期 OpenAI 与 Jensen 轶事",
+      "fact": "@elonmusk 引用早期 OpenAI/NVIDIA 超算采购轶事帖并互动，窗口内展示量高。",
+      "whyItMatters": "热度补位，非新财务事实。",
+      "counterCase": "无新增事实。",
+      "affected": [
+        "注意力"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-15T06:30:12.000Z",
+      "url": "https://x.com/elonmusk/status/2110619230161035670",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "capturedAt": "2026-10-15T13:00:15.000Z",
+        "source": "x-mcp",
+        "likes": 10424,
+        "reposts": 846,
+        "replies": 919,
+        "quotes": 253,
+        "views": 1586342,
+        "bookmarks": 714
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-grok-bot-purchase-guarantee-2026-10-15",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：Grok Bot 购物出错由 SpaceX 兜底",
+      "fact": "@elonmusk：称若 Grok Bot 购物出错或泄露银行卡（称尚未发生），SpaceX 将补偿用户；并鼓励用 Bot 在非亚马逊渠道比价下单。",
+      "whyItMatters": "xAI/Bot 商业化与平台信任机制线索。",
+      "counterCase": "若平台限制扩大或事故发生，叙事受损。",
+      "affected": [
+        "xAI",
+        "Grok Bot"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-15T05:57:20.000Z",
+      "url": "https://x.com/elonmusk/status/2110610960474079445",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 2
+      },
+      "selection": "rule",
+      "engagement": {
+        "capturedAt": "2026-10-15T13:00:15.000Z",
+        "source": "x-mcp",
+        "likes": 7314,
+        "reposts": 738,
+        "replies": 808,
+        "quotes": 281,
+        "views": 1176555,
+        "bookmarks": 954
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-heat-bot-amazon-alt-2026-10-15",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "热度：Elon Musk 称可用 Grok Bot 非亚马逊比价采购",
+      "fact": "@elonmusk：在亚马逊限制 AI 代理讨论背景下，称可让 Grok Bot 到别处购买并取得更好价格。",
+      "whyItMatters": "热度补位，反映 Bot 电商冲突。",
+      "counterCase": "无合同或收入披露。",
+      "affected": [
+        "Grok Bot"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-15T05:24:04.000Z",
+      "url": "https://x.com/elonmusk/status/2110602585572860213",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "capturedAt": "2026-10-15T13:00:15.000Z",
+        "source": "x-mcp",
+        "likes": 9114,
+        "reposts": 852,
+        "replies": 1087,
+        "quotes": 124,
+        "views": 13962507,
+        "bookmarks": 817
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "jensen-nvidia-stockholm-nordics-2026-10-15",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "NVIDIA 官号：北欧 Spotify/ABB 等以 NVIDIA 构建应用",
+      "fact": "@nvidia：发帖 Hello Stockholm，列举 Spotify 播客推荐与 ABB Robotics 仿真等北欧用例；可归因公司活动，非 Jensen Huang 本人财务指引。",
+      "whyItMatters": "区域落地与生态线索。",
+      "counterCase": "无新订单金额。",
+      "affected": [
+        "NVIDIA",
+        "欧洲 AI"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-15T05:14:07.000Z",
+      "url": "https://x.com/nvidia/status/2110600083892785270",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "jensen-huang": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "capturedAt": "2026-10-15T13:00:15.000Z",
+        "source": "x-mcp",
+        "likes": 155,
+        "reposts": 19,
+        "replies": 36,
+        "quotes": 3,
+        "views": 26375,
+        "bookmarks": 4
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
     {
       "eventKey": "trump-diesel-sanctions-pause-sync-2026-10-15",
       "tabIds": [
@@ -53,8 +312,14 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "donald-trump": 1
+        "donald-trump": 3
       },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T08:02:03.197Z",
@@ -65,234 +330,7 @@
         "quotes": 5,
         "views": 44605,
         "bookmarks": 9
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-heat-rsi-2026-10-15",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "热度：Elon Musk 转发 Recursive Self-Improvement",
-      "fact": "@elonmusk：“Recursive Self-Improvement”。",
-      "whyItMatters": "热度补位。",
-      "counterCase": "概念营销。",
-      "affected": [
-        "xAI"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-15T03:04:00.000Z",
-      "url": "https://x.com/elonmusk/status/2110567340069003542",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-15T08:02:03.197Z",
-        "source": "x-mcp",
-        "likes": 12238,
-        "reposts": 828,
-        "replies": 499,
-        "quotes": 75,
-        "views": 1485730,
-        "bookmarks": 1236
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-china-ram-2028-2026-10-15",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：中国将在 2028 年生产大量 RAM",
-      "fact": "@elonmusk：“China will be making a LOT of RAM in 2028”。",
-      "whyItMatters": "存储中长期供给预期锚，影响 DRAM/HBM 定价叙事。",
-      "counterCase": "出口管制或良率不及预期。",
-      "affected": [
-        "DRAM",
-        "Micron"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-15T02:59:15.000Z",
-      "url": "https://x.com/elonmusk/status/2110566143983223006",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 1
-      },
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-15T08:02:03.197Z",
-        "source": "x-mcp",
-        "likes": 7085,
-        "reposts": 979,
-        "replies": 908,
-        "quotes": 506,
-        "views": 1517920,
-        "bookmarks": 1224
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-zelensky-go-2026-10-15",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：是时候让 Zelensky 下台",
-      "fact": "@elonmusk：“And so the slaughter continues … Time for Zelensky to go”。",
-      "whyItMatters": "星链/乌克兰政治化风险上升。",
-      "counterCase": "随后澄清或停火进展缓和。",
-      "affected": [
-        "Starlink",
-        "地缘风险"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-15T02:23:41.000Z",
-      "url": "https://x.com/elonmusk/status/2110557192650641827",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 2
-      },
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-15T08:02:03.197Z",
-        "source": "x-mcp",
-        "likes": 42904,
-        "reposts": 6311,
-        "replies": 8122,
-        "quotes": 1067,
-        "views": 2812914,
-        "bookmarks": 1577
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        },
-        {
-          "name": "Volodymyr Zelensky",
-          "intro": "乌克兰总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-heat-grok-bot-rocks-2026-10-15",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "热度：Elon Musk 称 Grok Bot rocks",
-      "fact": "@elonmusk：“Grok @Bot rocks”。",
-      "whyItMatters": "热度补位。",
-      "counterCase": "产品可用性争议。",
-      "affected": [
-        "xAI"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-15T02:00:32.000Z",
-      "url": "https://x.com/elonmusk/status/2110551366947213409",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-15T08:02:03.197Z",
-        "source": "x-mcp",
-        "likes": 21534,
-        "reposts": 1276,
-        "replies": 844,
-        "quotes": 104,
-        "views": 32985876,
-        "bookmarks": 2562
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-heat-roadster-demo-2026-10-15",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "热度：Elon Musk 称新 Roadster 或为史上最强产品演示",
-      "fact": "@elonmusk：“The new Tesla Roadster is a candidate for greatest product demo of all time”。",
-      "whyItMatters": "热度补位。",
-      "counterCase": "演示延期或低于预期。",
-      "affected": [
-        "Tesla"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-15T01:54:11.000Z",
-      "url": "https://x.com/elonmusk/status/2110549767063507044",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-15T08:02:03.197Z",
-        "source": "x-mcp",
-        "likes": 43460,
-        "reposts": 2758,
-        "replies": 2301,
-        "quotes": 418,
-        "views": 22157557,
-        "bookmarks": 1487
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "trump-heat-somalian-fraud-2026-10-14",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "热度：同步源转发明尼苏达自闭症项目欺诈指控",
-      "fact": "@TrumpDailyPosts 转发 Asha Farhan Hassan 涉 Autism/Feeding Our Future 欺诈指控摘要。",
-      "whyItMatters": "热度补位；非产业政策。",
-      "counterCase": "与投资主线无关。",
-      "affected": [
-        "国内政治"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-14T21:46:00.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2110487309795909683",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-15T08:02:03.197Z",
-        "source": "x-mcp",
-        "likes": 3657,
-        "reposts": 1565,
-        "replies": 207,
-        "quotes": 93,
-        "views": 108764,
-        "bookmarks": 133
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "jensen-nvidia-london-invest-2026-10-14",
@@ -313,8 +351,14 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "jensen-huang": 1
+        "jensen-huang": 2
       },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T08:02:03.197Z",
@@ -325,26 +369,20 @@
         "quotes": 13,
         "views": 32820,
         "bookmarks": 25
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
+      }
     },
     {
-      "eventKey": "trump-gfs-malta-21b-sync-2026-10-14",
+      "eventKey": "trump-gfs-malta-plants-sync-2026-10-14",
       "tabIds": [
         "donald-trump"
       ],
-      "title": "同步源：Donald Trump宣布 GlobalFoundries 马耳他（纽约）约 210 亿美元建厂",
-      "fact": "@TrumpDailyPosts：President Trump just announced another $21 billion investment… GlobalFoundries and Commerce Secretary Howard Lutnick will build two new semiconductor plants in Malta, New York.",
-      "whyItMatters": "半导体回流与就业政策可执行线索。",
-      "counterCase": "投资时点与补贴细节未在帖中核实。",
+      "title": "同步源：Donald Trump 宣布 GlobalFoundries 纽约晶圆厂投资",
+      "fact": "@TrumpDailyPosts（Truth Social 同步，非本人直发）：称 Donald Trump 宣布约 210 亿美元制造投资，GlobalFoundries 与商务部长 Howard Lutnick 将在纽约 Malta 建两座半导体工厂，预期创造约 2.7 万建设和供应链就业。",
+      "whyItMatters": "半导体本土制造与产业政策传导。",
+      "counterCase": "缺公司最终协议全文或开工时间表。",
       "affected": [
-        "半导体制造",
-        "就业"
+        "半导体设备",
+        "美国制造"
       ],
       "author": "TrumpDailyPosts",
       "publishedAt": "2026-10-14T16:51:54.000Z",
@@ -352,18 +390,61 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
+        "donald-trump": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "capturedAt": "2026-10-15T13:00:15.000Z",
+        "source": "x-mcp",
+        "likes": 589,
+        "reposts": 180,
+        "replies": 74,
+        "quotes": 15,
+        "views": 78537,
+        "bookmarks": 13
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        },
+        {
+          "name": "Howard Lutnick",
+          "intro": "美国商务部长"
+        }
+      ]
+    },
+    {
+      "eventKey": "trump-alaska-lng-sync-2026-10-14",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "同步源：Donald Trump 宣布阿拉斯加 LNG 大型基础设施",
+      "fact": "@TrumpDailyPosts：称启动阿拉斯加史上最大能源基础设施项目，韩国约 500 亿美元投资背景下的 Alaska LNG，并提及台湾承购承诺。",
+      "whyItMatters": "能源基础设施与贸易协定相关资本开支。",
+      "counterCase": "项目融资与环评仍可能拖延。",
+      "affected": [
+        "LNG",
+        "能源基建"
+      ],
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-14T16:42:47.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2110411003888292318",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
         "donald-trump": 2
       },
       "selection": "rule",
       "engagement": {
-        "capturedAt": "2026-10-15T08:02:03.197Z",
+        "capturedAt": "2026-10-15T13:00:15.000Z",
         "source": "x-mcp",
-        "likes": 540,
-        "reposts": 171,
-        "replies": 72,
-        "quotes": 13,
-        "views": 72020,
-        "bookmarks": 13
+        "likes": 705,
+        "reposts": 167,
+        "replies": 47,
+        "quotes": 6,
+        "views": 81155,
+        "bookmarks": 14
       },
       "people": [
         {
@@ -371,36 +452,6 @@
           "intro": "美国总统"
         }
       ]
-    },
-    {
-      "eventKey": "trump-alaska-lng-50b-2026-10-14",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "转述：Donald Trump 宣布阿拉斯加 LNG 大型能源基建",
-      "fact": "@TrumpDailyPosts：总统宣布阿拉斯加史上最大能源基建，称 Alaska LNG 获韩国约 500 亿美元投资叙事，并提及台湾 offtake。",
-      "whyItMatters": "能源与贸易协议相关可执行政策线索。",
-      "counterCase": "同步源；金额与合同状态需官方文件核对。",
-      "affected": [
-        "LNG",
-        "能源基建",
-        "亚太贸易"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-14T16:42:47.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2110411003888292318",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "donald-trump": 3
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
-      "selection": "rule"
     },
     {
       "eventKey": "jensen-nvidia-uk-250m-access-2026-10-14",
@@ -421,7 +472,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "jensen-huang": 2
+        "jensen-huang": 3
       },
       "people": [],
       "selection": "rule",
@@ -569,7 +620,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "elon-musk": 3
+        "elon-musk": 4
       },
       "people": [
         {
@@ -587,47 +638,6 @@
         "bookmarks": 328,
         "capturedAt": "2026-10-14T08:20:00.000Z",
         "source": "x-mcp"
-      }
-    },
-    {
-      "eventKey": "elon-micron-memory-pricing-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：美光在未来内存定价上“合理”，其他厂商“敲竹杠”",
-      "fact": "Elon Musk 回复转述摩根大通存储报告的帖子称，美光在未来内存价格上一直合理，而其他厂商漫天要价，客户不会忘记；美光的做法有利于长期客户忠诚度。被回复帖称 MU 已签 26 份长期协议、覆盖 2030 年前逾 35% 收入。",
-      "whyItMatters": "特斯拉/xAI 是大型存储买家，公开区分供应商定价态度，可能影响长约份额分配，并为存储股大跌当日提供客户侧视角。",
-      "counterCase": "采购方表态带有压价激励；长约价格条款未披露，“合理定价”也可能意味着 MU 让渡现货高价利润。",
-      "affected": [
-        "MU",
-        "SK 海力士",
-        "三星电子",
-        "TSLA"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T21:52:48.000Z",
-      "url": "https://x.com/elonmusk/status/2110126632572756339",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 4
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "likes": 10905,
-        "reposts": 831,
-        "replies": 365,
-        "quotes": 316,
-        "views": 783530,
-        "capturedAt": "2026-10-14T01:10:00.000Z",
-        "source": "x-mcp",
-        "bookmarks": 830
       }
     },
     {
@@ -720,7 +730,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "jensen-huang": 3
+        "jensen-huang": 4
       },
       "people": [
         {
@@ -759,7 +769,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "jensen-huang": 4
+        "jensen-huang": 5
       },
       "people": [
         {

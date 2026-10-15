@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-15-2100",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-15T20:36:33+08:00",
+  "updatedAt": "2026-10-15T21:02:00+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "395187ba897f30162abd7704e09742992230e311",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-15T20:36:37+08:00",
+      "detail": null
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-15T20:36:43+08:00",
+      "detail": null
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-15T20:45:10+08:00",
+      "detail": null
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-15T21:01:41+08:00",
+      "detail": null
+    },
+    {
+      "name": "validate",
+      "status": "ok",
+      "at": "2026-10-15T21:02:00+08:00",
+      "detail": null
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "focus5+insights8；电力PPA与Anthropic官号缺口"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "规则+热度补位；合集保留旧条"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "TSM Q3入选；其余多保留滚动"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "Anthropic/OpenAI有新；goog-ai保留"
+    },
+    "earnings": {
+      "status": "skipped",
+      "detail": "pendingReview 为空"
+    },
+    "macro": {
+      "status": "skipped",
+      "detail": "本批轻量规则跳过常规刷新"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": []
+}
