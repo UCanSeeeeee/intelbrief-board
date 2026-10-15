@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-15T15:33:08+08:00",
-  "updatedAt": "2026-10-15T16:02:32+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-15T16:03:20+08:00",
+  "finishedAt": "2026-10-15T16:03:20+08:00",
   "gitHeadAtStart": "77788fda3cc256076b1d55355bc7b7c3d0cc4a3a",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-15T16:02:51+08:00",
+      "detail": "pushed origin master 2d776d7"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-15T16:03:20+08:00",
+      "detail": "live brief/index/reading-board matched 2d776d7; 5+8"
     }
   ],
   "pages": {
@@ -77,8 +77,8 @@
       "detail": "light rules; not routine refresh this batch"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "2d776d74ce597f352840561eb89509de7875decb",
   "notes": []
 }
