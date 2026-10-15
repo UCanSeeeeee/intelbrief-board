@@ -1,0 +1,1667 @@
+{
+  "scheduledFor": "2026-10-15T09:00:00+08:00",
+  "windowStart": "2026-10-14T01:00:00.000Z",
+  "displayWindowStart": "2026-10-14T01:00:00.000Z",
+  "displayWindowEnd": "2026-10-15T01:00:00.000Z",
+  "carriedOver": [],
+  "trigger": "scheduled",
+  "status": "partial",
+  "summary": "北京时间 10/14 美股交易时段，九月 CPI 超预期余波叠加 Fed 官员偏鹰表态与 AI/半导体估值担忧，标普录得自 7 月底以来最差交易日、纳指显著回调；同窗 Anthropic 向投资人披露 Q3 营收约 168 亿美元并称调整后盈利、GlobalFoundries 获日资约 210 亿美元新建马耳他（纽约）工厂，市场在“利率路径上修”与“AI 商业化兑现”之间重新定价。",
+  "marketContext": "美股常规交易日（周三）；本简报为北京时间 2026-10-15 09:00 定时批次，检索覆盖未成功覆盖的 2026-10-14 09:00→2026-10-15 09:00（Asia/Shanghai）。不把盘中点位当实时结论。",
+  "shortfallReason": "多学科洞察合格 7 条（目标 10）：电力并网/PPA 官方原帖仍不足；先进封装一手订单级披露不足；Brew 代币窗口内无可核验新增。不以弱相关补齐。",
+  "collectionPath": "grok-x-mcp",
+  "coverage": {
+    "method": "两轮独立 X 检索（search_posts_all / get_users_posts / search_news）+ 追源与反证；路径 #1 x MCP，未切换 grok.com。",
+    "queries": [
+      "R1 macro CPI/Fed wires window",
+      "R1 geo energy Ukraine oil sanctions",
+      "R1 AI megacap earnings NVDA ASML",
+      "R1 search_news US stocks markets",
+      "R2 semi HBM CoWoS Micron NVIDIA",
+      "R2 power grid PPA data center",
+      "R2 Anthropic revenue IPO source-trace",
+      "R2 capital cost yields T-bill purchases",
+      "R2 counter Anthropic private-data caution",
+      "earnings ASML BAC MS BLK wires",
+      "GlobalFoundries Malta Japan capital",
+      "crypto BTC ETF Standard Chartered UAE"
+    ],
+    "gaps": [
+      "电力：窗口内多为评论/二手，缺公用事业或 hyperscaler 并网合同原帖",
+      "先进封装：KYEC/Amkor 预付款等多为二手叙述，证据不足不入选",
+      "Brew：无可核验协议/流动性新增"
+    ]
+  },
+  "selectionRationale": "焦点：按影响广度排序为指数大跌、Fed 官员偏鹰、Anthropic 财务披露、GFS 日资建厂、Apple 5T 里程碑。洞察：第二轮独立检索后保留资本成本、单位经济、OpenAI 采用、影子船队、Starlink 进展与州检察诉讼共 7 条；电力并网与先进封装一手不足不凑数。",
+  "checklist": [
+    {
+      "item": "时间窗：北京 2026-10-14 09:00→2026-10-15 09:00（beijing-batches-v1；期次 2026-10-15-0900）",
+      "status": "covered",
+      "note": "brief:context uncovered 与 searchWindowStart 一致"
+    },
+    {
+      "item": "R1 宏观 CPI/Fed/利率",
+      "status": "covered",
+      "note": "Goolsbee/Daly、股市大跌、T-bill 再投资"
+    },
+    {
+      "item": "R1 地缘能源俄乌/制裁/油运",
+      "status": "covered",
+      "note": "解冻俄资产试探、影子船队制裁讨论、柴油叙事延续"
+    },
+    {
+      "item": "R1 AI/大型公司",
+      "status": "covered",
+      "note": "Anthropic 营收、OpenAI 诉讼与欧盟 agent、Apple 5T、NVIDIA 英国"
+    },
+    {
+      "item": "R1 市场结构",
+      "status": "covered",
+      "note": "标普最差日、半导体指数回撤叙述"
+    },
+    {
+      "item": "R2 半导体包",
+      "status": "insufficient",
+      "note": "GFS 建厂入选焦点；HBM/CoWoS 缺一手订单级"
+    },
+    {
+      "item": "R2 电力包",
+      "status": "insufficient",
+      "note": "无合格并网/PPA 原帖"
+    },
+    {
+      "item": "R2 AI 落地包",
+      "status": "covered",
+      "note": "Anthropic 盈利单位经济；OpenAI 欧盟 agent 采用"
+    },
+    {
+      "item": "R2 资本成本包",
+      "status": "covered",
+      "note": "加息赔率+NY Fed 暂停新增购债"
+    },
+    {
+      "item": "R2 地缘能源物流包",
+      "status": "covered",
+      "note": "影子船队/解冻资产与油运成本"
+    },
+    {
+      "item": "R2 市场结构行为包",
+      "status": "covered",
+      "note": "指数集中与 AI 估值共振大跌"
+    },
+    {
+      "item": "追源 Anthropic FT 披露",
+      "status": "covered",
+      "note": "多家转述 FT；私企数据非审计财报"
+    },
+    {
+      "item": "反证 Anthropic",
+      "status": "covered",
+      "note": "SecondOrderMap 等强调私企/非利润口径；盘后半导体重挫质疑估值"
+    },
+    {
+      "item": "人物页检索",
+      "status": "covered",
+      "note": "elon/nvidia/TrumpDailyPosts/POTUS"
+    },
+    {
+      "item": "个股/AI/加密页",
+      "status": "insufficient",
+      "note": "多 Tab 无一手；Brew 无结果"
+    },
+    {
+      "item": "财报 pendingReview",
+      "status": "covered",
+      "note": "ASML/BAC/MS/BLK 已评分"
+    },
+    {
+      "item": "宏观大事轻量",
+      "status": "no-result",
+      "note": "本批次按 MACRO_EVENTS 轻量规则不例行刷新；非检索失败"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "spx-worst-day-july-cpi-ai-2026-10-14",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "fed-goolsbee-daly-hawkish-cpi-2026-10-14",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "anthropic-q3-16-8b-profit-ipo-2026-10-14",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "gfs-japan-21b-malta-plants-2026-10-14",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "apple-closes-above-5t-2026-10-14",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "cpi-fed-ai-discount-resonance-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识驱动独立检索入选"
+    },
+    {
+      "eventKey": "fed-tbill-reinvest-only-3rd-mo-2026-10-14",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识驱动独立检索入选"
+    },
+    {
+      "eventKey": "anthropic-unit-econ-ipo-path-2026-10-14",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识驱动独立检索入选"
+    },
+    {
+      "eventKey": "openai-eu-agents-adoption-2026-10-14",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识驱动独立检索入选"
+    },
+    {
+      "eventKey": "us-shadow-fleet-oil-freight-2026-10-14",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识驱动独立检索入选"
+    },
+    {
+      "eventKey": "starlink-senate-musk-limits-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识驱动独立检索入选"
+    },
+    {
+      "eventKey": "openai-states-sue-chatgpt-youth-2026-10-14",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识驱动独立检索入选"
+    },
+    {
+      "eventKey": "micron-cxmt-dram-rumor-2026-10-14",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "search_news 汇总为主，缺可回查一手原帖数字链"
+    },
+    {
+      "eventKey": "openai-compute-chief-exit-2026-10-14",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "人事变动影响面小于州检察诉讼与 Anthropic 财务"
+    },
+    {
+      "eventKey": "nvidia-kyec-amkor-prepay-claim-2026-10-14",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "二手叙述，证据不足"
+    },
+    {
+      "eventKey": "datacenter-half-stuck-claim-2026-10-14",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "缺可核验原研究链接与作者一级披露"
+    },
+    {
+      "eventKey": "zuckerberg-guinness-meme-2026-10-14",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "无投资传导"
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "eventKey": "micron-cxmt-dram-rumor-2026-10-14",
+      "reason": "search_news 汇总为主，缺可回查一手原帖数字链"
+    },
+    {
+      "eventKey": "openai-compute-chief-exit-2026-10-14",
+      "reason": "人事变动影响面小于州检察诉讼与 Anthropic 财务"
+    },
+    {
+      "eventKey": "nvidia-kyec-amkor-prepay-claim-2026-10-14",
+      "reason": "二手叙述，证据不足"
+    },
+    {
+      "eventKey": "datacenter-half-stuck-claim-2026-10-14",
+      "reason": "缺可核验原研究链接与作者一级披露"
+    },
+    {
+      "eventKey": "zuckerberg-guinness-meme-2026-10-14",
+      "reason": "无投资传导"
+    }
+  ],
+  "readingSelection": {
+    "focus": [
+      "spx-worst-day-july-cpi-ai-2026-10-14",
+      "fed-goolsbee-daly-hawkish-cpi-2026-10-14",
+      "anthropic-q3-16-8b-profit-ipo-2026-10-14",
+      "gfs-japan-21b-malta-plants-2026-10-14",
+      "apple-closes-above-5t-2026-10-14"
+    ],
+    "insights": [
+      "cpi-fed-ai-discount-resonance-2026-10-15",
+      "fed-tbill-reinvest-only-3rd-mo-2026-10-14",
+      "anthropic-unit-econ-ipo-path-2026-10-14",
+      "openai-eu-agents-adoption-2026-10-14",
+      "us-shadow-fleet-oil-freight-2026-10-14",
+      "starlink-senate-musk-limits-2026-10-15",
+      "openai-states-sue-chatgpt-youth-2026-10-14"
+    ]
+  },
+  "readingDecisions": [
+    {
+      "eventKey": "us-cpi-sept-hot-2026-10-14",
+      "action": "keep",
+      "reason": "窗口内 Fed 官员对 CPI 的偏鹰回应与股市大跌，属同事件进展，待阅池保留。",
+      "sourceUrl": "https://x.com/DeItaone/status/2110448215955054802",
+      "checkedAt": "2026-10-15T00:45:00.000Z"
+    },
+    {
+      "eventKey": "spacex-starlink-ukraine-limits-2026-10-14",
+      "action": "keep",
+      "reason": "参议员追问与 Musk 限定攻防用途，停火/星链可信度线索延续。",
+      "sourceUrl": "https://x.com/FirstSquawk/status/2110528498993664067",
+      "checkedAt": "2026-10-15T00:45:00.000Z"
+    },
+    {
+      "eventKey": "russia-diesel-resume-iea-tight-2026-10-14",
+      "action": "keep",
+      "reason": "美方称俄柴油或于中期选举前回流等后续叙述仍在，能源通胀链条未闭合。",
+      "sourceUrl": "https://x.com/FirstSquawk/status/2110504898894979262",
+      "checkedAt": "2026-10-15T00:45:00.000Z"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "spx-worst-day-july-cpi-ai-2026-10-14",
+      "title": "美股最差交易日自 7 月底以来：CPI 余波叠加 AI 估值担忧",
+      "fact": "KobeissiLetter：标普录得自 7 月 29 日以来最差交易日，抹去约 8000 亿美元市值；WSJ 称热通胀推升十月加息预期后，AI 交易信心动摇主导尾盘。FirstSquawk：半导体与通胀强化继续加息预期，标普结束逾六年无 1% 单日跌幅的最长纪录延伸叙事。",
+      "impact": "利率路径上修 + 成长股折现率抬升，短期压制 AI 资本开支相关估值；若后续数据冷却，可能转为“一次性冲击”定价。",
+      "direction": "利空",
+      "horizon": "数日至下次 FOMC",
+      "affected": [
+        "美股指数",
+        "半导体",
+        "高估值成长股"
+      ],
+      "counterCase": "若 PPI/零售 maginal 降温或油价回落，加息赔率回吐，超跌反弹可能迅速出现。",
+      "selectionReason": "窗口内对整体风险偏好影响最广的价格发现事件。",
+      "credibilityReason": "多家通讯社与快讯交叉；精确点数以交易所为准，此处不作点位真源。",
+      "change": "新增",
+      "eventTime": "2026-10-14T20:00:00.000Z",
+      "eventTimeNote": "以美东常规交易日收盘附近市场反应近似；精确分时未逐笔核对。",
+      "attentionEvidence": "KobeissiLetter 相关帖展示约 22.8 万；热度仅作注意力参考。",
+      "sources": [
+        {
+          "url": "https://x.com/KobeissiLetter/status/2110461962194710974",
+          "postId": "2110461962194710974",
+          "username": "KobeissiLetter",
+          "publishedAt": "2026-10-14T20:05:16.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "BREAKING: The S&P 500 officially posts its worst day since July 29th, erasing -$800 billion of market cap.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/WSJ/status/2110487821509075314",
+          "postId": "2110487821509075314",
+          "username": "WSJ",
+          "publishedAt": "2026-10-14T21:48:02.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "A session that began with rising bond yields and expectations of an October rate increase culminated with the stock market’s worst day in months.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "多家通讯社与快讯交叉；精确点数以交易所为准，此处不作点位真源。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "fed-goolsbee-daly-hawkish-cpi-2026-10-14",
+      "title": "Fed 的 Goolsbee 与 Daly：CPI“令人沮丧”，加息必要性上升",
+      "fact": "DeItaone/FirstSquawk/LiveSquawk：芝加哥联储 Goolsbee 称九月 CPI“令人沮丧”、服务业通胀令人担忧，若通胀水平持续则政策需应对，并称“更多糟糕通胀月不可接受”；旧金山联储 Daly：更可能需要进一步加息，但非紧急姿态、宜深思熟虑。同期纽约联储连续第三个月不为金融体系新增购债，仅做约 146 亿美元国债再投资。",
+      "impact": "官员口头偏鹰抬高终端利率与期限溢价预期，强化对长久期 AI/科技资产的贴现压力。",
+      "direction": "利空",
+      "horizon": "至 10 月/后续 FOMC",
+      "affected": [
+        "利率期货",
+        "成长股",
+        "债券"
+      ],
+      "counterCase": "若后续核心服务通胀回落，官员可能重新强调“观望数据”，口头鹰派迅速钝化。",
+      "selectionReason": "把已公布 CPI 接到可交易的政策反应函数。",
+      "credibilityReason": "多家快讯转述官员言论；非会议声明原文。",
+      "change": "进展",
+      "continuationReason": "承接上期九月 CPI 超预期事件，本窗重点是政策反应而非数据初值。",
+      "eventTime": "2026-10-14T19:10:00.000Z",
+      "eventTimeNote": "以 DeItaone 首条 Goolsbee 快讯时间近似。",
+      "attentionEvidence": "DeItaone「CPI DATA WAS DISCOURAGING」展示约 8.9 万。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110448215955054802",
+          "postId": "2110448215955054802",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-14T19:10:39.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "FED'S GOOLSBEE: CPI DATA WAS 'DISCOURAGING'",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/LiveSquawk/status/2110486000715931978",
+          "postId": "2110486000715931978",
+          "username": "LiveSquawk",
+          "publishedAt": "2026-10-14T21:40:48.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "Fed's Daly: More Likely Than Not To Need More Rate Hikes",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110449723580780999",
+          "postId": "2110449723580780999",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-14T19:16:39.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "FED’S GOOLSBEE SAYS THE CPI DATA WAS ‘DISCOURAGING’",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [
+        {
+          "name": "Austan Goolsbee",
+          "intro": "芝加哥联储主席"
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "多家快讯转述官员言论；非会议声明原文。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "anthropic-q3-16-8b-profit-ipo-2026-10-14",
+      "title": "Anthropic 向投资人披露 Q3 营收约 168 亿美元并称调整后盈利",
+      "fact": "DeItaone/FirstSquawk/KobeissiLetter/unusual_whales 转述 Financial Times：Anthropic 在非公开投资人会议称第三季度营收约 168 亿美元（上季约 115 亿美元），并称调整后实现盈利、为潜在 IPO 做准备；部分转述提及估值叙事至约 2 万亿美元量级。SecondOrderMap 等提醒这是私企披露的营收口径、非公开审计利润表。",
+      "impact": "若单位经济可核验，将强化“AI 实验室可现金化”叙事并对比 OpenAI 融资路径；若仅为调整后口径或不可复核，则可能加剧对 AI 估值的质疑。",
+      "direction": "双向",
+      "horizon": "数周至潜在 IPO 窗口",
+      "affected": [
+        "AI 软件估值",
+        "云与算力需求预期",
+        "同类私募定价"
+      ],
+      "counterCase": "若缺乏独立审计、或开源低价模型继续压缩 token 毛利，市场可能无视营收增速而重估倍数。",
+      "selectionReason": "窗口内对 AI 商业化兑现度信息量最大的新增财务披露。",
+      "credibilityReason": "多家转述 FT，但原报道与公司审计报表未在本采集路径直读。",
+      "change": "新增",
+      "eventTime": "2026-10-14T22:14:10.000Z",
+      "eventTimeNote": "以 DeItaone 快讯时间近似；FT 原文发布时间未在所用帖中写明。",
+      "attentionEvidence": "KobeissiLetter 相关帖展示约 24.7 万；unusual_whales 约 17.6 万。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110494400732090538",
+          "postId": "2110494400732090538",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-14T22:14:10.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "ANTHROPIC REVENUE JUMPS TO $16.8BN IN Q3 - FT",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/KobeissiLetter/status/2110497672381780034",
+          "postId": "2110497672381780034",
+          "username": "KobeissiLetter",
+          "publishedAt": "2026-10-14T22:27:10.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "Anthropic posted Q3 2026 revenue of $16.8 billion, up nearly +50% from the $11.5 billion",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 35,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 35,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 8,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/SecondOrderMap/status/2110502307934896408",
+          "postId": "2110502307934896408",
+          "username": "SecondOrderMap",
+          "publishedAt": "2026-10-14T22:45:36.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "Anthropic's reported $16.8B quarter is a revenue number—not a profit number.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "多家转述 FT，但原报道与公司审计报表未在本采集路径直读。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "gfs-japan-21b-malta-plants-2026-10-14",
+      "title": "Donald Trump宣布 GlobalFoundries 获约 210 亿美元日资新建纽约马耳他晶圆厂",
+      "fact": "DeItaone：Donald Trump 称 GlobalFoundries 将在纽约马耳他新建两座半导体制造设施，资金来自约 210 亿美元日本资本，预计创造约 2.7 万建设与供应链就业。CommerceGov：称系美日贸易协议结果，由 GlobalFoundries 运营。FirstSquawk 另称Donald Trump表示美国纳税人将获得 GlobalFoundries 股份。",
+      "impact": "补贴/贸易协议驱动的产能本地化改变成熟制程与特种工艺供给预期，并牵动日资回流与美国产业政策可信度定价。",
+      "direction": "双向",
+      "horizon": "数月至数年产能落地",
+      "affected": [
+        "半导体设备与材料",
+        "美国制造叙事",
+        "日资/贸易协议相关资产"
+      ],
+      "counterCase": "若融资未能按披露到位、环评/建设延期，或产能与 AI 先进节点需求错配，则就业与供应故事需下调。",
+      "selectionReason": "窗口内可核验的半导体产业政策级资本开支事件。",
+      "credibilityReason": "白宫贸易叙事经商务部账号与快讯交叉；股份安排细节仍待监管文件。",
+      "change": "新增",
+      "eventTime": "2026-10-14T16:42:19.000Z",
+      "eventTimeNote": "以 DeItaone 快讯时间近似。",
+      "attentionEvidence": "DeItaone 展示约 15.6 万；CommerceGov 约 4.4 万。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110410884874973389",
+          "postId": "2110410884874973389",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-14T16:42:19.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "TRUMP ANNOUNCES $21 BILLION SEMICONDUCTOR INVESTMENT BY GLOBALFOUNDRIES",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/CommerceGov/status/2110418182532198685",
+          "postId": "2110418182532198685",
+          "username": "CommerceGov",
+          "publishedAt": "2026-10-14T17:11:19.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "Japan will provide up to $21 BILLION to build two new semiconductor factories in upstate New York.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110411144653664676",
+          "postId": "2110411144653664676",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-14T16:43:21.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "TRUMP: US TAXPAYER WILL RECEIVE SHARES IN GLOBALFOUNDRIES",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "白宫贸易叙事经商务部账号与快讯交叉；股份安排细节仍待监管文件。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "apple-closes-above-5t-2026-10-14",
+      "title": "Apple 收盘市值站上 5 万亿美元",
+      "fact": "WSJ：Apple 于周三收盘成为第二家市值站上 5 万亿美元的公司，时值 Tim Cook 时代收官叙事与新任 CEO John Ternus 交接背景；同日大盘因通胀与 AI 担忧显著回调，苹果相对抗跌。",
+      "impact": "指数权重与被动资金再平衡可能阶段性支撑 AAPL，但亦凸显市场集中度；若利率继续上行，超大市值成长股仍可能补跌。",
+      "direction": "双向",
+      "horizon": "数日至数周",
+      "affected": [
+        "AAPL",
+        "纳指权重",
+        "被动基金再平衡"
+      ],
+      "counterCase": "若大盘继续下跌或中国 AI 功能落地不及预期，5T 关口可能迅速失守。",
+      "selectionReason": "熊市式回调日中的极端市值里程碑，反映结构分化。",
+      "credibilityReason": "WSJ 报道；精确市值以交易所收盘数据为准。",
+      "change": "新增",
+      "eventTime": "2026-10-14T20:00:00.000Z",
+      "eventTimeNote": "以美东收盘市值里程碑近似；WSJ 发帖 22:14Z。",
+      "attentionEvidence": "WSJ 帖展示约 3.7 万。",
+      "sources": [
+        {
+          "url": "https://x.com/WSJ/status/2110494492675428787",
+          "postId": "2110494492675428787",
+          "username": "WSJ",
+          "publishedAt": "2026-10-14T22:14:32.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "Apple became the second company to close above the $5 trillion mark on Wednesday",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "WSJ 报道；精确市值以交易所收盘数据为准。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [
+    {
+      "eventKey": "cpi-fed-ai-discount-resonance-2026-10-15",
+      "title": "热通胀→官员偏鹰→AI 折现：资本成本如何再定价算力叙事",
+      "fact": "CPI 超预期后，Goolsbee/Daly 偏鹰与标普/纳指大跌同窗出现；半导体与 AI 相关资产在利率敏感度上首当其冲。",
+      "impact": "事件→通胀意外→政策反应函数→期限溢价/折现率→AI 重资本项目回报门槛与股权风险溢价。",
+      "direction": "利空",
+      "horizon": "至下次关键通胀与 FOMC",
+      "affected": [
+        "AI 基础设施股",
+        "长久期成长股"
+      ],
+      "counterCase": "若核心服务通胀回落证明冲击主要来自能源，路径可从“加息”转为“观望”。",
+      "selectionReason": "把焦点市场下跌接到资本成本知识卡。",
+      "credibilityReason": "快讯与行情交叉；非因果计量证明。",
+      "change": "进展",
+      "continuationReason": "上期已写 CPI→贴现；本窗补上官员反应与价格发现。",
+      "eventTime": "2026-10-14T20:05:16.000Z",
+      "knowledgeCards": [
+        "M01",
+        "I01",
+        "R01"
+      ],
+      "disciplines": [
+        "宏观利率",
+        "半导体资本开支"
+      ],
+      "knowledgeApplication": "M01：需比较加息路径与盈利下修路径谁更强；I01：融资成本上升时供应商订单可能仍在而采购方 FCF 承压；R01：冲击须经贴现率与仓位才能到股价。",
+      "sources": [
+        {
+          "url": "https://x.com/FirstSquawk/status/2110464280730751077",
+          "postId": "2110464280730751077",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-14T20:14:29.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "U.S. STOCKS FELL AS RENEWED LOSSES IN SEMICONDUCTOR SHARES",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/KobeissiLetter/status/2110477200759652451",
+          "postId": "2110477200759652451",
+          "username": "KobeissiLetter",
+          "publishedAt": "2026-10-14T21:05:50.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "While CPI inflation up to 3.7%, inflation is much higher in many crucial categories",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [
+        {
+          "name": "Austan Goolsbee",
+          "intro": "芝加哥联储主席"
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "快讯与行情交叉；非因果计量证明。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "fed-tbill-reinvest-only-3rd-mo-2026-10-14",
+      "title": "纽约联储连续三月不新增购债：流动性微调与期限溢价",
+      "fact": "DeItaone：纽约联储连续第三个月不通过新增国债购买向金融体系注入额外资金，仍将以再投资方式购买约 146 亿美元国债。",
+      "impact": "事件→准备金增长放缓→货币市场与短端利率缓冲变薄→与热通胀叠加时放大长端波动。",
+      "direction": "利空",
+      "horizon": "数周",
+      "affected": [
+        "货币市场",
+        "短端利率",
+        "风险资产流动性溢价"
+      ],
+      "counterCase": "若准备金仍充裕或财政部发行结构变化对冲，市场可能忽略再投资细节。",
+      "selectionReason": "资本成本包的可观察操作层证据。",
+      "credibilityReason": "快讯转述纽约联储操作；非声明全文直读。",
+      "change": "新增",
+      "eventTime": "2026-10-14T19:13:51.000Z",
+      "knowledgeCards": [
+        "M02",
+        "M05",
+        "R06"
+      ],
+      "disciplines": [
+        "财政债务",
+        "货币市场"
+      ],
+      "knowledgeApplication": "M02：国债供需与期限溢价；M05：流动性微调需经银行/基金渠道才升级为公开市场压力；R06：区分操作层与 FOMC 政策利率决策时间尺度。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110449019931513101",
+          "postId": "2110449019931513101",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-14T19:13:51.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "FED HOLDS OFF ON NEW BOND PURCHASES FOR THIRD STRAIGHT MONTH",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "快讯转述纽约联储操作；非声明全文直读。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "anthropic-unit-econ-ipo-path-2026-10-14",
+      "title": "Anthropic 调整后盈利与算力回报叙事：终端付费能否撑起上游资本开支",
+      "fact": "FT 转述显示 Anthropic Q3 营收约 168 亿美元并称调整后盈利；部分转述称每 1 美元算力支出对应约 1.70 美元营收。同窗亦有开源模型低价压制毛利的讨论。",
+      "impact": "事件→单位经济改善声称→IPO/融资条件→云与 GPU 需求可持续性预期。",
+      "direction": "双向",
+      "horizon": "IPO 前后数月",
+      "affected": [
+        "AI 应用层估值",
+        "云资本开支预期"
+      ],
+      "counterCase": "调整后口径若剔除大额算力合约或股权成本，现金利润仍可能为负。",
+      "selectionReason": "AI 落地包：把营收接到可证伪的单位经济。",
+      "credibilityReason": "二手转述；缺审计附注。",
+      "change": "新增",
+      "eventTime": "2026-10-14T22:14:10.000Z",
+      "knowledgeCards": [
+        "I02",
+        "I01",
+        "R04"
+      ],
+      "disciplines": [
+        "AI商业化",
+        "资本开支"
+      ],
+      "knowledgeApplication": "I02：区分独立付费客户与循环融资；I01：实验室盈利改善不一定立刻降低供应商订单；R04：事前写明审计口径变化即证伪点。",
+      "sources": [
+        {
+          "url": "https://x.com/unusual_whales/status/2110497515334521195",
+          "postId": "2110497515334521195",
+          "username": "unusual_whales",
+          "publishedAt": "2026-10-14T22:26:33.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "Anthropic says it was profitable in the third quarter, on an adjusted basis, per the Financial Times.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/TheLatentCo/status/2110528610469867528",
+          "postId": "2110528610469867528",
+          "username": "TheLatentCo",
+          "publishedAt": "2026-10-15T00:30:07.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "generated $1.70 in revenue per $1 spent on computing power during the quarter",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "二手转述；缺审计附注。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "openai-eu-agents-adoption-2026-10-14",
+      "title": "OpenAI：欧盟企业客户逾半数 AI 使用已涉及 agent 工具",
+      "fact": "@OpenAI：欧洲企业正快速扩大 AI agent 使用，欧盟企业与商业客户中逾半数 AI 使用涉及此类工具，该地区小企业用户数增至约 8 倍，并指向其经济研究报告。",
+      "impact": "事件→席位/API 采用深化→推理用量与云账单→上游算力需求；亦可能抬高安全与监管合规成本。",
+      "direction": "利多",
+      "horizon": "数季度",
+      "affected": [
+        "OpenAI 生态",
+        "云推理需求",
+        "企业软件替代"
+      ],
+      "counterCase": "若报告样本偏差大或付费转化低于活跃使用，收入弹性可能弱于采用叙事。",
+      "selectionReason": "AI 落地包的官方采用数据点。",
+      "credibilityReason": "公司官号一手；研究方法细节未展开。",
+      "change": "新增",
+      "eventTime": "2026-10-14T18:45:57.000Z",
+      "knowledgeCards": [
+        "I06",
+        "I02",
+        "R05"
+      ],
+      "disciplines": [
+        "AI落地",
+        "企业软件"
+      ],
+      "knowledgeApplication": "I06：应用层采用可能改变硬件/云相对强弱；I02：追问是否转为独立付费；R05：公司研究属利益相关披露。",
+      "sources": [
+        {
+          "url": "https://x.com/OpenAI/status/2110442001749659890",
+          "postId": "2110442001749659890",
+          "username": "OpenAI",
+          "publishedAt": "2026-10-14T18:45:57.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "More than half of the AI use among our EU enterprise and business customers now involves these tools",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 49,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 92,
+            "claimScore": 47,
+            "breakdown": {
+              "directness": 30,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "账号在人工来源表中登记为机构一手来源"
+            ],
+            "warnings": [
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 49,
+        "label": "规则初评，未校准",
+        "reason": "公司官号一手；研究方法细节未展开。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "us-shadow-fleet-oil-freight-2026-10-14",
+      "title": "美方讨论放松部分影子船队制裁以压低运价、促油流",
+      "fact": "FirstSquawk/LiveSquawk 转述路透官员：美国正讨论解除部分影子船队船舶制裁，试图降低全球运费并增加中东油流。同窗另有 FT 转述美方考虑解冻部分俄资产以重启乌克兰和谈、欧洲官员拒绝。",
+      "impact": "事件→制裁执行松紧→有效海运供给与保险成本→油价与通胀预期；和谈资产线索并行但遭欧方抵制。",
+      "direction": "双向",
+      "horizon": "数周",
+      "affected": [
+        "原油与成品油",
+        "油运",
+        "通胀预期"
+      ],
+      "counterCase": "若仅停留在讨论、或影子船队运力本就充裕，运价与油价反应可能有限。",
+      "selectionReason": "地缘能源物流包的政策松紧可证伪点。",
+      "credibilityReason": "路透官员匿名转述；非已签署行政令。",
+      "change": "新增",
+      "eventTime": "2026-10-15T00:11:48.000Z",
+      "knowledgeCards": [
+        "M07",
+        "M06",
+        "R02"
+      ],
+      "disciplines": [
+        "能源航运",
+        "地缘政治"
+      ],
+      "knowledgeApplication": "M07：供应取决于替代路线、保险与执法；M06：谈判叙事须落到制裁/供给；R02：放松制裁可能压油价但也改变谈判筹码。",
+      "sources": [
+        {
+          "url": "https://x.com/FirstSquawk/status/2110524002825654388",
+          "postId": "2110524002825654388",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T00:11:48.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "US DISCUSSING LIFTING SOME SANCTIONS ON SHADOW FLEET VESSELS",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110517953829671115",
+          "postId": "2110517953829671115",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-14T23:47:46.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "EUROPEAN OFFICIALS REJECT US PLAN TO UNFREEZE SOME RUSSIAN ASSETS",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "路透官员匿名转述；非已签署行政令。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "starlink-senate-musk-limits-2026-10-15",
+      "title": "参议员就乌克兰 Starlink 中断追问 Musk；攻防用途限制再确认",
+      "fact": "FirstSquawk：美国参议员要求 Elon Musk 就乌克兰 Starlink 中断作出说明；另转述 Musk 称 Starlink 限于民事或防御、不可用于进攻性军事行动。Reuters 亦报道乌方称军用终端高速移动时功能被打断。",
+      "impact": "事件→私营基础设施对战时空制权→防务/卫星估值与政策干预溢价；并反证能源停火声明的可执行性讨论。",
+      "direction": "双向",
+      "horizon": "数日",
+      "affected": [
+        "SpaceX/Starlink",
+        "防务通信",
+        "地缘风险溢价"
+      ],
+      "counterCase": "若中断被证实为技术故障且迅速恢复，政策干预溢价回落。",
+      "selectionReason": "上期 Starlink 限制事件的窗口内进展。",
+      "credibilityReason": "通讯社与快讯交叉；SpaceX 官方工程说明未直读。",
+      "change": "进展",
+      "continuationReason": "延续 spacex-starlink-ukraine-limits 线索。",
+      "eventTime": "2026-10-15T00:29:40.000Z",
+      "knowledgeCards": [
+        "M06",
+        "M08",
+        "R04"
+      ],
+      "disciplines": [
+        "地缘政治",
+        "卫星通信"
+      ],
+      "knowledgeApplication": "M06：私营能力成为战争约束；M08：关键基础设施本地化/可控性议题；R04：以可观察终端可用性为证伪。",
+      "sources": [
+        {
+          "url": "https://x.com/FirstSquawk/status/2110528498993664067",
+          "postId": "2110528498993664067",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T00:29:40.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "US SENATORS ARE SEEKING ANSWERS FROM ELON MUSK OVER REPORTED STARLINK OUTAGES IN UKRAINE",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110447243648282859",
+          "postId": "2110447243648282859",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-14T19:06:47.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "MUSK SAYS STARLINK IS LIMITED TO CIVILIAN OR DEFENSIVE ACTIVITIES",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "通讯社与快讯交叉；SpaceX 官方工程说明未直读。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "openai-states-sue-chatgpt-youth-2026-10-14",
+      "title": "八个美国州起诉 OpenAI：称 ChatGPT 伤害青少年用户",
+      "fact": "DeItaone/Reuters：八个美国州起诉 OpenAI，指控 ChatGPT 对年轻用户造成伤害。同窗另有 OpenAI 与 Apple 就前雇员文件与未发布设备的诉讼材料交锋。",
+      "impact": "事件→产品责任/安全合规成本→部署节奏与企业采购条款；监管溢价可能外溢至同行。",
+      "direction": "利空",
+      "horizon": "数月至诉讼进展",
+      "affected": [
+        "OpenAI",
+        "消费级 AI 应用",
+        "AI 监管溢价"
+      ],
+      "counterCase": "若法院快速驳回或和解范围狭窄，估值冲击可能短暂。",
+      "selectionReason": "AI 落地包的监管/安全约束新增事实。",
+      "credibilityReason": "通讯社报道；起诉状全文未直读。",
+      "change": "新增",
+      "eventTime": "2026-10-14T18:38:29.000Z",
+      "knowledgeCards": [
+        "M08",
+        "I06",
+        "R08"
+      ],
+      "disciplines": [
+        "监管制度",
+        "AI产品"
+      ],
+      "knowledgeApplication": "M08：合规改变市场范围与成本；I06：安全事件可能引发应用层相对强弱切换；R08：诉讼当事人有激励框架。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110440119215984998",
+          "postId": "2110440119215984998",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-14T18:38:29.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "EIGHT U.S. STATES SUE OPENAI, CLAIMING CHATGPT HARMS CHILDREN",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/Reuters/status/2110528669852611036",
+          "postId": "2110528669852611036",
+          "username": "Reuters",
+          "publishedAt": "2026-10-15T00:30:21.000Z",
+          "checkedAt": "2026-10-15T00:45:00.000Z",
+          "excerpt": "Eight US states sue OpenAI, claiming ChatGPT harms young users",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "通讯社报道；起诉状全文未直读。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "id": "2026-10-15-0900",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T01:01:55.654Z",
+  "counts": {
+    "focus": 5,
+    "insights": 7,
+    "total": 12
+  }
+}

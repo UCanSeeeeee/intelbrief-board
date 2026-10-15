@@ -1,75 +1,145 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14T13:14:38.471Z",
-  "cutoff": "2026-10-14T21:00:00+08:00",
+  "updatedAt": "2026-10-15T00:45:00.000Z",
+  "cutoff": "2026-10-15T09:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "partial",
-        "note": "官方账号本窗无原创帖；不采传闻"
+        "status": "complete",
+        "note": "官号 agent 报告+州诉讼"
       },
       {
         "id": "anthropic",
         "status": "complete",
-        "note": "新加坡办公室+MOU；工程源码系统已在前期入库不重复占帖"
+        "note": "Q3 财务转述+新加坡官号"
       },
       {
         "id": "goog-ai",
-        "status": "partial",
-        "note": "本窗 DeepMind/Gemini 一手新产品不足"
+        "status": "complete",
+        "note": "DeepMind Argon"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "白宫超级智能竞赛可入；其余不足"
+        "note": "窗口内无足够独立其他实验室一手"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "anthropic-singapore-office-mou-2026-10-14",
+      "eventKey": "openai-eu-agents-report-2026-10-14",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI：欧盟企业客户逾半 AI 使用涉及 agent",
+      "fact": "@OpenAI 称欧盟企业与商业客户中逾半数 AI 使用涉及 agent 工具，该地区小企业用户增至约 8 倍。",
+      "whyItMatters": "官方采用数据，关乎 API/席位商业化。",
+      "counterCase": "使用≠付费转化。",
+      "affected": [
+        "OpenAI",
+        "企业AI"
+      ],
+      "author": "OpenAI",
+      "publishedAt": "2026-10-14T18:45:57.000Z",
+      "url": "https://x.com/OpenAI/status/2110442001749659890",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "openai": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "openai-states-sue-2026-10-14",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "转述：八州起诉 OpenAI 称 ChatGPT 伤害青少年",
+      "fact": "DeItaone/Reuters：八个美国州起诉 OpenAI。",
+      "whyItMatters": "安全与产品责任监管风险。",
+      "counterCase": "诉讼主张待法庭检验。",
+      "affected": [
+        "OpenAI"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-14T18:38:29.000Z",
+      "url": "https://x.com/DeItaone/status/2110440119215984998",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "openai": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-q3-revenue-ft-2026-10-14",
       "tabIds": [
         "anthropic"
       ],
-      "title": "Anthropic：新加坡新办公室并与政府签 AI 安全 MOU",
-      "fact": "@AnthropicAI：开设新加坡办公室（亚太第五个），并与新加坡政府签署 AI 安全与负责任采用谅解备忘录。",
-      "whyItMatters": "区域落地与安全治理影响企业采购合规路径。",
-      "counterCase": "MOU 不等于已确认收入。",
+      "title": "转述 FT：Anthropic Q3 营收约 168 亿美元并称调整后盈利",
+      "fact": "DeItaone 等转述 Financial Times：Anthropic 向投资人披露 Q3 营收约 168 亿美元，并称调整后盈利、筹备 IPO。",
+      "whyItMatters": "实验室商业化最强财务线索之一。",
+      "counterCase": "私企披露、非审计报表。",
       "affected": [
         "Anthropic",
-        "东南亚AI治理"
+        "AI估值"
       ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-14T08:40:45.000Z",
-      "url": "https://x.com/AnthropicAI/status/2110289695888511368",
+      "author": "DeItaone",
+      "publishedAt": "2026-10-14T22:14:10.000Z",
+      "url": "https://x.com/DeItaone/status/2110494400732090538",
       "verification": "collector-report",
-      "tier": "must-read",
+      "tier": "watch",
       "weeklyRanks": {
         "anthropic": 1
       },
       "people": []
     },
     {
-      "eventKey": "ai-others-wh-superintelligence-2026-10-13",
+      "eventKey": "anthropic-singapore-office-2026-10-14",
       "tabIds": [
-        "ai-others"
+        "anthropic"
       ],
-      "title": "白宫：美国处于超级智能竞赛并推广 Genesis Mission",
-      "fact": "@WhiteHouse 称美国处于超级智能竞赛并意图获胜，指向 Genesis Mission 等行动。",
-      "whyItMatters": "政府 AI 竞赛叙事影响公共算力与出口管制议程。",
-      "counterCase": "缺预算与立法细节。",
+      "title": "Anthropic：新加坡新办公室并与政府签 AI 安全 MOU",
+      "fact": "@AnthropicAI：开设新加坡办公室（亚太第五个），并与新加坡政府签署 AI 安全与负责任采用备忘录。",
+      "whyItMatters": "区域扩张与安全治理合作。",
+      "counterCase": "MOU 非合同收入。",
       "affected": [
-        "美国AI政策"
+        "Anthropic"
       ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-13T23:50:45.000Z",
-      "url": "https://x.com/WhiteHouse/status/2110156315851124971",
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-14T08:40:45.000Z",
+      "url": "https://x.com/AnthropicAI/status/2110289695888511368",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
+      "weeklyRanks": {
+        "anthropic": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "deepmind-gemini4-argon-science-2026-10-14",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "Google DeepMind：Gemini 4 Argon 用于量子/聚变/蛋白等科研",
+      "fact": "@GoogleDeepMind 称 Gemini 4 Argon 已在量子纠错、核聚变磁场设计、酶工程等方向解锁进展，并向 1 万名科学家提供六个月最高用量层免费访问。",
+      "whyItMatters": "AI 科研产品落地线索。",
+      "counterCase": "公司宣传；独立复现待观察。",
+      "affected": [
+        "GOOG",
+        "DeepMind"
+      ],
+      "author": "GoogleDeepMind",
+      "publishedAt": "2026-10-14T17:25:56.000Z",
+      "url": "https://x.com/GoogleDeepMind/status/2110421861435879476",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "goog-ai": 1
+      },
       "people": []
     }
   ]

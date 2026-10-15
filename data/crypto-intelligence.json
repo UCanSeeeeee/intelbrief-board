@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14T13:14:38.471Z",
-  "cutoff": "2026-10-14T21:00:00+08:00",
+  "updatedAt": "2026-10-15T00:45:00.000Z",
+  "cutoff": "2026-10-15T09:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,44 +9,91 @@
       {
         "id": "crypto-board",
         "status": "partial",
-        "note": "泰国 SEC 加密 ETF 框架；美现货 ETF 流出多为二手"
+        "note": "渣打阿联酋通道+ETF 流入"
       },
       {
         "id": "btc",
         "status": "partial",
-        "note": "泰国框架覆盖 BTC；流量数字证据弱"
+        "note": "ETF/价格/银行通道"
       },
       {
         "id": "brew",
         "status": "partial",
-        "note": "7 日窗 Brew/合约无合格原帖"
+        "note": "窗口内无可核验协议或流动性新增"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "thailand-sec-crypto-etf-rules-2026-10-13",
+      "eventKey": "standard-chartered-uae-btc-eth-2026-10-14",
       "tabIds": [
         "crypto-board",
         "btc"
       ],
-      "title": "转述：泰国 SEC 加密 ETF 规则将于 10/16 生效，首批限 BTC/ETH",
-      "fact": "@SHATOSHI_BTC 等称泰国 SEC 通知将于 10 月 16 日生效，首阶段仅 Bitcoin 与 Ethereum、被动、平均净敞口至少约 80%；强调规则生效不等于 SET 已上市产品。",
-      "whyItMatters": "亚洲受监管现货通道影响区域资金准入预期。",
-      "counterCase": "仍需管理人获批；非美国 SEC 行动。",
+      "title": "转述：渣打在阿联酋通过银行账户提供 BTC/ETH 交易",
+      "fact": "WatcherGuru/BitcoinMagazine：Standard Chartered 成为阿联酋首家为合资格客户直接通过银行账户提供 Bitcoin 与 Ethereum 交易的国际银行。",
+      "whyItMatters": "受监管银行通道影响区域机构准入预期。",
+      "counterCase": "仅合资格客户；非美国 ETF 资金流。",
       "affected": [
         "BTC",
         "ETH",
-        "亚洲加密ETF"
+        "中东加密准入"
       ],
-      "author": "SHATOSHI_BTC",
-      "publishedAt": "2026-10-13T19:35:26.000Z",
-      "url": "https://x.com/SHATOSHI_BTC/status/2110092065388290463",
+      "author": "WatcherGuru",
+      "publishedAt": "2026-10-14T10:23:52.000Z",
+      "url": "https://x.com/WatcherGuru/status/2110315645237965228",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
         "crypto-board": 1,
         "btc": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "us-spot-btc-etf-inflow-175m-2026-10-14",
+      "tabIds": [
+        "btc",
+        "crypto-board"
+      ],
+      "title": "转述：美国现货 Bitcoin ETF 单日净流入约 1.757 亿美元",
+      "fact": "BitcoinMagazine：称美国现货 Bitcoin ETF 前一日净流入约 1.757 亿美元。",
+      "whyItMatters": "机构资金流线索。",
+      "counterCase": "单日波动大；需核对发行商合计数据。",
+      "affected": [
+        "BTC",
+        "现货ETF"
+      ],
+      "author": "BitcoinMagazine",
+      "publishedAt": "2026-10-14T17:31:18.000Z",
+      "url": "https://x.com/BitcoinMagazine/status/2110423215495340390",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "btc": 2,
+        "crypto-board": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "btc-below-83k-on-cpi-2026-10-14",
+      "tabIds": [
+        "btc"
+      ],
+      "title": "转述：热 CPI 后 Bitcoin 跌破 8.3 万美元",
+      "fact": "BitcoinMagazine：称 CPI 同比 3.7% 超预期后 Bitcoin 跌破 8.3 万美元，并引用 CME 加息概率叙事。",
+      "whyItMatters": "宏观风险偏好向加密传导。",
+      "counterCase": "价格快讯非链上基本面。",
+      "affected": [
+        "BTC"
+      ],
+      "author": "BitcoinMagazine",
+      "publishedAt": "2026-10-14T12:46:43.000Z",
+      "url": "https://x.com/BitcoinMagazine/status/2110351596681097709",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "btc": 3
       },
       "people": []
     }

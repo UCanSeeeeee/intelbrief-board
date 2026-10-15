@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14T13:14:38.471Z",
-  "cutoff": "2026-10-14T21:00:00+08:00",
+  "updatedAt": "2026-10-15T00:45:00.000Z",
+  "cutoff": "2026-10-15T09:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,22 +9,22 @@
       {
         "id": "elon-musk",
         "status": "partial",
-        "note": "本人账号：Starship/FSD/Starlink 可作规则或热度；无 xAI 资本开支新财务披露"
+        "note": "Starlink 开通 1 条规则；其余为 Grok/Tesla 热度；无 xAI 财务一手"
       },
       {
         "id": "jensen-huang",
         "status": "partial",
-        "note": "本人无直发；nvidia 官号巴黎 Macron 活动与英国算力承诺（可回查官号）"
+        "note": "本人无直发；nvidia 官号伦敦投资与英国算力访问可回查"
       },
       {
         "id": "donald-trump",
         "status": "partial",
-        "note": "WhiteHouse Alaska LNG / Genesis；TrumpDailyPosts 多为政治口水，热度补位"
+        "note": "GFS 建厂与 Alaska LNG 政策线索；其余政治热度补位；POTUS 窗口内无帖"
       },
       {
         "id": "trillion-leaders",
         "status": "partial",
-        "note": "近 30 日窗高管一手高价值不足，仅保留可归因线索不足 5"
+        "note": "近窗万亿高管一手高价值不足，未凑数"
       },
       {
         "id": "research-reports",
@@ -35,65 +35,63 @@
   },
   "items": [
     {
-      "eventKey": "jensen-heat-uk-250m-2026-10-14",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "热度：NVIDIA 称五年向英国提供约 2.5 亿美元算力访问",
-      "fact": "@nvidia 称英国正用 NVIDIA 建设，并承诺五年 2.5 亿美元算力访问以支持 AI agent 安全研究等。",
-      "whyItMatters": "热度参考；区域算力政策。",
-      "counterCase": "「算力访问」未必等于新增采购。",
-      "affected": [
-        "NVDA",
-        "英国AI"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-14T06:26:12.000Z",
-      "url": "https://x.com/nvidia/status/2110255837297987913",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 299,
-        "reposts": 59,
-        "replies": 51,
-        "quotes": 16,
-        "views": 32956,
-        "bookmarks": 12,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "elon-heat-timing-2026-10-14",
+      "eventKey": "elon-starlink-curacao-2026-10-14",
       "tabIds": [
         "elon-musk"
       ],
-      "title": "热度：Elon Musk “Timing is everything”",
-      "fact": "@elonmusk 引用帖并写 “Timing is everything”。",
-      "whyItMatters": "热度参考；无新增财务事实。",
-      "counterCase": "口号不构成投资论点。",
+      "title": "Elon Musk：Starlink 已在库拉索可用",
+      "fact": "@elonmusk 转发并评论 Starlink 现已在库拉索（Curaçao）可用。",
+      "whyItMatters": "SpaceX 卫星宽带网络扩张，属基础设施覆盖新增事实。",
+      "counterCase": "开通不等于当地军事/政企大规模合同。",
       "affected": [
-        "注意力"
+        "SpaceX",
+        "Starlink"
       ],
       "author": "elonmusk",
-      "publishedAt": "2026-10-14T04:12:02.000Z",
-      "url": "https://x.com/elonmusk/status/2110222071229989249",
+      "publishedAt": "2026-10-14T23:26:47.000Z",
+      "url": "https://x.com/elonmusk/status/2110512674673222058",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "elon-musk": 1
+      },
+      "selection": "rule",
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-heat-grok-voice-2026-10-14",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "热度：Elon Musk 称 Grok Voice 3.0 为全球领先语音对话模型",
+      "fact": "@elonmusk：“Grok Voice 3.0 is now the world’s leading conversational voice model”。",
+      "whyItMatters": "热度参考；xAI 产品宣传。",
+      "counterCase": "自评领先缺乏第三方基准。",
+      "affected": [
+        "xAI",
+        "Grok"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-14T21:32:41.000Z",
+      "url": "https://x.com/elonmusk/status/2110483960312799675",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
       "selection": "engagement",
       "engagement": {
-        "likes": 23260,
-        "reposts": 2065,
-        "replies": 2228,
-        "quotes": 351,
-        "views": 1939782,
-        "bookmarks": 1072,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 4985,
+        "reposts": 605,
+        "replies": 767,
+        "quotes": 73,
+        "views": 785083,
+        "bookmarks": 297
       },
       "people": [
         {
@@ -103,14 +101,217 @@
       ]
     },
     {
-      "eventKey": "jensen-heat-handshake-2026-10-14",
+      "eventKey": "elon-heat-ev-threshold-2026-10-14",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "热度：Elon Musk 称几乎所有汽车未来都将是电动车",
+      "fact": "@elonmusk：“Major threshold passed. Almost all cars will be electric in the future.”",
+      "whyItMatters": "热度参考；Tesla 叙事。",
+      "counterCase": "口号不等于当期交付/利润验证。",
+      "affected": [
+        "Tesla"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-14T23:23:32.000Z",
+      "url": "https://x.com/elonmusk/status/2110511855731159239",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 13324,
+        "reposts": 1067,
+        "replies": 1647,
+        "quotes": 188,
+        "views": 809636,
+        "bookmarks": 525
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-heat-timing-2026-10-14",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "热度：Elon Musk “Timing is everything”",
+      "fact": "@elonmusk 引用帖并评论 “Timing is everything”。",
+      "whyItMatters": "热度补位。",
+      "counterCase": "无新增可核验业务事实。",
+      "affected": [
+        "Tesla",
+        "xAI"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-14T04:12:02.000Z",
+      "url": "https://x.com/elonmusk/status/2110222071229989249",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 36430,
+        "reposts": 3420,
+        "replies": 3799,
+        "quotes": 541,
+        "views": 3796991,
+        "bookmarks": 1688
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-heat-grok-best-voice-2026-10-14",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "热度：Elon Musk 再称 Grok 为最佳对话语音模型",
+      "fact": "@elonmusk：“Grok is the best conversational voice model in the world”。",
+      "whyItMatters": "热度补位。",
+      "counterCase": "重复营销话术。",
+      "affected": [
+        "xAI"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-14T23:58:19.000Z",
+      "url": "https://x.com/elonmusk/status/2110520607276499109",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 2061,
+        "reposts": 252,
+        "replies": 429,
+        "quotes": 27,
+        "views": 458335,
+        "bookmarks": 74
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "jensen-nvidia-uk-builders-invest-2026-10-14",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "NVIDIA：Jensen Huang 在伦敦宣布对英国 AI 初创等新投资",
+      "fact": "@nvidia：Jensen Huang 在伦敦宣布对 boltz_bio、ForesightWorks、hivergeai、PrimaMente、Riverlane 等新投资，覆盖药物到量子计算。",
+      "whyItMatters": "可归因的高管公开活动与生态投资，关乎区域 AI 供应链。",
+      "counterCase": "投资规模与条款未在帖中披露。",
+      "affected": [
+        "NVDA",
+        "英国AI生态"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-14T21:37:32.000Z",
+      "url": "https://x.com/nvidia/status/2110485178929844666",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "jensen-huang": 1
+      },
+      "selection": "rule",
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "jensen-nvidia-uk-250m-access-2026-10-14",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "NVIDIA：五年向英国提供约 2.5 亿美元算力访问",
+      "fact": "@nvidia 称英国正用 NVIDIA 建设，并承诺五年 2.5 亿美元算力访问以支持 AI 等。",
+      "whyItMatters": "区域算力政策可核验承诺。",
+      "counterCase": "「算力访问」未必等于新增 GPU 采购订单。",
+      "affected": [
+        "NVDA",
+        "英国AI"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-14T06:26:12.000Z",
+      "url": "https://x.com/nvidia/status/2110255837297987913",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "jensen-huang": 2
+      },
+      "selection": "rule",
+      "engagement": {
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 445,
+        "reposts": 80,
+        "replies": 76,
+        "quotes": 21,
+        "views": 49905,
+        "bookmarks": 18
+      },
+      "people": []
+    },
+    {
+      "eventKey": "jensen-heat-rtx-spark-countdown-2026-10-14",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "热度：NVIDIA 预告 RTX Spark 10/16 全球发布庆祝",
+      "fact": "@nvidia 预告 10 月 16 日庆祝 NVIDIARTXSpark 发布，并邀请线下/线上参与。",
+      "whyItMatters": "热度参考；消费/开发者产品节奏。",
+      "counterCase": "预告不等于出货量指引。",
+      "affected": [
+        "NVDA"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-14T14:58:21.000Z",
+      "url": "https://x.com/nvidia/status/2110384721809039532",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 257,
+        "reposts": 37,
+        "replies": 45,
+        "quotes": 9,
+        "views": 30548,
+        "bookmarks": 21
+      },
+      "people": []
+    },
+    {
+      "eventKey": "jensen-heat-uk-builders-cheer-2026-10-14",
       "tabIds": [
         "jensen-huang"
       ],
       "title": "热度：NVIDIA 官号发布握手图片帖",
-      "fact": "@nvidia 发布握手图片帖（正文为 emoji）。",
+      "fact": "@nvidia 发布握手图片帖（正文为握手表情）。",
       "whyItMatters": "热度补位。",
-      "counterCase": "无文字事实。",
+      "counterCase": "无实质业务披露。",
       "affected": [
         "NVDA"
       ],
@@ -122,50 +323,40 @@
       "weeklyRanks": {},
       "selection": "engagement",
       "engagement": {
-        "likes": 623,
-        "reposts": 50,
-        "replies": 37,
-        "quotes": 4,
-        "views": 52300,
-        "bookmarks": 30,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 965,
+        "reposts": 77,
+        "replies": 49,
+        "quotes": 6,
+        "views": 78891,
+        "bookmarks": 49
       },
       "people": []
     },
     {
-      "eventKey": "trump-wh-alaska-lng-2026-10-14",
+      "eventKey": "trump-gfs-21b-malta-2026-10-14",
       "tabIds": [
         "donald-trump"
       ],
-      "title": "白宫：Donald Trump 推动阿拉斯加约 800 英里 LNG 管线",
-      "fact": "@WhiteHouse：“AMERICAN ENERGY DOMINANCE… secured the crucial 800-mile Alaska LNG pipeline…” 将项目称为阿拉斯加史上最大能源基建。",
-      "whyItMatters": "能源基建政策影响 LNG 出口、亚洲供给与长期气价预期。",
-      "counterCase": "宣布“secured”不等于已开工/融资关闭；需环评与合同验证。",
+      "title": "转述：Donald Trump 宣布 GlobalFoundries 约 210 亿美元马耳他建厂",
+      "fact": "@TrumpDailyPosts 同步：总统宣布约 210 亿美元制造业投资，GlobalFoundries 与商务部长 Howard Lutnick 将在纽约马耳他建两座半导体厂，预计约 2.7 万就业。DeItaone/CommerceGov 交叉。",
+      "whyItMatters": "可执行的半导体产业与贸易协议资本开支政策。",
+      "counterCase": "同步账号非本人直发；融资与环评落地仍待验证。",
       "affected": [
-        "LNG",
-        "能源基建",
-        "亚洲气价"
+        "半导体",
+        "GFS",
+        "美日贸易"
       ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-14T00:54:40.000Z",
-      "url": "https://x.com/WhiteHouse/status/2110172400595673249",
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-14T16:51:54.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2110413297392455857",
       "verification": "collector-report",
-      "tier": "must-read",
+      "tier": "watch",
       "weeklyRanks": {
         "donald-trump": 1
       },
       "selection": "rule",
-      "engagement": {
-        "likes": 4470,
-        "reposts": 1082,
-        "replies": 604,
-        "quotes": 91,
-        "views": 111093,
-        "bookmarks": 134,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
       "people": [
         {
           "name": "Donald Trump",
@@ -174,402 +365,130 @@
       ]
     },
     {
-      "eventKey": "trump-wh-genesis-superintelligence-2026-10-13",
+      "eventKey": "trump-alaska-lng-50b-2026-10-14",
       "tabIds": [
         "donald-trump"
       ],
-      "title": "白宫：美国处于超级智能竞赛，推广 Genesis Mission",
-      "fact": "@WhiteHouse：“America is in a race for Super Intelligence. WE INTEND TO WIN IT.” 并指向 Genesis Mission 等行动页面。",
-      "whyItMatters": "联邦 AI 竞赛叙事可能影响算力、出口管制与公共研发预算。",
-      "counterCase": "口号页不等于已拨款或已立法。",
+      "title": "转述：Donald Trump 宣布阿拉斯加 LNG 大型能源基建",
+      "fact": "@TrumpDailyPosts：总统宣布阿拉斯加史上最大能源基建，称 Alaska LNG 获韩国约 500 亿美元投资叙事，并提及台湾 offtake。",
+      "whyItMatters": "能源与贸易协议相关可执行政策线索。",
+      "counterCase": "同步源；金额与合同状态需官方文件核对。",
       "affected": [
-        "AI政策",
-        "算力出口管制"
+        "LNG",
+        "能源基建",
+        "亚太贸易"
       ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-13T23:50:45.000Z",
-      "url": "https://x.com/WhiteHouse/status/2110156315851124971",
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-14T16:42:47.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2110411003888292318",
       "verification": "collector-report",
-      "tier": "must-read",
+      "tier": "watch",
       "weeklyRanks": {
         "donald-trump": 2
       },
       "selection": "rule",
-      "engagement": {
-        "likes": 5631,
-        "reposts": 1349,
-        "replies": 864,
-        "quotes": 167,
-        "views": 188597,
-        "bookmarks": 346,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "elon-tesla-fsd-magic-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Tesla 自动驾驶“像魔法”",
-      "fact": "@elonmusk：“Tesla self-driving feels like magic”。",
-      "whyItMatters": "FSD 叙事影响 Tesla 软件估值与监管关注。",
-      "counterCase": "主观体验帖不含里程/接管率等可核验安全数据。",
-      "affected": [
-        "TSLA",
-        "自动驾驶监管"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T23:42:52.000Z",
-      "url": "https://x.com/elonmusk/status/2110154332553597413",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "rule",
-      "engagement": {
-        "likes": 12057,
-        "reposts": 966,
-        "replies": 1494,
-        "quotes": 151,
-        "views": 3366729,
-        "bookmarks": 218,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
       "people": [
         {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
+          "name": "Donald Trump",
+          "intro": "美国总统"
         }
       ]
     },
     {
-      "eventKey": "elon-starship-40-return-2026-10-13",
+      "eventKey": "trump-heat-autism-fraud-charge-2026-10-14",
       "tabIds": [
-        "elon-musk"
+        "donald-trump"
       ],
-      "title": "Elon Musk：Starship 40 返回基地画面",
-      "fact": "@elonmusk 转发并评论 Starship 40 返回基地相关帖：“Starship 40’s return to base”。",
-      "whyItMatters": "SpaceX 可复用进展影响发射成本与星座扩张节奏。",
-      "counterCase": "单次返回画面不等于量产射次或客户收入确认。",
+      "title": "热度：TrumpDailyPosts 转发自闭症项目欺诈指控新闻",
+      "fact": "@TrumpDailyPosts 转发明尼苏达自闭症项目诈骗指控相关内容。",
+      "whyItMatters": "热度补位；非 AI/半导体政策。",
+      "counterCase": "政治口水，无投资传导。",
       "affected": [
-        "SpaceX",
-        "航天发射成本"
+        "政治舆论"
       ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T21:55:52.000Z",
-      "url": "https://x.com/elonmusk/status/2110127406258286757",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 1
-      },
-      "selection": "rule",
-      "engagement": {
-        "likes": 15752,
-        "reposts": 1551,
-        "replies": 786,
-        "quotes": 88,
-        "views": 1410255,
-        "bookmarks": 388,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-heat-starlink-remote-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "热度：Elon Musk 称 Starlink 为偏远地区带来联网",
-      "fact": "@elonmusk：“Starlink brings Internet access to remote places”。",
-      "whyItMatters": "热度参考；与同窗乌克兰军用限制争议对照。",
-      "counterCase": "营销表述不含服务条款变更细节。",
-      "affected": [
-        "Starlink"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T21:47:39.000Z",
-      "url": "https://x.com/elonmusk/status/2110125336759296170",
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-14T21:46:00.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2110487309795909683",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
       "selection": "engagement",
       "engagement": {
-        "likes": 8599,
-        "reposts": 1040,
-        "replies": 1533,
-        "quotes": 146,
-        "views": 1240500,
-        "bookmarks": 226,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 1955,
+        "reposts": 851,
+        "replies": 111,
+        "quotes": 44,
+        "views": 69895,
+        "bookmarks": 67
       },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      "people": []
     },
     {
-      "eventKey": "trump-heat-trust-process-2026-10-13",
+      "eventKey": "trump-heat-birthright-poll-2026-10-14",
       "tabIds": [
         "donald-trump"
       ],
-      "title": "热度：白宫帖 “Trust the process.”",
-      "fact": "@WhiteHouse：“Trust the process.”",
+      "title": "热度：TrumpDailyPosts 出生公民权投票帖",
+      "fact": "@TrumpDailyPosts 发起是否终止非法移民子女出生公民权的投票。",
       "whyItMatters": "热度补位。",
-      "counterCase": "无政策细则。",
+      "counterCase": "投票帖非已签署行政令。",
       "affected": [
-        "注意力"
+        "移民政策舆论"
       ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-13T21:33:52.000Z",
-      "url": "https://x.com/WhiteHouse/status/2110121868757737967",
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-14T15:52:00.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2110398222887743612",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
       "selection": "engagement",
       "engagement": {
-        "likes": 24780,
-        "reposts": 5050,
-        "replies": 4738,
-        "quotes": 1040,
-        "views": 981202,
-        "bookmarks": 1225,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 1877,
+        "reposts": 259,
+        "replies": 1071,
+        "quotes": 88,
+        "views": 80590,
+        "bookmarks": 5
       },
       "people": []
     },
     {
-      "eventKey": "trump-heat-ilhan-omar-2026-10-13",
+      "eventKey": "trump-heat-soros-rico-2026-10-14",
       "tabIds": [
         "donald-trump"
       ],
-      "title": "热度：白宫转发 Donald Trump 质疑 Ilhan Omar 净资产声明",
-      "fact": "@WhiteHouse 引用 Donald Trump 关于 Ilhan Omar 净资产申报前后不一致的质问。",
-      "whyItMatters": "热度动态；政治口水，无贸易/能源/AI 传导。",
-      "counterCase": "不构成产业投资事实。",
+      "title": "热度：TrumpDailyPosts 称将以 RICO 调查 George Soros",
+      "fact": "@TrumpDailyPosts 称 Donald Trump 表示将以 RICO 调查 George Soros。",
+      "whyItMatters": "热度补位；非产业政策。",
+      "counterCase": "同步转述，缺乏起诉文件。",
       "affected": [
-        "政治注意力"
+        "政治舆论"
       ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-13T20:46:14.000Z",
-      "url": "https://x.com/WhiteHouse/status/2110109884142260696",
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-14T20:47:00.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2110472461745807543",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
       "selection": "engagement",
       "engagement": {
-        "likes": 45706,
-        "reposts": 7531,
-        "replies": 2368,
-        "quotes": 302,
-        "views": 636326,
-        "bookmarks": 706,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
+        "capturedAt": "2026-10-15T00:45:00.000Z",
+        "source": "x-mcp",
+        "likes": 1300,
+        "reposts": 314,
+        "replies": 57,
+        "quotes": 13,
+        "views": 60738,
+        "bookmarks": 34
       },
       "people": [
         {
           "name": "Donald Trump",
           "intro": "美国总统"
-        },
-        {
-          "name": "Ilhan Omar",
-          "intro": "美国民主党众议员"
-        }
-      ]
-    },
-    {
-      "eventKey": "jensen-nvidia-macron-elysee-2026-10-13",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "NVIDIA：Jensen Huang 在爱丽舍宫会见 Emmanuel Macron",
-      "fact": "@nvidia：Jensen Huang 在巴黎爱丽舍宫会见总统 Emmanuel Macron，讨论 NVIDIA 在法国 AI 生态、开源与 AI 安全投资；前往柏林 GTC。",
-      "whyItMatters": "主权 AI/开源与安全合作影响区域算力采购与政策环境。",
-      "counterCase": "会见不等于已签署可量化采购订单。",
-      "affected": [
-        "NVDA",
-        "法国AI"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-13T19:34:52.000Z",
-      "url": "https://x.com/nvidia/status/2110091922337415564",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "jensen-huang": 1
-      },
-      "selection": "rule",
-      "engagement": {
-        "likes": 647,
-        "reposts": 79,
-        "replies": 55,
-        "quotes": 17,
-        "views": 57156,
-        "bookmarks": 28,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        },
-        {
-          "name": "Emmanuel Macron",
-          "intro": "法国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-heat-ceos-on-x-2026-10-13",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "热度：Elon Musk 称 CEO 直接在 X 发声优于新闻稿",
-      "fact": "@elonmusk：“CEOs & execs posting to the public directly on X is the best way to get your message out…”",
-      "whyItMatters": "热度参考；平台分发叙事。",
-      "counterCase": "不等于产品或财务变化。",
-      "affected": [
-        "X平台"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T18:39:20.000Z",
-      "url": "https://x.com/elonmusk/status/2110077948384735481",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 34857,
-        "reposts": 2167,
-        "replies": 1552,
-        "quotes": 227,
-        "views": 4056529,
-        "bookmarks": 2094,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "jensen-heat-paris-evening-2026-10-13",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "热度：NVIDIA 晒 Jensen 巴黎晚宴与创业者合影",
-      "fact": "@nvidia：“An evening in Paris with Jensen and the founders, researchers, and partners shaping AI across France.”",
-      "whyItMatters": "热度参考。",
-      "counterCase": "社交活动无财务数字。",
-      "affected": [
-        "NVDA"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-13T17:04:39.000Z",
-      "url": "https://x.com/nvidia/status/2110054117595066796",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 1027,
-        "reposts": 104,
-        "replies": 51,
-        "quotes": 20,
-        "views": 77173,
-        "bookmarks": 57,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "trump-heat-press-sec-debut-2026-10-13",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "热度：白宫介绍新任新闻秘书 Katie Zacharia 亮相",
-      "fact": "@WhiteHouse：介绍新任白宫新闻秘书 Katie Zacharia 首次亮相。",
-      "whyItMatters": "热度补位；人事而非产业政策。",
-      "counterCase": "无投资传导。",
-      "affected": [
-        "注意力"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-13T14:58:50.000Z",
-      "url": "https://x.com/WhiteHouse/status/2110022454240272456",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 30764,
-        "reposts": 3359,
-        "replies": 7175,
-        "quotes": 649,
-        "views": 2257432,
-        "bookmarks": 1353,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
-      "people": [
-        {
-          "name": "Katie Zacharia",
-          "intro": "白宫新闻秘书"
-        }
-      ]
-    },
-    {
-      "eventKey": "jensen-heat-build-a-claw-2026-10-13",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "热度：Jensen Huang 现身巴黎 Build-A-Claw 开源智能体活动",
-      "fact": "@nvidia：Jensen Huang 到访 Build-A-Claw，开发者试用开源模型搭建 AI agents。",
-      "whyItMatters": "热度参考；开源生态姿态。",
-      "counterCase": "活动不等于产品发布或收入。",
-      "affected": [
-        "NVDA",
-        "开源模型"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-13T14:00:58.000Z",
-      "url": "https://x.com/nvidia/status/2110007892313321595",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 852,
-        "reposts": 75,
-        "replies": 85,
-        "quotes": 20,
-        "views": 79907,
-        "bookmarks": 50,
-        "capturedAt": "2026-10-14T13:14:38.471Z",
-        "source": "x-mcp"
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
         }
       ]
     }

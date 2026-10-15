@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14T13:14:38.471Z",
-  "cutoff": "2026-10-14T21:00:00+08:00",
+  "updatedAt": "2026-10-15T00:45:00.000Z",
+  "cutoff": "2026-10-15T09:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,95 +9,112 @@
       {
         "id": "nvda",
         "status": "complete",
-        "note": "官号英国算力+巴黎 Macron 线"
+        "note": "官号英国线+CUDA-X 快讯"
       },
       {
         "id": "mu",
         "status": "partial",
-        "note": "窗口内无 Micron 官方新财务事实"
+        "note": "窗口内仅基金会叙事，无财务新事实"
       },
       {
         "id": "intc",
         "status": "partial",
-        "note": "窗口内无 Intel 官方新财务事实"
+        "note": "无 Intel 官方新财务事实"
       },
       {
         "id": "goog",
         "status": "partial",
-        "note": "窗口内无 Alphabet/Google 股权一手新事实"
+        "note": "股权财报叙事不足；AI 产品见 AI 页"
       },
       {
         "id": "avgo",
         "status": "partial",
-        "note": "窗口内无 Broadcom 官方新财务事实"
+        "note": "无 Broadcom 官方新事实"
       },
       {
         "id": "vrt",
         "status": "partial",
-        "note": "窗口内无 Vertiv 官方新订单事实"
+        "note": "无 Vertiv 官方新订单"
       },
       {
         "id": "tsm",
         "status": "partial",
-        "note": "tsmc_news 账号未解析到；先进封装多为二手"
+        "note": "缺台积电官方一手；多为二手预览"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "nvda-uk-250m-compute-2026-10-14",
+      "eventKey": "nvda-uk-builders-invest-2026-10-14",
       "tabIds": [
         "nvda"
       ],
-      "title": "NVIDIA：五年向英国提供约 2.5 亿美元算力访问",
-      "fact": "@nvidia 称英国从企业到 Earthshot 正使用 NVIDIA，并承诺五年内 2.5 亿美元算力访问，以支持医疗、银行与公共服务 AI 及 agent 安全研究。",
-      "whyItMatters": "区域算力可获得性影响本地 AI 应用落地与生态绑定，也可能转化为增量 GPU/云需求。",
-      "counterCase": "「算力访问」可能是额度/折扣而非新增采购订单。",
+      "title": "NVIDIA：Jensen Huang 伦敦宣布英国 AI 生态新投资",
+      "fact": "@nvidia 称 Jensen Huang 在伦敦宣布对多家英国 AI/量子相关公司新投资。",
+      "whyItMatters": "生态与区域算力布局。",
+      "counterCase": "金额未披露。",
       "affected": [
-        "NVDA",
-        "英国AI应用"
+        "NVDA"
       ],
       "author": "nvidia",
-      "publishedAt": "2026-10-14T06:26:12.000Z",
-      "url": "https://x.com/nvidia/status/2110255837297987913",
+      "publishedAt": "2026-10-14T21:37:32.000Z",
+      "url": "https://x.com/nvidia/status/2110485178929844666",
       "verification": "collector-report",
-      "tier": "must-read",
+      "tier": "watch",
       "weeklyRanks": {
         "nvda": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-macron-elysee-2026-10-13",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA：Jensen Huang 会见 Emmanuel Macron 谈法国 AI 投资",
-      "fact": "@nvidia：Jensen Huang 在爱丽舍宫会见 Emmanuel Macron，讨论在法国 AI 生态、开源与 AI 安全投资。",
-      "whyItMatters": "主权 AI 合作可能影响欧洲算力采购与开源策略。",
-      "counterCase": "会见无合同金额。",
-      "affected": [
-        "NVDA",
-        "欧洲AI"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-13T19:34:52.000Z",
-      "url": "https://x.com/nvidia/status/2110091922337415564",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 2
       },
       "people": [
         {
           "name": "Jensen Huang",
           "intro": "英伟达创始人兼CEO"
-        },
-        {
-          "name": "Emmanuel Macron",
-          "intro": "法国总统"
         }
       ]
+    },
+    {
+      "eventKey": "nvda-uk-250m-compute-access-2026-10-14",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "NVIDIA：五年向英国提供约 2.5 亿美元算力访问",
+      "fact": "@nvidia 承诺五年 2.5 亿美元算力访问以支持英国 AI。",
+      "whyItMatters": "区域算力承诺。",
+      "counterCase": "访问权≠采购订单。",
+      "affected": [
+        "NVDA"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-14T06:26:12.000Z",
+      "url": "https://x.com/nvidia/status/2110255837297987913",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "nvda": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "nvda-cuda-x-chip-mfg-tools-2026-10-14",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "转述：NVIDIA 推出 CUDA-X AI 工具加速芯片制造",
+      "fact": "DeItaone：Nvidia 推出新 CUDA-X AI 工具，加速半导体设计、制造与工厂自动化，并称 Synopsys、Cadence、Applied Materials、Lam、KLA 等在采用。",
+      "whyItMatters": "软件/工具链延伸至晶圆厂侧。",
+      "counterCase": "快讯转述，缺官号原文与收入指引。",
+      "affected": [
+        "NVDA",
+        "半导体设备"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-14T16:12:00.000Z",
+      "url": "https://x.com/DeItaone/status/2110403255591141525",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "nvda": 3
+      },
+      "people": []
     }
   ]
 }
