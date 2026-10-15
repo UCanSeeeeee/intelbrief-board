@@ -202,3 +202,56 @@ test('tabbed intelligence retains prior weekly items for tabs with zero incoming
   assert.ok(result.data.items.some(i=>i.eventKey==='mu-old-1'));
   assert.ok(result.data.items.some(i=>i.eventKey==='nvda-new-1'));
 });
+
+
+test('tabbed intelligence retains ranked weekly items even when same tab has incoming', () => {
+  const {prepareTickerIntelligence}=require('../scripts/lib/update-results');
+  const config=JSON.parse(fs.readFileSync(path.join(root,'config/ticker-intelligence.json'),'utf8'));
+  const now=new Date('2026-10-15T01:00:00Z');
+  const cutoff='2026-10-15T09:00:00+08:00';
+  const existing=[
+    {
+      eventKey:'nvda-old-weekly',tabIds:['nvda'],title:'旧NVDA重点',fact:'仍在7天窗',whyItMatters:'传导',counterCase:'反证',
+      affected:['NVDA'],author:'nvidia',publishedAt:'2026-10-12T12:00:00.000Z',
+      url:'https://x.com/nvidia/status/1777777777777777777',verification:'collector-report',tier:'watch',
+      weeklyRanks:{nvda:2},people:[]
+    },
+    {
+      eventKey:'nvda-old-rank1-conflict',tabIds:['nvda'],title:'旧rank1',fact:'应让给新帖',whyItMatters:'传导',counterCase:'反证',
+      affected:['NVDA'],author:'nvidia',publishedAt:'2026-10-11T12:00:00.000Z',
+      url:'https://x.com/nvidia/status/1666666666666666666',verification:'collector-report',tier:'watch',
+      weeklyRanks:{nvda:1},people:[]
+    },
+    {
+      eventKey:'mu-old-1',tabIds:['mu'],title:'旧MU',fact:'零新增保留',whyItMatters:'传导',counterCase:'反证',
+      affected:['MU'],author:'MicronTech',publishedAt:'2026-10-12T12:00:00.000Z',
+      url:'https://x.com/MicronTech/status/1999999999999999999',verification:'collector-report',tier:'watch',
+      weeklyRanks:{mu:1},people:[]
+    }
+  ];
+  const incoming={
+    checkedAt:now.toISOString(),
+    tabs:config.tabs.map(t=>({id:t.id,status:t.id==='nvda'?'complete':'partial',note:t.id==='nvda'?'ok':'本窗无新事实'})),
+    items:[{
+      eventKey:'nvda-new-1',tabIds:['nvda'],title:'新NVDA',fact:'新事实',whyItMatters:'传导',counterCase:'反证',
+      affected:['NVDA'],author:'nvidia',publishedAt:'2026-10-14T12:00:00.000Z',
+      url:'https://x.com/nvidia/status/1888888888888888888',verification:'collector-report',tier:'watch',
+      weeklyRanks:{nvda:1}
+    }]
+  };
+  const result=prepareTickerIntelligence(incoming,config,{items:existing},cutoff,now);
+  const keys=result.data.items.map(i=>i.eventKey).sort();
+  assert.deepEqual(keys,['mu-old-1','nvda-new-1','nvda-old-rank1-conflict','nvda-old-weekly']);
+  assert.equal(result.data.items.find(i=>i.eventKey==='nvda-old-weekly').weeklyRanks.nvda,2);
+  // Conflicting old rank 1 is remumbered into the next free weekly slot.
+  assert.equal(result.data.items.find(i=>i.eventKey==='nvda-old-rank1-conflict').weeklyRanks.nvda,3);
+});
+
+test('people/ai prompts require full rolling snapshots like tickers', () => {
+  const {collectorPrompt}=require('../scripts/lib/update-prompt');
+  for (const page of ['people','ai','tickers']) {
+    const prompt=collectorPrompt({page,cutoff:'2026-10-15T09:00:00+08:00'},root,'2026-10-14T09:00:00+08:00',{});
+    assert.match(prompt,/完整滚动快照/);
+    assert.match(prompt,/不得用空数组整体覆盖|执行器会保留/);
+  }
+});

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T03:34:04.000Z",
+  "updatedAt": "2026-10-15T04:00:00.000Z",
   "cutoff": "2026-10-15T09:00:00+08:00",
   "source": "X only",
   "status": "partial",
@@ -9,7 +9,7 @@
       {
         "id": "nvda",
         "status": "complete",
-        "note": "官号英国线+CUDA-X 快讯"
+        "note": "官号英国线+CUDA-X 快讯；已合并保留未冲突的旧重点榜条目"
       },
       {
         "id": "mu",
@@ -167,6 +167,38 @@
       "people": []
     },
     {
+      "eventKey": "nvda-macron-elysee-2026-10-13",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "NVIDIA：Jensen Huang 与 Emmanuel Macron 讨论法国 AI 投资",
+      "fact": "@nvidia 称 Jensen Huang 在爱丽舍宫与 Emmanuel Macron 讨论英伟达在法国 AI 生态、开源与安全投资。",
+      "whyItMatters": "高层会晤常伴随本地化算力与伙伴承诺，影响欧洲订单预期。",
+      "counterCase": "未披露新增合同金额。",
+      "affected": [
+        "NVDA",
+        "欧洲AI"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-13T19:34:52.000Z",
+      "url": "https://x.com/nvidia/status/2110091922337415564",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "nvda": 5
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        },
+        {
+          "name": "Emmanuel Macron",
+          "intro": "法国总统"
+        }
+      ]
+    },
+    {
       "eventKey": "intc-bofa-density-gap-tsmc-2026-10-13",
       "tabIds": [
         "intc"
@@ -266,6 +298,30 @@
           "intro": "英特尔CEO"
         }
       ]
+    },
+    {
+      "eventKey": "nvda-ocp-vera-rubin-open-rack-2026-10-12",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "英伟达 OCP 开放 Vera Rubin 机架设计并扩网络伙伴",
+      "fact": "财经转述：英伟达在 OCP Global Summit 公布面向下一代 AI 数据中心的开放机架设计、网络、软件与电力系统贡献，并扩大与 Meta、Google、Cisco 等合作。",
+      "whyItMatters": "开放机架/网络蓝图影响 AI 工厂交付速度与 NVDA 生态黏性。",
+      "counterCase": "若规范停留在宣传或电力接驳仍卡住，交付加速有限。",
+      "affected": [
+        "NVDA",
+        "META",
+        "GOOGL"
+      ],
+      "author": "wallstengine",
+      "publishedAt": "2026-10-12T15:26:20.000Z",
+      "url": "https://x.com/wallstengine/status/2109666989543219475",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "nvda": 4
+      },
+      "people": []
     },
     {
       "eventKey": "vrt-india-liquid-cooling-rubin-factory-2026-10-12",

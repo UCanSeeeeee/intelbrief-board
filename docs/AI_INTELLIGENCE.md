@@ -19,3 +19,7 @@
 - `config/ai-intelligence.json` / `data/ai-intelligence.json`
 - 前台：`ai.html` / `ai.js`
 - 更新任务 page：`ai`
+
+## 滚动周榜保留（2026-10-15）
+
+与个股相同：`items` 须为完整滚动快照；执行器对零新增 Tab 保留旧近窗/重点榜，对有新帖的 Tab 也保留未冲突（可顺延排名）的旧重点榜，避免只交本窗新帖时清空 7 天榜。

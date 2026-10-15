@@ -24,4 +24,10 @@ NVDA、MU、INTC、GOOG、AVGO、VRT、TSM。
 
 ## 滚动周榜保留（2026-10-15）
 
-采集返回的 `items` 应是完整滚动快照。若某标的本窗确无新事实、`items` 不含该 Tab，执行器会保留该 Tab 仍在 `weeklyWindowDays` 内且带 `weeklyRanks`（或仍在 latest 窗）的旧条目，避免空窗清空 7 天重点榜。禁止用编造帖子凑数。
+采集返回的 `items` 应是完整滚动快照。执行器合并规则：
+
+1. 某标的本窗确无新事实、`items` 不含该 Tab → 保留仍在 `weeklyWindowDays` 内且带 `weeklyRanks`（或仍在 latest 窗）的旧条目。
+2. 某标的本窗有新帖 → 仍保留未重复的旧重点榜条目；若旧排名与新帖冲突，顺延到空位（不超过 `weeklyLimit`）。
+3. 禁止用空数组整体覆盖，禁止编造帖子凑数。
+
+同一逻辑也用于人物页与 AI 板块。

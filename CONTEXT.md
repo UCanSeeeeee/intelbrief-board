@@ -60,7 +60,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 - `index.html` / `people.html` / `tickers.html` / `ai.html` / `earnings.html`：侧栏顺序为美股讯息→具体人物→具体个股→AI板块→宏观大事→财报日历。宏观大事见 `docs/MACRO_EVENTS.md`（含超关注财报精选）；板块空头已于2026-10-12停用；**加密已于2026-10-15暂时停用**（`docs/CRYPTO_INTELLIGENCE.md`，重定向首页，不再采集或部署）。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的。
 - `config/earnings-calendar.json` / `data/earnings-calendar.json` / `docs/EARNINGS_CALENDAR.md`：侧栏「财报日历」；主源 Nasdaq；卡片主营一句话见 `config/company-blurbs.json`。
 - `config/people-intelligence.json` / `data/people-intelligence.json`：人物与合集配置及精选事件库；个人与合集最新区目标均为 5 条（个人滚动约24小时、合集约30天；规则优先+热度补位，selectionPolicy），重点榜最多 5 件且只收规则条目。特朗普 X 同步源为 @TrumpDailyPosts（另可取 @POTUS/@WhiteHouse）；黄仁勋允许可回查媒体来源。
-- `config/ticker-intelligence.json` / `data/ticker-intelligence.json` / `docs/TICKER_INTELLIGENCE.md`：具体个股仅 NVDA/MU/INTC/GOOG/AVGO/VRT/TSM（无加密、无 AI 实验室 Tab）。**2026-10-15**：`prepareTabbedIntelligence` 对「本窗零新增」的 Tab 自动保留仍在滚动窗口内的旧条目，防止只交 NVDA 新帖时清空其他标的 7 天重点榜。
+- `config/ticker-intelligence.json` / `data/ticker-intelligence.json` / `docs/TICKER_INTELLIGENCE.md`：具体个股仅 NVDA/MU/INTC/GOOG/AVGO/VRT/TSM（无加密、无 AI 实验室 Tab）。**2026-10-15**：`prepareTabbedIntelligence` 自动合并仍在滚动窗口内的旧条目——本窗零新增的 Tab 整页保留；本窗有新帖的 Tab 也保留未冲突的旧重点榜（排名冲突则顺延到空位）。人物/个股/AI 共用此逻辑，防止只交近窗新帖时清空 7 天（合集 30 天）重点榜。
 - `config/ai-intelligence.json` / `data/ai-intelligence.json` / `docs/AI_INTELLIGENCE.md`：侧栏「AI板块」：OPENAI→ANTHROPIC→GOOG(AI产品)→其他。
 - `config/crypto-intelligence.json` / `data/crypto-intelligence.json` / `docs/CRYPTO_INTELLIGENCE.md`：加密栏目已暂时停用；配置与数据仅留仓库追溯。
 - `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：人物页规划（仍有效）。

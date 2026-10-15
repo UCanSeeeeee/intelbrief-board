@@ -90,10 +90,28 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     try{annotateCard(out,undefined,`${kind}.${out.eventKey}`);}catch(error){requireValue(false,error.message);}
     return out;
   });
-  // Keep prior rolling-window items for tabs that returned zero new items.
-  // Prevents wiping the 7-day weekly board when a batch only finds fresh posts on one ticker.
+  // Retain prior rolling-window items so partial batches cannot wipe the 7-day board.
+  // Zero-incoming tabs: keep inLatest OR ranked-inWeekly (capped by limits).
+  // Tabs with incoming: keep ranked-inWeekly items not superseded by eventKey/url;
+  // if an old weeklyRanks slot conflicts, remumber into the next free slot up to weeklyLimit.
   const tabsWithIncoming=new Set(items.flatMap(item=>item.tabIds));
   const cutoffMs=Date.parse(cutoff);
+  const usedRanks=new Map(configured.map(tab=>[tab.id,new Set()]));
+  const latestCounts=new Map(configured.map(tab=>[tab.id,0]));
+  const nextFreeRank=(tabId,limit)=>{
+    const used=usedRanks.get(tabId);
+    for(let r=1;r<=limit;r++) if(!used.has(r)) return r;
+    return null;
+  };
+  for(const item of items) {
+    for(const tabId of item.tabIds) {
+      const tab=allowed.get(tabId);
+      const {latest}=windowDays(tab);
+      if(Date.parse(item.publishedAt)>=cutoffMs-latest*dayMs) latestCounts.set(tabId,(latestCounts.get(tabId)||0)+1);
+      const rank=item.weeklyRanks?.[tabId];
+      if(Number.isInteger(rank)) usedRanks.get(tabId).add(rank);
+    }
+  }
   for(const old of existing?.items||[]) {
     if(!old||typeof old.eventKey!=='string'||keys.has(old.eventKey)||urls.has(old.url)) continue;
     if(!Array.isArray(old.tabIds)||!old.tabIds.length) continue;
@@ -102,7 +120,7 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     const keepTabIds=[];
     const ranks={};
     for(const tabId of old.tabIds) {
-      if(!allowed.has(tabId)||tabsWithIncoming.has(tabId)) continue;
+      if(!allowed.has(tabId)) continue;
       const tab=allowed.get(tabId);
       const {latest,weekly}=windowDays(tab);
       const published=Date.parse(old.publishedAt);
@@ -110,10 +128,24 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
       const rank=old.weeklyRanks?.[tabId];
       const hasRank=Number.isInteger(rank);
       const inWeekly=published>=cutoffMs-weekly*dayMs;
-      if(inLatest||(hasRank&&inWeekly)) {
-        keepTabIds.push(tabId);
-        if(hasRank) ranks[tabId]=rank;
+      if(!tabsWithIncoming.has(tabId)) {
+        if(hasRank&&inWeekly) {
+          const assigned=usedRanks.get(tabId).has(rank)?nextFreeRank(tabId,tab.weeklyLimit):rank;
+          if(assigned==null) continue;
+          if(inLatest&&(latestCounts.get(tabId)||0)>=tab.latestLimit) continue;
+          keepTabIds.push(tabId);
+          ranks[tabId]=assigned;
+        } else if(inLatest&&(latestCounts.get(tabId)||0)<tab.latestLimit) {
+          keepTabIds.push(tabId);
+        }
+        continue;
       }
+      if(!(hasRank&&inWeekly)) continue;
+      const assigned=usedRanks.get(tabId).has(rank)?nextFreeRank(tabId,tab.weeklyLimit):rank;
+      if(assigned==null) continue;
+      if(inLatest&&(latestCounts.get(tabId)||0)>=tab.latestLimit) continue;
+      keepTabIds.push(tabId);
+      ranks[tabId]=assigned;
     }
     if(!keepTabIds.length) continue;
     keys.add(old.eventKey); urls.add(old.url);
@@ -122,6 +154,12 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     if(config.selectionPolicy){retained.selection=old.selection||'rule';if(old.engagement!=null)retained.engagement=old.engagement;}
     try{annotateCard(retained,undefined,`${kind}.retained.${retained.eventKey}`);}catch(error){requireValue(false,error.message);}
     items.push(retained);
+    for(const tabId of keepTabIds) {
+      const tab=allowed.get(tabId);
+      const {latest}=windowDays(tab);
+      if(Date.parse(retained.publishedAt)>=cutoffMs-latest*dayMs) latestCounts.set(tabId,(latestCounts.get(tabId)||0)+1);
+      if(Number.isInteger(ranks[tabId])) usedRanks.get(tabId).add(ranks[tabId]);
+    }
   }
   for(const tab of configured) {
     const {latest,weekly}=windowDays(tab);
