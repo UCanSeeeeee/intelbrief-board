@@ -15,7 +15,7 @@
 
 - 美股板块采用每天北京时间 08:00 / 15:00 / 20:30 的 **5 条市场焦点 + 10 条多学科认知与夜雨知识库洞察**，支持期次归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。Grok 原生定时已有成功样本（如 `410dd11` 的 2026-10-12 21:00）；可靠性、空跑与 OPS-01 状态以 [运营记录](docs/GROK_BOT_OPERATIONS.md) 为准，不因单次成功宣称稳定闭环。
 - 项目内置[美股研究知识库](knowledge/US_EQUITY_RESEARCH_KB.md)和[Grok 采集 SOP](knowledge/GROK_X_COLLECTION_SOP.md)，每次更新由程序自动注入，固定以半导体、电力、AI落地为优先级并要求独立追源与反证。
-- 前台侧边栏六个 Tab：「美股讯息」、「具体人物」、「具体个股」（见 `docs/TICKER_INTELLIGENCE.md`）、「AI板块」（见 `docs/AI_INTELLIGENCE.md`）、「宏观大事」（见 `docs/MACRO_EVENTS.md`）、「财报日历」（见 `docs/EARNINGS_CALENDAR.md`）。加密栏目已暂时停用（见 `docs/CRYPTO_INTELLIGENCE.md`）。原帖档案、来源管理和评分作为后台能力保留，不单独提供前台页面。
+- 前台侧边栏七个 Tab：「美股讯息」、「具体人物」、「具体个股」（见 `docs/TICKER_INTELLIGENCE.md`）、「AI板块」（见 `docs/AI_INTELLIGENCE.md`）、「每日学习」（见 `docs/DAILY_LEARNING.md`）、「宏观大事」（见 `docs/MACRO_EVENTS.md`）、「财报日历」（见 `docs/EARNINGS_CALENDAR.md`）。每日学习包含「每日趣事」和「基础知识讲解」，同一基础知识点同时提供专业版与18+故事版。加密栏目已暂时停用（见 `docs/CRYPTO_INTELLIGENCE.md`）。原帖档案、来源管理和评分作为后台能力保留，不单独提供前台页面。
 
 - 由Grok Bot「X+github」自主采集，失败时才由它使用Grok网页版；调度验收见 [运营记录](docs/GROK_BOT_OPERATIONS.md)
 - 导入上述Grok路径返回的结构化X原帖，并保留未独立直读标记
@@ -59,7 +59,7 @@ npm run check
 
 | 命令 | 作用 |
 |---|---|
-| `npm run agent:enter -- --role gpt --task code` | 只读任务路由和断点检查；Grok改为 `--role grok --task news` |
+| `npm run agent:enter -- --role gpt --task code` | 只读任务路由和断点检查；Grok改为 `--role grok --task news`，每日学习用 `--task learning` |
 | `npm run dev:updates` / `updates:start` / `updates:schedule` | 旧Codex运营入口，已停用并明确报错 |
 | `npm run import:x -- FILE` | 导入 Grok Bot/人工结构化 JSON |
 | `npm run score` | 从原始归档重建评分数据 |

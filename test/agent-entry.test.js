@@ -14,6 +14,7 @@ test('every allowed agent route resolves real project context',()=>{
     for(const file of result.files) assert.ok(fs.statSync(path.join(root,file)).isFile());
   }
   assert.ok(entry('grok','news').files.includes('knowledge/GROK_X_COLLECTION_SOP.md'));
+  assert.ok(entry('grok','learning').files.includes('docs/DAILY_LEARNING.md'));
 });
 
 test('entry rejects wrong execution role and unknown tasks',()=>{

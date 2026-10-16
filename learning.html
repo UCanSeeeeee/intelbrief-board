@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日学习 — 美股情报</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="learning">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-controls="sidebar" aria-expanded="false"><span aria-hidden="true">☰</span></button>
+  <div class="overlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="站点导航">
+      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">美股情报</div></div>
+      <nav class="nav" aria-label="主导航">
+        <a href="index.html" data-nav="news"><span class="nav-icon" aria-hidden="true">▣</span> 美股讯息</a>
+        <a href="people.html" data-nav="people"><span class="nav-icon" aria-hidden="true">◎</span> 具体人物</a>
+        <a href="tickers.html" data-nav="tickers"><span class="nav-icon" aria-hidden="true">◇</span> 具体个股</a>
+        <a href="ai.html" data-nav="ai"><span class="nav-icon" aria-hidden="true">⬡</span> AI板块</a>
+        <a href="learning.html" data-nav="learning"><span class="nav-icon" aria-hidden="true">◈</span> 每日学习</a>
+        <a href="macro.html" data-nav="macro"><span class="nav-icon" aria-hidden="true">◉</span> 宏观大事</a>
+        <a href="earnings.html" data-nav="earnings"><span class="nav-icon" aria-hidden="true">▤</span> 财报日历</a>
+      </nav>
+      <div class="sidebar-footer">从当天发现进入长期认知<br />不重复堆叠新闻</div>
+    </aside>
+    <main class="main wide" id="main" tabindex="-1">
+      <header class="page-header">
+        <h1>每日学习</h1>
+        <p class="subtitle">用有趣的发现打开问题，再用两种表达真正讲懂一个知识点</p>
+        <div class="meta"><span class="badge">半导体 · 电力 · AI落地</span><span id="learning-state" aria-live="polite">正在读取学习内容…</span></div>
+      </header>
+      <div id="learning-tabs" class="people-selector learning-tabs" role="tablist" aria-label="每日学习顶部 Tab"></div>
+      <section id="learning-panel" class="learning-panel" aria-live="polite"></section>
+      <p class="disclaimer">故事版只改变表达方式，不增加事实或改变结论；类比不能替代专业定义。</p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+  <script src="learning.js"></script>
+</body>
+</html>

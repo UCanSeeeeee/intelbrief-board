@@ -39,7 +39,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 
 - `docs/TRADING_DAY_READING.md`：北京时间批次/周末保留的唯一专题入口（历史文件名沿用）；周一08:00起收录周六00:00以来消息，不按美国开收盘或节假日推迟展示。`scripts/lib/reading-period.js`计算周期，`data/reading-board.json`独立于三期简报保留有效事件。采集前运行`npm run brief:context`。旧交易所日历仍留存供历史追溯，不再驱动讯息展示。
 
-- `docs/DESIGN_SYSTEM.md` / `styles.css`：七页共用的阅读优先布局，所有阅读内容默认展开，卡片不展示反向条件；数量为上限而非任务完成率。历史证据与内部核验不因UI改变。
+- `docs/DESIGN_SYSTEM.md` / `styles.css`：前台页面共用的阅读优先布局，所有阅读内容默认展开，卡片不展示反向条件；数量为上限而非任务完成率。历史证据与内部核验不因UI改变。
 - `calendar-time.js`：宏观美东时刻换算北京时间（含夏令时）与财报披露状态展示；测试见 `test/calendar-time.test.js`。
 - `assets/fluent/README.md`：页标题装饰素材的来源版本与许可。
 
@@ -57,7 +57,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 - `data/ops-runs/`：内容运行里程碑日志（`npm run ops:run`）；排查定时失败时先看这里，缺文件通常表示平台未跑到仓库脚本。规则见 docs/GROK_BOT_OPERATIONS.md「运营运行日志」。
 - `data/stock-briefs/index.json`：最近三期目录；同目录保留的期次文件不可覆盖，写入第四期时移除最旧一期。旧链路有实际期次，不等于新Grok独立调度已验收。
 - `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
-- `index.html` / `people.html` / `tickers.html` / `ai.html` / `earnings.html`：侧栏顺序为美股讯息→具体人物→具体个股→AI板块→宏观大事→财报日历。宏观大事见 `docs/MACRO_EVENTS.md`（含超关注财报精选）；板块空头已于2026-10-12停用；**加密已于2026-10-15暂时停用**（`docs/CRYPTO_INTELLIGENCE.md`，重定向首页，不再采集或部署）。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的。
+- `index.html` / `people.html` / `tickers.html` / `ai.html` / `learning.html` / `earnings.html`：侧栏顺序为美股讯息→具体人物→具体个股→AI板块→每日学习→宏观大事→财报日历。每日学习见 `docs/DAILY_LEARNING.md`，基础知识点强制同时提供专业版与18+故事版；宏观大事见 `docs/MACRO_EVENTS.md`（含超关注财报精选）；板块空头已于2026-10-12停用；**加密已于2026-10-15暂时停用**（`docs/CRYPTO_INTELLIGENCE.md`，重定向首页，不再采集或部署）。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的。
 - `config/earnings-calendar.json` / `data/earnings-calendar.json` / `docs/EARNINGS_CALENDAR.md`：侧栏「财报日历」；主源 Nasdaq；卡片主营一句话见 `config/company-blurbs.json`。
 - `config/people-intelligence.json` / `data/people-intelligence.json`：人物与合集配置及精选事件库；个人与合集最新区目标均为 5 条（个人滚动约24小时、合集约30天；规则优先+热度补位，selectionPolicy），重点榜最多 5 件且只收规则条目。特朗普 X 同步源为 @TrumpDailyPosts（另可取 @POTUS/@WhiteHouse）；黄仁勋允许可回查媒体来源。
 - `config/ticker-intelligence.json` / `data/ticker-intelligence.json` / `docs/TICKER_INTELLIGENCE.md`：具体个股仅 NVDA/MU/INTC/GOOG/AVGO/VRT/TSM（无加密、无 AI 实验室 Tab）。**2026-10-15**：`prepareTabbedIntelligence` 自动合并仍在滚动窗口内的旧条目——本窗零新增的 Tab 整页保留；本窗有新帖的 Tab 也保留未冲突的旧重点榜（排名冲突则顺延到空位）。人物/个股/AI 共用此逻辑，防止只交近窗新帖时清空 7 天（合集 30 天）重点榜。

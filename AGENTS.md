@@ -31,6 +31,7 @@
 | Grok Bot接管、定时与发布 | docs/GROK_BOT_OPERATIONS.md、docs/AGENT_ENTRY.md；运行日志 `npm run ops:run` → `data/ops-runs/`（无日志≈平台在进代码前失败） |
 | 美股简报 | docs/STOCK_BRIEF.md、config/research-guidance.json 指向的知识库与 SOP |
 | 人物/个股/AI | 对应 docs 页面说明和 config 配置，再读研究知识与 SOP；窗口以上述配置为准；加密已暂时停用 |
+| 每日学习 | docs/DAILY_LEARNING.md、config/learning.json；Grok复用当天合格证据，GPT只维护结构与校验 |
 | 财报、宏观日历 | docs/EARNINGS_CALENDAR.md、docs/MACRO_EVENTS.md，适用各自来源例外 |
 | 网页采集按钮/旧执行器 | docs/MANUAL_UPDATES.md；当前未接通，不恢复旧 Codex 采集；只保留「全部更新」，禁止任何轮询/领单任务（2026-10-13） |
 
@@ -50,6 +51,7 @@
 - **Grok Bot「X+github」是唯一内容运营执行者。** 所有启动、定时、手动内容更新、检索、筛选、归档、校验、GitHub 数据提交、Cloudflare 发布核验、有限重试与失败报告，均由它在自身云端环境独立完成，不等待 GPT 唤醒或逐步操作。
 - **GPT / Codex 只负责代码功能维护与优化**，包括代码测试、修复和代码发布；不得定时采集、代操作 Grok 获取内容、生产新闻数据或自动故障接管。原 Codex 定时任务 `x-5-10` 已暂停，未经用户新指令不得恢复或另建替代任务。
 - 美股讯息仍在北京时间每天 08:00 / 15:00 / 20:30 由 Grok Bot 原生例行任务启动；不为其他页面新增频率。Grok 手动更新仅「全部更新」（news/people/tickers/ai 串行；加密已暂时停用），宏观日历维持低频规则。
+- 每日学习不增加采集频率：由 Grok 在当天最后一个成功运营批次复用已取得的合格证据，最多发布3条每日趣事并新增1个双版本基础知识点；规则见 `docs/DAILY_LEARNING.md`，不进入网页手动更新范围。
 - 接管配置、执行权限与真实验收状态以 `docs/GROK_BOT_OPERATIONS.md` 为主维护位置。不得把已配置定时任务等同于已跑通无人值守发布。
 
 ## 讯息采集硬规则（用户于2026-10-11明确指定）

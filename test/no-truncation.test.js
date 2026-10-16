@@ -31,7 +31,7 @@ test('CSS has no text truncation', () => {
 });
 
 test('front-end JS does not truncate display strings', () => {
-  for (const f of ['app.js','briefs.js','people.js','tickers.js','ai.js','crypto.js','earnings.js','updates.js']) {
+  for (const f of ['app.js','briefs.js','people.js','tickers.js','ai.js','learning.js','crypto.js','earnings.js','updates.js']) {
     const js = read(f);
     for (const m of js.matchAll(/\.(slice|substring|substr)\(([^)]*)\)/g)) {
       // Only item-count limits (rules) are allowed: .slice(0, tab.latestLimit / tab.weeklyLimit)

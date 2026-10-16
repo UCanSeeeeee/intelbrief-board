@@ -156,6 +156,14 @@ for (const tab of aiTabs.values()) {
   if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
 }
 
+{
+  const learningConfig = readJson(path.join(ROOT, 'config/learning.json'));
+  const learning = readJson(path.join(ROOT, 'data/learning.json'));
+  const result = require('./lib/learning').validateLearning(learningConfig,learning);
+  for (const error of result.errors) fail(error);
+  console.log(`[validate-data] OK: learning ${result.curiosities} curiosities, ${result.lessons} paired lessons`);
+}
+
 const guidance = readJson(path.join(ROOT, 'config/research-guidance.json'));
 if (JSON.stringify(guidance.priorityOrder) !== JSON.stringify(['半导体','电力','AI 落地'])) fail('research guidance priority order changed unexpectedly');
 for (const key of ['knowledgeBase','collectionSop']) {

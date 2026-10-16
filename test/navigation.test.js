@@ -5,11 +5,11 @@ const path = require('node:path');
 
 const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 
-test('primary pages expose news, people, tickers, ai, macro, and earnings tabs (crypto paused)', () => {
-  for (const file of ['index.html', 'macro.html', 'people.html', 'tickers.html', 'ai.html', 'earnings.html']) {
+test('primary pages expose news, people, tickers, ai, learning, macro, and earnings tabs (crypto paused)', () => {
+  for (const file of ['index.html', 'macro.html', 'people.html', 'tickers.html', 'ai.html', 'learning.html', 'earnings.html']) {
     const html = read(file);
     const items = [...html.matchAll(/<a href="([^"]+)" data-nav="([^"]+)"/g)].map(match => match.slice(1));
-    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['ai.html', 'ai'], ['macro.html', 'macro'], ['earnings.html', 'earnings']]);
+    assert.deepEqual(items, [['index.html', 'news'], ['people.html', 'people'], ['tickers.html', 'tickers'], ['ai.html', 'ai'], ['learning.html', 'learning'], ['macro.html', 'macro'], ['earnings.html', 'earnings']]);
     assert.doesNotMatch(html, /data-nav="crypto"/);
     assert.doesNotMatch(html, /href="crypto\.html"/);
     assert.doesNotMatch(html,/板块空头|data-nav="shorts"/);
@@ -88,6 +88,24 @@ test('ai page has OPENAI ANTHROPIC GOOG and 其他 tabs', () => {
   assert.match(read('docs/AI_INTELLIGENCE.md'), /与具体个股 GOOG 边界/);
 });
 
+test('learning has daily curiosities and paired professional/story lessons', () => {
+  const config = JSON.parse(read('config/learning.json'));
+  const data = JSON.parse(read('data/learning.json'));
+  assert.deepEqual(config.tabs.map(tab => tab.id), ['curiosities','basics']);
+  assert.deepEqual(config.tabs.map(tab => tab.label), ['每日趣事','基础知识讲解']);
+  assert.equal(config.storyAudienceMinimumAge, 18);
+  assert.equal(config.dailyCuriosityLimit, 3);
+  assert.equal(config.dailyNewLessonLimit, 1);
+  assert.ok(Array.isArray(data.dailyCuriosities));
+  assert.ok(Array.isArray(data.lessons));
+  assert.match(read('learning.html'), /data-page="learning"/);
+  assert.match(read('learning.js'), /professional-version/);
+  assert.match(read('learning.js'), /story-version/);
+  assert.match(read('docs/DAILY_LEARNING.md'), /不得加入专业版没有的事实/);
+  assert.doesNotMatch(read('updates.js'), /learning/);
+  assert.doesNotMatch(read('server/updates.mjs'), /['"]learning['"]/);
+});
+
 test('stock brief cards no longer expose 证据与筛选依据 UI', () => {
   assert.doesNotMatch(read('briefs.js'), /证据与筛选依据/);
   assert.match(read('briefs.js'), /原文链接/);
@@ -105,7 +123,7 @@ test('earnings page loads company blurbs for calendar symbols', () => {
 });
 
 test('design system: landmarks, skip link, aria-current and tab keyboard support', () => {
-  for (const page of ['index','macro','people','tickers','ai','earnings']) {
+  for (const page of ['index','macro','people','tickers','ai','learning','earnings']) {
     const html = read(page + '.html');
     assert.match(html, /class="skip-link" href="#main"/);
     assert.match(html, /<main[^>]*id="main"/);
