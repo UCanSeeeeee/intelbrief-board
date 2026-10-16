@@ -7,7 +7,7 @@ const ROOT = path.resolve(__dirname, '..');
 const ROUTES = {
   status: ['docs/GROK_BOT_OPERATIONS.md'],
   code: ['docs/DESIGN_SYSTEM.md', 'package.json'],
-  handoff: ['docs/AGENT_ENTRY.md', 'docs/GROK_BOT_OPERATIONS.md', 'docs/MANUAL_UPDATES.md'],
+  handoff: ['docs/AGENT_ENTRY.md', 'docs/GROK_BOT_OPERATIONS.md'],
   news: ['docs/STOCK_BRIEF.md', 'docs/TRADING_DAY_READING.md', 'config/stock-brief.json', 'config/us-market-calendar.json'],
   people: ['docs/PEOPLE_INTELLIGENCE_ROADMAP.md', 'config/people-intelligence.json'],
   tickers: ['docs/TICKER_INTELLIGENCE.md', 'config/ticker-intelligence.json'],

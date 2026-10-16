@@ -38,6 +38,24 @@ function windowStart(editions,job) {
   if(previous) start=Math.min(start,Math.max(Date.parse(previous.scheduledFor),cutoff-14*DAY));
   return new Date(start).toISOString();
 }
+// Preserve still-relevant cards from earlier editions inside the current display window.
+function carriedOver(root,editions,job,start,input) {
+  const {displayWindowStart}=displayWindow(job.cutoff);
+  const fresh=new Set([...(input.focus||[]),...(input.insights||[])].map(e=>String(e.eventKey).trim().toLowerCase()));
+  const out=[];
+  for(const entry of editions.filter(e=>e.status!=='failed'&&Date.parse(e.scheduledFor)<Date.parse(job.cutoff)&&Date.parse(e.scheduledFor)>Date.parse(displayWindowStart))) {
+    const file=path.join(root,'data/stock-briefs',entry.file);
+    if(!fs.existsSync(file)) continue;
+    const old=JSON.parse(fs.readFileSync(file,'utf8'));
+    for(const group of ['focus','insights']) for(const event of old[group]||[]) {
+      const key=String(event.eventKey).trim().toLowerCase();
+      const source=(event.sources||[]).find(s=>Date.parse(s.publishedAt)>=Date.parse(displayWindowStart)&&Date.parse(s.publishedAt)<Date.parse(start));
+      if(!source||fresh.has(key)||out.some(c=>c.eventKey.toLowerCase()===key)) continue;
+      out.push({fromEdition:old.id,group,eventKey:event.eventKey,title:event.title,fact:event.fact,url:source.url,publishedAt:source.publishedAt});
+    }
+  }
+  return out;
+}
 // Local record of searched time ranges x queries, used to avoid re-searching covered spans.
 function coveragePath(root) { return path.join(root,'data/search-coverage.json'); }
 function readCoverage(root) {
@@ -62,4 +80,4 @@ function uncoveredRanges(coverage,page,start,end) {
   }
   return gaps.map(([s,e])=>({start:beijingIso(s),end:beijingIso(e)}));
 }
-module.exports={beijingIso,beijingWeekday,weekendStart,displayWindow,windowStart,readCoverage,recordCoverage,uncoveredRanges,coveragePath};
+module.exports={beijingIso,beijingWeekday,weekendStart,displayWindow,windowStart,carriedOver,readCoverage,recordCoverage,uncoveredRanges,coveragePath};

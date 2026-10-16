@@ -11,7 +11,7 @@
 
 - [交易日待阅](docs/TRADING_DAY_READING.md)：休市/盘后重要信息持续到下个实际交易时段结束，跨期池与三期快照分开；默认展示待阅精选，其他有效信息可展开，不把延续消息冒充新增。
 
-- 前端只保留「全部更新」（各页「更新本页」已取消）；队列与进度代码仍在，但尚未接通Grok云端执行；旧Codex执行器已停用。不要把按钮可见视为可用，见 [手动更新接入说明](docs/MANUAL_UPDATES.md)。
+- 网页是只读信息看板，不提供“更新”按钮、登录、任务队列或手动触发接口；内容由 Grok Bot 的既有云端运营任务生成，GPT 不代采集。
 
 - 美股板块采用每天北京时间 08:00 / 15:00 / 20:30 的 **5 条市场焦点 + 10 条多学科认知与夜雨知识库洞察**，支持期次归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。Grok 原生定时已有成功样本（如 `410dd11` 的 2026-10-12 21:00）；可靠性、空跑与 OPS-01 状态以 [运营记录](docs/GROK_BOT_OPERATIONS.md) 为准，不因单次成功宣称稳定闭环。
 - 项目内置[美股研究知识库](knowledge/US_EQUITY_RESEARCH_KB.md)和[Grok 采集 SOP](knowledge/GROK_X_COLLECTION_SOP.md)，每次更新由程序自动注入，固定以半导体、电力、AI落地为优先级并要求独立追源与反证。
@@ -60,7 +60,6 @@ npm run check
 | 命令 | 作用 |
 |---|---|
 | `npm run agent:enter -- --role gpt --task code` | 只读任务路由和断点检查；Grok改为 `--role grok --task news`，每日学习用 `--task learning` |
-| `npm run dev:updates` / `updates:start` / `updates:schedule` | 旧Codex运营入口，已停用并明确报错 |
 | `npm run import:x -- FILE` | 导入 Grok Bot/人工结构化 JSON |
 | `npm run score` | 从原始归档重建评分数据 |
 | `npm run check` | 校验 ID、URL、时间、去重和评分范围 |
@@ -90,7 +89,7 @@ knowledge/GROK_X_COLLECTION_SOP.md Grok检索、追源、反证和降噪流程
 
 ## 部署
 
-Cloudflare Pages 连接 `master`，构建命令为 `npm run build`，输出目录为 `dist`。构建只打包公开资源，保留数据时间，不采集X。手动更新接口的D1绑定与密钥按 [接入说明](docs/MANUAL_UPDATES.md) 配置。
+Cloudflare Pages 连接 `master`，构建命令为 `npm run build`，输出目录为 `dist`。构建只打包公开资源，保留数据时间，不采集X，也不提供手动触发接口。
 
 真实采集由Grok Bot云端任务运行，再提交生成的数据。`.env`、Token和私有日志均不得提交。
 

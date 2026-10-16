@@ -67,10 +67,8 @@ test('crypto retains history but has no deployment, collection or navigation ent
   assert.match(read('_worker.js'), /'\/crypto\.html': '\/index\.html'/);
   assert.ok(JSON.parse(read('_routes.json')).include.includes('/crypto.html'));
   assert.doesNotMatch(read('scripts/build-site.js'), /crypto\.html|crypto\.js|crypto-intelligence/);
-  assert.doesNotMatch(read('updates.js'), /crypto:'加密'|crypto:\'加密\'/);
-  assert.doesNotMatch(read('server/updates.mjs'), /['"]crypto['"]/);
   assert.throws(()=>require('../scripts/agent-entry').entry('grok','crypto'),/未知任务/);
-  assert.throws(()=>require('../scripts/lib/update-prompt').collectorPrompt({page:'crypto'}),/已暂时停用/);
+  assert.throws(()=>require('../scripts/lib/collection-prompt').collectorPrompt({page:'crypto'}),/已暂时停用/);
   const data = JSON.parse(read('data/crypto-intelligence.json'));
   assert.ok(Array.isArray(data.items));
 });
@@ -102,8 +100,6 @@ test('learning has daily curiosities and paired professional/story lessons', () 
   assert.match(read('learning.js'), /professional-version/);
   assert.match(read('learning.js'), /story-version/);
   assert.match(read('docs/DAILY_LEARNING.md'), /不得加入专业版没有的事实/);
-  assert.doesNotMatch(read('updates.js'), /learning/);
-  assert.doesNotMatch(read('server/updates.mjs'), /['"]learning['"]/);
 });
 
 test('stock brief cards no longer expose 证据与筛选依据 UI', () => {
@@ -139,14 +135,12 @@ test('design system: landmarks, skip link, aria-current and tab keyboard support
   assert.ok(read('docs/DESIGN_SYSTEM.md').includes('Linear Calm Density'));
 });
 
-test('macro page has four quarters and stays off brief update queue', () => {
+test('macro page has four quarters and an independent low-frequency schedule', () => {
   const data = JSON.parse(read('data/macro-events.json'));
   assert.equal(data.quarters.length, 4);
   assert.ok(data.counts.total >= 50);
   assert.match(read('macro.html'), /data-page="macro"/);
   assert.match(read('macro.js'), /macro-events\.json/);
-  assert.doesNotMatch(read('updates.js'), /macro/);
-  assert.doesNotMatch(read('server/updates.mjs'), /['"]macro['"]/);
   assert.ok(JSON.parse(read('config/macro-events.json')).refresh.notTiedToBriefSlots);
 });
 
@@ -157,12 +151,21 @@ test('retired shorts retain history but have no deployment, collection or naviga
   assert.match(read('_worker.js'), /'\/shorts\.html': '\/index\.html'/);
   assert.ok(JSON.parse(read('_routes.json')).include.includes('/shorts'));
   assert.doesNotMatch(read('scripts/build-site.js'), /shorts/);
-  assert.doesNotMatch(read('updates.js'), /shorts/);
-  assert.doesNotMatch(read('server/updates.mjs'), /shorts/);
   assert.throws(()=>require('../scripts/agent-entry').entry('grok','shorts'),/未知任务/);
-  assert.throws(()=>require('../scripts/lib/update-prompt').collectorPrompt({page:'shorts'}),/已停用/);
+  assert.throws(()=>require('../scripts/lib/collection-prompt').collectorPrompt({page:'shorts'}),/已停用/);
   const data = JSON.parse(read('data/shorts-intelligence.json'));
   assert.ok(Array.isArray(data.items));
+});
+
+test('website has no manual update surface, API route, or public receipt artifacts', () => {
+  for (const file of ['index.html','people.html','tickers.html','ai.html','learning.html','macro.html','earnings.html']) {
+    assert.doesNotMatch(read(file), /updates\.js|update-receipt\.js|update-all|更新本页|全部更新/);
+  }
+  for (const file of ['updates.js','update-receipt.js','server/updates.mjs','server/schema.sql','docs/MANUAL_UPDATES.md']) {
+    assert.equal(fs.existsSync(path.join(__dirname,'..',file)),false,file);
+  }
+  assert.ok(!JSON.parse(read('_routes.json')).include.some(route=>route.startsWith('/api/updates')));
+  assert.doesNotMatch(read('scripts/build-site.js'), /update-receipt|updates\.js|update-receipts|server\/updates/);
 });
 
 test('macro includes mega-earnings category without dumping full calendar', () => {

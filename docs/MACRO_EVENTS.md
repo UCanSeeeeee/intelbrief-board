@@ -36,7 +36,7 @@
 3. `npm test && npm run check && npm run build`
 4. commit + push master。
 
-**不要**把本页加入 `updates.js` / `server/updates.mjs` 的简报任务 `PAGES` 列表。
+本页维持独立低频规则，不并入美股简报的三个日常批次；网页不提供手动更新队列。
 
 ## 数据文件
 

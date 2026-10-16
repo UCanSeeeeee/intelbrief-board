@@ -42,7 +42,7 @@
 8. 合集保留 30 天窗口；万亿高层每家公司近窗最多 2 席，热度补位同样受此限。重点榜（weekly）仍只收规则条目、最多 5 件。
 9. 人名原文与登记表简介规则（03cd6b0）不变，热度动态卡片同样适用。
 
-校验：`scripts/lib/selection-policy.js`，由 `prepare*`（update-results）与 `npm run check` 共同执行；测试 `test/people-selection.test.js`。
+校验：`scripts/lib/selection-policy.js`，由 `prepare*`（content-results）与 `npm run check` 共同执行；测试 `test/people-selection.test.js`。
 
 ## 每个 Tab 的固定内容
 

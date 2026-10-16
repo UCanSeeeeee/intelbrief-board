@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const {preparePeopleIntelligence}=require('../scripts/lib/update-results');
+const {preparePeopleIntelligence}=require('../scripts/lib/content-results');
 const {checkTabSelection}=require('../scripts/lib/selection-policy');
 const config=JSON.parse(fs.readFileSync(path.join(root,'config/people-intelligence.json'),'utf8'));
 const cutoff='2026-10-13T02:00:00Z',now=new Date('2026-10-13T02:10:00Z');

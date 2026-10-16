@@ -1,6 +1,6 @@
 # CONTEXT.md — 接手说明
 
-最后更新：2026-10-13（Asia/Shanghai）
+最后更新：2026-10-16（Asia/Shanghai）
 
 ## 产品与边界
 
@@ -31,7 +31,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
     失败时由同一Bot使用Grok网页版；GPT只维护代码，不参与内容运营
 ```
 
-前端无框架，Cloudflare Pages负责展示。上述是目标执行归属，不代表调度已跑通；当前验收事实见 [Grok运营记录](docs/GROK_BOT_OPERATIONS.md)。已有受保护更新接口与D1队列代码，但网页按钮尚未接通Grok，见 [手动更新](docs/MANUAL_UPDATES.md)。
+前端无框架，Cloudflare Pages负责只读展示。上述是目标执行归属，不代表调度已跑通；当前验收事实见 [Grok运营记录](docs/GROK_BOT_OPERATIONS.md)。网页“更新”按钮、登录、D1 队列、Webhook 与旧执行器已于 2026-10-16 删除；这不影响 Grok Bot 的既有云端内容任务。
 
 固定由「X+github」执行；旧「推特信息获取」仅保留历史。旧Codex调度已暂停，电脑端Codex执行器已停用，无GPT故障接管。
 
@@ -44,10 +44,6 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 - `assets/fluent/README.md`：页标题装饰素材的来源版本与许可。
 
 - `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：具体人物顶部 Tab、万亿美元公司高层、机构研报合集、AI 三层研究方向及降噪规则的待办与产品规划。
-- `docs/MANUAL_UPDATES.md`：全部更新（2026-10-13起唯一入口，单页已取消）、云端配置、执行端及验收状态的主要维护位置。
-- `update-receipt.js` / `scripts/manual-update-receipt.js`：无平台回调的v2结果凭证与文件摘要核验；网页未直连时提供明确的复制指令交接，不冒充已送达。状态、配置授权与验收边界见MANUAL_UPDATES。
-- `updates.js` / `server/updates.mjs`：页面进度与任务队列代码；`scripts/update-runner.js` 仅保留模拟测试能力，生产入口停用。
-
 - `docs/STOCK_BRIEF.md`：美股每天北京时间 08:00 / 15:00 / 20:30 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。
 - `config/research-guidance.json`：项目知识与采集SOP的机器入口；更新提示词会读取它指向的文件并强制注入每次美股和人物采集。
 - `knowledge/US_EQUITY_RESEARCH_KB.md`：用户关注点的项目内当前版本，固定半导体、电力、AI落地及宏观、地缘、市场结构、推理与反证框架。

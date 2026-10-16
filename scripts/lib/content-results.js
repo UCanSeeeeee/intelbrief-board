@@ -1,3 +1,4 @@
+// Shared validation and merge helpers for Grok-produced content artifacts.
 const {mergePosts,sha256,canonicalPostUrl}=require('./x-data');
 const {annotateCard}=require('./person-names');
 const {prepareBrief}=require('./stock-brief');

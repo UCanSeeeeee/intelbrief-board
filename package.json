@@ -19,11 +19,6 @@
     "dev": "npx --yes serve -l 8787 .",
     "pages:dev": "npm run build && wrangler pages dev dist --port 8787",
     "deploy": "npm run build && wrangler pages deploy dist --project-name=intelbrief-board",
-    "updates:setup": "node scripts/setup-updates.js",
-    "updates:receipt": "node scripts/manual-update-receipt.js",
-    "updates:start": "node scripts/update-runner.js",
-    "updates:schedule": "node scripts/schedule-update.js",
-    "dev:updates": "node scripts/local-updates.js",
     "fetch:earnings": "node scripts/fetch-earnings.js",
     "macro:refresh": "node scripts/refresh-macro-events.js",
     "ops:run": "node scripts/ops-run.js"

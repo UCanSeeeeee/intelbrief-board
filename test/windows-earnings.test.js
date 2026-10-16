@@ -6,9 +6,9 @@ const path=require('node:path');
 const crypto=require('node:crypto');
 const w=require('../scripts/lib/windows');
 const fe=require('../scripts/fetch-earnings');
-const {prepareNews}=require('../scripts/lib/update-results');
+const {prepareNews}=require('../scripts/lib/content-results');
 const {saveBrief}=require('../scripts/lib/stock-brief');
-const {carriedOver}=require('../scripts/update-runner');
+const {carriedOver}=w;
 
 test('beijingIso formats via Intl regardless of input offset',()=>{
   assert.equal(w.beijingIso('2026-10-12T01:00:00Z'),'2026-10-12T09:00:00+08:00');
@@ -116,15 +116,8 @@ test('earnings: retries with backoff then falls back to stale prior day',async()
   } finally {console.error=orig;}
 });
 
-test('login throttle blocks after 5 failures within 10 minutes',async()=>{
-  const m=await import('../server/updates.mjs');
-  for(let i=0;i<5;i++) m.noteLoginFailure('9.9.9.9',0);
-  assert.equal(m.loginBlocked('9.9.9.9',1000),true);
-  assert.equal(m.loginBlocked('9.9.9.9',700000),false);
-});
-
 test('collector prompt states display/search split, uncovered spans and checklist',()=>{
-  const {collectorPrompt}=require('../scripts/lib/update-prompt');
+  const {collectorPrompt}=require('../scripts/lib/collection-prompt');
   const p=collectorPrompt({page:'news',cutoff:'2026-10-12T00:00:00Z'},path.join(__dirname,'..'),'2026-10-09T16:00:00.000Z',{},{displayWindowStart:'2026-10-10T00:00:00+08:00',displayWindowEnd:'2026-10-12T09:00:00+08:00',uncovered:[{start:'a',end:'b'}]});
   assert.match(p,/展示窗口与检索窗口分离/);
   assert.match(p,/a 至 b/);

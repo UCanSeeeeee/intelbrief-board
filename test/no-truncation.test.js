@@ -17,8 +17,6 @@ test('all reading disclosures start open and cards omit counter-condition sectio
     assert.doesNotMatch(source,/反向条件|event\.counterCase|item\.counterCase/,`${file}: counter-condition UI was restored`);
   }
   assert.ok(disclosures>=10,'covers reading rules, cards, audit, company and scoring disclosures');
-  assert.match(read('updates.js'),/panel\.hidden=false/);
-  assert.doesNotMatch(read('updates.js'),/update-toggle|update-jobs|更新记录/,'removed update history must not return');
 });
 
 test('CSS has no text truncation', () => {
@@ -31,7 +29,7 @@ test('CSS has no text truncation', () => {
 });
 
 test('front-end JS does not truncate display strings', () => {
-  for (const f of ['app.js','briefs.js','people.js','tickers.js','ai.js','learning.js','crypto.js','earnings.js','updates.js']) {
+  for (const f of ['app.js','briefs.js','people.js','tickers.js','ai.js','learning.js','crypto.js','earnings.js']) {
     const js = read(f);
     for (const m of js.matchAll(/\.(slice|substring|substr)\(([^)]*)\)/g)) {
       // Only item-count limits (rules) are allowed: .slice(0, tab.latestLimit / tab.weeklyLimit)
