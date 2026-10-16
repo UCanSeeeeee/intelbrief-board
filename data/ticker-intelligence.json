@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-16T07:12:00.000Z",
-  "cutoff": "2026-10-16T15:00:00+08:00",
+  "updatedAt": "2026-10-16T12:41:12.272Z",
+  "cutoff": "2026-10-16T20:30:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,12 +9,12 @@
       {
         "id": "nvda",
         "status": "partial",
-        "note": "Huang/CoreWeave、Nemotron、Volvo；股价波动不作独立事实"
+        "note": "官号：奔驰/沃尔沃合作、Nemotron、欧洲活动；德工业 AI 协议仍为消息源"
       },
       {
         "id": "mu",
         "status": "partial",
-        "note": "AATT2/HBM 预订与存储抛售、劳工风险"
+        "note": "近窗高价值不足，保留滚动（存储抛售已在简报）"
       },
       {
         "id": "intc",
@@ -24,7 +24,7 @@
       {
         "id": "goog",
         "status": "partial",
-        "note": "近窗高价值不足，保留滚动"
+        "note": "近窗股权高价值不足，保留滚动"
       },
       {
         "id": "avgo",
@@ -39,29 +39,95 @@
       {
         "id": "tsm",
         "status": "partial",
-        "note": "业绩强但融资担忧压制"
+        "note": "Q3 纪录利润讨论多为转述；缺新原帖级指引，保留滚动"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "nvda-volvo-hyperion-partnership-2026-10-15",
+      "eventKey": "nvda-germany-industrial-ai-next-week-2026-10-16",
       "tabIds": [
         "nvda"
       ],
-      "title": "英伟达扩大与 Volvo Cars 自动驾驶合作",
-      "fact": "@nvidia：宣布扩大与 Volvo Cars 合作，结合 Hyperion、Halos OS 等推进安全自动驾驶。",
-      "whyItMatters": "汽车 AI 落地合同叙事。",
-      "counterCase": "量产时间表未达则估值难立刻重估。",
+      "title": "消息源：德国下周或宣布与 NVIDIA 工业 AI 协议",
+      "fact": "DeItaone：德国政府消息源称下周宣布与 NVIDIA 聚焦工业 AI 的协议。",
+      "whyItMatters": "主权产业订单预期；待正式文本。",
+      "counterCase": "宣布延期或无采购量则情绪回吐。",
       "affected": [
         "NVDA",
-        "汽车自动化"
+        "欧洲工业 AI"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-16T10:48:09.000Z",
+      "url": "https://x.com/DeItaone/status/2111046534175351266",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "nvda": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "nvda-mercedes-partnership-2026-10-16",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "NVIDIA 扩大与 Mercedes-Benz 自动驾驶合作",
+      "fact": "@nvidia：扩大与 Mercedes-Benz AG 战略合作，开发下一代驾驶辅助与自动驾驶系统。",
+      "whyItMatters": "汽车 AI 落地合作，支撑软件/平台叙事。",
+      "counterCase": "无量产与 ASP 则收入时点不明。",
+      "affected": [
+        "NVDA",
+        "汽车 AI"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-16T08:03:53.000Z",
+      "url": "https://x.com/nvidia/status/2111005194058179020",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "nvda": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "nvda-stockholm-event-2026-10-15",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "NVIDIA：斯德哥尔摩建设者活动，下一站柏林",
+      "fact": "@nvidia：Jensen 在斯德哥尔摩出席活动，预告柏林。",
+      "whyItMatters": "欧洲拓展叙事；热度/品牌。",
+      "counterCase": "无订单。",
+      "affected": [
+        "NVDA 欧洲"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-15T20:28:35.000Z",
+      "url": "https://x.com/nvidia/status/2110830216515919974",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "nvda-volvo-partnership-2026-10-15",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "NVIDIA 扩大与 Volvo Cars 安全自动驾驶合作",
+      "fact": "@nvidia：扩大与 Volvo Cars 合作，推进 Hyperion/Halos 等安全自动驾驶。",
+      "whyItMatters": "车企安全品牌+AI 平台。",
+      "counterCase": "缺交付量。",
+      "affected": [
+        "NVDA",
+        "Volvo"
       ],
       "author": "nvidia",
       "publishedAt": "2026-10-15T18:24:51.000Z",
       "url": "https://x.com/nvidia/status/2110799078497960084",
       "verification": "collector-report",
-      "tier": "watch",
+      "tier": "must-read",
       "weeklyRanks": {
         "nvda": 3
       },
@@ -114,54 +180,23 @@
       "people": []
     },
     {
-      "eventKey": "nvda-huang-coreweave-ticker-2026-10-15",
+      "eventKey": "nvda-nemotron-35-2026-10-15",
       "tabIds": [
         "nvda"
       ],
-      "title": "Jensen Huang：英伟达无需为 CoreWeave 兜底",
-      "fact": "快讯：Huang 称不需要 backstop CoreWeave，并辩护其财务；CRWV 盘中回升但高债务与高违约定价仍在。",
-      "whyItMatters": "客户融资边界影响 GPU 需求兑现预期。",
-      "counterCase": "信用再度恶化则安抚失效。",
+      "title": "NVIDIA 发布 Nemotron 3.5 Super VL",
+      "fact": "@nvidia：扩展 Nemotron 开源模型，推出 3.5 Super VL。",
+      "whyItMatters": "软件/开源生态；非芯片出货指引。",
+      "counterCase": "开源≠数据中心收入。",
       "affected": [
-        "NVDA",
-        "AI 基建"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-15T15:13:49.000Z",
-      "url": "https://x.com/DeItaone/status/2110751002391462197",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 1
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "nvda-nemotron-35-super-vl-2026-10-15",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "英伟达发布 Nemotron 3.5 Super VL 开放模型",
-      "fact": "@nvidia：扩展 Nemotron 开放模型家族，推出 Nemotron 3.5 Super VL，强调视觉理解、推理与工具使用，便于定制部署。",
-      "whyItMatters": "软件/模型栈进展，增强平台黏性叙事。",
-      "counterCase": "若采用数据弱，影响有限。",
-      "affected": [
-        "NVDA",
-        "AI 软件生态"
+        "NVDA 软件生态"
       ],
       "author": "nvidia",
       "publishedAt": "2026-10-15T15:10:27.000Z",
       "url": "https://x.com/nvidia/status/2110750157272719562",
       "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 2
-      },
+      "tier": "watch",
+      "weeklyRanks": {},
       "people": []
     },
     {
@@ -599,31 +634,6 @@
       "tier": "watch",
       "weeklyRanks": {
         "goog": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "intc-jeff-pu-emib-aws-google-2026-10-09",
-      "tabIds": [
-        "intc"
-      ],
-      "title": "分析师勾勒 Intel 封装路线：潜在 AWS/谷歌客户",
-      "fact": "@imnotharsh 转述 GF Securities Jeff Pu：Intel 先进封装/Foundry 路线图中，预期明年初推进 AWS Trainium 3，下半年涉及 Google TPU 与高通 CPU，并提到 18A-P。",
-      "whyItMatters": "若外部 AI 客户落地，将验证 Foundry/封装收入路径，改善市场对 INTC 代工叙事的定价。",
-      "counterCase": "分析师预期而非已签约公告；时间表与客户可能变动。",
-      "affected": [
-        "INTC",
-        "先进封装",
-        "AWS",
-        "Google"
-      ],
-      "author": "imnotharsh",
-      "publishedAt": "2026-10-09T11:27:04.000Z",
-      "url": "https://x.com/imnotharsh/status/2108519611956068425",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "intc": 1
       },
       "people": []
     }

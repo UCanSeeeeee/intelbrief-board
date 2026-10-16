@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-16T07:12:00.000Z",
-  "cutoff": "2026-10-16T15:00:00+08:00",
+  "updatedAt": "2026-10-16T12:41:12.272Z",
+  "cutoff": "2026-10-16T20:30:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,61 +9,81 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "Rosalind、Voice、Simons 捐赠"
+        "note": "Rosalind 学术计划、GPT-Live 语音、Simons 数学资助"
       },
       {
         "id": "anthropic",
         "status": "partial",
-        "note": "METR、Fellowships、Simons、估值传闻交叉"
+        "note": "Fellowship、METR 评测准入、数学资助；BB+ 评级见美股简报"
       },
       {
         "id": "goog-ai",
         "status": "partial",
-        "note": "近窗高价值不足，保留滚动"
+        "note": "近窗一手高价值不足，保留滚动"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "近窗不足，保留滚动"
+        "note": "近窗其他实验室高价值不足，保留滚动"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "anthropic-simons-math-5m-2026-10-15",
+      "eventKey": "anthropic-bbplus-rating-ai-tab-2026-10-16",
       "tabIds": [
         "anthropic"
       ],
-      "title": "Anthropic 向 Simons 数学倡议承诺 500 万美元",
-      "fact": "@AnthropicAI：与 OpenAI 一并支持 Simons Foundation 倡议，承诺 500 万美元资金并提供算力资源，帮助数学家评估与扩展 AI 结果。",
-      "whyItMatters": "科研生态与安全/对齐叙事之外的学术合作信号。",
-      "counterCase": "捐赠不直接等于产品收入。",
+      "title": "快讯：Anthropic 获 KBRA BB+，据报筹备大规模 AI 融资",
+      "fact": "DeItaone：Anthropic 获 BB+，据报在芯片融资与更大规模 AI 融资安排中。非官号直发。",
+      "whyItMatters": "融资能力与信用分层，直接影响扩张节奏。",
+      "counterCase": "条款与募集结果未知。",
       "affected": [
-        "Anthropic",
-        "科研合作"
+        "Anthropic 融资",
+        "AI 实验室信用"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-16T11:36:38.000Z",
+      "url": "https://x.com/DeItaone/status/2111058732650045666",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 3
+      },
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-math-funding-2026-10-15",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic：承诺 500 万美元支持数学研究中的 AI 使用",
+      "fact": "@AnthropicAI：引用相关倡议，承诺 500 万美元资助，帮助数学家推动科学进展。",
+      "whyItMatters": "与 OpenAI 同期科研资助，生态竞争。",
+      "counterCase": "捐赠≠产品收入。",
+      "affected": [
+        "Anthropic 科研生态"
       ],
       "author": "AnthropicAI",
       "publishedAt": "2026-10-15T21:31:45.000Z",
       "url": "https://x.com/AnthropicAI/status/2110846112152105136",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 4
-      },
+      "weeklyRanks": {},
       "people": []
     },
     {
-      "eventKey": "openai-gpt-rosalind-academic-2026-10-15",
+      "eventKey": "openai-rosalind-academic-2026-10-15",
       "tabIds": [
         "openai"
       ],
-      "title": "OpenAI 扩大 GPT-Rosalind 学术研究准入",
-      "fact": "@OpenAI：推出 Rosalind Academic Plan，向符合条件的美国大学实验室提供最长约 12 个月赞助访问，协助生物文献与数据推理。",
-      "whyItMatters": "垂直科研落地与学术渗透。",
-      "counterCase": "若仅试用无转化付费，商业影响有限。",
+      "title": "OpenAI：Rosalind Academic Plan 资助高校实验室",
+      "fact": "@OpenAI：推出 Rosalind Academic Plan，为合格美国大学实验室提供最长约 12 个月赞助使用权。",
+      "whyItMatters": "科研场景组织化采用。",
+      "counterCase": "赞助≠确认收入。",
       "affected": [
         "OpenAI",
-        "科研 AI"
+        "学术 AI"
       ],
       "author": "OpenAI",
       "publishedAt": "2026-10-15T21:15:00.000Z",
@@ -94,22 +114,22 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "anthropic": 3
+        "anthropic": 4
       },
       "people": []
     },
     {
-      "eventKey": "openai-gpt-live-voice-2026-10-15",
+      "eventKey": "openai-gpt-live-voices-2026-10-15",
       "tabIds": [
         "openai"
       ],
-      "title": "OpenAI 推送 GPT-Live-1.1 语音更新",
-      "fact": "@OpenAI：GPT-Live-1.1 为 ChatGPT/Codex/dots 语音带来新声线与更好口音，多语言上线，API 即将到来。",
-      "whyItMatters": "消费与开发者体验迭代，支持粘性。",
-      "counterCase": "无用量数据则难量化。",
+      "title": "OpenAI：GPT-Live-1.1 语音更新，多语种新声音",
+      "fact": "@OpenAI：GPT-Live-1.1 为 ChatGPT/Codex/dots 带来新声音与更好口音，含法/德/印地/墨西哥西语/韩/日等，今日向全体用户推送。",
+      "whyItMatters": "产品体验迭代，支撑消费/席位粘性。",
+      "counterCase": "功能更新不直接等于 ARPU 跳升。",
       "affected": [
-        "OpenAI",
-        "ChatGPT"
+        "ChatGPT 使用",
+        "语音产品"
       ],
       "author": "OpenAI",
       "publishedAt": "2026-10-15T18:19:54.000Z",
@@ -126,13 +146,13 @@
       "tabIds": [
         "anthropic"
       ],
-      "title": "Anthropic：给予 METR 类员工级安全评估访问",
-      "fact": "@AnthropicAI：承诺由外部评估方审查安全实践，并已给予 @METR_Evals 团队类员工级访问，发文说明合作方式。",
-      "whyItMatters": "安全治理与监管可信度，影响企业采购。",
-      "counterCase": "若评估结论负面，可能压制叙事。",
+      "title": "Anthropic：给予 METR 评测团队接近员工级访问以评估安全实践",
+      "fact": "@AnthropicAI：承诺由评估方审视安全实践，已与多家组织讨论，并给予 @METR_Evals 团队接近员工级访问。",
+      "whyItMatters": "安全治理与第三方评测，影响监管与企业采购信任。",
+      "counterCase": "访问本身≠评测通过。",
       "affected": [
-        "Anthropic",
-        "AI 安全"
+        "Anthropic 安全治理",
+        "企业采购信任"
       ],
       "author": "AnthropicAI",
       "publishedAt": "2026-10-15T17:27:34.000Z",
@@ -149,22 +169,19 @@
       "tabIds": [
         "openai"
       ],
-      "title": "OpenAI 向 Simons 数学倡议捐助 500 万美元",
-      "fact": "@OpenAI：宣布向 Simons Foundation 新倡议捐助 500 万美元，帮助数学家理解与扩展 AI 相关成果。",
-      "whyItMatters": "科研生态投入信号。",
-      "counterCase": "捐赠不直接等于产品收入。",
+      "title": "OpenAI：向 Simons Foundation 数学倡议捐助 500 万美元",
+      "fact": "@OpenAI：捐助 500 万美元支持数学家理解并扩展 AI 相关结果。",
+      "whyItMatters": "科研生态投入；非产品收入。",
+      "counterCase": "捐赠不改变近季财务。",
       "affected": [
-        "OpenAI",
-        "科研合作"
+        "OpenAI 科研声誉"
       ],
       "author": "OpenAI",
       "publishedAt": "2026-10-15T14:35:29.000Z",
       "url": "https://x.com/OpenAI/status/2110741355739963884",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {
-        "openai": 3
-      },
+      "weeklyRanks": {},
       "people": []
     },
     {
@@ -172,18 +189,18 @@
       "tabIds": [
         "anthropic"
       ],
-      "title": "Anthropic 开放两类研究 Fellowships 申请",
-      "fact": "@AnthropicAI：STEM 与 Conceptual Reasoning 两类 Fellowship 开放申请，2027 年 1 月起在 Anthropic 工作四个月。",
-      "whyItMatters": "人才与研究生态扩张。",
-      "counterCase": "对近季收入影响间接。",
+      "title": "Anthropic：STEM 与概念推理 Fellowship 开放申请",
+      "fact": "@AnthropicAI：STEM Fellows 与 Conceptual Reasoning Fellows 开放申请，2027 年 1 月起在 Anthropic 工作四个月。",
+      "whyItMatters": "人才与研究管线；非收入事件。",
+      "counterCase": "招聘项目不改近季财务。",
       "affected": [
-        "Anthropic"
+        "Anthropic 研究人才"
       ],
       "author": "AnthropicAI",
       "publishedAt": "2026-10-15T13:14:22.000Z",
       "url": "https://x.com/AnthropicAI/status/2110720940665372825",
       "verification": "collector-report",
-      "tier": "watch",
+      "tier": "must-read",
       "weeklyRanks": {
         "anthropic": 2
       },
