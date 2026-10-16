@@ -1,0 +1,2045 @@
+{
+  "scheduledFor": "2026-10-16T15:00:00+08:00",
+  "windowStart": "2026-10-15T07:00:00.000Z",
+  "displayWindowStart": "2026-10-15T15:00:00+08:00",
+  "displayWindowEnd": "2026-10-16T15:00:00+08:00",
+  "carriedOver": [],
+  "trigger": "scheduled",
+  "status": "partial",
+  "summary": "北京时间 10/16 15:00 期：9 月 PPI 大幅超预期、亚洲存储股剧烈抛售与 AI 基建融资/减值担忧主导定价；英伟达拒为 CoreWeave 兜底与 Anthropic 估值锚下修继续削弱“AI 无限溢价”。霍尔木兹沉船确认强化能源—通胀反馈。电力并网级新披露证据不足，未凑满 5+10。",
+  "marketContext": "美股常规交易时段已过（北京 15:00 对应美东凌晨）；本期覆盖自昨 15:00 以来的 PPI、亚洲开盘抛售与美股盘中 AI/半导体交易。周末将至，下期 20:30 继续复核。",
+  "shortfallReason": "第二轮电力包仅有零散成本/设备订单帖，缺可核验的吉瓦级并网或燃机交付新事实；部分个股/AI Tab 近窗高价值不足，按规则保留滚动旧条目、不凑数。实际产出 5 焦点 + 9 洞察。",
+  "collectionPath": "grok-bot-x-mcp",
+  "coverage": {
+    "method": "两轮独立检索：R1 宽扫宏观/半导体/AI融资/地缘；R2 按半导体/电力/AI落地/资本成本/地缘能源/市场结构六包生成查询并追源反证。来源为 X MCP search_posts_all / search_news / get_users_posts。",
+    "queries": [
+      "PPI OR producer prices inflation stocks Fed",
+      "NVDA OR semiconductor OR SK Hynix OR Micron OR CXMT selloff",
+      "Gartner OR CoreWeave OR neocloud AI infrastructure",
+      "from:DeItaone OR from:FirstSquawk OR from:LiveSquawk PPI",
+      "from:DeItaone OR from:Reuters Hynix OR CXMT OR KOSPI",
+      "HBM OR data center OR megawatt OR transformer power capacity",
+      "get_users_posts elonmusk / TrumpDailyPosts / OpenAI / AnthropicAI"
+    ],
+    "gaps": [
+      "电力包：缺窗口内可核验的大型并网/PPA新签原帖",
+      "Jensen Huang 本人账号近窗无直发，相关表态依赖快讯转述",
+      "Trump 近窗多为选举政治口水，可执行产业政策增量不足"
+    ]
+  },
+  "selectionRationale": "焦点按影响广度：PPI 超预期改写贴现率→存储跨市场抛售→Huang 拒兜底划定 AI 信用边界→Anthropic 估值锚下修→霍尔木兹能源冲击。Micron 开幕与 Hammack 讲话并入洞察以免重复占位。洞察独立覆盖融资闸门、估值质量、能源反馈、HBM/劳工、折现率、市场结构背离、欧洲产业政策、算力电力意向与 Gartner 减值缺口，不把焦点余料改名；不足 10 条不充数。",
+  "checklist": [
+    {
+      "item": "宏观/通胀：9月PPI与零售、联储官员反应",
+      "status": "covered",
+      "note": "DeItaone/LiveSquawk/FirstSquawk/Bloomberg；Hammack/UBS/Warsh 线索"
+    },
+    {
+      "item": "半导体：存储抛售、CXMT、SOX、Micron HBM",
+      "status": "covered",
+      "note": "SemiconductorsX/DeItaone/FirstSquawk；Rosenblatt 反证收录"
+    },
+    {
+      "item": "AI融资/neocloud：Gartner减值、CoreWeave信用、Huang拒兜底",
+      "status": "covered",
+      "note": "Bloomberg/zerohedge/DeItaone/FirstSquawk"
+    },
+    {
+      "item": "AI落地：Anthropic增速/估值、OpenAI产品更新",
+      "status": "covered",
+      "note": "DeItaone + OpenAI/Anthropic 官号"
+    },
+    {
+      "item": "电力/基建：数据中心成本与燃机/变压器线索",
+      "status": "insufficient",
+      "note": "有 Cushman 成本与 LS Electric 订单等零散帖，缺可核验吉瓦级并网新披露，未凑焦点"
+    },
+    {
+      "item": "地缘能源：霍尔木兹/IRGC",
+      "status": "covered",
+      "note": "FirstSquawk 转述 CENTCOM"
+    },
+    {
+      "item": "市场结构：芯片连跌 vs 指数/宽度",
+      "status": "covered",
+      "note": "SOX低点与 TSMC 业绩背离讨论"
+    },
+    {
+      "item": "人物页：Elon/Jensen/Trump/合集",
+      "status": "covered",
+      "note": "Elon 近窗多条；Jensen 本人无直发；Trump 近窗投资传导弱，热度补位"
+    },
+    {
+      "item": "个股页：NVDA/MU/TSM 等",
+      "status": "insufficient",
+      "note": "NVDA/MU/TSM 有新增；INTC/GOOG/AVGO/VRT 近窗高价值不足，保留滚动"
+    },
+    {
+      "item": "AI板块：OPENAI/ANTHROPIC/GOOG/其他",
+      "status": "insufficient",
+      "note": "OpenAI/Anthropic 有官号更新；GOOG AI/其他近窗不足，保留滚动"
+    },
+    {
+      "item": "加密",
+      "status": "covered",
+      "note": "按产品规则本期限停用，跳过采集与发布"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "us-ppi-sept-hot-2026-10-15",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较后入选"
+    },
+    {
+      "eventKey": "memory-cxmt-asia-selloff-2026-10-15",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较后入选"
+    },
+    {
+      "eventKey": "huang-nvidia-no-backstop-coreweave-2026-10-15",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较后入选"
+    },
+    {
+      "eventKey": "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较后入选"
+    },
+    {
+      "eventKey": "hormuz-gfs-pride-irgc-centcom-2026-10-15",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较后入选"
+    },
+    {
+      "eventKey": "ai-debt-huang-backstop-boundary-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "第二轮知识卡机制检索后入选"
+    },
+    {
+      "eventKey": "anthropic-valuation-anchor-reset-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "第二轮知识卡机制检索后入选"
+    },
+    {
+      "eventKey": "hormuz-energy-inflation-feedback-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "第二轮知识卡机制检索后入选"
+    },
+    {
+      "eventKey": "hbm-packaging-booked-vs-labor-risk-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "第二轮知识卡机制检索后入选"
+    },
+    {
+      "eventKey": "hammack-ppi-ai-capex-discount-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "第二轮知识卡机制检索后入选"
+    },
+    {
+      "eventKey": "semi-streak-vs-tsmc-print-structure-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "第二轮知识卡机制检索后入选"
+    },
+    {
+      "eventKey": "germany-nvidia-ai-partnership-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "第二轮知识卡机制检索后入选"
+    },
+    {
+      "eventKey": "elon-10gw-spacex-nvidia-server-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "第二轮知识卡机制检索后入选"
+    },
+    {
+      "eventKey": "gartner-ai-infra-impairment-2026-10-15",
+      "round": 2,
+      "decision": "selected",
+      "reason": "第二轮知识卡机制检索后入选"
+    },
+    {
+      "eventKey": "fed-hammack-as-focus-candidate",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "与 PPI 焦点同源政策反应，改作多学科洞察避免占满焦点名额"
+    },
+    {
+      "eventKey": "micron-aatt2-as-focus-candidate",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "封装预订证据多为二手转述，降为洞察/个股卡，焦点让位给更广的存储抛售"
+    },
+    {
+      "eventKey": "elon-flying-cars-roadster",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "产品营销热度高但缺近窗美股定价传导硬事实"
+    },
+    {
+      "eventKey": "nscale-ipo-risks",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "证据层级与可核验性不足，未达知识卡门槛"
+    },
+    {
+      "eventKey": "singapore-biological-compute",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "科研噱头，难连到当期美股利润/折现率"
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "eventKey": "fed-hammack-as-focus-candidate",
+      "reason": "与 PPI 焦点同源政策反应，改作多学科洞察避免占满焦点名额"
+    },
+    {
+      "eventKey": "micron-aatt2-as-focus-candidate",
+      "reason": "封装预订证据多为二手转述，降为洞察/个股卡，焦点让位给更广的存储抛售"
+    },
+    {
+      "eventKey": "elon-flying-cars-roadster",
+      "reason": "产品营销热度高但缺近窗美股定价传导硬事实"
+    },
+    {
+      "eventKey": "nscale-ipo-risks",
+      "reason": "证据层级与可核验性不足，未达知识卡门槛"
+    },
+    {
+      "eventKey": "singapore-biological-compute",
+      "reason": "科研噱头，难连到当期美股利润/折现率"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "us-ppi-sept-hot-2026-10-15",
+      "title": "美国 9 月 PPI 环比 +1.3%、同比 +6.3%，远超预期",
+      "fact": "DeItaone / LiveSquawk / FirstSquawk：9 月 PPI 环比 +1.3%（估 +0.6%）、同比 +6.3%（估 +5.4%）；核心 PPI 环比 +0.7%（估 +0.3%）、同比 +5.0%。能源与最终需求商品是主要驱动；同日零售销售环比约 +0.8% 高于预期。Bloomberg 称这是四年多来最快的生产者价格升幅之一。",
+      "impact": "事件→批发通胀再加速→加息/维持高利率赔率与期限溢价→成长股与高杠杆 AI 基建折现率上升；与前一日偏热 CPI 形成连续冲击。",
+      "direction": "利空",
+      "horizon": "数日至十月议息窗口",
+      "affected": [
+        "美债收益率",
+        "成长股",
+        "AI 融资成本",
+        "美元"
+      ],
+      "counterCase": "若能源分项快速回落、或 Kevin Warsh 等官员淡化十月加息、或市场转而交易增长放缓，PPI 冲击对贴现率的推升可能有限。",
+      "selectionReason": "窗口内影响面最广的宏观数据，直接改写利率与 AI 资本开支融资条件。",
+      "credibilityReason": "多家一级快讯交叉（DeItaone/LiveSquawk/FirstSquawk）与 Bloomberg 报道；精确分项以 BLS 公报为准。",
+      "change": "新增",
+      "eventTime": "2026-10-15T12:30:00.000Z",
+      "eventTimeNote": "按常规 BLS 8:30 ET 发布时间近似；帖文时间为发布后即时快讯。",
+      "attentionEvidence": "DeItaone PPI 快讯展示约 20 万、LiveSquawk 明细约 4.7 万；热度仅作注意力参考。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110710331668349403",
+          "postId": "2110710331668349403",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-15T12:32:12.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "*US SEPT. PRODUCER PRICES RISE 6.3% Y/Y; EST. +5.4%\n*US SEPT. PRODUCER PRICES RISE 1.3% M/M; EST. +0.6%\n*US SEPT. RETAIL SALES RISE 0.8% M/M; EST. +0.3%",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 36,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 37,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 10,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/LiveSquawk/status/2110712251770396701",
+          "postId": "2110712251770396701",
+          "username": "LiveSquawk",
+          "publishedAt": "2026-10-15T12:39:50.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "US PPI Final Demand (M/M) Sep: 1.3% (est 0.6%; prev 0.4%)\n- PPI Final Demand (Y/Y): 6.3% (est 5.4%; prev 5.4%)\n- PPI Ex Food And Energy (M/M): 0.7% (est 0.3%; prev 0.2%)",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 36,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 37,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 10,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110710013056733363",
+          "postId": "2110710013056733363",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T12:30:56.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "US PPI (MOM) (SEP) ACTUAL: 1.3% VS 0.4% PREVIOUS; EST 0.6%",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/business/status/2110801649623019639",
+          "postId": "2110801649623019639",
+          "username": "business",
+          "publishedAt": "2026-10-15T18:35:04.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "US producer prices rose in September at the fastest pace in more than four years as higher energy costs reverberated through the US economy.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "多家一级快讯交叉（DeItaone/LiveSquawk/FirstSquawk）与 Bloomberg 报道；精确分项以 BLS 公报为准。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "memory-cxmt-asia-selloff-2026-10-15",
+      "title": "CXMT/供给担忧叠加，存储与亚洲芯片股剧烈抛售",
+      "fact": "SemiconductorsX 等汇总：近五日 SK Hynix 约 -26%、Samsung 约 -22%、Micron 约 -11%，催化剂包括中国 CXMT 更密集服务器 DRAM 计划与 2029 年供给过剩讨论；DeItaone 称费城半导体指数盘中跌约 3.6% 至近一个月低点。FirstSquawk 随后称韩股反弹、但周线 KOSPI 仍录得约 -14.5%（称 2008 年以来最差周表现之一）。",
+      "impact": "事件→存储周期再定价→HBM/DRAM ASP 与 AI 硬件成本预期；若抛售由长期供给叙事驱动，可能压低 MU/相关设备估值，同时降低下游 GPU 系统 BOM 成本预期。",
+      "direction": "双向",
+      "horizon": "数周至季度财报验证",
+      "affected": [
+        "MU",
+        "存储供应链",
+        "亚洲半导体",
+        "AI 硬件成本"
+      ],
+      "counterCase": "若 HBM 长约价格与交期未松动、或 CXMT 产品良率/客户导入证伪“很快冲击高端”，反弹可能延续；反之 SK Hynix/Samsung 指引下调将确认供给担忧。",
+      "selectionReason": "半导体主线（存储）出现跨市场同步重定价，影响广度超过单只个股新闻。",
+      "credibilityReason": "跌幅来自市场转述与快讯交叉；CXMT 产品细节与份额需以一手披露为准，Rosenblatt 等已有“纸老虎”反证。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "亚洲开盘抛售集中在 10/15 上午；美东交易时段继续发酵，精确开盘时刻以交易所记录为准。",
+      "attentionEvidence": "SemiconductorsX 存储双恐惧帖展示约 8600；FirstSquawk KOSPI 周线帖展示约 1.3 万；热度仅作注意力参考。",
+      "sources": [
+        {
+          "url": "https://x.com/SemiconductorsX/status/2110752970631725205",
+          "postId": "2110752970631725205",
+          "username": "SemiconductorsX",
+          "publishedAt": "2026-10-15T15:21:38.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "Memory stocks are getting hit on two fears. China now. Oversupply in 2029. Over the last five days SK Hynix fell 26%, Samsung fell 22%, and Micron fell about 11%.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 35,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 35,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 8,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/DeItaone/status/2110726211429110087",
+          "postId": "2110726211429110087",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-15T13:35:18.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "PHILADELPHIA SEMICONDUCTOR INDEX HITS LOWEST IN NEARLY A MONTH, LAST DOWN 3.6%",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110982708893823424",
+          "postId": "2110982708893823424",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-16T06:34:32.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "South Korea’s KOSPI Ends the Week Down 14.5%, Its Worst Weekly Performance Since October 2008",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/RoPotoski/status/2110788485049143604",
+          "postId": "2110788485049143604",
+          "username": "RoPotoski",
+          "publishedAt": "2026-10-15T17:42:46.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "Rosenblatt analyst Kevin Cassidy characterized CXMT’s proposed 4F² DRAM technology as a “paper tiger\". Rosenblatt reiterated Buy ratings on Micron and SK hynix.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "跌幅来自市场转述与快讯交叉；CXMT 产品细节与份额需以一手披露为准，Rosenblatt 等已有“纸老虎”反证。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "huang-nvidia-no-backstop-coreweave-2026-10-15",
+      "title": "Jensen Huang 称英伟达无需为 CoreWeave 兜底，股价一度回稳",
+      "fact": "DeItaone 与 FirstSquawk：Jensen Huang 表示 NVIDIA 不需要为 CoreWeave 提供兜底；FirstSquawk 另称其辩护 CoreWeave 财务健康，推动股价盘中回升约 2%，同时指出 CoreWeave 债务逾 400 亿美元、信贷市场定价五年违约概率逾 60%。",
+      "impact": "事件→AI neocloud 信用边界明确化→GPU 客户融资与订单可持续性预期；若市场解读为“需求仍在但杠杆方自担”，可能缓和系统性恐慌，但高违约定价仍压制高杠杆基建扩张。",
+      "direction": "双向",
+      "horizon": "数个交易日到数周",
+      "affected": [
+        "AI 基础设施",
+        "GPU 需求预期",
+        "高收益信用",
+        "NVDA"
+      ],
+      "counterCase": "若 CoreWeave 债券再度暴跌、CDS 继续走阔，或随后出现重组/再融资失败，黄氏表态的安抚效力会被信用事实推翻。",
+      "selectionReason": "把前一日 AI 债务冲击推进为供应商是否背书的关键进展，影响跨成长股与信用。",
+      "credibilityReason": "DeItaone/FirstSquawk 快讯交叉；精确措辞与场合以原采访/实录为准。",
+      "change": "进展",
+      "eventTime": null,
+      "eventTimeNote": "表态准确当地时间未在所用快讯写明；相关快讯集中在 10/15 美东午后至晚间。",
+      "attentionEvidence": "DeItaone “HUANG SAYS NVIDIA DOESN'T NEED TO BACKSTOP COREWEAVE” 展示约 18 万；热度仅作注意力参考。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110751002391462197",
+          "postId": "2110751002391462197",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-15T15:13:49.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "HUANG SAYS NVIDIA DOESN'T NEED TO BACKSTOP COREWEAVE",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110856192683835745",
+          "postId": "2110856192683835745",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T22:11:48.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "NVIDIA CEO JENSEN HUANG DEFENDED COREWEAVE'S FINANCIAL HEALTH, HELPING ITS SHARES REBOUND 2.1% AFTER A SHARP SELLOFF. HOWEVER, COREWEAVE HAS OVER $40 BILLION IN DEBT, WITH CREDIT MARKETS PRICING IN MORE THAN 60% FIVE-YEAR DEFAULT RISK.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110851080267739310",
+          "postId": "2110851080267739310",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T21:51:29.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "NVIDIA CEO JENSEN HUANG SAID THE CHIPMAKER WOULD NOT BACKSTOP COREWEAVE, WHILE RISING US PRODUCER INFLATION AND FED RATE-HIKE EXPECTATIONS ADDED PRESSURE TO AI FINANCING AND CREDIT MARKETS.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "DeItaone/FirstSquawk 快讯交叉；精确措辞与场合以原采访/实录为准。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
+      "title": "Anthropic IPO 估值预期据报从约 2 万亿下调至约 1.5 万亿美元",
+      "fact": "DeItaone：部分投资者将 Anthropic 即将 IPO 的估值预期从约 2 万亿美元下调约 25% 至约 1.5 万亿美元；同条仍提及 Q3 营收约 168 亿美元、环比约 +45%。FirstSquawk 亦称有投资者在疲软业绩与市场抛售后下调估值预期。",
+      "impact": "事件→私人 AI 估值锚下修→公募 AI 软件与上游资本开支风险溢价；盈利叙事仍在，但 IPO 定价权与“AI 无限溢价”叙事同步松动。",
+      "direction": "利空",
+      "horizon": "数周至 IPO 窗口",
+      "affected": [
+        "AI 软件估值",
+        "成长风格",
+        "半导体需求预期"
+      ],
+      "counterCase": "若路演仍按近 2 万亿定价成功、或后续季度美元新增收入重新加速，下调预期可被证伪。",
+      "selectionReason": "相对前一日“盈利+巨型 IPO”焦点，本窗出现明确估值锚下修，是 AI 定价机制的关键进展。",
+      "credibilityReason": "DeItaone/FirstSquawk 来源交叉；具体投资者名单与条款未披露，属市场传闻级定价预期。",
+      "change": "进展",
+      "eventTime": null,
+      "eventTimeNote": "估值预期调整的准确时点未写明；快讯时间在 10/15 美东晚间。",
+      "attentionEvidence": "DeItaone 估值下调帖展示约 28 万、点赞逾 600；热度仅作注意力参考。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110837977928638529",
+          "postId": "2110837977928638529",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-15T20:59:26.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "ANTHROPIC'S IPO VALUATION EXPECTATIONS DROP FROM $2 TRILLION TO $1.5 TRILLION Some investors are considering a $1.5 trillion valuation for Anthropic's upcoming IPO, down 25% from earlier expectations of $2 trillion. Anthropic reported $16.8 billion in Q3 revenue, up 45%",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 36,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 37,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 10,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110838715375583320",
+          "postId": "2110838715375583320",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T21:02:21.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "SOME INVESTORS DIAL BACK ANTHROPIC VALUATION EXPECTATIONS AMID DISAPPOINTING RESULTS, MARKET SELLOFF - SOURCES",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "DeItaone/FirstSquawk 来源交叉；具体投资者名单与条款未披露，属市场传闻级定价预期。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "hormuz-gfs-pride-irgc-centcom-2026-10-15",
+      "title": "美中央司令部确认伊朗革命卫队炮弹击沉霍尔木兹海峡货轮 GFS Pride",
+      "fact": "FirstSquawk：美国中央司令部确认伊朗革命卫队（IRGC）炮弹击沉新加坡籍货轮 GFS Pride，21 名船员全部获救；过去 24 小时仍有逾 40 艘船通过该水道。同窗油价方面，FirstSquawk 称美原油期货收涨约 3.03% 报 97.97 美元/桶，且美国原油库存减少约 855.7 万桶。",
+      "impact": "事件→霍尔木兹通行与保险溢价→原油/柴油成本→通胀粘性与利率路径；若袭击常态化，能源冲击可与已偏热的 PPI 叠加。",
+      "direction": "利空",
+      "horizon": "数日至数周",
+      "affected": [
+        "原油与成品油",
+        "航运保险",
+        "通胀预期",
+        "能源股"
+      ],
+      "counterCase": "若后续无更多沉船、过境量恢复且库存下降被解读为季节性，油价溢价可能迅速回吐。",
+      "selectionReason": "对全球能源供给与通胀预期影响面广，且有军方确认而非纯社交媒体传闻。",
+      "credibilityReason": "FirstSquawk 转述 CENTCOM；船员获救细节与库存数据另有快讯交叉，精确调查结论以官方报告为准。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "击沉与 CENTCOM 确认的精确时刻未在所用帖文写明。",
+      "attentionEvidence": "FirstSquawk CENTCOM 确认帖展示约 1.9 万；热度仅作注意力参考。",
+      "sources": [
+        {
+          "url": "https://x.com/FirstSquawk/status/2110855459121086622",
+          "postId": "2110855459121086622",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T22:08:53.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "US CENTRAL COMMAND CONFIRMED AN IRANIAN REVOLUTIONARY GUARD CORPS PROJECTILE SANK THE SINGAPORE-FLAGGED GFS PRIDE IN THE STRAIT OF HORMUZ, WITH ALL 21 CREW MEMBERS RESCUED SAFELY. MORE THAN 40 VESSELS TRANSITED THE WATERWAY IN THE PREVIOUS 24 HOURS.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110801060931711387",
+          "postId": "2110801060931711387",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T18:32:44.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "US CRUDE OIL FUTURES SETTLE 3.03% HIGHER AT $97.97/BBL, UP $2.88",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110762720182346206",
+          "postId": "2110762720182346206",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T16:00:23.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "US CRUDE OIL INVENTORIES ACTUAL: -8557K VS -3186K PREVIOUS; EST 95.50K",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "FirstSquawk 转述 CENTCOM；船员获救细节与库存数据另有快讯交叉，精确调查结论以官方报告为准。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [
+    {
+      "eventKey": "ai-debt-huang-backstop-boundary-2026-10-15",
+      "title": "英伟达拒兜底强化“订单≠可融资”：neocloud 信用成 AI 开支闸门",
+      "fact": "在 CoreWeave 高债务与高违约定价背景下，Jensen Huang 明确英伟达无需为其兜底，同时口头辩护其财务健康；市场同日仍交易 AI 融资成本上升叙事。",
+      "impact": "事件→供应商信用边界→客户杠杆与预付能力→GPU/电力订单的可兑现节奏（I01 资本开支双刃剑；M02 信用/融资条件）。",
+      "direction": "双向",
+      "horizon": "数周",
+      "affected": [
+        "neocloud",
+        "NVDA",
+        "高收益债"
+      ],
+      "counterCase": "若大型云厂商加大预付或利率预期回落，信用闸门可重新打开。",
+      "selectionReason": "把焦点事件转成融资约束机制，而非重复股价涨跌。",
+      "credibilityReason": "依赖快讯交叉；契约细节未公开。",
+      "change": "进展",
+      "knowledgeCards": [
+        "I01",
+        "M02"
+      ],
+      "disciplines": [
+        "半导体",
+        "资本成本"
+      ],
+      "knowledgeApplication": "I01 提示供应商订单可先行、采购方融资随后承压；M02 强调信用利差变化可独立于终端 AI 需求改变折现与扩张节奏。本期 Huang 拒兜底把两卡连成可检验边界：需求叙事仍在，但杠杆方须自担再融资。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110789464763285982",
+          "postId": "2110789464763285982",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-15T17:46:39.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "$CRWV  - COREWEAVE SHARES REVERSE DECLINES, LAST UP 2.7%",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110750163295928652",
+          "postId": "2110750163295928652",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T15:10:29.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "HUANG SAYS NVIDIA DOESN'T NEED TO BACKSTOP COREWEAVE",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "同焦点事件时间说明。",
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "依赖快讯交叉；契约细节未公开。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "anthropic-valuation-anchor-reset-2026-10-15",
+      "title": "Anthropic 盈利叙事仍在，但 IPO 估值锚下修显示单位经济溢价松动",
+      "fact": "Q3 高营收与调整后盈利故事未消失，但投资者预期估值从约 2T 下调至约 1.5T；另有分析指美元环比新增收入放缓。",
+      "impact": "事件→私人估值锚→公募 AI 比较估值与资本成本（I03 AI 落地；M07 风险溢价/拥挤交易）。",
+      "direction": "利空",
+      "horizon": "至 IPO",
+      "affected": [
+        "AI 软件",
+        "成长股"
+      ],
+      "counterCase": "若 IPO 仍接近原定价或下季美元新增重新加速，锚下修可逆转。",
+      "selectionReason": "独立于焦点标题，强调商业化质量与定价权。",
+      "credibilityReason": "估值预期为来源转述，非成交价。",
+      "change": "进展",
+      "knowledgeCards": [
+        "I03",
+        "I05"
+      ],
+      "disciplines": [
+        "AI 落地",
+        "市场结构"
+      ],
+      "knowledgeApplication": "I03 要求区分采用/收入与可持续现金；I05 提醒少数叙事锚可主导指数风险偏好。本期“仍有营收但估值锚下修”说明市场在重标定 AI 溢价。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110778562844209600",
+          "postId": "2110778562844209600",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-15T17:03:20.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "ANTHROPIC'S SLOWING REVENUE GROWTH DOES NOT SIGNAL WEAKER AI DEMAND D.A. Davidson analysts say Anthropic's slowing revenue growth should not be interpreted as a broader AI demand slowdown.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110797367536664924",
+          "postId": "2110797367536664924",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T18:18:03.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "ANTHROPIC PROPOSES $2 TRILLION VALUATION AMID UNCERTAIN IPO MARKET CONDITIONS",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "估值预期调整时点未精确到分钟。",
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "估值预期为来源转述，非成交价。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "hormuz-energy-inflation-feedback-2026-10-15",
+      "title": "霍尔木兹沉船确认叠加原油去库存：能源冲击回流通胀预期",
+      "fact": "CENTCOM 确认 IRGC 击沉货轮；美原油收涨约 3% 至约 98 美元，库存大幅下降。",
+      "impact": "事件→能源供给风险溢价→汽油/柴油成本→CPI/PPI 粘性→利率路径（M05 地缘能源；M01 通胀利率）。",
+      "direction": "利空",
+      "horizon": "数周",
+      "affected": [
+        "能源",
+        "通胀预期",
+        "利率敏感板块"
+      ],
+      "counterCase": "若航运迅速恢复且油价回落，反馈链中断。",
+      "selectionReason": "把地缘事件写成通胀反馈，而非只报冲突标题。",
+      "credibilityReason": "军方确认+库存快讯；柴油裂解等细节未核。",
+      "change": "新增",
+      "knowledgeCards": [
+        "M06",
+        "M01"
+      ],
+      "disciplines": [
+        "地缘能源",
+        "宏观利率"
+      ],
+      "knowledgeApplication": "M06 要求把冲突落到供给/风险溢价；M01 提醒能源冲击可通过通胀预期改变利率路径。本期沉船确认+热 PPI 同窗，强化“能源→通胀→贴现率”反馈。",
+      "sources": [
+        {
+          "url": "https://x.com/jakeclayusa/status/2110769789253898261",
+          "postId": "2110769789253898261",
+          "username": "jakeclayusa",
+          "publishedAt": "2026-10-15T16:28:28.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "Two cargo ships sank near Hormuz in 24 hours; Gulf oil exports fell to about half their early-October level. Ukraine ended the \"energy ceasefire\" and hit a Russian",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/geo_z0ne/status/2110706669772476637",
+          "postId": "2110706669772476637",
+          "username": "geo_z0ne",
+          "publishedAt": "2026-10-15T12:17:39.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "The \"energy ceasefire\" is over, and a ship sank near Hormuz. Ukrainian President Volodymyr Zelenskyy told the Financial Times that Ukraine is no longer holding back from hitting Russian refineries.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "库存数据为周度公布；沉船时刻未精确。",
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "军方确认+库存快讯；柴油裂解等细节未核。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "hbm-packaging-booked-vs-labor-risk-2026-10-15",
+      "title": "HBM 封装预订支撑紧平衡，但台湾劳工争议引入供给中断尾部风险",
+      "fact": "Micron AATT2 开幕与 2027 HBM 预订转述并存；同时有台湾厂区潜在罢工报道。",
+      "impact": "事件→封装/HBM 瓶颈→AI 加速器出货与 ASP（I01；I02 供给瓶颈迁移）。",
+      "direction": "双向",
+      "horizon": "数月",
+      "affected": [
+        "MU",
+        "HBM",
+        "AI 硬件"
+      ],
+      "counterCase": "若罢工未发生且产能按期释放，尾部风险消退；若客户推迟提货，预订亦不等于出货。",
+      "selectionReason": "半导体主线的供给机制更新。",
+      "credibilityReason": "地方新闻转述为主，官方确认不足。",
+      "change": "新增",
+      "knowledgeCards": [
+        "I01",
+        "I02"
+      ],
+      "disciplines": [
+        "半导体",
+        "供应链"
+      ],
+      "knowledgeApplication": "I02 关注瓶颈从芯片移到封装/HBM 后利润与风险迁移；I01 提醒产能扩张与客户融资绑定。本期“预订”提高可见度，劳工争议则是反向检验点。",
+      "sources": [
+        {
+          "url": "https://x.com/PrimeAndFoundry/status/2110855713622827258",
+          "postId": "2110855713622827258",
+          "username": "PrimeAndFoundry",
+          "publishedAt": "2026-10-15T22:09:54.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "$MU Micron opened its second advanced packaging and test plant in Taichung today, with COO Manish Bhatia stating the facility’s 2027 HBM capacity is already fully sold out.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/allday_stocks/status/2110652276566106573",
+          "postId": "2110652276566106573",
+          "username": "allday_stocks",
+          "publishedAt": "2026-10-15T08:41:31.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "$MU Micron: Potential Strike at Taiwan Operations Threatens Memory Chip Supply Amid Severe Shortage, President Urges Resolution",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "开幕与工会投票时点未逐一核验。",
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "地方新闻转述为主，官方确认不足。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "hammack-ppi-ai-capex-discount-2026-10-15",
+      "title": "热 PPI 后的鹰派表态抬升 AI 资本开支折现率",
+      "fact": "Beth Hammack 警告或需更激进抗通胀行动；KobeissiLetter 强调 CPI/PPI 远超目标。",
+      "impact": "事件→政策反应函数→实际利率/期限溢价→长周期 AI 基建 NPV（M01；I01）。",
+      "direction": "利空",
+      "horizon": "数日至议息",
+      "affected": [
+        "AI 基建",
+        "成长股",
+        "公用事业融资"
+      ],
+      "counterCase": "若其他官员淡化加息或市场交易“跳过十月”，折现率冲击有限。",
+      "selectionReason": "跨学科连接宏观与 AI 实物投资。",
+      "credibilityReason": "演讲转述+公开通胀汇总。",
+      "change": "进展",
+      "knowledgeCards": [
+        "M01",
+        "I01"
+      ],
+      "disciplines": [
+        "宏观利率",
+        "电力基建"
+      ],
+      "knowledgeApplication": "M01 比较通胀粘性与估值路径；I01 指出采购方融资成本上升可滞后打击订单。Hammack 表态提高“融资成本路径”权重。",
+      "sources": [
+        {
+          "url": "https://x.com/FirstSquawk/status/2110827236219818481",
+          "postId": "2110827236219818481",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T20:16:45.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "ATTENTION TURNS TO FED CHAIR KEVIN WARSH'S REMARKS FOR CLUES ON WHETHER OFFICIALS ARE PIVOTING FROM A SKIP TO AN OCTOBER RATE HIKE",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/KobeissiLetter/status/2110778022131306528",
+          "postId": "2110778022131306528",
+          "username": "KobeissiLetter",
+          "publishedAt": "2026-10-15T17:01:11.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "The \"Stealth\" Bear Market: A Historic Opportunity.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "演讲时刻未精确。",
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "演讲转述+公开通胀汇总。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "semi-streak-vs-tsmc-print-structure-2026-10-15",
+      "title": "台积电业绩确认需求，但芯片股连跌显示市场结构重定价融资而非需求",
+      "fact": "窗口内 TSMC 业绩与 AI 需求“远超供给”表述仍被广泛转述；同时半导体板块被描述为多年未见的连跌，AI 融资担忧主导交易。",
+      "impact": "事件→宽度与权重贡献背离→“需求真、融资假”的结构交易（M08；R02）。",
+      "direction": "双向",
+      "horizon": "数个交易日",
+      "affected": [
+        "半导体",
+        "市场宽度",
+        "NVDA/TSM"
+      ],
+      "counterCase": "若融资担忧缓解且亚洲风险偏好修复，连跌可快速结束。",
+      "selectionReason": "解释为何好业绩未阻止抛售，避免把价格当因果。",
+      "credibilityReason": "业绩与连跌均为二手市场描述；精确指数连跌天数以行情数据为准。",
+      "change": "延续",
+      "continuationReason": "TSMC 数字与 AI 融资抛售同窗并存，结构背离仍是定价主矛盾。",
+      "knowledgeCards": [
+        "M08",
+        "R02"
+      ],
+      "disciplines": [
+        "市场结构",
+        "半导体"
+      ],
+      "knowledgeApplication": "M08 区分需求事实与仓位/融资驱动的价格；R02 要求冲击经现金流或贴现率传到价格。本期业绩未改融资贴现，故价格可与基本面暂时脱钩。",
+      "sources": [
+        {
+          "url": "https://x.com/AIMarketMind/status/2110791565127930251",
+          "postId": "2110791565127930251",
+          "username": "AIMarketMind",
+          "publishedAt": "2026-10-15T17:55:00.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "TSMC just posted 69% profit growth and raised its 2026 revenue outlook to 44%—yet the stock fell. The market isn’t calling AI demand fake. It’s asking who funds the next buildout.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FirstSquawk/status/2110827224450695562",
+          "postId": "2110827224450695562",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-15T20:16:42.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "STOCKS BOUNCED AFTER A DROP DRIVEN BY WORRIES ABOUT THE SUSTAINABILITY OF THE AI TRADE",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "连跌统计口径未独立核对行情库。",
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "业绩与连跌均为二手市场描述；精确指数连跌天数以行情数据为准。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "germany-nvidia-ai-partnership-2026-10-15",
+      "title": "德国据报筹划与英伟达重大 AI 合作，政府资金或达数亿欧元级",
+      "fact": "DeItaone 援引 Handelsblatt：德国总理 Friedrich Merz 正筹备与 NVIDIA 的重大 AI 合作，政府资金可能达数亿欧元，聚焦工业 AI 与机器人等。",
+      "impact": "事件→主权产业政策资金→欧洲工业 AI 采用与 GPU 需求地域分布（I03；I06 政策/补贴）。",
+      "direction": "利多",
+      "horizon": "数月",
+      "affected": [
+        "NVDA",
+        "欧洲工业 AI"
+      ],
+      "counterCase": "若仅为意向、预算未立法或采购延迟，则难改近季订单。",
+      "selectionReason": "AI 落地与政策资金的可观察进展，不同于纯股价叙事。",
+      "credibilityReason": "单一媒体转述；缺双方官方确认帖。",
+      "change": "新增",
+      "knowledgeCards": [
+        "I03",
+        "I06"
+      ],
+      "disciplines": [
+        "AI 落地",
+        "产业政策"
+      ],
+      "knowledgeApplication": "I03 看采用是否走向合同/部署；I06 关注补贴是否改变真实采购。本期仍处“筹划”阶段，故方向利多但证据层级偏低。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2110746783034884158",
+          "postId": "2110746783034884158",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-15T14:57:03.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "GERMANY PLANS MAJOR AI PARTNERSHIP WITH NVIDIA — HANDELSBLATT German Chancellor Friedrich Merz is preparing a major AI partnership with Nvidia ($NVDA ), backed by hundreds of millions of euros in government funding.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "Handelsblatt 报道准确时间未核对。",
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "单一媒体转述；缺双方官方确认帖。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "elon-10gw-spacex-nvidia-server-2026-10-15",
+      "title": "Elon Musk 回应称算力目标或不止 10GW；英伟达将 SpaceX 计入云客户并共研太空服务器",
+      "fact": "@elonmusk 引用讨论其 2027 年底约 10GW 算力目标的帖文并回复 “Maybe more than 10GW”。被引用帖称 Jensen Huang 表示英伟达已将 SpaceX 与云厂商并列，双方工程师在设计太空服务器。",
+      "impact": "事件→极端算力/电力需求意向→电力与封装长期约束（I05 电力；I01）。",
+      "direction": "双向",
+      "horizon": "数年",
+      "affected": [
+        "电力设备",
+        "NVDA",
+        "SpaceX/xAI"
+      ],
+      "counterCase": "若仅为愿景、无土地/并网/融资里程碑，则近季影响有限。",
+      "selectionReason": "电力包核心问题：意向 vs 可供电产能。",
+      "credibilityReason": "本人短回复+第三方视频转述；缺合同与并网证据。",
+      "change": "新增",
+      "knowledgeCards": [
+        "I05",
+        "I01"
+      ],
+      "disciplines": [
+        "电力",
+        "半导体"
+      ],
+      "knowledgeApplication": "I05 区分意向/合同/并网/投产；I01 提醒资本开支规模需匹配融资。本期仅有目标上修口头信号，故记为长周期约束提醒而非近季订单。",
+      "sources": [
+        {
+          "url": "https://x.com/elonmusk/status/2110877572011844019",
+          "postId": "2110877572011844019",
+          "username": "elonmusk",
+          "publishedAt": "2026-10-15T23:36:46.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "Maybe more than 10GW",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 49,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 82,
+            "claimScore": 42,
+            "breakdown": {
+              "directness": 25,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "账号在人工来源表中登记为具名当事人"
+            ],
+            "warnings": [
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/bg2clips/status/2110841224986812828",
+          "postId": "2110841224986812828",
+          "username": "bg2clips",
+          "publishedAt": "2026-10-15T21:12:20.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "@elonmusk wants 10 gigawatts of compute by the end of 2027. @JensenHuang says Nvidia now counts @SpaceX alongside its cloud provider customers, and the two companies' engineers are designing a server for space",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "视频采访原始录制时间未独立核验。",
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        },
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
+      "credibility": {
+        "score": 33,
+        "label": "规则初评，未校准",
+        "reason": "本人短回复+第三方视频转述；缺合同与并网证据。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "gartner-ai-infra-impairment-2026-10-15",
+      "title": "Gartner：AI 基建投资或致逾 3.5 万亿减值风险，neocloud 独立性承压",
+      "fact": "Bloomberg (@business)：Gartner 估计到 2030 年逾 3.5 万亿美元 AI 基础设施开支可能面临减值风险，因投资增速可能超过可支撑收入。同窗 Antfeed 转述称运营商若要覆盖投资并获约 12% 回报，累计收入需求约 8.5 万亿美元量级；zerohedge 等将此与 CoreWeave 信用压力并读。",
+      "impact": "事件→收入/资本开支缺口预期→neocloud 与高杠杆数据中心信用利差→GPU 租赁需求与上游订单的融资约束（I01；M02）。",
+      "direction": "利空",
+      "horizon": "数月至数年资本开支周期",
+      "affected": [
+        "neocloud",
+        "AI 基建债",
+        "NVDA 客户融资"
+      ],
+      "counterCase": "若 hyperscaler 合同覆盖率上升、或 Gartner 口径被证伪为过宽，信用重定价可缓和；“失去独立运营”不等于破产。",
+      "selectionReason": "把 AI 实物开支与可融资性写成可检验的收入缺口，而非重复股价。",
+      "credibilityReason": "Bloomberg 转述 Gartner；8.5T 数字来自二手汇总，完整报告未在 X 直读。",
+      "change": "新增",
+      "knowledgeCards": [
+        "I01",
+        "M02"
+      ],
+      "disciplines": [
+        "电力基建",
+        "资本成本"
+      ],
+      "knowledgeApplication": "I01 指出供应商可先获订单、采购方融资随后承压；M02 强调债务与期限溢价会独立抬高 AI 重资本项目回报门槛。本期 Gartner 收入缺口把两卡连成：需求叙事仍在，但累计收入能否覆盖资本开支成为公开争议。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2110714829384061381",
+          "postId": "2110714829384061381",
+          "username": "business",
+          "publishedAt": "2026-10-15T12:50:05.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "More than $3.5 trillion of AI infrastructure spending could be at risk of impairment by 2030 as the industry’s investment boom threatens to outpace the revenue required to justify it, according to market research firm Gartner",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/antfeedapp/status/2110889983049670700",
+          "postId": "2110889983049670700",
+          "username": "antfeedapp",
+          "publishedAt": "2026-10-16T00:26:05.000Z",
+          "checkedAt": "2026-10-16T07:10:00.000Z",
+          "excerpt": "AI DATA CENTERS NEED $8.5 TRILLION IN REVENUE. GARTNER SEES A MASSIVE PROBLEM WITH THE MATH",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "Gartner 报告准确发布时间未在所用帖文写明；Bloomberg 帖在 10/15 午间。",
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "Bloomberg 转述 Gartner；8.5T 数字来自二手汇总，完整报告未在 X 直读。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "id": "2026-10-16-1500",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T07:13:34.816Z",
+  "counts": {
+    "focus": 5,
+    "insights": 9,
+    "total": 14
+  }
+}

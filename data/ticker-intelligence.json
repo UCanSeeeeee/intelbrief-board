@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T13:01:03.972Z",
-  "cutoff": "2026-10-15T21:00:00+08:00",
+  "updatedAt": "2026-10-16T07:12:00.000Z",
+  "cutoff": "2026-10-16T15:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,41 +9,161 @@
       {
         "id": "nvda",
         "status": "partial",
-        "note": "融资担忧与生态官号；无新财报；保留周榜旧条"
+        "note": "Huang/CoreWeave、Nemotron、Volvo；股价波动不作独立事实"
       },
       {
         "id": "mu",
         "status": "partial",
-        "note": "亚洲抛售/中国竞争叙事；证据层级一般"
+        "note": "AATT2/HBM 预订与存储抛售、劳工风险"
       },
       {
         "id": "intc",
         "status": "partial",
-        "note": "近窗无合格新事实，保留滚动旧条"
+        "note": "近窗高价值不足，保留滚动"
       },
       {
         "id": "goog",
         "status": "partial",
-        "note": "近窗无合格新事实，保留滚动旧条"
+        "note": "近窗高价值不足，保留滚动"
       },
       {
         "id": "avgo",
         "status": "partial",
-        "note": "近窗无合格新事实，保留滚动旧条"
+        "note": "近窗高价值不足，保留滚动"
       },
       {
         "id": "vrt",
         "status": "partial",
-        "note": "近窗无合格新事实，保留滚动旧条"
+        "note": "近窗高价值不足，保留滚动"
       },
       {
         "id": "tsm",
-        "status": "complete",
-        "note": "Q3/Q4 数字多源交叉入选"
+        "status": "partial",
+        "note": "业绩强但融资担忧压制"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "nvda-volvo-hyperion-partnership-2026-10-15",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "英伟达扩大与 Volvo Cars 自动驾驶合作",
+      "fact": "@nvidia：宣布扩大与 Volvo Cars 合作，结合 Hyperion、Halos OS 等推进安全自动驾驶。",
+      "whyItMatters": "汽车 AI 落地合同叙事。",
+      "counterCase": "量产时间表未达则估值难立刻重估。",
+      "affected": [
+        "NVDA",
+        "汽车自动化"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-15T18:24:51.000Z",
+      "url": "https://x.com/nvidia/status/2110799078497960084",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "nvda": 3
+      },
+      "people": []
+    },
+    {
+      "eventKey": "tsm-print-vs-funding-worry-2026-10-15",
+      "tabIds": [
+        "tsm"
+      ],
+      "title": "台积电业绩强但仍受 AI 融资担忧压制",
+      "fact": "转述：TSMC 利润大增并上修展望，但股价仍受“谁为下一轮扩建买单”质疑影响。",
+      "whyItMatters": "需求确认 vs 融资折现的结构定价。",
+      "counterCase": "若融资担忧缓解，业绩可重新主导。",
+      "affected": [
+        "TSM",
+        "AI 供应链"
+      ],
+      "author": "AIMarketMind",
+      "publishedAt": "2026-10-15T17:55:00.000Z",
+      "url": "https://x.com/AIMarketMind/status/2110791565127930251",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "tsm": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "mu-memory-complex-selloff-2026-10-15",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "存储板块抛售中 Micron 约五日跌逾一成",
+      "fact": "SemiconductorsX：近五日 Micron 约跌 11%，与 SK Hynix/Samsung 同步受 CXMT 与 2029 供给叙事冲击。",
+      "whyItMatters": "直接冲击 MU 估值与 HBM 紧平衡叙事。",
+      "counterCase": "若 HBM 长约未松、反弹延续，则属情绪杀。",
+      "affected": [
+        "MU",
+        "HBM"
+      ],
+      "author": "SemiconductorsX",
+      "publishedAt": "2026-10-15T15:21:38.000Z",
+      "url": "https://x.com/SemiconductorsX/status/2110752970631725205",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "mu": 3
+      },
+      "people": []
+    },
+    {
+      "eventKey": "nvda-huang-coreweave-ticker-2026-10-15",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "Jensen Huang：英伟达无需为 CoreWeave 兜底",
+      "fact": "快讯：Huang 称不需要 backstop CoreWeave，并辩护其财务；CRWV 盘中回升但高债务与高违约定价仍在。",
+      "whyItMatters": "客户融资边界影响 GPU 需求兑现预期。",
+      "counterCase": "信用再度恶化则安抚失效。",
+      "affected": [
+        "NVDA",
+        "AI 基建"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-15T15:13:49.000Z",
+      "url": "https://x.com/DeItaone/status/2110751002391462197",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "nvda": 1
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "nvda-nemotron-35-super-vl-2026-10-15",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "英伟达发布 Nemotron 3.5 Super VL 开放模型",
+      "fact": "@nvidia：扩展 Nemotron 开放模型家族，推出 Nemotron 3.5 Super VL，强调视觉理解、推理与工具使用，便于定制部署。",
+      "whyItMatters": "软件/模型栈进展，增强平台黏性叙事。",
+      "counterCase": "若采用数据弱，影响有限。",
+      "affected": [
+        "NVDA",
+        "AI 软件生态"
+      ],
+      "author": "nvidia",
+      "publishedAt": "2026-10-15T15:10:27.000Z",
+      "url": "https://x.com/nvidia/status/2110750157272719562",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "nvda": 2
+      },
+      "people": []
+    },
     {
       "eventKey": "nvda-premarket-ai-debt-drag-2026-10-15",
       "tabIds": [
@@ -63,7 +183,30 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "nvda": 1
+        "nvda": 4
+      },
+      "people": []
+    },
+    {
+      "eventKey": "mu-taiwan-strike-risk-2026-10-15",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "Micron 台湾厂区潜在罢工风险被市场讨论",
+      "fact": "研究账号转述：工会称已获足够罢工票数，关切存储供应中断；台湾为 Micron 重要产能。",
+      "whyItMatters": "供给尾部风险对紧平衡叙事的对冲。",
+      "counterCase": "若谈判解决未停产，则仅为噪音。",
+      "affected": [
+        "MU",
+        "存储供给"
+      ],
+      "author": "tenet_research",
+      "publishedAt": "2026-10-15T09:32:51.000Z",
+      "url": "https://x.com/tenet_research/status/2110665194775118202",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "mu": 2
       },
       "people": []
     },
@@ -86,7 +229,30 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 1
+        "tsm": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "mu-aatt2-hbm-booked-ticker-2026-10-15",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "Micron 台中 AATT2 开幕，2027 HBM 产能据称大多已订",
+      "fact": "转述：Micron 开设台中第二座先进封装/测试厂；称 2027 HBM 产能大多已被客户预订。",
+      "whyItMatters": "HBM 供给可见度提升。",
+      "counterCase": "缺官方原帖或罢工停产则叙事削弱。",
+      "affected": [
+        "MU",
+        "HBM"
+      ],
+      "author": "MojoTricks",
+      "publishedAt": "2026-10-15T06:59:31.000Z",
+      "url": "https://x.com/MojoTricks/status/2110626605790097752",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "mu": 1
       },
       "people": []
     },
@@ -109,7 +275,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 2
+        "tsm": 3
       },
       "people": []
     },
@@ -132,7 +298,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 3
+        "tsm": 4
       },
       "people": []
     },
@@ -155,7 +321,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "mu": 1
+        "mu": 4
       },
       "people": []
     },
@@ -177,7 +343,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "nvda": 2
+        "nvda": 5
       },
       "people": [
         {
@@ -185,51 +351,6 @@
           "intro": "英伟达创始人兼CEO"
         }
       ]
-    },
-    {
-      "eventKey": "nvda-cuda-x-chip-mfg-tools-2026-10-14",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "转述：NVIDIA 推出 CUDA-X AI 工具加速芯片制造",
-      "fact": "DeItaone：Nvidia 推出新 CUDA-X AI 工具，加速半导体设计、制造与工厂自动化，并称 Synopsys、Cadence、Applied Materials、Lam、KLA 等在采用。",
-      "whyItMatters": "软件/工具链延伸至晶圆厂侧。",
-      "counterCase": "快讯转述，缺官号原文与收入指引。",
-      "affected": [
-        "NVDA",
-        "半导体设备"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-14T16:12:00.000Z",
-      "url": "https://x.com/DeItaone/status/2110403255591141525",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "nvda": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-uk-250m-compute-access-2026-10-14",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA：五年向英国提供约 2.5 亿美元算力访问",
-      "fact": "@nvidia 承诺五年 2.5 亿美元算力访问以支持英国 AI。",
-      "whyItMatters": "区域算力承诺。",
-      "counterCase": "访问权≠采购订单。",
-      "affected": [
-        "NVDA"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-14T06:26:12.000Z",
-      "url": "https://x.com/nvidia/status/2110255837297987913",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "nvda": 4
-      },
-      "people": []
     },
     {
       "eventKey": "mu-musk-reasonable-pricing-2026-10-13",
@@ -256,60 +377,6 @@
         {
           "name": "Elon Musk",
           "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "mu-jpm-26-lta-150b-backlog-2026-10-13",
-      "tabIds": [
-        "mu"
-      ],
-      "title": "转述：摩根大通称 MU 26 份长约覆盖 2030 年前逾 35% 收入",
-      "fact": "@RealNickMugalli 转述摩根大通报告：MU 已签 26 份长期协议、覆盖 2030 年前逾 35% 收入，合同积压约 1500 亿美元，客户已承诺约 320 亿美元现金，明年产能逾 75% 已售出。",
-      "whyItMatters": "长约与预付款提高收入可见度，是存储周期见顶论的主要反证。",
-      "counterCase": "报告原文未直读；价格条款不详。",
-      "affected": [
-        "MU"
-      ],
-      "author": "RealNickMugalli",
-      "publishedAt": "2026-10-13T20:43:25.000Z",
-      "url": "https://x.com/RealNickMugalli/status/2110109173048299981",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "mu": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-macron-elysee-2026-10-13",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA：Jensen Huang 与 Emmanuel Macron 讨论法国 AI 投资",
-      "fact": "@nvidia 称 Jensen Huang 在爱丽舍宫与 Emmanuel Macron 讨论英伟达在法国 AI 生态、开源与安全投资。",
-      "whyItMatters": "高层会晤常伴随本地化算力与伙伴承诺，影响欧洲订单预期。",
-      "counterCase": "未披露新增合同金额。",
-      "affected": [
-        "NVDA",
-        "欧洲AI"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-13T19:34:52.000Z",
-      "url": "https://x.com/nvidia/status/2110091922337415564",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 5
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        },
-        {
-          "name": "Emmanuel Macron",
-          "intro": "法国总统"
         }
       ]
     },
@@ -489,29 +556,6 @@
       "people": []
     },
     {
-      "eventKey": "mu-nomura-lta-supercycle-2026-10-11",
-      "tabIds": [
-        "mu"
-      ],
-      "title": "Nomura：韩厂长约占比高，Micron 现货杠杆更大",
-      "fact": "@BrettSwingLog 转述 Nomura 对存储超级周期：韩厂 50–70% 产能锁定带价格上限的 LTA 至 2026Q3，相对之下 Micron 现货/合同结构不同，影响 2027 周期弹性。",
-      "whyItMatters": "长约与现货敞口差异会改变 MU 相对同行的涨价弹性与盈利上行空间。",
-      "counterCase": "为券商二手转述，未独立核验 Nomura 原文；LTA 细节可能过时。",
-      "affected": [
-        "MU",
-        "HBM/DRAM"
-      ],
-      "author": "BrettSwingLog",
-      "publishedAt": "2026-10-11T13:07:16.000Z",
-      "url": "https://x.com/BrettSwingLog/status/2109269604522713398",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "mu": 3
-      },
-      "people": []
-    },
-    {
       "eventKey": "tsm-oct15-call-preview-2026-10-11",
       "tabIds": [
         "tsm"
@@ -531,7 +575,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 4
+        "tsm": 5
       },
       "people": []
     },
@@ -559,30 +603,6 @@
       "people": []
     },
     {
-      "eventKey": "tsm-gf-cowos-interposer-malta-2026-10-08",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "GlobalFoundries 宣布为台积电 CoWoS 生产硅中介层",
-      "fact": "@MosaicLedger 称 GlobalFoundries 于 2026-10-08 宣布多年协议，在纽约 Malta 为台积电 CoWoS 封装生产硅中介层，新闻稿口径约 $20 亿、初始五年。",
-      "whyItMatters": "先进封装瓶颈下中介层外协可缓解 CoWoS 约束，间接影响 TSMC 客户交期与 AI GPU/ASIC 供给。",
-      "counterCase": "金额口径与实际产能爬坡需官方核实；对 TSM 收入的直接贡献不确定。",
-      "affected": [
-        "TSM",
-        "CoWoS",
-        "GFS"
-      ],
-      "author": "MosaicLedger",
-      "publishedAt": "2026-10-09T15:42:45.000Z",
-      "url": "https://x.com/MosaicLedger/status/2108583955863568486",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "tsm": 5
-      },
-      "people": []
-    },
-    {
       "eventKey": "intc-jeff-pu-emib-aws-google-2026-10-09",
       "tabIds": [
         "intc"
@@ -604,29 +624,6 @@
       "tier": "watch",
       "weeklyRanks": {
         "intc": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "vrt-coolchip-cdu1350-pf-2026-10-09",
-      "tabIds": [
-        "vrt"
-      ],
-      "title": "Vertiv 官方介绍 CoolChip CDU 1350 功率因数",
-      "fact": "@VertivAP 称 AI 数据中心冷却无功功率过高会冲击电力设施；Vertiv CoolChip CDU 1350 标准功率因数 0.89+，可选升级至 0.95+。",
-      "whyItMatters": "产品规格直接对应高密度液冷与电力质量需求，是 VRT 在 AI 机柜侧的可核验供给信号。",
-      "counterCase": "产品宣传；订单转化与份额未在帖中给出。",
-      "affected": [
-        "VRT",
-        "液冷"
-      ],
-      "author": "VertivAP",
-      "publishedAt": "2026-10-09T03:30:00.000Z",
-      "url": "https://x.com/VertivAP/status/2108399552919204189",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "vrt": 2
       },
       "people": []
     }

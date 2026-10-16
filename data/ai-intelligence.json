@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T13:01:03.972Z",
-  "cutoff": "2026-10-15T21:00:00+08:00",
+  "updatedAt": "2026-10-16T07:12:00.000Z",
+  "cutoff": "2026-10-16T15:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,26 +9,186 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "官号欧洲智能体采用；无新模型发布"
+        "note": "Rosalind、Voice、Simons 捐赠"
       },
       {
         "id": "anthropic",
         "status": "partial",
-        "note": "官号无帖；FT/快讯财务与增速叙事入选"
+        "note": "METR、Fellowships、Simons、估值传闻交叉"
       },
       {
         "id": "goog-ai",
         "status": "partial",
-        "note": "近窗无合格新事实，保留滚动旧条"
+        "note": "近窗高价值不足，保留滚动"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "开源 Ultramarine 成本叙事；保留旧条"
+        "note": "近窗不足，保留滚动"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "anthropic-simons-math-5m-2026-10-15",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic 向 Simons 数学倡议承诺 500 万美元",
+      "fact": "@AnthropicAI：与 OpenAI 一并支持 Simons Foundation 倡议，承诺 500 万美元资金并提供算力资源，帮助数学家评估与扩展 AI 结果。",
+      "whyItMatters": "科研生态与安全/对齐叙事之外的学术合作信号。",
+      "counterCase": "捐赠不直接等于产品收入。",
+      "affected": [
+        "Anthropic",
+        "科研合作"
+      ],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-15T21:31:45.000Z",
+      "url": "https://x.com/AnthropicAI/status/2110846112152105136",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 4
+      },
+      "people": []
+    },
+    {
+      "eventKey": "openai-gpt-rosalind-academic-2026-10-15",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI 扩大 GPT-Rosalind 学术研究准入",
+      "fact": "@OpenAI：推出 Rosalind Academic Plan，向符合条件的美国大学实验室提供最长约 12 个月赞助访问，协助生物文献与数据推理。",
+      "whyItMatters": "垂直科研落地与学术渗透。",
+      "counterCase": "若仅试用无转化付费，商业影响有限。",
+      "affected": [
+        "OpenAI",
+        "科研 AI"
+      ],
+      "author": "OpenAI",
+      "publishedAt": "2026-10-15T21:15:00.000Z",
+      "url": "https://x.com/OpenAI/status/2110841898076418336",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "openai": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-ipo-valuation-cut-ai-tab-2026-10-15",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "市场传闻：Anthropic IPO 估值预期下调至约 1.5 万亿",
+      "fact": "DeItaone：部分投资者将 Anthropic IPO 估值预期从约 2T 下调至约 1.5T；Q3 营收叙事仍在。",
+      "whyItMatters": "私人估值锚下修影响 AI 板块风险偏好。",
+      "counterCase": "若路演仍高定价成功则逆转。",
+      "affected": [
+        "Anthropic",
+        "AI 估值"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-15T20:59:26.000Z",
+      "url": "https://x.com/DeItaone/status/2110837977928638529",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 3
+      },
+      "people": []
+    },
+    {
+      "eventKey": "openai-gpt-live-voice-2026-10-15",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI 推送 GPT-Live-1.1 语音更新",
+      "fact": "@OpenAI：GPT-Live-1.1 为 ChatGPT/Codex/dots 语音带来新声线与更好口音，多语言上线，API 即将到来。",
+      "whyItMatters": "消费与开发者体验迭代，支持粘性。",
+      "counterCase": "无用量数据则难量化。",
+      "affected": [
+        "OpenAI",
+        "ChatGPT"
+      ],
+      "author": "OpenAI",
+      "publishedAt": "2026-10-15T18:19:54.000Z",
+      "url": "https://x.com/OpenAI/status/2110797830361436604",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "openai": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-metr-evals-access-2026-10-15",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic：给予 METR 类员工级安全评估访问",
+      "fact": "@AnthropicAI：承诺由外部评估方审查安全实践，并已给予 @METR_Evals 团队类员工级访问，发文说明合作方式。",
+      "whyItMatters": "安全治理与监管可信度，影响企业采购。",
+      "counterCase": "若评估结论负面，可能压制叙事。",
+      "affected": [
+        "Anthropic",
+        "AI 安全"
+      ],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-15T17:27:34.000Z",
+      "url": "https://x.com/AnthropicAI/status/2110784662071398807",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "openai-simons-math-5m-2026-10-15",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI 向 Simons 数学倡议捐助 500 万美元",
+      "fact": "@OpenAI：宣布向 Simons Foundation 新倡议捐助 500 万美元，帮助数学家理解与扩展 AI 相关成果。",
+      "whyItMatters": "科研生态投入信号。",
+      "counterCase": "捐赠不直接等于产品收入。",
+      "affected": [
+        "OpenAI",
+        "科研合作"
+      ],
+      "author": "OpenAI",
+      "publishedAt": "2026-10-15T14:35:29.000Z",
+      "url": "https://x.com/OpenAI/status/2110741355739963884",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "openai": 3
+      },
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-fellowships-open-2026-10-15",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic 开放两类研究 Fellowships 申请",
+      "fact": "@AnthropicAI：STEM 与 Conceptual Reasoning 两类 Fellowship 开放申请，2027 年 1 月起在 Anthropic 工作四个月。",
+      "whyItMatters": "人才与研究生态扩张。",
+      "counterCase": "对近季收入影响间接。",
+      "affected": [
+        "Anthropic"
+      ],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-15T13:14:22.000Z",
+      "url": "https://x.com/AnthropicAI/status/2110720940665372825",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 2
+      },
+      "people": []
+    },
     {
       "eventKey": "anthropic-growth-slowdown-ai-2026-10-15",
       "tabIds": [
@@ -47,7 +207,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "anthropic": 2
+        "anthropic": 5
       },
       "people": []
     },
@@ -69,53 +229,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "openai": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-ft-revenue-ipo-ai-2026-10-14",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "据报 Anthropic Q3 营收 168 亿美元并盈利，筹备 IPO",
-      "fact": "KobeissiLetter 援引 FT：Anthropic Q3 营收约 $16.8B、环比大增且录得盈利，筹备可能逾 $2T 估值 IPO。Anthropic 官号本窗无帖。",
-      "whyItMatters": "私人 AI 估值与供给锚。",
-      "counterCase": "缺公司官方确认。",
-      "affected": [
-        "Anthropic",
-        "AI 软件"
-      ],
-      "author": "KobeissiLetter",
-      "publishedAt": "2026-10-14T22:27:10.000Z",
-      "url": "https://x.com/KobeissiLetter/status/2110497672381780034",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-q3-revenue-ft-2026-10-14",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "转述 FT：Anthropic Q3 营收约 168 亿美元并称调整后盈利",
-      "fact": "DeItaone 等转述 Financial Times：Anthropic 向投资人披露 Q3 营收约 168 亿美元，并称调整后盈利、筹备 IPO。",
-      "whyItMatters": "实验室商业化最强财务线索之一。",
-      "counterCase": "私企披露、非审计报表。",
-      "affected": [
-        "Anthropic",
-        "AI估值"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-14T22:14:10.000Z",
-      "url": "https://x.com/DeItaone/status/2110494400732090538",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 3
+        "openai": 4
       },
       "people": []
     },
@@ -138,29 +252,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "openai": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "openai-states-sue-2026-10-14",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "转述：八州起诉 OpenAI 称 ChatGPT 伤害青少年",
-      "fact": "DeItaone/Reuters：八个美国州起诉 OpenAI。",
-      "whyItMatters": "安全与产品责任监管风险。",
-      "counterCase": "诉讼主张待法庭检验。",
-      "affected": [
-        "OpenAI"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-14T18:38:29.000Z",
-      "url": "https://x.com/DeItaone/status/2110440119215984998",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "openai": 3
+        "openai": 5
       },
       "people": []
     },
@@ -211,81 +303,6 @@
       "people": []
     },
     {
-      "eventKey": "anthropic-singapore-office-2026-10-14",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic：开设新加坡办公室并与新加坡政府签署 AI 安全 MOU",
-      "fact": "@AnthropicAI：We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible adoption.",
-      "whyItMatters": "区域落地与安全治理同步推进。",
-      "counterCase": "MOU 非具约束力合同。",
-      "affected": [
-        "Anthropic",
-        "亚太 AI 政策"
-      ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-14T08:40:45.000Z",
-      "url": "https://x.com/AnthropicAI/status/2110289695888511368",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "openai-fbi-engineer-arrest-2026-10-14",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "Reuters：FBI 逮捕沙特籍 OpenAI 工程师，DOJ 称安放隐蔽录音设备",
-      "fact": "@Reuters 报道 FBI 逮捕一名沙特籍 OpenAI 工程师，美国司法部称其安放隐蔽录音设备。",
-      "whyItMatters": "实验室物理安全事件抬高企业与政府客户尽职调查门槛，可能延长签约周期。",
-      "counterCase": "若无数据外泄且整改可审计，冲击可能限于短期舆情。",
-      "affected": [
-        "OpenAI",
-        "企业AI采购"
-      ],
-      "author": "Reuters",
-      "publishedAt": "2026-10-14T04:10:10.000Z",
-      "url": "https://x.com/Reuters/status/2110221603552313760",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "openai": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "openai-gpt56-sol-chrome-full-chain-2026-10-13",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "Greg Brockman：GPT-5.6 Sol 用 6 天、4 万美元算力找到 Chrome 关键漏洞",
-      "fact": "Greg Brockman 称，使用 GPT-5.6 Sol 花费 6 天和约 4 万美元算力，找到 Chrome 一个关键漏洞，获得 Google 2026 年首个“全链”漏洞奖励，该漏洞估计影响约 10 亿用户，并称这显示防御方可以利用此类工具。",
-      "whyItMatters": "前沿模型进入高价值安全研究场景，算力换漏洞的经济性成为企业安全预算的新用途，也加剧攻防双方的能力扩散担忧。",
-      "counterCase": "单一案例，成本与人工参与程度未详述；同类能力也可能被攻击方利用。",
-      "affected": [
-        "OpenAI",
-        "GOOGL",
-        "网络安全公司"
-      ],
-      "author": "gdb",
-      "publishedAt": "2026-10-13T17:43:29.000Z",
-      "url": "https://x.com/gdb/status/2110063893016096831",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "openai": 5
-      },
-      "people": [
-        {
-          "name": "Greg Brockman",
-          "intro": "OpenAI联合创始人兼总裁"
-        }
-      ]
-    },
-    {
       "eventKey": "ai-others-exa-100m-arr-2026-10-13",
       "tabIds": [
         "ai-others"
@@ -312,30 +329,6 @@
           "intro": "Exa联合创始人兼CEO"
         }
       ]
-    },
-    {
-      "eventKey": "anthropic-scion-30k-merges-per-day-2026-10-13",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic：日合并代码变更从 2500 次增至 3 万次以上，自建源码管理",
-      "fact": "Anthropic 工程博客称，公司 5 月每天合并约 2500 次代码变更，9 月已超过 30000 次，为人类规模设计的开发基础设施成为瓶颈，因此自建源码管理系统（Techmeme 称名为 Scion）。",
-      "whyItMatters": "代理编程在头部实验室内部已达到规模化产出，验证代理生产力，并带动开发工具与 CI 算力需求。",
-      "counterCase": "合并次数不等于有效产出；内部数据未经审计。",
-      "affected": [
-        "Anthropic",
-        "MSFT（GitHub）",
-        "开发者工具"
-      ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-13T16:36:41.000Z",
-      "url": "https://x.com/AnthropicAI/status/2110047081414987957",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 5
-      },
-      "people": []
     },
     {
       "eventKey": "goog-ai-gemini-4-argon-rollout-2026-10-13",
