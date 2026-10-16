@@ -118,3 +118,19 @@ test('docs and package wire ops:run; build does not publish ops-runs', () => {
   const build = fs.readFileSync(path.join(__dirname, '../scripts/build-site.js'), 'utf8');
   assert.equal(build.includes('ops-runs'), false);
 });
+
+test('current period suffixes 0800/1500/2030 accepted; unknown slot rejected', () => {
+  const root = tmp();
+  try {
+    for (const period of ['2026-10-16-0800', '2026-10-16-1500', '2026-10-16-2030']) {
+      ops.start(root, { period, force: true });
+      assert.equal(ops.readRun(root, period).period, period);
+    }
+    // legacy still readable for historical hang cleanup
+    ops.start(root, { period: '2026-10-16-0900', force: true });
+    assert.throws(() => ops.start(root, { period: '2026-10-16-0700' }), /period/);
+    assert.throws(() => ops.start(root, { period: '2026-10-16-2130' }), /period/);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});

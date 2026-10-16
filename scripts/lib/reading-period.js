@@ -14,7 +14,7 @@ function context(value) {
   const readingDate=shift(date,w===6?2:w===0?1:0);
   let next=shift(readingDate,1);
   while([0,6].includes(weekday(next)))next=shift(next,1);
-  return {policy:POLICY,timezone:'Asia/Shanghai',date:readingDate,weekendCarry:[0,6].includes(w),retainUntil:new Date(next+'T09:00:00+08:00').toISOString()};
+  return {policy:POLICY,timezone:'Asia/Shanghai',date:readingDate,weekendCarry:[0,6].includes(w),retainUntil:new Date(next+'T08:00:00+08:00').toISOString()};
 }
 function readingWindow(cutoff) {
   const end=new Date(cutoff).getTime(),date=day(cutoff);

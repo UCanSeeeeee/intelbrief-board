@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "period": "2026-10-15-2100",
-  "status": "partial",
+  "period": "2026-10-16-0900",
+  "status": "failed",
   "trigger": "scheduled",
-  "startedAt": "2026-10-15T20:36:33+08:00",
-  "updatedAt": "2026-10-15T21:05:41+08:00",
-  "finishedAt": "2026-10-15T21:05:41+08:00",
-  "commitHash": "156cef4c8f42a9681ded4ef37587d8d4684d513b",
-  "errorStage": null,
-  "errorMessage": null,
-  "file": "data/ops-runs/2026-10-15-2100.json"
+  "startedAt": "2026-10-16T08:08:06+08:00",
+  "updatedAt": "2026-10-16T11:44:40+08:00",
+  "finishedAt": "2026-10-16T11:44:40+08:00",
+  "commitHash": null,
+  "errorStage": "push",
+  "errorMessage": "platform killed after ~50min hang: wrote content then idle-waited stale 09:00 cutoff while schedule was already 08:00; validate/push/verify never ran; no catch-up content this turn",
+  "file": "data/ops-runs/2026-10-16-0900.json"
 }

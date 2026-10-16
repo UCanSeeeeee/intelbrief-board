@@ -34,7 +34,8 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
   const brief = structuredClone(input);
   brief.trigger = brief.trigger || 'scheduled';
   requireValue(['manual','scheduled'].includes(brief.trigger), '期次类型无效');
-  if (brief.trigger === 'scheduled') requireValue(/^\d{4}-\d{2}-\d{2}T(?:09|16|21):00:00\+08:00$/.test(brief.scheduledFor), '期次只能是北京时间 09:00、16:00、21:00');
+  // Current slots 08:00/15:00/20:30; legacy 09:00/16:00/21:00 kept so historical archives still validate.
+  if (brief.trigger === 'scheduled') requireValue(/^\d{4}-\d{2}-\d{2}T(?:08:00:00|15:00:00|20:30:00|09:00:00|16:00:00|21:00:00)\+08:00$/.test(brief.scheduledFor), '期次只能是北京时间 08:00、15:00、20:30（历史归档可含 09:00、16:00、21:00）');
   else requireValue(/^[a-f0-9-]{36}$/.test(brief.requestId), '手动期次需要任务编号');
   const cutoff = timestamp(brief.scheduledFor, 'scheduledFor');
   requireValue(cutoff <= new Date(now).getTime(), '不能提前发布未来期次');
@@ -141,7 +142,7 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
 }
 
 function saveBrief(brief, root = ROOT) {
-  requireValue(/^(?:\d{4}-\d{2}-\d{2}-(?:0900|1600|2100)|manual-[a-f0-9-]{36})$/.test(brief.id), '无效归档 ID');
+  requireValue(/^(?:\d{4}-\d{2}-\d{2}-(?:0800|1500|2030|0900|1600|2100)|manual-[a-f0-9-]{36})$/.test(brief.id), '无效归档 ID');
   const dir = path.join(root, 'data/stock-briefs');
   fs.mkdirSync(dir, { recursive: true });
   const archive = path.join(dir, `${brief.id}.json`);
@@ -155,7 +156,7 @@ function saveBrief(brief, root = ROOT) {
   let board=reading.readBoard(root);
   // Bootstrap only from real archives; retain full cards before the three-edition purge.
   if(!board.asOf) for(const old of [...index.editions].sort((a,b)=>Date.parse(a.scheduledFor)-Date.parse(b.scheduledFor))) {
-    if(!/^(?:\d{4}-\d{2}-\d{2}-(?:0900|1600|2100)|manual-[a-f0-9-]{36})\.json$/.test(old.file))throw new Error('无效历史路径');
+    if(!/^(?:\d{4}-\d{2}-\d{2}-(?:0800|1500|2030|0900|1600|2100)|manual-[a-f0-9-]{36})\.json$/.test(old.file))throw new Error('无效历史路径');
     board=reading.advance(board,readJson(path.join(dir,old.file)));
   }
   board=reading.advance(board,brief); // reject invalid lifecycle changes before writing the immutable archive
@@ -182,4 +183,11 @@ function saveBrief(brief, root = ROOT) {
   fs.renameSync(temporary, indexFile);
   return archive;
 }
-module.exports = { config, beijingDay, slotAt, prepareBrief, saveBrief };
+
+/** True when now is at or past the batch cutoff — publish immediately; never idle-wait. */
+function isPublishDue(scheduledFor, now = new Date()) {
+  const t = Date.parse(scheduledFor);
+  requireValue(Number.isFinite(t), '无效 scheduledFor');
+  return t <= new Date(now).getTime();
+}
+module.exports = { config, beijingDay, slotAt, prepareBrief, saveBrief, isPublishDue };

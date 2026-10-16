@@ -17,9 +17,12 @@
 
 ## 原生例行任务
 
-每天北京时间（Asia/Shanghai）09:00、16:00、21:00 **启动美股讯息期次**，不是承诺整点已发布。仅保留一套 Grok Bot 原生调度；若平台需拆为三个任务，三个时刻各一项，不额外启用 Codex、OS cron 或 GitHub Actions 调度。
+每天北京时间（Asia/Shanghai）08:00、15:00、20:30 **启动美股讯息期次**，不是承诺整点已发布。仅保留一套 Grok Bot 原生调度；若平台需拆为三个任务，三个时刻各一项，不额外启用 Codex、OS cron 或 GitHub Actions 调度。
 
-任务开始先安全同步远端，读取 AGENTS.md、CONTEXT.md、docs/STOCK_BRIEF.md、docs/TRADING_DAY_READING.md、config/research-guidance.json 及其指向的知识库/SOP。保留未提交改动；冲突不强推。通过 `npm run brief:slot` 确认最近期次、`npm run brief:context -- CUTOFF` 取得北京时间批次回溯窗口（周一09:00起覆盖周六00:00以来消息）与待阅池，不等美国开盘；已有归档不覆盖、不重采，未确认部署则仅核验发布。
+任务开始先安全同步远端，读取 AGENTS.md、CONTEXT.md、docs/STOCK_BRIEF.md、docs/TRADING_DAY_READING.md、config/research-guidance.json 及其指向的知识库/SOP。保留未提交改动；冲突不强推。通过 `npm run brief:slot` 确认最近期次、`npm run brief:context -- CUTOFF` 取得北京时间批次回溯窗口（周一08:00起覆盖周六00:00以来消息）与待阅池，不等美国开盘；已有归档不覆盖、不重采，未确认部署则仅核验发布。
+
+
+**期次命名与发布门禁（2026-10-16）**：当前 slots 为北京时间 08:00 / 15:00 / 20:30，period 用 `YYYY-MM-DD-0800|1500|2030`（以 `npm run brief:slot` 与 `config/stock-brief.json` 为准）。写阶段完成后，若当前时间已到达或超过该期 `scheduledFor`，必须立刻 validate→push→verify；**禁止**空等更晚的钟点（曾因仍等旧 09:00 cutoff 触发平台约 50 分钟后台挂起熔断）。历史 ops-run / 归档仍可能出现旧后缀 `0900|1600|2100`，只读不新建。
 
 由 Grok Bot 自己执行两轮独立检索、窗口覆盖与审计、去重和筛选。最多 5 条市场焦点 + 10 条多学科洞察；不足不充数，失败不得冒充无新增。具体质量和时间规则以 STOCK_BRIEF / SOP 为准，不在此复制一套。
 
@@ -37,17 +40,17 @@
 
 ### 已完成：北京时间批次替代交易所时段（2026-10-12 18:31）
 
-- 用户最新澄清：周一最早09:00可收录周六日消息，不按美国开收盘划分。当前主规则见TRADING_DAY_READING的“当前采用”，以下较早交易日记录仅作历史。
+- 用户最新澄清：周一最早08:00可收录周六日消息，不按美国开收盘划分。当前主规则见TRADING_DAY_READING的“当前采用”，以下较早交易日记录仅作历史。
 - 代码`fb54c98`：83项测试、数据校验、构建通过；线上briefs.js及reading-board.json与构建逐字节一致。现有16条卡片的正文、来源、首次收录、最近核验、池asOf/updatedAt和历史快照均未改写；只迁移展示保留元数据，不是新采集。
 - 18:29:30，X+github回执已安全同步fb54c98、工作区无其他改动，读取新规则；brief:context验证10/12周一09点从10/10周六00点回溯，9/7美国劳动节周一09点仍从9/5周六00点回溯，均不推迟到晚上/下一交易日。
-- 同一原生任务intelbrief-09-16-21已更新，GPT通过“已更新例行任务”卡打开详情，直接回读period、北京时间周一三批完整周末、周末保留至周二09点可用批次接替、真实复核keep、失败保留，以及5+10/两轮/原始时间/发布核验等已存指令。未新增任务或更改09/16/21频率，详情仍显示“暂停”按钮（启用）。
+- 同一原生任务intelbrief-09-16-21已更新，GPT通过“已更新例行任务”卡打开详情，直接回读period、北京时间周一三批完整周末、周末保留至周二08点可用批次接替、真实复核keep、失败保留，以及5+10/两轮/原始时间/发布核验等已存指令。未新增任务或更改09/16/21频率，详情仍显示“暂停”按钮（启用）。
 - 18:30:57补回明确的手动/定时串行、幂等、每阶段最多两次重试、GPT不采集约束，并修正被中文右括号误识别的线上链接；GPT再次直接回读确认。
 - 未即时执行采集，未新增Webhook或授予密钥。下一次21:00来自Bot回执；本次证明代码上线和规则交接，不证明定时首跑已成功，OPS-01/02验收状态不变。
 
 ### 2026-10-12 17:55 更新未发生的诊断
 
 - GPT直接读取线上期次目录，最新为`2026-10-12-0900`，生成于北京时间09:18:51；不是9月18日，也不是本轮代码发布时间。线上没有16:00归档，`/api/updates`实际返回503、configured=false。
-- X+github于17:55:31回报已从7bb71aa安全快进至485edd1，工作区干净、master，并读取本次相关规则。原生任务启用、Asia/Shanghai每天09/16/21，最近运行never run、历史为空、下一次当晚21:00。精确创建时间戳未提供，约17:03来自此前创建回执，与存档一致。
+- X+github于17:55:31回报已从7bb71aa安全快进至485edd1，工作区干净、master，并读取本次相关规则。原生任务启用、Asia/Shanghai每天08/15/20:30，最近运行never run、历史为空、下一次当晚21:00。精确创建时间戳未提供，约17:03来自此前创建回执，与存档一致。
 - GPT再次从正常任务列表直接核验唯一任务名称、三个时刻及启用开关。诊断结论：原生任务在16:00后才创建，16点没有进入这条新调度，属于迁移覆盖空档；没有证据表明发生过16点采集失败或发布失败。不能把空档说成已补采，不能保证未来100%执行。
 - 未触发新闻采集、未补造过去期次、未修改现有调度；21:00仍是首次独立运行待验收。Webhook官方入口及阻塞以MANUAL_UPDATES维护。
 
@@ -55,7 +58,7 @@
 
 - 代码提交 `7bb71aa1ca58313170baaf66c1890fffd38c9c18`：78项测试、数据校验、构建通过。线上首页、briefs.js、reading-board.json与本地构建逐字节一致；正常浏览器已显示交易日待阅、5条焦点精选加2条折叠保留、9条多学科事件。这是现存真实归档迁移，不是本轮新采集或重新核验。
 - 17:36:48，X+github回报从2c8518e安全快进至上述提交，阅读新专题全文并对照变更复读入口/SOP；运行21:00的brief:context，正确解释目标交易日、周五收市以来约65小时窗口、未覆盖区间和16条待复核事件。
-- 通过平台正常任务更新功能修改原有`intelbrief-09-16-21`，未创建副本、未改变09/16/21频率。GPT随后从对话中的“已更新例行任务”卡片进入任务详情，独立完整回读已存指令，确认新专题必读、brief:context、跨期复核、5+10重排/其余保留、保守覆盖记录、同次提交待阅池及线上三项核验。详情显示每天三个时刻及“暂停”按钮，任务仍启用。
+- 通过平台正常任务更新功能修改原有`intelbrief-09-16-21`，未创建副本、未改变当时的09/16/21频率。GPT随后从对话中的“已更新例行任务”卡片进入任务详情，独立完整回读已存指令，确认新专题必读、brief:context、跨期复核、5+10重排/其余保留、保守覆盖记录、同次提交待阅池及线上三项核验。详情显示每天三个时刻及“暂停”按钮，任务仍启用。
 - 平台下一次运行由Bot回报为当晚21:00。此交接只证明规则与配置已更新，不证明首次自主采集发布成功；OPS-01首跑仍待实际证据。本轮未提前触发新闻采集、未改历史归档、未启用GPT备用调度。
 
 ### 已完成：同步强规则与提示词交接（2026-10-12）
@@ -85,7 +88,7 @@
 | 任务名 | intelbrief 美股讯息 09/16/21 |
 | 平台任务标识 | `intelbrief-09-16-21`（Grok创建回执） |
 | 归属 | X+github 的原生例行任务 |
-| 频率 | 每天09:00、16:00、21:00，含周末；一个任务涵盖三个时刻 |
+| 频率 | 每天08:00、15:00、20:30，含周末；一个任务涵盖三个时刻 |
 | 启用 | 任务列表开关为on；详情提供“暂停”按钮，GPT直接核验 |
 | 时区 | Asia/Shanghai（创建回执；提示词明确北京时间） |
 | 创建时下一次运行 | 2026-10-12 21:00，北京时间（Grok回执） |
@@ -108,16 +111,16 @@ Grok回报完整读取AGENTS.md、CONTEXT.md、TASKS.md、本文、STOCK_BRIEF.m
 | `data/ops-runs/<period>.json` | 单次运行完整里程碑（开始时间 Asia/Shanghai、period、git HEAD、各 stage、各页状态、错误摘要、成功时 commit） |
 | `data/ops-runs/latest.json` | 最近一次写出的摘要指针 |
 
-period 例：`2026-10-13-0900`（定时）、`manual-<uuid>`（手动）、补跑可用同一定时 period 或 `catchup-…`。**不进 Cloudflare 公开构建**（`build-site` 不复制本目录）；可随内容提交进 Git 便于事后排查。禁止写入 token、Webhook key、PAT、Bearer 等密钥（CLI/库会脱敏）。
+period 例：`2026-10-16-0800`（定时）、`manual-<uuid>`（手动）、补跑可用同一定时 period 或 `catchup-…`。**不进 Cloudflare 公开构建**（`build-site` 不复制本目录）；可随内容提交进 Git 便于事后排查。禁止写入 token、Webhook key、PAT、Bearer 等密钥（CLI/库会脱敏）。
 
 ### 命令
 
 ```bash
-npm run ops:run -- start  --period 2026-10-13-0900 --trigger scheduled
-npm run ops:run -- stage  --period 2026-10-13-0900 --name pull --status ok
-npm run ops:run -- page   --period 2026-10-13-0900 --page news --status partial --detail "3+4"
-npm run ops:run -- fail   --period 2026-10-13-0900 --stage search --message "…"
-npm run ops:run -- finish --period 2026-10-13-0900 --status partial --commit <hash>
+npm run ops:run -- start  --period 2026-10-16-0800 --trigger scheduled
+npm run ops:run -- stage  --period 2026-10-16-0800 --name pull --status ok
+npm run ops:run -- page   --period 2026-10-16-0800 --page news --status partial --detail "3+4"
+npm run ops:run -- fail   --period 2026-10-16-0800 --stage search --message "…"
+npm run ops:run -- finish --period 2026-10-16-0800 --status partial --commit <hash>
 npm run ops:run -- latest
 ```
 
@@ -131,9 +134,14 @@ stage 固定为：`pull` → `read` → `search` → `write` → `validate` → 
 
 ### 例行任务提示词附录（供粘贴；本执行器不改 UpdateRoutine）
 
-把下面整段追加到 `intelbrief-09-16-21` 提示词末尾（由有 UpdateRoutine 权限的父代理粘贴；本仓库只存文案）：
+把下面整段写入/替换线上例行任务提示词中与时段、period、发布门禁相关的句子（由有 UpdateRoutine 权限的父代理操作；本仓库只存文案）。任务名可保留历史标识，但**时刻与 period 必须以仓库为准**。
 
-> 【ops-run 日志】每次触发后、开始 pull 之前：先 `npm run ops:run -- start --period <本期 id，如 2026-10-13-0900> --trigger scheduled`。随后每个可区分阶段（pull/read/search/write/validate/push/verify）用 `ops:run stage` 标记 ok/failed/skipped。任一 catchable 失败：先 `ops:run fail --period … --stage … --message "…"`（可附 --stack），再退出；不要静默结束。成功或部分成功推送后：`ops:run finish --period … --status success|partial --commit <hash>`，并把该 `data/ops-runs/<period>.json` 与 `latest.json` 随内容一并提交。汇报时必须写清 period、最后完成的 stage、是否已有 commit。若平台在脚本启动前失败，仓库不会有本日志——如实报告「无 ops-run，疑似平台 Activity task failed」，不得伪造采集结果。
+> 【时段与 period】每天北京时间（Asia/Shanghai）**08:00、15:00、20:30** 启动美股讯息期次。period id 必须是 `YYYY-MM-DD-0800` / `YYYY-MM-DD-1500` / `YYYY-MM-DD-2030`（与 `npm run brief:slot`、`config/stock-brief.json` 一致）。**禁止**再用旧 `0900`/`1600`/`2100` 作为新定时期次。
+>
+> 【禁止空等截止】写完内容后：若当前时间 ≥ 本期 `scheduledFor`（批次已到期），**立即** `validate` → `brief:publish` → `npm test` / `check` / `build` → commit/push → 线上 verify。**禁止**为同一批次空等更晚钟点或「等整点再发」；空等会触发平台约 50 分钟后台挂起熔断。若错误使用了未来 cutoff，以 `brief:slot` 的 previous（已到期批次）为准纠偏后立刻发布，不要 sleep/await 时钟。
+>
+> 【ops-run 日志】每次触发后、开始 pull 之前：先 `npm run ops:run -- start --period <本期 id，如 2026-10-16-0800> --trigger scheduled`。随后每个可区分阶段（pull/read/search/write/validate/push/verify）用 `ops:run stage` 标记 ok/failed/skipped。任一 catchable 失败：先 `ops:run fail --period … --stage … --message "…"`（可附 --stack），再退出；不要静默结束。成功或部分成功推送后：`ops:run finish --period … --status success|partial --commit <hash>`，并把该 `data/ops-runs/<period>.json` 与 `latest.json` 随内容一并提交。汇报时必须写清 period、最后完成的 stage、是否已有 commit。若平台在脚本启动前失败，仓库不会有本日志——如实报告「无 ops-run，疑似平台 Activity task failed」，不得伪造采集结果。
+
 
 ### 2026-10-13 09:00 空档
 
@@ -148,3 +156,11 @@ stage 固定为：`pull` → `read` → `search` → `write` → `validate` → 
 | 2026-10-13 09:00 | 平台空跑后人工补跑（5+4 等 partial） | 平台 `Activity task failed`；补跑 `0faff76`；ops-run 见 `data/ops-runs/2026-10-13-0900.json` |
 
 说明：单次或补跑成功证明链路可通，不证明每期必达。缺对应 `ops-runs/<period>.json` 时按上文「如何读失败」第 1 条处理（平台进代码前失败），不得写成「采集返回 0 条」。
+
+### 2026-10-16 早班空等挂起（已修根因）
+
+- 现象：约 08:08 启动、08:18 写完 news/people/tickers/ai 后，ops-run write 记为 `awaiting cutoff for publish`；平台于约 08:56 按约 50 分钟后台挂起上限打断；validate/push/verify 未执行；线上仍停在 2026-10-15-2100。
+- 根因：调度已改 08:00/15:00/20:30，但 period 仍用旧名 `2026-10-16-0900` 并空等 09:00 cutoff。
+- 修复：配置与校验对齐 `0800/1500/2030`；文档强制「截止已过立即发布、禁止空等」；卡住的 `data/ops-runs/2026-10-16-0900.json` 标 failed（未授权本回合补跑内容）。
+- **父代理必须 UpdateRoutine**：把线上例行任务提示词中的 09:00/16:00/21:00（及 0900/1600/2100）改为 08:00/15:00/20:30（0800/1500/2030），并粘贴上文「例行任务提示词附录」中的【时段与 period】与【禁止空等截止】段。
+

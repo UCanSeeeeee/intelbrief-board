@@ -57,7 +57,7 @@
       $('brief-'+group).innerHTML=(selected.map(readingCard).join('')||empty('本次暂无精选条目'))+(more.length?`<details open class="analysis-details"><summary>其余仍有效的待阅信息（${more.length}条，未删除）</summary>${more.map(readingCard).join('')}</details>`:'');
     }
     const reviewed=board.events.filter(e=>e.review&&e.state!=='active'&&e.state!=='served');
-    $('brief-audit').innerHTML=`<details open class="brief-evidence"><summary>保留规则与事件复核记录</summary><p>周末重要消息从北京时间周一09:00批次起汇总展示，并在周一后续批次保留，不等待美国开盘。简报期次与待阅池独立保存；首次收录、原帖时间与最近核验分开。同一事件合并，不把延续消息冒充新增。</p><p>未提供跨期重排时沿用最近收录顺序，不声称这是全网重要性排名。更新失败不会清空上一批待阅内容；后续批次接替后的状态为“已展示过对应阅读日”，不代表你已阅读。</p>${reviewed.map(e=>`<p>${escape(e.event.title)}：${escape(({retracted:'已撤回／证伪',superseded:'已被后续信息取代',resolved:'已失效'})[e.state])} · ${escape(e.review.reason)} · ${escape(time(e.review.checkedAt))}</p>`).join('')}</details>`;
+    $('brief-audit').innerHTML=`<details open class="brief-evidence"><summary>保留规则与事件复核记录</summary><p>周末重要消息从北京时间周一08:00批次起汇总展示，并在周一后续批次保留，不等待美国开盘。简报期次与待阅池独立保存；首次收录、原帖时间与最近核验分开。同一事件合并，不把延续消息冒充新增。</p><p>未提供跨期重排时沿用最近收录顺序，不声称这是全网重要性排名。更新失败不会清空上一批待阅内容；后续批次接替后的状态为“已展示过对应阅读日”，不代表你已阅读。</p>${reviewed.map(e=>`<p>${escape(e.event.title)}：${escape(({retracted:'已撤回／证伪',superseded:'已被后续信息取代',resolved:'已失效'})[e.state])} · ${escape(e.review.reason)} · ${escape(time(e.review.checkedAt))}</p>`).join('')}</details>`;
   }
   async function show(entry, preserve=false) {
     if(entry?.id==='reading'){showReading();return;}
@@ -71,7 +71,7 @@
     $('insights-count').textContent = '正在读取';
     }
     try {
-      if (!/^(?:\d{4}-\d{2}-\d{2}-(?:0900|1600|2100)|manual-[a-f0-9-]{36})\.json$/.test(entry.file)) throw new Error('无效期次');
+      if (!/^(?:\d{4}-\d{2}-\d{2}-(?:0800|1500|2030|0900|1600|2100)|manual-[a-f0-9-]{36})\.json$/.test(entry.file)) throw new Error('无效期次');
       const brief = await json('data/stock-briefs/'+entry.file);
       if (current!==generation) return;
       for (const group of ['focus','insights']) {

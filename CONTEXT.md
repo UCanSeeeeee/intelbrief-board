@@ -37,7 +37,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 
 ## 关键文件
 
-- `docs/TRADING_DAY_READING.md`：北京时间批次/周末保留的唯一专题入口（历史文件名沿用）；周一09:00起收录周六00:00以来消息，不按美国开收盘或节假日推迟展示。`scripts/lib/reading-period.js`计算周期，`data/reading-board.json`独立于三期简报保留有效事件。采集前运行`npm run brief:context`。旧交易所日历仍留存供历史追溯，不再驱动讯息展示。
+- `docs/TRADING_DAY_READING.md`：北京时间批次/周末保留的唯一专题入口（历史文件名沿用）；周一08:00起收录周六00:00以来消息，不按美国开收盘或节假日推迟展示。`scripts/lib/reading-period.js`计算周期，`data/reading-board.json`独立于三期简报保留有效事件。采集前运行`npm run brief:context`。旧交易所日历仍留存供历史追溯，不再驱动讯息展示。
 
 - `docs/DESIGN_SYSTEM.md` / `styles.css`：七页共用的阅读优先布局，所有阅读内容默认展开，卡片不展示反向条件；数量为上限而非任务完成率。历史证据与内部核验不因UI改变。
 - `calendar-time.js`：宏观美东时刻换算北京时间（含夏令时）与财报披露状态展示；测试见 `test/calendar-time.test.js`。
@@ -48,7 +48,7 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 - `update-receipt.js` / `scripts/manual-update-receipt.js`：无平台回调的v2结果凭证与文件摘要核验；网页未直连时提供明确的复制指令交接，不冒充已送达。状态、配置授权与验收边界见MANUAL_UPDATES。
 - `updates.js` / `server/updates.mjs`：页面进度与任务队列代码；`scripts/update-runner.js` 仅保留模拟测试能力，生产入口停用。
 
-- `docs/STOCK_BRIEF.md`：美股每天北京时间 09:00 / 16:00 / 21:00 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。
+- `docs/STOCK_BRIEF.md`：美股每天北京时间 08:00 / 15:00 / 20:30 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。
 - `config/research-guidance.json`：项目知识与采集SOP的机器入口；更新提示词会读取它指向的文件并强制注入每次美股和人物采集。
 - `knowledge/US_EQUITY_RESEARCH_KB.md`：用户关注点的项目内当前版本，固定半导体、电力、AI落地及宏观、地缘、市场结构、推理与反证框架。
 - `knowledge/GROK_X_COLLECTION_SOP.md`：把知识库转换成两轮检索、追源、反证、准入、去重、选择和审计记录的执行流程。

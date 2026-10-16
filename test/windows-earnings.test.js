@@ -53,10 +53,10 @@ test('search coverage records dedupe searched spans',()=>{
 
 const failed={status:'failed',summary:'测试',marketContext:'测试',coverage:{method:'测试',queries:[],gaps:['无']},selectionRationale:'测试',excludedCandidates:[],focus:[],insights:[],shortfallReason:'测试失败',checklist:[]};
 test('v2 briefs carry display window and require checklist and candidates',()=>{
-  const job={id:crypto.randomUUID(),cutoff:'2026-10-12T01:00:00Z',trigger_type:'scheduled'};
+  const job={id:crypto.randomUUID(),cutoff:'2026-10-12T00:00:00Z',trigger_type:'scheduled'};
   const brief=prepareNews(failed,job,'2026-10-11T13:00:00.000Z',new Map(),new Date('2026-10-12T02:00:00Z'));
   assert.equal(brief.schemaVersion,2);
-  assert.equal(brief.scheduledFor,'2026-10-12T09:00:00+08:00');
+  assert.equal(brief.scheduledFor,'2026-10-12T08:00:00+08:00');
   assert.equal(brief.displayWindowStart,'2026-10-10T00:00:00+08:00');
   const {checklist,...noList}=failed;
   assert.throws(()=>prepareNews(noList,job,'2026-10-11T13:00:00.000Z',new Map(),new Date('2026-10-12T02:00:00Z')),/检索前清单/);
@@ -67,7 +67,7 @@ test('v2 briefs carry display window and require checklist and candidates',()=>{
 test('manual editions never evict scheduled archives',()=>{
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'history-'));
   try {
-    const sched=prepareNews(failed,{id:crypto.randomUUID(),cutoff:'2026-10-11T01:00:00Z',trigger_type:'scheduled'},'2026-10-10T01:00:00.000Z',new Map(),new Date('2026-10-12T00:00:00Z'));
+    const sched=prepareNews(failed,{id:crypto.randomUUID(),cutoff:'2026-10-11T00:00:00Z',trigger_type:'scheduled'},'2026-10-10T01:00:00.000Z',new Map(),new Date('2026-10-12T00:00:00Z'));
     saveBrief(sched,dir);
     for(let i=0;i<5;i++) saveBrief(prepareNews(failed,{id:crypto.randomUUID(),cutoff:new Date(Date.parse('2026-10-11T05:00:00Z')+i*60000).toISOString(),trigger_type:'manual'},'2026-10-10T05:00:00.000Z',new Map(),new Date('2026-10-12T00:00:00Z')),dir);
     const index=JSON.parse(fs.readFileSync(path.join(dir,'data/stock-briefs/index.json'),'utf8'));
@@ -125,7 +125,7 @@ test('login throttle blocks after 5 failures within 10 minutes',async()=>{
 
 test('collector prompt states display/search split, uncovered spans and checklist',()=>{
   const {collectorPrompt}=require('../scripts/lib/update-prompt');
-  const p=collectorPrompt({page:'news',cutoff:'2026-10-12T01:00:00Z'},path.join(__dirname,'..'),'2026-10-09T16:00:00.000Z',{},{displayWindowStart:'2026-10-10T00:00:00+08:00',displayWindowEnd:'2026-10-12T09:00:00+08:00',uncovered:[{start:'a',end:'b'}]});
+  const p=collectorPrompt({page:'news',cutoff:'2026-10-12T00:00:00Z'},path.join(__dirname,'..'),'2026-10-09T16:00:00.000Z',{},{displayWindowStart:'2026-10-10T00:00:00+08:00',displayWindowEnd:'2026-10-12T09:00:00+08:00',uncovered:[{start:'a',end:'b'}]});
   assert.match(p,/展示窗口与检索窗口分离/);
   assert.match(p,/a 至 b/);
   assert.match(p,/checklist/);

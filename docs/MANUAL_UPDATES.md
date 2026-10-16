@@ -129,6 +129,6 @@
 
 ## 定时任务接入
 
-保留现有应用原生09:00、16:00、21:00任务，不增加cron。2026-10-11已同步现有任务的提示词，要求读取AGENTS.md、严格遵守两条Grok路径及提交推送规则；触发时间不变。云端配置完成后，再更新原有任务提示：使用 `npm run updates:schedule` 提交最近已到期的定时期次，查询任务状态并报告结果；任务冲突时等当前任务结束后重试，不另走直接写数据路径。该命令不会产生手动期次，也不会覆盖历史定期归档。
+保留现有应用原生08:00、15:00、20:30任务，不增加cron。2026-10-11已同步现有任务的提示词，要求读取AGENTS.md、严格遵守两条Grok路径及提交推送规则；触发时间不变。云端配置完成后，再更新原有任务提示：使用 `npm run updates:schedule` 提交最近已到期的定时期次，查询任务状态并报告结果；任务冲突时等当前任务结束后重试，不另走直接写数据路径。该命令不会产生手动期次，也不会覆盖历史定期归档。
 
 参考：[Cloudflare Pages高级模式](https://developers.cloudflare.com/pages/functions/advanced-mode/)、[D1配置](https://developers.cloudflare.com/d1/get-started/)、[Codex非交互执行](https://learn.chatgpt.com/docs/non-interactive-mode)。
