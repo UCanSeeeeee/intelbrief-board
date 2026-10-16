@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-16T15:07:16+08:00",
-  "updatedAt": "2026-10-16T15:13:35+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-16T15:14:38+08:00",
+  "finishedAt": "2026-10-16T15:14:38+08:00",
   "gitHeadAtStart": "1e5edb7e06a9ad3c2f8eb7cd1c843a31df70519c",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-16T15:14:09+08:00",
+      "detail": "pushed"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-16T15:14:38+08:00",
+      "detail": "live index+1500.json+people match commit 5f5fe3b"
     }
   ],
   "pages": {
@@ -77,8 +77,8 @@
       "detail": null
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "5f5fe3bace201f05527e228bd8485e357689fa65",
   "notes": []
 }
