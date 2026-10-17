@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-17T07:13:54.846Z",
-  "cutoff": "2026-10-17T15:00:00+08:00",
+  "updatedAt": "2026-10-17T12:45:55.067Z",
+  "cutoff": "2026-10-17T20:30:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,17 +9,17 @@
       {
         "id": "elon-musk",
         "status": "partial",
-        "note": "近窗 Starlink/Southwest、斯洛伐克 FSD、Neuralink、Grok/广告规范；规则+热度补位"
+        "note": "近窗本人帖多为无文字引用；新增 Axios 访谈快讯（AI/机器人与国债）；其余保留滚动"
       },
       {
         "id": "jensen-huang",
         "status": "partial",
-        "note": "本人账号无直发；英伟达官号 Mercedes 合作 + Bloomberg 淡定表态可归因转述；保留滚动"
+        "note": "本人与官号近窗无新发；保留滚动"
       },
       {
         "id": "donald-trump",
         "status": "partial",
-        "note": "TrumpDailyPosts 近窗多为选举/移民政治；油价口头维稳来自电线非本同步源，未冒充本人；热度补位"
+        "note": "TrumpDailyPosts 近窗为政治口水，按来源规则排除；保留滚动"
       },
       {
         "id": "trillion-leaders",
@@ -29,12 +29,100 @@
       {
         "id": "research-reports",
         "status": "partial",
-        "note": "近窗核心假设变化不足，保留旧条目"
+        "note": "新增 JPM 存储重估、GS 主经纪商去杠杆两条转述（均未见原件）；按 5 条上限轮出 10/13 两条 watch 目标价调整；MS 数据中心 GW 预测见美股讯息洞察"
       }
     ],
-    "note": " | 2026-10-17-1500: 近窗增量有限，保留7日滚动；crypto跳过"
+    "note": " | 2026-10-17-1500: 近窗增量有限，保留7日滚动；crypto跳过 | 2026-10-17-2030: 周末增量（Anthropic 融资/Jack Clark/银行禁代理/存储研报/Musk Axios）；其余保留7日滚动；crypto跳过"
   },
   "items": [
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
+      "eventKey": "elon-axios-ai-robots-debt-2026-10-17",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 接受 Axios 采访：称 AI 与机器人是解决美国国债的唯一途径",
+      "fact": "FirstSquawk 援引 Axios：Elon Musk 称 AI 与机器人是解决美国国债问题的唯一办法。",
+      "whyItMatters": "与同日约 2 万亿美元财年赤字形成呼应，强化 xAI/Tesla 机器人叙事；属观点而非政策。",
+      "counterCase": "无具体产能或收入数据，难以量化。",
+      "affected": [
+        "Tesla Optimus",
+        "xAI",
+        "美国财政叙事"
+      ],
+      "author": "FirstSquawk",
+      "publishedAt": "2026-10-17T12:28:26.000Z",
+      "url": "https://x.com/FirstSquawk/status/2111434159734530184",
+      "tier": "watch",
+      "selection": "rule"
+    },
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [],
+      "eventKey": "gs-pb-ai-deleveraging-research-2026-10-17",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：高盛主经纪商称对冲基金一周抹掉 2025 年以来 AI 股全部净买入",
+      "fact": "转述 Goldman Sachs 主经纪商报告：10/8–10/14 对冲基金连续五日净卖 AI 股，抵消 2025 年初以来全部累计净买入；台湾 AI 仓位仍在近 1 年第 94 百分位，正 gamma 缓冲减弱。",
+      "whyItMatters": "解释本轮下跌的机械去杠杆成分，并提示台湾链仍有卖压尾部。",
+      "counterCase": "二手转述，数字未经高盛公开确认；仓位出清也可能预示反弹。",
+      "affected": [
+        "TSM",
+        "AI 拥挤多头",
+        "指数波动率"
+      ],
+      "author": "phithetasigma",
+      "publishedAt": "2026-10-17T12:03:57.000Z",
+      "url": "https://x.com/phithetasigma/status/2111427997429649841",
+      "tier": "watch",
+      "selection": "rule"
+    },
+    {
+      "eventKey": "elon-anomalies-matrix-heat-2026-10-17",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：“Anomalies in the matrix are inevitable”",
+      "fact": "@elonmusk：发帖 “Anomalies in the matrix are inevitable”。",
+      "whyItMatters": "产品/文化热度；投资传导有限，热度补位。",
+      "counterCase": "无产品路线或财务信息则难量化。",
+      "affected": [
+        "X",
+        "xAI"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-17T04:24:47.000Z",
+      "url": "https://x.com/elonmusk/status/2111312443305558190",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "capturedAt": "2026-10-17T07:13:54.846Z",
+        "source": "x-mcp",
+        "likes": 23442,
+        "reposts": 2518,
+        "replies": 2522,
+        "quotes": 533,
+        "views": 1693727,
+        "bookmarks": 1392
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
     {
       "eventKey": "elon-neuralink-help-millions-2026-10-16",
       "tabIds": [
@@ -72,6 +160,76 @@
           "intro": "特斯拉与SpaceX CEO"
         }
       ]
+    },
+    {
+      "eventKey": "jensen-huang-sanguine-rout-people-2026-10-16",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "Jensen Huang 据 Bloomberg：对 AI 股灾表态偏淡定",
+      "fact": "@business：称 Jensen Huang 认为 AI 技术收益将很快压过投资者担忧。非本人 X 直发。",
+      "whyItMatters": "核心供应商在抛售中定调需求叙事。",
+      "counterCase": "若后续指引下修则安抚失效。",
+      "affected": [
+        "NVDA",
+        "AI 情绪"
+      ],
+      "author": "business",
+      "publishedAt": "2026-10-16T22:45:09.000Z",
+      "url": "https://x.com/business/status/2111226970117693529",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "jensen-huang": 1
+      },
+      "selection": "rule",
+      "engagement": {
+        "capturedAt": "2026-10-17T00:08:00.000Z",
+        "source": "x-mcp",
+        "likes": 43,
+        "reposts": 3,
+        "replies": 14,
+        "quotes": 2,
+        "views": 19316,
+        "bookmarks": 6
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "trump-vote-republican-heat-2026-10-16",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "同步源：以遇刺与 Charlie Kirk 遇害为由呼吁投共和党",
+      "fact": "@TrumpDailyPosts：政治动员帖，热度高，无产业政策条款。",
+      "whyItMatters": "热度补位。",
+      "counterCase": "无政策文本。",
+      "affected": [
+        "政治舆论"
+      ],
+      "author": "TrumpDailyPosts",
+      "publishedAt": "2026-10-16T19:47:00.000Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2111182138129502326",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "capturedAt": "2026-10-17T00:08:00.000Z",
+        "source": "x-mcp",
+        "likes": 1705,
+        "reposts": 238,
+        "replies": 53,
+        "quotes": 5,
+        "views": 85537,
+        "bookmarks": 12
+      },
+      "people": []
     },
     {
       "eventKey": "elon-southwest-starlink-people-2026-10-16",
@@ -152,228 +310,6 @@
       ]
     },
     {
-      "eventKey": "elon-anomalies-matrix-heat-2026-10-17",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：“Anomalies in the matrix are inevitable”",
-      "fact": "@elonmusk：发帖 “Anomalies in the matrix are inevitable”。",
-      "whyItMatters": "产品/文化热度；投资传导有限，热度补位。",
-      "counterCase": "无产品路线或财务信息则难量化。",
-      "affected": [
-        "X",
-        "xAI"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-17T04:24:47.000Z",
-      "url": "https://x.com/elonmusk/status/2111312443305558190",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-17T07:13:54.846Z",
-        "source": "x-mcp",
-        "likes": 23442,
-        "reposts": 2518,
-        "replies": 2522,
-        "quotes": 533,
-        "views": 1693727,
-        "bookmarks": 1392
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-grok-bot-faster-heat-2026-10-16",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Grok Bot 明显更快",
-      "fact": "@elonmusk：称 “Grok @Bot got much faster”，并另帖建议连接 X DM 使用。",
-      "whyItMatters": "产品体验热度；投资传导有限，热度补位。",
-      "counterCase": "无留存/收入数据则难量化。",
-      "affected": [
-        "Grok Bot",
-        "xAI"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-16T23:35:17.000Z",
-      "url": "https://x.com/elonmusk/status/2111239586873745604",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 2293,
-        "reposts": 242,
-        "replies": 550,
-        "quotes": 37,
-        "views": 479245,
-        "bookmarks": 68
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-more-than-10gw-2026-10-15",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：算力目标或许不止 10GW",
-      "fact": "@elonmusk 引用相关帖回复「Maybe more than 10GW」，延续此前算力/电力规模讨论。",
-      "whyItMatters": "上修电力与算力意向规模，连接 AI 实物瓶颈，但仍是意向而非并网合同。",
-      "counterCase": "无变电站/购电合同则停留在叙事。",
-      "affected": [
-        "xAI/算力",
-        "电力设备需求叙事"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-15T23:36:46.000Z",
-      "url": "https://x.com/elonmusk/status/2110877572011844019",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 4
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-16T12:41:12.272Z",
-        "source": "x-mcp",
-        "likes": 7367,
-        "reposts": 905,
-        "replies": 662,
-        "quotes": 78,
-        "views": 1724864,
-        "bookmarks": 441
-      }
-    },
-    {
-      "eventKey": "elon-grok-bot-paid-growth-2026-10-15",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Grok Bot 无免费档仍增长极快",
-      "fact": "@elonmusk：称从未见过 @Grok @Bot 增长如此快，且无免费档意味着用户支付意愿高于价格。",
-      "whyItMatters": "应用层付费采用信号，支持 AI 落地单位经济讨论。",
-      "counterCase": "若后续披露流失或补贴，付费叙事削弱。",
-      "affected": [
-        "xAI",
-        "AI 应用付费"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-15T22:52:49.000Z",
-      "url": "https://x.com/elonmusk/status/2110866513955868924",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 5
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-16T12:41:12.272Z",
-        "source": "x-mcp",
-        "likes": 17160,
-        "reposts": 1779,
-        "replies": 1238,
-        "quotes": 160,
-        "views": 1898076,
-        "bookmarks": 1540
-      }
-    },
-    {
-      "eventKey": "jensen-huang-sanguine-rout-people-2026-10-16",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "Jensen Huang 据 Bloomberg：对 AI 股灾表态偏淡定",
-      "fact": "@business：称 Jensen Huang 认为 AI 技术收益将很快压过投资者担忧。非本人 X 直发。",
-      "whyItMatters": "核心供应商在抛售中定调需求叙事。",
-      "counterCase": "若后续指引下修则安抚失效。",
-      "affected": [
-        "NVDA",
-        "AI 情绪"
-      ],
-      "author": "business",
-      "publishedAt": "2026-10-16T22:45:09.000Z",
-      "url": "https://x.com/business/status/2111226970117693529",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "jensen-huang": 1
-      },
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 43,
-        "reposts": 3,
-        "replies": 14,
-        "quotes": 2,
-        "views": 19316,
-        "bookmarks": 6
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "trump-vote-republican-heat-2026-10-16",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "同步源：以遇刺与 Charlie Kirk 遇害为由呼吁投共和党",
-      "fact": "@TrumpDailyPosts：政治动员帖，热度高，无产业政策条款。",
-      "whyItMatters": "热度补位。",
-      "counterCase": "无政策文本。",
-      "affected": [
-        "政治舆论"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-16T19:47:00.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2111182138129502326",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 1705,
-        "reposts": 238,
-        "replies": 53,
-        "quotes": 5,
-        "views": 85537,
-        "bookmarks": 12
-      },
-      "people": []
-    },
-    {
       "eventKey": "trump-immigration-not-better-heat-2026-10-16",
       "tabIds": [
         "donald-trump"
@@ -403,6 +339,29 @@
         "bookmarks": 15
       },
       "people": []
+    },
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [],
+      "eventKey": "jpm-memory-rerating-research-2026-10-16",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：摩根大通呼吁存储股重估，称供需失衡加深、HBM4E 每 bit 耗晶圆约为 DRAM 4 倍",
+      "fact": "转述 JPMorgan：存储供需失衡加深、超大规模云资本开支上升、单颗加速器 HBM 用量增加，长约框架提高能见度，呼吁存储股重估。",
+      "whyItMatters": "在存储股暴跌周给出供给紧平衡的反向判断，直接关系 MU 与 HBM 链估值。",
+      "counterCase": "若 DRAM 现货回落或 CXMT 产能超预期，判断失效；原报告未见。",
+      "affected": [
+        "MU",
+        "SK hynix",
+        "Samsung"
+      ],
+      "author": "ChillBanking",
+      "publishedAt": "2026-10-16T13:45:00.000Z",
+      "url": "https://x.com/ChillBanking/status/2111091037972181403",
+      "tier": "must-read",
+      "selection": "rule"
     },
     {
       "eventKey": "trump-brazil-bolsonaro-heat-2026-10-16",
@@ -513,6 +472,84 @@
         "bookmarks": 62
       },
       "people": []
+    },
+    {
+      "eventKey": "elon-more-than-10gw-2026-10-15",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：算力目标或许不止 10GW",
+      "fact": "@elonmusk 引用相关帖回复「Maybe more than 10GW」，延续此前算力/电力规模讨论。",
+      "whyItMatters": "上修电力与算力意向规模，连接 AI 实物瓶颈，但仍是意向而非并网合同。",
+      "counterCase": "无变电站/购电合同则停留在叙事。",
+      "affected": [
+        "xAI/算力",
+        "电力设备需求叙事"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-15T23:36:46.000Z",
+      "url": "https://x.com/elonmusk/status/2110877572011844019",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 4
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
+      "selection": "rule",
+      "engagement": {
+        "capturedAt": "2026-10-16T12:41:12.272Z",
+        "source": "x-mcp",
+        "likes": 7367,
+        "reposts": 905,
+        "replies": 662,
+        "quotes": 78,
+        "views": 1724864,
+        "bookmarks": 441
+      }
+    },
+    {
+      "eventKey": "elon-grok-bot-paid-growth-2026-10-15",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：Grok Bot 无免费档仍增长极快",
+      "fact": "@elonmusk：称从未见过 @Grok @Bot 增长如此快，且无免费档意味着用户支付意愿高于价格。",
+      "whyItMatters": "应用层付费采用信号，支持 AI 落地单位经济讨论。",
+      "counterCase": "若后续披露流失或补贴，付费叙事削弱。",
+      "affected": [
+        "xAI",
+        "AI 应用付费"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-15T22:52:49.000Z",
+      "url": "https://x.com/elonmusk/status/2110866513955868924",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 5
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
+      "selection": "rule",
+      "engagement": {
+        "capturedAt": "2026-10-16T12:41:12.272Z",
+        "source": "x-mcp",
+        "likes": 17160,
+        "reposts": 1779,
+        "replies": 1238,
+        "quotes": 160,
+        "views": 1898076,
+        "bookmarks": 1540
+      }
     },
     {
       "eventKey": "nvidia-volvo-hyperion-halos-2026-10-15",
@@ -818,41 +855,6 @@
       }
     },
     {
-      "eventKey": "citi-cat-pt-cut-dc-power-2026-10-13",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "转述：花旗下调 CAT 目标价至 950 美元，质疑数据中心电力估值",
-      "fact": "@TTradDashboard 称花旗将卡特彼勒目标价由 1100 美元下调至 950 美元，理由是对其数据中心电力业务估值存疑；CAT 当日跌约 3.3%，跌破 9 月 17 日以来区间下沿。",
-      "whyItMatters": "数据中心电力设备（燃气发电机组）估值开始被券商质疑，与 AI 信用走阔形成同向压力。",
-      "counterCase": "为二手转述；表后燃气发电订单仍在增加（如 Enerflex），基本面需求未见下滑。",
-      "affected": [
-        "CAT",
-        "GEV",
-        "燃气发电设备"
-      ],
-      "author": "TTradDashboard",
-      "publishedAt": "2026-10-13T20:21:30.000Z",
-      "url": "https://x.com/TTradDashboard/status/2110103657702207582",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "research-reports": 3
-      },
-      "people": [],
-      "selection": "rule",
-      "engagement": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 0,
-        "views": 32,
-        "capturedAt": "2026-10-14T01:10:00.000Z",
-        "source": "x-mcp",
-        "bookmarks": 0
-      }
-    },
-    {
       "eventKey": "pichai-gemini-4-argon-launch-2026-10-13",
       "tabIds": [
         "trillion-leaders"
@@ -890,40 +892,6 @@
         "capturedAt": "2026-10-14T01:10:00.000Z",
         "source": "x-mcp",
         "bookmarks": 2606
-      }
-    },
-    {
-      "eventKey": "ubs-wdc-pt-cut-toshiba-2026-10-13",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "转述：瑞银因东芝进入数据中心硬盘市场下调 WDC 目标价至 470 美元",
-      "fact": "@OptionKing666 转述瑞银：东芝进入数据中心硬盘市场带来供给变化，瑞银下调 2028 年定价假设，将 WDC 目标价由 525 美元降至 470 美元，同时上调近期毛利率预测；Tickeron 称 WDC 当日跌约 5.5%。",
-      "whyItMatters": "存储涨价周期中出现新增供给，硬盘定价预期下修与存储股抛售同步。",
-      "counterCase": "目标价仍远高于股价；近期毛利率被上调，影响主要在 2028 年。",
-      "affected": [
-        "WDC",
-        "STX"
-      ],
-      "author": "OptionKing666",
-      "publishedAt": "2026-10-13T15:10:47.000Z",
-      "url": "https://x.com/OptionKing666/status/2110025464345772151",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "research-reports": 5
-      },
-      "people": [],
-      "selection": "rule",
-      "engagement": {
-        "likes": 2,
-        "reposts": 0,
-        "replies": 0,
-        "quotes": 1,
-        "views": 370,
-        "capturedAt": "2026-10-14T01:10:00.000Z",
-        "source": "x-mcp",
-        "bookmarks": 0
       }
     },
     {

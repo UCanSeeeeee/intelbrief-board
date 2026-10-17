@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-17T07:13:54.846Z",
-  "cutoff": "2026-10-17T15:00:00+08:00",
+  "updatedAt": "2026-10-17T12:45:55.067Z",
+  "cutoff": "2026-10-17T20:30:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,27 +9,96 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "GPT-6 Astra Pro 多代理升级"
+        "note": "官号近窗无新帖，保留滚动"
       },
       {
         "id": "anthropic",
         "status": "partial",
-        "note": "量子电路 STEM Fellows + 安全法案游说（媒体）"
+        "note": "新增 North Star 融资、Jack Clark IMF 讲座、加拿大数据中心租约（均为媒体/快讯）"
       },
       {
         "id": "goog-ai",
         "status": "partial",
-        "note": "近窗高价值不足，保留滚动"
+        "note": "官号近窗无新帖，保留滚动"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "近窗不足，保留滚动"
+        "note": "新增 Citi 禁 AI 代理；G7 演练与 Elorian 仅新闻摘要未收"
       }
     ],
-    "note": " | 2026-10-17-1500: 近窗增量有限，保留7日滚动；crypto跳过"
+    "note": " | 2026-10-17-1500: 近窗增量有限，保留7日滚动；crypto跳过 | 2026-10-17-2030: 周末增量（Anthropic 融资/Jack Clark/银行禁代理/存储研报/Musk Axios）；其余保留7日滚动；crypto跳过"
   },
   "items": [
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [
+        {
+          "name": "Jack Clark",
+          "intro": "Anthropic联合创始人"
+        }
+      ],
+      "eventKey": "anthropic-jack-clark-44t-ai-tab-2026-10-17",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Jack Clark 在 IMF 讲座：内部模型称 AI 或令美国 GDP 2030 年达约 44 万亿美元",
+      "fact": "Anthropic 联合创始人 Jack Clark 在 IMF/世界银行年会称，公司内部模型预测美国 GDP 可由约 30 万亿美元升至 2030 年约 44 万亿美元，并呼吁更强全球 AI 规则。",
+      "whyItMatters": "政策场合的 AI 生产率量化表态，影响监管与估值叙事。",
+      "counterCase": "公司处融资/IPO 期，存在激励偏差；无独立验证。",
+      "affected": [
+        "Anthropic",
+        "AI 监管"
+      ],
+      "author": "DeItaone",
+      "publishedAt": "2026-10-17T09:43:39.000Z",
+      "url": "https://x.com/DeItaone/status/2111392687601385604",
+      "tier": "must-read"
+    },
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [],
+      "eventKey": "anthropic-canada-dc-lease-ai-tab-2026-10-17",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Reuters：Anthropic 签下首个加拿大数据中心租约",
+      "fact": "Reuters：Anthropic 签署其首个加拿大数据中心的租约；规模与条款在所用帖文中未披露。",
+      "whyItMatters": "算力地域扩张与主权/合规布局的信号。",
+      "counterCase": "规模未知，单独影响有限。",
+      "affected": [
+        "Anthropic",
+        "加拿大数据中心"
+      ],
+      "author": "Reuters",
+      "publishedAt": "2026-10-17T01:20:10.000Z",
+      "url": "https://x.com/Reuters/status/2111265984703082730",
+      "tier": "watch"
+    },
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [],
+      "eventKey": "anthropic-north-star-ai-tab-2026-10-17",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "FT：Anthropic 为 TPU 融资向 Blackstone 开出两位数收益率",
+      "fact": "FT：Anthropic 在最新约 600 亿美元芯片融资（Project North Star）中向 Blackstone 提供两位数收益率；FirstSquawk 转述称以五年期芯片租赁付款偿还。",
+      "whyItMatters": "头部实验室算力融资成本上行，最终影响 API 定价与毛利。",
+      "counterCase": "若认购踊跃、利率下修则压力缓和。",
+      "affected": [
+        "Anthropic",
+        "Google TPU",
+        "Blackstone"
+      ],
+      "author": "FT",
+      "publishedAt": "2026-10-17T00:57:26.000Z",
+      "url": "https://x.com/FT/status/2111260264070852755",
+      "tier": "must-read"
+    },
     {
       "eventKey": "anthropic-safety-bill-ai-tab-2026-10-16",
       "tabIds": [
@@ -52,6 +121,27 @@
         "anthropic": 2
       },
       "people": []
+    },
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [],
+      "eventKey": "citi-blocks-ai-agents-ai-others-2026-10-16",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "FT：Citi 禁止第三方 AI 代理登录客户账户或直接交易",
+      "fact": "FT 独家：Citigroup 不允许第三方 AI 代理或助手登录客户账户或在其数字银行平台内直接交易，是最新限制 AI 代理的美国大行。",
+      "whyItMatters": "消费级 AI 代理在金融场景的落地受制度阻力，也涉及银行存款利差保护。",
+      "counterCase": "银行若推出授权接口则只是过渡。",
+      "affected": [
+        "AI 代理产品",
+        "美国大型银行"
+      ],
+      "author": "FT",
+      "publishedAt": "2026-10-16T20:40:07.000Z",
+      "url": "https://x.com/FT/status/2111195504503595051",
+      "tier": "must-read"
     },
     {
       "eventKey": "openai-astra-pro-ai-tab-2026-10-16",

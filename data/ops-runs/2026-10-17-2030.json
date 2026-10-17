@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-17-2030",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-17T20:37:13+08:00",
+  "updatedAt": "2026-10-17T20:46:46+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "f2b9a6a67671da9f642940aa8326ea0f94005838",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-17T20:37:25+08:00",
+      "detail": "ff-only, already up to date f2b9a6a"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-17T20:37:42+08:00",
+      "detail": "AGENTS/STOCK_BRIEF/OPS/TRADING_DAY/SOP/KB"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-17T20:42:22+08:00",
+      "detail": "R1+R2 X tools (search_news/search_posts_all/get_posts_by_ids); crypto skipped"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-17T20:46:03+08:00",
+      "detail": "brief 5+8; people/tickers/ai incremental"
+    },
+    {
+      "name": "validate",
+      "status": "ok",
+      "at": "2026-10-17T20:46:46+08:00",
+      "detail": "brief:validate 5+8; 89 tests; check OK; build OK"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "pending",
+      "detail": null
+    },
+    "people": {
+      "status": "pending",
+      "detail": null
+    },
+    "tickers": {
+      "status": "pending",
+      "detail": null
+    },
+    "ai": {
+      "status": "pending",
+      "detail": null
+    },
+    "earnings": {
+      "status": "pending",
+      "detail": null
+    },
+    "macro": {
+      "status": "pending",
+      "detail": null
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": []
+}

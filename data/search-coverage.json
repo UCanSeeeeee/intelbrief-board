@@ -367,6 +367,37 @@
         "get_users_posts elonmusk / OpenAI / AnthropicAI"
       ],
       "recordedAt": "2026-10-17T07:13:54.669Z"
+    },
+    {
+      "jobId": "2026-10-17-2030",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-16T12:30:00.000Z",
+      "end": "2026-10-17T20:30:00+08:00",
+      "status": "partial",
+      "queries": [
+        "search_news: US stocks markets oil AI chips Fed weekend (8h)",
+        "from:DeItaone OR FirstSquawk OR business OR Reuters OR FT OR WSJ OR zerohedge OR KobeissiLetter since 07:00Z",
+        "Anthropic (Blackstone OR \"North Star\") (debt OR yield OR TPU)",
+        "(Hormuz OR Houthis OR Saudi OR Iran) (tanker OR mine OR attack OR oil) from wires",
+        "(Jassy compute 2028) OR (Gartner neocloud) OR (Horowitz Jassy)",
+        "(IMF OR Georgieva OR G7 OR \"AI agents\" OR Trump OR Bessent OR Iran) from wires",
+        "(JPMorgan OR Citi OR \"Bank of America\") (\"AI agents\" OR \"third-party AI\") block",
+        "(HBM OR TSMC OR Samsung OR \"SK hynix\" OR ASML OR Nvidia) (supply OR order OR capex OR export OR shortage OR price)",
+        "(\"data center\" OR hyperscaler) (power OR grid OR PPA OR gigawatt OR nuclear OR turbine OR transformer)",
+        "(\"margin debt\" OR \"Treasury yields\" OR \"credit spreads\" OR \"private credit\" OR CDS OR \"term premium\")",
+        "(PJM 76%/monitor) OR (FINRA \"margin debt\")",
+        "(JPMorgan) (memory OR HBM OR DRAM) (rerating OR shortage)",
+        "(\"budget deficit\") (Treasury OR CBO) trillion",
+        "(Anthropic OR \"AI agents\" OR Citi OR Katayama OR cyber OR \"Jack Clark\") from FT/business/Reuters/WSJ/FirstSquawk/DeItaone",
+        "(\"Jack Clark\" IMF) OR (G7 AI cyberattack tabletop)",
+        "from:elonmusk OR nvidia OR TrumpDailyPosts OR WhiteHouse OR POTUS since 06:30Z",
+        "from:OpenAI OR AnthropicAI OR GoogleDeepMind OR sama OR sundarpichai OR satyanadella OR Google OR xai OR MetaAI",
+        "(NVDA OR MU OR INTC OR GOOGL OR AVGO OR VRT OR TSM) (announces OR deal OR contract OR guidance OR downgrade OR upgrade)",
+        "(\"AI revenue\" OR ARR OR \"enterprise adoption\") (OpenAI OR Anthropic OR Microsoft OR Google ...)",
+        "(breadth OR outflows OR positioning OR CTA OR \"Goldman Sachs\" OR \"hedge funds\") (stocks OR semiconductors)"
+      ],
+      "recordedAt": "2026-10-17T12:46:03.399Z"
     }
   ]
 }

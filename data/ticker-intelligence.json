@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-17T07:13:54.846Z",
-  "cutoff": "2026-10-17T15:00:00+08:00",
+  "updatedAt": "2026-10-17T12:45:55.067Z",
+  "cutoff": "2026-10-17T20:30:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,12 +9,12 @@
       {
         "id": "nvda",
         "status": "partial",
-        "note": "Huang 淡定表态 + Mercedes 官号合作；股价波动不作独立事实"
+        "note": "近窗无新增一手高价值；保留滚动"
       },
       {
         "id": "mu",
         "status": "partial",
-        "note": "Dell 存储短缺/积压转述强化供给瓶颈叙事"
+        "note": "新增大行存储重估/市值背离转述；保留滚动"
       },
       {
         "id": "intc",
@@ -24,27 +24,88 @@
       {
         "id": "goog",
         "status": "partial",
-        "note": "近窗高价值不足，保留滚动"
+        "note": "新增 TPU 1.5GW 融资；保留滚动"
       },
       {
         "id": "avgo",
         "status": "partial",
-        "note": "近窗高价值不足，保留滚动"
+        "note": "新增 North Star 融资安排与利益冲突提示；保留滚动"
       },
       {
         "id": "vrt",
         "status": "partial",
-        "note": "近窗高价值不足，保留滚动"
+        "note": "近窗高价值不足（MS GW 预测见研报），保留滚动"
       },
       {
         "id": "tsm",
         "status": "partial",
-        "note": "近窗无新业绩帖；板块连跌为共同因子，保留滚动业绩锚"
+        "note": "近窗无新业绩帖；GS 称台湾仓位仍高，保留滚动"
       }
     ],
-    "note": " | 2026-10-17-1500: 近窗增量有限，保留7日滚动；crypto跳过"
+    "note": " | 2026-10-17-1500: 近窗增量有限，保留7日滚动；crypto跳过 | 2026-10-17-2030: 周末增量（Anthropic 融资/Jack Clark/银行禁代理/存储研报/Musk Axios）；其余保留7日滚动；crypto跳过"
   },
   "items": [
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [],
+      "eventKey": "mu-jpm-rerating-gs-738bn-ticker-2026-10-17",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "大行称存储股价与基本面背离：JPM 呼吁重估，GS 称市值蒸发约 7380 亿美元而 DDR5 现货仍涨",
+      "fact": "转述 JPMorgan 呼吁存储股重估（HBM4E 晶圆消耗、长约能见度）；转述 Goldman 称 CXMT 披露后存储厂市值合计蒸发约 7380 亿美元、Micron 约 -11%，同期 DDR5 16Gb 现货由约 54.5 升破 60 美元。",
+      "whyItMatters": "股价隐含深度下行周期，实物价格指向紧平衡，是 MU 估值修复的关键分歧。",
+      "counterCase": "现货回落或长约重议则失效；均为二手转述。",
+      "affected": [
+        "MU"
+      ],
+      "author": "EhrmantrautCap_",
+      "publishedAt": "2026-10-17T10:46:59.000Z",
+      "url": "https://x.com/EhrmantrautCap_/status/2111408628313788675",
+      "tier": "must-read"
+    },
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [],
+      "eventKey": "avgo-north-star-arranger-ticker-2026-10-17",
+      "tabIds": [
+        "avgo"
+      ],
+      "title": "转述 FT：Broadcom 安排约 600 亿美元 Anthropic TPU 融资，招股书提示供应商兼贷方的利益冲突",
+      "fact": "转述 FT：Anthropic 约 600 亿美元 TPU 融资由 Broadcom 安排，420 亿美元高级层由银行牵头，Blackstone 认购次级层约 90 亿美元，总回报逾 10%；Anthropic 招股书提示 Broadcom 同时作为芯片供应商与贷方的潜在利益冲突。",
+      "whyItMatters": "确认 ASIC/TPU 订单需求，同时暴露 AVGO 对客户融资的间接风险敞口。",
+      "counterCase": "若融资顺利落地且成本下降，风险担忧缓和。",
+      "affected": [
+        "AVGO",
+        "GOOGL"
+      ],
+      "author": "The_AI_Investor",
+      "publishedAt": "2026-10-17T03:38:50.000Z",
+      "url": "https://x.com/The_AI_Investor/status/2111300877944492390",
+      "tier": "must-read"
+    },
+    {
+      "weeklyRanks": {},
+      "verification": "collector-report",
+      "people": [],
+      "eventKey": "goog-tpu-north-star-ticker-2026-10-17",
+      "tabIds": [
+        "goog"
+      ],
+      "title": "FT：Anthropic 以逾 10% 收益率融资租用约 1.5GW Google TPU",
+      "fact": "FT：Anthropic 在最新芯片融资中向 Blackstone 开出两位数收益率；多条转述称资金用于约 1.5GW Google 定制 TPU，以 Anthropic 五年期租赁付款偿还。",
+      "whyItMatters": "TPU 外部需求的量化确认，但客户融资成本上升是 GOOG 云收入质量的观察点。",
+      "counterCase": "若融资缩量或延期，TPU 外部放量节奏放缓。",
+      "affected": [
+        "GOOGL"
+      ],
+      "author": "FT",
+      "publishedAt": "2026-10-17T00:57:26.000Z",
+      "url": "https://x.com/FT/status/2111260264070852755",
+      "tier": "must-read"
+    },
     {
       "eventKey": "nvda-huang-sanguine-ticker-2026-10-16",
       "tabIds": [
