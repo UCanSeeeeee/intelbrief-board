@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-17T08:06:36+08:00",
-  "updatedAt": "2026-10-17T08:14:28+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-17T08:16:22+08:00",
+  "finishedAt": "2026-10-17T08:16:22+08:00",
   "gitHeadAtStart": "ed960316801a2c066b7f21b9fc13a74d688285c9",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-17T08:15:03+08:00",
+      "detail": "329290d"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-17T08:16:21+08:00",
+      "detail": "live index+archive 5+7 match 329290d"
     }
   ],
   "pages": {
@@ -77,8 +77,10 @@
       "detail": null
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": []
+  "commitHash": "329290d",
+  "notes": [
+    "news 5+7; people/tickers/ai rolling; crypto skipped; live OK"
+  ]
 }
