@@ -347,6 +347,26 @@
         "get_users_posts elonmusk / nvidia / TrumpDailyPosts / OpenAI / AnthropicAI"
       ],
       "recordedAt": "2026-10-17T00:09:00.000Z"
+    },
+    {
+      "jobId": "2026-10-17-1500",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-16T07:00:00.000Z",
+      "end": "2026-10-17T15:00:00+08:00",
+      "status": "partial",
+      "queries": [
+        "search_news US stocks oil AI semiconductor Fed NVIDIA",
+        "(oil OR CPI OR Fed OR Treasury) stocks since window",
+        "(NVIDIA OR HBM OR OpenAI OR Anthropic OR CoreWeave) chip OR backlog",
+        "(tariff OR export control OR Taiwan OR China) AI OR chip",
+        "from:DeItaone OR FirstSquawk OR business OR Reuters OR FT OR zerohedge",
+        "(\"export control\") China OR Taiwan AI OR chip",
+        "(\"data center\" OR PPA OR transformer OR megawatt) AI delay OR contract",
+        "SOX OR Nscale OR Huang Berlin",
+        "get_users_posts elonmusk / OpenAI / AnthropicAI"
+      ],
+      "recordedAt": "2026-10-17T07:13:54.669Z"
     }
   ]
 }
