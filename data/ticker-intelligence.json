@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-16T12:41:12.272Z",
-  "cutoff": "2026-10-16T20:30:00+08:00",
+  "updatedAt": "2026-10-17T00:09:00.000Z",
+  "cutoff": "2026-10-17T08:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,12 +9,12 @@
       {
         "id": "nvda",
         "status": "partial",
-        "note": "官号：奔驰/沃尔沃合作、Nemotron、欧洲活动；德工业 AI 协议仍为消息源"
+        "note": "Huang 淡定表态 + Mercedes 官号合作；股价波动不作独立事实"
       },
       {
         "id": "mu",
         "status": "partial",
-        "note": "近窗高价值不足，保留滚动（存储抛售已在简报）"
+        "note": "Dell 存储短缺/积压转述强化供给瓶颈叙事"
       },
       {
         "id": "intc",
@@ -24,7 +24,7 @@
       {
         "id": "goog",
         "status": "partial",
-        "note": "近窗股权高价值不足，保留滚动"
+        "note": "近窗高价值不足，保留滚动"
       },
       {
         "id": "avgo",
@@ -39,11 +39,61 @@
       {
         "id": "tsm",
         "status": "partial",
-        "note": "Q3 纪录利润讨论多为转述；缺新原帖级指引，保留滚动"
+        "note": "近窗无新业绩帖；板块连跌为共同因子，保留滚动业绩锚"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "nvda-huang-sanguine-ticker-2026-10-16",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "Jensen Huang：AI 股灾中表态偏淡定",
+      "fact": "Bloomberg：Huang 称 AI 收益将很快压过投资者担忧。",
+      "whyItMatters": "供应商定调有助缓和需求证伪交易。",
+      "counterCase": "指引下修则失效。",
+      "affected": [
+        "NVDA"
+      ],
+      "author": "business",
+      "publishedAt": "2026-10-16T22:45:09.000Z",
+      "url": "https://x.com/business/status/2111226970117693529",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "nvda": 1
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "mu-dell-memory-crunch-ticker-2026-10-16",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "Michael Dell：存储短缺恶化，AI 服务器交付受 DRAM 制约",
+      "fact": "转述：Dell 约 950 亿美元 AI 服务器积压，DRAM 限制交付，新厂难在 2029 前缓解；与 MU 因过剩恐慌下跌形成对照。",
+      "whyItMatters": "客户侧证言支持存储紧平衡长尾。",
+      "counterCase": "积压取消或现货价崩则证伪。",
+      "affected": [
+        "MU",
+        "DRAM"
+      ],
+      "author": "StockSavvyShay",
+      "publishedAt": "2026-10-16T16:27:35.000Z",
+      "url": "https://x.com/StockSavvyShay/status/2111131954787889205",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "mu": 1
+      },
+      "people": []
+    },
     {
       "eventKey": "nvda-germany-industrial-ai-next-week-2026-10-16",
       "tabIds": [
@@ -63,19 +113,19 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "nvda": 2
+        "nvda": 3
       },
       "people": []
     },
     {
-      "eventKey": "nvda-mercedes-partnership-2026-10-16",
+      "eventKey": "nvda-mercedes-adas-ticker-2026-10-16",
       "tabIds": [
         "nvda"
       ],
-      "title": "NVIDIA 扩大与 Mercedes-Benz 自动驾驶合作",
-      "fact": "@nvidia：扩大与 Mercedes-Benz AG 战略合作，开发下一代驾驶辅助与自动驾驶系统。",
-      "whyItMatters": "汽车 AI 落地合作，支撑软件/平台叙事。",
-      "counterCase": "无量产与 ASP 则收入时点不明。",
+      "title": "英伟达扩大与 Mercedes-Benz 自动驾驶合作",
+      "fact": "@nvidia：扩大与 Mercedes-Benz 战略合作，开发下一代驾驶辅助与自动驾驶。",
+      "whyItMatters": "汽车 AI 落地合同叙事。",
+      "counterCase": "量产延后则影响有限。",
       "affected": [
         "NVDA",
         "汽车 AI"
@@ -86,28 +136,8 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "nvda": 1
+        "nvda": 2
       },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-stockholm-event-2026-10-15",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA：斯德哥尔摩建设者活动，下一站柏林",
-      "fact": "@nvidia：Jensen 在斯德哥尔摩出席活动，预告柏林。",
-      "whyItMatters": "欧洲拓展叙事；热度/品牌。",
-      "counterCase": "无订单。",
-      "affected": [
-        "NVDA 欧洲"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-15T20:28:35.000Z",
-      "url": "https://x.com/nvidia/status/2110830216515919974",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
       "people": []
     },
     {
@@ -129,7 +159,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "nvda": 3
+        "nvda": 4
       },
       "people": []
     },
@@ -180,26 +210,6 @@
       "people": []
     },
     {
-      "eventKey": "nvda-nemotron-35-2026-10-15",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA 发布 Nemotron 3.5 Super VL",
-      "fact": "@nvidia：扩展 Nemotron 开源模型，推出 3.5 Super VL。",
-      "whyItMatters": "软件/开源生态；非芯片出货指引。",
-      "counterCase": "开源≠数据中心收入。",
-      "affected": [
-        "NVDA 软件生态"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-15T15:10:27.000Z",
-      "url": "https://x.com/nvidia/status/2110750157272719562",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
       "eventKey": "nvda-premarket-ai-debt-drag-2026-10-15",
       "tabIds": [
         "nvda"
@@ -218,7 +228,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "nvda": 4
+        "nvda": 5
       },
       "people": []
     },
@@ -287,7 +297,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "mu": 1
+        "mu": 4
       },
       "people": []
     },
@@ -356,64 +366,9 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "mu": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-london-uk-invest-2026-10-14",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA 伦敦：宣布多项英国 AI 初创投资",
-      "fact": "@nvidia 宣布 Jensen Huang 在伦敦公布对 boltz_bio 等五家公司的新投资。",
-      "whyItMatters": "生态绑定与区域算力叙事。",
-      "counterCase": "金额未披露。",
-      "affected": [
-        "NVDA"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-14T21:37:32.000Z",
-      "url": "https://x.com/nvidia/status/2110485178929844666",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 5
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "mu-musk-reasonable-pricing-2026-10-13",
-      "tabIds": [
-        "mu"
-      ],
-      "title": "Elon Musk 称美光内存定价“合理”",
-      "fact": "Elon Musk 称美光在未来内存价格上一直合理，而其他厂商漫天要价，客户不会忘记，美光的做法有利于长期客户忠诚度。",
-      "whyItMatters": "大客户公开偏好可能影响长约份额分配。",
-      "counterCase": "采购方表态有压价激励；“合理”也可能意味着让渡利润。",
-      "affected": [
-        "MU",
-        "TSLA"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-13T21:52:48.000Z",
-      "url": "https://x.com/elonmusk/status/2110126632572756339",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
         "mu": 5
       },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      "people": []
     },
     {
       "eventKey": "intc-bofa-density-gap-tsmc-2026-10-13",

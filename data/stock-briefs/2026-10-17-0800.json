@@ -1,0 +1,1575 @@
+{
+  "scheduledFor": "2026-10-17T08:00:00+08:00",
+  "windowStart": "2026-10-16T00:00:00.000Z",
+  "displayWindowStart": "2026-10-16T08:00:00+08:00",
+  "displayWindowEnd": "2026-10-17T08:00:00+08:00",
+  "carriedOver": [],
+  "trigger": "scheduled",
+  "status": "partial",
+  "summary": "北京时间 10/17 08:00 周六批次：美油站上 100、Brent 逼近 110，DOE 征求 SPR 最多约 1700 万桶交换，Donald Trump 称油价很快回落；费城半导体约七连跌同时 SOXL 录得巨额流入；Michael Dell 称存储短缺恶化、Dell 约 950 亿美元 AI 服务器积压受 DRAM 制约；Jensen Huang 对 AI 股灾表态偏淡定；Anthropic 据报游说自拟 AI 安全法案。总体是“能源通胀冲击 + 半导体融资/估值重定价”，需求侧未见系统性证伪。",
+  "marketContext": "本期为北京时间周六 08:00 批次；美股常规周五交易已结束，周末休市。覆盖自昨 08:00 以来（含上期 20:30 之后）的油价/SPR、半导体连跌、Dell 存储表态、Huang 访谈与 Anthropic 监管游说。不把期货点位当作已开盘涨跌。下期 10/17 15:00 继续复核。",
+  "shortfallReason": "多学科洞察合格 7 条（目标 10）：电力包近窗无新的吉瓦级并网/PPA；银行连跌与 AI task force 等落选以避免稀释；GOOG AI/部分个股 Tab 近窗不足按规则保留滚动。实际 5 焦点 + 7 洞察。",
+  "collectionPath": "grok-bot-x-mcp",
+  "coverage": {
+    "method": "两轮独立检索：R1 宽扫宏观能源/半导体抛售/AI定调/电线；R2 按半导体/电力/AI落地/资本成本/地缘能源/市场结构六包生成查询并追源反证。来源 X MCP search_posts_all / search_news / get_users_posts。Crypto 暂停。",
+    "queries": [
+      "search_news Fed inflation stocks AI semiconductor",
+      "from:DeItaone OR FirstSquawk OR Reuters OR business oil SPR Fed",
+      "(OpenAI OR Anthropic OR NVDA OR HBM OR CoreWeave) financing",
+      "(Dell OR memory shortage OR DRAM) AI server backlog",
+      "(SPR OR 17 million OR Brent) oil Trump DOE",
+      "CoreWeave private credit OR T-bill overnight funding",
+      "SOX OR SOXL OR semiconductor streak KobeissiLetter",
+      "Anthropic safety bill Politico",
+      "get_users_posts elonmusk / nvidia / TrumpDailyPosts / OpenAI / AnthropicAI"
+    ],
+    "gaps": [
+      "电力包：近窗无新吉瓦级 PPA/并网原帖",
+      "Jensen Huang 本人账号无直发，表态来自 Bloomberg",
+      "Dell 访谈缺官方逐字稿，950 亿积压为转述",
+      "万亿高管/机构研报近窗一手高价值不足",
+      "GOOG AI / INTC / AVGO / VRT 近窗高价值不足，保留滚动"
+    ]
+  },
+  "selectionRationale": "焦点按影响广度：油价+SPR+口头维稳→半导体七连跌与杠杆流入背离→Dell 存储瓶颈客户证言→Huang 定调→Anthropic 监管游说。洞察独立覆盖存储瓶颈机制、CoreWeave 信贷进展、T-bill 流动性、OpenAI/Anthropic 产品科研、VIX/宽度、Mercedes 落地、Starlink 合同信号，不把焦点余料改名；不足 10 不充数。",
+  "checklist": [
+    {
+      "item": "时间窗：北京 2026-10-16 08:00→2026-10-17 08:00（周六休市批次；beijing-batches-v1；period 2026-10-17-0800）",
+      "status": "covered",
+      "note": "brief:context start/end 与 uncovered 对齐；周末不跳过"
+    },
+    {
+      "item": "R1 宏观/能源：油价、SPR、Trump 口头维稳、通胀余波",
+      "status": "covered",
+      "note": "FirstSquawk/DeItaone/Reuters/Bloomberg"
+    },
+    {
+      "item": "R1 半导体抛售与市场结构：SOX 连跌、SOXL 流入、空头获利",
+      "status": "covered",
+      "note": "KobeissiLetter/Bloomberg"
+    },
+    {
+      "item": "R1 AI 大厂定调：Huang 淡定表态、Anthropic 安全法案游说",
+      "status": "covered",
+      "note": "Bloomberg/Politico/Reuters"
+    },
+    {
+      "item": "R1 电线 DeItaone/FirstSquawk/Reuters/business",
+      "status": "covered",
+      "note": "多条原帖"
+    },
+    {
+      "item": "R2 半导体：Dell 存储短缺/积压 vs 过剩叙事",
+      "status": "covered",
+      "note": "DeItaone/StockSavvyShay"
+    },
+    {
+      "item": "R2 电力：新并网/PPA 合同",
+      "status": "insufficient",
+      "note": "近窗无新的吉瓦级合同原帖；上期 NiSource–MSFT 保留待阅"
+    },
+    {
+      "item": "R2 AI 落地：OpenAI Astra Pro、Anthropic 量子电路、Mercedes 合作",
+      "status": "covered",
+      "note": "官号"
+    },
+    {
+      "item": "R2 资本成本：CoreWeave 私人信贷、T-bill 供给",
+      "status": "covered",
+      "note": "Reuters/Bloomberg"
+    },
+    {
+      "item": "R2 地缘能源物流：SPR/油价/伊朗相关",
+      "status": "covered",
+      "note": "与焦点1合并深挖"
+    },
+    {
+      "item": "R2 市场结构行为：VIX/宽度/连跌",
+      "status": "covered",
+      "note": "与焦点2交叉"
+    },
+    {
+      "item": "入选事件追源+反证",
+      "status": "covered",
+      "note": "油价/SPR、SOX、Dell、Huang、Anthropic bill 均做追源"
+    },
+    {
+      "item": "人物 elon/jensen/trump/合集",
+      "status": "insufficient",
+      "note": "Elon 有商业相关；Jensen 无本人直发用官号/路透转述；Trump 近窗多为选举政治，产业边际弱；合集不足保留滚动"
+    },
+    {
+      "item": "个股七标的近窗",
+      "status": "insufficient",
+      "note": "NVDA 有官号+Huang；MU 有 Dell 存储线索；其余多保留滚动"
+    },
+    {
+      "item": "AI 四 Tab",
+      "status": "insufficient",
+      "note": "OpenAI/Anthropic 官号有更新；GOOG AI/其他不足保留滚动"
+    },
+    {
+      "item": "加密",
+      "status": "covered",
+      "note": "按产品规则暂停，跳过采集与发布"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "oil-100-spr-17m-trump-coming-down-2026-10-16",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "sox-7day-streak-soxl-inflow-2026-10-16",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "dell-memory-shortage-95b-backlog-2026-10-16",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "huang-sanguine-ai-rout-2026-10-16",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "anthropic-ai-safety-bill-pitch-2026-10-16",
+      "round": 1,
+      "decision": "selected",
+      "reason": "市场焦点横向比较入选"
+    },
+    {
+      "eventKey": "coreweave-private-credit-stress-progress-2026-10-16",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识包独立检索入选"
+    },
+    {
+      "eventKey": "tbill-issuance-overnight-funding-2026-10-16",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识包独立检索入选"
+    },
+    {
+      "eventKey": "openai-astra-pro-multi-agent-2026-10-16",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识包独立检索入选"
+    },
+    {
+      "eventKey": "anthropic-quantum-circuits-claude-2026-10-16",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识包独立检索入选"
+    },
+    {
+      "eventKey": "ai-growth-vs-inflation-dual-risk-2026-10-16",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识包独立检索入选"
+    },
+    {
+      "eventKey": "nvidia-mercedes-adas-insight-2026-10-16",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识包独立检索入选"
+    },
+    {
+      "eventKey": "elon-southwest-starlink-2026-10-16",
+      "round": 2,
+      "decision": "selected",
+      "reason": "知识包独立检索入选"
+    },
+    {
+      "eventKey": "iran-dialogue-oil-dip-early-2026-10-16",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "早盘伊朗对话软化与午后油价再破百相矛盾，不单独占焦点"
+    },
+    {
+      "eventKey": "us-ai-task-force-cnbc-2026-10-16",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "任务组成立路径偏程序，缺可执行开支/管制条款"
+    },
+    {
+      "eventKey": "bank-index-sixth-weekly-loss-2026-10-16",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "银行连跌有结构性意义，但本窗主矛盾仍在能源+半导体融资，避免名额稀释"
+    },
+    {
+      "eventKey": "ny-fed-gdp-nowcast-tick-2026-10-16",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "Nowcast 微调，增量有限"
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "eventKey": "iran-dialogue-oil-dip-early-2026-10-16",
+      "reason": "早盘伊朗对话软化与午后油价再破百相矛盾，不单独占焦点"
+    },
+    {
+      "eventKey": "us-ai-task-force-cnbc-2026-10-16",
+      "reason": "任务组成立路径偏程序，缺可执行开支/管制条款"
+    },
+    {
+      "eventKey": "bank-index-sixth-weekly-loss-2026-10-16",
+      "reason": "银行连跌有结构性意义，但本窗主矛盾仍在能源+半导体融资，避免名额稀释"
+    },
+    {
+      "eventKey": "ny-fed-gdp-nowcast-tick-2026-10-16",
+      "reason": "Nowcast 微调，增量有限"
+    }
+  ],
+  "readingSelection": [
+    "focus",
+    "insights"
+  ],
+  "readingDecisions": [
+    {
+      "eventKey": "warsh-fed-oct-pause-odds-crash-2026-10-16",
+      "action": "keep",
+      "reason": "油价再冲高使加息赔率与通胀路径仍相关，保留。",
+      "sourceUrl": "https://x.com/DeItaone/status/2111070249466409460",
+      "checkedAt": "2026-10-17T00:08:00.000Z"
+    },
+    {
+      "eventKey": "imf-ai-bust-growth-hit-2026-10-16",
+      "action": "keep",
+      "reason": "半导体连跌与融资担忧仍对照 IMF bust 情景。",
+      "sourceUrl": "https://x.com/business/status/2111233251394105818",
+      "checkedAt": "2026-10-17T00:08:00.000Z"
+    },
+    {
+      "eventKey": "anthropic-bbplus-60b-financing-2026-10-16",
+      "action": "keep",
+      "reason": "安全法案游说是制度侧进展，融资/评级锚仍有效。",
+      "sourceUrl": "https://x.com/politico/status/2111212154758021624",
+      "checkedAt": "2026-10-17T00:08:00.000Z"
+    },
+    {
+      "eventKey": "nisource-msft-1100mw-2026-10-16",
+      "action": "keep",
+      "reason": "本窗电力无新合同，该长协仍是电力包锚。",
+      "sourceUrl": "https://x.com/DeItaone/status/2111067315798184338",
+      "checkedAt": "2026-10-17T00:08:00.000Z"
+    },
+    {
+      "eventKey": "bofa-ai-capital-cycle-bust-2026-10-16",
+      "action": "keep",
+      "reason": "与 Dell/信贷叙事并列，资本周期框架仍适用。",
+      "sourceUrl": "https://x.com/DeItaone/status/2111067315798184338",
+      "checkedAt": "2026-10-17T00:08:00.000Z"
+    },
+    {
+      "eventKey": "coreweave-cantor-ark-vs-cds-2026-10-16",
+      "action": "keep",
+      "reason": "Reuters 私人信贷综述显示压力未解除。",
+      "sourceUrl": "https://x.com/Reuters/status/2111175379675152488",
+      "checkedAt": "2026-10-17T00:08:00.000Z"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "oil-100-spr-17m-trump-coming-down-2026-10-16",
+      "title": "WTI 站上 100 美元、Brent 逼近 110；美能源部征求 SPR 最多约 1700 万桶交换，Donald Trump 称油价很快回落",
+      "fact": "FirstSquawk：美原油期货结算约 101.41 美元/桶，涨约 3.5%；另有快讯称油价续涨、美油站上 100。Reuters/DeItaone：美国能源部征求从战略石油储备（SPOR）交换最多约 1700 万桶原油。DeItaone：Donald Trump 称“油价很快会下来”。Bloomberg 另称 Brent 触及约 110 美元。",
+      "impact": "事件→成品油与通胀预期→实际利率/贴现率与成长股估值；同时 SPR 交换与口头维稳试图压低近端溢价。若供给紧张未缓，能源冲击可继续抬升 PPI/CPI 粘性并压制 AI 高估值板块。",
+      "direction": "双向",
+      "horizon": "数日至中期选举前后",
+      "affected": [
+        "原油与炼油",
+        "通胀预期",
+        "利率敏感成长股",
+        "航空运输"
+      ],
+      "counterCase": "若实际交换交割远低于征求上限、霍尔木兹风险快速缓和，或库存数据显著回升，则油价与通胀传导应下调。",
+      "selectionReason": "窗口内同时出现价格突破、储备政策动作与总统口头维稳，是影响面最广的宏观实物冲击。",
+      "credibilityReason": "FirstSquawk/DeItaone/Reuters/Bloomberg 交叉；精确交割量与交付窗口以 DOE 公告为准，口头表态不等于供给恢复。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "结算与征求公告的精确当地时刻未在所用帖文写明；相关快讯集中在 10/16 美东交易时段至晚间。",
+      "attentionEvidence": "DeItaone “TRUMP: OIL PRICES GOING TO COME DOWN VERY SOON” 展示约 21 万；SPR 征求帖展示约 12 万；热度仅作注意力参考。",
+      "sources": [
+        {
+          "url": "https://x.com/FirstSquawk/status/2111163143347151091",
+          "postId": "2111163143347151091",
+          "username": "FirstSquawk",
+          "publishedAt": "2026-10-16T18:31:31.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "US CRUDE OIL FUTURES SETTLE AT $101.41/BBL, UP $3.44, 3.51%",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/DeItaone/status/2111098557025620220",
+          "postId": "2111098557025620220",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-16T14:14:52.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "US DEPT OF ENERGY SOLICITING AN EXCHANGE OF UP TO 17,000,000 BARRELS OF CRUDE OIL FROM SPOR",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/Reuters/status/2111208127085371770",
+          "postId": "2111208127085371770",
+          "username": "Reuters",
+          "publishedAt": "2026-10-16T21:30:16.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "US solicits exchange of up to 17 million barrels of oil from strategic reserve",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/DeItaone/status/2111140737433874650",
+          "postId": "2111140737433874650",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-16T17:02:29.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "TRUMP: OIL PRICES GOING TO COME DOWN VERY SOON",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/business/status/2111174112835989533",
+          "postId": "2111174112835989533",
+          "username": "business",
+          "publishedAt": "2026-10-16T19:15:06.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Brent oil hit $110 a barrel for the first time since May as prospects for imminent supply relief dwindle",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "FirstSquawk/DeItaone/Reuters/Bloomberg 交叉；精确交割量与交付窗口以 DOE 公告为准，口头表态不等于供给恢复。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "sox-7day-streak-soxl-inflow-2026-10-16",
+      "title": "费城半导体指数录得约七年未见的七连跌，同期杠杆多头 ETF SOXL 录得约 38 亿美元周度流入",
+      "fact": "KobeissiLetter：费城半导体指数（SOX）连续 7 个交易日下跌，匹配 2008 金融危机以来最长连跌，区间跌幅约 12.4%，并称抹去约 2 万亿美元市值。同作者另称 3 倍做多半导体 ETF SOXL 本周流入约 38 亿美元，有望创单周吸金纪录。Bloomberg：半导体历史性抛售让敢于做空者获利。",
+      "impact": "事件→指数宽度与融资/估值重定价→AI 硬件贝塔与风险偏好；连跌显示贴现率与信用担忧压过近窗需求印证，而创纪录杠杆流入暗示部分资金在下跌中加仓，二者并存提高波动与误杀/反弹振幅。",
+      "direction": "双向",
+      "horizon": "数个交易日到数周",
+      "affected": [
+        "半导体板块",
+        "NVDA/TSM 等权重",
+        "杠杆 ETF",
+        "市场宽度"
+      ],
+      "counterCase": "若下周一开盘融资担忧缓解、或 SOX 止跌且 SOXL 流入逆转，则“历史连跌”叙事迅速失效。",
+      "selectionReason": "把 AI 抛售从单股叙事升级为板块结构与资金流向的可观察统计，是周末前最清晰的市场结构焦点。",
+      "credibilityReason": "KobeissiLetter 给出连跌天数与流入数字；Bloomberg 确认抛售与空头获利叙事。精确指数点位与流入应以行情/基金数据复核。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "连跌统计截止交易日与流入统计口径未独立核对行情库。",
+      "attentionEvidence": "KobeissiLetter 七连跌帖展示约 13 万、SOXL 流入帖约 19 万；热度仅作注意力参考。",
+      "sources": [
+        {
+          "url": "https://x.com/KobeissiLetter/status/2111116161668530498",
+          "postId": "2111116161668530498",
+          "username": "KobeissiLetter",
+          "publishedAt": "2026-10-16T15:24:50.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Semiconductor stocks are experiencing a historic losing streak: The Semiconductor Index, $SOX, has declined for 7 consecutive trading sessions, matching its longest streak since the 2008 Financial Crisis. Over this span, the index has dropped -12.4%",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 35,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 35,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 8,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/KobeissiLetter/status/2111125516530876460",
+          "postId": "2111125516530876460",
+          "username": "KobeissiLetter",
+          "publishedAt": "2026-10-16T16:02:00.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "BREAKING: The 3x leveraged long Semiconductor ETF, $SOXL, has attracted +$3.8 billion in inflows so far this week, putting it on track for its largest weekly intake on record.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 33,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 31,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 4,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/business/status/2111193004664840239",
+          "postId": "2111193004664840239",
+          "username": "business",
+          "publishedAt": "2026-10-16T20:30:11.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "A historic rout in semiconductor stocks has delivered a windfall for short sellers who were brave enough to bet against what had been one of the highest flying corners of the US equity market",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "KobeissiLetter 给出连跌天数与流入数字；Bloomberg 确认抛售与空头获利叙事。精确指数点位与流入应以行情/基金数据复核。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "dell-memory-shortage-95b-backlog-2026-10-16",
+      "title": "Michael Dell：存储短缺将恶化，Dell 约 950 亿美元 AI 服务器积压仍受 DRAM 制约",
+      "fact": "DeItaone：Michael Dell 称即时生产与负现金转换周期可缓冲 AI 萧条，并预期存储短缺恶化。StockSavvyShay 等广泛转述：Dell 约 950 亿美元 AI 服务器积压，DRAM 供给仍限制交付，新存储晶圆厂难在 2029/2030 前显著缓解，故 2027 过剩担忧与客户所见脱节。",
+      "impact": "事件→DRAM/HBM 供给瓶颈持续→服务器交付与 MU 等存储定价权；同时“可缓冲 bust”表述降低 Dell 自身杠杆叙事，但把约束明确推回存储环节，强化“需求未死、交付卡住”的定价分歧。",
+      "direction": "双向",
+      "horizon": "数季至 2029",
+      "affected": [
+        "MU",
+        "DRAM/HBM",
+        "AI 服务器交付",
+        "DELL"
+      ],
+      "counterCase": "若后续财报显示积压取消、或存储现货/合约价快速回落，则短缺叙事被证伪。",
+      "selectionReason": "半导体主线核心：把 CXMT/过剩恐慌与客户侧积压、交期约束对质，是相对股价更接近实物瓶颈的一手客户视角。",
+      "credibilityReason": "DeItaone 快讯 + 高互动投资者转述交叉；缺 Dell 官方 X 原文与访谈完整逐字稿，数字以公司披露为准。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "访谈准确录制/刊出时间未在所用帖文写明；快讯集中在 10/16 美东午后。",
+      "attentionEvidence": "StockSavvyShay 相关帖展示约 8 万、点赞逾千；DeItaone Dell 帖展示约 13 万；热度仅作注意力参考。",
+      "sources": [
+        {
+          "url": "https://x.com/DeItaone/status/2111128205809561625",
+          "postId": "2111128205809561625",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-16T16:12:41.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Michael Dell Says in Interview That Just-in-Time Manufacturing Provides a Cushion if AI Boom Collapses Dell Says He Expects Memory Crunch to Get Worse",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/DeItaone/status/2111128687718408436",
+          "postId": "2111128687718408436",
+          "username": "DeItaone",
+          "publishedAt": "2026-10-16T16:14:36.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "MICHAEL DELL REVEALS HOW HIS COMPANY COULD SURVIVE AN AI BUST Dell Technologies ($DELL ) is positioning itself to withstand a potential AI downturn through just-in-time manufacturing and a negative cash conversion cycle.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/StockSavvyShay/status/2111131954787889205",
+          "postId": "2111131954787889205",
+          "username": "StockSavvyShay",
+          "publishedAt": "2026-10-16T16:27:35.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "$DELL CEO Michael Dell says memory shortage is going to “get worse” next year with ~$95B in AI server backlog and DRAM supply still limiting deliveries.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "DeItaone 快讯 + 高互动投资者转述交叉；缺 Dell 官方 X 原文与访谈完整逐字稿，数字以公司披露为准。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "huang-sanguine-ai-rout-2026-10-16",
+      "title": "Jensen Huang 对 AI 股灾表态偏淡定：称技术收益将很快压过投资者担忧",
+      "fact": "Bloomberg (@business)：NVIDIA CEO Jensen Huang 对最新一轮 AI 股市抛售持相对乐观（sanguine）看法，称该技术的收益将很快超过投资者担忧。search_news 汇总称其在欧洲行程/访谈中强调 AI 将改变各行业，并呼吁关注长期基本面。",
+      "impact": "事件→供应商锚定需求叙事→缓和“AI 需求证伪”交易；但若信用与油价通胀约束未解，口头安抚对折现率冲击有限，市场可能继续区分“长期需求”与“近季融资”。",
+      "direction": "利多",
+      "horizon": "数个交易日至数周",
+      "affected": [
+        "NVDA",
+        "AI 硬件风险偏好",
+        "半导体情绪"
+      ],
+      "counterCase": "若随后财报/客户资本开支指引下修，或 CoreWeave 等信用指标再恶化，淡定表态会被视为滞后。",
+      "selectionReason": "在板块七连跌与油价冲击同窗，核心供应商公开定调是情绪与预期差的关键进展。",
+      "credibilityReason": "Bloomberg 主帖；精确原话与场合以访谈全文为准，非 Jensen Huang 本人 X 直发。",
+      "change": "进展",
+      "eventTime": null,
+      "eventTimeNote": "访谈准确时间未写明；Bloomberg 帖为 10/16 22:45 UTC。",
+      "attentionEvidence": "Bloomberg 帖展示约 1.9 万；热度中等，重要性来自发言人身份而非互动量。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2111226970117693529",
+          "postId": "2111226970117693529",
+          "username": "business",
+          "publishedAt": "2026-10-16T22:45:09.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Nvidia CEO Jensen Huang took a sanguine view toward the latest AI stock-market rout, saying the benefits of the technology will soon outweigh the concerns of investors",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Bloomberg 主帖；精确原话与场合以访谈全文为准，非 Jensen Huang 本人 X 直发。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "anthropic-ai-safety-bill-pitch-2026-10-16",
+      "title": "据 Politico：Anthropic 私下向议员推销自拟 AI 安全法案",
+      "fact": "POLITICO 与 Reuters：Anthropic 正悄悄向立法者推销其自拟的 AI 安全法案草案。属监管游说进展，非产品发布。",
+      "impact": "事件→安全合规与游说→模型厂商合规成本、开源/闭源竞争与采购门槛；若草案条款抬高中小竞品成本，可能强化龙头合规护城河，也可能引发反垄断/监管俘获争议。",
+      "direction": "双向",
+      "horizon": "数月至立法周期",
+      "affected": [
+        "Anthropic",
+        "AI 监管",
+        "模型竞争格局"
+      ],
+      "counterCase": "若国会未采纳文本、或竞争对手推动替代框架并获胜，则该游说难改近季财务。",
+      "selectionReason": "相对上期 Anthropic 评级/融资，本窗新增可执行监管游说线索，影响 AI 板块制度溢价。",
+      "credibilityReason": "Politico 原报道 + Reuters 转述交叉；缺 Anthropic 官号确认与法案全文。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "Politico 报道精确发布时间以原链为准；X 帖为 10/16 晚间。",
+      "attentionEvidence": "Politico 帖展示约 2.1 万；热度一般，价值在监管 substantive 进展。",
+      "sources": [
+        {
+          "url": "https://x.com/politico/status/2111212154758021624",
+          "postId": "2111212154758021624",
+          "username": "politico",
+          "publishedAt": "2026-10-16T21:46:16.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Anthropic quietly pitches its own AI safety bill to lawmakers",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/Reuters/status/2111235782572728605",
+          "postId": "2111235782572728605",
+          "username": "Reuters",
+          "publishedAt": "2026-10-16T23:20:10.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Anthropic quietly pitches its own AI safety bill to lawmakers, Politico reports",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Politico 原报道 + Reuters 转述交叉；缺 Anthropic 官号确认与法案全文。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [
+    {
+      "eventKey": "coreweave-private-credit-stress-progress-2026-10-16",
+      "title": "Reuters：CoreWeave 债务压力继续检验私人信贷对 AI 融资的承受力",
+      "fact": "Reuters 私人信贷综述多次强调 CoreWeave 债务压力在测试私人信贷的 AI 融资热潮；Bloomberg 另称 Jump/DRW 等开始投入算力相关金融合约交易。",
+      "impact": "事件→私人信贷定价→neocloud 扩张与 GPU 租赁需求可达性（M05；I01）。算力合约化若落地，可能把基础设施风险转给衍生品市场，但近端仍看信用利差。",
+      "direction": "利空",
+      "horizon": "数周",
+      "affected": [
+        "CoreWeave",
+        "私人信贷",
+        "AI 基建融资"
+      ],
+      "counterCase": "若利差收窄、再融资成功或大客户长约披露，压力叙事缓解。",
+      "selectionReason": "资本成本包：上期信用故事的实质进展，而非改名复述。",
+      "credibilityReason": "Reuters/Bloomberg 交叉；具体利差数字以债券行情为准。",
+      "change": "进展",
+      "knowledgeCards": [
+        "M05",
+        "I01"
+      ],
+      "disciplines": [
+        "宏观信用",
+        "AI 基建"
+      ],
+      "knowledgeApplication": "M05 关注局部压力是否经基金/银行渠道外溢；I01 提示采购方融资成本上升可滞后打击订单。本期仍偏个案压力+市场结构试验。",
+      "sources": [
+        {
+          "url": "https://x.com/Reuters/status/2111175379675152488",
+          "postId": "2111175379675152488",
+          "username": "Reuters",
+          "publishedAt": "2026-10-16T19:20:08.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Private credit roundup: CoreWeave's debt stress tests private credit's AI financing boom",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/business/status/2111180427578703934",
+          "postId": "2111180427578703934",
+          "username": "business",
+          "publishedAt": "2026-10-16T19:40:12.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Jump and DRW are committing traders and capital to an emerging market for financial contracts tied to computing power",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "综述发布时间以稿件为准。",
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Reuters/Bloomberg 交叉；具体利差数字以债券行情为准。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "tbill-issuance-overnight-funding-2026-10-16",
+      "title": "Bloomberg：国债账单供给上升推高短端收益率，考验隔夜融资稳定",
+      "fact": "Bloomberg：国债账单（T-bill）收益率因新供给放量而显著上升，对隔夜融资市场稳定性构成威胁。",
+      "impact": "事件→短端供给/流动性→融资条件与风险资产贴现（M02；M05）。若回购/隔夜利率波动放大，可能与 AI 高杠杆融资叠加。",
+      "direction": "利空",
+      "horizon": "数日至数周",
+      "affected": [
+        "货币市场",
+        "风险偏好",
+        "杠杆策略"
+      ],
+      "counterCase": "若财政部调整发行节奏或联储流动性工具平抑，冲击短暂。",
+      "selectionReason": "资本成本包独立检索：财政供给对流动性的可观察压力。",
+      "credibilityReason": "Bloomberg 单条；缺量化利差与联储操作对照。",
+      "change": "新增",
+      "knowledgeCards": [
+        "M02",
+        "M05"
+      ],
+      "disciplines": [
+        "宏观财政",
+        "市场流动性"
+      ],
+      "knowledgeApplication": "M02 强调国债供给改变回报门槛；M05 看压力是否传至公开风险资产。本期仅为机制预警。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2111221924797751348",
+          "postId": "2111221924797751348",
+          "username": "business",
+          "publishedAt": "2026-10-16T22:25:06.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Treasury-bill yields have risen sharply as a wave of new issuance tests investor demand, posing a threat to the stability of overnight funding markets",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "发行与收益率变动精确时点未写明。",
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Bloomberg 单条；缺量化利差与联储操作对照。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "openai-astra-pro-multi-agent-2026-10-16",
+      "title": "OpenAI：GPT-6 Astra Pro 升级，支持多代理并行处理任务",
+      "fact": "@OpenAI：称 ChatGPT 中 GPT-6 Astra Pro 响应更快、插件/工具使用改进，并允许多个代理并行处理任务不同部分，用户可跟踪进度。",
+      "impact": "事件→产品能力→席位粘性与 API/工具用量（应用层落地）；若并行代理抬升推理消耗，也可能推高上游算力需求。",
+      "direction": "利多",
+      "horizon": "数周",
+      "affected": [
+        "OpenAI",
+        "ChatGPT 用量",
+        "推理需求"
+      ],
+      "counterCase": "若留存或付费转化无改善，产品更新难改收入斜率。",
+      "selectionReason": "AI 落地包：可核验的产品发布，而非口头愿景。",
+      "credibilityReason": "官号原帖。",
+      "change": "新增",
+      "knowledgeCards": [
+        "I06",
+        "I03"
+      ],
+      "disciplines": [
+        "AI 落地",
+        "半导体需求"
+      ],
+      "knowledgeApplication": "I06 看产业链相对强弱是否反映利润再分配；I03 提醒推理用量最终受算力约束。本期先确认产品侧变化。",
+      "sources": [
+        {
+          "url": "https://x.com/OpenAI/status/2111192259073094035",
+          "postId": "2111192259073094035",
+          "username": "OpenAI",
+          "publishedAt": "2026-10-16T20:27:13.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "GPT-6 Astra Pro in ChatGPT got an upgrade with faster responses and improved use of plugins and tools. And now, multiple agents can tackle different parts of a task in parallel.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": "2026-10-16T20:27:13.000Z",
+      "eventTimeNote": "以官号发帖时间为准。",
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "官号原帖。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "anthropic-quantum-circuits-claude-2026-10-16",
+      "title": "Anthropic：STEM Fellows 显示 Claude 可设计更高效量子电路",
+      "fact": "@AnthropicAI：称 STEM Fellows 项目中，Claude Mythos 5 在自然语言指令下设计出优于部分已发表结果的量子电路，效率有时高一个数量级以上。",
+      "impact": "事件→科研落地案例→企业/实验室采购叙事；尚非规模化收入证明。",
+      "direction": "利多",
+      "horizon": "数月",
+      "affected": [
+        "Anthropic",
+        "科研 AI 采用"
+      ],
+      "counterCase": "若结果不可复现或仅限窄任务，商业化叙事减弱。",
+      "selectionReason": "AI 落地包：官号可核验的科研应用进展。",
+      "credibilityReason": "官号；独立复现与论文细节未附。",
+      "change": "新增",
+      "knowledgeCards": [
+        "I06",
+        "R05"
+      ],
+      "disciplines": [
+        "AI 落地",
+        "科研应用"
+      ],
+      "knowledgeApplication": "I06 关注应用层是否带来相对强弱；R05 区分官号宣传与独立验证。本期记为案例而非收入拐点。",
+      "sources": [
+        {
+          "url": "https://x.com/AnthropicAI/status/2111152183240511640",
+          "postId": "2111152183240511640",
+          "username": "AnthropicAI",
+          "publishedAt": "2026-10-16T17:47:58.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "New from our STEM Fellows Program: Designing more efficient quantum circuits with Claude. Given plain-language instructions, Claude Mythos 5 designed quantum circuits that improve on the best published ones",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": "2026-10-16T17:47:58.000Z",
+      "eventTimeNote": "以官号发帖时间为准。",
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "官号；独立复现与论文细节未附。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "ai-growth-vs-inflation-dual-risk-2026-10-16",
+      "title": "Bloomberg：华尔街同周品尝 AI 高增长押注与顽固通胀的双重风险",
+      "fact": "@business：称华尔街整年押注惊人的 AI 增长，同时又担忧顽固通胀；本周投资者同时体验到两类风险。",
+      "impact": "事件→增长叙事与通胀/折现率冲突→成长股与利率敏感板块（M01；I05）。与油价上行、半导体抛售同向，强化“不是单一叙事崩溃而是宏观约束上修”。",
+      "direction": "利空",
+      "horizon": "数个交易日至数周",
+      "affected": [
+        "成长风格",
+        "AI 估值",
+        "通胀预期"
+      ],
+      "counterCase": "若油价快速回落且加息赔率维持低位，双重风险叙事降温。",
+      "selectionReason": "市场结构/宏观包：把本周主矛盾概括为双风险而非单事件。",
+      "credibilityReason": "Bloomberg 评论帖；属框架性总结，需与油价/半导体现货证据对照。",
+      "change": "新增",
+      "knowledgeCards": [
+        "M01",
+        "I05"
+      ],
+      "disciplines": [
+        "宏观利率",
+        "市场结构"
+      ],
+      "knowledgeApplication": "M01 比较通胀路径与估值路径孰强；I05 提醒指数可由少数权重支撑。本期强调共同因子而非个股故事。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2111233251394105818",
+          "postId": "2111233251394105818",
+          "username": "business",
+          "publishedAt": "2026-10-16T23:10:06.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Wall Street has spent the year betting on staggering AI growth while worrying about stubborn inflation. This week, investors got a fresh taste of both risks.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": null,
+      "eventTimeNote": "评论性综述，无单一事件时刻。",
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Bloomberg 评论帖；属框架性总结，需与油价/半导体现货证据对照。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "nvidia-mercedes-adas-insight-2026-10-16",
+      "title": "英伟达扩大与 Mercedes-Benz 驾驶辅助/自动驾驶合作",
+      "fact": "@nvidia：宣布扩大与 Mercedes-Benz AG 战略合作，开发下一代驾驶辅助与自动驾驶系统，并强调安全标准。",
+      "impact": "事件→车企 AI 落地合同→长期 GPU/系统软件需求（应用层）；近季收入贡献不确定。",
+      "direction": "利多",
+      "horizon": "数季至数年",
+      "affected": [
+        "NVDA",
+        "汽车自动化"
+      ],
+      "counterCase": "若量产时间表延后或份额被其他供应商抢走，影响有限。",
+      "selectionReason": "AI 落地包：可归因官号合作进展。",
+      "credibilityReason": "英伟达官号；缺财务条款。",
+      "change": "新增",
+      "knowledgeCards": [
+        "I06",
+        "R06"
+      ],
+      "disciplines": [
+        "AI 落地",
+        "汽车供应链"
+      ],
+      "knowledgeApplication": "I06 看汽车 AI 是否成为需求扩散；R06 区分长期合同叙事与近季收入。",
+      "sources": [
+        {
+          "url": "https://x.com/nvidia/status/2111005194058179020",
+          "postId": "2111005194058179020",
+          "username": "nvidia",
+          "publishedAt": "2026-10-16T08:03:53.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "We're expanding our strategic partnership with @MercedesBenz AG to develop the next generation of driver assistance and automated driving systems.",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": "2026-10-16T08:03:53.000Z",
+      "eventTimeNote": "以官号发帖时间为准。",
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "英伟达官号；缺财务条款。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "elon-southwest-starlink-2026-10-16",
+      "title": "Elon Musk：Southwest Airlines 全面采用 Starlink",
+      "fact": "@elonmusk 引用相关帖并评论 “Southwest Airlines going all-in with @Starlink!”。",
+      "impact": "事件→航天通信商业化订单叙事→SpaceX 现金流与估值锚；对美股映射偏间接，但对风险偏好与 Elon 体系资本配置有信号意义。",
+      "direction": "利多",
+      "horizon": "数季",
+      "affected": [
+        "SpaceX/Starlink",
+        "航空连通"
+      ],
+      "counterCase": "若仅为意向或机队改造缓慢，近端财务影响有限。",
+      "selectionReason": "跨学科：商业合同信号，补足电力/算力以外的 Elon 资本开支相关线索。",
+      "credibilityReason": "本人短评；航空公司官方合同细节未在所用帖展开。",
+      "change": "新增",
+      "knowledgeCards": [
+        "I06",
+        "R05"
+      ],
+      "disciplines": [
+        "商业航天",
+        "资本配置"
+      ],
+      "knowledgeApplication": "I06 观察非 AI 主线的相对强弱；R05 区分名人评论与合同文本。",
+      "sources": [
+        {
+          "url": "https://x.com/elonmusk/status/2111135753732301178",
+          "postId": "2111135753732301178",
+          "username": "elonmusk",
+          "publishedAt": "2026-10-16T16:42:41.000Z",
+          "checkedAt": "2026-10-17T00:08:00.000Z",
+          "excerpt": "Southwest Airlines going all-in with @Starlink!",
+          "verification": "collector-report",
+          "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "eventTime": "2026-10-16T16:42:41.000Z",
+      "eventTimeNote": "以发帖时间为准。",
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "本人短评；航空公司官方合同细节未在所用帖展开。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "id": "2026-10-17-0800",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T00:09:00.000Z",
+  "counts": {
+    "focus": 5,
+    "insights": 7,
+    "total": 12
+  }
+}

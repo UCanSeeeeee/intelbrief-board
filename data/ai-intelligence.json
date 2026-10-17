@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-16T12:41:12.272Z",
-  "cutoff": "2026-10-16T20:30:00+08:00",
+  "updatedAt": "2026-10-17T00:09:00.000Z",
+  "cutoff": "2026-10-17T08:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,26 +9,94 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "Rosalind 学术计划、GPT-Live 语音、Simons 数学资助"
+        "note": "GPT-6 Astra Pro 多代理升级"
       },
       {
         "id": "anthropic",
         "status": "partial",
-        "note": "Fellowship、METR 评测准入、数学资助；BB+ 评级见美股简报"
+        "note": "量子电路 STEM Fellows + 安全法案游说（媒体）"
       },
       {
         "id": "goog-ai",
         "status": "partial",
-        "note": "近窗一手高价值不足，保留滚动"
+        "note": "近窗高价值不足，保留滚动"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "近窗其他实验室高价值不足，保留滚动"
+        "note": "近窗不足，保留滚动"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "anthropic-safety-bill-ai-tab-2026-10-16",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "据 Politico：Anthropic 游说自拟 AI 安全法案",
+      "fact": "Politico/Reuters：Anthropic 私下向议员推销自拟 AI 安全法案。",
+      "whyItMatters": "监管游说影响合规门槛与竞争。",
+      "counterCase": "国会不采纳则影响有限。",
+      "affected": [
+        "Anthropic",
+        "AI 监管"
+      ],
+      "author": "politico",
+      "publishedAt": "2026-10-16T21:46:16.000Z",
+      "url": "https://x.com/politico/status/2111212154758021624",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 2
+      },
+      "people": []
+    },
+    {
+      "eventKey": "openai-astra-pro-ai-tab-2026-10-16",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI：GPT-6 Astra Pro 支持多代理并行",
+      "fact": "@OpenAI：Astra Pro 更快响应与工具使用，并允许多代理并行处理任务。",
+      "whyItMatters": "产品能力升级，支撑用量与粘性。",
+      "counterCase": "无付费转化数据则难量化。",
+      "affected": [
+        "OpenAI",
+        "ChatGPT"
+      ],
+      "author": "OpenAI",
+      "publishedAt": "2026-10-16T20:27:13.000Z",
+      "url": "https://x.com/OpenAI/status/2111192259073094035",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "openai": 1
+      },
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-quantum-circuits-ai-tab-2026-10-16",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic：Claude 设计更高效量子电路",
+      "fact": "@AnthropicAI：STEM Fellows 显示 Claude Mythos 5 可设计优于部分已发表结果的量子电路。",
+      "whyItMatters": "科研落地案例。",
+      "counterCase": "不可复现则叙事弱。",
+      "affected": [
+        "Anthropic"
+      ],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-16T17:47:58.000Z",
+      "url": "https://x.com/AnthropicAI/status/2111152183240511640",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "anthropic": 1
+      },
+      "people": []
+    },
     {
       "eventKey": "anthropic-bbplus-rating-ai-tab-2026-10-16",
       "tabIds": [
@@ -53,26 +121,6 @@
       "people": []
     },
     {
-      "eventKey": "anthropic-math-funding-2026-10-15",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic：承诺 500 万美元支持数学研究中的 AI 使用",
-      "fact": "@AnthropicAI：引用相关倡议，承诺 500 万美元资助，帮助数学家推动科学进展。",
-      "whyItMatters": "与 OpenAI 同期科研资助，生态竞争。",
-      "counterCase": "捐赠≠产品收入。",
-      "affected": [
-        "Anthropic 科研生态"
-      ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-15T21:31:45.000Z",
-      "url": "https://x.com/AnthropicAI/status/2110846112152105136",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
       "eventKey": "openai-rosalind-academic-2026-10-15",
       "tabIds": [
         "openai"
@@ -91,7 +139,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "openai": 1
+        "openai": 2
       },
       "people": []
     },
@@ -137,7 +185,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "openai": 2
+        "openai": 3
       },
       "people": []
     },
@@ -157,70 +205,6 @@
       "author": "AnthropicAI",
       "publishedAt": "2026-10-15T17:27:34.000Z",
       "url": "https://x.com/AnthropicAI/status/2110784662071398807",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "openai-simons-math-5m-2026-10-15",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "OpenAI：向 Simons Foundation 数学倡议捐助 500 万美元",
-      "fact": "@OpenAI：捐助 500 万美元支持数学家理解并扩展 AI 相关结果。",
-      "whyItMatters": "科研生态投入；非产品收入。",
-      "counterCase": "捐赠不改变近季财务。",
-      "affected": [
-        "OpenAI 科研声誉"
-      ],
-      "author": "OpenAI",
-      "publishedAt": "2026-10-15T14:35:29.000Z",
-      "url": "https://x.com/OpenAI/status/2110741355739963884",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-fellowships-open-2026-10-15",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic：STEM 与概念推理 Fellowship 开放申请",
-      "fact": "@AnthropicAI：STEM Fellows 与 Conceptual Reasoning Fellows 开放申请，2027 年 1 月起在 Anthropic 工作四个月。",
-      "whyItMatters": "人才与研究管线；非收入事件。",
-      "counterCase": "招聘项目不改近季财务。",
-      "affected": [
-        "Anthropic 研究人才"
-      ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-15T13:14:22.000Z",
-      "url": "https://x.com/AnthropicAI/status/2110720940665372825",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-growth-slowdown-ai-2026-10-15",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "快讯：Anthropic 增速放缓叙事加重 AI 股抛售",
-      "fact": "DeItaone：称 Anthropic 季度营收增约 45% 至 168 亿美元，较此前三位数增长放缓，加深 AI 股抛售。",
-      "whyItMatters": "增长斜率与估值博弈。",
-      "counterCase": "若下季重回加速，叙事失效。",
-      "affected": [
-        "AI 成长股"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-15T09:53:51.000Z",
-      "url": "https://x.com/DeItaone/status/2110670480411697608",
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
