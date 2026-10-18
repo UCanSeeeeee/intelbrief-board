@@ -80,6 +80,7 @@ npm run check
 sources/x-sources.json       人工维护的来源身份、类别与信任等级
 data/raw/x-posts.json        原始 X 帖归档（按 status ID 去重）
 data/x-intelligence.json     面向页面的评分结果
+scripts/collection-progress.js 逐对象严格增量进度与可靠落盘后的接续
 scripts/fetch-x.js           历史X API实现，已停用
 scripts/import-x.js          Grok Bot / 人工导入
 scripts/build-intelligence.js 可信度计算

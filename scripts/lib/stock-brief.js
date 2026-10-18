@@ -21,7 +21,8 @@ function slotAt(now = new Date()) {
   const day = beijingDay(now);
   const times = [-1, 0, 1].flatMap(offset => {
     const date = new Date(Date.parse(day + 'T00:00:00Z') + offset * 86400000).toISOString().slice(0, 10);
-    return config.slots.map(slot => ({ id: `${date}-${slot.replace(':', '')}`, scheduledFor: `${date}T${slot}:00+08:00` }));
+    const weekend=[0,6].includes(new Date(date+'T12:00:00Z').getUTCDay());
+    return (weekend?(config.weekendSlots||['08:00']):config.slots).map(slot => ({ id: `${date}-${slot.replace(':', '')}`, scheduledFor: `${date}T${slot}:00+08:00` }));
   }).sort((a, b) => Date.parse(a.scheduledFor) - Date.parse(b.scheduledFor));
   return {
     previous: times.filter(t => Date.parse(t.scheduledFor) <= new Date(now).getTime()).at(-1),
@@ -50,6 +51,8 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
   requireValue(nonempty(brief.marketContext), '需要交易时段/休市说明');
   const start = timestamp(brief.windowStart, 'windowStart');
   requireValue(start < cutoff, '检索窗口必须早于信息截止');
+  const incremental=brief.collectionMode==='incremental-v1';
+  if(incremental)requireValue(Array.isArray(brief.collectionUnits)&&brief.collectionUnits.length>0,'增量简报缺少对象窗口');
   requireValue(nonempty(brief.coverage?.method) && Array.isArray(brief.coverage?.queries) && Array.isArray(brief.coverage?.gaps), '需要采集方式、查询范围及覆盖缺口');
   requireValue(brief.coverage.queries.every(nonempty) && brief.coverage.gaps.every(nonempty), '查询与缺口必须为文字');
   if (brief.status !== 'failed') requireValue(brief.coverage.queries.length > 0, '有结果的期次需要保留实际查询');
@@ -81,6 +84,8 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
       requireValue(['新增', '进展', '延续'].includes(event.change), '事件变化标记无效');
       if (event.change === '延续') requireValue(nonempty(event.continuationReason), '延续事件需要说明当前仍有影响的原因');
       const normalizedKey = event.eventKey.trim().toLowerCase();
+      const unit=incremental?brief.collectionUnits.find(u=>u.id===event.collectionUnit):null;
+      if(incremental)requireValue(unit&&unit.page==='news'&&unit.needsQuery,'增量事件须关联真实采集对象');
       const normalizedTitle = event.title.replace(/\s/g, '').toLowerCase();
       requireValue(!eventKeys.has(normalizedKey) && !titles.has(normalizedTitle), '两组事件不可重复');
       eventKeys.add(normalizedKey); titles.add(normalizedTitle);
@@ -99,6 +104,7 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
         evidenceIds.add(source.postId);
         const posted = timestamp(source.publishedAt, 'publishedAt');
         requireValue(posted <= cutoff, '截止时间之后的帖子不能写入本期');
+        if(incremental&&event.change!=='延续'&&!event.contextSourceNote)requireValue(posted>=Date.parse(unit.start)&&posted<Date.parse(unit.end),'新增原帖不属于该对象严格增量区间');
         requireValue(timestamp(source.checkedAt, 'checkedAt') <= new Date(now).getTime(), '核验时间不可在未来');
         requireValue(Date.parse(source.checkedAt) >= posted, '核验时间不可早于帖子');
         requireValue(nonempty(source.excerpt), '需要与事实相关的原文短摘录');
@@ -117,6 +123,7 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
         scores.push(result.overall);
       }
       if (event.change !== '延续') requireValue(event.sources.some(s => Date.parse(s.publishedAt) >= start), '新增/进展事件至少需要一条窗口内原帖');
+      if(incremental&&event.change!=='延续')requireValue(event.sources.some(s=>Date.parse(s.publishedAt)>=Date.parse(unit.start)&&Date.parse(s.publishedAt)<Date.parse(unit.end)),'新增/进展至少需要一条该对象增量内原帖，不能只用背景来源');
       event.credibility = {
         score: Math.min(...scores),
         label: '规则初评，未校准',

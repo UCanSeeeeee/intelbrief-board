@@ -99,7 +99,7 @@ test('partial/failed/legacy coverage never suppresses missing searches',()=>{
   const start='2026-09-05T00:00:00Z',end='2026-09-06T00:00:00Z';
   for(const status of [undefined,'partial','failed'])assert.equal(uncoveredRanges({records:[{page:'news',start,end,status}]},'news',start,end).length,1);
   assert.equal(uncoveredRanges({records:[{page:'news',start,end,status:'complete'}]},'news',start,end).length,0);
-  assert.equal(uncoveredRanges({records:[{page:'news',start,end,status:'complete',trigger:'manual'}]},'news',start,end).length,1);
+  assert.equal(uncoveredRanges({records:[{page:'news',start,end,status:'complete',trigger:'manual'}]},'news',start,end).length,0);
 });
 test('legacy board migration changes retention metadata only, not evidence or collection time',()=>{
   const original=advance(emptyBoard(),brief());delete original.policy;delete original.period;
@@ -133,7 +133,7 @@ test('reading renderer preserves overflow, warns on failed reload, and supports 
   const tick=()=>new Promise(r=>setImmediate(r));await tick();
   assert.equal(element('edition-select').value,'reading');assert.match(element('focus-count').textContent,/精选 5 条 · 另保留 2 条/);assert.equal((element('brief-focus').innerHTML.match(/<article/g)||[]).length,7);
   assert.match(element('reading-context').textContent,/北京时间更新批次/);
-  assert.match(element('edition-select').innerHTML,/最新汇总（跨期保留）/);
+  assert.match(element('edition-select').innerHTML,/当前重点（累计保留）/);
   assert.doesNotMatch(element('reading-context').textContent,/美东交易日|开盘|收盘/);
   failBoard=true;listeners['intelbrief:updated']({detail:{page:'news'}});await tick();assert.match(element('reading-context').textContent,/刷新失败/);assert.match(element('brief-focus').innerHTML,/未删除/);
   element('edition-select').value=b.id;element('edition-select').listeners.change();await tick();assert.match(element('reading-context').textContent,/历史期次快照/);assert.equal((element('brief-focus').innerHTML.match(/<article/g)||[]).length,1);

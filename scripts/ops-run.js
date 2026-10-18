@@ -38,6 +38,10 @@ function usage() {
 
 function main(argv) {
   const { command, flags } = parseArgs(argv);
+  if(command==='step'){
+    console.log(path.relative(ROOT,ops.setStep(ROOT,{period:flags.period,page:flags.page,name:flags.name,status:flags.status,detail:flags.detail})));
+    return;
+  }
   if (!command || command === 'help' || flags.help) {
     console.log(usage());
     return;

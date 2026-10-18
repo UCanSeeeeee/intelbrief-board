@@ -57,15 +57,20 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
   const configured=Array.isArray(config?.tabs)?config.tabs:[];
   requireValue(configured.length>0,`${kind}没有配置顶部Tab`);
   const allowed=new Map(configured.map(tab=>[tab.id,tab]));
+  const incremental=input.collectionMode==='incremental-v1';
+  const unitWindows=new Map((input.collectionUnits||[]).map(u=>[u.object,u]));
+  if(incremental)requireValue(configured.every(t=>unitWindows.has(t.id)),`${kind}缺少逐对象增量窗口`);
   requireValue(Array.isArray(input.tabs)&&Array.isArray(input.items),`${kind}缺少Tab检查结果或事件`);
   const reports=new Map();
   for(const report of input.tabs) {
     requireValue(allowed.has(report.id)&&!reports.has(report.id),`${kind}包含未知或重复Tab`);
     requireValue(['complete','partial','failed'].includes(report.status),`${kind}Tab状态无效`);
     requireValue(typeof report.note==='string'&&report.note.trim(),`${kind}Tab缺少查询范围或缺口说明`);
-    reports.set(report.id,{id:report.id,status:report.status,note:report.note});
+    const oldCutoff=existing?.coverage?.tabs?.find(t=>t.id===report.id)?.cutoff||existing?.cutoff||cutoff;
+    reports.set(report.id,{id:report.id,status:report.status,note:report.note,cutoff:report.status==='failed'?oldCutoff:cutoff});
   }
   requireValue(reports.size===allowed.size,`必须报告每个${kind}Tab的检查结果`);
+  if([...reports.values()].every(r=>r.status==='failed'))return {data:{...existing,status:'failed',coverage:{tabs:[...reports.values()]},lastAttemptAt:now.toISOString(),attemptedCutoff:cutoff},status:'failed',message:`所有${kind}Tab采集失败，保留上次成功内容`,failures:[...reports.values()]};
   const dayMs=86400000;
   const windowDays=tab=>{
     const latest=Number(tab.latestWindowDays);
@@ -80,6 +85,7 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     requireValue(Array.isArray(item.tabIds)&&item.tabIds.length>0&&new Set(item.tabIds).size===item.tabIds.length&&item.tabIds.every(id=>allowed.has(id)&&reports.get(id).status!=='failed'),`${kind}事件包含无效Tab`);
     requireValue(typeof item.url==='string'&&/^https:\/\/(?:x|twitter)\.com\/[a-zA-Z0-9_]{1,15}\/status\/\d+$/.test(item.url)&&!urls.has(item.url),`${kind}缺少真实或唯一X原帖`);urls.add(item.url);
     requireValue(date(item.publishedAt)&&Date.parse(item.publishedAt)<=Date.parse(cutoff)&&Date.parse(item.publishedAt)>=Date.parse(cutoff)-maxWindowDays*dayMs,`${kind}原帖时间超出配置滚动窗口`);
+    if(incremental&&!existing?.items?.some(old=>old.eventKey===item.eventKey&&old.url===item.url)&&!existing?.retainedItems?.some(old=>old.eventKey===item.eventKey&&old.url===item.url))for(const id of item.tabIds){const w=unitWindows.get(id);requireValue(w.needsQuery&&Date.parse(item.publishedAt)>=Date.parse(w.start)&&Date.parse(item.publishedAt)<Date.parse(w.end),`${kind}新增必须属于该对象严格增量窗口；补遗须单独审计`);}
     for(const field of ['title','fact','whyItMatters','counterCase','author']) requireValue(typeof item[field]==='string'&&item[field].trim(),`${kind}缺少${field}`);
     requireValue(item.verification==='collector-report',`${kind}必须标明Grok返回、未独立直读`);
     requireValue(['must-read','watch'].includes(item.tier),`${kind}价值层级无效`);
@@ -97,6 +103,7 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
   // if an old weeklyRanks slot conflicts, remumber into the next free slot up to weeklyLimit.
   const tabsWithIncoming=new Set(items.flatMap(item=>item.tabIds));
   const cutoffMs=Date.parse(cutoff);
+  const tabCutoff=id=>Date.parse(reports.get(id).cutoff);
   const usedRanks=new Map(configured.map(tab=>[tab.id,new Set()]));
   const latestCounts=new Map(configured.map(tab=>[tab.id,0]));
   const nextFreeRank=(tabId,limit)=>{
@@ -125,10 +132,10 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
       const tab=allowed.get(tabId);
       const {latest,weekly}=windowDays(tab);
       const published=Date.parse(old.publishedAt);
-      const inLatest=published>=cutoffMs-latest*dayMs;
+      const inLatest=published>=tabCutoff(tabId)-latest*dayMs;
       const rank=old.weeklyRanks?.[tabId];
       const hasRank=Number.isInteger(rank);
-      const inWeekly=published>=cutoffMs-weekly*dayMs;
+      const inWeekly=published>=tabCutoff(tabId)-weekly*dayMs;
       if(!tabsWithIncoming.has(tabId)) {
         if(hasRank&&inWeekly) {
           const assigned=usedRanks.get(tabId).has(rank)?nextFreeRank(tabId,tab.weeklyLimit):rank;
@@ -141,7 +148,10 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
         }
         continue;
       }
-      if(!(hasRank&&inWeekly)) continue;
+      if(!(hasRank&&inWeekly)) {
+        if(inLatest&&(latestCounts.get(tabId)||0)<tab.latestLimit)keepTabIds.push(tabId);
+        continue;
+      }
       const assigned=usedRanks.get(tabId).has(rank)?nextFreeRank(tabId,tab.weeklyLimit):rank;
       if(assigned==null) continue;
       if(inLatest&&(latestCounts.get(tabId)||0)>=tab.latestLimit) continue;
@@ -158,23 +168,23 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     for(const tabId of keepTabIds) {
       const tab=allowed.get(tabId);
       const {latest}=windowDays(tab);
-      if(Date.parse(retained.publishedAt)>=cutoffMs-latest*dayMs) latestCounts.set(tabId,(latestCounts.get(tabId)||0)+1);
+      if(Date.parse(retained.publishedAt)>=tabCutoff(tabId)-latest*dayMs) latestCounts.set(tabId,(latestCounts.get(tabId)||0)+1);
       if(Number.isInteger(ranks[tabId])) usedRanks.get(tabId).add(ranks[tabId]);
     }
   }
   for(const tab of configured) {
     const {latest,weekly}=windowDays(tab);
     const tabItems=items.filter(item=>item.tabIds.includes(tab.id));
-    requireValue(tabItems.filter(item=>Date.parse(item.publishedAt)>=Date.parse(cutoff)-latest*dayMs).length<=tab.latestLimit,`${tab.label}的近${latest}天条目超过上限`);
+    requireValue(tabItems.filter(item=>Date.parse(item.publishedAt)>=tabCutoff(tab.id)-latest*dayMs).length<=tab.latestLimit,`${tab.label}的近${latest}天条目超过上限`);
     for(const item of tabItems) {
       const hasRank=item.weeklyRanks[tab.id]!=null;
-      const inWeekly=Date.parse(item.publishedAt)>=Date.parse(cutoff)-weekly*dayMs;
-      const inLatest=Date.parse(item.publishedAt)>=Date.parse(cutoff)-latest*dayMs;
+      const inWeekly=Date.parse(item.publishedAt)>=tabCutoff(tab.id)-weekly*dayMs;
+      const inLatest=Date.parse(item.publishedAt)>=tabCutoff(tab.id)-latest*dayMs;
       requireValue(inLatest||(hasRank&&inWeekly),`${tab.label}含有超出该Tab窗口的条目`);
     }
-    if(config.selectionPolicy){const errs=checkTabSelection(tab,config.selectionPolicy,tabItems.filter(item=>Date.parse(item.publishedAt)>=Date.parse(cutoff)-latest*dayMs));requireValue(!errs.length,errs.join('；'));}
+    if(config.selectionPolicy){const errs=checkTabSelection(tab,config.selectionPolicy,tabItems.filter(item=>Date.parse(item.publishedAt)>=tabCutoff(tab.id)-latest*dayMs));requireValue(!errs.length,errs.join('；'));}
     const ranked=tabItems.filter(item=>item.weeklyRanks[tab.id]!=null);
-    requireValue(ranked.every(item=>Date.parse(item.publishedAt)>=Date.parse(cutoff)-weekly*dayMs),`${tab.label}的重点榜超出窗口`);
+    requireValue(ranked.every(item=>Date.parse(item.publishedAt)>=tabCutoff(tab.id)-weekly*dayMs),`${tab.label}的重点榜超出窗口`);
     requireValue(ranked.length<=tab.weeklyLimit&&new Set(ranked.map(item=>item.weeklyRanks[tab.id])).size===ranked.length,`${tab.label}的重点榜超过上限或排名重复`);
   }
   const failures=[...reports.values()].filter(report=>report.status!=='complete');
@@ -182,7 +192,10 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
   const stableItems=items.sort((a,b)=>Date.parse(b.publishedAt)-Date.parse(a.publishedAt));
   const same=JSON.stringify(stableItems)===JSON.stringify(existing?.items||[]);
   const status=allFailed?'failed':failures.length?'partial':same?'unchanged':'complete';
-  const data={schemaVersion:1,updatedAt:now.toISOString(),cutoff,source:'X only',status,coverage:{tabs:[...reports.values()]},items:stableItems};
+  // Display overflow is not a new search window and must not erase a morning rule item.
+  const retainedItems=[...(existing?.items||[]),...(existing?.retainedItems||[])].filter(old=>!keys.has(old.eventKey)&&!urls.has(old.url)&&old.selection!=='engagement').map(old=>({...old,weeklyRanks:{},tabIds:(old.tabIds||[]).filter(id=>allowed.has(id)&&Date.parse(old.publishedAt)>=tabCutoff(id)-windowDays(allowed.get(id)).latest*dayMs)})).filter(old=>old.tabIds.length);
+  const uniqueRetained=[...new Map(retainedItems.map(i=>[i.eventKey,i])).values()];
+  const data={schemaVersion:1,updatedAt:now.toISOString(),cutoff,source:'X only',status,coverage:{tabs:[...reports.values()]},items:stableItems,retainedItems:uniqueRetained};
   const message=status==='failed'?`所有${kind}Tab采集失败`:`${items.length} 件入选事件${failures.length?`；${failures.length} 个Tab未完整检查`:'；全部Tab已完整检查'}`;
   return {data,status,message,failures};
 }

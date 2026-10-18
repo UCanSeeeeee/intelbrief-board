@@ -1,10 +1,10 @@
 # CONTEXT.md — 接手说明
 
-最后更新：2026-10-16（Asia/Shanghai）
+最后更新：2026-10-18（Asia/Shanghai）
 
 ## 产品与边界
 
-首次接手读 [AGENTS.md](AGENTS.md) → 本文 → [TASKS.md](TASKS.md)，再按任务加载专题。支持的入口和平台限制见 [Agent 入口](docs/AGENT_ENTRY.md)。重要规则主动入库；每次修改前拉取，验证后自动提交推送，具体 Git 强规则只在 AGENTS.md 维护。
+首次接手读 [AGENTS.md](AGENTS.md) → 本文 → [TASKS.md](TASKS.md)，再按任务加载专题。支持入口见[Agent入口](docs/AGENT_ENTRY.md)。修改前拉取，完成直接提交推送，不默认运行本地测试、check、build或预览。
 
 `intelbrief-board` 的讯息是 X-only；财报和宏观日历沿用 AGENTS.md 中已授权的官方来源例外。系统保存证据并做可解释的可信度自动初评。
 
@@ -37,7 +37,9 @@ GitHub：`UCanSeeeeee/intelbrief-board`（public；公开只读与 Fork，不等
 
 ## 关键文件
 
-- `docs/TRADING_DAY_READING.md`：北京时间批次/周末保留的唯一专题入口（历史文件名沿用）；周一08:00起收录周六00:00以来消息，不按美国开收盘或节假日推迟展示。`scripts/lib/reading-period.js`计算周期，`data/reading-board.json`独立于三期简报保留有效事件。采集前运行`npm run brief:context`。旧交易所日历仍留存供历史追溯，不再驱动讯息展示。
+- `docs/INCREMENTAL_COLLECTION.md`：当前内容运营入口；严格逐对象增量、手动/定时共用进度、工作日三次/周末08:00一次、累计阅读及恢复。`data/collection-progress.json`为进度真源，`collection:progress`用于计划及可靠落盘后的推进。
+
+- `docs/TRADING_DAY_READING.md`：阅读保留专题；周一汇总周末存量，不重搜整个周末。`reading-period.js`计算周期，`reading-board.json`独立保存卡片；`brief:context`同时输出展示窗和逐对象增量窗，不能混用。
 
 - `docs/DESIGN_SYSTEM.md` / `styles.css`：前台页面共用的阅读优先布局，所有阅读内容默认展开，卡片不展示反向条件；数量为上限而非任务完成率。历史证据与内部核验不因UI改变。
 - `calendar-time.js`：宏观美东时刻换算北京时间（含夏令时）与财报披露状态展示；测试见 `test/calendar-time.test.js`。

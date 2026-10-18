@@ -56,7 +56,7 @@ function advance(previous,brief) {
       if(old&&material)record.history.push({edition:record.lastEdition,event:record.event,changedAt:brief.generatedAt});
       record.group=group;record.event=structuredClone(event);record.rank=rank;record.lastEdition=brief.id;record.lastCheckedAt=brief.generatedAt;
       // Repeated old commentary cannot perpetually renew retention. A new substantiated fact can.
-      if(!old||material) {record.state='active';record.retentionAnchor=brief.generatedAt;record.readingDate=ctx.date;record.retainUntil=ctx.retainUntil;}
+      if(!old||material) {record.state='active';record.retentionAnchor=brief.generatedAt;record.readingDate=ctx.date;record.retainUntil=ctx.retainUntil;record.lastMaterialAt=brief.generatedAt;record.lastMaterialEdition=brief.id;}
       record.lateDiscovery=Date.parse(event.sources[0].publishedAt)<cutoff-86400000;
       items.set(id,record);
     }
@@ -73,7 +73,7 @@ function advance(previous,brief) {
     }
   } else out.warnings.push('本期采集失败，保留上次待阅内容；不是本期新增或已重新核验。');
   out.events=[...items.values()];
-  out.applied.push(signature);out.asOf=brief.scheduledFor;out.updatedAt=brief.generatedAt;out.period=context(brief.scheduledFor);out.lastStatus=brief.status;
+  out.applied.push(signature);out.asOf=brief.scheduledFor;out.updatedAt=brief.generatedAt;out.period=context(brief.scheduledFor);out.lastStatus=brief.status;out.latestEditionId=brief.id;
   out.selected={};
   for(const [group,limit]of [['focus',5],['insights',10]]) {
     const active=out.events.filter(e=>e.state==='active'&&e.group===group);

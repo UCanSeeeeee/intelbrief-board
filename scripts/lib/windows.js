@@ -26,17 +26,11 @@ function displayWindow(cutoff) {
   const window=readingWindow(cutoff);
   return {displayWindowStart:beijingIso(window.start),displayWindowEnd:beijingIso(window.end)};
 }
-// Search covers Beijing reading batches and up to fourteen days of missed runs.
+// Display duration never widens collection. Per-object checkpoints own the search cursor.
 function windowStart(editions,job) {
-  // Manual editions never move the scheduled collection cursor.
   const cutoff=Date.parse(job.cutoff);
-  const candidates=editions.filter(e=>e.status!=='failed' && Date.parse(e.scheduledFor)<cutoff && (job.trigger_type!=='scheduled'||e.trigger!=='manual'));
-  const previous=candidates.sort((a,b)=>Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor))[0];
-  // The display/closed-market interval must not disappear merely because a brief
-  // was partial. Only explicit successful coverage records may skip a query range.
-  let start=Date.parse(displayWindow(job.cutoff).displayWindowStart);
-  if(previous) start=Math.min(start,Math.max(Date.parse(previous.scheduledFor),cutoff-14*DAY));
-  return new Date(start).toISOString();
+  const pending=(job.collectionUnits||[]).filter(unit=>unit.needsQuery);
+  return new Date(pending.length?Math.min(...pending.map(unit=>Date.parse(unit.start))):job.collectionUnits?cutoff:cutoff-DAY).toISOString();
 }
 // Preserve still-relevant cards from earlier editions inside the current display window.
 function carriedOver(root,editions,job,start,input) {
@@ -74,7 +68,7 @@ function recordCoverage(coverage,record,keepDays=14,now=Date.now()) {
 function uncoveredRanges(coverage,page,start,end) {
   let gaps=[[Date.parse(start),Date.parse(end)]];
   // Legacy records without an explicit success marker do not prove coverage.
-  for(const r of coverage.records.filter(r=>r.page===page&&r.status==='complete'&&r.trigger!=='manual')) {
+  for(const r of coverage.records.filter(r=>r.page===page&&r.status==='complete')) {
     const a=Date.parse(r.start),b=Date.parse(r.end);
     gaps=gaps.flatMap(([s,e])=>b<=s||a>=e?[[s,e]]:[[s,Math.max(s,a)],[Math.min(e,b),e]].filter(([x,y])=>y>x));
   }

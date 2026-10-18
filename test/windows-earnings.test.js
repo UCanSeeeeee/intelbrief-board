@@ -33,12 +33,12 @@ test('all Monday batches include the full weekend, including US market holidays'
   assert.equal(w.displayWindow('2026-10-12T01:00:00Z').displayWindowStart,'2026-10-10T00:00:00+08:00');
 });
 
-test('search window covers the reading interval; only successful coverage skips queries',()=>{
+test('search window is independent of display duration and uses explicit per-object progress',()=>{
   const editions=[{scheduledFor:'2026-10-12T21:00:00+08:00',trigger:'scheduled',status:'complete'}];
-  assert.equal(w.windowStart(editions,{cutoff:'2026-10-13T09:00:00+08:00',trigger_type:'scheduled'}),'2026-10-12T01:00:00.000Z');
+  assert.equal(w.windowStart(editions,{cutoff:'2026-10-13T09:00:00+08:00',collectionUnits:[{needsQuery:true,start:'2026-10-12T21:00:00+08:00'}]}),'2026-10-12T13:00:00.000Z');
   // Monday with a Sunday 21:00 edition still covers Sat/Sun.
   const mon=[{scheduledFor:'2026-10-11T21:00:00+08:00',trigger:'scheduled',status:'complete'}];
-  assert.equal(w.windowStart(mon,{cutoff:'2026-10-12T09:00:00+08:00',trigger_type:'scheduled'}),'2026-10-09T16:00:00.000Z');
+  assert.equal(w.windowStart(mon,{cutoff:'2026-10-12T09:00:00+08:00',collectionUnits:[{needsQuery:true,start:'2026-10-11T21:00:00+08:00'}]}),'2026-10-11T13:00:00.000Z');
   // No prior edition, non-Monday: 24h.
   assert.equal(w.windowStart([],{cutoff:'2026-10-14T09:00:00+08:00',trigger_type:'scheduled'}),'2026-10-13T01:00:00.000Z');
 });

@@ -48,7 +48,7 @@ function main(args) {
   console.log('先读以下入口，再按本次授权推进：\n' + result.files.map(f => '- ' + f).join('\n'));
   console.log(`分支：${git('branch','--show-current')}；提交：${git('rev-parse','--short','HEAD')}`);
   console.log('工作区：\n' + (git('status','--short') || '干净'));
-  console.log('本命令未联网、未修改。写入前仍须核对远端并 git pull --ff-only origin master；完成后测试、校验、构建、明确暂存、提交推送和必要的线上核验。');
+  console.log('本命令未联网、未修改。写入前仍须核对远端并 git pull --ff-only origin master；完成后审查差异、明确暂存提交推送并核对线上；不默认运行本地测试/check/build/预览。');
   console.log('\n' + fs.readFileSync(path.join(ROOT,'TASKS.md'),'utf8'));
 }
 if (require.main === module) {

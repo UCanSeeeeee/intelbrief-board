@@ -177,6 +177,23 @@ function setStage(root, { period, name, status, detail = null } = {}) {
   return writeRun(root, run);
 }
 
+// Fine-grained elapsed wall time; never infer model/tool time from these spans.
+function setStep(root,{period,page,name,status,detail=null}={}){
+  if(!['news','people','tickers','ai','learning','macro','earnings'].includes(page)||!['batch','discovery','source-verification','counter-evidence'].includes(name)||!['running','ok','failed','skipped'].includes(status))throw new Error('采集计时参数无效');
+  const run=requireRun(root,period),now=shanghaiIso();
+  run.timings=run.timings||[];
+  let step=[...run.timings].reverse().find(s=>s.page===page&&s.name===name&&s.status==='running');
+  if(status==='running'){
+    if(step)throw new Error('该步骤已开始，不能重复重置计时');
+    run.timings.push({page,name,status,startedAt:now,endedAt:null,durationMs:null,detail:scrub(detail)});
+  }else{
+    if(!step&&status!=='skipped')throw new Error('没有步骤起点，不能伪造耗时');
+    if(!step){step={page,name,startedAt:null};run.timings.push(step);}
+    Object.assign(step,{status,endedAt:now,durationMs:step.startedAt?Date.parse(now)-Date.parse(step.startedAt):0,detail:scrub(detail)});
+  }
+  return writeRun(root,run);
+}
+
 function setPage(root, { period, page, status, detail = null } = {}) {
   if (!PAGE_IDS.includes(page)) throw new Error(`page 无效：${PAGE_IDS.join('|')}`);
   if (!PAGE_STATUS.includes(status)) throw new Error(`page status 无效：${PAGE_STATUS.join('|')}`);
@@ -255,6 +272,7 @@ module.exports = {
   writeRun,
   start,
   setStage,
+  setStep,
   setPage,
   fail,
   finish,

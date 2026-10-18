@@ -108,7 +108,7 @@
         <span>收录 ${sectionItems.length} 条${kind === 'latest' && sectionItems.some(item => item.selection === 'engagement') ? `（高价值 ${sectionItems.filter(item => item.selection !== 'engagement').length} · 热度动态 ${sectionItems.filter(item => item.selection === 'engagement').length}）` : ''} · 上限 ${kind === 'latest' ? tab.latestLimit : tab.weeklyLimit} 条</span>
       </header>
       ${duplicateCount ? `<p class="signal-dedup">重点榜中有 ${duplicateCount} 件已在新增价值区完整展示，这里不重复铺卡。</p>` : ''}
-      <div class="signal-list">${visible.length ? visible.map(item => renderCard(item, kind === 'weekly' && parseTime(item.publishedAt) >= Date.now() - windowMs(tab, 'latest') ? `${windowDays(tab,'latest')===1?'24h':'近窗'}新增` : '')).join('') : (duplicateCount ? '' : emptySection(kind, tab))}</div>
+      <div class="signal-list">${visible.length ? visible.map(item => renderCard(item, kind === 'weekly' && parseTime(item.publishedAt) >= (displayCutoff || Date.now()) - windowMs(tab, 'latest') ? `${windowDays(tab,'latest')===1?'24h':'近窗'}新增` : '')).join('') : (duplicateCount ? '' : emptySection(kind, tab))}</div>
     </section>`;
   }
 
@@ -120,7 +120,7 @@
       button.tabIndex = isActive ? 0 : -1;
     });
 
-    const now = Date.now();
+    const now = tabCutoffs[tab.id] || displayCutoff || Date.now();
     const tabItems = intelligenceItems.filter(item => Array.isArray(item.tabIds) && item.tabIds.includes(tab.id));
     const sorted = [...tabItems].sort((a, b) => parseTime(b.publishedAt) - parseTime(a.publishedAt));
     const latestDays = windowDays(tab, 'latest');
@@ -130,6 +130,9 @@
     const weekly = sorted.filter(item => parseTime(item.publishedAt) >= now - windowMs(tab, 'weekly') && rankFor(item) != null)
       .sort((a, b) => Number(rankFor(a)) - Number(rankFor(b))).slice(0, tab.weeklyLimit);
     const latestKeys = new Set(latest.map(itemKey));
+    const shown = new Set([...latest,...weekly].map(itemKey));
+    const retained = [...tabItems,...retainedItems.filter(i=>i.tabIds?.includes(tab.id))].filter(i=>!shown.has(itemKey(i))&&parseTime(i.publishedAt)>=now-windowMs(tab,'latest'));
+    const retainedHtml=retained.length?'<section class=\"signal-section\"><header class=\"signal-section-head\"><h3>其余仍有效的累计信息</h3><span>早报内容不会因新批次被名额挤掉</span></header><div class=\"signal-list\">'+[...new Map(retained.map(i=>[itemKey(i),i])).values()].map(i=>renderCard(i,'累计保留')).join('')+'</div></section>':'';
     const handles = Array.isArray(tab.handles) && tab.handles.length ? tab.handles : (tab.handle ? [tab.handle] : []);
     const account = handles.length
       ? handles.map(h => `<a href="https://x.com/${escape(h)}" target="_blank" rel="noopener noreferrer">@${escape(h)} ↗</a>`).join(' · ')
@@ -146,7 +149,7 @@
       <p><strong>补位规则</strong>先收高价值条目；不足 ${escape(tab.latestLimit)} 条时用本 Tab 来源互动最高的帖子补足，标为「热度动态」；无高价值条目时只收热度最高 3 条。热度动态不进入重点榜。</p>
     </div></details>
     ${section(`${windowLabel(latestDays)}新增价值`, `最多 ${tab.latestLimit} 条`, latest, 'latest', tab, latestKeys)}
-    ${section(`${windowLabel(weeklyDays)}最重要五件事`, `${windowLabel(weeklyDays)} · 最多 ${tab.weeklyLimit} 件`, weekly, 'weekly', tab, latestKeys)}`;
+    ${section(`${windowLabel(weeklyDays)}最重要五件事`, `${windowLabel(weeklyDays)} · 最多 ${tab.weeklyLimit} 件`, weekly, 'weekly', tab, latestKeys)}${retainedHtml}`;
 
     const url = new URL(location.href);
     url.searchParams.delete('person');
@@ -156,6 +159,9 @@
 
   let tabs = [];
   let items = [];
+  let retainedItems = [];
+  let displayCutoff = 0;
+  let tabCutoffs = {};
   let active;
 
   function activate(tab, focus) {
@@ -183,6 +189,9 @@
       .then(([config, intelligence]) => {
         tabs = Array.isArray(config.tabs) ? config.tabs : [];
         items = Array.isArray(intelligence.items) ? intelligence.items : [];
+        retainedItems = Array.isArray(intelligence.retainedItems) ? intelligence.retainedItems : [];
+        displayCutoff = parseTime(intelligence.cutoff) || parseTime(intelligence.updatedAt);
+        tabCutoffs = Object.fromEntries((intelligence.coverage?.tabs||[]).map(t=>[t.id,parseTime(t.cutoff)]));
         state.textContent = `${tabs.length} 个顶部 Tab · ${items.length} 件已入选事件`;
         selector.innerHTML = tabs.map(tab => `<button type="button" role="tab" id="tab-${escape(tab.id)}" aria-controls="person-detail" aria-selected="false" tabindex="-1" data-tab="${escape(tab.id)}"><strong>${escape(tab.shortLabel || tab.label)}</strong></button>`).join('');
         if (!tabs.length) {

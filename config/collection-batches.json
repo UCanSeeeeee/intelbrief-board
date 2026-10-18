@@ -2,13 +2,14 @@
   "schemaVersion": 1,
   "timezone": "Asia/Shanghai",
   "slots": ["08:00", "15:00", "20:30"],
+  "weekendSlots": ["08:00"],
   "sourcePriority": ["grok-web", "grok-bot"],
   "batches": [
     {"id":"news","sidebarTab":"美股讯息","task":"news","schedule":"every-slot","mode":"x-research","subtasks":["discovery","source-verification","counter-evidence"],"contract":"docs/STOCK_BRIEF.md"},
     {"id":"people","sidebarTab":"具体人物","task":"people","schedule":"every-slot","mode":"x-research","subtasks":["discovery","source-verification","counter-evidence"],"contract":"docs/PEOPLE_INTELLIGENCE_ROADMAP.md"},
     {"id":"tickers","sidebarTab":"具体个股","task":"tickers","schedule":"every-slot","mode":"x-research","subtasks":["discovery","source-verification","counter-evidence"],"contract":"docs/TICKER_INTELLIGENCE.md"},
     {"id":"ai","sidebarTab":"AI板块","task":"ai","schedule":"every-slot","mode":"x-research","subtasks":["discovery","source-verification","counter-evidence"],"contract":"docs/AI_INTELLIGENCE.md"},
-    {"id":"learning","sidebarTab":"每日学习","task":"learning","schedule":"20:30-only","mode":"derive-from-accepted-evidence","contract":"docs/DAILY_LEARNING.md"},
+    {"id":"learning","sidebarTab":"每日学习","task":"learning","schedule":"daily-final","mode":"derive-from-accepted-evidence","contract":"docs/DAILY_LEARNING.md"},
     {"id":"macro","sidebarTab":"宏观大事","task":"macro","schedule":"due-or-stale","mode":"official-calendar","contract":"docs/MACRO_EVENTS.md"},
     {"id":"earnings","sidebarTab":"财报日历","task":"earnings","schedule":"every-slot","mode":"official-calendar","contract":"docs/EARNINGS_CALENDAR.md"}
   ]

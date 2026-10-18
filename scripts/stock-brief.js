@@ -12,8 +12,9 @@ try {
     const {windowStart,readCoverage,uncoveredRanges}=require('./lib/windows');
     const cutoff=inputFile||slotAt().previous.scheduledFor;
     const editions=readJson(path.join(ROOT,'data/stock-briefs/index.json')).editions;
-    const searchWindowStart=windowStart(editions,{cutoff,trigger_type:'scheduled'});
-    console.log(JSON.stringify({cutoff,...readingWindow(cutoff),searchWindowStart,uncovered:uncoveredRanges(readCoverage(ROOT),'news',searchWindowStart,cutoff),readingBoard:readBoard(ROOT)},null,2));
+    const collectionUnits=require('./lib/collection-progress').plan(ROOT,cutoff,'news');
+    const searchWindowStart=windowStart(editions,{cutoff,collectionUnits});
+    console.log(JSON.stringify({cutoff,...readingWindow(cutoff),searchWindowStart,collectionUnits,uncovered:collectionUnits.filter(u=>u.needsQuery).map(u=>({unit:u.id,start:u.start,end:u.end})),readingBoard:readBoard(ROOT)},null,2));
   }
   else if (['validate', 'publish'].includes(command) && inputFile) {
     const brief = prepareBrief(readJson(inputFile), { sources: sourceIndex() });

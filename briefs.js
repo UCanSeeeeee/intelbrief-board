@@ -18,14 +18,14 @@
     if (!Array.isArray(list) || !list.length) return '';
     return `<p class="card-people"><strong>相关人物</strong>${list.map(p => `<span class="person-chip"><span class="person-chip-name">${escape(p.name)}</span><span class="person-chip-intro">${escape(p.intro)}</span></span>`).join('')}</p>`;
   }
-  function card(event, index) {
+  function card(event, index, changeLabel) {
     const knowledge = event.knowledgeApplication ? `<div class="brief-knowledge"><strong>${escape(event.disciplines.join(' × '))}</strong><p>${escape(event.knowledgeApplication)}</p><small>知识卡：${escape(event.knowledgeCards.join('、'))} · 条件性参考，不是事实证明</small></div>` : '';
     const primary = event.sources[0] || {};
     const primaryUrl = originalUrl(primary);
     const eventTime = event.eventTime ? time(event.eventTime) : event.eventTimeNote;
     return `<article class="x-card brief-card">
       <div class="brief-author"><span>作者</span><strong>@${escape(primary.username || '未查明')}</strong></div>
-      <div class="brief-card-top"><span class="brief-rank">${String(index+1).padStart(2,'0')}</span><h3>${escape(event.title)}</h3><span class="badge">${escape(event.change)}</span></div>
+      <div class="brief-card-top"><span class="brief-rank">${String(index+1).padStart(2,'0')}</span><h3>${escape(event.title)}</h3><span class="badge">${escape(changeLabel||event.change)}</span></div>
       ${peopleNote(event.people)}
       <p class="signal-verification">${primary.verification === 'direct' ? '已直读原帖' : '待独立核验'} · 发布 ${escape(time(primary.publishedAt))}（北京时间）</p>
       <div class="topic-row"><span>${escape(event.direction)}</span><span>${escape(event.horizon)}</span>${event.affected.map(v=>`<span>${escape(v)}</span>`).join('')}</div>
@@ -38,16 +38,28 @@
     </article>`;
   }
   let manifest, config, readingBoard, generation = 0;
+  function changeLabel(item) {
+    const latest=readingBoard.latestEditionId||readingBoard.applied?.at(-1)?.split(':')[0];
+    if(item.review&&item.review.action!=='keep'&&item.state!=='active')return '更正／状态变化';
+    if(item.lateDiscovery&&item.firstEdition===latest)return '补充发现（原始时间不变）';
+    if(item.firstEdition===latest)return '本轮新增';
+    if(item.lastMaterialEdition===latest||item.history?.some(h=>h.event&&h.changedAt===readingBoard.updatedAt))return '本轮有进展';
+    return '累计保留';
+  }
   function readingCard(item,index) {
     const note=`首次收录 ${time(item.firstSeenAt)} · 最近核验 ${time(item.lastCheckedAt)} · ${item.retainUntil?'保留至 '+time(item.retainUntil)+'（北京时间）':'待复核，暂不自动移除'}${item.lateDiscovery?' · 延迟发现／早期消息，非刚刚发生':''}`;
-    return `<div><p class="brief-small">${escape(note)}</p>${card(item.event,index)}</div>`;
+    const history=(item.history||[]).filter(h=>h.event||h.decision);
+    const timeline=history.length?`<details open class="brief-evidence"><summary>事件进展时间线（保留此前版本）</summary>${history.map(h=>h.event?`<p><strong>${escape(time(h.changedAt))} 更新前版本</strong> ${escape(h.event.fact)}</p>`:`<p>${escape(time(h.decision.checkedAt))} · ${escape(h.decision.reason)}</p>`).join('')}</details>`:'';
+    return `<div><p class="brief-small">${escape(note)}</p>${card(item.event,index,changeLabel(item))}${timeline}</div>`;
   }
   function showReading() {
     generation++;
     const board=readingBoard;
     const ctx=board.period||{};
     const stale=ctx.retainUntil&&Date.now()>=Date.parse(ctx.retainUntil);
-    if($('reading-context'))$('reading-context').textContent=`最新汇总 · 信息截止 ${time(board.asOf)}（北京时间） · 按北京时间更新批次整理${stale?' · 已到下一阅读批次，等待更新；保留上次内容':''}。${(board.warnings||[]).join(' ')}`;
+    const active=board.events.filter(e=>e.state==='active');
+    const added=active.filter(e=>changeLabel(e)==='本轮新增').length,changed=active.filter(e=>changeLabel(e)==='本轮有进展').length;
+    if($('reading-context'))$('reading-context').textContent=`当前重点 · 信息截止 ${time(board.asOf)}（北京时间） · 本轮新增 ${added} 条／有进展 ${changed} 条 · 按北京时间更新批次累计保留；展示过不等于你已读${stale?' · 等待下一批次，仍保留上次内容':''}。${(board.warnings||[]).join(' ')}`;
     for(const group of ['focus','insights']) {
       const all=board.events.filter(e=>e.state==='active'&&e.group===group);
       const ids=new Set((board.selected?.[group]||[]).map(String));
@@ -57,7 +69,7 @@
       $('brief-'+group).innerHTML=(selected.map(readingCard).join('')||empty('本次暂无精选条目'))+(more.length?`<details open class="analysis-details"><summary>其余仍有效的待阅信息（${more.length}条，未删除）</summary>${more.map(readingCard).join('')}</details>`:'');
     }
     const reviewed=board.events.filter(e=>e.review&&e.state!=='active'&&e.state!=='served');
-    $('brief-audit').innerHTML=`<details open class="brief-evidence"><summary>保留规则与事件复核记录</summary><p>周末重要消息从北京时间周一08:00批次起汇总展示，并在周一后续批次保留，不等待美国开盘。简报期次与待阅池独立保存；首次收录、原帖时间与最近核验分开。同一事件合并，不把延续消息冒充新增。</p><p>未提供跨期重排时沿用最近收录顺序，不声称这是全网重要性排名。更新失败不会清空上一批待阅内容；后续批次接替后的状态为“已展示过对应阅读日”，不代表你已阅读。</p>${reviewed.map(e=>`<p>${escape(e.event.title)}：${escape(({retracted:'已撤回／证伪',superseded:'已被后续信息取代',resolved:'已失效'})[e.state])} · ${escape(e.review.reason)} · ${escape(time(e.review.checkedAt))}</p>`).join('')}</details>`;
+    $('brief-audit').innerHTML=`<details open class="brief-evidence"><summary>累计保留与更正记录</summary><p>采集只查增量，页面保留累计有效重点。早报内容不会因午报、晚报发布而消失；一天只看一次也能读到完整重点。周末每天整理一次，周一汇总已入库周末内容，不重新宽搜整个周末。没有新进展不冒充新增；已展示不等于你已阅读。</p><p>没有提供跨期重排时沿用既有顺序，不声称全网重要性排名。更新失败保留上一批内容。</p>${reviewed.map((e,i)=>`<section><p><strong>${escape(({retracted:'已撤回／证伪',superseded:'已被后续信息取代',resolved:'已失效'})[e.state])}</strong> · ${escape(e.review.reason)} · ${escape(time(e.review.checkedAt))} ${/^https:\/\/(?:x|twitter)\.com\/\w+\/status\/\d+$/.test(e.review.sourceUrl||'')?`<a href="${escape(e.review.sourceUrl)}" target="_blank" rel="noopener noreferrer">更正依据 ↗</a>`:''}</p>${readingCard(e,i)}</section>`).join('')}</details>`;
   }
   async function show(entry, preserve=false) {
     if(entry?.id==='reading'){showReading();return;}
@@ -103,7 +115,7 @@
       $('brief-insights').innerHTML=empty('等待十条多学科洞察');
       return;
     }
-    $('edition-select').innerHTML=(readingBoard?'<option value="reading">最新汇总（跨期保留）</option>':'')+editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status]||e.status)} · 收录 ${escape(e.counts.total)} 条</option>`).join('');
+    $('edition-select').innerHTML=(readingBoard?'<option value="reading">当前重点（累计保留）</option>':'')+editions.map(e=>`<option value="${escape(e.id)}">${escape(time(e.scheduledFor))} · ${e.trigger==='manual'?'手动':'定时'} · ${escape(status[e.status]||e.status)} · 收录 ${escape(e.counts.total)} 条</option>`).join('');
     $('edition-select').disabled=false;
     const entry=editions.find(e=>e.id===selected)||(readingBoard?{id:'reading'}:editions.find(e=>e.status!=='failed')||editions[0]);
     $('edition-select').value=entry.id;
