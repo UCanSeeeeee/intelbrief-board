@@ -1,66 +1,71 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-18T12:53:50.294Z",
-  "cutoff": "2026-10-18T20:30:00+08:00",
+  "updatedAt": "2026-10-18T15:57:58.955Z",
+  "cutoff": "2026-10-18T23:38:52+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
-        "status": "partial",
-        "note": "新增1条真实热度，已有2条保留；未来构想非事实兑现；Grok采集器转述，非全量覆盖"
+        "status": "complete",
+        "note": "1条新热度动态进入近窗前三，保留2条热度更高的旧动态；均未达基本面价值规则",
+        "cutoff": "2026-10-18T23:38:52+08:00"
       },
       {
         "id": "jensen-huang",
-        "status": "partial",
-        "note": "旧采访重发，无新原始事实；有效周榜保留；Grok采集器转述，非全量覆盖"
+        "status": "complete",
+        "note": "指定增量已查询，无合格新增；热度数据/名单覆盖有缺口",
+        "cutoff": "2026-10-18T23:38:52+08:00"
       },
       {
         "id": "donald-trump",
         "status": "partial",
-        "note": "无新高价值政策；第三条为运营者评论，排除，旧2条不覆盖；Grok采集器转述，非全量覆盖"
+        "note": "指定增量已查询，无合格新增；热度数据/名单覆盖有缺口",
+        "cutoff": "2026-10-18T23:38:52+08:00"
       },
       {
         "id": "trillion-leaders",
         "status": "partial",
-        "note": "已补正finkd；旧Muse重复，无足够新增；原合集保留；Grok采集器转述，非全量覆盖"
+        "note": "指定增量已查询，无合格新增；热度数据/名单覆盖有缺口",
+        "cutoff": "2026-10-18T23:38:52+08:00"
       },
       {
         "id": "research-reports",
         "status": "partial",
-        "note": "两条数字只有二手原帖，排除；旧合集保留；Grok采集器转述，非全量覆盖"
+        "note": "指定增量已查询，无合格新增；热度数据/名单覆盖有缺口",
+        "cutoff": "2026-10-18T23:38:52+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "elon-spacex-anomaly-2026-10-18",
+      "eventKey": "elon-roadster-acceleration-2026-10-18",
       "tabIds": [
         "elon-musk"
       ],
-      "title": "Elon Musk短评SpaceX的独特性（热度动态）",
-      "fact": "Elon Musk将SpaceX形容为矩阵中的异常。这是一句个人短评，未包含发射、订单、资本开支或产能的新数据。",
-      "whyItMatters": "只作本人账号热度观察，不作为SpaceX基本面或AI需求变化的证据。",
-      "counterCase": "缺少可核验经营增量，不据此产生市场方向或估值判断。",
+      "title": "Elon Musk称Roadster加速快于航母起飞战斗机",
+      "fact": "Elon Musk称新Tesla Roadster的加速快于从航母起飞的战斗机，并引用推力比较帖子；原帖没有给出独立测试条件或结果。",
+      "whyItMatters": "仅作产品传播热度观察；不视为交付、订单、收入或AI机器人进展。",
+      "counterCase": "事件实际发生时点未知；本次仅取得Grok读取原帖的转述，未独立核验引用材料，不能据此作经营或市场方向判断。",
       "affected": [
-        "SpaceX公开动态"
+        "Tesla"
       ],
       "author": "Elon Musk (@elonmusk)",
-      "publishedAt": "2026-10-18T05:06:07Z",
-      "url": "https://x.com/elonmusk/status/2111685233024053663",
+      "publishedAt": "2026-10-18T15:16:54Z",
+      "url": "https://x.com/elonmusk/status/2111838943016833235",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
       "selection": "engagement",
       "engagement": {
-        "likes": 1646,
-        "reposts": 164,
-        "quotes": 29,
-        "replies": 249,
-        "views": 66195,
-        "capturedAt": "2026-10-18T11:51:00Z",
-        "source": "Grok网页版x_thread_fetch实际返回"
+        "likes": 6193,
+        "reposts": 762,
+        "replies": 1058,
+        "quotes": 123,
+        "views": 658126,
+        "capturedAt": "2026-10-18T15:55:14Z",
+        "source": "Grok网页版首轮X工具返回；capturedAt为本轮结果落盘时点，工具未返回精确抓取时刻，互动为此前快照"
       },
       "people": [
         {
@@ -87,6 +92,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "engagement",
       "engagement": {
         "likes": 13639,
@@ -96,13 +107,7 @@
         "views": 420760,
         "capturedAt": "2026-10-18T11:51:00Z",
         "source": "Grok网页版x_thread_fetch实际返回"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "trump-sync-bush-political-comment-2026-10-18",
@@ -122,6 +127,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "selection": "engagement",
       "engagement": {
         "likes": 313,
@@ -131,13 +142,7 @@
         "views": 8904,
         "capturedAt": "2026-10-18T11:51:00Z",
         "source": "Grok网页版x_thread_fetch实际返回"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "trump-sync-global-political-comment-2026-10-18",
@@ -157,6 +162,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "selection": "engagement",
       "engagement": {
         "likes": 1148,
@@ -166,13 +177,7 @@
         "views": 83781,
         "capturedAt": "2026-10-18T11:51:00Z",
         "source": "Grok网页版x_keyword_search实际返回"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "elon-roadster-future-demo-2026-10-17",
@@ -192,6 +197,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "engagement",
       "engagement": {
         "likes": 103966,
@@ -200,13 +211,7 @@
         "quotes": 1004,
         "capturedAt": "2026-10-18T12:42:11.483Z",
         "source": "Grok网页版X工具返回；未独立直读X"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "gs-pb-ai-deleveraging-research-2026-10-17",
@@ -228,8 +233,8 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "selection": "rule",
-      "people": []
+      "people": [],
+      "selection": "rule"
     },
     {
       "eventKey": "elon-neuralink-help-millions-2026-10-16",
@@ -251,6 +256,12 @@
       "weeklyRanks": {
         "elon-musk": 3
       },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-17T00:08:00.000Z",
@@ -261,13 +272,7 @@
         "quotes": 62,
         "views": 496260,
         "bookmarks": 88
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "jensen-huang-sanguine-rout-people-2026-10-16",
@@ -290,6 +295,12 @@
       "weeklyRanks": {
         "jensen-huang": 1
       },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-17T00:08:00.000Z",
@@ -300,13 +311,7 @@
         "quotes": 2,
         "views": 19316,
         "bookmarks": 6
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "elon-southwest-starlink-people-2026-10-16",
@@ -329,6 +334,12 @@
       "weeklyRanks": {
         "elon-musk": 1
       },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-17T00:08:00.000Z",
@@ -339,13 +350,7 @@
         "quotes": 87,
         "views": 1131866,
         "bookmarks": 177
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "elon-tesla-fsd-slovakia-2026-10-16",
@@ -368,6 +373,12 @@
       "weeklyRanks": {
         "elon-musk": 2
       },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-17T00:08:00.000Z",
@@ -378,13 +389,7 @@
         "quotes": 132,
         "views": 1338176,
         "bookmarks": 360
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "trump-cleveland-submarine-repair-facility-2026-10-16",
@@ -408,6 +413,12 @@
       "weeklyRanks": {
         "donald-trump": 1
       },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -418,13 +429,7 @@
         "quotes": 2,
         "views": 33700,
         "bookmarks": 3
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "nvidia-mercedes-adas-people-2026-10-16",
@@ -447,6 +452,7 @@
       "weeklyRanks": {
         "jensen-huang": 2
       },
+      "people": [],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-17T00:08:00.000Z",
@@ -457,8 +463,7 @@
         "quotes": 49,
         "views": 81561,
         "bookmarks": 62
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "elon-more-than-10gw-2026-10-15",
@@ -481,6 +486,12 @@
       "weeklyRanks": {
         "elon-musk": 4
       },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -491,13 +502,7 @@
         "quotes": 78,
         "views": 1724864,
         "bookmarks": 441
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "elon-grok-bot-paid-growth-2026-10-15",
@@ -520,6 +525,12 @@
       "weeklyRanks": {
         "elon-musk": 5
       },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -530,13 +541,7 @@
         "quotes": 160,
         "views": 1898076,
         "bookmarks": 1540
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "nvidia-volvo-hyperion-halos-2026-10-15",
@@ -559,6 +564,7 @@
       "weeklyRanks": {
         "jensen-huang": 3
       },
+      "people": [],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -569,8 +575,7 @@
         "quotes": 18,
         "views": 57554,
         "bookmarks": 40
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "nvidia-nemotron-35-super-vl-2026-10-15",
@@ -593,6 +598,7 @@
       "weeklyRanks": {
         "jensen-huang": 4
       },
+      "people": [],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -603,8 +609,7 @@
         "quotes": 34,
         "views": 69941,
         "bookmarks": 92
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "jensen-nvidia-stockholm-nordics-2026-10-15",
@@ -627,6 +632,12 @@
       "weeklyRanks": {
         "jensen-huang": 5
       },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T13:00:15.000Z",
@@ -637,13 +648,7 @@
         "quotes": 3,
         "views": 26375,
         "bookmarks": 4
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "trump-diesel-sanctions-pause-sync-2026-10-15",
@@ -666,6 +671,12 @@
       "weeklyRanks": {
         "donald-trump": 3
       },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T08:02:03.197Z",
@@ -676,13 +687,7 @@
         "quotes": 5,
         "views": 44605,
         "bookmarks": 9
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "trump-gfs-malta-plants-sync-2026-10-14",
@@ -705,6 +710,16 @@
       "weeklyRanks": {
         "donald-trump": 2
       },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        },
+        {
+          "name": "Howard Lutnick",
+          "intro": "美国商务部长"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T13:00:15.000Z",
@@ -715,17 +730,7 @@
         "quotes": 15,
         "views": 78537,
         "bookmarks": 13
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        },
-        {
-          "name": "Howard Lutnick",
-          "intro": "美国商务部长"
-        }
-      ]
+      }
     },
     {
       "eventKey": "trump-alaska-lng-sync-2026-10-14",
@@ -748,6 +753,12 @@
       "weeklyRanks": {
         "donald-trump": 4
       },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T13:00:15.000Z",
@@ -758,13 +769,7 @@
         "quotes": 6,
         "views": 81155,
         "bookmarks": 14
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "wh-alaska-lng-pipeline-2026-10-14",
@@ -788,6 +793,12 @@
       "weeklyRanks": {
         "donald-trump": 5
       },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "likes": 624,
@@ -798,13 +809,7 @@
         "capturedAt": "2026-10-14T01:10:00.000Z",
         "source": "x-mcp",
         "bookmarks": 18
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "jpm-mu-26-lta-150b-backlog-2026-10-13",
@@ -828,6 +833,7 @@
       "weeklyRanks": {
         "research-reports": 1
       },
+      "people": [],
       "selection": "rule",
       "engagement": {
         "likes": 1197,
@@ -838,8 +844,7 @@
         "capturedAt": "2026-10-14T01:10:00.000Z",
         "source": "x-mcp",
         "bookmarks": 370
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "pichai-gemini-4-argon-launch-2026-10-13",
@@ -863,6 +868,12 @@
       "weeklyRanks": {
         "trillion-leaders": 1
       },
+      "people": [
+        {
+          "name": "Sundar Pichai",
+          "intro": "谷歌及Alphabet CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "likes": 18777,
@@ -873,13 +884,7 @@
         "capturedAt": "2026-10-14T01:10:00.000Z",
         "source": "x-mcp",
         "bookmarks": 2606
-      },
-      "people": [
-        {
-          "name": "Sundar Pichai",
-          "intro": "谷歌及Alphabet CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "bofa-tsmc-pt-620-2nm-ramp-2026-10-12",
@@ -904,6 +909,7 @@
       "weeklyRanks": {
         "research-reports": 2
       },
+      "people": [],
       "selection": "rule",
       "engagement": {
         "likes": 6,
@@ -913,8 +919,7 @@
         "views": 367,
         "capturedAt": "2026-10-13T02:20:00Z",
         "source": "x search_posts_all/get_posts_by_ids public_metrics"
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "zuckerberg-muse-wonder-frontier-2026-10-12",
@@ -938,6 +943,12 @@
       "weeklyRanks": {
         "trillion-leaders": 2
       },
+      "people": [
+        {
+          "name": "Mark Zuckerberg",
+          "intro": "Meta创始人兼CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "likes": 35733,
@@ -947,13 +958,7 @@
         "views": 4338270,
         "capturedAt": "2026-10-13T08:11:55.277Z",
         "source": "x get_users_posts/search_posts_all public_metrics"
-      },
-      "people": [
-        {
-          "name": "Mark Zuckerberg",
-          "intro": "Meta创始人兼CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "satya-maia-300-primary-inference-2026-10-12",
@@ -978,6 +983,12 @@
       "weeklyRanks": {
         "trillion-leaders": 3
       },
+      "people": [
+        {
+          "name": "Satya Nadella",
+          "intro": "微软董事长兼CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "likes": 12692,
@@ -987,13 +998,7 @@
         "views": 1492811,
         "capturedAt": "2026-10-13T02:20:00Z",
         "source": "x search_posts_all/get_posts_by_ids public_metrics"
-      },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "nadella-microsoft-decision-1-2026-10-09",
@@ -1016,13 +1021,13 @@
       "weeklyRanks": {
         "trillion-leaders": 4
       },
-      "selection": "rule",
       "people": [
         {
           "name": "Satya Nadella",
           "intro": "微软董事长兼CEO"
         }
-      ]
+      ],
+      "selection": "rule"
     },
     {
       "eventKey": "pichai-gemini-agent-at-work-2026-10-08",
@@ -1045,13 +1050,13 @@
       "weeklyRanks": {
         "trillion-leaders": 5
       },
-      "selection": "rule",
       "people": [
         {
           "name": "Sundar Pichai",
           "intro": "谷歌及Alphabet CEO"
         }
-      ]
+      ],
+      "selection": "rule"
     },
     {
       "eventKey": "bofa-nvda-pt-320-tam-2026-09-28",
@@ -1074,8 +1079,9 @@
       "weeklyRanks": {
         "research-reports": 4
       },
-      "selection": "rule",
-      "people": []
+      "people": [],
+      "selection": "rule"
     }
-  ]
+  ],
+  "retainedItems": []
 }

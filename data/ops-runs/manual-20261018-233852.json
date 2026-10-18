@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "period": "manual-20261018-233852",
+  "trigger": "manual",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-18T23:39:42+08:00",
+  "updatedAt": "2026-10-19T00:00:02+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "2e40d34c11ce98e5bf2ed191ef24c2aadf1ed2bc",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-18T23:39:42+08:00",
+      "detail": "原仓库master干净且已安全拉取"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-18T23:39:43+08:00",
+      "detail": "已读取当前Agent、上下文、待办、增量入口及专项技能，按需读取本批契约"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-19T00:00:02+08:00",
+      "detail": "23对象严格增量12:30→15:38:52Z，全部关闭；学习复用、宏观未到期"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-19T00:00:02+08:00",
+      "detail": "0+0新简报保留累计池，人物1新热度；个股AI旧卡合并"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-19T00:00:02+08:00",
+      "detail": "遵用户不运行本地测试/check/build；发布器仍执行数据契约"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "0新增；旧重点累计保留，2候选缺证进入待核"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "3热度新增；名单/热度有缺口"
+    },
+    "tickers": {
+      "status": "unchanged",
+      "detail": "7对象查询完成，0合格新增"
+    },
+    "ai": {
+      "status": "unchanged",
+      "detail": "4组检索完成，0合格新增"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": null
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": null
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [
+    "用户授权手动全站增量更新并测时；首次可核验计时点2026-10-18T23:38:52+08:00，前置读取耗时未记录，不伪造。当前已落地串行，不冒称多会话并行。"
+  ],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:41:26+08:00",
+      "endedAt": "2026-10-18T23:48:56+08:00",
+      "durationMs": 450000,
+      "detail": "两轮真实检索，新增0+0；结果先落盘，共享进度已推进"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:41:26+08:00",
+      "endedAt": "2026-10-18T23:46:44+08:00",
+      "durationMs": 318000,
+      "detail": "独立两轮完成；Grok界面分别报告113秒/23秒；第二轮六包加一次收窄，均精确时间窗"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:46:44+08:00",
+      "endedAt": "2026-10-18T23:48:56+08:00",
+      "durationMs": 132000,
+      "detail": "追源24秒；重复与来源不足均已落选"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-18T23:48:56+08:00",
+      "durationMs": 0,
+      "detail": "无拟入选候选，无需启动反证空查"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:48:56+08:00",
+      "endedAt": "2026-10-18T23:55:14+08:00",
+      "durationMs": 378000,
+      "detail": null
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:48:56+08:00",
+      "endedAt": "2026-10-18T23:55:14+08:00",
+      "durationMs": 378000,
+      "detail": "Grok报告88秒，5组已查询"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-18T23:55:14+08:00",
+      "durationMs": 0,
+      "detail": "已在批次内执行3条原帖读取，Grok报告9秒，未独立计时不补造起点"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-18T23:55:14+08:00",
+      "durationMs": 0,
+      "detail": "仅热度动态无投资主张，保留明确限制"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:55:14+08:00",
+      "endedAt": "2026-10-18T23:57:34+08:00",
+      "durationMs": 140000,
+      "detail": null
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:55:14+08:00",
+      "endedAt": "2026-10-18T23:57:34+08:00",
+      "durationMs": 140000,
+      "detail": null
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-18T23:57:34+08:00",
+      "durationMs": 0,
+      "detail": "无合格新候选，不空跑"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-18T23:57:34+08:00",
+      "durationMs": 0,
+      "detail": "无合格新候选，不空跑"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:57:34+08:00",
+      "endedAt": "2026-10-18T23:59:20+08:00",
+      "durationMs": 106000,
+      "detail": null
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:57:34+08:00",
+      "endedAt": "2026-10-18T23:59:20+08:00",
+      "durationMs": 106000,
+      "detail": null
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-18T23:59:20+08:00",
+      "durationMs": 0,
+      "detail": "候选为个人轶事/未证实泄漏，直接排除，不延伸投资主张"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-18T23:59:20+08:00",
+      "durationMs": 0,
+      "detail": "候选为个人轶事/未证实泄漏，直接排除，不延伸投资主张"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-18T23:59:20+08:00",
+      "durationMs": 0,
+      "detail": "今日已有1趣事1知识点；手动测时不重复生产"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:59:20+08:00",
+      "endedAt": "2026-10-18T23:59:20+08:00",
+      "durationMs": 0,
+      "detail": "复用今日19:43官方Fed/BEA核对与20:30到期检查；无新到期项"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-18T23:59:20+08:00",
+      "endedAt": "2026-10-19T00:00:02+08:00",
+      "durationMs": 42000,
+      "detail": "Nasdaq 15工作日，80精选，pendingReview0"
+    }
+  ]
+}
