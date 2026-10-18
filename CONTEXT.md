@@ -1,100 +1,49 @@
-# CONTEXT.md — 接手说明
+# 项目上下文
 
-最后更新：2026-10-18（Asia/Shanghai）
+## 产品与权限
 
-## 产品与边界
+这是只读美股情报看板，研究优先级为半导体、电力、AI落地。网页：[intelbrief-board.pages.dev](https://intelbrief-board.pages.dev/)，公开源码：`UCanSeeeeee/intelbrief-board`，默认分支`master`。写入受GitHub权限控制，公开不等于有维护权。
 
-首次接手读 [AGENTS.md](AGENTS.md) → 本文 → [TASKS.md](TASKS.md)，再按任务加载专题。支持入口见[Agent入口](docs/AGENT_ENTRY.md)。修改前拉取，完成直接提交推送，不默认运行本地测试、check、build或预览。
+首次接手读[AGENTS](AGENTS.md)、本文、[待办](TASKS.md)，再按需读取专题。修改前拉取，完成审查差异后提交推送，不默认执行本地测试、check、build或预览。当前文件只维护有效状态，修改历史按需查Git。
 
-`intelbrief-board` 的讯息是 X-only；财报和宏观日历沿用 AGENTS.md 中已授权的官方来源例外。系统保存证据并做可解释的可信度自动初评。
+- X讯息只走Grok网页版，唯一备用是额度可用时的Grok Bot；不直访X、用X API或普通搜索补采。财报与宏观日历适用已授权官方来源例外。
+- 不编原文、作者、链接、价格或时间；采集器转述不冒充本模型独立直读，评分不是真伪或涨跌概率。
+- 数量通常是上限，不足可为0条。人物页按专门规则补充标明身份的热度动态，不能拿互动量证明可信度。
+- 不发帖、私信、点赞、关注或交易，不保存凭证，不读取仓库外私有知识或个人资料。
 
-**数量上限不是交付目标。** 美股 5+10、人物个人的近窗与周榜、合集的近30天区、个股近窗与周榜、AI板块近窗与周榜 都只收达到价值与证据门槛的内容（加密栏目2026-10-15起暂时停用）；不足时保留实际数量并说明缺额，可以为 0 条，禁止用低价值、重复或旧信息补齐。**例外（2026-10-13）**：具体人物页全部 Tab 改为规则优先 + 本 Tab 热度动态补位（目标 5，无规则条目时 3），见 PEOPLE_INTELLIGENCE_ROADMAP「收录与热度补位」。
+## 当前运行
 
-线上地址：https://intelbrief-board.pages.dev
+本机Codex总编排按侧边栏独立批次串行组织检索、筛选和统一发布；Grok Bot主例行任务、Webhook和探针保持暂停。工作日北京时间08:00/15:00/20:30、周六日08:00一次；任务依赖本机和登录环境可用。网页无更新按钮、登录或执行队列。
 
-GitHub：`UCanSeeeeee/intelbrief-board`（public；公开只读与 Fork，不等于拥有写入权限）
+[增量采集入口](docs/INCREMENTAL_COLLECTION.md)维护时间接续和恢复规则：每个对象接上次成功截止，手动与定时共用进度；先保存可靠结果再推进。无结果、证据不足、请求失败分开；失败不推进，不清空存量，发布失败只补发布。读取范围不等于每次搜索范围。
 
-默认分支：`master`
+首页显示累计有效重点，早报晚间仍可读，区分新增、进展、累计保留；更正保存原卡及依据。人物、个股、AI保留有效旧榜和未入精选的有效条目。三期快照独立于卡片寿命，已展示不代表已读。所有阅读内容默认展开、不截字，前台不展示反向条件。
 
-禁止事项：
+已存在真实本机到点触发及发布样本；新进度规则的下一真实运行效率、连续可靠性仍待观察。当前运营证据和依赖见[运营说明](docs/GROK_BOT_OPERATIONS.md)，不把任务启用或代码上线当成运行验收。
 
-- 不用占位新闻或 AI 补写缺失正文
-- 不把蓝标、粉丝量、点赞量和转发量当可信度
-- 不把可信度分数解释成真伪概率或涨跌概率
-- 不发帖、点赞、转发、关注、私信或交易
-- 不在仓库、前端或文档中保存 Token
+## 文件路由
 
-## 架构
+| 需要处理的问题 | 唯一主要入口 |
+|---|---|
+| 协作、权限、同步、上下文维护 | AGENTS.md；Fork另读FORK_AGENT.md |
+| 已授权后续、阻塞及验收 | TASKS.md |
+| 完整工作流、LLM接手 | docs/PROJECT_WORKFLOW_SOP.md、docs/AGENT_ENTRY.md |
+| 当前调度、发布与运行证据 | docs/GROK_BOT_OPERATIONS.md；data/ops-runs、data/collection-runs |
+| 增量、失败恢复、耗时记录 | docs/INCREMENTAL_COLLECTION.md；data/collection-progress.json；collection:plan / collection:progress |
+| 累计阅读、周末归属、保留 | docs/TRADING_DAY_READING.md；data/reading-board.json |
+| UI及侧栏顺序 | docs/DESIGN_SYSTEM.md；styles.css |
+| 知识库和Grok检索SOP | config/research-guidance.json指向的项目资料 |
+| 美股5+10及冻结归档 | docs/STOCK_BRIEF.md；config/stock-brief.json；data/stock-briefs |
+| 人物与合集 | docs/PEOPLE_INTELLIGENCE_ROADMAP.md；config/people-intelligence.json |
+| 个股NVDA/MU/INTC/GOOG/AVGO/VRT/TSM | docs/TICKER_INTELLIGENCE.md；config/ticker-intelligence.json |
+| OPENAI/ANTHROPIC/GOOG(AI)/其他 | docs/AI_INTELLIGENCE.md；config/ai-intelligence.json |
+| 每日趣事、知识专业版与故事版 | docs/DAILY_LEARNING.md；config/learning.json |
+| 宏观、财报日期及结果 | docs/MACRO_EVENTS.md、docs/EARNINGS_CALENDAR.md |
+| 来源评分与数据契约 | docs/X_DATA_CONTRACT.md；sources/x-sources.json；scripts/lib/credibility.js |
+| 人名原文及≤15字简介 | config/person-registry.json；scripts/lib/person-names.js |
 
-```text
-本机Codex定时总编排 → 按侧边栏Tab独立批次 → 校验/去重/归档 → GitHub → Cloudflare
-    X批次优先Grok网页版；网页不可用或覆盖不足且额度可用时才尝试Grok Bot
-```
+侧栏顺序为美股讯息、具体人物、具体个股、AI板块、每日学习、宏观大事、财报日历；人物默认马斯克Tab。加密暂时停用，板块空头不展示或采集。其原始资料不构成恢复权限。
 
-前端无框架，Cloudflare Pages负责只读展示。上述是当前执行归属，不代表新本机调度已完成连续验收；当前证据见 [运营记录](docs/GROK_BOT_OPERATIONS.md)。网页“更新”按钮、登录、D1队列与网页执行器仍保持删除，本次不恢复网页触发入口。
+## 发布
 
-2026-10-18起因Grok Bot周额度耗尽，「X+github」主例行任务与Webhook均暂停；旧「推特信息获取」仅保留历史。当前本机调度按 `config/collection-batches.json` 分批执行，额度恢复不自动双开。
-
-## 关键文件
-
-- `docs/INCREMENTAL_COLLECTION.md`：当前内容运营入口；严格逐对象增量、手动/定时共用进度、工作日三次/周末08:00一次、累计阅读及恢复。`data/collection-progress.json`为进度真源，`collection:progress`用于计划及可靠落盘后的推进。
-
-- `docs/TRADING_DAY_READING.md`：阅读保留专题；周一汇总周末存量，不重搜整个周末。`reading-period.js`计算周期，`reading-board.json`独立保存卡片；`brief:context`同时输出展示窗和逐对象增量窗，不能混用。
-
-- `docs/DESIGN_SYSTEM.md` / `styles.css`：前台页面共用的阅读优先布局，所有阅读内容默认展开，卡片不展示反向条件；数量为上限而非任务完成率。历史证据与内部核验不因UI改变。
-- `calendar-time.js`：宏观美东时刻换算北京时间（含夏令时）与财报披露状态展示；测试见 `test/calendar-time.test.js`。
-- `assets/fluent/README.md`：页标题装饰素材的来源版本与许可。
-
-- `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：具体人物顶部 Tab、万亿美元公司高层、机构研报合集、AI 三层研究方向及降噪规则的待办与产品规划。
-- `docs/STOCK_BRIEF.md`：美股每天北京时间 08:00 / 15:00 / 20:30 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。
-- `config/research-guidance.json`：项目知识与采集SOP的机器入口；每个X批次分别读取。
-- `config/collection-batches.json` / `npm run collection:plan -- 截止时间`：把一次定时触发拆成侧边栏Tab级批次；各批次独立清单、提示词、候选、缺口和结果，末尾才统一发布。
-- `knowledge/US_EQUITY_RESEARCH_KB.md`：用户关注点的项目内当前版本，固定半导体、电力、AI落地及宏观、地缘、市场结构、推理与反证框架。
-- `knowledge/GROK_X_COLLECTION_SOP.md`：把知识库转换成两轮检索、追源、反证、准入、去重、选择和审计记录的执行流程。
-- `us-equity-x-brief-quality`：共享卡片质量技能，统一作者、中文信息摘要、事件时间、反向条件与原帖链接；采集过程只进入证据层。当前 0.1.0 在共享技能库孵化并已链接到本机 Codex。
-- `config/stock-brief.json`：时区、时段、条数与技能标识。
-- `data/ops-runs/`：内容运行里程碑日志（`npm run ops:run`）；排查定时失败时先看这里，缺文件通常表示平台未跑到仓库脚本。规则见 docs/GROK_BOT_OPERATIONS.md「运营运行日志」。
-- `data/stock-briefs/index.json`：最近三期目录；同目录保留的期次文件不可覆盖，写入第四期时移除最旧一期。旧链路有实际期次，不等于新Grok独立调度已验收。
-- `scripts/lib/stock-brief.js`：条数、证据截止、跨组去重、知识卡与冻结归档校验。
-- `index.html` / `people.html` / `tickers.html` / `ai.html` / `learning.html` / `earnings.html`：侧栏顺序为美股讯息→具体人物→具体个股→AI板块→每日学习→宏观大事→财报日历。每日学习见 `docs/DAILY_LEARNING.md`，基础知识点强制同时提供专业版与18+故事版；宏观大事见 `docs/MACRO_EVENTS.md`（含超关注财报精选）；板块空头已于2026-10-12停用；**加密已于2026-10-15暂时停用**（`docs/CRYPTO_INTELLIGENCE.md`，重定向首页，不再采集或部署）。`ai.js`：OPENAI/ANTHROPIC/GOOG(AI)/其他；`tickers.js` 仅股权七标的。
-- `config/earnings-calendar.json` / `data/earnings-calendar.json` / `docs/EARNINGS_CALENDAR.md`：侧栏「财报日历」；主源 Nasdaq；卡片主营一句话见 `config/company-blurbs.json`。
-- `config/people-intelligence.json` / `data/people-intelligence.json`：人物与合集配置及精选事件库；个人与合集最新区目标均为 5 条（个人滚动约24小时、合集约30天；规则优先+热度补位，selectionPolicy），重点榜最多 5 件且只收规则条目。特朗普 X 同步源为 @TrumpDailyPosts（另可取 @POTUS/@WhiteHouse）；黄仁勋允许可回查媒体来源。
-- `config/ticker-intelligence.json` / `data/ticker-intelligence.json` / `docs/TICKER_INTELLIGENCE.md`：具体个股仅 NVDA/MU/INTC/GOOG/AVGO/VRT/TSM（无加密、无 AI 实验室 Tab）。**2026-10-15**：`prepareTabbedIntelligence` 自动合并仍在滚动窗口内的旧条目——本窗零新增的 Tab 整页保留；本窗有新帖的 Tab 也保留未冲突的旧重点榜（排名冲突则顺延到空位）。人物/个股/AI 共用此逻辑，防止只交近窗新帖时清空 7 天（合集 30 天）重点榜。
-- `config/ai-intelligence.json` / `data/ai-intelligence.json` / `docs/AI_INTELLIGENCE.md`：侧栏「AI板块」：OPENAI→ANTHROPIC→GOOG(AI产品)→其他。
-- `config/crypto-intelligence.json` / `data/crypto-intelligence.json` / `docs/CRYPTO_INTELLIGENCE.md`：加密栏目已暂时停用；配置与数据仅留仓库追溯。
-- `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：人物页规划（仍有效）。
-
-- `sources/x-sources.json`：账号来源表。身份等级必须人工维护，账号变化后需要复核。
-- `data/raw/x-posts.json`：原始归档。status ID 是去重主键。
-- `data/x-intelligence.json`：显示数据，随时可由原始归档重建。
-- `scripts/lib/credibility.js`：评分规则的唯一维护位置。
-- `docs/X_DATA_CONTRACT.md`：数据契约与解释边界。
-- `test/credibility.test.js`：关键评分不变量。
-
-## 评分原则
-
-总分为作者分 40% 加主张分 60%。作者身份较强，只能提高“谁说的”这一层；具体主张仍需直接性、可追溯证据和独立 X 帖印证。
-
-所有评分状态都是 `auto-provisional`。人工复核时，把不同作者的支持帖 ID 写入 `assessment.independentSupportPostIds`，相反证据写入 `assessment.contradictionPostIds`，然后执行 `npm run score`。
-
-## 运行与验证
-
-```bash
-npm ci
-npm test
-npm run check
-npm run build
-npm run agent:enter -- --role gpt --task code
-```
-
-内容导入由当前本机内容运营执行；旧X API脚本不得调用。按用户要求不启动本地网站。代码测试使用夹具，不触发真实采集。
-
-## 部署
-
-Cloudflare Pages 从 `master` 自动部署。构建命令为 `npm run build`、输出目录 `dist`。构建只打包允许公开的资源，不采集X、不重新生成内容时间；内容由Grok运营任务生成，凭证和私有运行日志不进入公开构建。
-
-旧X API工作流与Codex调度不作为备用路径。Grok原生调度已有定时成功样本（如 `410dd11`），也有平台空跑（如 2026-10-13 09:00）；设置、单次发布与「无人值守可靠」须分别核验，不凭页面可访问、提示词已写、任务已创建或单次成功宣称 OPS-01 完成。详情见运营记录与 TASKS OPS-01。
-
-## 接手检查清单
-
-按 AGENTS.md 的任务路由与完成条件处理。状态询问只读，代码工作不采集；Grok内容任务再核对账号身份、原帖URL、时间与正文。不因评分高直接产生交易结论。
+Cloudflare Pages跟随master自动构建，命令`npm run build`、目录`dist`；这是云端构建设置，不是本地提交前置步骤。构建只打包获准公开的资源，不采集、不改时间。核对远端提交及线上相关资源后才报告上线。

@@ -13,11 +13,11 @@
 
 ## 当前能力
 
-- [交易日待阅](docs/TRADING_DAY_READING.md)：休市/盘后重要信息持续到下个实际交易时段结束，跨期池与三期快照分开；默认展示待阅精选，其他有效信息可展开，不把延续消息冒充新增。
+- [累计阅读](docs/TRADING_DAY_READING.md)：按北京时间阅读日保留重要信息，早报晚间仍可读；持久池与三期快照独立，默认完整展开有效内容，不把延续冒充新增。搜索按[逐对象增量](docs/INCREMENTAL_COLLECTION.md)接续，与阅读窗口分开。
 
 - 网页是只读信息看板，不提供“更新”按钮、登录、任务队列或手动触发接口；内容由本机定时运营生成，网页端不承担采集。
 
-- 美股板块采用每天北京时间 08:00 / 15:00 / 20:30 的 **5 条市场焦点 + 10 条多学科认知与夜雨知识库洞察**，支持期次归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。Grok 原生定时已有成功样本（如 `410dd11` 的 2026-10-12 21:00）；可靠性、空跑与 OPS-01 状态以 [运营记录](docs/GROK_BOT_OPERATIONS.md) 为准，不因单次成功宣称稳定闭环。
+- 美股板块工作日北京时间08:00/15:00/20:30、周六日08:00启动，最多 **5条市场焦点 + 10条多学科认知与夜雨知识库洞察**，支持归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。当前运行证据与可靠性边界见[运营说明](docs/GROK_BOT_OPERATIONS.md)。
 - 项目内置[美股研究知识库](knowledge/US_EQUITY_RESEARCH_KB.md)和[Grok 采集 SOP](knowledge/GROK_X_COLLECTION_SOP.md)，每次更新由程序自动注入，固定以半导体、电力、AI落地为优先级并要求独立追源与反证。
 - 前台侧边栏七个 Tab：「美股讯息」、「具体人物」、「具体个股」（见 `docs/TICKER_INTELLIGENCE.md`）、「AI板块」（见 `docs/AI_INTELLIGENCE.md`）、「每日学习」（见 `docs/DAILY_LEARNING.md`）、「宏观大事」（见 `docs/MACRO_EVENTS.md`）、「财报日历」（见 `docs/EARNINGS_CALENDAR.md`）。每日学习包含「每日趣事」和「基础知识讲解」，同一基础知识点同时提供专业版与18+故事版。加密栏目已暂时停用（见 `docs/CRYPTO_INTELLIGENCE.md`）。原帖档案、来源管理和评分作为后台能力保留，不单独提供前台页面。
 
@@ -39,13 +39,10 @@
 git clone https://github.com/UCanSeeeeee/intelbrief-board.git
 cd intelbrief-board
 npm ci
-npm test
-npm run check
-npm run build
 npm run agent:enter -- --role gpt --task code
 ```
 
-以上不启动网站。只有用户要求本地预览时才运行 `npm run dev`（http://localhost:8787）。
+以上为安装及只读路由，不启动网站。默认不运行本地测试、check、build或预览；用户明确要求时再用下方相关命令。
 
 ### 导入Grok采集结果
 
@@ -54,7 +51,6 @@ npm run agent:enter -- --role gpt --task code
 ```bash
 npm run import:x -- /absolute/path/to/x-export.json
 npm run score
-npm run check
 ```
 
 导入器缺少原帖 URL、准确时间或完整正文时会失败，不补写缺失内容。
@@ -63,7 +59,7 @@ npm run check
 
 | 命令 | 作用 |
 |---|---|
-| `npm run agent:enter -- --role gpt --task code` | 只读任务路由和断点检查；Grok改为 `--role grok --task news`，每日学习用 `--task learning` |
+| `npm run agent:enter -- --role gpt --task code` | 只读任务路由；本机内容用`--role local --task news`，学习用`--task learning` |
 | `npm run import:x -- FILE` | 导入 Grok Bot/人工结构化 JSON |
 | `npm run score` | 从原始归档重建评分数据 |
 | `npm run check` | 校验 ID、URL、时间、去重和评分范围 |
@@ -98,4 +94,4 @@ Cloudflare Pages 连接 `master`，构建命令为 `npm run build`，输出目�
 
 真实采集由本机定时任务分批运行，再提交生成的数据。`.env`、Token和私有日志均不得提交。
 
-旧GitHub Actions采集仍停用；Grok Bot任务因周额度耗尽暂停。当前本机定时入口按08:00/15:00/20:30运行，电脑离线会导致当期不能启动，须按运营记录如实标缺口。
+GitHub Actions采集停用，Grok Bot任务暂停；本机调度的当前频率以批次配置和运营说明为准。电脑离线会导致当期不能启动，须如实标缺口。上下文只维护有效状态，修改历史按需查Git，不在入口追加版本沿革。
