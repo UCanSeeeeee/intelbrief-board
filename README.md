@@ -7,6 +7,8 @@
 线上地址：https://intelbrief-board.pages.dev
 仓库：`UCanSeeeeee/intelbrief-board`（public；网页与源码均可公开访问，写入仍受 GitHub 权限控制）
 
+需要独立维护和部署自己的副本时，先 Fork 本仓库，并让执行任务的 LLM 完整阅读 [Fork 独立部署 Agent](FORK_AGENT.md)。Fork 必须使用自己的 GitHub、Cloudflare、Grok 与部署网址，不会影响本项目生产环境。
+
 ## 当前能力
 
 - [交易日待阅](docs/TRADING_DAY_READING.md)：休市/盘后重要信息持续到下个实际交易时段结束，跨期池与三期快照分开；默认展示待阅精选，其他有效信息可展开，不把延续消息冒充新增。

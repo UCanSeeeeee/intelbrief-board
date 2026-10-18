@@ -37,14 +37,23 @@ test('entry CLI reports routes without changing git state',()=>{
 test('agent instructions fit discovery budget and preserve synchronization rules',()=>{
   const instructions=fs.readFileSync(path.join(root,'AGENTS.md'),'utf8');
   assert.ok(Buffer.byteLength(instructions)<32768);
+  assert.match(instructions,/FORK_AGENT\.md/);
+  assert.match(instructions,/原仓库最多作为只读 `upstream`/);
   assert.match(instructions,/git pull --ff-only origin master/);
   assert.match(instructions,/git push origin HEAD:master/);
   assert.match(instructions,/不得定时采集/);
-  for(const file of ['AGENTS.md','TASKS.md','docs/AGENT_ENTRY.md','docs/GROK_BOT_OPERATIONS.md']){
+  for(const file of ['AGENTS.md','FORK_AGENT.md','TASKS.md','docs/AGENT_ENTRY.md','docs/GROK_BOT_OPERATIONS.md']){
     const content=fs.readFileSync(path.join(root,file),'utf8');
     for(const match of content.matchAll(/\]\(([^)]+)\)/g)){
       const link=match[1];if(/^(https?:|#)/.test(link))continue;
       assert.ok(fs.existsSync(path.resolve(root,path.dirname(file),link.split('#')[0])),file+': '+link);
     }
   }
+});
+
+test('fork agent isolates repository, deployment and credentials',()=>{
+  const instructions=fs.readFileSync(path.join(root,'FORK_AGENT.md'),'utf8');
+  for(const phrase of ['只能作为只读 `upstream`','不得向 `upstream` 推送','自己的 Cloudflare','自己的 Grok Bot','npm test','npm run check','npm run build']) assert.match(instructions,new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
+  assert.match(instructions,/禁止使用/);
+  assert.match(instructions,/原仓库、原网页和原 Grok 任务没有被修改/);
 });
