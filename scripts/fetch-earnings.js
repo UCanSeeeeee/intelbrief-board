@@ -49,7 +49,7 @@ function currentWeekStart(now = new Date()) {
   const { date, weekday } = beijingParts(now);
   const map = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
   const offset = map[weekday] ?? 0;
-  if (offset >= 5) return addDays(date, 8 - offset);
+  if (offset >= 5) return addDays(date, 7 - offset);
   return addDays(date, -offset);
 }
 

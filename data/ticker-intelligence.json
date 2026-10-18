@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-17T12:45:55.067Z",
-  "cutoff": "2026-10-17T20:30:00+08:00",
+  "updatedAt": "2026-10-18T12:05:16.682Z",
+  "cutoff": "2026-10-18T19:43:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,102 +9,64 @@
       {
         "id": "nvda",
         "status": "partial",
-        "note": "近窗无新增一手高价值；保留滚动"
+        "note": "已查询NVIDIA本人/公司与权威媒体，未取得本窗公司新增披露。三星与TSMC合作标题未在X中提及NVIDIA，不能补写客户要求，不放入本Tab；保留已有周榜。"
       },
       {
         "id": "mu",
         "status": "partial",
-        "note": "新增大行存储重估/市值背离转述；保留滚动"
+        "note": "已查询Micron和存储产业报道，未取得本窗新增原始公司披露。韩媒标题未提及Micron，不把外链文章或二级转述细节补入；保留周榜。"
       },
       {
         "id": "intc",
         "status": "partial",
-        "note": "近窗高价值不足，保留滚动"
+        "note": "已查Intel及代工/供需权威报道，未取得本窗新增原始事实，保留有效周榜，不把无结果视为穷尽覆盖。"
       },
       {
         "id": "goog",
         "status": "partial",
-        "note": "新增 TPU 1.5GW 融资；保留滚动"
+        "note": "已查Alphabet股权、资本开支与财务进展，未取得本窗新增公司事实；AI产品留在独立AI批次，不重复铺文。"
       },
       {
         "id": "avgo",
         "status": "partial",
-        "note": "新增 North Star 融资安排与利益冲突提示；保留滚动"
+        "note": "已查Broadcom官方与AI客户链路；Anthropic融资线索为较早报道重述，无本窗实质新增，保留有效周榜。"
       },
       {
         "id": "vrt",
         "status": "partial",
-        "note": "近窗高价值不足（MS GW 预测见研报），保留滚动"
+        "note": "已查Vertiv官方、订单/电力/液冷线索；仅有主题评论，未取得新增订单或投产原始披露，保留有效周榜。"
       },
       {
         "id": "tsm",
         "status": "partial",
-        "note": "近窗无新业绩帖；GS 称台湾仓位仍高，保留滚动"
+        "note": "首尔经济日报官方原帖标题称三星与TSMC合作制造下一代HBM，已追源和检索反证。仅有标题，无公司确认、制程、订单或量产时间；按媒体报道归因收录1条，保留有效周榜。"
       }
-    ],
-    "note": " | 2026-10-17-1500: 近窗增量有限，保留7日滚动；crypto跳过 | 2026-10-17-2030: 周末增量（Anthropic 融资/Jack Clark/银行禁代理/存储研报/Musk Axios）；其余保留7日滚动；crypto跳过"
+    ]
   },
   "items": [
     {
-      "weeklyRanks": {},
-      "verification": "collector-report",
-      "people": [],
-      "eventKey": "mu-jpm-rerating-gs-738bn-ticker-2026-10-17",
+      "eventKey": "samsung-tsmc-next-hbm-media-2026-10-18",
       "tabIds": [
-        "mu"
+        "tsm"
       ],
-      "title": "大行称存储股价与基本面背离：JPM 呼吁重估，GS 称市值蒸发约 7380 亿美元而 DDR5 现货仍涨",
-      "fact": "转述 JPMorgan 呼吁存储股重估（HBM4E 晶圆消耗、长约能见度）；转述 Goldman 称 CXMT 披露后存储厂市值合计蒸发约 7380 亿美元、Micron 约 -11%，同期 DDR5 16Gb 现货由约 54.5 升破 60 美元。",
-      "whyItMatters": "股价隐含深度下行周期，实物价格指向紧平衡，是 MU 估值修复的关键分歧。",
-      "counterCase": "现货回落或长约重议则失效；均为二手转述。",
+      "title": "首尔经济日报：三星将与TSMC合作制造下一代HBM",
+      "fact": "首尔经济日报官方账号以独家报道标题称，三星电子将与TSMC共同制造下一代高带宽内存（HBM）。可回查X原帖仅有标题和文章链接，未披露制程、客户、订单规模或量产日期；本条为媒体报道，非公司已确认公告。",
+      "whyItMatters": "下一代HBM若进一步结合存储制造与外部先进逻辑代工，可能影响AI存储链的产能分工和资本开支分配。当前证据只到合作标题，不能据此量化TSMC新增收入或认定其他存储厂商已采用同一路线。",
+      "counterCase": "本窗未查到Samsung、NVIDIA或TSMC相关官方确认、否认或更正。无官方确认不等于报道被否认；需后续公司披露、实际工艺分工与量产节点才能验证产业增量。",
       "affected": [
-        "MU"
+        "TSM",
+        "Samsung",
+        "AI高带宽内存供应链"
       ],
-      "author": "EhrmantrautCap_",
-      "publishedAt": "2026-10-17T10:46:59.000Z",
-      "url": "https://x.com/EhrmantrautCap_/status/2111408628313788675",
-      "tier": "must-read"
-    },
-    {
-      "weeklyRanks": {},
+      "author": "서울경제신문 / 首尔经济日报 (@sedaily_com)",
+      "publishedAt": "2026-10-18T10:16:35Z",
+      "url": "https://x.com/sedaily_com/status/2111763363441312207",
       "verification": "collector-report",
-      "people": [],
-      "eventKey": "avgo-north-star-arranger-ticker-2026-10-17",
-      "tabIds": [
-        "avgo"
-      ],
-      "title": "转述 FT：Broadcom 安排约 600 亿美元 Anthropic TPU 融资，招股书提示供应商兼贷方的利益冲突",
-      "fact": "转述 FT：Anthropic 约 600 亿美元 TPU 融资由 Broadcom 安排，420 亿美元高级层由银行牵头，Blackstone 认购次级层约 90 亿美元，总回报逾 10%；Anthropic 招股书提示 Broadcom 同时作为芯片供应商与贷方的潜在利益冲突。",
-      "whyItMatters": "确认 ASIC/TPU 订单需求，同时暴露 AVGO 对客户融资的间接风险敞口。",
-      "counterCase": "若融资顺利落地且成本下降，风险担忧缓和。",
-      "affected": [
-        "AVGO",
-        "GOOGL"
-      ],
-      "author": "The_AI_Investor",
-      "publishedAt": "2026-10-17T03:38:50.000Z",
-      "url": "https://x.com/The_AI_Investor/status/2111300877944492390",
-      "tier": "must-read"
-    },
-    {
-      "weeklyRanks": {},
-      "verification": "collector-report",
-      "people": [],
-      "eventKey": "goog-tpu-north-star-ticker-2026-10-17",
-      "tabIds": [
-        "goog"
-      ],
-      "title": "FT：Anthropic 以逾 10% 收益率融资租用约 1.5GW Google TPU",
-      "fact": "FT：Anthropic 在最新芯片融资中向 Blackstone 开出两位数收益率；多条转述称资金用于约 1.5GW Google 定制 TPU，以 Anthropic 五年期租赁付款偿还。",
-      "whyItMatters": "TPU 外部需求的量化确认，但客户融资成本上升是 GOOG 云收入质量的观察点。",
-      "counterCase": "若融资缩量或延期，TPU 外部放量节奏放缓。",
-      "affected": [
-        "GOOGL"
-      ],
-      "author": "FT",
-      "publishedAt": "2026-10-17T00:57:26.000Z",
-      "url": "https://x.com/FT/status/2111260264070852755",
-      "tier": "must-read"
+      "tier": "watch",
+      "weeklyRanks": {
+        "tsm": 1
+      },
+      "people": []
     },
     {
       "eventKey": "nvda-huang-sanguine-ticker-2026-10-16",
@@ -244,7 +206,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 1
+        "tsm": 2
       },
       "people": []
     },
@@ -336,7 +298,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 2
+        "tsm": 3
       },
       "people": []
     },
@@ -382,7 +344,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 3
+        "tsm": 4
       },
       "people": []
     },
@@ -405,7 +367,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "tsm": 4
+        "tsm": 5
       },
       "people": []
     },
@@ -604,53 +566,6 @@
       "tier": "must-read",
       "weeklyRanks": {
         "avgo": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "tsm-oct15-call-preview-2026-10-11",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "市场关注台积电 10/15 电话会：AI、2nm 与 2027 capex",
-      "fact": "@SemiconductorsX 称 10 月 15 日电话会市场关注 Q4、AI 需求、2nm 爬坡与 2027 capex；并回顾三季度指引营收约 $44.6–45.8B、毛利率 65–67%。",
-      "whyItMatters": "指引与 capex 是先进制程/CoWoS 供给预期的主阀门，传导至整条 AI 半导体链。",
-      "counterCase": "会前预告；以会后官方数字为准。",
-      "affected": [
-        "TSM",
-        "先进制程",
-        "CoWoS"
-      ],
-      "author": "SemiconductorsX",
-      "publishedAt": "2026-10-11T03:03:28.000Z",
-      "url": "https://x.com/SemiconductorsX/status/2109117651247345915",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "tsm": 5
-      },
-      "people": []
-    },
-    {
-      "eventKey": "goog-gemini-free-tier-auto-2026-10-09",
-      "tabIds": [
-        "goog"
-      ],
-      "title": "免费用户 Gemini Pro 调整为 Auto/Flash-Lite",
-      "fact": "@Granvestor 称自 10 月 9 日起免费 Gemini 走 Auto，多数提示落到 Flash-Lite；Pro/Deep Think 更多放到付费档，并联系 Q2 高额 capex。",
-      "whyItMatters": "产品分层影响推理成本、付费转化与云毛利，是 AI 落地变现的直接观测点。",
-      "counterCase": "地区/账号策略可能不一致；需官方帮助文档核对。",
-      "affected": [
-        "GOOG",
-        "Gemini 变现"
-      ],
-      "author": "Granvestor",
-      "publishedAt": "2026-10-10T14:41:24.000Z",
-      "url": "https://x.com/Granvestor/status/2108930905725166076",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "goog": 1
       },
       "people": []
     }

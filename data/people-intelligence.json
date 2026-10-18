@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-17T12:45:55.067Z",
-  "cutoff": "2026-10-17T20:30:00+08:00",
+  "updatedAt": "2026-10-18T12:05:16.538Z",
+  "cutoff": "2026-10-18T19:43:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,32 +9,171 @@
       {
         "id": "elon-musk",
         "status": "partial",
-        "note": "近窗本人帖多为无文字引用；新增 Axios 访谈快讯（AI/机器人与国债）；其余保留滚动"
+        "note": "已检索本人近24h及7天相关发言并读取主帖；新增2条可回查热度动态。未找到量产、交付或资本开支新增确认；互动排序仅限工具返回候选，非穷尽本人全部发帖。旧窗口内合格内容保留，不假称重新核验。"
       },
       {
         "id": "jensen-huang",
         "status": "partial",
-        "note": "本人与官号近窗无新发；保留滚动"
+        "note": "检索本人账号、采访和活动实录；本人账号无本窗直发。媒体采访片段有准确发帖时间，但原讲话时间不足，未作为本次新增事实入选；保留已有周榜。"
       },
       {
         "id": "donald-trump",
         "status": "partial",
-        "note": "TrumpDailyPosts 近窗为政治口水，按来源规则排除；保留滚动"
+        "note": "已检索TrumpDailyPosts/POTUS/WhiteHouse相关政策，未取得本窗新增可执行政策；新增2条同步源热度动态，非本人直发。互动量来自工具，未穷尽全量排名；旧周榜保留。"
       },
       {
         "id": "trillion-leaders",
         "status": "partial",
-        "note": "近窗万亿高管一手高价值不足（Dell 非本合集名单强制），未凑数；保留滚动"
+        "note": "已查satyanadella/sundarpichai/finkd本人近窗，无新增决策；30天背景不重发。正式公司及每家3至5人名单仍未完成核验，本轮不冒充全体覆盖。"
       },
       {
         "id": "research-reports",
         "status": "partial",
-        "note": "新增 JPM 存储重估、GS 主经纪商去杠杆两条转述（均未见原件）；按 5 条上限轮出 10/13 两条 watch 目标价调整；MS 数据中心 GW 预测见美股讯息洞察"
+        "note": "查询Goldman/JPMorgan/Morgan Stanley/BofA/Nomura假设变化；GS同URL已收录，MS电力缺口仅二级转述，均不新增。未取得新机构原帖，保留原有30天条目。"
       }
-    ],
-    "note": " | 2026-10-17-1500: 近窗增量有限，保留7日滚动；crypto跳过 | 2026-10-17-2030: 周末增量（Anthropic 融资/Jack Clark/银行禁代理/存储研报/Musk Axios）；其余保留7日滚动；crypto跳过"
+    ]
   },
   "items": [
+    {
+      "eventKey": "elon-spacex-anomaly-2026-10-18",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk短评SpaceX的独特性（热度动态）",
+      "fact": "Elon Musk将SpaceX形容为矩阵中的异常。这是一句个人短评，未包含发射、订单、资本开支或产能的新数据。",
+      "whyItMatters": "只作本人账号热度观察，不作为SpaceX基本面或AI需求变化的证据。",
+      "counterCase": "缺少可核验经营增量，不据此产生市场方向或估值判断。",
+      "affected": [
+        "SpaceX公开动态"
+      ],
+      "author": "Elon Musk (@elonmusk)",
+      "publishedAt": "2026-10-18T05:06:07Z",
+      "url": "https://x.com/elonmusk/status/2111685233024053663",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 1646,
+        "reposts": 164,
+        "quotes": 29,
+        "replies": 249,
+        "views": 66195,
+        "capturedAt": "2026-10-18T11:51:00Z",
+        "source": "Grok网页版x_thread_fetch实际返回"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-optimus-cybercab-opinion-2026-10-18",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk：Optimus与Cybercab将构成Tesla的大部分价值（热度动态）",
+      "fact": "Elon Musk表达长期判断，认为Optimus与Cybercab将构成Tesla的大部分价值，并把超级智能、机器人、太阳能和太空运输列为可大规模扩张的方向。本条没有披露新的交付、量产或资本开支数据。",
+      "whyItMatters": "用于观察本人对AI与机器人的资本配置叙事；尚未提供收入、成本或投产增量，不能据此上调经营预测。",
+      "counterCase": "需由交付、单位经济与现金回款验证；观点本身不构成产品已兑现或投资回报保证。",
+      "affected": [
+        "Tesla AI与机器人"
+      ],
+      "author": "Elon Musk (@elonmusk)",
+      "publishedAt": "2026-10-18T05:01:05Z",
+      "url": "https://x.com/elonmusk/status/2111683964721037767",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 13639,
+        "reposts": 1045,
+        "quotes": 245,
+        "replies": 624,
+        "views": 420760,
+        "capturedAt": "2026-10-18T11:51:00Z",
+        "source": "Grok网页版x_thread_fetch实际返回"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "trump-sync-bush-political-comment-2026-10-18",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "同步源评论Bush家族的政治立场（热度动态）",
+      "fact": "TrumpDailyPosts同步源批评Bush家族成员在堕胎等议题上的政治立场。本条是同步搬运，非Donald Trump本人在X直发，也不是一项新政策。",
+      "whyItMatters": "只显示人物来源的可观察互动热度；内容缺少明确产业与经济传导，不进入重点榜。",
+      "counterCase": "政治立场争论不能替代法规、预算或行政执行证据。",
+      "affected": [
+        "Donald Trump公开动态"
+      ],
+      "author": "TrumpDailyPosts（同步源）",
+      "publishedAt": "2026-10-18T04:59:06Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2111683469038297253",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 313,
+        "reposts": 14,
+        "quotes": 0,
+        "replies": 7,
+        "views": 8904,
+        "capturedAt": "2026-10-18T11:51:00Z",
+        "source": "Grok网页版x_thread_fetch实际返回"
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
+    {
+      "eventKey": "trump-sync-global-political-comment-2026-10-18",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "同步源发布全球政治评论（热度动态）",
+      "fact": "TrumpDailyPosts同步源发布了对全球政治动向的意识形态评论。本条为账号同步搬运，非Donald Trump在X本人直发；未给出可执行的贸易、半导体、电力或财政政策。",
+      "whyItMatters": "仅按人物页热度补位规则保留，用于区分政治声量与政策行动；不作为行业或美股方向信号。",
+      "counterCase": "只有出现正式政策文件、执行时间与经济暴露，才可进入政策影响分析。",
+      "affected": [
+        "Donald Trump公开动态"
+      ],
+      "author": "TrumpDailyPosts（同步源）",
+      "publishedAt": "2026-10-18T03:10:19Z",
+      "url": "https://x.com/TrumpDailyPosts/status/2111656089888395450",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 1148,
+        "reposts": 235,
+        "quotes": 17,
+        "replies": 65,
+        "views": 83781,
+        "capturedAt": "2026-10-18T11:51:00Z",
+        "source": "Grok网页版x_keyword_search实际返回"
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
     {
       "weeklyRanks": {},
       "verification": "collector-report",
@@ -85,43 +224,6 @@
       "url": "https://x.com/phithetasigma/status/2111427997429649841",
       "tier": "watch",
       "selection": "rule"
-    },
-    {
-      "eventKey": "elon-anomalies-matrix-heat-2026-10-17",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：“Anomalies in the matrix are inevitable”",
-      "fact": "@elonmusk：发帖 “Anomalies in the matrix are inevitable”。",
-      "whyItMatters": "产品/文化热度；投资传导有限，热度补位。",
-      "counterCase": "无产品路线或财务信息则难量化。",
-      "affected": [
-        "X",
-        "xAI"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-17T04:24:47.000Z",
-      "url": "https://x.com/elonmusk/status/2111312443305558190",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-17T07:13:54.846Z",
-        "source": "x-mcp",
-        "likes": 23442,
-        "reposts": 2518,
-        "replies": 2522,
-        "quotes": 533,
-        "views": 1693727,
-        "bookmarks": 1392
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
     },
     {
       "eventKey": "elon-neuralink-help-millions-2026-10-16",
@@ -201,37 +303,6 @@
       ]
     },
     {
-      "eventKey": "trump-vote-republican-heat-2026-10-16",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "同步源：以遇刺与 Charlie Kirk 遇害为由呼吁投共和党",
-      "fact": "@TrumpDailyPosts：政治动员帖，热度高，无产业政策条款。",
-      "whyItMatters": "热度补位。",
-      "counterCase": "无政策文本。",
-      "affected": [
-        "政治舆论"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-16T19:47:00.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2111182138129502326",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 1705,
-        "reposts": 238,
-        "replies": 53,
-        "quotes": 5,
-        "views": 85537,
-        "bookmarks": 12
-      },
-      "people": []
-    },
-    {
       "eventKey": "elon-southwest-starlink-people-2026-10-16",
       "tabIds": [
         "elon-musk"
@@ -306,96 +377,6 @@
         {
           "name": "Elon Musk",
           "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "trump-immigration-not-better-heat-2026-10-16",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "同步源：称无国家因第三世界与伊斯兰移民变得更好",
-      "fact": "@TrumpDailyPosts：移民政策立场帖，热度高，无直接 AI/半导体/电力投资传导。",
-      "whyItMatters": "热度补位；非高价值产业规则条目。",
-      "counterCase": "无立法文本则难量化市场影响。",
-      "affected": [
-        "政治舆论"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-16T16:21:00.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2111130296292679689",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 1935,
-        "reposts": 289,
-        "replies": 63,
-        "quotes": 8,
-        "views": 101508,
-        "bookmarks": 15
-      },
-      "people": []
-    },
-    {
-      "weeklyRanks": {},
-      "verification": "collector-report",
-      "people": [],
-      "eventKey": "jpm-memory-rerating-research-2026-10-16",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "转述：摩根大通呼吁存储股重估，称供需失衡加深、HBM4E 每 bit 耗晶圆约为 DRAM 4 倍",
-      "fact": "转述 JPMorgan：存储供需失衡加深、超大规模云资本开支上升、单颗加速器 HBM 用量增加，长约框架提高能见度，呼吁存储股重估。",
-      "whyItMatters": "在存储股暴跌周给出供给紧平衡的反向判断，直接关系 MU 与 HBM 链估值。",
-      "counterCase": "若 DRAM 现货回落或 CXMT 产能超预期，判断失效；原报告未见。",
-      "affected": [
-        "MU",
-        "SK hynix",
-        "Samsung"
-      ],
-      "author": "ChillBanking",
-      "publishedAt": "2026-10-16T13:45:00.000Z",
-      "url": "https://x.com/ChillBanking/status/2111091037972181403",
-      "tier": "must-read",
-      "selection": "rule"
-    },
-    {
-      "eventKey": "trump-brazil-bolsonaro-heat-2026-10-16",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "同步源：称 Flavio Bolsonaro 即将成为巴西总统",
-      "fact": "@TrumpDailyPosts：称 9 天后 Trump 盟友 Flavio Bolsonaro 将成为巴西新总统。属政治同步，投资传导弱。",
-      "whyItMatters": "热度动态；地缘贸易间接影响不确定。",
-      "counterCase": "若选举结果不符则失效。",
-      "affected": [
-        "地缘政治舆论"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-16T12:21:00.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2111069898541617661",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 8052,
-        "reposts": 1282,
-        "replies": 355,
-        "quotes": 141,
-        "views": 216210,
-        "bookmarks": 162
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
         }
       ]
     },

@@ -1,0 +1,836 @@
+{
+  "schemaVersion": 1,
+  "id": "manual-cb8dad62-83c2-4836-b5b1-25716bef981d",
+  "trigger": "manual",
+  "cutoff": "2026-10-18T19:43:00+08:00",
+  "windowStart": "2026-10-17T19:43:00+08:00",
+  "collectionPath": "grok-web",
+  "fallback": {
+    "path": "grok-bot",
+    "available": false,
+    "reason": "用户已告知周额度耗尽；项目任务保持暂停。"
+  },
+  "status": "partial",
+  "batches": [
+    {
+      "page": "news",
+      "status": "partial",
+      "checklist": [
+        "第一轮：宏观政策、财政利率、地缘能源物流、AI大公司、市场结构",
+        "第二轮独立检索：半导体、电力、AI落地、资本成本、地缘能源物流、市场结构行为",
+        "拟入选事件原始/权威来源追查",
+        "更正、反证和替代解释"
+      ],
+      "queries": [
+        "(Fed OR Warsh OR rates OR inflation OR CPI) (oil OR energy OR AI OR semiconductor) since:2026-10-17 until:2026-10-18 filter:links",
+        "(CoreWeave OR TSMC OR ASML OR Nvidia OR Microsoft) (debt OR power OR capex OR financing) since:2026-10-17 until:2026-10-18",
+        "from:Reuters OR from:Bloomberg OR from:WSJ OR from:FT (oil OR Fed OR AI OR semiconductor OR power) since:2026-10-17 until:2026-10-18",
+        "(semiconductor OR TSMC OR ASML OR HBM OR chip) (supply OR capacity OR bottleneck OR order)",
+        "(power OR electricity OR grid OR data center OR MW OR GW) (Microsoft OR Google OR Amazon OR Meta OR AI) (contract OR deal OR signed OR PPA)",
+        "(CoreWeave OR Anthropic OR neocloud OR financing OR junk bond OR CDS) (yield OR debt OR capex)",
+        "from:Reuters (Venezuela OR 76 billion OR oil investment) since_time:1792237380 until_time:1792323780",
+        "from:Reuters (Macklem OR Bank of Canada OR inflation outlook) since_time:1792237380 until_time:1792323780",
+        "from:Reuters (Russian OR Ukraine OR steel plants OR power infrastructure) since_time:1792237380 until_time:1792323780",
+        "from:business OR from:Bloomberg (CoreWeave OR CRWV OR junk OR financing) since_time:1792237380 until_time:1792323780",
+        "(TrendForce OR lead times OR DRAM OR memory supply) since_time:1792237380 until_time:1792323780",
+        "(power OR grid OR PPA OR data center OR interconnection) (Microsoft OR Google OR Amazon OR Meta OR signed OR contract) since_time:1792237380 until_time:1792323780",
+        "(AI agent OR terminal payment OR bank OR restrict OR financing) (AI OR OpenAI OR Anthropic) since_time:1792237380 until_time:1792323780",
+        "(Venezuela OR 76 billion OR oil investment) (contract OR signed OR production OR denial OR false OR dispute)",
+        "(Macklem OR Bank of Canada OR BoC) (Fed OR rate hike OR dispute OR correct OR not)",
+        "from:Reuters OR from:Ukrainian OR from:KyivPost (steel OR power) (hit OR strike OR deny)",
+        "CoreWeave (backlog OR revenue OR not default OR still operating OR demand)",
+        "X主帖读取：2111593208027226203、2111555383705637137、2111450931732549818、2111468567614947752、2111488190678786100"
+      ],
+      "candidates": [
+        {
+          "eventKey": "boc-oil-inflation-outlook-2026-10-17",
+          "round": 1,
+          "decision": "selected",
+          "reason": "Reuters原帖，央行明确给出能源冲击到通胀展望的传导；不等同Fed决议。"
+        },
+        {
+          "eventKey": "russia-ukraine-steel-power-claim-2026-10-17",
+          "round": 1,
+          "decision": "selected",
+          "reason": "窗口内Reuters转述具体设施袭击声明，保留俄方单边归因和未独立确认限制。"
+        },
+        {
+          "eventKey": "venezuela-oil-investment-expectation-2026-10-17",
+          "round": 1,
+          "decision": "selected",
+          "reason": "能源供应中期资本开支预期；明确不是已签合同或已增产。"
+        },
+        {
+          "eventKey": "ai-junk-financing-coreweave-bloomberg-2026-10-17",
+          "round": 2,
+          "decision": "selected",
+          "reason": "第二轮融资检索独立追到Bloomberg原帖，连接信用与AI资本开支。"
+        },
+        {
+          "eventKey": "trendforce-cxmt-4f2-repost-2026-10-17",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "窗口内官方帖子指向10月12日旧报道，无证据显示本窗实质新增。"
+        },
+        {
+          "eventKey": "memory-lead-times-20-weeks",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "普通账号引用，未追到所称数字的窗口内TrendForce原始披露。"
+        },
+        {
+          "eventKey": "power-shortfall-secondary-32gw",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "二级转述和非X链接不足以确认本窗新增，未找到原始机构X帖。"
+        },
+        {
+          "eventKey": "anthropic-clark-gdp-repeat",
+          "round": 1,
+          "decision": "excluded",
+          "reason": "前期已收录的同一预测，无新增事实，不因媒体重发刷新。"
+        },
+        {
+          "eventKey": "china-ai-ipo-citi-2026-10-17",
+          "round": 1,
+          "decision": "excluded",
+          "reason": "原帖11:35Z早于本次11:43Z起点，且无本窗新进展。"
+        },
+        {
+          "eventKey": "coreweave-cds-default-odds-secondary",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "收益率、CDS与违约概率只有二手账号，缺原始可核验金融数据。"
+        },
+        {
+          "eventKey": "ai-capex-roi-commentary",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "观点重述，缺本窗新增经营事实。"
+        }
+      ],
+      "gaps": [
+        "初轮整日日期筛选不等于严格窗口；已用1792237380至1792323780补查，仍不能宣称穷尽X。",
+        "半导体交期、电力并网/PPA、AI终端付费及量化仓位未取得窗口内可追溯的新增原始证据。",
+        "俄方袭击说法缺少窗口内乌方或独立来源对具体设施的确认；仅以归因声明收录。",
+        "未检索到四项入选事件的窗口内官方直接反证；这不等于已经证明主张完全真实。",
+        "主帖外链、付费报道全文及原始金融报价未独立读取；未采用普通账号量化行情。",
+        "Grok发现阶段曾混入非X网页链接，已退回要求仅用X补查；非X材料全部未入选，不作为本期证据。"
+      ],
+      "subtasks": [
+        "discovery",
+        "source-verification",
+        "counter-evidence"
+      ],
+      "checklistResults": [
+        {
+          "item": "第一轮宏观政策、财政利率、地缘能源物流、AI大公司与市场结构",
+          "status": "covered",
+          "note": "已执行宽扫和精确窗口补查；从有原始媒体帖的候选中选3条。"
+        },
+        {
+          "item": "第二轮半导体供需与存储",
+          "status": "insufficient",
+          "note": "TrendForce帖指向10月12日旧报道；交期数字只有二级转述，排除。"
+        },
+        {
+          "item": "第二轮电力并网、合同与投产",
+          "status": "insufficient",
+          "note": "未找到窗口内官方新增PPA或并网投产证据；不采用二级交期和功率数字。"
+        },
+        {
+          "item": "第二轮AI落地和资本成本",
+          "status": "covered",
+          "note": "独立融资查询追到Bloomberg business原帖，终端收入仍不足。"
+        },
+        {
+          "item": "第二轮地缘能源物流",
+          "status": "covered",
+          "note": "独立查询已执行；与第一轮同事件去重，不另占洞察名额。"
+        },
+        {
+          "item": "第二轮市场结构与行为",
+          "status": "insufficient",
+          "note": "社媒恐慌与量化仓位线索缺原始数据，不收录。"
+        },
+        {
+          "item": "拟入选事件逐项追源",
+          "status": "covered",
+          "note": "4项均由Grok读取原媒体账号主帖并返回准确时间与链接。"
+        },
+        {
+          "item": "独立反证、更正与替代解释检索",
+          "status": "covered",
+          "note": "实际执行四项针对性查询；未找到官方直接反证，保留归因和关键未知。"
+        }
+      ],
+      "result": {
+        "newFocus": 3,
+        "newInsights": 1,
+        "retainedSelection": {
+          "focus": [
+            "boc-oil-inflation-outlook-2026-10-17",
+            "russia-ukraine-steel-power-claim-2026-10-17",
+            "venezuela-oil-investment-expectation-2026-10-17",
+            "hormuz-saudi-tanker-strikes-weekend-2026-10-17",
+            "anthropic-north-star-blackstone-10pct-2026-10-17"
+          ],
+          "insights": [
+            "ai-junk-financing-coreweave-bloomberg-2026-10-17",
+            "pjm-wholesale-76pct-dc-capacity-2026-10-17",
+            "ms-dc-additions-32gw-2027-2026-10-17",
+            "jpm-memory-rerating-vs-gs-738bn-2026-10-16",
+            "goldman-pb-ai-deleveraging-2026-10-17",
+            "citi-blocks-third-party-ai-agents-2026-10-16",
+            "jack-clark-imf-44t-gdp-2026-10-17",
+            "trump-russia-sanctions-hold-zelensky-2026-10-17",
+            "trump-midterm-emergency-not-ruled-out-2026-10-17"
+          ]
+        }
+      },
+      "acceptedEvidence": [
+        {
+          "eventKey": "boc-oil-inflation-outlook-2026-10-17",
+          "eventTime": null,
+          "eventTimeNote": "报道发布于10月17日；所用帖文没有给出讲话准确时刻。",
+          "sources": [
+            {
+              "url": "https://x.com/Reuters/status/2111555383705637137",
+              "postId": "2111555383705637137",
+              "username": "Reuters",
+              "publishedAt": "2026-10-17T20:30:08Z",
+              "checkedAt": "2026-10-18T11:49:00Z",
+              "excerpt": "Bank of Canada sees sharply higher inflation outlook as oil surges, Macklem says",
+              "verification": "collector-report",
+              "verificationNote": "Grok网页版X检索与主帖读取返回；当前模型未独立直读X或讲话全文。独立反证查询未找到窗口内官方更正。"
+            }
+          ]
+        },
+        {
+          "eventKey": "russia-ukraine-steel-power-claim-2026-10-17",
+          "eventTime": null,
+          "eventTimeNote": "帖文只称隔夜，没有提供设施遇袭准确时刻。",
+          "sources": [
+            {
+              "url": "https://x.com/Reuters/status/2111450931732549818",
+              "postId": "2111450931732549818",
+              "username": "Reuters",
+              "publishedAt": "2026-10-17T13:35:05Z",
+              "checkedAt": "2026-10-18T11:49:00Z",
+              "excerpt": "Russian defence ministry says it hit Ukrainian steel plants, power infrastructure overnight",
+              "verification": "collector-report",
+              "verificationNote": "Grok网页版读取Reuters主帖并针对乌方/独立确认进行查询；未找到直接确认或否认该具体事件。当前模型未独立直读X。"
+            }
+          ]
+        },
+        {
+          "eventKey": "venezuela-oil-investment-expectation-2026-10-17",
+          "eventTime": null,
+          "eventTimeNote": "报道日期为10月17日；原始表态准确时刻未在帖中写明。",
+          "sources": [
+            {
+              "url": "https://x.com/Reuters/status/2111593208027226203",
+              "postId": "2111593208027226203",
+              "username": "Reuters",
+              "publishedAt": "2026-10-17T23:00:26Z",
+              "checkedAt": "2026-10-18T11:49:00Z",
+              "excerpt": "Venezuela expects nearly $76 billion in oil investment over five years, acting president says",
+              "verification": "collector-report",
+              "verificationNote": "Grok网页版读取Reuters主帖，并查询合同/产量/否认材料；未取得合同已签或新增产量的当事人证据。当前模型未独立直读X。"
+            }
+          ]
+        },
+        {
+          "eventKey": "ai-junk-financing-coreweave-bloomberg-2026-10-17",
+          "eventTime": null,
+          "eventTimeNote": "报道发布于10月17日；摘要未给出买家行为变化的统一起始时点。",
+          "sources": [
+            {
+              "url": "https://x.com/business/status/2111468567614947752",
+              "postId": "2111468567614947752",
+              "username": "business",
+              "publishedAt": "2026-10-17T14:45:10Z",
+              "checkedAt": "2026-10-18T11:49:00Z",
+              "excerpt": "Junk bond buyers are increasingly freezing out tech startups looking for financing",
+              "verification": "collector-report",
+              "verificationNote": "Grok网页版X查询与主帖读取返回Bloomberg business原帖；独立反证查询只有普通账号替代解释，无官方违约事实。当前模型未独立直读X或付费全文。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": "people",
+      "status": "partial",
+      "checklist": [
+        "Elon Musk本人或可归因公开发言",
+        "Jensen Huang采访或活动实录",
+        "Donald Trump同步源及政府官方政策",
+        "万亿公司高层：已配置候选的新增决策信息",
+        "机构研报：公开可追溯的假设变化",
+        "各顶部Tab追源、反证与可获取的真实互动量"
+      ],
+      "queries": [
+        "from:elonmusk since_time:1792237380 until_time:1792323780",
+        "from:elonmusk (Optimus OR xAI OR SpaceX OR compute OR capital) since_time:1792237380 until_time:1792323780",
+        "from:JensenHuang since_time:1792237380 until_time:1792323780",
+        "Jensen Huang (interview OR keynote OR says) (AI OR power OR semiconductor)",
+        "from:TrumpDailyPosts (tariff OR trade OR semiconductor OR chip OR power OR energy OR electricity OR fiscal) since_time:1792237380 until_time:1792323780",
+        "from:POTUS OR from:WhiteHouse (semiconductor OR chip OR tariff OR energy OR power)",
+        "from:satyanadella since_time:1792237380 until_time:1792323780",
+        "from:sundarpichai since_time:1792237380 until_time:1792323780",
+        "from:finkd since_time:1792237380 until_time:1792323780",
+        "(Goldman OR JPMorgan OR Morgan Stanley OR BofA OR Nomura) (semiconductor OR AI OR power OR assumption OR forecast)",
+        "X主帖读取：2111683964721037767、2111685233024053663、2111683469038297253、2111507532141453408",
+        "from:elonmusk (Optimus OR Cybercab) (delivery OR production OR mass production OR capex OR retract OR correction)",
+        "Jensen Huang (40 billion OR gigawatt) (revenue opportunity OR opportunity OR potential)",
+        "from:TrumpDailyPosts (bush women OR Socialist Jihad)"
+      ],
+      "candidates": [
+        {
+          "key": "elon-optimus-cybercab-opinion-2026-10-18",
+          "decision": "selected",
+          "reason": "按本Tab真实互动量补位，不进入重点榜"
+        },
+        {
+          "key": "elon-spacex-anomaly-2026-10-18",
+          "decision": "selected",
+          "reason": "按本Tab真实互动量补位，不进入重点榜"
+        },
+        {
+          "key": "trump-sync-global-political-comment-2026-10-18",
+          "decision": "selected",
+          "reason": "按本Tab真实互动量补位，不进入重点榜"
+        },
+        {
+          "key": "trump-sync-bush-political-comment-2026-10-18",
+          "decision": "selected",
+          "reason": "按本Tab真实互动量补位，不进入重点榜"
+        },
+        {
+          "key": "elon-sure-reply",
+          "reason": "仅Sure回复，缺上下文，不以高互动补入。"
+        },
+        {
+          "key": "jensen-gw40b-interview",
+          "reason": "媒体片段可回查但原发言时间未确认，不能证明本窗实质新增；不把收入机会写成已实现收入。"
+        },
+        {
+          "key": "jensen-berlin-narrative",
+          "reason": "无法确认原采访时间，缺新增证据。"
+        },
+        {
+          "key": "gs-prime-desk-repeat",
+          "reason": "旧URL已收录，二级转述无新原始证据。"
+        },
+        {
+          "key": "ms-power-shortfall-secondary",
+          "reason": "未追到机构原帖。"
+        }
+      ],
+      "gaps": [
+        "互动排序只覆盖工具返回候选，未证明全账号最高。",
+        "万亿高层完整名单尚未核验。",
+        "两条研报线索未追到原机构帖。"
+      ],
+      "subtasks": [
+        "discovery",
+        "source-verification",
+        "counter-evidence"
+      ],
+      "checkedAt": "2026-10-18T11:54:00Z",
+      "checklistResults": [
+        {
+          "item": "elon-musk",
+          "status": "insufficient",
+          "note": "已检索本人近24h及7天相关发言并读取主帖；新增2条可回查热度动态。未找到量产、交付或资本开支新增确认；互动排序仅限工具返回候选，非穷尽本人全部发帖。旧窗口内合格内容保留，不假称重新核验。"
+        },
+        {
+          "item": "jensen-huang",
+          "status": "insufficient",
+          "note": "检索本人账号、采访和活动实录；本人账号无本窗直发。媒体采访片段有准确发帖时间，但原讲话时间不足，未作为本次新增事实入选；保留已有周榜。"
+        },
+        {
+          "item": "donald-trump",
+          "status": "insufficient",
+          "note": "已检索TrumpDailyPosts/POTUS/WhiteHouse相关政策，未取得本窗新增可执行政策；新增2条同步源热度动态，非本人直发。互动量来自工具，未穷尽全量排名；旧周榜保留。"
+        },
+        {
+          "item": "trillion-leaders",
+          "status": "insufficient",
+          "note": "已查satyanadella/sundarpichai/finkd本人近窗，无新增决策；30天背景不重发。正式公司及每家3至5人名单仍未完成核验，本轮不冒充全体覆盖。"
+        },
+        {
+          "item": "research-reports",
+          "status": "insufficient",
+          "note": "查询Goldman/JPMorgan/Morgan Stanley/BofA/Nomura假设变化；GS同URL已收录，MS电力缺口仅二级转述，均不新增。未取得新机构原帖，保留原有30天条目。"
+        }
+      ],
+      "counterEvidence": "已独立查询Elon量产/交付/修正、Jensen收入机会与原讲话时间、Trump同步归因；未找到新增确认或收回，不能把无反证当作事实已兑现。",
+      "acceptedEvidence": [
+        {
+          "eventKey": "elon-optimus-cybercab-opinion-2026-10-18",
+          "tabIds": [
+            "elon-musk"
+          ],
+          "title": "Elon Musk：Optimus与Cybercab将构成Tesla的大部分价值（热度动态）",
+          "fact": "Elon Musk表达长期判断，认为Optimus与Cybercab将构成Tesla的大部分价值，并把超级智能、机器人、太阳能和太空运输列为可大规模扩张的方向。本条没有披露新的交付、量产或资本开支数据。",
+          "whyItMatters": "用于观察本人对AI与机器人的资本配置叙事；尚未提供收入、成本或投产增量，不能据此上调经营预测。",
+          "counterCase": "需由交付、单位经济与现金回款验证；观点本身不构成产品已兑现或投资回报保证。",
+          "affected": [
+            "Tesla AI与机器人"
+          ],
+          "author": "Elon Musk (@elonmusk)",
+          "publishedAt": "2026-10-18T05:01:05Z",
+          "url": "https://x.com/elonmusk/status/2111683964721037767",
+          "verification": "collector-report",
+          "tier": "watch",
+          "weeklyRanks": {},
+          "selection": "engagement",
+          "engagement": {
+            "likes": 13639,
+            "reposts": 1045,
+            "quotes": 245,
+            "replies": 624,
+            "views": 420760,
+            "capturedAt": "2026-10-18T11:51:00Z",
+            "source": "Grok网页版x_thread_fetch实际返回"
+          }
+        },
+        {
+          "eventKey": "elon-spacex-anomaly-2026-10-18",
+          "tabIds": [
+            "elon-musk"
+          ],
+          "title": "Elon Musk短评SpaceX的独特性（热度动态）",
+          "fact": "Elon Musk将SpaceX形容为矩阵中的异常。这是一句个人短评，未包含发射、订单、资本开支或产能的新数据。",
+          "whyItMatters": "只作本人账号热度观察，不作为SpaceX基本面或AI需求变化的证据。",
+          "counterCase": "缺少可核验经营增量，不据此产生市场方向或估值判断。",
+          "affected": [
+            "SpaceX公开动态"
+          ],
+          "author": "Elon Musk (@elonmusk)",
+          "publishedAt": "2026-10-18T05:06:07Z",
+          "url": "https://x.com/elonmusk/status/2111685233024053663",
+          "verification": "collector-report",
+          "tier": "watch",
+          "weeklyRanks": {},
+          "selection": "engagement",
+          "engagement": {
+            "likes": 1646,
+            "reposts": 164,
+            "quotes": 29,
+            "replies": 249,
+            "views": 66195,
+            "capturedAt": "2026-10-18T11:51:00Z",
+            "source": "Grok网页版x_thread_fetch实际返回"
+          }
+        },
+        {
+          "eventKey": "trump-sync-global-political-comment-2026-10-18",
+          "tabIds": [
+            "donald-trump"
+          ],
+          "title": "同步源发布全球政治评论（热度动态）",
+          "fact": "TrumpDailyPosts同步源发布了对全球政治动向的意识形态评论。本条为账号同步搬运，非Donald Trump在X本人直发；未给出可执行的贸易、半导体、电力或财政政策。",
+          "whyItMatters": "仅按人物页热度补位规则保留，用于区分政治声量与政策行动；不作为行业或美股方向信号。",
+          "counterCase": "只有出现正式政策文件、执行时间与经济暴露，才可进入政策影响分析。",
+          "affected": [
+            "Donald Trump公开动态"
+          ],
+          "author": "TrumpDailyPosts（同步源）",
+          "publishedAt": "2026-10-18T03:10:19Z",
+          "url": "https://x.com/TrumpDailyPosts/status/2111656089888395450",
+          "verification": "collector-report",
+          "tier": "watch",
+          "weeklyRanks": {},
+          "selection": "engagement",
+          "engagement": {
+            "likes": 1148,
+            "reposts": 235,
+            "quotes": 17,
+            "replies": 65,
+            "views": 83781,
+            "capturedAt": "2026-10-18T11:51:00Z",
+            "source": "Grok网页版x_keyword_search实际返回"
+          }
+        },
+        {
+          "eventKey": "trump-sync-bush-political-comment-2026-10-18",
+          "tabIds": [
+            "donald-trump"
+          ],
+          "title": "同步源评论Bush家族的政治立场（热度动态）",
+          "fact": "TrumpDailyPosts同步源批评Bush家族成员在堕胎等议题上的政治立场。本条是同步搬运，非Donald Trump本人在X直发，也不是一项新政策。",
+          "whyItMatters": "只显示人物来源的可观察互动热度；内容缺少明确产业与经济传导，不进入重点榜。",
+          "counterCase": "政治立场争论不能替代法规、预算或行政执行证据。",
+          "affected": [
+            "Donald Trump公开动态"
+          ],
+          "author": "TrumpDailyPosts（同步源）",
+          "publishedAt": "2026-10-18T04:59:06Z",
+          "url": "https://x.com/TrumpDailyPosts/status/2111683469038297253",
+          "verification": "collector-report",
+          "tier": "watch",
+          "weeklyRanks": {},
+          "selection": "engagement",
+          "engagement": {
+            "likes": 313,
+            "reposts": 14,
+            "quotes": 0,
+            "replies": 7,
+            "views": 8904,
+            "capturedAt": "2026-10-18T11:51:00Z",
+            "source": "Grok网页版x_thread_fetch实际返回"
+          }
+        }
+      ],
+      "sourcePosts": []
+    },
+    {
+      "page": "tickers",
+      "status": "partial",
+      "checklist": [
+        "NVDA",
+        "MU",
+        "INTC",
+        "GOOG",
+        "AVGO",
+        "VRT",
+        "TSM",
+        "各股票新增事实追源与反证"
+      ],
+      "queries": [
+        "7个配置个股分别查询官方公司账号，以及公司名/股票代码与capex、order、demand、HBM、foundry、power、liquid cooling关键词，窗口since_time:1792237380 until_time:1792323780",
+        "from:sedaily_com since_time:1792237380 until_time:1792323780",
+        "X主帖读取：2111763363441312207",
+        "from:sedaily_com (삼성전자 OR Samsung) (HBM OR TSMC OR NVHBM) since_time:1792237380 until_time:1792323780",
+        "\"차세대 HBM\" OR \"NVHBM\" OR \"베이스 다이\" OR \"base die\" from:sedaily_com OR from:sedaily",
+        "from:Samsung OR from:SamsungDSGlobal OR from:SamsungNewsroom (HBM OR TSMC OR next-generation OR next gen) since_time:1792237380 until_time:1792323780",
+        "from:nvidia OR from:tsmc_news OR from:TSMC (HBM OR Samsung OR NVHBM OR base die) since_time:1792237380 until_time:1792323780",
+        "from:sedaily_com (HBM OR TSMC OR 삼성전자) since_time:1792237380 until_time:1792323780",
+        "(삼성전자 OR Samsung) (TSMC OR 티에스엠씨) (HBM OR 차세대) (확인 OR 부인 OR 정정 OR deny OR confirm OR correction OR no comment) since_time:1792237380 until_time:1792323780"
+      ],
+      "candidates": [
+        {
+          "key": "samsung-next-hbm",
+          "decision": "selected",
+          "tabIds": [
+            "tsm"
+          ],
+          "reason": "仅采用原报社X标题支持的合作说法。"
+        },
+        {
+          "key": "nvhbm-3nm-1c-client-micron",
+          "decision": "excluded",
+          "reason": "X原帖无这些细节，外链文章/二级转述不作为本批X事实；不加入NVDA和MU。"
+        },
+        {
+          "key": "avgo-anthropic-financing-repeat",
+          "decision": "excluded",
+          "reason": "旧报道重述，缺本窗新增。"
+        }
+      ],
+      "gaps": [
+        "仅媒体标题，未取得公司确认和量产细节。",
+        "7股均完成计划查询，但工具结果不是对X全量穷尽。",
+        "原帖主张由Grok采集器返回，当前模型未直接读取X。",
+        "Grok发现阶段的个股查询记录含省略号，按返回范围保存说明，不能冒称已保存完整逐条查询语句。"
+      ],
+      "subtasks": [
+        "discovery",
+        "source-verification",
+        "counter-evidence"
+      ],
+      "checkedAt": "2026-10-18T12:00:00Z",
+      "checklistResults": [
+        {
+          "item": "nvda",
+          "status": "insufficient",
+          "note": "已查询NVIDIA本人/公司与权威媒体，未取得本窗公司新增披露。三星与TSMC合作标题未在X中提及NVIDIA，不能补写客户要求，不放入本Tab；保留已有周榜。"
+        },
+        {
+          "item": "mu",
+          "status": "insufficient",
+          "note": "已查询Micron和存储产业报道，未取得本窗新增原始公司披露。韩媒标题未提及Micron，不把外链文章或二级转述细节补入；保留周榜。"
+        },
+        {
+          "item": "intc",
+          "status": "insufficient",
+          "note": "已查Intel及代工/供需权威报道，未取得本窗新增原始事实，保留有效周榜，不把无结果视为穷尽覆盖。"
+        },
+        {
+          "item": "goog",
+          "status": "insufficient",
+          "note": "已查Alphabet股权、资本开支与财务进展，未取得本窗新增公司事实；AI产品留在独立AI批次，不重复铺文。"
+        },
+        {
+          "item": "avgo",
+          "status": "insufficient",
+          "note": "已查Broadcom官方与AI客户链路；Anthropic融资线索为较早报道重述，无本窗实质新增，保留有效周榜。"
+        },
+        {
+          "item": "vrt",
+          "status": "insufficient",
+          "note": "已查Vertiv官方、订单/电力/液冷线索；仅有主题评论，未取得新增订单或投产原始披露，保留有效周榜。"
+        },
+        {
+          "item": "tsm",
+          "status": "insufficient",
+          "note": "首尔经济日报官方原帖标题称三星与TSMC合作制造下一代HBM，已追源和检索反证。仅有标题，无公司确认、制程、订单或量产时间；按媒体报道归因收录1条，保留有效周榜。"
+        }
+      ],
+      "counterEvidence": "独立查询公司和媒体更正；仅回原媒体帖，没有取得官方确认或否认。",
+      "acceptedEvidence": [
+        {
+          "eventKey": "samsung-tsmc-next-hbm-media-2026-10-18",
+          "tabIds": [
+            "tsm"
+          ],
+          "title": "首尔经济日报：三星将与TSMC合作制造下一代HBM",
+          "fact": "首尔经济日报官方账号以独家报道标题称，三星电子将与TSMC共同制造下一代高带宽内存（HBM）。可回查X原帖仅有标题和文章链接，未披露制程、客户、订单规模或量产日期；本条为媒体报道，非公司已确认公告。",
+          "whyItMatters": "下一代HBM若进一步结合存储制造与外部先进逻辑代工，可能影响AI存储链的产能分工和资本开支分配。当前证据只到合作标题，不能据此量化TSMC新增收入或认定其他存储厂商已采用同一路线。",
+          "counterCase": "本窗未查到Samsung、NVIDIA或TSMC相关官方确认、否认或更正。无官方确认不等于报道被否认；需后续公司披露、实际工艺分工与量产节点才能验证产业增量。",
+          "affected": [
+            "TSM",
+            "Samsung",
+            "AI高带宽内存供应链"
+          ],
+          "author": "서울경제신문 / 首尔经济日报 (@sedaily_com)",
+          "publishedAt": "2026-10-18T10:16:35Z",
+          "url": "https://x.com/sedaily_com/status/2111763363441312207",
+          "verification": "collector-report",
+          "tier": "watch",
+          "weeklyRanks": {
+            "tsm": 1
+          }
+        }
+      ],
+      "sourcePosts": []
+    },
+    {
+      "page": "ai",
+      "status": "partial",
+      "checklist": [
+        "OpenAI",
+        "Anthropic",
+        "Google/DeepMind AI产品",
+        "其他实验室、中国AI、政府政策、开源模型",
+        "来源追查与反证"
+      ],
+      "queries": [
+        "from:OpenAI OR from:OpenAIDevs OR from:OpenAINewsroom since_time:1792237380 until_time:1792323780",
+        "from:AnthropicAI since_time:1792237380 until_time:1792323780",
+        "from:GoogleDeepMind OR from:Google since_time:1792237380 until_time:1792323780",
+        "from:deepseek_ai since_time:1792237380 until_time:1792323780",
+        "from:Alibaba_Qwen since_time:1792237380 until_time:1792323780",
+        "(OpenAI OR ChatGPT OR Codex) (model OR API OR release OR launch OR update OR GPT) since_time:1792237380 until_time:1792323780 -filter:replies",
+        "(Anthropic OR Claude) (model OR API OR release OR launch OR update) since_time:1792237380 until_time:1792323780 -filter:replies",
+        "(Gemini OR Google DeepMind OR TPU) (model OR release OR agent OR API) since_time:1792237380 until_time:1792323780 -filter:replies",
+        "(DeepSeek OR Qwen OR Mistral OR Meta AI OR Llama) (model OR release OR update OR API) since_time:1792237380 until_time:1792323780 -filter:replies",
+        "aurora-red-alpha OR aurora-green-alpha OR aurora-blue-alpha since_time:1792237380 until_time:1792323780",
+        "from:deepseek_ai (V4.1 OR Flash-1017 OR Flash OR Search OR Fetch) since_time:1791600000 until_time:1792323780",
+        "X主帖/线程读取：2111656899338973391、2111375640717033777、2111375650414309859",
+        "from:OpenAI OR from:OpenAIDevs OR from:OpenAINewsroom (aurora OR image model OR image) since_time:1792237380 until_time:1792323780",
+        "from:deepseek_ai (retract OR correction OR update OR clarification OR availability OR limit OR outage OR billing OR price OR free) since_time:1792237380 until_time:1792323780",
+        "from:deepseek_ai (V4.1 OR Flash OR Search OR Fetch) since_time:1791375640 until_time:1792323780",
+        "from:OpenAI OR from:OpenAIDevs OR from:OpenAINewsroom (aurora OR red-alpha OR green-alpha OR blue-alpha) since_time:1791600000 until_time:1792323780",
+        "conversation_id:2111375640717033777 OR url:2111375640717033777 OR url:2111375650414309859 (retract OR correction OR not available OR outage OR price change OR billing change)"
+      ],
+      "candidates": [
+        {
+          "key": "openai-aurora-alpha-leak",
+          "decision": "excluded",
+          "reason": "个人API列表观察，未获官方确认，不以泄漏当产品可用事实。"
+        },
+        {
+          "key": "deepseek-community-free-api",
+          "decision": "excluded",
+          "reason": "社区羊毛帖不替代官方原始发布，不重发旧事充24h。"
+        },
+        {
+          "key": "deepseek-v41-flash-search-fetch-2026-10-17",
+          "decision": "selected-weekly-only",
+          "reason": "官方同一发布线程合并，7天内而24h窗外，保留准确旧发布时间。"
+        }
+      ],
+      "gaps": [
+        "四Tab已查询但非X全量穷尽。",
+        "无24h内合格官方新发布；保留旧七天榜，不清空。",
+        "主帖由Grok返回，未独立直读X或实测API。"
+      ],
+      "subtasks": [
+        "discovery",
+        "source-verification",
+        "counter-evidence"
+      ],
+      "checkedAt": "2026-10-18T12:04:00Z",
+      "checklistResults": [
+        {
+          "item": "openai",
+          "status": "insufficient",
+          "note": "已查官方模型、ChatGPT、Codex、API及企业部署；aurora模型ID只有社区个人观察，无官方确认，排除。保留有效七天榜，不把泄漏当正式发布。"
+        },
+        {
+          "item": "anthropic",
+          "status": "insufficient",
+          "note": "已查AnthropicAI与Claude/API/部署/安全线索，本窗未取得官方实质新增；二手政策提及不足，不新增，保留有效七天榜。"
+        },
+        {
+          "item": "goog-ai",
+          "status": "insufficient",
+          "note": "已查Google/GoogleDeepMind与Gemini/TPU/Agent，本窗未取得新增产品能力官方公告，性能讨论不当正式发布，保留有效七天榜。"
+        },
+        {
+          "item": "ai-others",
+          "status": "insufficient",
+          "note": "已查DeepSeek、Qwen、Mistral、MetaAI及政策/开源线索。DeepSeek官方10月17日08:35Z线程早于本轮24h起点，只新增至七天榜，模型与Search/Fetch合并为1个事件。窗口内无官方补充；其余未取得合格新发布。"
+        }
+      ],
+      "counterEvidence": "已独立查询撤回、更正、故障、收费变化及aurora确认；DeepSeek只返回原线程，社区有不可用/故障反馈但影响范围未知。暂免仅限特定服务端工具；官方跑分非独立实测。",
+      "acceptedEvidence": [
+        {
+          "eventKey": "deepseek-v41-flash-search-fetch-2026-10-17",
+          "tabIds": [
+            "ai-others"
+          ],
+          "title": "DeepSeek发布V4.1-Flash-1017与Search/Fetch API（七天重点）",
+          "fact": "DeepSeek官方于10月17日发布V4.1-Flash-1017，称模型已在网页、App和API上线。同一官方线程宣布Search与Fetch API开放；帖文列每个端点每1000次调用0.75美元，并称通过DeepSeek Harness、Claude Code、Codex的服务端工具调用对DeepSeek API用户暂时免费，计费自10月31日16:00 UTC开始。速度、输出长度与跑分提升是厂商宣称，未作独立实测。本次原始发布时间早于24小时窗口，只收录七天重点。",
+          "whyItMatters": "模型与检索工具的联合供给可能降低Agent应用的接入成本；应分别观察模型可用能力、检索质量、任务成功率及收费后的单位经济，而不是由低价或跑分直接推断付费需求和算力收入。",
+          "counterCase": "暂免只适用于帖文限定的服务端工具调用，并非全部Search/Fetch无限免费。社区另有不可用与故障反馈，但未核验影响范围；官方没有窗口内更正也不代表持续可用性已获验证。性能提升仍是厂商宣称。",
+          "affected": [
+            "开源与中国AI",
+            "Agent检索与网页获取",
+            "AI应用单位成本"
+          ],
+          "author": "DeepSeek (@deepseek_ai)",
+          "publishedAt": "2026-10-17T08:35:54Z",
+          "url": "https://x.com/deepseek_ai/status/2111375640717033777",
+          "verification": "collector-report",
+          "tier": "must-read",
+          "weeklyRanks": {
+            "ai-others": 1
+          }
+        }
+      ],
+      "sourcePosts": [
+        {
+          "url": "https://x.com/deepseek_ai/status/2111375640717033777",
+          "publishedAt": "2026-10-17T08:35:54Z",
+          "excerpt": "DeepSeek-V4.1-Flash-1017 is here! Now live on our website, app, and API.",
+          "verification": "collector-report"
+        },
+        {
+          "url": "https://x.com/deepseek_ai/status/2111375650414309859",
+          "publishedAt": "2026-10-17T08:35:57Z",
+          "excerpt": "Search & Fetch APIs are now open to everyone! Each endpoint: $0.75 per 1,000 calls.",
+          "verification": "collector-report"
+        }
+      ]
+    },
+    {
+      "page": "learning",
+      "status": "skipped",
+      "reason": "按既有规则在20:30批次复用当日已验收证据；本次是19:43手动更新。"
+    },
+    {
+      "page": "macro",
+      "status": "unchanged",
+      "checklist": [
+        "检查官方日历数据覆盖、当前季度及低频更新必要性"
+      ],
+      "queries": [
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "https://www.bea.gov/news/schedule/full"
+      ],
+      "gaps": [
+        "本轮只复核Fed与BEA相关Q4日期；BLS、SEC及其他历史事件沿用前次证据，没有重验全部71条。"
+      ],
+      "checklistResults": [
+        {
+          "item": "Q4覆盖与到期检查",
+          "status": "covered",
+          "note": "现有Q4事件覆盖至12月31日。"
+        },
+        {
+          "item": "Fed与BEA低频官方核对",
+          "status": "covered",
+          "note": "Fed列10月27-28日、12月8-9日会议；BEA Q4 PCE列10月29、11月25、12月23日，均与现存条目一致，未修改日历。"
+        }
+      ]
+    },
+    {
+      "page": "earnings",
+      "status": "complete",
+      "checklist": [
+        "刷新Nasdaq上周/本周/下周日历",
+        "逐项处理pendingReview；证据不足标unknown"
+      ],
+      "queries": [
+        "npm run fetch:earnings → https://api.nasdaq.com/api/calendar/earnings?date=YYYY-MM-DD（15个工作日）"
+      ],
+      "gaps": [
+        "10月29日超过现有每日15家上限，TTE/GILD/BUD按脚本记录为未展示候选，不冒称全市场日历。"
+      ],
+      "checklistResults": [
+        {
+          "item": "官方三周日历",
+          "status": "covered",
+          "note": "修正周末起点偏移一天后重新拉取，全部15日成功。"
+        },
+        {
+          "item": "pendingReview",
+          "status": "covered",
+          "note": "0家；已评价结果沿用，未重复评分或把旧结果写成新核验。"
+        }
+      ],
+      "result": {
+        "updatedAt": "2026-10-18T12:04:19.185Z",
+        "counts": {
+          "weeks": 3,
+          "raw": 1263,
+          "important": 80
+        },
+        "weeks": [
+          {
+            "id": "last",
+            "start": "2026-10-12",
+            "end": "2026-10-16",
+            "count": 12
+          },
+          {
+            "id": "current",
+            "start": "2026-10-19",
+            "end": "2026-10-23",
+            "count": 21
+          },
+          {
+            "id": "next",
+            "start": "2026-10-26",
+            "end": "2026-10-30",
+            "count": 47
+          }
+        ],
+        "pendingReview": [],
+        "staleDates": [],
+        "truncated": [
+          {
+            "date": "2026-10-29",
+            "symbols": [
+              "TTE",
+              "GILD",
+              "BUD"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "completedAt": "2026-10-18T12:06:28.071Z",
+  "notes": [
+    "本次为用户手动授权，不推进08:00/15:00/20:30定时覆盖，不证明本机到点自动触发已验收。",
+    "四个X批次严格串行，先发现、再追源、后反证；无直接X、X API或其他采集路径。发现中出现的非X材料和缺乏X正文支持的外链细节均排除。",
+    "按用户要求未运行本地测试、check、build或预览；使用现有发布函数执行数据契约归档，另核对线上资源。",
+    "原始帖子均属Grok采集器转述，当前模型未独立直读X；保留有效旧周榜和持久池，不伪造满额。"
+  ]
+}

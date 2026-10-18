@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "period": "manual-cb8dad62-83c2-4836-b5b1-25716bef981d",
+  "trigger": "manual",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-18T19:43:43+08:00",
+  "updatedAt": "2026-10-18T20:06:59+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "aefbc0ab46b4931d10479e58b60d81205b4b2c6f",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-18T19:43:43+08:00",
+      "detail": "已拉取origin/master；开始时工作区干净。"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-18T19:44:26+08:00",
+      "detail": "已读项目知识库、采集SOP、页面契约；本次检索前清单按七个侧边栏批次单独落盘。"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-18T20:06:58+08:00",
+      "detail": "七批清单均已关闭：四个X批次串行发现/追源/反证；学习按20:30规则跳过；宏观官方抽查无变化；财报官方日历刷新。证据不足保留缺额。"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-18T20:06:59+08:00",
+      "detail": "手动简报3+1、人物4条热度、个股1条媒体标题、AI1条七天背景、财报80条。持久池及有效周榜保留，完整审计已写入。"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-18T20:06:59+08:00",
+      "detail": "用户要求直接提交，不运行本地测试/check/build/预览；来源追溯、反证与发布函数的数据契约仍执行。"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "独立两轮发现、精确窗口追源、反证均已执行；拟收3焦点+1洞察；其余多为窗外旧闻和二级数字。中间结果已保存，末尾统一发布。"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "五顶部Tab分别检索、追源与反证。新增4条真实互动量支持的热度动态，不进重点榜；Jensen旧片段和二级研报落选。旧合格周榜保留。"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "7个配置股票已检索；1条TSMC与三星HBM媒体标题入选，主帖追源与反证完成；未采用外链制程/客户细节，旧周榜保留。"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "四Tab分别查询、追源、反证；aurora未官方确认排除。DeepSeek官方线程合并1事件，仅进入七天榜，非24h新增；原周榜保留。"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "Nasdaq15日全部成功，正确三周共80条精选，pendingReview0；10月29日3家超每日上限已记录。周末起点一天偏移已修正并重拉。"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "低频批次：当前Q4覆盖至年底；直接复核Fed FOMC与BEA Q4 PCE官方日期，与现有数据一致，无需改日程。未重验全部71项，BLS/SEC等沿用前次证据。"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [
+    "用户授权手动运行；信息截止2026-10-18T19:43:00+08:00；按侧边栏串行采集，Grok网页优先，Bot周额度耗尽不可用；不运行本地测试或构建。"
+  ]
+}

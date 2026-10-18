@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-17T12:45:55.067Z",
-  "cutoff": "2026-10-17T20:30:00+08:00",
+  "updatedAt": "2026-10-18T12:05:16.834Z",
+  "cutoff": "2026-10-18T19:43:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,95 +9,49 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "官号近窗无新帖，保留滚动"
+        "note": "已查官方模型、ChatGPT、Codex、API及企业部署；aurora模型ID只有社区个人观察，无官方确认，排除。保留有效七天榜，不把泄漏当正式发布。"
       },
       {
         "id": "anthropic",
         "status": "partial",
-        "note": "新增 North Star 融资、Jack Clark IMF 讲座、加拿大数据中心租约（均为媒体/快讯）"
+        "note": "已查AnthropicAI与Claude/API/部署/安全线索，本窗未取得官方实质新增；二手政策提及不足，不新增，保留有效七天榜。"
       },
       {
         "id": "goog-ai",
         "status": "partial",
-        "note": "官号近窗无新帖，保留滚动"
+        "note": "已查Google/GoogleDeepMind与Gemini/TPU/Agent，本窗未取得新增产品能力官方公告，性能讨论不当正式发布，保留有效七天榜。"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "新增 Citi 禁 AI 代理；G7 演练与 Elorian 仅新闻摘要未收"
+        "note": "已查DeepSeek、Qwen、Mistral、MetaAI及政策/开源线索。DeepSeek官方10月17日08:35Z线程早于本轮24h起点，只新增至七天榜，模型与Search/Fetch合并为1个事件。窗口内无官方补充；其余未取得合格新发布。"
       }
-    ],
-    "note": " | 2026-10-17-1500: 近窗增量有限，保留7日滚动；crypto跳过 | 2026-10-17-2030: 周末增量（Anthropic 融资/Jack Clark/银行禁代理/存储研报/Musk Axios）；其余保留7日滚动；crypto跳过"
+    ]
   },
   "items": [
     {
-      "weeklyRanks": {},
-      "verification": "collector-report",
-      "people": [
-        {
-          "name": "Jack Clark",
-          "intro": "Anthropic联合创始人"
-        }
-      ],
-      "eventKey": "anthropic-jack-clark-44t-ai-tab-2026-10-17",
+      "eventKey": "deepseek-v41-flash-search-fetch-2026-10-17",
       "tabIds": [
-        "anthropic"
+        "ai-others"
       ],
-      "title": "Jack Clark 在 IMF 讲座：内部模型称 AI 或令美国 GDP 2030 年达约 44 万亿美元",
-      "fact": "Anthropic 联合创始人 Jack Clark 在 IMF/世界银行年会称，公司内部模型预测美国 GDP 可由约 30 万亿美元升至 2030 年约 44 万亿美元，并呼吁更强全球 AI 规则。",
-      "whyItMatters": "政策场合的 AI 生产率量化表态，影响监管与估值叙事。",
-      "counterCase": "公司处融资/IPO 期，存在激励偏差；无独立验证。",
+      "title": "DeepSeek发布V4.1-Flash-1017与Search/Fetch API（七天重点）",
+      "fact": "DeepSeek官方于10月17日发布V4.1-Flash-1017，称模型已在网页、App和API上线。同一官方线程宣布Search与Fetch API开放；帖文列每个端点每1000次调用0.75美元，并称通过DeepSeek Harness、Claude Code、Codex的服务端工具调用对DeepSeek API用户暂时免费，计费自10月31日16:00 UTC开始。速度、输出长度与跑分提升是厂商宣称，未作独立实测。本次原始发布时间早于24小时窗口，只收录七天重点。",
+      "whyItMatters": "模型与检索工具的联合供给可能降低Agent应用的接入成本；应分别观察模型可用能力、检索质量、任务成功率及收费后的单位经济，而不是由低价或跑分直接推断付费需求和算力收入。",
+      "counterCase": "暂免只适用于帖文限定的服务端工具调用，并非全部Search/Fetch无限免费。社区另有不可用与故障反馈，但未核验影响范围；官方没有窗口内更正也不代表持续可用性已获验证。性能提升仍是厂商宣称。",
       "affected": [
-        "Anthropic",
-        "AI 监管"
+        "开源与中国AI",
+        "Agent检索与网页获取",
+        "AI应用单位成本"
       ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-17T09:43:39.000Z",
-      "url": "https://x.com/DeItaone/status/2111392687601385604",
-      "tier": "must-read"
-    },
-    {
-      "weeklyRanks": {},
+      "author": "DeepSeek (@deepseek_ai)",
+      "publishedAt": "2026-10-17T08:35:54Z",
+      "url": "https://x.com/deepseek_ai/status/2111375640717033777",
       "verification": "collector-report",
-      "people": [],
-      "eventKey": "anthropic-canada-dc-lease-ai-tab-2026-10-17",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Reuters：Anthropic 签下首个加拿大数据中心租约",
-      "fact": "Reuters：Anthropic 签署其首个加拿大数据中心的租约；规模与条款在所用帖文中未披露。",
-      "whyItMatters": "算力地域扩张与主权/合规布局的信号。",
-      "counterCase": "规模未知，单独影响有限。",
-      "affected": [
-        "Anthropic",
-        "加拿大数据中心"
-      ],
-      "author": "Reuters",
-      "publishedAt": "2026-10-17T01:20:10.000Z",
-      "url": "https://x.com/Reuters/status/2111265984703082730",
-      "tier": "watch"
-    },
-    {
-      "weeklyRanks": {},
-      "verification": "collector-report",
-      "people": [],
-      "eventKey": "anthropic-north-star-ai-tab-2026-10-17",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "FT：Anthropic 为 TPU 融资向 Blackstone 开出两位数收益率",
-      "fact": "FT：Anthropic 在最新约 600 亿美元芯片融资（Project North Star）中向 Blackstone 提供两位数收益率；FirstSquawk 转述称以五年期芯片租赁付款偿还。",
-      "whyItMatters": "头部实验室算力融资成本上行，最终影响 API 定价与毛利。",
-      "counterCase": "若认购踊跃、利率下修则压力缓和。",
-      "affected": [
-        "Anthropic",
-        "Google TPU",
-        "Blackstone"
-      ],
-      "author": "FT",
-      "publishedAt": "2026-10-17T00:57:26.000Z",
-      "url": "https://x.com/FT/status/2111260264070852755",
-      "tier": "must-read"
+      "tier": "must-read",
+      "weeklyRanks": {
+        "ai-others": 1
+      },
+      "people": []
     },
     {
       "eventKey": "anthropic-safety-bill-ai-tab-2026-10-16",
@@ -121,27 +75,6 @@
         "anthropic": 2
       },
       "people": []
-    },
-    {
-      "weeklyRanks": {},
-      "verification": "collector-report",
-      "people": [],
-      "eventKey": "citi-blocks-ai-agents-ai-others-2026-10-16",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "FT：Citi 禁止第三方 AI 代理登录客户账户或直接交易",
-      "fact": "FT 独家：Citigroup 不允许第三方 AI 代理或助手登录客户账户或在其数字银行平台内直接交易，是最新限制 AI 代理的美国大行。",
-      "whyItMatters": "消费级 AI 代理在金融场景的落地受制度阻力，也涉及银行存款利差保护。",
-      "counterCase": "银行若推出授权接口则只是过渡。",
-      "affected": [
-        "AI 代理产品",
-        "美国大型银行"
-      ],
-      "author": "FT",
-      "publishedAt": "2026-10-16T20:40:07.000Z",
-      "url": "https://x.com/FT/status/2111195504503595051",
-      "tier": "must-read"
     },
     {
       "eventKey": "openai-astra-pro-ai-tab-2026-10-16",
@@ -390,7 +323,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 1
+        "ai-others": 2
       },
       "people": []
     },
@@ -495,41 +428,12 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "ai-others": 2
+        "ai-others": 4
       },
       "people": [
         {
           "name": "Mark Zuckerberg",
           "intro": "Meta创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "ai-others-msft-maia-300-primary-inference-2026-10-12",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "微软宣布 Maia 300 并将自研硅定为主推理系统",
-      "fact": "@Microsoft / @satyanadella 宣布 Maia 300，并称自下一自然年起将 Maia 系列扩至多吉瓦、作为自家产品与服务主推理系统，宣称相对领先 GPU 系统约 +40% tokens/MW。",
-      "whyItMatters": "大厂推理侧自研硅改变云 AI 成本曲线与对第三方加速器依赖，是 AI 基础设施竞争的关键产品事实。",
-      "counterCase": "能效与 2027 部署进度待验证；训练侧可能仍用 GPU。",
-      "affected": [
-        "Microsoft Azure",
-        "NVIDIA",
-        "自定义加速器赛道"
-      ],
-      "author": "Microsoft",
-      "publishedAt": "2026-10-12T13:16:10.000Z",
-      "url": "https://x.com/Microsoft/status/2109634232163471782",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "ai-others": 4
-      },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
         }
       ]
     },

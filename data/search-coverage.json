@@ -398,6 +398,35 @@
         "(breadth OR outflows OR positioning OR CTA OR \"Goldman Sachs\" OR \"hedge funds\") (stocks OR semiconductors)"
       ],
       "recordedAt": "2026-10-17T12:46:03.399Z"
+    },
+    {
+      "jobId": "manual-cb8dad62-83c2-4836-b5b1-25716bef981d",
+      "page": "news",
+      "trigger": "manual",
+      "start": "2026-10-17T19:43:00+08:00",
+      "end": "2026-10-18T19:43:00+08:00",
+      "status": "partial",
+      "queries": [
+        "(Fed OR Warsh OR rates OR inflation OR CPI) (oil OR energy OR AI OR semiconductor) since:2026-10-17 until:2026-10-18 filter:links",
+        "(CoreWeave OR TSMC OR ASML OR Nvidia OR Microsoft) (debt OR power OR capex OR financing) since:2026-10-17 until:2026-10-18",
+        "from:Reuters OR from:Bloomberg OR from:WSJ OR from:FT (oil OR Fed OR AI OR semiconductor OR power) since:2026-10-17 until:2026-10-18",
+        "(semiconductor OR TSMC OR ASML OR HBM OR chip) (supply OR capacity OR bottleneck OR order)",
+        "(power OR electricity OR grid OR data center OR MW OR GW) (Microsoft OR Google OR Amazon OR Meta OR AI) (contract OR deal OR signed OR PPA)",
+        "(CoreWeave OR Anthropic OR neocloud OR financing OR junk bond OR CDS) (yield OR debt OR capex)",
+        "from:Reuters (Venezuela OR 76 billion OR oil investment) since_time:1792237380 until_time:1792323780",
+        "from:Reuters (Macklem OR Bank of Canada OR inflation outlook) since_time:1792237380 until_time:1792323780",
+        "from:Reuters (Russian OR Ukraine OR steel plants OR power infrastructure) since_time:1792237380 until_time:1792323780",
+        "from:business OR from:Bloomberg (CoreWeave OR CRWV OR junk OR financing) since_time:1792237380 until_time:1792323780",
+        "(TrendForce OR lead times OR DRAM OR memory supply) since_time:1792237380 until_time:1792323780",
+        "(power OR grid OR PPA OR data center OR interconnection) (Microsoft OR Google OR Amazon OR Meta OR signed OR contract) since_time:1792237380 until_time:1792323780",
+        "(AI agent OR terminal payment OR bank OR restrict OR financing) (AI OR OpenAI OR Anthropic) since_time:1792237380 until_time:1792323780",
+        "(Venezuela OR 76 billion OR oil investment) (contract OR signed OR production OR denial OR false OR dispute)",
+        "(Macklem OR Bank of Canada OR BoC) (Fed OR rate hike OR dispute OR correct OR not)",
+        "from:Reuters OR from:Ukrainian OR from:KyivPost (steel OR power) (hit OR strike OR deny)",
+        "CoreWeave (backlog OR revenue OR not default OR still operating OR demand)",
+        "X主帖读取：2111593208027226203、2111555383705637137、2111450931732549818、2111468567614947752、2111488190678786100"
+      ],
+      "recordedAt": "2026-10-18T12:05:16.983Z"
     }
   ]
 }
