@@ -6,6 +6,7 @@ test('每次定时触发按侧边栏 Tab 形成隔离批次', () => {
   const plan = createPlan('2026-10-18T15:00:00+08:00');
   assert.deepEqual(plan.batches.map(item => item.id), ['news','people','tickers','ai','learning','macro','earnings']);
   assert.ok(plan.batches.every(item => item.isolated));
+  assert.deepEqual(plan.batches.find(item => item.id === 'news').subtasks, ['discovery','source-verification','counter-evidence']);
   assert.equal(plan.batches.find(item => item.id === 'learning').action, 'skip');
   assert.equal(plan.batches.find(item => item.id === 'macro').action, 'check-due');
 });
