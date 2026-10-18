@@ -9,6 +9,6 @@ jobs:
       - name: Explain permitted collection paths
         run: |
           echo 'X API collection is disabled by the user rule in AGENTS.md.'
-          echo 'Use the local Grok Bot App first; only if it fails use Grok web.'
-          echo 'Run the local website with npm run dev:updates.'
+          echo 'Use logged-in Grok web first; only if unavailable or insufficient and quota is available use Grok Bot.'
+          echo 'Collection is orchestrated locally in isolated sidebar-tab batches; the website has no update endpoint.'
           exit 0

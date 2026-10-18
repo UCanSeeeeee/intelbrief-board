@@ -5,6 +5,7 @@
   "description": "Auditable X-only intelligence dashboard with explainable credibility scoring",
   "scripts": {
     "agent:enter": "node scripts/agent-entry.js",
+    "collection:plan": "node scripts/collection-plan.js",
     "fetch": "node scripts/fetch-x.js && node scripts/build-intelligence.js",
     "fetch:x": "node scripts/fetch-x.js",
     "import:x": "node scripts/import-x.js",

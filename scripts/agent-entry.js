@@ -18,10 +18,11 @@ const ROUTES = {
 };
 const contentTasks = new Set(['news','people','tickers','ai','learning','earnings','macro']);
 function entry(role, task, root = ROOT) {
-  if (!['gpt','grok'].includes(role)) throw new Error('必须明确角色 --role gpt 或 --role grok；这只是路由声明，不授予权限。');
+  if (!['gpt','grok','local'].includes(role)) throw new Error('必须明确角色 --role gpt、--role grok 或 --role local；这只是路由声明，不授予权限。');
   if (!Object.hasOwn(ROUTES, task)) throw new Error('未知任务；可选：' + Object.keys(ROUTES).join(', '));
-  if (role === 'gpt' && contentTasks.has(task)) throw new Error('内容执行只由 Grok Bot「X+github」负责；GPT仅维护代码，查执行记录请用 --task status。');
+  if (role === 'gpt' && contentTasks.has(task)) throw new Error('内容执行由当前采用的运营执行者负责；GPT代码维护角色不能直接进入内容路线，查执行记录请用 --task status。');
   if (role === 'grok' && task === 'code') throw new Error('代码功能维护交给GPT；Grok仅处理内容运营与交接。');
+  if (role === 'local' && task === 'code') throw new Error('本地内容执行角色不处理代码路线；代码功能维护使用 --role gpt。');
   const docs = ['AGENTS.md','CONTEXT.md','TASKS.md',...ROUTES[task]];
   if (contentTasks.has(task)) {
     const config = JSON.parse(fs.readFileSync(path.join(root,'config/research-guidance.json'),'utf8'));
@@ -37,12 +38,13 @@ function entry(role, task, root = ROOT) {
 function main(args) {
   const options = {};
   for (let i = 0; i < args.length; i += 2) {
-    if (!['--role','--task'].includes(args[i]) || !args[i+1]) throw new Error('用法：npm run agent:enter -- --role gpt|grok --task status|code|handoff|news|people|tickers|ai|learning|earnings|macro');
+    if (!['--role','--task'].includes(args[i]) || !args[i+1]) throw new Error('用法：npm run agent:enter -- --role gpt|grok|local --task status|code|handoff|news|people|tickers|ai|learning|earnings|macro');
     options[args[i].slice(2)] = args[i+1];
   }
   const result = entry(options.role, options.task || 'status');
   const git = (...a) => execFileSync('git', a, {cwd:ROOT,encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
-  console.log(`角色：${result.role === 'gpt' ? 'GPT代码维护' : 'Grok Bot内容运营'}；任务：${result.task}`);
+  const roleLabel = result.role === 'gpt' ? 'GPT代码维护' : result.role === 'local' ? '本地内容运营' : 'Grok Bot内容运营';
+  console.log(`角色：${roleLabel}；任务：${result.task}`);
   console.log('先读以下入口，再按本次授权推进：\n' + result.files.map(f => '- ' + f).join('\n'));
   console.log(`分支：${git('branch','--show-current')}；提交：${git('rev-parse','--short','HEAD')}`);
   console.log('工作区：\n' + (git('status','--short') || '干净'));

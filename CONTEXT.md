@@ -27,13 +27,13 @@ GitHub：`UCanSeeeeee/intelbrief-board`（public；公开只读与 Fork，不等
 ## 架构
 
 ```text
-Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → GitHub → Cloudflare
-    失败时由同一Bot使用Grok网页版；GPT只维护代码，不参与内容运营
+本机Codex定时总编排 → 按侧边栏Tab独立批次 → 校验/去重/归档 → GitHub → Cloudflare
+    X批次优先Grok网页版；网页不可用或覆盖不足且额度可用时才尝试Grok Bot
 ```
 
-前端无框架，Cloudflare Pages负责只读展示。上述是目标执行归属，不代表调度已跑通；当前验收事实见 [Grok运营记录](docs/GROK_BOT_OPERATIONS.md)。网页“更新”按钮、登录、D1 队列、Webhook 与旧执行器已于 2026-10-16 删除；这不影响 Grok Bot 的既有云端内容任务。
+前端无框架，Cloudflare Pages负责只读展示。上述是当前执行归属，不代表新本机调度已完成连续验收；当前证据见 [运营记录](docs/GROK_BOT_OPERATIONS.md)。网页“更新”按钮、登录、D1队列与网页执行器仍保持删除，本次不恢复网页触发入口。
 
-固定由「X+github」执行；旧「推特信息获取」仅保留历史。旧Codex调度已暂停，电脑端Codex执行器已停用，无GPT故障接管。
+2026-10-18起因Grok Bot周额度耗尽，「X+github」主例行任务与Webhook均暂停；旧「推特信息获取」仅保留历史。当前本机调度按 `config/collection-batches.json` 分批执行，额度恢复不自动双开。
 
 ## 关键文件
 
@@ -45,7 +45,8 @@ Grok Bot「X+github」自身云端调度/检索 → 校验/去重/归档 → Git
 
 - `docs/PEOPLE_INTELLIGENCE_ROADMAP.md`：具体人物顶部 Tab、万亿美元公司高层、机构研报合集、AI 三层研究方向及降噪规则的待办与产品规划。
 - `docs/STOCK_BRIEF.md`：美股每天北京时间 08:00 / 15:00 / 20:30 的 5+10 简报规则与定时执行约定，第二组使用「多学科认知与夜雨知识库」。接手简报任务先读此文件。
-- `config/research-guidance.json`：项目知识与采集SOP的机器入口；更新提示词会读取它指向的文件并强制注入每次美股和人物采集。
+- `config/research-guidance.json`：项目知识与采集SOP的机器入口；每个X批次分别读取。
+- `config/collection-batches.json` / `npm run collection:plan -- 截止时间`：把一次定时触发拆成侧边栏Tab级批次；各批次独立清单、提示词、候选、缺口和结果，末尾才统一发布。
 - `knowledge/US_EQUITY_RESEARCH_KB.md`：用户关注点的项目内当前版本，固定半导体、电力、AI落地及宏观、地缘、市场结构、推理与反证框架。
 - `knowledge/GROK_X_COLLECTION_SOP.md`：把知识库转换成两轮检索、追源、反证、准入、去重、选择和审计记录的执行流程。
 - `us-equity-x-brief-quality`：共享卡片质量技能，统一作者、中文信息摘要、事件时间、反向条件与原帖链接；采集过程只进入证据层。当前 0.1.0 在共享技能库孵化并已链接到本机 Codex。
@@ -84,7 +85,7 @@ npm run build
 npm run agent:enter -- --role gpt --task code
 ```
 
-内容导入仅由Grok执行；旧X API脚本不得调用。按用户要求目前不启动本地网站。代码测试使用夹具，不触发真实采集。
+内容导入由当前本机内容运营执行；旧X API脚本不得调用。按用户要求不启动本地网站。代码测试使用夹具，不触发真实采集。
 
 ## 部署
 

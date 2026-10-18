@@ -1,0 +1,20 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const {createPlan} = require('../scripts/collection-plan');
+
+test('每次定时触发按侧边栏 Tab 形成隔离批次', () => {
+  const plan = createPlan('2026-10-18T15:00:00+08:00');
+  assert.deepEqual(plan.batches.map(item => item.id), ['news','people','tickers','ai','learning','macro','earnings']);
+  assert.ok(plan.batches.every(item => item.isolated));
+  assert.equal(plan.batches.find(item => item.id === 'learning').action, 'skip');
+  assert.equal(plan.batches.find(item => item.id === 'macro').action, 'check-due');
+});
+
+test('20:30 批次单独生成每日学习任务', () => {
+  const plan = createPlan('2026-10-18T20:30:00+08:00');
+  assert.equal(plan.batches.find(item => item.id === 'learning').action, 'run');
+});
+
+test('拒绝非配置时点，防止把临时运行误作定时期次', () => {
+  assert.throws(() => createPlan('2026-10-18T16:00:00+08:00'), /不支持的批次/);
+});

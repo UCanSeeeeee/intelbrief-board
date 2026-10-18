@@ -15,11 +15,13 @@ test('every allowed agent route resolves real project context',()=>{
   }
   assert.ok(entry('grok','news').files.includes('knowledge/GROK_X_COLLECTION_SOP.md'));
   assert.ok(entry('grok','learning').files.includes('docs/DAILY_LEARNING.md'));
+  assert.ok(entry('local','news').files.includes('knowledge/GROK_X_COLLECTION_SOP.md'));
 });
 
 test('entry rejects wrong execution role and unknown tasks',()=>{
-  assert.throws(()=>entry('gpt','news'),/内容执行只由 Grok/);
+  assert.throws(()=>entry('gpt','news'),/GPT代码维护角色/);
   assert.throws(()=>entry('grok','code'),/代码功能维护交给GPT/);
+  assert.throws(()=>entry('local','code'),/本地内容执行角色/);
   assert.throws(()=>entry('unknown','status'),/必须明确角色/);
   assert.throws(()=>entry('gpt','unknown'),/未知任务/);
 });
@@ -41,7 +43,7 @@ test('agent instructions fit discovery budget and preserve synchronization rules
   assert.match(instructions,/原仓库最多作为只读 `upstream`/);
   assert.match(instructions,/git pull --ff-only origin master/);
   assert.match(instructions,/git push origin HEAD:master/);
-  assert.match(instructions,/不得定时采集/);
+  assert.match(instructions,/按侧边栏Tab拆成独立批次/);
   for(const file of ['AGENTS.md','FORK_AGENT.md','TASKS.md','docs/AGENT_ENTRY.md','docs/GROK_BOT_OPERATIONS.md']){
     const content=fs.readFileSync(path.join(root,file),'utf8');
     for(const match of content.matchAll(/\]\(([^)]+)\)/g)){

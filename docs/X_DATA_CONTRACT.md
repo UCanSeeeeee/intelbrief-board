@@ -11,7 +11,7 @@
 
 ## 允许的输入
 
-来源硬规则统一见 [AGENTS.md](../AGENTS.md)：先本机Grok Bot App，失败时才使用Grok网页版。不得从X API、直访X或其他采集器取得新数据。历史脚本与字段不构成例外。
+来源硬规则统一见 [AGENTS.md](../AGENTS.md)：先使用已登录Grok网页版，网页不可用或覆盖不足且额度可用时才尝试Grok Bot。不得从X API、直访X或其他采集器取得新数据。历史脚本与字段不构成例外。
 
 上述两条路径的结构化结果可使用 `npm run import:x -- path/to/export.json` 导入；注明实际获取路径与Grok返回、未独立直读状态。
 

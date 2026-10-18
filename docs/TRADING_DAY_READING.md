@@ -11,7 +11,7 @@
 - 不因页面时钟越过截止而清空；失败保留上一池。延续事件经真实复核可`keep`，被证伪/替代/失效则有依据退出。不凑数、不无限刷新旧闻时间。5+10为精选上限，其他仍有效条目完整展开保留。
 - 页面称“最新汇总（跨期保留）”，不展示美国交易日、开盘或收盘门槛。显示原帖事件时间、首次收录和真实最近核验；收录周末消息不等于周一发生，也不等于已执行新采集。
 - `readingSelection`仍按跨期有效池最多5+10重排。`readingDecisions`仍为`{eventKey,action,reason,sourceUrl,checkedAt}`，动作keep/retracted/superseded/resolved，必须真实原帖依据与核验时间。既有去重、证据及冻结归档规则不变。
-- 发布仍运行brief:validate、brief:publish、test/check/build，明确提交归档、目录、reading-board、实际coverage及必要财报数据，核验线上后才称发布成功。其他栏目、调度频率及Grok唯一内容执行者不变。
+- 发布仍运行brief:validate、brief:publish、test/check/build，明确提交归档、目录、reading-board、实际coverage及必要财报数据，核验线上后才称发布成功。其他栏目与调度频率不变；当前执行者和分批规则以AGENTS.md为准。
 
 实现：`scripts/lib/reading-period.js`，policy=`beijing-batches-v1`；池内`readingDate/retainUntil`是产品展示元数据。旧池迁移不改新闻正文、原帖时间、firstSeenAt、lastCheckedAt、generatedAt或检索记录，不制造新一期，不触发新闻采集。旧交易所日历模块保留供历史追溯，不再用于讯息窗口和保留。
 
