@@ -33,7 +33,7 @@ export async function fetchSentiment({ fetcher = fetch, timeoutMs = 5000 } = {})
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), timeoutMs);
     try {
-      const response = await fetcher(url, { headers: { Accept: 'application/json' }, signal: controller.signal, redirect: 'error' });
+      const response = await fetcher(url, { headers: { Accept: 'application/json', 'User-Agent': 'intelbrief-board/1.0 (public market sentiment)' }, signal: controller.signal, redirect: 'manual' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       // The CNN payload is small; reject oversized or non-JSON upstream responses.
       if (Number(response.headers.get('Content-Length') || 0) > 2000000) throw new Error('响应过大');
@@ -46,7 +46,9 @@ export async function fetchSentiment({ fetcher = fetch, timeoutMs = 5000 } = {})
       errors.push({ source: method, message: error.name === 'AbortError' ? '请求超时' : error.message });
     } finally { clearTimeout(timeout); }
   }
-  throw new Error('CNN及公开镜像均未取得有效数据');
+  const error = new Error('CNN及公开镜像均未取得有效数据');
+  error.failures = errors;
+  throw error;
 }
 
 async function readSnapshot(response) {
@@ -74,8 +76,8 @@ export async function sentimentResponse(request, env, ctx) {
       if (ctx?.waitUntil) ctx.waitUntil(save); else await save;
     }
     return respond(data);
-  } catch {
-    if (previous) return respond({ ...previous, retrieval: { status: 'failed', message: '本次获取失败，沿用最近保存值' } });
+  } catch (error) {
+    if (previous) return respond({ ...previous, retrieval: { status: 'failed', message: '本次获取失败，沿用最近保存值', errors: error.failures || [] } });
     return respond({ schemaVersion: 1, unavailable: true, message: '暂未取得有效指数，请查看CNN原站' }, 503);
   }
 }
