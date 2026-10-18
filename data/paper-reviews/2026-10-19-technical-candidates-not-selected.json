@@ -1,0 +1,119 @@
+{
+  "notForPublication": true,
+  "decision": "未发布的技术向候选。用户明确论文选题偏健康、生活、统计与反直觉；保留候选来源供追溯，不进入论文发布载荷。",
+  "reviews": [
+    {
+      "id": "nature-2026-10-19-accel",
+      "journal": "nature",
+      "journalName": "Nature",
+      "doi": "10.1038/s41586-023-06558-8",
+      "selectedDate": "2026-10-19",
+      "publishedDate": "2023-10-25",
+      "authors": [
+        "Yitong Chen"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Yitong Chen",
+          "intro": "光电计算研究者"
+        }
+      ],
+      "title": "让光与模拟电路接力，减少视觉计算的转换开销",
+      "originalTitle": "All-analog photoelectronic chip for high-speed vision tasks",
+      "category": "半导体 · 光电计算",
+      "stage": "实验室芯片原型与限定视觉任务",
+      "selectionKind": "classic",
+      "takeaway": "光计算的优势可能来自整条信号路径的改造，而不只是单个计算单元更快。",
+      "summary": {
+        "problem": "光信号最终仍要转为数字，转换与后处理可能吃掉光计算的能效优势。",
+        "method": "ACCEL先用衍射光学模块提取图像特征，再让光电流直接进入模拟电子计算，减少大量模数转换。",
+        "findings": "研究报告原型系统能效74.8千万亿次运算／秒／瓦，并展示特定视觉分类与时序任务；其中数值模拟结果与硬件实验不能混作一项实测。",
+        "limitations": "本次未完整核对补充材料、能耗边界和全部比较条件，不能据此认定通用训练优于GPU或已经具备量产经济性。",
+        "meaning": "观察新算力路线，应同时看数据转换、外围电路、精度及任务范围，不能只比峰值运算次数。"
+      },
+      "accessLevel": "partial",
+      "accessNote": "已核对期刊公开摘要及架构、视觉任务正文节选；未通读全部方法与补充材料。属于经典回顾，不是今日新发表。",
+      "paperUrl": "https://www.nature.com/articles/s41586-023-06558-8",
+      "sources": [
+        {
+          "label": "Nature公开内容",
+          "url": "https://www.nature.com/articles/s41586-023-06558-8"
+        },
+        {
+          "label": "PubMed书目信息",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37880362/"
+        }
+      ]
+    },
+    {
+      "id": "science-2026-10-19-taichi",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.adl1203",
+      "selectedDate": "2026-10-19",
+      "publishedDate": "2024-04-11",
+      "publicationDateNote": "在线发表；卷期日期为2024-04-12",
+      "authors": [
+        "Zhihao Xu"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Zhihao Xu",
+          "intro": "光子芯片研究者"
+        }
+      ],
+      "title": "把光子计算从小网络推向更大规模",
+      "originalTitle": "Large-scale photonic chiplet Taichi empowers 160-TOPS/W artificial general intelligence",
+      "category": "半导体 · 光子芯片",
+      "stage": "实验室光子芯片与分类、生成任务演示",
+      "selectionKind": "classic",
+      "takeaway": "扩大光计算规模既要设计器件，也要处理误差与分布式计算；任务演示不等于通用智能已实现。",
+      "summary": {
+        "problem": "光子电路虽有速度与能效潜力，误差及扩展难度会限制可运行的模型规模。",
+        "method": "Taichi把衍射与干涉光学结合，并采用分布式架构来扩展神经网络。",
+        "findings": "公开摘要报告160万亿次运算／秒／瓦的能效，并在1623类Omniglot测试中达到91.89%准确率，还演示了生成任务。",
+        "limitations": "目前只核对公开摘要，尚未核验完整能耗口径、误差校准及基线条件；不能把这些结果等同于大语言模型能力或已实现AGI。",
+        "meaning": "应进一步看大网络扩展后精度、外围功耗与可编程性是否仍成立，再讨论对现有算力路线的影响。"
+      },
+      "accessLevel": "abstract",
+      "accessNote": "Science官网本次返回403；依据PubMed收录摘要及研究机构公开书目核对，未读取期刊全文，不补写摘要未给出的实验细节。",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.adl1203",
+      "sources": [
+        {
+          "label": "PubMed公开摘要",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38603505/"
+        },
+        {
+          "label": "研究机构书目与摘要",
+          "url": "https://researchportal.hkust.edu.hk/en/publications/large-scale-photonic-chiplet-taichi-empowers-160-topsw-artificial/"
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "nature": {
+      "date": "2026-10-19",
+      "checkedAt": "2026-10-18T16:59:49.790Z",
+      "status": "partial",
+      "note": "已选1篇经典光电计算论文；只核对公开摘要与正文节选，补充材料未完整核对。",
+      "queries": [
+        "site.nature.com/articles \"Fully hardware-implemented memristor convolutional neural network\"",
+        "site.science.org \"All-analog photoelectronic chip for high-speed vision tasks\"（核对发现实际为Nature正刊，按真实期刊归类）"
+      ],
+      "discoveryPath": "Grok因电脑锁屏不可用，直接期刊公开资料发现与核验"
+    },
+    "science": {
+      "date": "2026-10-19",
+      "checkedAt": "2026-10-18T16:59:49.790Z",
+      "status": "partial",
+      "note": "已选1篇经典光子计算论文；官网403，明确标摘要速读，不冒称全文已读。",
+      "queries": [
+        "\"Large-scale photonic chiplet Taichi\" Science",
+        "site.science.org/doi \"Taichi\" \"2024\""
+      ],
+      "discoveryPath": "Grok因电脑锁屏不可用，使用PubMed及研究机构公开摘要核验"
+    }
+  }
+}

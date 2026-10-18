@@ -6,7 +6,7 @@
 
 首次接手读[AGENTS](AGENTS.md)、本文、[待办](TASKS.md)，再按需读取专题。修改前拉取，完成审查差异后提交推送，不默认执行本地测试、check、build或预览。当前文件只维护有效状态，修改历史按需查Git。
 
-- X讯息只走Grok网页版，唯一备用是额度可用时的Grok Bot；不直访X、用X API或普通搜索补采。财报与宏观日历适用已授权官方来源例外。
+- X讯息只走Grok网页版，唯一备用是额度可用时的Grok Bot；不直访X、用X API或普通搜索补采。财报、宏观、CNN情绪和论文适用各自限定的非X来源例外，不扩展新闻路径。
 - 不编原文、作者、链接、价格或时间；采集器转述不冒充本模型独立直读，评分不是真伪或涨跌概率。
 - 数量通常是上限，不足可为0条。人物页按专门规则补充标明身份的热度动态，不能拿互动量证明可信度。
 - 不发帖、私信、点赞、关注或交易，不保存凭证，不读取仓库外私有知识或个人资料。
@@ -40,7 +40,8 @@
 | 人物与合集 | docs/PEOPLE_INTELLIGENCE_ROADMAP.md；config/people-intelligence.json |
 | 个股NVDA/MU/INTC/GOOG/AVGO/VRT/TSM | docs/TICKER_INTELLIGENCE.md；config/ticker-intelligence.json |
 | OPENAI/ANTHROPIC/GOOG(AI)/其他 | docs/AI_INTELLIGENCE.md；config/ai-intelligence.json |
-| 每日趣事、知识专业版与故事版 | docs/DAILY_LEARNING.md；config/learning.json |
+| 每日趣事、知识专业版与故事版 | docs/DAILY_LEARNING.md；config/learning.json；data/learning.json |
+| Nature/Science健康生活选读 | docs/JOURNAL_PAPERS.md；data/journal-learning.json；learning:publish-papers |
 | 宏观、财报日期及结果 | docs/MACRO_EVENTS.md、docs/EARNINGS_CALENDAR.md |
 | 来源评分与数据契约 | docs/X_DATA_CONTRACT.md；sources/x-sources.json；scripts/lib/credibility.js |
 | 人名原文及≤15字简介 | config/person-registry.json；scripts/lib/person-names.js |

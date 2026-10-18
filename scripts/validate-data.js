@@ -162,6 +162,9 @@ for (const tab of aiTabs.values()) {
   const result = require('./lib/learning').validateLearning(learningConfig,learning);
   for (const error of result.errors) fail(error);
   console.log(`[validate-data] OK: learning ${result.curiosities} curiosities, ${result.lessons} paired lessons`);
+  const papers=require('./lib/journal-learning').validateJournalLearning(learningConfig,readJson(path.join(ROOT,'data/journal-learning.json')));
+  for(const error of papers.errors)fail(error);
+  console.log(`[validate-data] OK: journal learning ${papers.papers} papers`);
 }
 
 const guidance = readJson(path.join(ROOT, 'config/research-guidance.json'));

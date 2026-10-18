@@ -6,7 +6,7 @@ function validateLearning(config, learning) {
   const errors = [];
   const fail = message => errors.push(message);
   if (config?.schemaVersion !== 1 || learning?.schemaVersion !== 1) fail('learning schemaVersion must be 1');
-  if ((config?.tabs || []).map(tab => tab.id).join() !== 'curiosities,basics') fail('learning tabs must be curiosities,basics');
+  if ((config?.tabs || []).map(tab => tab.id).join() !== 'curiosities,basics,nature,science') fail('learning tabs must be curiosities,basics,nature,science');
   if (config?.storyAudienceMinimumAge !== 18) fail('learning story audience must be 18+');
   if (!Array.isArray(learning?.dailyCuriosities) || !Array.isArray(learning?.lessons)) return {errors:[...errors,'learning content arrays missing'],curiosities:0,lessons:0};
   if (learning.dailyCuriosities.length > config.dailyCuriosityLimit) fail('learning daily curiosities exceed limit');

@@ -12,7 +12,7 @@ const ROUTES = {
   people: ['docs/PEOPLE_INTELLIGENCE_ROADMAP.md', 'config/people-intelligence.json'],
   tickers: ['docs/TICKER_INTELLIGENCE.md', 'config/ticker-intelligence.json'],
   ai: ['docs/AI_INTELLIGENCE.md', 'config/ai-intelligence.json'],
-  learning: ['docs/DAILY_LEARNING.md', 'config/learning.json', 'data/learning.json'],
+  learning: ['docs/DAILY_LEARNING.md', 'docs/JOURNAL_PAPERS.md', 'config/learning.json', 'data/learning.json', 'data/journal-learning.json'],
   earnings: ['docs/EARNINGS_CALENDAR.md', 'config/earnings-calendar.json'],
   macro: ['docs/MACRO_EVENTS.md', 'config/macro-events.json']
 };

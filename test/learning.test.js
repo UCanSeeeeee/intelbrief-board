@@ -4,7 +4,7 @@ const {validateLearning}=require('../scripts/lib/learning');
 
 const config={
   schemaVersion:1,
-  tabs:[{id:'curiosities'},{id:'basics'}],
+  tabs:[{id:'curiosities'},{id:'basics'},{id:'nature'},{id:'science'}],
   storyAudienceMinimumAge:18,
   dailyCuriosityLimit:3
 };

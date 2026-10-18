@@ -19,7 +19,7 @@
 
 - 美股板块工作日北京时间08:00/15:00/20:30、周六日08:00启动，最多 **5条市场焦点 + 10条多学科认知与夜雨知识库洞察**，支持归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。当前运行证据与可靠性边界见[运营说明](docs/GROK_BOT_OPERATIONS.md)。
 - 项目内置[美股研究知识库](knowledge/US_EQUITY_RESEARCH_KB.md)和[Grok 采集 SOP](knowledge/GROK_X_COLLECTION_SOP.md)，每次更新由程序自动注入，固定以半导体、电力、AI落地为优先级并要求独立追源与反证。
-- 前台侧边栏七个 Tab：「美股讯息」、「具体人物」、「具体个股」（见 `docs/TICKER_INTELLIGENCE.md`）、「AI板块」（见 `docs/AI_INTELLIGENCE.md`）、「每日学习」（见 `docs/DAILY_LEARNING.md`）、「宏观大事」（见 `docs/MACRO_EVENTS.md`）、「财报日历」（见 `docs/EARNINGS_CALENDAR.md`）。每日学习包含「每日趣事」和「基础知识讲解」，同一基础知识点同时提供专业版与18+故事版。加密栏目已暂时停用（见 `docs/CRYPTO_INTELLIGENCE.md`）。原帖档案、来源管理和评分作为后台能力保留，不单独提供前台页面。
+- 前台侧边栏七个Tab：「美股讯息」、「具体人物」、「具体个股」（见 `docs/TICKER_INTELLIGENCE.md`）、「AI板块」（见 `docs/AI_INTELLIGENCE.md`）、「每日学习」（见 `docs/DAILY_LEARNING.md`）、「宏观大事」（见 `docs/MACRO_EVENTS.md`）、「财报日历」（见 `docs/EARNINGS_CALENDAR.md`）。每日学习有「每日趣事」「基础知识讲解」「Nature」「Science」四个顶部Tab；知识点提供专业版与18+故事版，两刊偏健康、生活、统计与反直觉，每日各目标1篇、不凑数、可回看，见[论文SOP](docs/JOURNAL_PAPERS.md)。加密已暂时停用。原帖档案、来源管理和评分作为后台能力保留，不另设前台页面。
 
 - 每个定时点只触发一次总编排，再按七个侧边栏Tab独立分批；X内容优先使用Grok网页版，失败或覆盖不足且额度可用时才尝试Grok Bot；调度验收见 [运营记录](docs/GROK_BOT_OPERATIONS.md)
 - 导入上述Grok路径返回的结构化X原帖，并保留未独立直读标记
