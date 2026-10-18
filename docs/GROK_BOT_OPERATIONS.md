@@ -47,6 +47,7 @@ npm run ops:run -- finish --period <RUN> --status partial --commit <hash>
 
 - 本机真实到点发布样本：[2026-10-18 20:30运行日志](../data/ops-runs/2026-10-18-2030.json)及[七批审计](../data/collection-runs/2026-10-18-2030.json)。证明一次在线到点运行及发布，不证明连续可靠、离线可运行或增量优化后的效率。
 - 手动完整样本：[19:43截止运行日志](../data/ops-runs/manual-cb8dad62-83c2-4836-b5b1-25716bef981d.json)及[采集审计](../data/collection-runs/manual-cb8dad62-83c2-4836-b5b1-25716bef981d.json)。手动成功不能替代定时触发验收。
-- [耗时复盘](CONTENT_RUN_PERFORMANCE.md)：两个完整样本均值25分35秒；包含统计边界、重复查询范围及上线资源证据。新规则实际效率待下一真实样本。
+- 严格增量手动样本：[23:38:52截止运行日志](../data/ops-runs/manual-20261018-233852.json)及[采集审计](../data/collection-runs/manual-20261018-233852.json)。23对象从20:30严格接续；内容推送及线上六项资源核对完成，用时23分02秒，人物1条新热度，其余无合格新增，旧重点保留。该时间不含首个计时点之前准备及后续审计收尾。
+- [耗时复盘](CONTENT_RUN_PERFORMANCE.md)：两个前置样本均值25分35秒；首个严格增量样本23分02秒。包含统计边界与实际阶段跨度，尚不能证明连续提速。
 
 待推进动作只在[TASKS](../TASKS.md)维护。规则修改沿革从Git按需查询，不在本入口追加版本史或已完成清单。

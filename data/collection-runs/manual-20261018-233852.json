@@ -1320,11 +1320,65 @@
   "collectionCompletedAt": "2026-10-18T16:00:02.401Z",
   "publication": {
     "briefId": "manual-30b3a9b8-87cc-487a-90ea-a07c82b5affe",
-    "status": "written",
+    "status": "verified",
     "localWrittenAt": "2026-10-18T16:00:42.005Z",
     "notes": [
       "发布器首次因缺carriedOver数组拒绝载荷，补空数组后成功；累计池200事件未减少。",
       "手动期次按既有上限轮换1份旧快照，可从Git恢复；持久池独立保留。"
+    ],
+    "commit": "c339364",
+    "verifiedAt": "2026-10-19T00:01:54+08:00",
+    "cloudflare": "success",
+    "assets": [
+      {
+        "file": "data/stock-briefs/index.json",
+        "http": 200,
+        "match": true,
+        "sha256": "8a5034f2d6088dd5b9e6a92b6d60e47157c4cd50b759883aaf366bafb5f9016a"
+      },
+      {
+        "file": "data/reading-board.json",
+        "http": 200,
+        "match": true,
+        "sha256": "839ce52116cdd1a6a080b6a8cbff7c4c1b71ab0e766952a1ca174451fbd98aba"
+      },
+      {
+        "file": "data/people-intelligence.json",
+        "http": 200,
+        "match": true,
+        "sha256": "dacd94163f201cd1f5d198bd7a931b7bffc75eb7f1799e1291a91762f02b6157"
+      },
+      {
+        "file": "data/ticker-intelligence.json",
+        "http": 200,
+        "match": true,
+        "sha256": "54082032f3c554362aaac8811adb3f2c1d59c796b476904155c8f76deaf5a3bb"
+      },
+      {
+        "file": "data/ai-intelligence.json",
+        "http": 200,
+        "match": true,
+        "sha256": "c77e86d11f2ae4f84765237b019329faef4487400ff4d3679bb6a6d47aaba9c7"
+      },
+      {
+        "file": "data/earnings-calendar.json",
+        "http": 200,
+        "match": true,
+        "sha256": "dc6ae224caffd033649435240bfe294b580f3db56b5d517077b8ab9a0830596e"
+      }
+    ]
+  },
+  "timing": {
+    "startedAt": "2026-10-18T23:38:52+08:00",
+    "contentVerifiedAt": "2026-10-19T00:01:54+08:00",
+    "totalToContentVerifiedMs": 1382000,
+    "grokUiReportedSeconds": 344,
+    "notes": [
+      "首个计时点之前已开始读取前置材料，该段无可靠起点，未计入23分02秒；用户体感总等待更长。",
+      "Grok UI时间是7次响应显示之和，非独立API计量；剩余墙钟不可全部归为搜索或浏览器。",
+      "人物原帖核对并未独立记start，实际9秒已含人物batch；不伪造子阶段起点。",
+      "发布载荷两次编辑器/契约修正和Node命令语法/输出处理重试均计入墙钟。",
+      "计时已跨北京时间午夜，采集截止固定在前一天23:38:52，不追逐运行中不断延长的窗口。"
     ]
   }
 }

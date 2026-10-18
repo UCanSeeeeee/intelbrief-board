@@ -4,8 +4,8 @@
   "trigger": "manual",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-18T23:39:42+08:00",
-  "updatedAt": "2026-10-19T00:00:02+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-19T00:02:56+08:00",
+  "finishedAt": "2026-10-19T00:02:56+08:00",
   "gitHeadAtStart": "2e40d34c11ce98e5bf2ed191ef24c2aadf1ed2bc",
   "stages": [
     {
@@ -29,8 +29,8 @@
     {
       "name": "write",
       "status": "ok",
-      "at": "2026-10-19T00:00:02+08:00",
-      "detail": "0+0新简报保留累计池，人物1新热度；个股AI旧卡合并"
+      "at": "2026-10-19T00:02:56+08:00",
+      "detail": "00:00:20新闻正式归档完成，累计池200事件不减；人物1新热度，个股AI旧卡保留"
     },
     {
       "name": "validate",
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-19T00:02:56+08:00",
+      "detail": "c339364已推master"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-19T00:02:56+08:00",
+      "detail": "00:01:54 Cloudflare成功，6项线上数据字节一致；计时23分02秒，不含首个时点之前准备及后续审计收尾"
     }
   ],
   "pages": {
@@ -77,11 +77,12 @@
       "detail": null
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "c339364",
   "notes": [
-    "用户授权手动全站增量更新并测时；首次可核验计时点2026-10-18T23:38:52+08:00，前置读取耗时未记录，不伪造。当前已落地串行，不冒称多会话并行。"
+    "用户授权手动全站增量更新并测时；首次可核验计时点2026-10-18T23:38:52+08:00，前置读取耗时未记录，不伪造。当前已落地串行，不冒称多会话并行。",
+    "完成手动增量；内容可用计时23分02秒；不充数，0+0及人物1热度，保留证据缺口"
   ],
   "timings": [
     {
