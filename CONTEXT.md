@@ -12,7 +12,7 @@
 
 线上地址：https://intelbrief-board.pages.dev
 
-GitHub：`UCanSeeeeee/intelbrief-board`（private）
+GitHub：`UCanSeeeeee/intelbrief-board`（public；公开只读与 Fork，不等于拥有写入权限）
 
 默认分支：`master`
 

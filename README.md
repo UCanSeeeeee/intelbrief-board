@@ -5,7 +5,7 @@
 **LLM入口：[AGENTS.md](AGENTS.md) → [当前上下文](CONTEXT.md) → [任务断点](TASKS.md)。** Grok Bot独立运营内容，GPT仅维护代码；改动前拉取，验证后提交推送。入口能力与使用方法见 [AGENT_ENTRY](docs/AGENT_ENTRY.md)。
 
 线上地址：https://intelbrief-board.pages.dev
-仓库：`UCanSeeeeee/intelbrief-board`（private）
+仓库：`UCanSeeeeee/intelbrief-board`（public；网页与源码均可公开访问，写入仍受 GitHub 权限控制）
 
 ## 当前能力
 
