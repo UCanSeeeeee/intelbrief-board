@@ -165,6 +165,9 @@ for (const tab of aiTabs.values()) {
   const papers=require('./lib/journal-learning').validateJournalLearning(learningConfig,readJson(path.join(ROOT,'data/journal-learning.json')));
   for(const error of papers.errors)fail(error);
   console.log(`[validate-data] OK: journal learning ${papers.papers} papers`);
+  const knowledge=require('./lib/counterintuitive-learning').validateCounterintuitiveLearning(learningConfig,readJson(path.join(ROOT,'data/counterintuitive-learning.json')));
+  for(const error of knowledge.errors)fail(error);
+  console.log(`[validate-data] OK: counterintuitive learning ${knowledge.items} items across ${knowledge.editions} editions`);
 }
 
 const guidance = readJson(path.join(ROOT, 'config/research-guidance.json'));

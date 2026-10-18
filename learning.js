@@ -71,6 +71,10 @@
   let data;
   let journals = {reviews:[],coverage:{}};
   let journalError = false;
+  let counterintuitive = {updatedAt:null, editions:[]};
+  let counterError = false;
+  let counterLoaded = false;
+  let counterDate;
   const journalDates = {};
   let active = 'curiosities';
 
@@ -99,6 +103,26 @@
       ${dates.length?`<div class="paper-date-toolbar"><label for="paper-date">选读日期（北京时间）</label><select id="paper-date">${dates.map(date=>`<option value="${date}"${date===selected?' selected':''}>${date}</option>`).join('')}</select><span>保留往期；论文不一定当天发表</span></div><div class="learning-list">${items.filter(item=>item.selectedDate===selected).map(paperCard).join('')}</div>`:empty('本刊暂无通过筛选的论文','每天目标一篇，不用子刊、旧闻伪装或不完整来源凑数；后续在每日学习批次补充。')}`;
   }
 
+  function counterCard(item) {
+    const sections = [['intuition','常见直觉'],['fact','证据怎么说'],['explanation','为什么'],['boundary','适用边界']];
+    return `<article class="learning-card"><div class="learning-card-head"><span class="badge">${escape(item.topic)}</span></div><h2>${escape(item.title)}</h2>
+      ${sections.map(([key,label])=>`<p><strong>${label}</strong>${escape(item[key])}</p>`).join('')}
+      ${item.people.length?`<p class="paper-identity">${item.people.map(p=>`${escape(p.name)} · ${escape(p.intro)}`).join('；')}</p>`:''}
+      <footer>${item.sources.map(source=>{const url=paperUrl(source.url);return `<span>${escape(source.publisher)} · ${escape(source.publishedDate||source.dateNote)} · ${escape(config.journalPolicy.accessLabels[source.accessLevel])} · 核对 ${escape(formatTime(source.checkedAt))}（北京时间）</span>${url?`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>`:''}`;}).join('')}</footer></article>`;
+  }
+
+  function counterPanel(current) {
+    const editions = [...counterintuitive.editions].sort((a,b)=>b.date.localeCompare(a.date));
+    const available = editions.filter(edition=>edition.items.length);
+    if(!available.some(edition=>edition.date===counterDate))counterDate=available[0]?.date;
+    const selected = available.find(edition=>edition.date===counterDate);
+    const latest = editions[0];
+    const note = counterError ? '小知识读取失败，其他学习栏目不受影响。' : latest && latest.coverage.status!=='complete' ? `${latest.date}：${latest.coverage.note}` : '';
+    return `<header class="learning-section-head"><p class="eyebrow">${escape(current.eyebrow)}</p><h2>${escape(current.label)}</h2><p>${escape(current.description)}</p></header>
+      ${note?`<p class="paper-coverage" role="status">${escape(note)}</p>`:''}
+      ${selected?`<div class="paper-date-toolbar"><label for="counter-date">知识日期（北京时间）</label><select id="counter-date">${available.map(edition=>`<option value="${edition.date}"${edition.date===counterDate?' selected':''}>${edition.date}</option>`).join('')}</select><span>收录 ${selected.items.length} 条 · 上限 ${config.counterintuitivePolicy.dailyLimit} 条 · 往期可回看</span></div><div class="learning-list">${selected.items.map(counterCard).join('')}</div>`:empty(counterLoaded?'等待首组反直觉小知识':'正在读取小知识','合格内容由每日学习批次发布，每天目标5条；不拿段子或未经核验的常识凑数。')}`;
+  }
+
   function render() {
     tabsNode.querySelectorAll('[role="tab"]').forEach(button => {
       const selected = button.dataset.tab === active;
@@ -108,14 +132,17 @@
     });
     const current = config.tabs.find(tab => tab.id === active);
     panel.setAttribute('aria-labelledby', `learning-tab-${active}`);
-    document.getElementById('learning-focus').textContent = ['nature','science'].includes(active) ? '健康 · 生活 · 统计 · 反直觉' : config.priorityOrder.join(' · ');
+    document.getElementById('learning-focus').textContent = ['nature','science','counterintuitive'].includes(active) ? '健康 · 生活 · 统计 · 反直觉' : config.priorityOrder.join(' · ');
     state.textContent = ['nature','science'].includes(active) ? (journalError?'论文数据读取失败':journals.updatedAt?`选读整理于 ${formatTime(journals.updatedAt)}（北京时间）`:'正在读取论文选读') : data.updatedAt?`更新于 ${formatTime(data.updatedAt)}（北京时间）`:'栏目已建立，等待首批合格内容';
+    if(active==='counterintuitive')state.textContent = counterError?'小知识读取失败':counterintuitive.updatedAt?`小知识整理于 ${formatTime(counterintuitive.updatedAt)}（北京时间）`:counterLoaded?'栏目已建立，等待每日学习批次':'正在读取小知识';
     if (active === 'curiosities') {
       const items = data.dailyCuriosities || [];
       panel.innerHTML = `<header class="learning-section-head"><p class="eyebrow">${escape(current.eyebrow)}</p><h2>${escape(current.label)}</h2><p>${escape(current.description)}</p></header>${items.length ? `<div class="learning-list">${items.map(curiosityCard).join('')}</div>` : empty('今天暂时没有值得收录的趣事','宁可空着，也不把普通动态、段子或重复新闻塞进来。')}`;
     } else if (active === 'basics') {
       const items = data.lessons || [];
       panel.innerHTML = `<header class="learning-section-head"><p class="eyebrow">${escape(current.eyebrow)}</p><h2>${escape(current.label)}</h2><p>${escape(current.description)}</p></header>${items.length ? `<div class="learning-list">${items.map(lessonCard).join('')}</div>` : empty('基础知识库正在建立','每个知识点必须同时通过专业版和故事版校验后才会发布。')}`;
+    } else if(active==='counterintuitive') {
+      panel.innerHTML = counterPanel(current);
     } else {
       panel.innerHTML = journalPanel(current);
     }
@@ -136,6 +163,7 @@
     if (button) activate(button.dataset.tab);
   });
   panel.addEventListener('change', event => { if(event.target.id==='paper-date'){journalDates[active]=event.target.value;render();document.getElementById('paper-date')?.focus();} });
+  panel.addEventListener('change', event => { if(event.target.id==='counter-date'){counterDate=event.target.value;render();document.getElementById('counter-date')?.focus();} });
   tabsNode.addEventListener('keydown', event => {
     if (!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
     event.preventDefault();
@@ -153,6 +181,7 @@
     state.textContent = data.updatedAt ? `更新于 ${formatTime(data.updatedAt)}（北京时间）` : '栏目已建立，等待首批合格内容';
     render();
     json('data/journal-learning.json').then(content=>{journals=content; if(['nature','science'].includes(active))render();}).catch(()=>{journalError=true; if(['nature','science'].includes(active))render();});
+    json('data/counterintuitive-learning.json').then(content=>{if(content.schemaVersion!==1||!Array.isArray(content.editions))throw new Error('小知识数据结构无效');counterintuitive=content;counterLoaded=true;if(active==='counterintuitive')render();}).catch(()=>{counterError=true;counterLoaded=true;if(active==='counterintuitive')render();});
   }).catch(error => {
     state.textContent = '学习内容读取失败';
     panel.innerHTML = empty('无法读取每日学习', error.message);

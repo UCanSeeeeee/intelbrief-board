@@ -14,13 +14,22 @@
       "description": "专业版保留术语、机制与观察指标；故事版让普通成年人不依赖行业背景也能理解同一条因果链。"
     },
     {"id":"nature","label":"Nature","eyebrow":"每日一篇 · 健康与生活选读","description":"从健康、日常生活中发现值得理解的问题；用统计看清证据，不把反直觉包装成噱头。"},
-    {"id":"science","label":"Science","eyebrow":"每日一篇 · 健康与生活选读","description":"关注生活、行为与反直觉发现；讲清怎么研究、发现什么、能否推广，让普通成年人也读得懂。"}
+    {"id":"science","label":"Science","eyebrow":"每日一篇 · 健康与生活选读","description":"关注生活、行为与反直觉发现；讲清怎么研究、发现什么、能否推广，让普通成年人也读得懂。"},
+    {"id":"counterintuitive","label":"反直觉小知识","eyebrow":"每天目标 5 条 · 有证据，不猎奇","description":"围绕健康、生活与统计，讲清常见直觉哪里不完整、证据说明什么，以及不能推广到哪里。"}
   ],
   "dailyCuriosityLimit": 3,
   "dailyNewLessonLimit": 1,
   "storyAudienceMinimumAge": 18,
   "priorityOrder": ["半导体", "电力", "AI 落地"],
   "contentSource": "reuse-qualified-project-evidence",
+  "counterintuitivePolicy": {
+    "dailyLimit": 5,
+    "topics": ["健康", "生活", "统计", "行为认知"],
+    "targetChineseCharacters": [100, 180],
+    "selectionRule": "每天目标5条，上限5条，证据或价值不足可少于5条；按稳定知识点去重，不换标题重复，不把同一论文拆成五条。优先覆盖不同生活问题，不继承美股技术主线。",
+    "sourceRule": "优先复用已核验论文和项目证据；需要新增外部资料时先Grok发现，再核对原始论文或官方统计/教育资料。Grok不可用如实记缺口，允许这些限定非X科普来源，不放宽新闻采集路径。不用模型记忆代替证据。",
+    "refreshRule": "沿用每日学习批次：工作日20:30、周末08:00，每天一组，已有条目不覆盖，失败保留往期；不单独触发采集或部署，随常规批次统一发布。"
+  },
   "journalPolicy": {
     "dailyLimitPerJournal": 1,
     "preferredRecentDays": 30,

@@ -13,6 +13,7 @@ fs.copyFileSync(path.join(root,'calendar-time.js'),path.join(output,'calendar-ti
 if(fs.existsSync(path.join(root,'data/reading-board.json')))fs.copyFileSync(path.join(root,'data/reading-board.json'),path.join(output,'data/reading-board.json'));
 if(fs.existsSync(path.join(root,'data/market-sentiment.json')))fs.copyFileSync(path.join(root,'data/market-sentiment.json'),path.join(output,'data/market-sentiment.json'));
 if(fs.existsSync(path.join(root,'data/journal-learning.json')))fs.copyFileSync(path.join(root,'data/journal-learning.json'),path.join(output,'data/journal-learning.json'));
+if(fs.existsSync(path.join(root,'data/counterintuitive-learning.json')))fs.copyFileSync(path.join(root,'data/counterintuitive-learning.json'),path.join(output,'data/counterintuitive-learning.json'));
 for(const dir of ['assets/fluent','data/stock-briefs']) if(fs.existsSync(path.join(root,dir))) fs.cpSync(path.join(root,dir),path.join(output,dir),{recursive:true});
 // People publication verification includes the archived source and per-account checks.
 for(const file of ['data/raw/x-posts.json','data/people-checks.json']) if(fs.existsSync(path.join(root,file))) {

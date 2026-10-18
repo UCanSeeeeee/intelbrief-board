@@ -58,7 +58,7 @@
 | 内容运营接管、定时与发布 | docs/GROK_BOT_OPERATIONS.md、docs/AGENT_ENTRY.md；运行日志 `npm run ops:run` → `data/ops-runs/`（无日志≈平台在进代码前失败） |
 | 美股简报 | docs/STOCK_BRIEF.md、config/research-guidance.json 指向的知识库与 SOP |
 | 人物/个股/AI | 对应 docs 页面说明和 config 配置，再读研究知识与 SOP；窗口以上述配置为准；加密已暂时停用 |
-| 每日学习 | docs/DAILY_LEARNING.md、config/learning.json；趣事/知识复用合格证据；Nature/Science按docs/JOURNAL_PAPERS.md独立选读 |
+| 每日学习 | docs/DAILY_LEARNING.md、config/learning.json；趣事/知识复用合格证据；两刊见docs/JOURNAL_PAPERS.md；反直觉小知识见docs/COUNTERINTUITIVE_KNOWLEDGE.md |
 | 财报、宏观日历 | docs/EARNINGS_CALENDAR.md、docs/MACRO_EVENTS.md，适用各自来源例外 |
 
 只加载本任务需要的技能；仓库外共享技能仅在可用且相关时补充。云端没有本机技能路径时，使用已在仓库维护的知识与 SOP，不把个人目录路径当必备条件。
@@ -77,12 +77,12 @@
 - Grok Bot周额度耗尽期间，暂停「X+github」的项目例行任务与Webhook；旧任务保留审计，不删除、不重复触发。本项目改由本机Codex定时运营，代码维护仍由GPT代码角色负责。
 - 北京时间工作日08:00/15:00/20:30，周六日各08:00一次总编排；周末其他时点不采集、不造期次。仍按侧边栏独立批次，禁止混采。先读[增量采集执行入口](docs/INCREMENTAL_COLLECTION.md)，再运行`collection:plan`。
 - 每个批次先独立采集、筛选、记缺口并生成中间结果；前一批成功或明确失败后才进入下一批。全部批次结束后才统一去重、校验、提交推送和核验Cloudflare。任一批失败不得清空其他Tab或阻塞已完成批次的审计记录。
-- 每日学习工作日20:30、周末唯一08:00批次执行：趣事/知识只复用已验收证据；Nature/Science按[论文SOP](docs/JOURNAL_PAPERS.md)独立检索，每刊目标1篇，偏健康、生活、统计与反直觉，不继承美股技术优先级。宏观只查到期/过时，财报沿用官方例外。
+- 每日学习工作日20:30、周末唯一08:00批次执行：趣事/知识只复用已验收证据；Nature/Science按[论文SOP](docs/JOURNAL_PAPERS.md)独立检索，每刊目标1篇；[反直觉小知识](docs/COUNTERINTUITIVE_KNOWLEDGE.md)每天目标5条、上限5条，不凑数。两刊与小知识偏健康、生活、统计与反直觉，不继承美股技术优先级。宏观只查到期/过时，财报沿用官方例外。
 - 当前执行、暂停与恢复事实以 `docs/GROK_BOT_OPERATIONS.md` 为主维护位置。额度恢复不会自动把执行权切回Grok Bot；须由用户再次明确决定，避免双写。
 
 ## 讯息采集硬规则（用户于2026-10-11明确指定）
 
-本规则适用于本项目所有LLM、Agent、内容运营与定时任务的X采集；包括「美股讯息」「具体人物」「具体个股」「AI板块」及以后新增的X信息页面（「加密」暂时停用）。宏观/财报、CNN情绪及Nature/Science论文各有明确非X例外，不得把例外扩展成新闻第三路径。宏观为低频官方日历，不跟三次简报。
+本规则适用于本项目所有LLM、Agent、内容运营与定时任务的X采集；包括「美股讯息」「具体人物」「具体个股」「AI板块」及以后新增的X信息页面（「加密」暂时停用）。宏观/财报、CNN情绪、Nature/Science论文及反直觉小知识各有明确非X例外，不得把例外扩展成新闻第三路径。宏观为低频官方日历，不跟三次简报。
 
 1. **第一路径：已登录的 Grok 网页版（https://grok.com）。** 由本机内容运营任务按侧边栏Tab逐批使用，只发送本批需要的公开问题；不得把全站清单塞进同一会话。
 2. **唯一备用路径：Grok Bot「X+github」。** 仅在Grok网页版不可用或覆盖不足且Bot额度可用时尝试，并记录切换原因；当前周额度耗尽期间直接记为备用不可用，不循环重试。
@@ -97,6 +97,8 @@
 ## 来源例外：Nature / Science 论文
 
 用户授权每日学习新增两刊正刊选读，偏健康、生活、统计与反直觉，不主推技术。严格按[论文SOP](docs/JOURNAL_PAPERS.md)：Grok可用先发现；不可用如实记录，允许直接查期刊、Crossref/PubMed和作者/机构合法公开版本。只用于论文，不放宽X采集；准确标记摘要/节选/正文、发表与选读日期，查询更正与复现，无合格内容不凑数。
+
+「反直觉小知识」优先复用合格证据，必要新增检索先Grok发现，再核对原始论文或官方统计/教育资料；Grok不可用如实记录，允许上述限定非X来源。按[小知识SOP](docs/COUNTERINTUITIVE_KNOWLEDGE.md)保存来源与边界，不扩大新闻采集权限、不用模型记忆代替事实核验。
 
 
 ## 检索前先定清单（用户于2026-10-12明确指定，适用于所有采集）
