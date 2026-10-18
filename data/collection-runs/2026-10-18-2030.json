@@ -1150,11 +1150,72 @@
     "初始网页导航超时后加载成功；无第三条X采集路径；研究质量/长期调度可靠性仍有缺口"
   ],
   "publication": {
-    "status": "ready-to-push",
+    "status": "verified",
     "validationRepairs": [
       "v2新闻补显式carriedOver空数组；未更改证据/时间",
       "人物快照去除已超24h且未入周榜的既有Elon采访项；历史保留，未伪造周榜排名"
-    ]
+    ],
+    "contentCommit": "4cf994021149701f01f2cd13c7056ebd07ceb08d",
+    "cloudflareCheck": "success",
+    "website": "https://intelbrief-board.pages.dev/",
+    "checkedAt": "2026-10-18T12:57:47.929Z",
+    "resources": [
+      {
+        "file": "data/stock-briefs/2026-10-18-2030.json",
+        "http": 200,
+        "match": true,
+        "sha256": "cbd675c8878f15b5a95849e8af775376b6e05eaefa4df6d075750b361cc51254"
+      },
+      {
+        "file": "data/stock-briefs/index.json",
+        "http": 200,
+        "match": true,
+        "sha256": "33acd69f8fc14cea58291c47d65ee1cebfa19f2c3875d406cdea0328fecd33fa"
+      },
+      {
+        "file": "data/reading-board.json",
+        "http": 200,
+        "match": true,
+        "sha256": "48a79e156186c2eec2dbf71bc1d150760aba3855be407997837a035841b101b3"
+      },
+      {
+        "file": "data/people-intelligence.json",
+        "http": 200,
+        "match": true,
+        "sha256": "299847f6282f034839a34a542f973c22cc022448e1cdc55cb4d067b0866b91fa"
+      },
+      {
+        "file": "data/ticker-intelligence.json",
+        "http": 200,
+        "match": true,
+        "sha256": "e175c3a468d198f2b577c23a743f4cb9a03b74d8b0f064d8687a2de9d8885511"
+      },
+      {
+        "file": "data/ai-intelligence.json",
+        "http": 200,
+        "match": true,
+        "sha256": "62872e1d8196f2c009fd5a6fca7c508f3deb6af0a269c4d02abb241c2167e12c"
+      },
+      {
+        "file": "data/learning.json",
+        "http": 200,
+        "match": true,
+        "sha256": "dd2c543907eec7d689bb99d15e637fefed87c75b37fe0ed740f296bf37ea6d5c"
+      },
+      {
+        "file": "data/earnings-calendar.json",
+        "http": 200,
+        "match": true,
+        "sha256": "0e760c27429a2a310fb53e523e45019b5e6c15244cb128de1b0744426bf1b5f4"
+      },
+      {
+        "file": "config/company-blurbs.json",
+        "http": 200,
+        "match": true,
+        "sha256": "626042722384869d454508afd9407dbb6d6449b6e13b17282992c2f033a97c59"
+      }
+    ],
+    "verificationNote": "首次带查询参数的urllib请求403；部署完成后curl请求公开标准路径全部200且字节一致。未绕过登录、验证码或其他访问控制。"
   },
   "validation": {
     "initial": {

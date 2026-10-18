@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-18T20:31:42+08:00",
-  "updatedAt": "2026-10-18T20:55:47+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-18T20:57:47+08:00",
+  "finishedAt": "2026-10-18T20:57:47+08:00",
   "gitHeadAtStart": "76ce4cdc3195d3af1a26e2b2a30256885ecfa9f4",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-18T20:57:47+08:00",
+      "detail": "内容提交4cf994021149701f01f2cd13c7056ebd07ceb08d已推master；git ls-remote相同"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-18T20:57:47+08:00",
+      "detail": "Cloudflare Pages check success；9个线上JSON均HTTP200且逐字节相同，待阅池199→200，旧eventKey零丢失"
     }
   ],
   "pages": {
@@ -81,10 +81,11 @@
       "detail": "复用当天已验收证据，1趣事+1专业/18+故事知识点；无新增外部搜索"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "4cf994021149701f01f2cd13c7056ebd07ceb08d",
   "notes": [
-    "真实20:30自动化触发；先完成只读规范与git pull再写日志。用户本次明确要求test/check/build。"
+    "真实20:30自动化触发；先完成只读规范与git pull再写日志。用户本次明确要求test/check/build。",
+    "七批闭环已发布并核验；partial反映证据/数量缺额，不表示链路失败。测试93/93及check/build通过；Bot/触发入口仍暂停/删除。"
   ]
 }
