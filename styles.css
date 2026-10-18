@@ -1,4 +1,30 @@
 /* Intel Brief — Linear calm-density dark theme */
+.market-sentiment { padding:20px 24px; margin:0 0 22px; border:1px solid var(--border); border-radius:12px; background:var(--bg-elevated); overflow-wrap:anywhere; }
+.sentiment-heading { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 16px; margin-bottom:12px; }
+.sentiment-heading h2 { font-size:15px; margin:0; }
+.sentiment-heading h2 span { color:var(--text-muted); font-size:12px; font-weight:400; margin-left:8px; }
+.sentiment-body { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px 32px; margin-bottom:18px; }
+.sentiment-reading > div { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; }
+.sentiment-number { font-size:40px; font-weight:600; line-height:1.2; font-variant-numeric:tabular-nums; }
+.sentiment-denominator,.sentiment-reading p { color:var(--text-secondary); font-size:12px; }
+.sentiment-reading p { margin:5px 0 0; }
+.sentiment-rating { margin-left:8px; font-size:15px; }
+.market-sentiment[data-rating="extreme-fear"] .sentiment-rating,.market-sentiment[data-rating="fear"] .sentiment-rating { color:var(--red); }
+.market-sentiment[data-rating="greed"] .sentiment-rating,.market-sentiment[data-rating="extreme-greed"] .sentiment-rating { color:var(--green); }
+.sentiment-warning { color:var(--amber); }
+.sentiment-history { display:flex; flex-wrap:wrap; gap:16px 28px; margin:0; }
+.sentiment-history dt { color:var(--text-muted); font-size:12px; }
+.sentiment-history dd { margin:3px 0 0; color:var(--text); font-size:19px; font-variant-numeric:tabular-nums; }
+.sentiment-meter { display:flex; position:relative; height:7px; margin:8px 0; gap:3px; }
+.sentiment-zone { display:block; border-radius:2px; }
+.zone-extreme-fear { flex:25; background:#c57979; }.zone-fear { flex:20; background:#b99a73; }.zone-neutral { flex:10; background:#8c98a7; }.zone-greed { flex:20; background:#8da991; }.zone-extreme-greed { flex:25; background:#6ea292; }
+.sentiment-pointer { position:absolute; top:-4px; width:3px; height:15px; background:var(--text); border:1px solid var(--bg); transform:translateX(-50%); }
+.sentiment-legend { display:flex; justify-content:space-between; gap:8px; color:var(--text-muted); font-size:11px; }
+.sentiment-legend span { flex:1; text-align:center; }.sentiment-legend span:first-child { text-align:left; }.sentiment-legend span:last-child { text-align:right; }
+.sentiment-meta { color:var(--text-secondary); font-size:12px; margin:14px 0 4px; line-height:1.7; }
+.sentiment-meta a,.sentiment-note a { text-decoration:underline; text-underline-offset:3px; }
+.sentiment-note { color:var(--text-muted); font-size:12px; line-height:1.7; margin:0; }
+@media (max-width:768px) { .market-sentiment { padding:16px; }.sentiment-number { font-size:34px; }.sentiment-history { width:100%; justify-content:space-between; gap:12px; }.sentiment-legend { font-size:10px; gap:4px; } }
 .brief-overview { border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 30px; background: var(--bg-elevated); }
 .brief-toolbar { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px; }
 .brief-edition-only { padding:14px 16px; }

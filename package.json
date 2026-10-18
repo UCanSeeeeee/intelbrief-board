@@ -22,6 +22,7 @@
     "pages:dev": "npm run build && wrangler pages dev dist --port 8787",
     "deploy": "npm run build && wrangler pages deploy dist --project-name=intelbrief-board",
     "fetch:earnings": "node scripts/fetch-earnings.js",
+    "fetch:sentiment": "node scripts/fetch-market-sentiment.js",
     "macro:refresh": "node scripts/refresh-macro-events.js",
     "ops:run": "node scripts/ops-run.js"
   },

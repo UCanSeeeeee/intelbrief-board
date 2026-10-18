@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "cnn-fear-greed",
+  "market": "us-equities",
+  "score": 17.9383219954649,
+  "rating": "extreme fear",
+  "timestamp": "2026-10-16T23:59:49+00:00",
+  "fetchedAt": "2026-10-18T16:46:23.730Z",
+  "previous": {
+    "close": 31.5428571428571,
+    "week": 46.4857142857143,
+    "month": 27.3142857142857,
+    "year": 23.114285714285717
+  },
+  "source": {
+    "name": "CNN Fear & Greed Index",
+    "url": "https://www.cnn.com/markets/fear-and-greed",
+    "method": "mirror",
+    "dataUrl": "https://raw.githubusercontent.com/whit3rabbit/fear-greed-data/main/json/cnn_output.json",
+    "mirrorUrl": "https://github.com/whit3rabbit/fear-greed-data"
+  },
+  "retrieval": {
+    "status": "ok",
+    "errors": [
+      {
+        "source": "cnn",
+        "message": "HTTP 418"
+      }
+    ]
+  }
+}

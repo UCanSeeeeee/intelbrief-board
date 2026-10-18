@@ -33,6 +33,10 @@
           <span>北京时间 · 工作日 08:00 / 15:00 / 20:30 · 周末 08:00 启动整理</span>
         </div>
       </header>
+      <section id="market-sentiment" class="market-sentiment" aria-labelledby="sentiment-title" aria-live="polite">
+        <div class="sentiment-heading"><h2 id="sentiment-title">恐惧与贪婪指数 <span>美股 · CNN</span></h2></div>
+        <p class="sentiment-note">正在读取最近公布值；休市不等于0分。</p>
+      </section>
       <section class="brief-overview brief-edition-only" aria-label="简报期次">
         <div class="brief-toolbar"><label for="edition-select">简报期次</label><select id="edition-select" disabled><option>正在加载</option></select></div>
       </section>
@@ -53,5 +57,6 @@
   </div>
   <script src="app.js"></script>
   <script src="briefs.js"></script>
+  <script type="module" src="sentiment.js"></script>
 </body>
 </html>

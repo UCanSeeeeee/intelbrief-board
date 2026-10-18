@@ -23,6 +23,8 @@
 
 ## 文件路由
 
+美股讯息顶部显示[CNN恐惧与贪婪指数](docs/MARKET_SENTIMENT.md)，包含数值、情绪、历史比较及北京时间；来源为CNN／明确标注的公开镜像，Cloudflare只读按需获取并缓存，发布快照兜底。它不是新闻更新按钮，历史简报切换不改变当前情绪快照。
+
 | 需要处理的问题 | 唯一主要入口 |
 |---|---|
 | 协作、权限、同步、上下文维护 | AGENTS.md；Fork另读FORK_AGENT.md |
@@ -34,6 +36,7 @@
 | UI及侧栏顺序 | docs/DESIGN_SYSTEM.md；styles.css |
 | 知识库和Grok检索SOP | config/research-guidance.json指向的项目资料 |
 | 美股5+10及冻结归档 | docs/STOCK_BRIEF.md；config/stock-brief.json；data/stock-briefs |
+| 顶部情绪指标、来源与降级 | docs/MARKET_SENTIMENT.md；market-sentiment.mjs；data/market-sentiment.json |
 | 人物与合集 | docs/PEOPLE_INTELLIGENCE_ROADMAP.md；config/people-intelligence.json |
 | 个股NVDA/MU/INTC/GOOG/AVGO/VRT/TSM | docs/TICKER_INTELLIGENCE.md；config/ticker-intelligence.json |
 | OPENAI/ANTHROPIC/GOOG(AI)/其他 | docs/AI_INTELLIGENCE.md；config/ai-intelligence.json |
