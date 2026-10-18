@@ -2,7 +2,9 @@
 
 一个只收录 X/Twitter 原帖、保留证据链并提供可解释可信度初评的个人情报看板。
 
-**LLM入口：[AGENTS.md](AGENTS.md) → [当前上下文](CONTEXT.md) → [任务断点](TASKS.md)。** 当前由本机Codex按侧边栏Tab分批运营内容，Grok网页版优先、Grok Bot备用；改动前拉取，验证后提交推送。入口能力与使用方法见 [AGENT_ENTRY](docs/AGENT_ENTRY.md)。
+**LLM入口：[AGENTS.md](AGENTS.md) → [当前上下文](CONTEXT.md) → [任务断点](TASKS.md)。** 当前由本机Codex按侧边栏Tab分批运营内容，Grok网页版优先、Grok Bot备用；改动前拉取，改动后直接提交推送，默认不做本地验证。入口能力与使用方法见 [AGENT_ENTRY](docs/AGENT_ENTRY.md)。
+
+共同维护、定时采集、数据填充与网页发布的完整说明见 [项目工作流 SOP](docs/PROJECT_WORKFLOW_SOP.md)。
 
 线上地址：https://intelbrief-board.pages.dev
 仓库：`UCanSeeeeee/intelbrief-board`（public；网页与源码均可公开访问，写入仍受 GitHub 权限控制）
