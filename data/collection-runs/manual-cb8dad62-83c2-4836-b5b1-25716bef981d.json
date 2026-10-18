@@ -832,5 +832,56 @@
     "四个X批次严格串行，先发现、再追源、后反证；无直接X、X API或其他采集路径。发现中出现的非X材料和缺乏X正文支持的外链细节均排除。",
     "按用户要求未运行本地测试、check、build或预览；使用现有发布函数执行数据契约归档，另核对线上资源。",
     "原始帖子均属Grok采集器转述，当前模型未独立直读X；保留有效旧周榜和持久池，不伪造满额。"
-  ]
+  ],
+  "publication": {
+    "status": "verified",
+    "contentCommit": "2098c10fde5e006b4c1ea476977b84a6095dc711",
+    "cloudflareCheck": "success",
+    "website": "https://intelbrief-board.pages.dev/",
+    "checkedAt": "2026-10-18T12:08:17.987Z",
+    "resources": [
+      {
+        "file": "data/stock-briefs/manual-cb8dad62-83c2-4836-b5b1-25716bef981d.json",
+        "http": 200,
+        "match": true,
+        "sha256": "f16288034acb671a24cf2eb961a829381c5a369242c5976758d4eaa6f71f9f4c"
+      },
+      {
+        "file": "data/stock-briefs/index.json",
+        "http": 200,
+        "match": true,
+        "sha256": "00a98992c1c1021bd2273f50d614099e15ef73678370ccaca9d5e540996f5ad8"
+      },
+      {
+        "file": "data/reading-board.json",
+        "http": 200,
+        "match": true,
+        "sha256": "3ddbf70696761f3e15d6cb8aa1363e3d9fa2ad060c018992d5712722b2d62f2a"
+      },
+      {
+        "file": "data/people-intelligence.json",
+        "http": 200,
+        "match": true,
+        "sha256": "0a996c03b156411bcb13fe00b7d6e0e99c3a384b41dd59d1a94fc83de971c65b"
+      },
+      {
+        "file": "data/ticker-intelligence.json",
+        "http": 200,
+        "match": true,
+        "sha256": "63f95de9d28c708655d289cabbda097c326c48b27fc9012910adf872c7cf780a"
+      },
+      {
+        "file": "data/ai-intelligence.json",
+        "http": 200,
+        "match": true,
+        "sha256": "ee5269aed22236383fd76059c9848aa95b0ec00eb8da101782860d14e7d30ec7"
+      },
+      {
+        "file": "data/earnings-calendar.json",
+        "http": 200,
+        "match": true,
+        "sha256": "25ce1291a104e0cc3428d25153193eb9858541e8346e6dc6e71aee5b9d6c4cb9"
+      }
+    ]
+  }
 }
