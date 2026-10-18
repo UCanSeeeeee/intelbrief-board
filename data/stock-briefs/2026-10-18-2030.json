@@ -1,0 +1,634 @@
+{
+  "scheduledFor": "2026-10-18T20:30:00+08:00",
+  "windowStart": "2026-10-17T12:30:00Z",
+  "displayWindowStart": "2026-10-17T12:30:00Z",
+  "displayWindowEnd": "2026-10-18T12:30:00Z",
+  "status": "partial",
+  "summary": "新增1条数据中心客户交易报道，复核3条媒体焦点与1条融资洞察；缺额保留，未采用无权威追源的量化主张。",
+  "marketContext": "北京时间周日；量化报价非实时行情，未采用普通账号周度指数、CDS或债券收益率数字。",
+  "coverage": {
+    "method": "Grok网页版独立会话，两轮发现→原始/权威X追源→独立反证；仅采集器转述，非执行器独立直读",
+    "queries": [
+      "(Fed OR \"interest rates\" OR inflation OR CPI OR \"Treasury yields\" OR geopolitics OR oil OR AI OR \"market structure\") since:2026-10-17 until:2026-10-18 filter:links -filter:replies",
+      "US stock market macro policy geopolitics energy logistics AI large companies market structure October 17-18 2026",
+      "(semiconductor OR HBM OR packaging OR CoWoS OR TSMC OR Micron OR \"SK Hynix\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+      "(\"power grid\" OR PPA OR \"power purchase\" OR \"data center power\" OR interconnection) (AI OR \"data center\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+      "(\"AI revenue\" OR \"AI monetization\" OR \"paid AI\" OR \"enterprise AI\" OR \"AI adoption\" OR \"AI spending\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+      "(CoreWeave OR \"AI financing\" OR \"capital cost\" OR \"debt issuance\" OR \"credit spread\") (AI OR \"data center\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+      "(Hormuz OR Iran OR oil OR Brent OR shipping OR logistics) (market OR stock OR equity) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+      "(VIX OR liquidity OR \"market structure\" OR rotation OR breadth OR \"yield curve\" OR Fed) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+      "(CoreWeave OR CRWV) (bond OR yield OR CDS OR debt OR financing) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+      "(Microsoft OR MSFT) (Nscale OR \"data center\" OR \"grid power\" OR PPA OR interconnection) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+      "(TSMC OR Micron OR MU OR HBM) (capacity OR shortage OR packaging OR \"sold out\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+      "from:Reuters (Microsoft OR Nscale OR \"data center\" OR Micron OR HBM OR Israel OR grid) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+      "from:Bloomberg (Microsoft OR Nscale OR Micron OR HBM OR Israel OR CoreWeave OR CPI) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+      "(Nscale OR Microsoft OR \"grid power\" OR \"pulled out\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+      "(Micron OR MU) (AATT2 OR \"HBM plant\" OR \"sold out\" OR \"2027 capacity\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+      "(Israel OR \"Electricity Authority\") (\"data center\" OR AI OR grid OR power) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+      "(Samsung OR TSMC) (HBM OR \"base die\" OR 3nm) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+      "from:Telegraph OR from:ReutersBiz OR from:business (Nscale OR Micron OR HBM OR Israel OR CoreWeave) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+      "X主帖读取：2111593208027226203、2111555383705637137、2111450931732549818、2111468567614947752、2111781898036863325、2111741606248284350",
+      "counter-evidence: (Nscale Microsoft) (deny OR unaffected OR \"other contracts\" OR \"grid 2030s\") 2026-10-17T12:30Z..2026-10-18T12:30Z",
+      "counter-evidence: CoreWeave (backlog OR prepayment OR \"secured funding\" OR \"long-term\") same window",
+      "counter-evidence: Venezuela \"76 billion\" expects; Macklem \"Bank of Canada\"; Russian defence Ukraine confirm denial; Micron AATT2 TSMC Samsung Israel correction; same window"
+    ],
+    "gaps": [
+      "第一轮初始日期查询不够精确；后续用了精确UTC窗口，仍非全量X覆盖",
+      "AI终端付费和地缘物流未取得强新增候选；第二轮重复信用与市场结构候选已合并",
+      "Micron售罄表态只见个人汇编，开厂事件10月15日为旧背景",
+      "以色列规则和TSMC/Samsung细节未追到可用原始/权威帖",
+      "CoreWeave具体报价与宏观数据没有权威原始数据，排除",
+      "Bloomberg与Telegraph为同一报道链，不能称双重独立证实",
+      "MSFT退出原因与并网年份未获当事人/电网原始确认",
+      "未取得公司官方融资/预付相反证据",
+      "俄方设施打击缺乌方/独立确认"
+    ],
+    "status": "partial"
+  },
+  "checklist": [
+    {
+      "item": "第一轮：宏观政策、地缘能源、AI大公司、市场结构",
+      "status": "covered",
+      "note": "两轮发现、逐项追源和独立反证已执行；不称全量覆盖"
+    },
+    {
+      "item": "第二轮独立六包：半导体、电力、AI落地、资本成本、地缘物流、市场结构",
+      "status": "insufficient",
+      "note": "六包均实际检索；半导体、AI终端付费与量化市场结构证据不足"
+    },
+    {
+      "item": "候选原始/权威来源追查",
+      "status": "covered",
+      "note": "两轮发现、逐项追源和独立反证已执行；不称全量覆盖"
+    },
+    {
+      "item": "更正、相反材料与替代解释",
+      "status": "covered",
+      "note": "两轮发现、逐项追源和独立反证已执行；不称全量覆盖"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "coreweave-credit-secondary",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "具体收益率CDS排除；只复核既有Bloomberg融资主张"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "round": 1,
+      "decision": "selected",
+      "reason": "追到Telegraph原创媒体帖及Bloomberg同源转述；仅采用退出报道，不采用GPU数量/电网年份/因果"
+    },
+    {
+      "eventKey": "macro-prices-cpi-secondary",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "soxx-nine-day-secondary",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "micron-aatt2-2027",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "samsung-tsmc-hbm",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "israel-ai-grid",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "ai-profit-commentary",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "观点无本窗新增事实、时间仅约数"
+    },
+    {
+      "eventKey": "boc-oil-inflation-outlook-2026-10-17",
+      "round": 1,
+      "decision": "selected",
+      "reason": "既有事件本期复核，原媒体帖及时间已由Grok重读；不当作新事件"
+    },
+    {
+      "eventKey": "russia-ukraine-steel-power-claim-2026-10-17",
+      "round": 1,
+      "decision": "selected",
+      "reason": "既有事件本期复核，原媒体帖及时间已由Grok重读；不当作新事件"
+    },
+    {
+      "eventKey": "venezuela-oil-investment-expectation-2026-10-17",
+      "round": 1,
+      "decision": "selected",
+      "reason": "既有事件本期复核，原媒体帖及时间已由Grok重读；不当作新事件"
+    },
+    {
+      "eventKey": "ai-junk-financing-coreweave-bloomberg-2026-10-17",
+      "round": 2,
+      "decision": "selected",
+      "reason": "既有事件本期复核，原媒体帖及时间已由Grok重读；不当作新事件"
+    }
+  ],
+  "selectionRationale": "焦点优先本轮新增的AI项目与融资连接，其后按能源、通胀与设施供应传导复核；洞察只保留已核验信用机制，不以个人账号数字凑额。",
+  "excludedCandidates": [
+    {
+      "eventKey": "coreweave-credit-secondary",
+      "reason": "具体收益率CDS排除；只复核既有Bloomberg融资主张"
+    },
+    {
+      "eventKey": "macro-prices-cpi-secondary",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "soxx-nine-day-secondary",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "micron-aatt2-2027",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "samsung-tsmc-hbm",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "israel-ai-grid",
+      "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+    },
+    {
+      "eventKey": "ai-profit-commentary",
+      "reason": "观点无本窗新增事实、时间仅约数"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "title": "Microsoft据报退出Nscale英国数据中心交易",
+      "fact": "据Telegraph，Microsoft已退出与英国Nscale在Essex的数据中心交易，这对Nscale筹划的数十亿美元上市构成打击。Bloomberg援引同一报道；Microsoft与Nscale当事人X帖尚未确认退出原因。",
+      "impact": "单个项目的客户承诺发生变化，可能影响Nscale未来合同现金流、上市融资与设备采购节奏。若项目和资金同步延后，芯片、电力与建设供应商收入确认也可能推迟；不能由一项交易推断Microsoft整体AI资本开支缩减。",
+      "direction": "双向",
+      "horizon": "未来两周关注当事人澄清与替代客户，项目影响可能更久",
+      "affected": [
+        "AI数据中心融资",
+        "Microsoft云基础设施",
+        "芯片与电力设备供应链"
+      ],
+      "counterCase": "若当事人澄清仅调整单个站点、其他合同继续履行或已有替代客户，影响范围应下调；未有权威原帖确认的电网年份、GPU数量和退出因果不纳入判断。",
+      "selectionReason": "本轮从个人账号线索追到Telegraph原创媒体帖，涉及AI实物项目与融资连接，较纯价格和情绪讨论更具增量。",
+      "credibilityReason": "Telegraph可识别媒体原帖，Bloomberg为同源转述，非两份独立确认；未读付费全文或当事人文件。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "报道发布于10月18日；具体退出日期未在可见原帖中给出。",
+      "attentionEvidence": "Telegraph原创报道并由Bloomberg援引，跨客户承诺与上市融资；未取得全网热度排行。",
+      "sources": [
+        {
+          "url": "https://x.com/Telegraph/status/2111781898036863325",
+          "postId": "2111781898036863325",
+          "username": "Telegraph",
+          "publishedAt": "2026-10-18T11:30:14Z",
+          "checkedAt": "2026-10-18T12:37:44.930Z",
+          "excerpt": "Microsoft has pulled out of an Essex data centre deal",
+          "verification": "collector-report",
+          "verificationNote": "Telegraph报道；未见当事人确认；不采用电网时间及GPU数量；Grok网页X工具转述，当前模型未独立直读X或付费全文。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/business/status/2111741606248284350",
+          "postId": "2111741606248284350",
+          "username": "business",
+          "publishedAt": "2026-10-18T08:50:07Z",
+          "checkedAt": "2026-10-18T12:37:44.930Z",
+          "excerpt": "Microsoft has pulled out of a UK data center deal with British neocloud Nscale",
+          "verification": "collector-report",
+          "verificationNote": "Bloomberg援引Telegraph，同源非独立确认；Grok网页X工具转述，当前模型未独立直读X或付费全文。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Telegraph可识别媒体原帖，Bloomberg为同源转述，非两份独立确认；未读付费全文或当事人文件。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "boc-oil-inflation-outlook-2026-10-17",
+      "title": "Reuters：加拿大央行因油价冲击显著上调通胀展望",
+      "fact": "加拿大央行行长表示，油价飙升令通胀展望显著上修。该表态反映加拿大央行的判断，并非美联储利率决议，也没有给出本期新的美国通胀数据。",
+      "impact": "能源价格冲击若持续，会通过运输、生产成本和通胀预期抬高利率维持高位的压力，进而压低远期现金流的估值。对美股的意义在跨国共同能源冲击，而不是加拿大央行直接决定美国利率；需继续观察美国数据和政策反应。",
+      "direction": "双向",
+      "horizon": "未来数日至两周",
+      "affected": [
+        "利率敏感成长股",
+        "能源与运输成本",
+        "AI资本开支融资"
+      ],
+      "counterCase": "若油价回落、美国核心通胀未受传导或美联储更重视增长风险，则加拿大央行的展望不能外推成美国加息。",
+      "selectionReason": "窗口内有原媒体帖的明确央行表态，直接连接能源成本和资本成本。",
+      "attentionEvidence": "Reuters原账号发布且有同内容早发帖；未取得可比全市场热度数据，排名仅为本期影响机制比较。",
+      "credibilityReason": "Reuters主帖可追溯；未独立读取讲话全文，保留政策主体和适用范围。",
+      "change": "延续",
+      "eventTime": null,
+      "eventTimeNote": "报道发布于10月17日；所用帖文没有给出讲话准确时刻。",
+      "sources": [
+        {
+          "url": "https://x.com/Reuters/status/2111555383705637137",
+          "postId": "2111555383705637137",
+          "username": "Reuters",
+          "publishedAt": "2026-10-17T20:30:08Z",
+          "checkedAt": "2026-10-18T12:37:44.930Z",
+          "excerpt": "Bank of Canada sees sharply higher inflation outlook as oil surges, Macklem says",
+          "verification": "collector-report",
+          "verificationNote": "本期Grok网页重新读取该X原帖并独立检索反证；当前模型未独立直读X。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Reuters主帖可追溯；未独立读取讲话全文，保留政策主体和适用范围。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      },
+      "continuationReason": "本期Grok重新读取原媒体帖并独立查反证；保留原始发布时间、归因及未确认限制。"
+    },
+    {
+      "eventKey": "russia-ukraine-steel-power-claim-2026-10-17",
+      "title": "Reuters：俄国防部宣称打击乌克兰钢铁厂和电力设施",
+      "fact": "俄国防部宣称隔夜打击了乌克兰钢铁厂及电力基础设施。Reuters报道了该声明；本次没有取得乌方或独立来源对具体设施受损、停产规模及修复时间的确认。",
+      "impact": "若关键工业与电力设施实际受损，可能抬高能源与钢铁供应中断风险，并通过欧洲成本和地缘风险溢价影响美股。影响量级取决于损失产能、替代供给和修复周期，单边军事声明不足以量化价格冲击。",
+      "direction": "双向",
+      "horizon": "未来数日至两周",
+      "affected": [
+        "能源供给风险溢价",
+        "钢铁与工业成本",
+        "欧洲业务暴露较高的美股公司"
+      ],
+      "counterCase": "若独立材料表明设施仍运行、损失有限或很快修复，则物理供给传导显著减弱。",
+      "selectionReason": "涉及具体工业与供电设施的窗口内地缘声明，具有可检验的供给渠道。",
+      "attentionEvidence": "Reuters原账号发布；本期未测量跨市场热度，不把报道数量当独立确认。",
+      "credibilityReason": "Reuters转述俄方声明可追溯，实际打击与受损范围仍属单边主张。",
+      "change": "延续",
+      "eventTime": null,
+      "eventTimeNote": "帖文只称隔夜，没有提供设施遇袭准确时刻。",
+      "sources": [
+        {
+          "url": "https://x.com/Reuters/status/2111450931732549818",
+          "postId": "2111450931732549818",
+          "username": "Reuters",
+          "publishedAt": "2026-10-17T13:35:05Z",
+          "checkedAt": "2026-10-18T12:37:44.930Z",
+          "excerpt": "Russian defence ministry says it hit Ukrainian steel plants, power infrastructure overnight",
+          "verification": "collector-report",
+          "verificationNote": "本期Grok网页重新读取该X原帖并独立检索反证；当前模型未独立直读X。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Reuters转述俄方声明可追溯，实际打击与受损范围仍属单边主张。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      },
+      "continuationReason": "本期Grok重新读取原媒体帖并独立查反证；保留原始发布时间、归因及未确认限制。"
+    },
+    {
+      "eventKey": "venezuela-oil-investment-expectation-2026-10-17",
+      "title": "Reuters：委内瑞拉预计未来五年获得近760亿美元石油投资",
+      "fact": "据Reuters，委内瑞拉代理总统表示，未来五年预计获得近760亿美元石油投资。该数字是投资预期；所用帖子没有证明相关合同已签、融资已落实或产量已经增加。",
+      "impact": "若融资、合同和基础设施修复真正落地，中期可能增加非中东原油供给、缓冲能源成本。五年投资预期不能解决眼前运输或炼化瓶颈，近期更可能影响供给预期和能源企业资本配置，而非立刻降低油价。",
+      "direction": "双向",
+      "horizon": "未来数周观察落地；供给兑现为多年",
+      "affected": [
+        "原油中期供给",
+        "能源企业资本开支",
+        "炼油与运输成本"
+      ],
+      "counterCase": "若合同条款、融资、制裁执行或基础设施约束阻碍投资，预期不能转为可用产能。",
+      "selectionReason": "在能源供应紧张背景下提供潜在中期缓冲渠道，必须区分预期与兑现。",
+      "attentionEvidence": "Reuters原账号发布并在本窗重发；未获得全市场互动比较，重要性基于供应机制。",
+      "credibilityReason": "Reuters主帖明确归因代理总统的预期；合同和投产证据缺失，不能升级为已落地事实。",
+      "change": "延续",
+      "eventTime": null,
+      "eventTimeNote": "报道日期为10月17日；原始表态准确时刻未在帖中写明。",
+      "sources": [
+        {
+          "url": "https://x.com/Reuters/status/2111593208027226203",
+          "postId": "2111593208027226203",
+          "username": "Reuters",
+          "publishedAt": "2026-10-17T23:00:26Z",
+          "checkedAt": "2026-10-18T12:37:44.930Z",
+          "excerpt": "Venezuela expects nearly $76 billion in oil investment over five years, acting president says",
+          "verification": "collector-report",
+          "verificationNote": "本期Grok网页重新读取该X原帖并独立检索反证；当前模型未独立直读X。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "Reuters主帖明确归因代理总统的预期；合同和投产证据缺失，不能升级为已落地事实。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      },
+      "continuationReason": "本期Grok重新读取原媒体帖并独立查反证；保留原始发布时间、归因及未确认限制。"
+    }
+  ],
+  "insights": [
+    {
+      "eventKey": "ai-junk-financing-coreweave-bloomberg-2026-10-17",
+      "title": "Bloomberg：CoreWeave困境令垃圾债买家收紧科技初创融资",
+      "fact": "Bloomberg报道，垃圾债买家正日益拒绝向寻求融资的科技初创企业提供资金，CoreWeave的困境引发了市场对AI公司如何为自身融资的更大疑问。报道摘要没有证明相关企业已经违约，也不能据此推定整个AI需求萎缩。",
+      "impact": "AI基础设施的资金需求先于部分收入兑现。若债券买家收紧资金，企业可能面对更高融资成本、股权稀释或项目延期，再传导至芯片、电力和建设订单；传导是否发生取决于企业现金、承诺融资与合同回款，不同资产负债表不能一概而论。",
+      "direction": "双向",
+      "horizon": "未来两周观察融资与订单；项目传导可能更久",
+      "affected": [
+        "AI基础设施融资",
+        "半导体设备与芯片订单",
+        "数据中心电力与建设"
+      ],
+      "counterCase": "若企业取得足够长期融资、客户预付款或新增独立现金回款，融资约束可被缓解；融资压力不等于需求消失。",
+      "selectionReason": "由第二轮信用融资查询独立发现，追到Bloomberg原账号，连接产业资本开支与金融约束。",
+      "credibilityReason": "主媒体帖可追溯；未独立读取全文、债券成交或信用数据，因此不采用二手收益率、CDS及违约概率。",
+      "change": "延续",
+      "eventTime": null,
+      "eventTimeNote": "报道发布于10月17日；摘要未给出买家行为变化的统一起始时点。",
+      "knowledgeCards": [
+        "M05",
+        "I01",
+        "I02",
+        "R06"
+      ],
+      "disciplines": [
+        "信用与企业融资",
+        "AI产业资本开支"
+      ],
+      "knowledgeApplication": "M05审查资金约束是否跨企业传导；I01/I02把订单与资金来源分开，沿融资→可用产能→供应商收入追踪；R06区分当下融资定价和后续实际订单，不能由一家公司压力推全行业需求。",
+      "sources": [
+        {
+          "url": "https://x.com/business/status/2111468567614947752",
+          "postId": "2111468567614947752",
+          "username": "business",
+          "publishedAt": "2026-10-17T14:45:10Z",
+          "checkedAt": "2026-10-18T12:37:44.930Z",
+          "excerpt": "Junk bond buyers are increasingly freezing out tech startups looking for financing",
+          "verification": "collector-report",
+          "verificationNote": "本期Grok网页复核原帖并查反证；未独立读取X或付费全文，不采用CDS/收益率数字。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "主媒体帖可追溯；未独立读取全文、债券成交或信用数据，因此不采用二手收益率、CDS及违约概率。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      },
+      "continuationReason": "本期重新读取Bloomberg原帖并查资金/预付反证；不采用个人账号信用报价。"
+    }
+  ],
+  "shortfallReason": "两轮发现与追源反证均已执行；半导体供需/AI终端收入及量化市场结构未取得足够新增原始证据，不充数。",
+  "readingSelection": {
+    "focus": [
+      "msft-nscale-essex-exit-2026-10-18",
+      "boc-oil-inflation-outlook-2026-10-17",
+      "russia-ukraine-steel-power-claim-2026-10-17",
+      "venezuela-oil-investment-expectation-2026-10-17",
+      "hormuz-saudi-tanker-strikes-weekend-2026-10-17"
+    ],
+    "insights": [
+      "ai-junk-financing-coreweave-bloomberg-2026-10-17",
+      "pjm-wholesale-76pct-dc-capacity-2026-10-17",
+      "ms-dc-additions-32gw-2027-2026-10-17",
+      "jpm-memory-rerating-vs-gs-738bn-2026-10-16",
+      "goldman-pb-ai-deleveraging-2026-10-17",
+      "citi-blocks-third-party-ai-agents-2026-10-16",
+      "jack-clark-imf-44t-gdp-2026-10-17",
+      "trump-russia-sanctions-hold-zelensky-2026-10-17",
+      "trump-midterm-emergency-not-ruled-out-2026-10-17"
+    ]
+  },
+  "readingDecisions": [
+    {
+      "eventKey": "boc-oil-inflation-outlook-2026-10-17",
+      "action": "keep",
+      "reason": "本期Grok重新读取原媒体帖并独立查反证；保留原始发布时间、归因及未确认限制。",
+      "sourceUrl": "https://x.com/Reuters/status/2111555383705637137",
+      "checkedAt": "2026-10-18T12:37:44.930Z"
+    },
+    {
+      "eventKey": "russia-ukraine-steel-power-claim-2026-10-17",
+      "action": "keep",
+      "reason": "本期Grok重新读取原媒体帖并独立查反证；保留原始发布时间、归因及未确认限制。",
+      "sourceUrl": "https://x.com/Reuters/status/2111450931732549818",
+      "checkedAt": "2026-10-18T12:37:44.930Z"
+    },
+    {
+      "eventKey": "venezuela-oil-investment-expectation-2026-10-17",
+      "action": "keep",
+      "reason": "本期Grok重新读取原媒体帖并独立查反证；保留原始发布时间、归因及未确认限制。",
+      "sourceUrl": "https://x.com/Reuters/status/2111593208027226203",
+      "checkedAt": "2026-10-18T12:37:44.930Z"
+    },
+    {
+      "eventKey": "ai-junk-financing-coreweave-bloomberg-2026-10-17",
+      "action": "keep",
+      "reason": "本期重新读取Bloomberg原帖并查资金/预付反证；不采用个人账号信用报价。",
+      "sourceUrl": "https://x.com/business/status/2111468567614947752",
+      "checkedAt": "2026-10-18T12:37:44.930Z"
+    }
+  ],
+  "carriedOver": [],
+  "trigger": "scheduled",
+  "id": "2026-10-18-2030",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T12:53:31.672Z",
+  "counts": {
+    "focus": 4,
+    "insights": 1,
+    "total": 5
+  }
+}

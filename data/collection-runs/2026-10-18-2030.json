@@ -1,0 +1,1217 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-10-18-2030",
+  "trigger": "scheduled",
+  "cutoff": "2026-10-18T20:30:00+08:00",
+  "startedAt": "2026-10-18T12:31:42.266Z",
+  "plan": {
+    "schemaVersion": 1,
+    "timezone": "Asia/Shanghai",
+    "cutoff": "2026-10-18T20:30:00+08:00",
+    "slot": "20:30",
+    "sourcePriority": [
+      "grok-web",
+      "grok-bot"
+    ],
+    "rule": "一次定时触发按侧边栏 Tab 分批执行，不把全站内容塞进一个检索提示词。",
+    "batches": [
+      {
+        "sequence": 1,
+        "id": "news",
+        "sidebarTab": "美股讯息",
+        "task": "news",
+        "schedule": "every-slot",
+        "mode": "x-research",
+        "subtasks": [
+          "discovery",
+          "source-verification",
+          "counter-evidence"
+        ],
+        "contract": "docs/STOCK_BRIEF.md",
+        "action": "run",
+        "isolated": true,
+        "inputRule": "只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。",
+        "outputRule": "独立记录查询、候选、缺口和结果；完成后才交给总编排合并、全站校验与发布。"
+      },
+      {
+        "sequence": 2,
+        "id": "people",
+        "sidebarTab": "具体人物",
+        "task": "people",
+        "schedule": "every-slot",
+        "mode": "x-research",
+        "subtasks": [
+          "discovery",
+          "source-verification",
+          "counter-evidence"
+        ],
+        "contract": "docs/PEOPLE_INTELLIGENCE_ROADMAP.md",
+        "action": "run",
+        "isolated": true,
+        "inputRule": "只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。",
+        "outputRule": "独立记录查询、候选、缺口和结果；完成后才交给总编排合并、全站校验与发布。"
+      },
+      {
+        "sequence": 3,
+        "id": "tickers",
+        "sidebarTab": "具体个股",
+        "task": "tickers",
+        "schedule": "every-slot",
+        "mode": "x-research",
+        "subtasks": [
+          "discovery",
+          "source-verification",
+          "counter-evidence"
+        ],
+        "contract": "docs/TICKER_INTELLIGENCE.md",
+        "action": "run",
+        "isolated": true,
+        "inputRule": "只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。",
+        "outputRule": "独立记录查询、候选、缺口和结果；完成后才交给总编排合并、全站校验与发布。"
+      },
+      {
+        "sequence": 4,
+        "id": "ai",
+        "sidebarTab": "AI板块",
+        "task": "ai",
+        "schedule": "every-slot",
+        "mode": "x-research",
+        "subtasks": [
+          "discovery",
+          "source-verification",
+          "counter-evidence"
+        ],
+        "contract": "docs/AI_INTELLIGENCE.md",
+        "action": "run",
+        "isolated": true,
+        "inputRule": "只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。",
+        "outputRule": "独立记录查询、候选、缺口和结果；完成后才交给总编排合并、全站校验与发布。"
+      },
+      {
+        "sequence": 5,
+        "id": "learning",
+        "sidebarTab": "每日学习",
+        "task": "learning",
+        "schedule": "20:30-only",
+        "mode": "derive-from-accepted-evidence",
+        "contract": "docs/DAILY_LEARNING.md",
+        "action": "run",
+        "isolated": true,
+        "inputRule": "只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。",
+        "outputRule": "独立记录查询、候选、缺口和结果；完成后才交给总编排合并、全站校验与发布。"
+      },
+      {
+        "sequence": 6,
+        "id": "macro",
+        "sidebarTab": "宏观大事",
+        "task": "macro",
+        "schedule": "due-or-stale",
+        "mode": "official-calendar",
+        "contract": "docs/MACRO_EVENTS.md",
+        "action": "check-due",
+        "isolated": true,
+        "inputRule": "只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。",
+        "outputRule": "独立记录查询、候选、缺口和结果；完成后才交给总编排合并、全站校验与发布。"
+      },
+      {
+        "sequence": 7,
+        "id": "earnings",
+        "sidebarTab": "财报日历",
+        "task": "earnings",
+        "schedule": "every-slot",
+        "mode": "official-calendar",
+        "contract": "docs/EARNINGS_CALENDAR.md",
+        "action": "run",
+        "isolated": true,
+        "inputRule": "只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。",
+        "outputRule": "独立记录查询、候选、缺口和结果；完成后才交给总编排合并、全站校验与发布。"
+      }
+    ]
+  },
+  "collectionPath": "grok-web",
+  "fallback": {
+    "path": "grok-bot",
+    "available": false,
+    "reason": "用户确认周额度耗尽且任务暂停，不尝试、不恢复"
+  },
+  "status": "partial",
+  "batches": [
+    {
+      "page": "news",
+      "sequence": 1,
+      "status": "partial",
+      "windowStart": "2026-10-17T12:30:00Z",
+      "windowEnd": "2026-10-18T12:30:00Z",
+      "checklist": [
+        "第一轮：宏观政策、地缘能源、AI大公司、市场结构",
+        "第二轮独立六包：半导体、电力、AI落地、资本成本、地缘物流、市场结构",
+        "候选原始/权威来源追查",
+        "更正、相反材料与替代解释"
+      ],
+      "plannedPrompts": {
+        "discovery": "在2026-10-17T12:30Z至2026-10-18T12:30Z内只搜X；第一轮宽扫宏观政策、地缘能源、AI大公司、市场结构；第二轮独立搜半导体、电力、AI落地、资本成本、地缘物流、市场结构六包。各轮候选分开。返回实际查询、作者、准确UTC时间、status URL、短原文、事实/观点和缺口；普通账号只作线索，不补数字、不混人物/个股/AI专页。",
+        "sourceVerification": "对discovery拟入选逐项查公司/政府/监管/当事人及Reuters/Bloomberg/FT原始X帖，独立作者逐条给status链接、UTC时间、原文、引用链。量化行情/财报/政策/高管表态追不到权威原帖即落选。",
+        "counterEvidence": "逐项独立检索更正、反证、相反数字、时间边界和替代解释；返回实际查询和可追溯原帖。未发现反证不等于证实。"
+      },
+      "queries": [
+        "(Fed OR \"interest rates\" OR inflation OR CPI OR \"Treasury yields\" OR geopolitics OR oil OR AI OR \"market structure\") since:2026-10-17 until:2026-10-18 filter:links -filter:replies",
+        "US stock market macro policy geopolitics energy logistics AI large companies market structure October 17-18 2026",
+        "(semiconductor OR HBM OR packaging OR CoWoS OR TSMC OR Micron OR \"SK Hynix\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(\"power grid\" OR PPA OR \"power purchase\" OR \"data center power\" OR interconnection) (AI OR \"data center\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(\"AI revenue\" OR \"AI monetization\" OR \"paid AI\" OR \"enterprise AI\" OR \"AI adoption\" OR \"AI spending\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(CoreWeave OR \"AI financing\" OR \"capital cost\" OR \"debt issuance\" OR \"credit spread\") (AI OR \"data center\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(Hormuz OR Iran OR oil OR Brent OR shipping OR logistics) (market OR stock OR equity) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(VIX OR liquidity OR \"market structure\" OR rotation OR breadth OR \"yield curve\" OR Fed) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(CoreWeave OR CRWV) (bond OR yield OR CDS OR debt OR financing) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(Microsoft OR MSFT) (Nscale OR \"data center\" OR \"grid power\" OR PPA OR interconnection) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(TSMC OR Micron OR MU OR HBM) (capacity OR shortage OR packaging OR \"sold out\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "from:Reuters (Microsoft OR Nscale OR \"data center\" OR Micron OR HBM OR Israel OR grid) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "from:Bloomberg (Microsoft OR Nscale OR Micron OR HBM OR Israel OR CoreWeave OR CPI) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "(Nscale OR Microsoft OR \"grid power\" OR \"pulled out\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "(Micron OR MU) (AATT2 OR \"HBM plant\" OR \"sold out\" OR \"2027 capacity\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "(Israel OR \"Electricity Authority\") (\"data center\" OR AI OR grid OR power) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "(Samsung OR TSMC) (HBM OR \"base die\" OR 3nm) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "from:Telegraph OR from:ReutersBiz OR from:business (Nscale OR Micron OR HBM OR Israel OR CoreWeave) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "X主帖读取：2111593208027226203、2111555383705637137、2111450931732549818、2111468567614947752、2111781898036863325、2111741606248284350",
+        "counter-evidence: (Nscale Microsoft) (deny OR unaffected OR \"other contracts\" OR \"grid 2030s\") 2026-10-17T12:30Z..2026-10-18T12:30Z",
+        "counter-evidence: CoreWeave (backlog OR prepayment OR \"secured funding\" OR \"long-term\") same window",
+        "counter-evidence: Venezuela \"76 billion\" expects; Macklem \"Bank of Canada\"; Russian defence Ukraine confirm denial; Micron AATT2 TSMC Samsung Israel correction; same window"
+      ],
+      "candidates": [
+        {
+          "eventKey": "coreweave-credit-secondary",
+          "round": 1,
+          "username": "GlobalMktObserv",
+          "postId": "2111795659682496721",
+          "publishedAt": "2026-10-18T12:24:55Z",
+          "url": "https://x.com/GlobalMktObserv/status/2111795659682496721",
+          "decision": "excluded",
+          "reason": "具体收益率CDS排除；只复核既有Bloomberg融资主张"
+        },
+        {
+          "eventKey": "msft-nscale-grid",
+          "round": 1,
+          "username": "Generationalwth",
+          "postId": "2111795530556703164",
+          "publishedAt": "2026-10-18T12:24:24Z",
+          "url": "https://x.com/Generationalwth/status/2111795530556703164",
+          "decision": "selected",
+          "reason": "追到Telegraph原创媒体帖及Bloomberg同源转述；仅采用退出报道，不采用GPU数量/电网年份/因果"
+        },
+        {
+          "eventKey": "macro-prices-cpi-secondary",
+          "round": 1,
+          "username": "OnchainIns5699",
+          "postId": "2111576856486965482",
+          "publishedAt": "2026-10-17T21:55:28Z",
+          "url": "https://x.com/OnchainIns5699/status/2111576856486965482",
+          "decision": "excluded",
+          "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+        },
+        {
+          "eventKey": "soxx-nine-day-secondary",
+          "round": 1,
+          "username": "MarketEdgeNews",
+          "postId": "2111795444540174421",
+          "publishedAt": "2026-10-18T12:24:03Z",
+          "url": "https://x.com/MarketEdgeNews/status/2111795444540174421",
+          "decision": "excluded",
+          "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+        },
+        {
+          "eventKey": "micron-aatt2-2027",
+          "round": 2,
+          "username": "DennCave",
+          "postId": "2111754240557211667",
+          "publishedAt": "2026-10-18T09:40:20Z",
+          "url": "https://x.com/DennCave/status/2111754240557211667",
+          "decision": "excluded",
+          "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+        },
+        {
+          "eventKey": "samsung-tsmc-hbm",
+          "round": 2,
+          "username": "ElnurIb01717668",
+          "postId": "2111768777817751957",
+          "publishedAt": "2026-10-18T10:38:06Z",
+          "url": "https://x.com/ElnurIb01717668/status/2111768777817751957",
+          "decision": "excluded",
+          "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+        },
+        {
+          "eventKey": "israel-ai-grid",
+          "round": 2,
+          "username": "Calcalistech",
+          "postId": "2111795830214516961",
+          "publishedAt": "2026-10-18T12:25:35Z",
+          "url": "https://x.com/Calcalistech/status/2111795830214516961",
+          "decision": "excluded",
+          "reason": "未取得窗口内原始/权威来源或新增事实，落选"
+        },
+        {
+          "eventKey": "ai-profit-commentary",
+          "round": 2,
+          "username": "xyz_0x0_zyx",
+          "postId": "2111796069336310046",
+          "publishedAt": null,
+          "url": "https://x.com/xyz_0x0_zyx/status/2111796069336310046",
+          "decision": "excluded",
+          "reason": "观点无本窗新增事实、时间仅约数"
+        }
+      ],
+      "gaps": [
+        "第一轮初始日期查询不够精确；后续用了精确UTC窗口，仍非全量X覆盖",
+        "AI终端付费和地缘物流未取得强新增候选；第二轮重复信用与市场结构候选已合并"
+      ],
+      "attempts": [
+        {
+          "path": "grok-web",
+          "detail": "Arc空白；IAB首次导航超时后同页加载成功，已登录且输入框可用。未调用Bot。"
+        }
+      ],
+      "session": "https://grok.com/c/f930ccb4-4371-4a85-9288-3332156f24e8",
+      "subtasks": [
+        {
+          "id": "discovery",
+          "status": "complete",
+          "rounds": 2
+        },
+        {
+          "id": "source-verification",
+          "status": "complete"
+        },
+        {
+          "id": "counter-evidence",
+          "status": "complete"
+        }
+      ],
+      "sourceVerification": {
+        "checkedAt": "2026-10-18T12:35:50.439Z",
+        "qualified": [
+          {
+            "username": "Telegraph",
+            "publishedAt": "2026-10-18T11:30:14Z",
+            "url": "https://x.com/Telegraph/status/2111781898036863325",
+            "excerpt": "Microsoft has pulled out of an Essex data centre deal",
+            "attribution": "Telegraph报道；未见当事人确认；不采用电网时间及GPU数量"
+          },
+          {
+            "username": "business",
+            "publishedAt": "2026-10-18T08:50:07Z",
+            "url": "https://x.com/business/status/2111741606248284350",
+            "excerpt": "Microsoft has pulled out of a UK data center deal with British neocloud Nscale",
+            "attribution": "Bloomberg援引Telegraph，同源非独立确认"
+          }
+        ],
+        "recheckedPosts": [
+          {
+            "username": "Reuters",
+            "postId": "2111593208027226203",
+            "publishedAt": "2026-10-17T23:00:26Z",
+            "summary": "Venezuela预计五年石油投资近760亿美元；非已签合同"
+          },
+          {
+            "username": "Reuters",
+            "postId": "2111555383705637137",
+            "publishedAt": "2026-10-17T20:30:08Z",
+            "summary": "Macklem谈油价推高加拿大通胀展望；非Fed决定"
+          },
+          {
+            "username": "Reuters",
+            "postId": "2111450931732549818",
+            "publishedAt": "2026-10-17T13:35:05Z",
+            "summary": "俄国防部声称打击乌钢厂与电力设施；无独立确认"
+          },
+          {
+            "username": "business",
+            "postId": "2111468567614947752",
+            "publishedAt": "2026-10-17T14:45:10Z",
+            "summary": "科技企业垃圾债融资承压；不采用CDS及收益率数字"
+          }
+        ],
+        "gaps": [
+          "Micron售罄表态只见个人汇编，开厂事件10月15日为旧背景",
+          "以色列规则和TSMC/Samsung细节未追到可用原始/权威帖",
+          "CoreWeave具体报价与宏观数据没有权威原始数据，排除",
+          "Bloomberg与Telegraph为同一报道链，不能称双重独立证实"
+        ]
+      },
+      "completedAt": "2026-10-18T12:36:36.733Z",
+      "counterEvidence": {
+        "summary": "独立反证已执行。未取得当事人否认或权威相反帖；普通账号称Nscale其他合同不受影响但非当事人原帖，不写成事实。Venezuela仅预期，Macklem仅加拿大，设施打击仅俄方声明。",
+        "gaps": [
+          "MSFT退出原因与并网年份未获当事人/电网原始确认",
+          "未取得公司官方融资/预付相反证据",
+          "俄方设施打击缺乌方/独立确认"
+        ],
+        "collectorCaution": "回答中Venezuela标题曾把$76 billion写成76亿美元；采用英文原文换算760亿美元，未采用误译。"
+      },
+      "checklistResults": [
+        {
+          "item": "第一轮：宏观政策、地缘能源、AI大公司、市场结构",
+          "status": "covered",
+          "note": "两轮发现、逐项追源和独立反证已执行；不称全量覆盖"
+        },
+        {
+          "item": "第二轮独立六包：半导体、电力、AI落地、资本成本、地缘物流、市场结构",
+          "status": "insufficient",
+          "note": "六包均实际检索；半导体、AI终端付费与量化市场结构证据不足"
+        },
+        {
+          "item": "候选原始/权威来源追查",
+          "status": "covered",
+          "note": "两轮发现、逐项追源和独立反证已执行；不称全量覆盖"
+        },
+        {
+          "item": "更正、相反材料与替代解释",
+          "status": "covered",
+          "note": "两轮发现、逐项追源和独立反证已执行；不称全量覆盖"
+        }
+      ],
+      "result": {
+        "newFocus": 1,
+        "recheckedFocus": 3,
+        "recheckedInsights": 1,
+        "selectedEventKeys": [
+          "msft-nscale-essex-exit-2026-10-18",
+          "boc-oil-inflation-outlook-2026-10-17",
+          "russia-ukraine-steel-power-claim-2026-10-17",
+          "venezuela-oil-investment-expectation-2026-10-17",
+          "ai-junk-financing-coreweave-bloomberg-2026-10-17"
+        ]
+      }
+    },
+    {
+      "page": "people",
+      "sequence": 2,
+      "status": "partial",
+      "windowEnd": "2026-10-18T20:30:00+08:00",
+      "checklist": [
+        {
+          "id": "elon-musk",
+          "identity": "Elon Musk",
+          "latestWindowDays": 1,
+          "weeklyWindowDays": 7,
+          "question": "xAI 算力、Tesla AI 与机器人、SpaceX 基础设施及资本配置",
+          "query": "from:elonmusk"
+        },
+        {
+          "id": "jensen-huang",
+          "identity": "Jensen Huang",
+          "latestWindowDays": 1,
+          "weeklyWindowDays": 7,
+          "question": "架构路线、产品节奏、供需、客户资本开支、网络与系统生态；优先可核验的新事实。",
+          "query": "from:JensenHuang"
+        },
+        {
+          "id": "donald-trump",
+          "identity": "Donald Trump",
+          "latestWindowDays": 1,
+          "weeklyWindowDays": 7,
+          "question": "能影响 AI、半导体、电力、贸易、出口管制、税收、财政、能源或监管的可执行政策",
+          "query": "from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse"
+        },
+        {
+          "id": "trillion-leaders",
+          "identity": "万亿美元美股公司核心决策者",
+          "latestWindowDays": 30,
+          "weeklyWindowDays": 30,
+          "question": "AI 需求、资本开支、产品路线、供应瓶颈、毛利、融资与商业化节奏",
+          "query": "万亿美元美股公司核心决策者"
+        },
+        {
+          "id": "research-reports",
+          "identity": "公开、可回查的机构与具名分析师研究变化",
+          "latestWindowDays": 30,
+          "weeklyWindowDays": 30,
+          "question": "盈利预测、资本开支、供需、评级核心假设与产业判断的实质变化",
+          "query": "公开、可回查的机构与具名分析师研究变化"
+        }
+      ],
+      "plannedPrompts": {
+        "discovery": "逐顶部Tab检索近24h/7d或合集30d，规则优先与真实互动热度补位；本人/可归因来源，不与其他侧栏混采",
+        "sourceVerification": "逐拟入选找本人、原采访/权威媒体或政府原帖，独立URL/准确时间/正文和真实互动量",
+        "counterEvidence": "对候选独立查更正、否认、旧闻/上下文与相反事实"
+      },
+      "queries": [
+        "from:elonmusk since:2026-10-17 until:2026-10-19",
+        "from:elonmusk since:2026-10-11 until:2026-10-18",
+        "from:elonmusk (Optimus OR Cybercab OR SpaceX OR xAI) since:2026-10-17",
+        "from:JensenHuang OR from:NVIDIA (interview OR \"Jensen Huang\" OR keynote OR AI OR Blackwell OR Rubin) since:2026-10-17",
+        "\"Jensen Huang\" (Berlin OR \"this too shall pass\" OR \"going to pass\") since:2026-10-15",
+        "from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse (policy OR executive OR order OR tariff OR AI OR energy OR power OR semiconductor) since:2026-10-17",
+        "from:TrumpDailyPosts since:2026-10-17",
+        "from:satyanadella since:2026-09-18",
+        "from:sundarpichai since:2026-09-18",
+        "from:zuck OR from:markzuckerberg since:2026-09-18 (AI OR Meta OR compute OR power OR energy)",
+        "\"David Solomon\" OR \"Goldman Sachs\" (\"$10 trillion\" OR \"data center\" OR capex OR AI) since:2026-09-18",
+        "(\"Goldman Sachs\" OR \"Morgan Stanley\" OR \"JPMorgan\") (capex OR \"capital expenditure\" OR supply OR demand) (AI OR semiconductor OR NVIDIA) since:2026-09-18",
+        "from:finkd since:2026-09-18 until:2026-10-18",
+        "\"David Solomon\" OR \"Goldman Sachs\" (\"$10 trillion\" OR \"10 trillion\" OR \"data center build-out\") (earnings OR call) since:2026-10-01",
+        "\"Morgan Stanley\" (\"$1.6tr\" OR \"1.6 trillion\" OR \"$195bn\" OR \"lease capex\") since:2026-10-01",
+        "from:elonmusk since:2026-10-17T12:30:00_UTC until:2026-10-18T12:30:00_UTC",
+        "from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse since:2026-10-17T12:30:00_UTC until:2026-10-18T12:30:00_UTC",
+        "X主帖核验2111327635095834954、2111314468785549684、2111795194387661137、2111785658188448213、2111507158215057620、2111553867339206724",
+        "counter: from:elonmusk (Roadster OR \"flying car\" OR \"Snake River\" OR \"Grand Canyon\" OR \"half the speed of sound\") since:2026-10-16",
+        "counter: Roadster (demo OR flown OR flight) since:2026-10-17",
+        "counter: TrumpDailyPosts 2111553867339206724 主帖/线程/公开bio归因核验",
+        "counter: (\"David Solomon\" OR \"Goldman Sachs\") (\"$10 trillion\" OR \"10 trillion\") correction since:2026-10-13",
+        "counter: \"Morgan Stanley\" (\"$1.6tr\" OR \"lease capex\" OR \"$195bn\") correction since:2026-10-14",
+        "counter: \"Jensen Huang\" (\"All of this is going to pass\" OR \"Emily Chang\" OR Bloomberg) since:2026-10-16",
+        "counter: from:finkd (Muse OR Wonder OR Spark) since:2026-10-11 until:2026-10-18"
+      ],
+      "candidates": [
+        {
+          "eventKey": "elon-optimus-prime-2026-10-17",
+          "tab": "elon-musk",
+          "url": "https://x.com/elonmusk/status/2111327635095834954",
+          "publishedAt": "2026-10-17T05:25:09Z",
+          "decision": "excluded",
+          "reason": "超24h；玩笑/愿景不进周榜"
+        },
+        {
+          "eventKey": "elon-superintelligence-dollars-2026-10-17",
+          "tab": "elon-musk",
+          "url": "https://x.com/elonmusk/status/2111314468785549684",
+          "publishedAt": "2026-10-17T04:32:50Z",
+          "decision": "excluded",
+          "reason": "超24h；愿景不进周榜"
+        },
+        {
+          "eventKey": "solomon-10t-secondary",
+          "tab": "research-reports",
+          "url": "https://x.com/ChipAndCoin/status/2111795194387661137",
+          "decision": "excluded",
+          "reason": "已读取原帖及引用链；无机构/具名分析师/权威原始X数字，两条均为旧引文再转述"
+        },
+        {
+          "eventKey": "ms-lease-capex-secondary",
+          "tab": "research-reports",
+          "url": "https://x.com/outliercapx/status/2111785658188448213",
+          "decision": "excluded",
+          "reason": "已读取原帖及引用链；无机构/具名分析师/权威原始X数字，两条均为旧引文再转述"
+        },
+        {
+          "eventKey": "elon-roadster-future-demo-2026-10-17",
+          "tab": "elon-musk",
+          "author": "Elon Musk (@elonmusk)",
+          "publishedAt": "2026-10-17T17:18:31Z",
+          "url": "https://x.com/elonmusk/status/2111507158215057620",
+          "decision": "selected",
+          "selection": "engagement",
+          "engagement": {
+            "likes": 103966,
+            "reposts": 10051,
+            "replies": 5673,
+            "quotes": 1004
+          },
+          "reason": "本人原帖与四项实际互动已核；只作未来构想热度，不入重点榜"
+        },
+        {
+          "eventKey": "trumpdaily-brazil-commentary-2026-10-17",
+          "tab": "donald-trump",
+          "publishedAt": "2026-10-17T20:24:07Z",
+          "url": "https://x.com/TrumpDailyPosts/status/2111553867339206724",
+          "decision": "excluded",
+          "reason": "运营者commentary，不能确认Donald Trump本人Truth同步；人数/民调也未核"
+        }
+      ],
+      "gaps": [
+        "初轮部分查询只给日期，入选必须再次用准确时间核验",
+        "高层初轮Zuckerberg账号错误；已要求source-verification用from:finkd补正",
+        "人物规则不足，必须有真实互动及来源才能热度补位"
+      ],
+      "session": "https://grok.com/c/3fcfce80-d8eb-4a98-a8ec-f6c16ed33148",
+      "resourcesLoaded": [
+        "config/research-guidance.json",
+        "knowledge/US_EQUITY_RESEARCH_KB.md",
+        "knowledge/GROK_X_COLLECTION_SOP.md",
+        "docs/PEOPLE_INTELLIGENCE_ROADMAP.md",
+        "config/people-intelligence.json"
+      ],
+      "subtasks": [
+        {
+          "id": "discovery",
+          "status": "complete"
+        },
+        {
+          "id": "source-verification",
+          "status": "complete"
+        },
+        {
+          "id": "counter-evidence",
+          "status": "complete"
+        }
+      ],
+      "sourceVerification": {
+        "summary": "逐帖读原文确认Elon旧愿景超24h；研报数字无原始机构X；finkd账号补正后无非Muse新增；Jensen仅旧采访转述。Elon第三条热度原帖/精确时间/四互动值已取得。Trump第三条归因仍待核。",
+        "checkedAt": "2026-10-18T12:41:19.321Z"
+      },
+      "completedAt": "2026-10-18T12:42:11.483Z",
+      "counterEvidence": "Roadster原帖及独立查询只支持未来构想，不支持已演示；TrumpDailyPosts巴西帖为运营者commentary，无本人同步归因而落选。Solomon/MS数字旧引用重复，未找到原始权威数字；Jensen旧采访重发、finkd旧Muse不新增。",
+      "checklistResults": [
+        {
+          "item": "elon-musk",
+          "status": "covered",
+          "note": "新增1条真实热度，已有2条保留；未来构想非事实兑现"
+        },
+        {
+          "item": "jensen-huang",
+          "status": "insufficient",
+          "note": "旧采访重发，无新原始事实；有效周榜保留"
+        },
+        {
+          "item": "donald-trump",
+          "status": "insufficient",
+          "note": "无新高价值政策；第三条为运营者评论，排除，旧2条不覆盖"
+        },
+        {
+          "item": "trillion-leaders",
+          "status": "insufficient",
+          "note": "已补正finkd；旧Muse重复，无足够新增；原合集保留"
+        },
+        {
+          "item": "research-reports",
+          "status": "insufficient",
+          "note": "两条数字只有二手原帖，排除；旧合集保留"
+        }
+      ],
+      "result": {
+        "newEngagementItems": 1,
+        "newRuleItems": 0,
+        "normalWindowExpiry": [
+          "elon-axios-ai-robots-debt-2026-10-17"
+        ]
+      }
+    },
+    {
+      "page": "tickers",
+      "sequence": 3,
+      "status": "partial",
+      "windowStart": "2026-10-17T12:30:00Z",
+      "windowEnd": "2026-10-18T12:30:00Z",
+      "checklist": [
+        {
+          "id": "nvda",
+          "identity": "NVIDIA Corporation",
+          "question": "GPU/平台节奏、CUDA 与软件生态、供需与客户资本开支、数据中心与网络系统",
+          "query": "$NVDA NVIDIA Corporation from:nvidia"
+        },
+        {
+          "id": "mu",
+          "identity": "Micron Technology",
+          "question": "HBM/DRAM/NAND 供需、产能与长约、毛利与指引、供应链与劳工风险",
+          "query": "$MU Micron Technology from:MicronTech"
+        },
+        {
+          "id": "intc",
+          "identity": "Intel Corporation",
+          "question": "18A/先进制程与封装进度、Foundry 外部客户、AI 加速与代工经济学",
+          "query": "$INTC Intel Corporation from:intel"
+        },
+        {
+          "id": "goog",
+          "identity": "Alphabet Inc. (Google)",
+          "question": "Gemini 产品与变现、TPU/自研芯、Google Cloud 与资本开支、AI 基础设施约束",
+          "query": "$GOOG Alphabet Inc. (Google) from:Google"
+        },
+        {
+          "id": "avgo",
+          "identity": "Broadcom Inc.",
+          "question": "定制 ASIC、以太网交换与光互联、AI 集群网络、客户长约",
+          "query": "$AVGO Broadcom Inc. from:Broadcom"
+        },
+        {
+          "id": "vrt",
+          "identity": "Vertiv Holdings Co",
+          "question": "数据中心电力与液冷、单 MW 内容量、订单与产品节奏",
+          "query": "$VRT Vertiv Holdings Co from:Vertiv"
+        },
+        {
+          "id": "tsm",
+          "identity": "Taiwan Semiconductor Manufacturing (TSMC)",
+          "question": "先进制程与 CoWoS/先进封装产能、月营收与指引、资本开支、客户锁定",
+          "query": "$TSM Taiwan Semiconductor Manufacturing (TSMC) from:tsmc_news"
+        }
+      ],
+      "plannedPrompts": {
+        "discovery": "七标的分别发现24h新增及7d重点进展；产能/订单/财务/电力/变现，普通号只作线索",
+        "sourceVerification": "逐候选公司/监管/权威原帖追源；准确UTC/URL/原文，数字和高管追不到即落选",
+        "counterEvidence": "更正、旧闻、相反数字、替代解释独立检索"
+      },
+      "queries": [
+        "$NVDA OR NVIDIA OR @nvidia -filter:replies since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "$MU OR Micron OR @MicronTech (HBM OR DRAM OR NAND) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "$INTC OR Intel OR @intel (18A OR Foundry) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "$GOOG OR $GOOGL OR Alphabet OR Google (capex OR TPU OR \"cloud revenue\" OR \"Google Cloud\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "$AVGO OR Broadcom OR @Broadcom (ASIC OR \"custom chip\" OR \"long-term\" OR agreement OR customer) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "$VRT OR Vertiv OR @Vertiv (\"liquid cooling\" OR \"data center\" OR order OR power) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "$TSM OR TSMC OR @tsmc_news (CoWoS OR \"monthly revenue\" OR guidance OR 3nm OR 2nm) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "from:nvidia OR from:MicronTech OR from:intel OR from:Google OR from:Broadcom OR from:Vertiv OR from:tsmc_news since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "\"750B\" OR \"$750 billion\" (capex OR CapEx) (Google OR Alphabet OR Meta OR Amazon OR Microsoft) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "Socionext OR \"18A-P\" OR \"18A\" (Intel OR INTC OR foundry) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "source: from:business OR from:Bloomberg (\"750 billion\" OR \"$750B\") (capex OR \"capital spending\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "source: from:SocionextUS OR from:socionext OR \"18A-P\" since:2026-10-17_00:00:00_UTC",
+        "source: from:nvidia OR from:jensenhuang OR from:bg2pod (\"40 billion\" OR \"$40bn\" OR gigawatt)",
+        "source: from:TIME OR from:OpenAI OR from:Broadcom (\"Jalapeño\" OR Jalapeno OR \"Best Inventions\") since:2026-10-01_00:00:00_UTC",
+        "X主帖读取：2111548049214603437、2111506328346558713、2111755411707851109、2111668598439809247、2111763363441312207、2110723974808350898",
+        "counter: from:SocionextUS OR from:socionext (18A OR 18A-P) since:2026-10-01 until:2026-10-18_12:30:00_UTC",
+        "counter: from:intel (18A-P OR Socionext) since:2026-10-01",
+        "counter: Socionext 18A (retract OR correction OR delay OR cancel OR plan) since:2026-10-01",
+        "counter: \"Socionext\" \"18A\" since:2026-09-01 until:2026-10-17",
+        "counter: \"750 billion\" correction retract since:2026-10-10",
+        "counter: \"40 billion\" Huang correction BG2 since:2026-10-14",
+        "counter: Jalapeño TIME OpenAI correction since:2026-10-10",
+        "counter: from:sedaily_com correction since:2026-10-18"
+      ],
+      "candidates": [
+        {
+          "eventKey": "hyperscaler-750b-secondary",
+          "tab": "nvda,goog",
+          "username": "unusual_whales",
+          "url": "https://x.com/unusual_whales/status/2111548049214603437",
+          "publishedAt": "2026-10-17T20:01:00Z",
+          "decision": "excluded",
+          "reason": "7500亿美元capex无Bloomberg原始数字X帖"
+        },
+        {
+          "eventKey": "socionext-intel-18ap-plan-2026-10-17",
+          "tab": "intc",
+          "username": "SocionextUS",
+          "url": "https://x.com/SocionextUS/status/2111506328346558713",
+          "publishedAt": "2026-10-17T17:15:13Z",
+          "decision": "excluded",
+          "reason": "反证发现官方9月8/25日已发相同计划，窗口内旧公告重发无实质新增"
+        },
+        {
+          "eventKey": "huang-40b-gw-secondary",
+          "tab": "nvda",
+          "username": "Schulz_Research",
+          "url": "https://x.com/Schulz_Research/status/2111755411707851109",
+          "publishedAt": "2026-10-18T09:44:59Z",
+          "decision": "excluded",
+          "reason": "高管数字引用10月15日BG2旧访谈，窗口内非新表态"
+        },
+        {
+          "eventKey": "openai-jalapeno-time-secondary",
+          "tab": "avgo",
+          "username": "RocketTerminal",
+          "url": "https://x.com/RocketTerminal/status/2111668598439809247",
+          "publishedAt": "2026-10-18T04:00:01Z",
+          "decision": "excluded",
+          "reason": "TIME/OpenAI/Broadcom无原始权威确认奖项或合作"
+        }
+      ],
+      "gaps": [
+        "MU仅旧财务回顾，VRT无新订单，TSM同一Samsung HBM旧媒体事件；不凑满",
+        "七个标的的官方与关键词均检索，非全量穷尽"
+      ],
+      "resourcesLoaded": [
+        "config/research-guidance.json",
+        "knowledge/US_EQUITY_RESEARCH_KB.md",
+        "knowledge/GROK_X_COLLECTION_SOP.md",
+        "docs/TICKER_INTELLIGENCE.md",
+        "config/ticker-intelligence.json"
+      ],
+      "session": "https://grok.com/c/6bef7f8b-ca61-4175-974b-7b3d5f0a380f",
+      "subtasks": [
+        {
+          "id": "discovery",
+          "status": "complete"
+        },
+        {
+          "id": "source-verification",
+          "status": "complete"
+        },
+        {
+          "id": "counter-evidence",
+          "status": "complete"
+        }
+      ],
+      "sourceVerification": {
+        "checkedAt": "2026-10-18T12:46:11.736Z",
+        "accepted": {
+          "username": "SocionextUS",
+          "publishedAt": "2026-10-17T17:15:13Z",
+          "url": "https://x.com/SocionextUS/status/2111506328346558713",
+          "excerpt": "plans to utilize Intel Foundry’s 18A-P process technology",
+          "meaning": "官方账号只披露计划；订单/量产/合同金额/客户/良率未知"
+        },
+        "rejections": [
+          "7500亿美元capex无Bloomberg原始数字X帖",
+          "Huang数字引用10月15日BG2访谈2110723974808350898，旧话重发",
+          "Jalapeño TIME奖没有TIME/OpenAI/Broadcom官方原始X帖"
+        ],
+        "existingTsm": "2111763363441312207已读只支持媒体独家标题，不补外链细节、不新增"
+      },
+      "completedAt": "2026-10-18T12:47:01.691Z",
+      "counterEvidence": {
+        "summary": "唯一一度通过追源的Socionext官方帖，被反证阶段查出9月8/25日同账号已有同一计划，最终落选。其余缺权威或为旧话，全部不新增。",
+        "priorPosts": [
+          {
+            "username": "SocionextUS",
+            "publishedAt": "2026-09-08T19:40:14Z",
+            "url": "https://x.com/SocionextUS/status/2097409699054309618"
+          },
+          {
+            "username": "SocionextUS",
+            "publishedAt": "2026-09-25T19:45:13Z",
+            "url": "https://x.com/SocionextUS/status/2103571544433705325"
+          }
+        ],
+        "gaps": [
+          "无Intel当事人确认量产/客户/良率/合同条款",
+          "其余落选项无权威原始证据，不能因无更正而恢复"
+        ]
+      },
+      "checklistResults": [
+        {
+          "item": "nvda",
+          "status": "insufficient",
+          "note": "已实际查询；无足够本窗新增原始/权威事实；有效旧周榜保留"
+        },
+        {
+          "item": "mu",
+          "status": "no-result",
+          "note": "已实际查询；无足够本窗新增原始/权威事实；有效旧周榜保留"
+        },
+        {
+          "item": "intc",
+          "status": "insufficient",
+          "note": "官方计划为9月旧公告重发，排除"
+        },
+        {
+          "item": "goog",
+          "status": "insufficient",
+          "note": "已实际查询；无足够本窗新增原始/权威事实；有效旧周榜保留"
+        },
+        {
+          "item": "avgo",
+          "status": "insufficient",
+          "note": "已实际查询；无足够本窗新增原始/权威事实；有效旧周榜保留"
+        },
+        {
+          "item": "vrt",
+          "status": "no-result",
+          "note": "已实际查询；无足够本窗新增原始/权威事实；有效旧周榜保留"
+        },
+        {
+          "item": "tsm",
+          "status": "insufficient",
+          "note": "既有媒体帖复核无更正，不复制新增"
+        }
+      ],
+      "result": {
+        "newItems": 0,
+        "retained": true
+      }
+    },
+    {
+      "page": "ai",
+      "sequence": 4,
+      "status": "partial",
+      "windowStart": "2026-10-17T12:30:00Z",
+      "windowEnd": "2026-10-18T12:30:00Z",
+      "resourcesLoaded": [
+        "config/research-guidance.json",
+        "knowledge/US_EQUITY_RESEARCH_KB.md",
+        "knowledge/GROK_X_COLLECTION_SOP.md",
+        "docs/AI_INTELLIGENCE.md",
+        "config/ai-intelligence.json"
+      ],
+      "checklist": [
+        {
+          "id": "openai",
+          "identity": "OpenAI",
+          "question": "模型/产品/API、企业合作、资本与算力需求、安全与监管相关可核验新增事实",
+          "query": "from:OpenAI"
+        },
+        {
+          "id": "anthropic",
+          "identity": "Anthropic",
+          "question": "Claude 产品与 API、企业部署、安全/对齐、云渠道与合作",
+          "query": "from:AnthropicAI"
+        },
+        {
+          "id": "goog-ai",
+          "identity": "Google / DeepMind AI products",
+          "question": "Gemini/DeepMind/Veo/Agent/TPU 等 AI 产品与组织动作；不是 Alphabet 股价或一般财报叙事",
+          "query": "from:Google OR from:GoogleDeepMind"
+        },
+        {
+          "id": "ai-others",
+          "identity": "其他 AI 实验室、中国 AI、政府 AI 政策与开源模型",
+          "question": "较小 AI 实验室/初创、中国公司与政策、美欧中等政府 AI 政策、重要开源模型发布",
+          "query": "其他 AI 实验室、中国 AI、政府 AI 政策与开源模型"
+        }
+      ],
+      "plannedPrompts": {
+        "discovery": "四顶部Tab独立发现24h产品/API/部署/安全政策新增，七天重点只在有增量时更新",
+        "sourceVerification": "实验室/监管/权威原始X帖；模型泄漏不当正式发布，数字/高管必须原始权威",
+        "counterEvidence": "更正/下线/不可用/收费/时间边界与旧闻重复独立检索"
+      },
+      "queries": [
+        "(from:OpenAI OR from:OpenAIDevs OR from:OpenAINewsroom) since_time:1792240200 until_time:1792326600",
+        "(from:AnthropicAI OR from:claudeai) since_time:1792240200 until_time:1792326600",
+        "(from:GoogleDeepMind OR from:GoogleAI OR from:Google) (Gemini OR Veo OR Argon OR TPU) since_time:1792240200 until_time:1792326600",
+        "(from:DeepSeek OR from:AlibabaCloud OR from:MistralAI OR from:Meta OR China OR MOFCOM) (AI OR model OR export) since_time:1792240200 until_time:1792326600",
+        "(OpenAI OR ChatGPT OR Codex) (release OR update OR \"new model\" OR safety OR API OR voice) min_faves:10 since_time:1792240200 until_time:1792326600",
+        "(Anthropic OR Claude) (release OR update OR safety OR API OR \"data center\" OR METR OR enterprise) min_faves:5 since_time:1792240200 until_time:1792326600",
+        "(Gemini OR DeepMind OR Argon OR Veo) (release OR GA OR update OR TPU OR agent) min_faves:5 since_time:1792240200 until_time:1792326600",
+        "(China OR MOFCOM OR 商务部 OR 出口管制) (AI OR 人工智能 OR model OR DeepSeek OR Qwen) since_time:1792240200 until_time:1792326600",
+        "Mistral (Timestral OR \"time-series\" OR release OR model) since_time:1792240200 until_time:1792326600",
+        "source: from:AnthropicAI (Canada OR \"Nova Scotia\" OR lease OR \"data center\" OR safety OR bill OR METR OR draft) since:2026-10-15 until:2026-10-19",
+        "source: from:GoogleDeepMind OR from:GoogleAI OR from:GeminiApp OR from:Google (Argon OR \"Gemini 4\" OR Veo) since:2026-10-10 until:2026-10-19",
+        "source: from:deepseek_ai OR from:Alibaba_Qwen OR from:MistralAI OR from:metaai since:2026-10-16 until:2026-10-19",
+        "source: from:MistralAI (Timestral OR \"time series\") since:2026-10-10 until:2026-10-19",
+        "source: (from:OpenAI OR from:OpenAIDevs OR from:OpenAINewsroom) aurora since:2026-10-15 until:2026-10-19",
+        "source: (MOFCOM OR 商务部 OR \"Ministry of Commerce\" OR 出口管制) (AI OR model OR DeepSeek OR Qwen) since:2026-10-15 until:2026-10-19",
+        "X主帖读取2111585491237650691；窗前原帖2110784662071398807、2110041305925484716、2111375640717033777只作时间核对",
+        "counter: (from:OpenAI OR from:OpenAIDevs OR from:OpenAINewsroom) aurora since_time:1792240200 until_time:1792326600",
+        "counter: (from:OpenAI OR from:OpenAIDevs) (showcase OR \"weekend project\" OR youcanjustbuildthings) since_time:1792240200 until_time:1792326600",
+        "counter: from:AnthropicAI (bill OR draft OR safety OR METR OR \"Nova Scotia\" OR lease OR Canada) since_time:1792240200 until_time:1792326600",
+        "counter: (from:Google OR from:GoogleDeepMind OR from:GoogleAI OR from:GeminiApp) (Argon OR \"Gemini 4\") (correction OR update OR capability OR fix) since_time:1792240200 until_time:1792326600",
+        "counter: from:deepseek_ai (Search OR Fetch OR billing OR free OR offline OR correction) since_time:1792240200 until_time:1792326600",
+        "counter: from:MistralAI (Timestral OR \"time series\") since_time:1792240200 until_time:1792326600",
+        "counter: (MOFCOM OR 商务部 OR \"export control\") (AI OR DeepSeek OR Qwen) since_time:1792240200 until_time:1792326600"
+      ],
+      "candidates": [
+        {
+          "eventKey": "openaidevs-weekend-showcase-2026-10-17",
+          "tab": "openai",
+          "username": "OpenAIDevs",
+          "publishedAt": "2026-10-17T22:29:47Z",
+          "url": "https://x.com/OpenAIDevs/status/2111585491237650691",
+          "decision": "excluded",
+          "reason": "社区推广无能力/经营增量；不采用外链细节"
+        },
+        {
+          "eventKey": "anthropic-nova-scotia-repost",
+          "tab": "anthropic",
+          "decision": "excluded",
+          "reason": "窗前旧发布/事件转述，或缺本窗原始/权威来源，不新增"
+        },
+        {
+          "eventKey": "google-argon-repost",
+          "tab": "goog-ai",
+          "decision": "excluded",
+          "reason": "窗前旧发布/事件转述，或缺本窗原始/权威来源，不新增"
+        },
+        {
+          "eventKey": "timestral-export-draft-repost",
+          "tab": "ai-others",
+          "decision": "excluded",
+          "reason": "窗前旧发布/事件转述，或缺本窗原始/权威来源，不新增"
+        }
+      ],
+      "gaps": [
+        "初轮部分账号锚点需补正deepseek_ai/Alibaba_Qwen；追源阶段已明确要求",
+        "初始日期查询已以精确epoch窗口补查；仍非X全量覆盖",
+        "仅采用明确X工具返回，不采用任何非X链接落地页内容"
+      ],
+      "session": "https://grok.com/c/3ac467b8-9870-4af0-841a-c2ea3f0b052a",
+      "subtasks": [
+        {
+          "id": "discovery",
+          "status": "complete"
+        },
+        {
+          "id": "source-verification",
+          "status": "complete"
+        },
+        {
+          "id": "counter-evidence",
+          "status": "complete"
+        }
+      ],
+      "sourceVerification": {
+        "summary": "OpenAIDevs主帖仅社区推广，无能力增量；Nova Scotia无官方本窗更新；METR官方10月15日、Argon官方10月13日、DeepSeek官方10月17日08:35均窗前；Timestral及中国草案无本窗原始权威确认。aurora无官方确认。",
+        "gaps": [
+          "Grok曾返回12:39:12Z的unusual_whales 2111799253920256160，晚于12:30截止，明确排除",
+          "政策草案细节未原始核验，不能写生效",
+          "未打开任何非X落地页；未采用外链细节"
+        ]
+      },
+      "completedAt": "2026-10-18T12:51:37.329Z",
+      "counterEvidence": "四Tab独立反证实际执行；无新原始帖足以改变判断。OpenAI只有推广；Aurora无正式确认；Anthropic无窗内生效/租约更新；Argon旧发布；DeepSeek无窗内收费/下线更正；Timestral/中国草案缺原始确认。12:39:12Z帖晚于截止明确排除。",
+      "checklistResults": [
+        {
+          "item": "openai",
+          "status": "insufficient",
+          "note": "发现→原始追源→独立反证已完成；无合格24h新增；原有效七天榜保留，不写成全面无事件"
+        },
+        {
+          "item": "anthropic",
+          "status": "insufficient",
+          "note": "发现→原始追源→独立反证已完成；无合格24h新增；原有效七天榜保留，不写成全面无事件"
+        },
+        {
+          "item": "goog-ai",
+          "status": "insufficient",
+          "note": "发现→原始追源→独立反证已完成；无合格24h新增；原有效七天榜保留，不写成全面无事件"
+        },
+        {
+          "item": "ai-others",
+          "status": "insufficient",
+          "note": "发现→原始追源→独立反证已完成；无合格24h新增；原有效七天榜保留，不写成全面无事件"
+        }
+      ],
+      "result": {
+        "newItems": 0,
+        "retained": true
+      }
+    },
+    {
+      "page": "learning",
+      "sequence": 5,
+      "status": "complete",
+      "action": "run",
+      "context": "仅复用当天已验收证据的独立派生上下文",
+      "checklist": [
+        "当天合格X证据与项目知识",
+        "每日趣事≤3；新增基础知识≤1",
+        "专业版与18+故事版同一因果链"
+      ],
+      "queries": [],
+      "acceptedEvidence": [
+        "ai-junk-financing-coreweave-bloomberg-2026-10-17"
+      ],
+      "sourceUrls": [
+        "https://x.com/business/status/2111468567614947752"
+      ],
+      "gaps": [
+        "沿用Grok采集器转述，不新增搜索或实测财务数据"
+      ],
+      "completedAt": "2026-10-18T12:52:11.865Z",
+      "checklistResults": [
+        {
+          "item": "当天合格X证据与项目知识",
+          "status": "covered",
+          "note": "只复用当日已验收Bloomberg融资原帖；解释采用项目KB I01/I02/M05，不新增企业事实/数字"
+        },
+        {
+          "item": "每日趣事≤3；新增基础知识≤1",
+          "status": "covered",
+          "note": "只复用当日已验收Bloomberg融资原帖；解释采用项目KB I01/I02/M05，不新增企业事实/数字"
+        },
+        {
+          "item": "专业版与18+故事版同一因果链",
+          "status": "covered",
+          "note": "只复用当日已验收Bloomberg融资原帖；解释采用项目KB I01/I02/M05，不新增企业事实/数字"
+        }
+      ],
+      "result": {
+        "newCuriosities": 1,
+        "newLessons": 1,
+        "lessonId": "demand-funding-cashflow"
+      }
+    },
+    {
+      "page": "macro",
+      "sequence": 6,
+      "status": "unchanged",
+      "action": "check-due",
+      "context": "仅低频官方日历到期/过时检查",
+      "checklist": [
+        "检查未来事件范围与到期",
+        "复用当天已完成Fed/BEA官方核对的审计，不重复全表搜索"
+      ],
+      "queries": [],
+      "gaps": [],
+      "completedAt": "2026-10-18T12:52:25.850Z",
+      "reusedAudit": {
+        "file": "data/collection-runs/manual-cb8dad62-83c2-4836-b5b1-25716bef981d.json",
+        "completedAt": "2026-10-18T12:06:28.071Z",
+        "macro": {
+          "page": "macro",
+          "status": "unchanged",
+          "checklist": [
+            "检查官方日历数据覆盖、当前季度及低频更新必要性"
+          ],
+          "queries": [
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "https://www.bea.gov/news/schedule/full"
+          ],
+          "gaps": [
+            "本轮只复核Fed与BEA相关Q4日期；BLS、SEC及其他历史事件沿用前次证据，没有重验全部71条。"
+          ],
+          "checklistResults": [
+            {
+              "item": "Q4覆盖与到期检查",
+              "status": "covered",
+              "note": "现有Q4事件覆盖至12月31日。"
+            },
+            {
+              "item": "Fed与BEA低频官方核对",
+              "status": "covered",
+              "note": "Fed列10月27-28日、12月8-9日会议；BEA Q4 PCE列10月29、11月25、12月23日，均与现存条目一致，未修改日历。"
+            }
+          ]
+        }
+      },
+      "result": {
+        "due": false,
+        "stale": false,
+        "nextEventDate": "2026-10-21",
+        "coverageEnd": "2026-12-31",
+        "changed": false
+      },
+      "checklistResults": [
+        {
+          "item": "到期及过时检查",
+          "status": "covered",
+          "note": "现有Q4覆盖至12月31日；今天10月18日无待到期宏观项；下一事件10月21日。"
+        },
+        {
+          "item": "低频官方复核",
+          "status": "covered",
+          "note": "约一小时前的手动批次已核对Fed/BEA Q4日期且无改动；本轮不重复搜索全表，也不把未重验项称新核验。"
+        }
+      ]
+    },
+    {
+      "page": "earnings",
+      "sequence": 7,
+      "status": "complete",
+      "context": "独立官方Nasdaq日历例外；不进入X候选",
+      "checklist": [
+        "Nasdaq上周10/12–16、本周10/19–23、下周10/26–30全部15工作日",
+        "增量处理pendingReview，证据不足标unknown",
+        "检查stale与每日上限truncated"
+      ],
+      "queries": [
+        "npm run fetch:earnings → https://api.nasdaq.com/api/calendar/earnings?date=YYYY-MM-DD"
+      ],
+      "gaps": [
+        "精选并非全市场日历；10月29日另3家未展示，已有truncated提示"
+      ],
+      "completedAt": "2026-10-18T12:53:07.593Z",
+      "result": {
+        "updatedAt": "2026-10-18T12:52:32.072Z",
+        "counts": {
+          "weeks": 3,
+          "raw": 1263,
+          "important": 80
+        },
+        "pendingReview": [],
+        "staleDates": [],
+        "weeks": [
+          {
+            "id": "last",
+            "start": "2026-10-12",
+            "end": "2026-10-16",
+            "count": 12
+          },
+          {
+            "id": "current",
+            "start": "2026-10-19",
+            "end": "2026-10-23",
+            "count": 21
+          },
+          {
+            "id": "next",
+            "start": "2026-10-26",
+            "end": "2026-10-30",
+            "count": 47
+          }
+        ],
+        "truncated": [
+          "2026-10-29: TTE/GILD/BUD"
+        ]
+      },
+      "checklistResults": [
+        {
+          "item": "Nasdaq上周10/12–16、本周10/19–23、下周10/26–30全部15工作日",
+          "status": "covered",
+          "note": "15工作日日历请求成功，精选12+21+47=80家"
+        },
+        {
+          "item": "增量处理pendingReview，证据不足标unknown",
+          "status": "covered",
+          "note": "pendingReview=0；已评分项沿用，未重复评价"
+        },
+        {
+          "item": "检查stale与每日上限truncated",
+          "status": "covered",
+          "note": "无失败日期；10月29日TTE/GILD/BUD按每日上限列未展示提示"
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-10-18T12:53:07.597Z",
+  "deduplication": {
+    "checked": true,
+    "note": "各侧栏独立候选，不互相填充；新闻既有事件以延续原键复核，TSM/DeepSeek/采访旧事不新增；每日学习仅引用已验收融资证据做知识派生。"
+  },
+  "notes": [
+    "真实20:30本机自动触发；四X批次各独立Grok会话，串行三阶段，Bot保持暂停",
+    "所有X来源均为Grok采集器转述；当前模型未独立直读X；证据不足不补数，零合格非链路失败",
+    "用户本次明确要求npm test/check/build；不启动本地网站，不恢复Webhook/D1/GitHub Actions定时",
+    "初始网页导航超时后加载成功；无第三条X采集路径；研究质量/长期调度可靠性仍有缺口"
+  ],
+  "publication": {
+    "status": "ready-to-push",
+    "validationRepairs": [
+      "v2新闻补显式carriedOver空数组；未更改证据/时间",
+      "人物快照去除已超24h且未入周榜的既有Elon采访项；历史保留，未伪造周榜排名"
+    ]
+  },
+  "validation": {
+    "initial": {
+      "tests": "92/93；既有财报主营描述缺项导致1失败",
+      "check": "36家主营描述缺项",
+      "build": "passed"
+    },
+    "repair": {
+      "file": "config/company-blurbs.json",
+      "symbols": [
+        "CDNS",
+        "VZ",
+        "WELL",
+        "HOOD",
+        "HUBB",
+        "SWKS",
+        "ENPH",
+        "BBAI",
+        "HSBC",
+        "NVS",
+        "SCCO",
+        "STX",
+        "FTNT",
+        "AEP",
+        "GNRC",
+        "APH",
+        "TMUS",
+        "PWR",
+        "MSTR",
+        "MPWR",
+        "COIN",
+        "XEL",
+        "FSLR",
+        "LLY",
+        "MRK",
+        "CAT",
+        "SHEL",
+        "LIN",
+        "SNDK",
+        "D",
+        "EXC",
+        "CCJ",
+        "XOM",
+        "ABBV",
+        "CVX",
+        "AZN"
+      ],
+      "scope": "仅公认业务范畴元数据；无财报/量化投资主张，不称本次逐公司IR核验；加密产品分类不构成恢复加密侧栏或采集"
+    },
+    "final": {
+      "tests": {
+        "passed": 93,
+        "total": 93
+      },
+      "check": "passed",
+      "build": "passed",
+      "checkedAt": "2026-10-18T12:55:46.999Z"
+    }
+  }
+}

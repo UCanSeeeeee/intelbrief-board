@@ -427,6 +427,39 @@
         "X主帖读取：2111593208027226203、2111555383705637137、2111450931732549818、2111468567614947752、2111488190678786100"
       ],
       "recordedAt": "2026-10-18T12:05:16.983Z"
+    },
+    {
+      "jobId": "2026-10-18-2030",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-17T12:30:00Z",
+      "end": "2026-10-18T20:30:00+08:00",
+      "status": "partial",
+      "queries": [
+        "(Fed OR \"interest rates\" OR inflation OR CPI OR \"Treasury yields\" OR geopolitics OR oil OR AI OR \"market structure\") since:2026-10-17 until:2026-10-18 filter:links -filter:replies",
+        "US stock market macro policy geopolitics energy logistics AI large companies market structure October 17-18 2026",
+        "(semiconductor OR HBM OR packaging OR CoWoS OR TSMC OR Micron OR \"SK Hynix\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(\"power grid\" OR PPA OR \"power purchase\" OR \"data center power\" OR interconnection) (AI OR \"data center\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(\"AI revenue\" OR \"AI monetization\" OR \"paid AI\" OR \"enterprise AI\" OR \"AI adoption\" OR \"AI spending\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(CoreWeave OR \"AI financing\" OR \"capital cost\" OR \"debt issuance\" OR \"credit spread\") (AI OR \"data center\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(Hormuz OR Iran OR oil OR Brent OR shipping OR logistics) (market OR stock OR equity) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(VIX OR liquidity OR \"market structure\" OR rotation OR breadth OR \"yield curve\" OR Fed) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(CoreWeave OR CRWV) (bond OR yield OR CDS OR debt OR financing) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(Microsoft OR MSFT) (Nscale OR \"data center\" OR \"grid power\" OR PPA OR interconnection) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "(TSMC OR Micron OR MU OR HBM) (capacity OR shortage OR packaging OR \"sold out\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC -filter:replies",
+        "from:Reuters (Microsoft OR Nscale OR \"data center\" OR Micron OR HBM OR Israel OR grid) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "from:Bloomberg (Microsoft OR Nscale OR Micron OR HBM OR Israel OR CoreWeave OR CPI) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "(Nscale OR Microsoft OR \"grid power\" OR \"pulled out\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "(Micron OR MU) (AATT2 OR \"HBM plant\" OR \"sold out\" OR \"2027 capacity\") since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "(Israel OR \"Electricity Authority\") (\"data center\" OR AI OR grid OR power) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "(Samsung OR TSMC) (HBM OR \"base die\" OR 3nm) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "from:Telegraph OR from:ReutersBiz OR from:business (Nscale OR Micron OR HBM OR Israel OR CoreWeave) since:2026-10-17_12:30:00_UTC until:2026-10-18_12:30:00_UTC",
+        "X主帖读取：2111593208027226203、2111555383705637137、2111450931732549818、2111468567614947752、2111781898036863325、2111741606248284350",
+        "counter-evidence: (Nscale Microsoft) (deny OR unaffected OR \"other contracts\" OR \"grid 2030s\") 2026-10-17T12:30Z..2026-10-18T12:30Z",
+        "counter-evidence: CoreWeave (backlog OR prepayment OR \"secured funding\" OR \"long-term\") same window",
+        "counter-evidence: Venezuela \"76 billion\" expects; Macklem \"Bank of Canada\"; Russian defence Ukraine confirm denial; Micron AATT2 TSMC Samsung Israel correction; same window"
+      ],
+      "recordedAt": "2026-10-18T12:53:31.672Z"
     }
   ]
 }

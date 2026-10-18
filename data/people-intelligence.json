@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-18T12:05:16.538Z",
-  "cutoff": "2026-10-18T19:43:00+08:00",
+  "updatedAt": "2026-10-18T12:53:50.294Z",
+  "cutoff": "2026-10-18T20:30:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,27 +9,27 @@
       {
         "id": "elon-musk",
         "status": "partial",
-        "note": "已检索本人近24h及7天相关发言并读取主帖；新增2条可回查热度动态。未找到量产、交付或资本开支新增确认；互动排序仅限工具返回候选，非穷尽本人全部发帖。旧窗口内合格内容保留，不假称重新核验。"
+        "note": "新增1条真实热度，已有2条保留；未来构想非事实兑现；Grok采集器转述，非全量覆盖"
       },
       {
         "id": "jensen-huang",
         "status": "partial",
-        "note": "检索本人账号、采访和活动实录；本人账号无本窗直发。媒体采访片段有准确发帖时间，但原讲话时间不足，未作为本次新增事实入选；保留已有周榜。"
+        "note": "旧采访重发，无新原始事实；有效周榜保留；Grok采集器转述，非全量覆盖"
       },
       {
         "id": "donald-trump",
         "status": "partial",
-        "note": "已检索TrumpDailyPosts/POTUS/WhiteHouse相关政策，未取得本窗新增可执行政策；新增2条同步源热度动态，非本人直发。互动量来自工具，未穷尽全量排名；旧周榜保留。"
+        "note": "无新高价值政策；第三条为运营者评论，排除，旧2条不覆盖；Grok采集器转述，非全量覆盖"
       },
       {
         "id": "trillion-leaders",
         "status": "partial",
-        "note": "已查satyanadella/sundarpichai/finkd本人近窗，无新增决策；30天背景不重发。正式公司及每家3至5人名单仍未完成核验，本轮不冒充全体覆盖。"
+        "note": "已补正finkd；旧Muse重复，无足够新增；原合集保留；Grok采集器转述，非全量覆盖"
       },
       {
         "id": "research-reports",
         "status": "partial",
-        "note": "查询Goldman/JPMorgan/Morgan Stanley/BofA/Nomura假设变化；GS同URL已收录，MS电力缺口仅二级转述，均不新增。未取得新机构原帖，保留原有30天条目。"
+        "note": "两条数字只有二手原帖，排除；旧合集保留；Grok采集器转述，非全量覆盖"
       }
     ]
   },
@@ -175,37 +175,40 @@
       ]
     },
     {
-      "weeklyRanks": {},
+      "eventKey": "elon-roadster-future-demo-2026-10-17",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk谈Roadster未来飞行演示构想（热度动态）",
+      "fact": "Elon Musk描述了Roadster未来演示设想，包括飞越峡谷后以车轮落地。这是本人对未来演示的构想；可见帖文没有证明演示已经发生或性能已验证。",
+      "whyItMatters": "本条仅为本人高互动动态补位，未达到高价值规则；不据此推断量产、收入或技术兑现。",
+      "counterCase": "若后续有可核验演示、测试条件与正式披露，再另行评估；当前不能把未来时态写成已经实现。",
+      "affected": [
+        "Tesla Roadster"
+      ],
+      "author": "Elon Musk (@elonmusk)",
+      "publishedAt": "2026-10-17T17:18:31Z",
+      "url": "https://x.com/elonmusk/status/2111507158215057620",
       "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 103966,
+        "reposts": 10051,
+        "replies": 5673,
+        "quotes": 1004,
+        "capturedAt": "2026-10-18T12:42:11.483Z",
+        "source": "Grok网页版X工具返回；未独立直读X"
+      },
       "people": [
         {
           "name": "Elon Musk",
           "intro": "特斯拉与SpaceX CEO"
         }
-      ],
-      "eventKey": "elon-axios-ai-robots-debt-2026-10-17",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 接受 Axios 采访：称 AI 与机器人是解决美国国债的唯一途径",
-      "fact": "FirstSquawk 援引 Axios：Elon Musk 称 AI 与机器人是解决美国国债问题的唯一办法。",
-      "whyItMatters": "与同日约 2 万亿美元财年赤字形成呼应，强化 xAI/Tesla 机器人叙事；属观点而非政策。",
-      "counterCase": "无具体产能或收入数据，难以量化。",
-      "affected": [
-        "Tesla Optimus",
-        "xAI",
-        "美国财政叙事"
-      ],
-      "author": "FirstSquawk",
-      "publishedAt": "2026-10-17T12:28:26.000Z",
-      "url": "https://x.com/FirstSquawk/status/2111434159734530184",
-      "tier": "watch",
-      "selection": "rule"
+      ]
     },
     {
-      "weeklyRanks": {},
-      "verification": "collector-report",
-      "people": [],
       "eventKey": "gs-pb-ai-deleveraging-research-2026-10-17",
       "tabIds": [
         "research-reports"
@@ -222,8 +225,11 @@
       "author": "phithetasigma",
       "publishedAt": "2026-10-17T12:03:57.000Z",
       "url": "https://x.com/phithetasigma/status/2111427997429649841",
+      "verification": "collector-report",
       "tier": "watch",
-      "selection": "rule"
+      "weeklyRanks": {},
+      "selection": "rule",
+      "people": []
     },
     {
       "eventKey": "elon-neuralink-help-millions-2026-10-16",
@@ -402,12 +408,6 @@
       "weeklyRanks": {
         "donald-trump": 1
       },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -418,7 +418,13 @@
         "quotes": 2,
         "views": 33700,
         "bookmarks": 3
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
     },
     {
       "eventKey": "nvidia-mercedes-adas-people-2026-10-16",
@@ -475,12 +481,6 @@
       "weeklyRanks": {
         "elon-musk": 4
       },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -491,7 +491,13 @@
         "quotes": 78,
         "views": 1724864,
         "bookmarks": 441
-      }
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
     },
     {
       "eventKey": "elon-grok-bot-paid-growth-2026-10-15",
@@ -514,12 +520,6 @@
       "weeklyRanks": {
         "elon-musk": 5
       },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -530,7 +530,13 @@
         "quotes": 160,
         "views": 1898076,
         "bookmarks": 1540
-      }
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
     },
     {
       "eventKey": "nvidia-volvo-hyperion-halos-2026-10-15",
@@ -553,7 +559,6 @@
       "weeklyRanks": {
         "jensen-huang": 3
       },
-      "people": [],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -564,7 +569,8 @@
         "quotes": 18,
         "views": 57554,
         "bookmarks": 40
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "nvidia-nemotron-35-super-vl-2026-10-15",
@@ -587,7 +593,6 @@
       "weeklyRanks": {
         "jensen-huang": 4
       },
-      "people": [],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-16T12:41:12.272Z",
@@ -598,7 +603,8 @@
         "quotes": 34,
         "views": 69941,
         "bookmarks": 92
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "jensen-nvidia-stockholm-nordics-2026-10-15",
@@ -621,12 +627,6 @@
       "weeklyRanks": {
         "jensen-huang": 5
       },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T13:00:15.000Z",
@@ -637,7 +637,13 @@
         "quotes": 3,
         "views": 26375,
         "bookmarks": 4
-      }
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
     },
     {
       "eventKey": "trump-diesel-sanctions-pause-sync-2026-10-15",
@@ -660,12 +666,6 @@
       "weeklyRanks": {
         "donald-trump": 3
       },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T08:02:03.197Z",
@@ -676,7 +676,13 @@
         "quotes": 5,
         "views": 44605,
         "bookmarks": 9
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
     },
     {
       "eventKey": "trump-gfs-malta-plants-sync-2026-10-14",
@@ -699,16 +705,6 @@
       "weeklyRanks": {
         "donald-trump": 2
       },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        },
-        {
-          "name": "Howard Lutnick",
-          "intro": "美国商务部长"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T13:00:15.000Z",
@@ -719,7 +715,17 @@
         "quotes": 15,
         "views": 78537,
         "bookmarks": 13
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        },
+        {
+          "name": "Howard Lutnick",
+          "intro": "美国商务部长"
+        }
+      ]
     },
     {
       "eventKey": "trump-alaska-lng-sync-2026-10-14",
@@ -742,12 +748,6 @@
       "weeklyRanks": {
         "donald-trump": 4
       },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "capturedAt": "2026-10-15T13:00:15.000Z",
@@ -758,7 +758,13 @@
         "quotes": 6,
         "views": 81155,
         "bookmarks": 14
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
     },
     {
       "eventKey": "wh-alaska-lng-pipeline-2026-10-14",
@@ -782,12 +788,6 @@
       "weeklyRanks": {
         "donald-trump": 5
       },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "likes": 624,
@@ -798,7 +798,13 @@
         "capturedAt": "2026-10-14T01:10:00.000Z",
         "source": "x-mcp",
         "bookmarks": 18
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
     },
     {
       "eventKey": "jpm-mu-26-lta-150b-backlog-2026-10-13",
@@ -822,7 +828,6 @@
       "weeklyRanks": {
         "research-reports": 1
       },
-      "people": [],
       "selection": "rule",
       "engagement": {
         "likes": 1197,
@@ -833,7 +838,8 @@
         "capturedAt": "2026-10-14T01:10:00.000Z",
         "source": "x-mcp",
         "bookmarks": 370
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "pichai-gemini-4-argon-launch-2026-10-13",
@@ -857,12 +863,6 @@
       "weeklyRanks": {
         "trillion-leaders": 1
       },
-      "people": [
-        {
-          "name": "Sundar Pichai",
-          "intro": "谷歌及Alphabet CEO"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "likes": 18777,
@@ -873,7 +873,13 @@
         "capturedAt": "2026-10-14T01:10:00.000Z",
         "source": "x-mcp",
         "bookmarks": 2606
-      }
+      },
+      "people": [
+        {
+          "name": "Sundar Pichai",
+          "intro": "谷歌及Alphabet CEO"
+        }
+      ]
     },
     {
       "eventKey": "bofa-tsmc-pt-620-2nm-ramp-2026-10-12",
@@ -898,7 +904,6 @@
       "weeklyRanks": {
         "research-reports": 2
       },
-      "people": [],
       "selection": "rule",
       "engagement": {
         "likes": 6,
@@ -908,7 +913,8 @@
         "views": 367,
         "capturedAt": "2026-10-13T02:20:00Z",
         "source": "x search_posts_all/get_posts_by_ids public_metrics"
-      }
+      },
+      "people": []
     },
     {
       "eventKey": "zuckerberg-muse-wonder-frontier-2026-10-12",
@@ -932,12 +938,6 @@
       "weeklyRanks": {
         "trillion-leaders": 2
       },
-      "people": [
-        {
-          "name": "Mark Zuckerberg",
-          "intro": "Meta创始人兼CEO"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "likes": 35733,
@@ -947,7 +947,13 @@
         "views": 4338270,
         "capturedAt": "2026-10-13T08:11:55.277Z",
         "source": "x get_users_posts/search_posts_all public_metrics"
-      }
+      },
+      "people": [
+        {
+          "name": "Mark Zuckerberg",
+          "intro": "Meta创始人兼CEO"
+        }
+      ]
     },
     {
       "eventKey": "satya-maia-300-primary-inference-2026-10-12",
@@ -972,12 +978,6 @@
       "weeklyRanks": {
         "trillion-leaders": 3
       },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        }
-      ],
       "selection": "rule",
       "engagement": {
         "likes": 12692,
@@ -987,7 +987,13 @@
         "views": 1492811,
         "capturedAt": "2026-10-13T02:20:00Z",
         "source": "x search_posts_all/get_posts_by_ids public_metrics"
-      }
+      },
+      "people": [
+        {
+          "name": "Satya Nadella",
+          "intro": "微软董事长兼CEO"
+        }
+      ]
     },
     {
       "eventKey": "nadella-microsoft-decision-1-2026-10-09",
@@ -1010,13 +1016,13 @@
       "weeklyRanks": {
         "trillion-leaders": 4
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Satya Nadella",
           "intro": "微软董事长兼CEO"
         }
-      ],
-      "selection": "rule"
+      ]
     },
     {
       "eventKey": "pichai-gemini-agent-at-work-2026-10-08",
@@ -1039,13 +1045,13 @@
       "weeklyRanks": {
         "trillion-leaders": 5
       },
+      "selection": "rule",
       "people": [
         {
           "name": "Sundar Pichai",
           "intro": "谷歌及Alphabet CEO"
         }
-      ],
-      "selection": "rule"
+      ]
     },
     {
       "eventKey": "bofa-nvda-pt-320-tam-2026-09-28",
@@ -1068,8 +1074,8 @@
       "weeklyRanks": {
         "research-reports": 4
       },
-      "people": [],
-      "selection": "rule"
+      "selection": "rule",
+      "people": []
     }
   ]
 }
