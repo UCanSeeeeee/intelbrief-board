@@ -9,9 +9,25 @@ test('all active pages ship the shared reading layer without restoring paused pa
     const html = read(page + '.html');
     assert.ok(html.indexOf('styles.css') < html.indexOf('reading.css'), page);
     assert.match(html, /href="reading\.css"/);
+    assert.ok(html.indexOf('src="theme.js"') < html.indexOf('href="styles.css"'), page + ': theme before paint');
   }
   assert.match(read('scripts/build-site.js'), /'reading\.css'/);
+  assert.match(read('scripts/build-site.js'), /'theme\.js'/);
   assert.doesNotMatch(read('scripts/build-site.js'), /'crypto\.html'|'shorts\.html'/);
+});
+
+test('comfort typography and continuous reading are shared by every page', () => {
+  const css = read('reading.css');
+  assert.match(css, /--fs-xs: 14px/);
+  assert.match(css, /--fs-md: 17px/);
+  assert.match(css, /--reading-width: 860px/);
+  assert.match(css, /\.brief-copy, \.signal-copy[^}]+grid-template-columns: 1fr/);
+  assert.match(css, /\.lesson-versions[^}]+grid-template-columns: 1fr/);
+  assert.match(css, /\.paper-detail-grid, \.knowledge-detail-grid[^}]+grid-template-columns: 1fr/);
+  assert.match(css, /prefers-color-scheme: dark/);
+  assert.match(css, /:root\[data-theme="dark"\]/);
+  const html = read('index.html');
+  assert.ok(html.indexOf('href="news.css"') < html.indexOf('href="reading.css"'));
 });
 
 test('people ticker and AI cards expose complete facts and judgments after metadata', () => {
