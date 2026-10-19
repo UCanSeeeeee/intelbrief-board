@@ -14,16 +14,18 @@
     const sources = (event.sources || []).map((s) =>
       s.url ? `<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.name)} ↗</a>` : escape(s.name)
     ).join(' · ');
-    return `<article class="macro-card earnings-card">
+    return `<article class="macro-card earnings-card"><div class="macro-event-main"><div>
       <div class="earnings-card-top">
         <strong>${escape(categoryLabel(event.category, catalog))}</strong>
-        <span class="badge">${escape(importanceLabel[event.importance] || event.importance || '常规')}</span>
+        <span class="calendar-importance">${escape(importanceLabel[event.importance] || event.importance || '常规')}</span>
       </div>
       <p class="earnings-name">${escape(event.title)}</p>
       <p class="earnings-blurb">${escape(event.notes || '')}</p>
+      </div><div class="macro-timing">
       <p class="earnings-meta calendar-time">${escape(IntelCalendar.macroTime(event))}</p>
       ${event.referencePeriod ? `<p class="earnings-meta">对应 ${escape(event.referencePeriod)}</p>` : ''}
       <p class="earnings-result"><strong>来源</strong> ${sources || '—'}</p>
+      </div></div>
     </article>`;
   }
 

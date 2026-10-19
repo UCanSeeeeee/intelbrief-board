@@ -34,17 +34,17 @@
   function lessonCard(item) {
     const sources = Array.isArray(item.sources) ? item.sources : [];
     return `<article class="learning-card lesson-card">
-      <header class="lesson-head"><div><span class="badge">${escape(item.category)}</span><h2>${escape(item.title)}</h2></div><time>更新 ${escape(formatTime(item.updatedAt))}</time></header>
+      <header class="lesson-head"><div><span class="lesson-category">${escape(item.category)}</span><h2>${escape(item.title)}</h2></div><time>更新 ${escape(formatTime(item.updatedAt))}</time></header>
       <div class="lesson-versions">
         <section class="lesson-version professional-version" aria-labelledby="${escape(item.id)}-professional">
-          <p class="eyebrow">专业版</p><h3 id="${escape(item.id)}-professional">用术语把机制说准确</h3>
+          <h3 id="${escape(item.id)}-professional">专业版</h3>
           <p><strong>定义</strong>${escape(item.professional.definition)}</p>
           <p><strong>运行机制</strong>${escape(item.professional.mechanism)}</p>
           <p><strong>为什么重要</strong>${escape(item.professional.whyItMatters)}</p>
           ${list(item.professional.signals)}
         </section>
         <section class="lesson-version story-version" aria-labelledby="${escape(item.id)}-story">
-          <p class="eyebrow">故事版 · 18岁以上可读</p><h3 id="${escape(item.id)}-story">${escape(item.story.title)}</h3>
+          <h3 id="${escape(item.id)}-story">故事版</h3><p class="story-title">${escape(item.story.title)}</p>
           <p>${escape(item.story.body)}</p>
           ${mapping(item.story.mapping)}
           <p class="analogy-boundary"><strong>这个故事不能代替什么</strong>${escape(item.story.boundary)}</p>
@@ -72,7 +72,7 @@
       <h2>${escape(item.title)}</h2>
       <p class="paper-identity">${escape(item.authors.join('、'))}${item.authorsTruncated?' 等':''} · 发表 ${escape(item.publishedDate)}${item.selectionKind === 'classic'?' · 往期':''}</p>
       <p class="paper-takeaway"><strong>结论</strong>${escape(item.takeaway)}</p>
-      ${sections.map(([key,label])=>`<p><strong>${label}</strong>${escape(item.summary[key])}</p>`).join('')}
+      <div class="paper-detail-grid">${sections.map(([key,label])=>`<section class="paper-detail paper-${key}"><h3>${label}</h3><p>${escape(item.summary[key])}</p></section>`).join('')}</div>
       <footer><a href="${escape(paperUrl(item.paperUrl))}" target="_blank" rel="noopener noreferrer">原论文 ↗</a>${item.sources.filter(source=>!source.url.includes('#change-history')).map(source=>{ const url=paperUrl(source.url);return url?`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>`:'';}).join('')}</footer></article>`;
   }
 
@@ -89,8 +89,8 @@
 
   function counterCard(item) {
     const sections = [['intuition','常见直觉'],['fact','证据怎么说'],['explanation','为什么'],['boundary','适用边界']];
-    return `<article class="learning-card"><div class="learning-card-head"><span class="badge">${escape(item.topic)}</span></div><h2>${escape(item.title)}</h2>
-      ${sections.map(([key,label])=>`<p><strong>${label}</strong>${escape(item[key])}</p>`).join('')}
+    return `<article class="learning-card counter-card"><div class="learning-card-head"><span class="lesson-category">${escape(item.topic)}</span></div><h2>${escape(item.title)}</h2>
+      <div class="knowledge-detail-grid">${sections.map(([key,label])=>`<section><h3>${label}</h3><p>${escape(item[key])}</p></section>`).join('')}</div>
       ${item.people.length?`<p class="paper-identity">${item.people.map(p=>`${escape(p.name)} · ${escape(p.intro)}`).join('；')}</p>`:''}
       <footer>${item.sources.map(source=>{const url=paperUrl(source.url);return `<span>${escape(source.publisher)}${source.publishedDate?' · '+escape(source.publishedDate):''}</span>${url?`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>`:''}`;}).join('')}</footer></article>`;
   }

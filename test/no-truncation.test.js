@@ -20,12 +20,14 @@ test('all reading disclosures start open and cards omit counter-condition sectio
 });
 
 test('CSS has no text truncation', () => {
-  const css = read('styles.css');
+  for (const file of ['styles.css', 'reading.css', 'news.css']) {
+  const css = read(file);
   assert.doesNotMatch(css, /text-overflow\s*:\s*ellipsis/);
   assert.doesNotMatch(css, /line-clamp/);
   assert.doesNotMatch(css, /-webkit-box/);
   assert.doesNotMatch(css, /overflow\s*:\s*hidden/);
   assert.doesNotMatch(css, /white-space\s*:\s*nowrap/);
+  }
 });
 
 test('front-end JS does not truncate display strings', () => {

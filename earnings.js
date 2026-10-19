@@ -16,20 +16,22 @@
   let blurbs = {};
 
   function card(item, date) {
-    const themes = (item.themes || []).map((t) => `<span class="badge">${escape(t)}</span>`).join('');
+    const themes = (item.themes || []).map(escape).join('、');
     const result = item.result || {};
     const resultText = IntelCalendar.earningsState(item, date);
     return `<article class="earnings-card">
       <div class="earnings-card-top">
-        <strong>${escape(item.symbol)}</strong>
-        <span class="badge">${escape(item.timeLabel)}</span>
-        ${themes}
+        <div class="earnings-identity"><strong>${escape(item.symbol)}</strong><span class="earnings-name">${escape(item.name)}</span></div>
+        <span class="calendar-session">${escape(item.timeLabel)}</span>
       </div>
-      <p class="earnings-name">${escape(item.name)}</p>
+      <div class="earnings-copy"><div>
       <p class="earnings-blurb">${escape(blurbs[item.symbol] || item.businessBlurb || '')}</p>
+      ${themes ? `<p class="earnings-themes">${themes}</p>` : ''}
+      </div><div class="earnings-outcome">
       <p class="earnings-meta">${escape(money(item.marketCapUsd))}${item.epsForecast ? ` · EPS 预期 ${escape(item.epsForecast)}` : ''}</p>
       <p class="earnings-result"><strong>结果</strong> ${escape(resultText)}${result.summary ? ` · ${escape(result.summary)}` : ''}</p>
       ${Array.isArray(result.sources) ? `<div class="result-sources">${result.sources.map(s => typeof s === 'string' ? { url: s } : s).filter(s => /^https:\/\//.test(s?.url || '')).map((s, i) => `<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.name || s.title || `评分依据 ${i + 1}`)} ↗</a>`).join(' · ')}</div>` : ''}
+      </div></div>
     </article>`;
   }
 

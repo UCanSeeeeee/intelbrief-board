@@ -48,20 +48,20 @@
     const url = safeUrl(item.url);
     const affected = Array.isArray(item.affected) ? item.affected : [];
     return `<article class="signal-card${item.selection === 'engagement' ? ' signal-card-engagement' : ''}">
-      <div class="signal-card-head">
+      <div class="signal-card-head signal-meta">
+        <span class="signal-author">作者 <strong>${escape(item.author || '来源待注明')}</strong></span>
+        <time>${escape(formatTime(item.publishedAt))}（北京时间）</time>
+        <span class="signal-verification">${escape(evidenceLabel(item))}</span>
         <div class="signal-badges">
           ${selectionBadge(item)}
           <span class="signal-tier signal-${escape(item.tier || 'watch')}">${item.tier === 'must-read' ? '必须看' : '值得跟踪'}</span>
           ${extraBadge ? `<span class="signal-new">${escape(extraBadge)}</span>` : ''}
         </div>
-        <time>${escape(formatTime(item.publishedAt))}（北京时间）</time>
       </div>
       <h4>${escape(item.title || '未命名事件')}</h4>
       ${peopleNote(item.people)}
-      <p class="signal-verification">${escape(item.author || '来源待注明')} · ${escape(evidenceLabel(item))}</p>
-      <p class="signal-fact"><strong>信息摘要</strong>${escape(item.fact || '尚未写明')}</p>
-      <p><strong>影响判断</strong>${escape(item.whyItMatters || '尚未写明')}</p>
-      ${affected.length ? `<div class="topic-row">${affected.map(value => `<span>${escape(value)}</span>`).join('')}</div>` : ''}
+      <div class="signal-copy"><p class="signal-fact"><strong>信息摘要</strong>${escape(item.fact || '尚未写明')}</p><p class="signal-impact"><strong>影响判断</strong>${escape(item.whyItMatters || '尚未写明')}</p></div>
+      ${affected.length ? `<p class="signal-scope"><strong>影响范围</strong>${affected.map(escape).join('、')}</p>` : ''}
       <footer>${url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">查看 X 原帖 ↗</a>` : '<span>原帖链接待核验</span>'}</footer>
     </article>`;
   }
