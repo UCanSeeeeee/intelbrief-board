@@ -2237,7 +2237,7 @@
   ],
   "pending": [],
   "publication": {
-    "status": "written",
+    "status": "verified",
     "note": "全部批次已关闭；X四批实际失败结果已独立record，23对象成功截止保持08:00。只发布失败状态及官方指标/日历刷新，保留旧内容。",
     "localValidation": "test/check/build/预览均按用户要求未运行；仅执行写入契约及来源/数据差异审查",
     "startedAt": "2026-10-19T07:00:28.697Z",
@@ -2266,7 +2266,162 @@
     ],
     "prePushAt": "2026-10-19T07:00:47.773927+00:00",
     "credentialReview": "仅含公开研究查询、项目路径、运行证据与公开指标/日历；未保存凭证、私人资料或完整浏览器历史。",
-    "gitStartedAt": "2026-10-19T07:01:03.434834+00:00"
+    "gitStartedAt": "2026-10-19T07:01:03.434834+00:00",
+    "contentCommit": "fad27381464aa67bb8936c32f6c0a3de2f95fb84",
+    "remoteHeadConfirmed": "fad27381464aa67bb8936c32f6c0a3de2f95fb84",
+    "verificationAttempts": [
+      {
+        "startedAt": "2026-10-19T07:01:37.919Z",
+        "results": [
+          {
+            "file": "data/stock-briefs/2026-10-19-1500.json",
+            "url": "https://intelbrief-board.pages.dev/data/stock-briefs/2026-10-19-1500.json?publication=fad2738",
+            "status": 200,
+            "match": true,
+            "localSha256": "9e294034e561ac4e68ae9d4c86b99544d7dc4273a8a07da2264282c0ec80ae85",
+            "remoteSha256": "9e294034e561ac4e68ae9d4c86b99544d7dc4273a8a07da2264282c0ec80ae85",
+            "checkedAt": "2026-10-19T07:01:38.953Z"
+          },
+          {
+            "file": "data/stock-briefs/index.json",
+            "url": "https://intelbrief-board.pages.dev/data/stock-briefs/index.json?publication=fad2738",
+            "status": 200,
+            "match": true,
+            "localSha256": "cdbadca2f2c9cd2774f2d5b8dc155aca9ca81cb211c083fde9ec69ca49f66010",
+            "remoteSha256": "cdbadca2f2c9cd2774f2d5b8dc155aca9ca81cb211c083fde9ec69ca49f66010",
+            "checkedAt": "2026-10-19T07:01:38.954Z"
+          },
+          {
+            "file": "data/reading-board.json",
+            "url": "https://intelbrief-board.pages.dev/data/reading-board.json?publication=fad2738",
+            "status": 200,
+            "match": true,
+            "localSha256": "9eeaeefeab6e8df74866cd4ca523b35c3150122b9172d33fbcbe1da2fab4032b",
+            "remoteSha256": "9eeaeefeab6e8df74866cd4ca523b35c3150122b9172d33fbcbe1da2fab4032b",
+            "checkedAt": "2026-10-19T07:01:39.139Z"
+          },
+          {
+            "file": "data/people-intelligence.json",
+            "url": "https://intelbrief-board.pages.dev/data/people-intelligence.json?publication=fad2738",
+            "status": 200,
+            "match": true,
+            "localSha256": "0c4350a6304c9aff681ab36f89ba12f0c1a5cdc389d1ecb73cb0a1120810e6cb",
+            "remoteSha256": "0c4350a6304c9aff681ab36f89ba12f0c1a5cdc389d1ecb73cb0a1120810e6cb",
+            "checkedAt": "2026-10-19T07:01:38.962Z"
+          },
+          {
+            "file": "data/ticker-intelligence.json",
+            "url": "https://intelbrief-board.pages.dev/data/ticker-intelligence.json?publication=fad2738",
+            "status": 200,
+            "match": true,
+            "localSha256": "166059f9549c5eee43287b9aeb866671c8714fd6ecf55d03c5739f76dc75502f",
+            "remoteSha256": "166059f9549c5eee43287b9aeb866671c8714fd6ecf55d03c5739f76dc75502f",
+            "checkedAt": "2026-10-19T07:01:38.956Z"
+          },
+          {
+            "file": "data/ai-intelligence.json",
+            "url": "https://intelbrief-board.pages.dev/data/ai-intelligence.json?publication=fad2738",
+            "status": 200,
+            "match": true,
+            "localSha256": "2987d354817b4ddcc3c363bbc3e172a7c50ffe068d671644287d6624aa7b3be6",
+            "remoteSha256": "2987d354817b4ddcc3c363bbc3e172a7c50ffe068d671644287d6624aa7b3be6",
+            "checkedAt": "2026-10-19T07:01:38.964Z"
+          },
+          {
+            "file": "data/earnings-calendar.json",
+            "url": "https://intelbrief-board.pages.dev/data/earnings-calendar.json?publication=fad2738",
+            "status": 200,
+            "match": true,
+            "localSha256": "781c311a552965dc93fe63c82f0db344547081153ac95c5d0391507b4de9659d",
+            "remoteSha256": "781c311a552965dc93fe63c82f0db344547081153ac95c5d0391507b4de9659d",
+            "checkedAt": "2026-10-19T07:01:38.964Z"
+          },
+          {
+            "file": "data/market-sentiment.json",
+            "url": "https://intelbrief-board.pages.dev/data/market-sentiment.json?publication=fad2738",
+            "status": 200,
+            "match": true,
+            "localSha256": "cac975bbe82f859774e44dbc772373afeceb1aa74e374a0ae36885646ee84226",
+            "remoteSha256": "cac975bbe82f859774e44dbc772373afeceb1aa74e374a0ae36885646ee84226",
+            "checkedAt": "2026-10-19T07:01:38.952Z"
+          },
+          {
+            "file": "data/market-volatility.json",
+            "url": "https://intelbrief-board.pages.dev/data/market-volatility.json?publication=fad2738",
+            "status": 200,
+            "match": true,
+            "localSha256": "3cb8959f91c0e51afce1e69d515cb7fda094182ad55cfe737cb779e7cf7fe51d",
+            "remoteSha256": "3cb8959f91c0e51afce1e69d515cb7fda094182ad55cfe737cb779e7cf7fe51d",
+            "checkedAt": "2026-10-19T07:01:38.951Z"
+          }
+        ],
+        "completedAt": "2026-10-19T07:01:39.139Z"
+      }
+    ],
+    "verifiedAt": "2026-10-19T07:01:39.139Z",
+    "liveIndicators": [
+      {
+        "path": "/api/vix",
+        "status": 200,
+        "checkedAt": "2026-10-19T07:01:40.380Z",
+        "response": {
+          "schemaVersion": 1,
+          "id": "cboe-vix",
+          "value": 19.99,
+          "asOfDate": "2026-10-16",
+          "quoteKind": "close",
+          "previousClose": 16.46,
+          "fetchedAt": "2026-10-19T07:01:40.410Z",
+          "source": {
+            "name": "Cboe",
+            "url": "https://www.cboe.com/tradable-products/vix",
+            "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          },
+          "retrieval": {
+            "status": "ok"
+          }
+        }
+      },
+      {
+        "path": "/api/market-sentiment",
+        "status": 200,
+        "checkedAt": "2026-10-19T07:01:40.677Z",
+        "response": {
+          "schemaVersion": 1,
+          "id": "cnn-fear-greed",
+          "market": "us-equities",
+          "score": 17.9383219954649,
+          "rating": "extreme fear",
+          "timestamp": "2026-10-16T23:59:49+00:00",
+          "fetchedAt": "2026-10-19T07:01:40.765Z",
+          "previous": {
+            "close": 31.5428571428571,
+            "week": 46.4857142857143,
+            "month": 27.3142857142857,
+            "year": 23.114285714285717
+          },
+          "source": {
+            "name": "CNN Fear & Greed Index",
+            "url": "https://www.cnn.com/markets/fear-and-greed",
+            "method": "mirror",
+            "dataUrl": "https://raw.githubusercontent.com/whit3rabbit/fear-greed-data/main/json/cnn_output.json",
+            "mirrorUrl": "https://github.com/whit3rabbit/fear-greed-data"
+          },
+          "retrieval": {
+            "status": "ok",
+            "errors": [
+              {
+                "source": "cnn",
+                "message": "HTTP 418"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "deployNote": "九项Cloudflare公开JSON与内容提交fad2738逐字节匹配；后续仅提交审计回执，不改公开数据。",
+    "liveIndicatorNote": "只读/api/vix返回Cboe收盘19.99（2026-10-16）；只读/api/market-sentiment的CNN直连HTTP418，使用获准whit3rabbit镜像，17.9383219954649及原始时间2026-10-16T23:59:49+00:00与发布快照一致；静态快照本机本次为CNN直连，未混写来源身份。",
+    "auditFollowup": "本次回执收尾为连续同批审计提交；内容提交与最终审计提交分别记录，避免把回执提交当作新内容。"
   },
   "sourceAvailability": {
     "grok-web": {
@@ -2293,6 +2448,13 @@
   "timing": {
     "opsStartedAt": "2026-10-19T14:56:44+08:00",
     "precision": "ops子阶段为秒分辨率墙钟跨度，0秒表示同秒无法进一步区分；不记作纯模型或纯检索计算时间",
-    "preflight": "部分拉取、文档读取与源预检发生于首个计时点之前，没有补造起止"
+    "preflight": "部分拉取、文档读取与源预检发生于首个计时点之前，没有补造起止",
+    "contentVerifiedAt": "2026-10-19T07:01:39.139Z",
+    "auditClosedAt": "2026-10-19T07:02:17.718272+00:00"
+  },
+  "resume": {
+    "x": "网页正常后，23对象均从2026-10-19T00:00:00.000Z接续；本轮没有完成X查询，不当成暂无新增。Bot仍暂停，不扩展来源。",
+    "publication": "内容已上线并核验；不要重做全站采集或覆盖冻结失败期次。",
+    "learning": "15:00未到学习时段；只按后续collection:plan.components执行。"
   }
 }

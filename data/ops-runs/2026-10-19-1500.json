@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-19T14:56:44+08:00",
-  "updatedAt": "2026-10-19T15:00:48+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-19T15:02:18+08:00",
+  "finishedAt": "2026-10-19T15:02:18+08:00",
   "gitHeadAtStart": "19d705b306c1c92a65691fec06aad732ca6c8d34",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-19T15:01:39+08:00",
+      "detail": "内容提交fad2738已push origin HEAD:master；ls-remote确认远端相同"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-19T15:02:17+08:00",
+      "detail": "Cloudflare九项JSON逐字节匹配fad2738；VIX官方只读接口正常；CNN API直连418后用获准镜像，数值及原始时间匹配，保留来源身份"
     }
   ],
   "pages": {
@@ -77,15 +77,12 @@
       "detail": "低频检查，无到期/过时触发，不重查全表"
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "Grok网页入口空白；23对象未提交查询，不推进成功截止。CNN/VIX/Nasdaq例外成功，学习未到期、宏观未触发",
-    "stackSnippet": null
-  },
-  "commitHash": null,
+  "status": "partial",
+  "error": null,
+  "commitHash": "fad27381464aa67bb8936c32f6c0a3de2f95fb84",
   "notes": [
-    "冻结北京时间15:00；按collection plan串行执行，不运行本地测试/check/build/预览"
+    "冻结北京时间15:00；按collection plan串行执行，不运行本地测试/check/build/预览",
+    "发布已核验；X网页失败，23成功截止保留08:00，等待来源恢复后严格增量；CNN/VIX/Nasdaq已成功刷新。未运行本地测试/check/build/预览。"
   ],
   "timings": [
     {
