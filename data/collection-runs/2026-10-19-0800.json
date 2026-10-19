@@ -4366,7 +4366,7 @@
   "collectionCompletedAt": "2026-10-19T00:24:35.691Z",
   "status": "partial",
   "publication": {
-    "status": "ready-to-push",
+    "status": "verified",
     "note": "23对象已独立保存结果并record；本地test/check/build/预览按用户要求不执行。",
     "contractEvents": [
       {
@@ -4395,7 +4395,201 @@
       "activeEvents": 47,
       "historyPreserved": true,
       "note": "21个周五已到保留期事件按既有策略转served；周末有效内容保留，served不表示用户已读。旧热度完整原卡在heatSelection；过期AVGO周榜由既有7日规则移出。"
-    }
+    },
+    "contentCommit": "4cd26e70a8e9d3534e4b274f991e57148968bc9f",
+    "remoteHeadConfirmed": "4cd26e70a8e9d3534e4b274f991e57148968bc9f",
+    "verificationAttempts": [
+      {
+        "startedAt": "2026-10-19T00:26:57.856Z",
+        "completedAt": "2026-10-19T00:26:58.639Z",
+        "results": [
+          {
+            "file": "data/stock-briefs/2026-10-19-0800.json",
+            "url": "https://intelbrief-board.pages.dev/data/stock-briefs/2026-10-19-0800.json?publication=4cd26e7",
+            "status": 200,
+            "match": false,
+            "localSha256": "9925055e6eed2ce31ba1a5aca5c2fbf98798a8bd68154fdfedccd05782bf7971",
+            "remoteSha256": "3ff29351a5d7abd07845acc530490883e584350c8aa88c58280125cabf03bb83",
+            "checkedAt": "2026-10-19T00:26:58.453Z"
+          },
+          {
+            "file": "data/stock-briefs/index.json",
+            "url": "https://intelbrief-board.pages.dev/data/stock-briefs/index.json?publication=4cd26e7",
+            "status": 200,
+            "match": false,
+            "localSha256": "69d31097c69ebed1910dfc6b34a0a83d3c6840e6d6035b45665560e3976b7b32",
+            "remoteSha256": "8a5034f2d6088dd5b9e6a92b6d60e47157c4cd50b759883aaf366bafb5f9016a",
+            "checkedAt": "2026-10-19T00:26:58.431Z"
+          },
+          {
+            "file": "data/reading-board.json",
+            "url": "https://intelbrief-board.pages.dev/data/reading-board.json?publication=4cd26e7",
+            "status": 200,
+            "match": false,
+            "localSha256": "fb39981eb89cf821c3a9cc36585d7ba3cb3ad2718f337eb333f73a19b68b2dee",
+            "remoteSha256": "839ce52116cdd1a6a080b6a8cbff7c4c1b71ab0e766952a1ca174451fbd98aba",
+            "checkedAt": "2026-10-19T00:26:58.639Z"
+          },
+          {
+            "file": "data/people-intelligence.json",
+            "url": "https://intelbrief-board.pages.dev/data/people-intelligence.json?publication=4cd26e7",
+            "status": 200,
+            "match": false,
+            "localSha256": "f280fc4500d354c1d8ed800fda7389e092a9a400896c811738dabefe8486b12d",
+            "remoteSha256": "dacd94163f201cd1f5d198bd7a931b7bffc75eb7f1799e1291a91762f02b6157",
+            "checkedAt": "2026-10-19T00:26:58.437Z"
+          },
+          {
+            "file": "data/ticker-intelligence.json",
+            "url": "https://intelbrief-board.pages.dev/data/ticker-intelligence.json?publication=4cd26e7",
+            "status": 200,
+            "match": false,
+            "localSha256": "043ce1780094202a51d76bf67e8a1f67caf36ec64e92868cbefb33b2f19c5dac",
+            "remoteSha256": "54082032f3c554362aaac8811adb3f2c1d59c796b476904155c8f76deaf5a3bb",
+            "checkedAt": "2026-10-19T00:26:58.454Z"
+          },
+          {
+            "file": "data/ai-intelligence.json",
+            "url": "https://intelbrief-board.pages.dev/data/ai-intelligence.json?publication=4cd26e7",
+            "status": 200,
+            "match": false,
+            "localSha256": "b09a5b46b8bc160e23e15bedb9bb13d4fa4411abd6066f3da0c8aa434bcab6ec",
+            "remoteSha256": "c77e86d11f2ae4f84765237b019329faef4487400ff4d3679bb6a6d47aaba9c7",
+            "checkedAt": "2026-10-19T00:26:58.439Z"
+          },
+          {
+            "file": "data/earnings-calendar.json",
+            "url": "https://intelbrief-board.pages.dev/data/earnings-calendar.json?publication=4cd26e7",
+            "status": 200,
+            "match": false,
+            "localSha256": "468041edc32aebf9ef9f6d11207bc54b13c2d8e366710e8c192616ad1fdf45ef",
+            "remoteSha256": "dc6ae224caffd033649435240bfe294b580f3db56b5d517077b8ab9a0830596e",
+            "checkedAt": "2026-10-19T00:26:58.455Z"
+          },
+          {
+            "file": "data/market-sentiment.json",
+            "url": "https://intelbrief-board.pages.dev/data/market-sentiment.json?publication=4cd26e7",
+            "status": 200,
+            "match": false,
+            "localSha256": "ada3383f653f55e2e4bb8d9a9adb2bccfc86780543dc1056beaf16e588fffd74",
+            "remoteSha256": "9a37db2006ba6657877fdef4edd76a0ce2e434eced82650adcaa3676f98ac18a",
+            "checkedAt": "2026-10-19T00:26:58.432Z"
+          },
+          {
+            "file": "data/counterintuitive-learning.json",
+            "url": "https://intelbrief-board.pages.dev/data/counterintuitive-learning.json?publication=4cd26e7",
+            "status": 200,
+            "match": false,
+            "localSha256": "98433c61a6f2f453aca7bbe76425fb5d0fc2709dc59e0d3c6f1bc81075af9b8b",
+            "remoteSha256": "3ff29351a5d7abd07845acc530490883e584350c8aa88c58280125cabf03bb83",
+            "checkedAt": "2026-10-19T00:26:58.444Z"
+          }
+        ]
+      },
+      {
+        "startedAt": "2026-10-19T00:27:55.059Z",
+        "completedAt": "2026-10-19T00:27:56.233Z",
+        "results": [
+          {
+            "file": "data/stock-briefs/2026-10-19-0800.json",
+            "url": "https://intelbrief-board.pages.dev/data/stock-briefs/2026-10-19-0800.json?publication=4cd26e7",
+            "status": 200,
+            "match": true,
+            "localSha256": "9925055e6eed2ce31ba1a5aca5c2fbf98798a8bd68154fdfedccd05782bf7971",
+            "remoteSha256": "9925055e6eed2ce31ba1a5aca5c2fbf98798a8bd68154fdfedccd05782bf7971",
+            "checkedAt": "2026-10-19T00:27:55.862Z"
+          },
+          {
+            "file": "data/stock-briefs/index.json",
+            "url": "https://intelbrief-board.pages.dev/data/stock-briefs/index.json?publication=4cd26e7",
+            "status": 200,
+            "match": true,
+            "localSha256": "69d31097c69ebed1910dfc6b34a0a83d3c6840e6d6035b45665560e3976b7b32",
+            "remoteSha256": "69d31097c69ebed1910dfc6b34a0a83d3c6840e6d6035b45665560e3976b7b32",
+            "checkedAt": "2026-10-19T00:27:55.831Z"
+          },
+          {
+            "file": "data/reading-board.json",
+            "url": "https://intelbrief-board.pages.dev/data/reading-board.json?publication=4cd26e7",
+            "status": 200,
+            "match": true,
+            "localSha256": "fb39981eb89cf821c3a9cc36585d7ba3cb3ad2718f337eb333f73a19b68b2dee",
+            "remoteSha256": "fb39981eb89cf821c3a9cc36585d7ba3cb3ad2718f337eb333f73a19b68b2dee",
+            "checkedAt": "2026-10-19T00:27:56.233Z"
+          },
+          {
+            "file": "data/people-intelligence.json",
+            "url": "https://intelbrief-board.pages.dev/data/people-intelligence.json?publication=4cd26e7",
+            "status": 200,
+            "match": true,
+            "localSha256": "f280fc4500d354c1d8ed800fda7389e092a9a400896c811738dabefe8486b12d",
+            "remoteSha256": "f280fc4500d354c1d8ed800fda7389e092a9a400896c811738dabefe8486b12d",
+            "checkedAt": "2026-10-19T00:27:55.835Z"
+          },
+          {
+            "file": "data/ticker-intelligence.json",
+            "url": "https://intelbrief-board.pages.dev/data/ticker-intelligence.json?publication=4cd26e7",
+            "status": 200,
+            "match": true,
+            "localSha256": "043ce1780094202a51d76bf67e8a1f67caf36ec64e92868cbefb33b2f19c5dac",
+            "remoteSha256": "043ce1780094202a51d76bf67e8a1f67caf36ec64e92868cbefb33b2f19c5dac",
+            "checkedAt": "2026-10-19T00:27:55.840Z"
+          },
+          {
+            "file": "data/ai-intelligence.json",
+            "url": "https://intelbrief-board.pages.dev/data/ai-intelligence.json?publication=4cd26e7",
+            "status": 200,
+            "match": true,
+            "localSha256": "b09a5b46b8bc160e23e15bedb9bb13d4fa4411abd6066f3da0c8aa434bcab6ec",
+            "remoteSha256": "b09a5b46b8bc160e23e15bedb9bb13d4fa4411abd6066f3da0c8aa434bcab6ec",
+            "checkedAt": "2026-10-19T00:27:55.838Z"
+          },
+          {
+            "file": "data/earnings-calendar.json",
+            "url": "https://intelbrief-board.pages.dev/data/earnings-calendar.json?publication=4cd26e7",
+            "status": 200,
+            "match": true,
+            "localSha256": "468041edc32aebf9ef9f6d11207bc54b13c2d8e366710e8c192616ad1fdf45ef",
+            "remoteSha256": "468041edc32aebf9ef9f6d11207bc54b13c2d8e366710e8c192616ad1fdf45ef",
+            "checkedAt": "2026-10-19T00:27:55.853Z"
+          },
+          {
+            "file": "data/market-sentiment.json",
+            "url": "https://intelbrief-board.pages.dev/data/market-sentiment.json?publication=4cd26e7",
+            "status": 200,
+            "match": true,
+            "localSha256": "ada3383f653f55e2e4bb8d9a9adb2bccfc86780543dc1056beaf16e588fffd74",
+            "remoteSha256": "ada3383f653f55e2e4bb8d9a9adb2bccfc86780543dc1056beaf16e588fffd74",
+            "checkedAt": "2026-10-19T00:27:55.828Z"
+          },
+          {
+            "file": "data/counterintuitive-learning.json",
+            "url": "https://intelbrief-board.pages.dev/data/counterintuitive-learning.json?publication=4cd26e7",
+            "status": 200,
+            "match": true,
+            "localSha256": "98433c61a6f2f453aca7bbe76425fb5d0fc2709dc59e0d3c6f1bc81075af9b8b",
+            "remoteSha256": "98433c61a6f2f453aca7bbe76425fb5d0fc2709dc59e0d3c6f1bc81075af9b8b",
+            "checkedAt": "2026-10-19T00:27:55.829Z"
+          }
+        ]
+      }
+    ],
+    "learningCodeVerification": [
+      {
+        "file": "learning.js",
+        "status": 200,
+        "match": true,
+        "checkedAt": "2026-10-19T00:28:23.634Z"
+      },
+      {
+        "file": "config/learning.json",
+        "status": 200,
+        "match": true,
+        "checkedAt": "2026-10-19T00:28:23.623Z"
+      }
+    ],
+    "verifiedAt": "2026-10-19T00:28:23.637Z",
+    "deployNote": "Cloudflare公开资源与内容提交4cd26e7逐字节匹配；稍后的审计收尾提交仅变更运行凭证，不改公开内容。"
   },
   "timing": {
     "source": "data/ops-runs/2026-10-19-0800.json",

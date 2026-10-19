@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-19T08:03:21+08:00",
-  "updatedAt": "2026-10-19T08:24:58+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-19T08:28:24+08:00",
+  "finishedAt": "2026-10-19T08:28:24+08:00",
   "gitHeadAtStart": "13b74bf7f4d5493dbaed783fd6d80903324ea7d3",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-19T08:26:57+08:00",
+      "detail": "4cd26e70a8e9d3534e4b274f991e57148968bc9f已推送；ls-remote master一致；既有反直觉Tab代码随正常更新推送"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-19T08:28:23+08:00",
+      "detail": "Cloudflare 9项JSON与4cd26e7逐字节一致，学习JS与配置亦一致；首次探测尚旧，第二次已匹配"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "宏观日历保留"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "4cd26e70a8e9d3534e4b274f991e57148968bc9f",
+  "notes": [
+    "23对象查询完成；3新人物热度+1新AI卡，新闻/个股无合格新增；学习未到期，来源与执行缺口均审计；内容已推送并线上匹配"
+  ],
   "timings": [
     {
       "page": "news",
