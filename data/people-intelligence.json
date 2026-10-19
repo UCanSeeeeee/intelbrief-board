@@ -1,71 +1,130 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-18T15:57:58.955Z",
-  "cutoff": "2026-10-18T23:38:52+08:00",
+  "updatedAt": "2026-10-19T00:25:55.598Z",
+  "cutoff": "2026-10-19T08:00:00+08:00",
   "source": "X only",
-  "status": "partial",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "1条新热度动态进入近窗前三，保留2条热度更高的旧动态；均未达基本面价值规则",
-        "cutoff": "2026-10-18T23:38:52+08:00"
+        "note": "本人增量查询、追源和反证完成；0高价值，2条新热度与1条有效旧热度组成近窗前三。",
+        "cutoff": "2026-10-19T08:00:00+08:00"
       },
       {
         "id": "jensen-huang",
         "status": "complete",
-        "note": "指定增量已查询，无合格新增；热度数据/名单覆盖有缺口",
-        "cutoff": "2026-10-18T23:38:52+08:00"
+        "note": "查询完成；无本人新帖或新可归因采访，旧表态二传不作为热度。",
+        "cutoff": "2026-10-19T08:00:00+08:00"
       },
       {
         "id": "donald-trump",
-        "status": "partial",
-        "note": "指定增量已查询，无合格新增；热度数据/名单覆盖有缺口",
-        "cutoff": "2026-10-18T23:38:52+08:00"
+        "status": "complete",
+        "note": "增量查询完成；两条运营者评论排除，1条官方热度加入并保留2条旧热度；无新可执行政策。",
+        "cutoff": "2026-10-19T08:00:00+08:00"
       },
       {
         "id": "trillion-leaders",
-        "status": "partial",
-        "note": "指定增量已查询，无合格新增；热度数据/名单覆盖有缺口",
-        "cutoff": "2026-10-18T23:38:52+08:00"
+        "status": "complete",
+        "note": "指定高层本人及可归因表态增量查询完成，无结果；名单未获完整确认，非穷尽覆盖。",
+        "cutoff": "2026-10-19T08:00:00+08:00"
       },
       {
         "id": "research-reports",
-        "status": "partial",
-        "note": "指定增量已查询，无合格新增；热度数据/名单覆盖有缺口",
-        "cutoff": "2026-10-18T23:38:52+08:00"
+        "status": "complete",
+        "note": "机构增量查询完成；仅旧报告/二传，未获得可收录的新研究或热度来源。",
+        "cutoff": "2026-10-19T08:00:00+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "elon-roadster-acceleration-2026-10-18",
+      "eventKey": "elon-public-shares-suggestion-20261018",
       "tabIds": [
         "elon-musk"
       ],
-      "title": "Elon Musk称Roadster加速快于航母起飞战斗机",
-      "fact": "Elon Musk称新Tesla Roadster的加速快于从航母起飞的战斗机，并引用推力比较帖子；原帖没有给出独立测试条件或结果。",
-      "whyItMatters": "仅作产品传播热度观察；不视为交付、订单、收入或AI机器人进展。",
-      "counterCase": "事件实际发生时点未知；本次仅取得Grok读取原帖的转述，未独立核验引用材料，不能据此作经营或市场方向判断。",
-      "affected": [
-        "Tesla"
-      ],
-      "author": "Elon Musk (@elonmusk)",
-      "publishedAt": "2026-10-18T15:16:54Z",
-      "url": "https://x.com/elonmusk/status/2111838943016833235",
+      "title": "Elon Musk 建议将股份直接交给公众",
+      "fact": "Elon Musk 回复 Anthropic 有关公益基金的公告，建议“将股份直接交给公众”。",
+      "whyItMatters": "这是关于公益股权分配方式的个人建议；没有证据显示公司据此执行分股，也没有新增订单或收入事实。",
+      "counterCase": "若出现公司正式实施方案，才能评价执行和股权影响；本帖仅为观点。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-18T20:16:44Z",
+      "url": "https://x.com/elonmusk/status/2111914396490604547",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
       "selection": "engagement",
       "engagement": {
-        "likes": 6193,
-        "reposts": 762,
-        "replies": 1058,
-        "quotes": 123,
-        "views": 658126,
-        "capturedAt": "2026-10-18T15:55:14Z",
-        "source": "Grok网页版首轮X工具返回；capturedAt为本轮结果落盘时点，工具未返回精确抓取时刻，互动为此前快照"
+        "likes": 16001,
+        "reposts": 701,
+        "replies": 807,
+        "quotes": 128,
+        "views": 657937,
+        "capturedAt": "2026-10-19T00:15:27.831Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为执行器读取返回并落盘时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "whitehouse-border-crossings-20261018",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse 发布边境数据宣传动态",
+      "fact": "WhiteHouse 表示，DHS 报告的财政年度边境越境数量降至历史低位，并称没有向境内释放移民。",
+      "whyItMatters": "这条官方宣传动态未达到本栏产业与投资传导规则；尚未取得财政年度定义、计数口径和独立统计核验。",
+      "counterCase": "原始 DHS/CBP 报告的范围与口径可能改变比较，不能将本帖当作独立统计证明。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-18T17:51:02Z",
+      "url": "https://x.com/WhiteHouse/status/2111877732258676788",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 2861,
+        "reposts": 673,
+        "replies": 818,
+        "quotes": 39,
+        "views": 144575,
+        "capturedAt": "2026-10-19T00:15:27.831Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为执行器读取返回并落盘时刻，上游精确抓取时刻未知"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "elon-starship-competitor-opinion-20261018",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 评论 Starship 与竞争者计划",
+      "fact": "Elon Musk 在引用讨论中表示，即使竞争者未来的计划也落后于 Starship。",
+      "whyItMatters": "这是一条竞争观点与热度动态，未提供可独立验证的新产能、订单、成本或领先程度数据。",
+      "counterCase": "需独立的飞行、复用、有效载荷与成本数据比较，不能以该表态证明领先。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-18T17:02:36Z",
+      "url": "https://x.com/elonmusk/status/2111865541472190881",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 14188,
+        "reposts": 1158,
+        "replies": 773,
+        "quotes": 105,
+        "views": 2242341,
+        "capturedAt": "2026-10-19T00:15:27.831Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为执行器读取返回并落盘时刻，上游精确抓取时刻未知"
       },
       "people": [
         {
@@ -92,12 +151,6 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
       "selection": "engagement",
       "engagement": {
         "likes": 13639,
@@ -107,7 +160,13 @@
         "views": 420760,
         "capturedAt": "2026-10-18T11:51:00Z",
         "source": "Grok网页版x_thread_fetch实际返回"
-      }
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
     },
     {
       "eventKey": "trump-sync-bush-political-comment-2026-10-18",
@@ -127,12 +186,6 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
       "selection": "engagement",
       "engagement": {
         "likes": 313,
@@ -142,7 +195,13 @@
         "views": 8904,
         "capturedAt": "2026-10-18T11:51:00Z",
         "source": "Grok网页版x_thread_fetch实际返回"
-      }
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
     },
     {
       "eventKey": "trump-sync-global-political-comment-2026-10-18",
@@ -162,12 +221,6 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
       "selection": "engagement",
       "engagement": {
         "likes": 1148,
@@ -177,41 +230,13 @@
         "views": 83781,
         "capturedAt": "2026-10-18T11:51:00Z",
         "source": "Grok网页版x_keyword_search实际返回"
-      }
-    },
-    {
-      "eventKey": "elon-roadster-future-demo-2026-10-17",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk谈Roadster未来飞行演示构想（热度动态）",
-      "fact": "Elon Musk描述了Roadster未来演示设想，包括飞越峡谷后以车轮落地。这是本人对未来演示的构想；可见帖文没有证明演示已经发生或性能已验证。",
-      "whyItMatters": "本条仅为本人高互动动态补位，未达到高价值规则；不据此推断量产、收入或技术兑现。",
-      "counterCase": "若后续有可核验演示、测试条件与正式披露，再另行评估；当前不能把未来时态写成已经实现。",
-      "affected": [
-        "Tesla Roadster"
-      ],
-      "author": "Elon Musk (@elonmusk)",
-      "publishedAt": "2026-10-17T17:18:31Z",
-      "url": "https://x.com/elonmusk/status/2111507158215057620",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
+      },
       "people": [
         {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
+          "name": "Donald Trump",
+          "intro": "美国总统"
         }
-      ],
-      "selection": "engagement",
-      "engagement": {
-        "likes": 103966,
-        "reposts": 10051,
-        "replies": 5673,
-        "quotes": 1004,
-        "capturedAt": "2026-10-18T12:42:11.483Z",
-        "source": "Grok网页版X工具返回；未独立直读X"
-      }
+      ]
     },
     {
       "eventKey": "gs-pb-ai-deleveraging-research-2026-10-17",

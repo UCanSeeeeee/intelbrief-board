@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-19-0800",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-19T08:03:21+08:00",
+  "updatedAt": "2026-10-19T08:24:58+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "13b74bf7f4d5493dbaed783fd6d80903324ea7d3",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-19T08:03:22+08:00",
+      "detail": "origin/master confirmed; clean worktree; fast-forward pull completed"
+    },
+    {
+      "name": "read",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-19T08:24:36+08:00",
+      "detail": "所有计划批次已关闭；学习未到期跳过，23个X对象精确增量完成"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-19T08:24:58+08:00",
+      "detail": "四栏结果合并发布本地；people热度上限拒绝后按明确前三选择集纠正，原卡留审计；reading-board持久池保留"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-19T08:24:58+08:00",
+      "detail": "按用户要求未运行test/check/build/预览；发布器内置数据契约已执行"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "两轮及候选核验已完成，证据不足未选卡"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "3条新热度，无新增高价值；高层名单与机构源缺口保留"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "既定查询完成，无合格新增"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "1条新卡，其余对象无合格新增；旧有效榜保留"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "Nasdaq日历已刷新，既有结果保留，无需新增财报结果检索"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "宏观日历保留"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:03:22+08:00",
+      "endedAt": "2026-10-19T08:09:57+08:00",
+      "durationMs": 395000,
+      "detail": "7对象查询结果已落盘再record；0合格新卡，持久池保留"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:03:22+08:00",
+      "endedAt": "2026-10-19T08:07:30+08:00",
+      "durationMs": 248000,
+      "detail": "独立市场焦点与六包两轮完成；候选与缺口保存，采集器存在一次宽日期语义补充"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:07:31+08:00",
+      "endedAt": "2026-10-19T08:08:32+08:00",
+      "durationMs": 61000,
+      "detail": "五项追源完成但均未取得公司/政府或权威媒体本人原帖，不足以入选"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:08:33+08:00",
+      "endedAt": "2026-10-19T08:09:57+08:00",
+      "durationMs": 84000,
+      "detail": "独立反证完成；NiSource为旧合同转述，其余未弥补权威证据缺口"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:09:58+08:00",
+      "endedAt": "2026-10-19T08:15:28+08:00",
+      "durationMs": 330000,
+      "detail": "5对象先落盘后record；3条新热度及3条有效旧热度，周榜待合并保留"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:09:58+08:00",
+      "endedAt": "2026-10-19T08:12:04+08:00",
+      "durationMs": 126000,
+      "detail": "五对象精确epoch窗口查询完成；Musk与Trump热度候选待核，Grok高价值标签尚未采用"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:12:05+08:00",
+      "endedAt": "2026-10-19T08:13:54+08:00",
+      "durationMs": 109000,
+      "detail": "Musk原文及热度已核；两条Trump运营者评论排除；最高热度新帖为建议性回复"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:13:54+08:00",
+      "endedAt": "2026-10-19T08:15:28+08:00",
+      "durationMs": 94000,
+      "detail": "意见/已执行、宣传/商业化和统计口径已分开；缺口保留"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:15:28+08:00",
+      "endedAt": "2026-10-19T08:18:13+08:00",
+      "durationMs": 165000,
+      "detail": "7对象先落盘后record；0新卡，旧榜待合并保留"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:15:29+08:00",
+      "endedAt": "2026-10-19T08:18:12+08:00",
+      "durationMs": 163000,
+      "detail": "7对象查询完成；重复事件与旧公告/观点筛除"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T08:18:12+08:00",
+      "durationMs": 0,
+      "detail": "无需要新增核验的候选；已有事件证据复用，不空跑"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T08:18:13+08:00",
+      "durationMs": 0,
+      "detail": "无新合格候选；复用已核事件与待核缺口"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:18:13+08:00",
+      "endedAt": "2026-10-19T08:23:34+08:00",
+      "durationMs": 321000,
+      "detail": "4对象先保存再record；1条Anthropic新组织承诺卡"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:18:13+08:00",
+      "endedAt": "2026-10-19T08:20:47+08:00",
+      "durationMs": 154000,
+      "detail": "4对象独立增量查询完成；Anthropic基金公告为待核新事实，梗图/促销/社区未核比较排除"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:20:47+08:00",
+      "endedAt": "2026-10-19T08:22:04+08:00",
+      "durationMs": 77000,
+      "detail": "官方原帖正文与18:07:51UTC已核；初始5%、追加可选，roughly20%非已完成划转；baseline/执行日缺失"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:22:04+08:00",
+      "endedAt": "2026-10-19T08:23:34+08:00",
+      "durationMs": 90000,
+      "detail": "独立反证查询完成，无官方更正；治理/划转/基线缺口保留，用户意见不当官方事实"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T08:23:35+08:00",
+      "durationMs": 0,
+      "detail": "工作日08:00计划skip；今晚20:30到期，未采集论文或填小知识"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:23:35+08:00",
+      "endedAt": "2026-10-19T08:23:51+08:00",
+      "durationMs": 16000,
+      "detail": "无到期/过时触发；复用10月18日低频官方核对，下项10月21日，未重验全表"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-19T08:23:52+08:00",
+      "endedAt": "2026-10-19T08:24:35+08:00",
+      "durationMs": 43000,
+      "detail": "15日日历成功；1263原始/80入选；pendingReview=0；10月29日truncated3保留"
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "trigger": "scheduled",
+  "scheduledFor": "2026-10-19T08:00:00+08:00",
+  "windowStart": "2026-10-18T15:38:52.000Z",
+  "displayWindowStart": "2026-10-16T16:00:00.000Z",
+  "displayWindowEnd": "2026-10-19T00:00:00.000Z",
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-18T15:38:52.000Z",
+      "end": "2026-10-19T00:00:00.000Z",
+      "cutoff": "2026-10-19T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-18T15:38:52.000Z",
+      "end": "2026-10-19T00:00:00.000Z",
+      "cutoff": "2026-10-19T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-18T15:38:52.000Z",
+      "end": "2026-10-19T00:00:00.000Z",
+      "cutoff": "2026-10-19T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-18T15:38:52.000Z",
+      "end": "2026-10-19T00:00:00.000Z",
+      "cutoff": "2026-10-19T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-18T15:38:52.000Z",
+      "end": "2026-10-19T00:00:00.000Z",
+      "cutoff": "2026-10-19T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-18T15:38:52.000Z",
+      "end": "2026-10-19T00:00:00.000Z",
+      "cutoff": "2026-10-19T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-18T15:38:52.000Z",
+      "end": "2026-10-19T00:00:00.000Z",
+      "cutoff": "2026-10-19T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ],
+  "status": "partial",
+  "summary": "本轮精确增量两轮查询完成，未取得符合来源门槛的新增卡片；累计重点保留。",
+  "marketContext": "北京时间周一早报，前一美股交易日为周五；完整周末已入库证据沿用，本轮仅搜23:38:52之后余下增量。",
+  "coverage": {
+    "method": "已登录Grok网页版；发现、追源、独立反证分阶段；采集器转述未独立直读X。",
+    "queries": [
+      "(inflation OR CPI OR \"interest rate\" OR Fed OR FOMC OR fiscal OR \"rate cut\" OR \"rate hike\" OR credit OR deficit) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(oil OR crude OR energy OR OPEC OR \"Middle East\" OR Ukraine OR Russia OR China OR Taiwan OR logistics OR shipping OR \"supply chain\" OR \"Red Sea\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(AI OR \"artificial intelligence\" OR NVIDIA OR NVDA OR \"data center\" OR GPU OR semiconductor OR capex OR \"capital expenditure\" OR Microsoft OR MSFT OR Google OR Meta OR Amazon) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(deleveraging OR \"margin call\" OR liquidation OR \"forced selling\" OR \"risk-off\" OR VIX OR \"credit spread\" OR volatility OR \"yield\" OR bond) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(CPI OR PPI OR \"inflation data\" OR \"Fed funds\" OR \"FOMC\" OR \"rate cut\" OR \"rate hike\" OR \"treasury yield\" OR \"bond yield\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(NVDA OR NVIDIA OR \"semiconductor\" OR \"chip\" OR TSMC OR \"data center\" OR \"AI capex\" OR \"capital expenditure\" OR Microsoft OR MSFT OR \"OpenAI\" OR Google OR \"power demand\" OR \"electricity\" OR \"energy demand\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(oil OR crude OR \"Brent\" OR \"WTI\" OR OPEC OR \"Middle East\" OR \"supply disruption\" OR shipping OR \"Red Sea\" OR \"energy logistics\" OR Ukraine OR \"missile\" OR \"geopolitical\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"margin call\" OR \"forced selling\" OR deleveraging OR \"risk off\" OR \"credit spread\" OR VIX OR \"volatility spike\" OR \"liquidity\" OR \"repo\" OR \"funding\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"Nscale\" OR \"Microsoft\" (\"data center\" OR \"UK\" OR \"power\" OR \"grid\")) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"Hormuz\" OR \"Strait of Hormuz\" OR \"tanker\" (mine OR fire OR attack)) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(CPI OR PPI) (3.7 OR 3.72 OR 6.3 OR 6.35) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"power\" OR electricity OR grid) (AI OR \"data center\" OR semiconductor OR NVDA OR HBM) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(HBM OR \"high bandwidth memory\" OR \"advanced packaging\" OR CoWoS OR \"3nm\" OR \"2nm\" OR TSMC OR \"yield\" OR inventory OR \"capacity\" OR license OR \"export control\" OR Samsung OR SKHynix OR Micron) (order OR orders OR booking OR \"purchase order\" OR supply OR demand) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(HBM OR CoWoS OR \"advanced packaging\" OR \"base die\" OR \"3nm\" OR \"custom HBM\" OR \"HBM4\" OR yield OR \"capacity expansion\" OR \"export license\") (NVIDIA OR TSMC OR Samsung OR \"SK Hynix\" OR Micron OR \"SKHynix\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(PPA OR \"power purchase\" OR \"grid connection\" OR interconnection OR transformer OR \"gas turbine\" OR \"liquid cooling\" OR \"immersion cooling\" OR permit OR permitting OR \"data center\" power OR electricity) (contract OR delay OR postponed OR approved OR signed) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"power delay\" OR \"grid delay\" OR \"interconnection delay\" OR \"power purchase agreement\" OR PPA OR \"transformer shortage\" OR \"gas turbine\" OR \"liquid cooling\") (\"data center\" OR Microsoft OR Nscale OR Anthropic OR \"Nextdc\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"paid seats\" OR \"seat growth\" OR renewal OR \"API usage\" OR \"API revenue\" OR robot OR robotics OR \"autonomous driving\" OR \"self-driving\" OR \"gross margin\" OR receivables OR \"accounts receivable\" OR \"AI adoption\" OR \"enterprise AI\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"enterprise AI\" OR \"AI seats\" OR \"Copilot seats\" OR \"ChatGPT Enterprise\" OR \"API revenue\" OR \"gross margin\" OR \"accounts receivable\" OR \"paid adoption\" OR renewal) (Microsoft OR OpenAI OR Anthropic OR Google OR Amazon OR Meta) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"interest rate\" OR \"yield curve\" OR \"term premium\" OR \"credit spread\" OR refinancing OR \"cost of capital\" OR \"discount rate\" OR \"borrowing cost\" OR fiscal OR deficit) (AI OR capex OR \"capital expenditure\" OR \"data center\" OR NVDA OR semiconductor) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"cost of capital\" OR \"credit spread\" OR \"funding gap\" OR \"borrowing cost\" OR \"term premium\" OR refinancing) (neocloud OR \"AI capex\" OR \"data center\" OR GPU OR NVIDIA OR hyperscaler) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(sanction OR sanctions OR \"export ban\" OR Hormuz OR \"Red Sea\" OR shipping OR tanker OR \"supply disruption\" OR alternative OR reroute OR \"energy supply\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Hormuz OR \"Strait of Hormuz\" OR \"naval mine\" OR tanker OR \"oil tanker\" OR sanctions OR \"export ban\") (oil OR crude OR energy OR shipping) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(breadth OR concentration OR positioning OR \"net exposure\" OR deleveraging OR \"margin call\" OR \"options flow\" OR gamma OR \"dealer hedging\" OR \"put call\" OR VIX OR \"implied volatility\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(breadth OR \"advance decline\" OR concentration OR \"Magnificent 7\" OR positioning OR \"options flow\" OR gamma OR \"dealer\" OR \"put/call\" OR \"margin debt\" OR deleveraging) (SPX OR \"S&P\" OR Nasdaq OR VIX) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Nscale OR \"Nscale IPO\" OR \"Microsoft\" \"Nscale\" OR \"UK data center\") (Bloomberg OR Reuters OR FT OR \"Financial Times\" OR from:bloomberg OR from:Reuters) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "from:Reuters OR from:bloomberg OR from:FT OR from:FinancialTimes (Nscale ...) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Nextdc OR \"NEXTDC\" OR Melbourne) (power OR delay OR halt OR \"trading halt\" OR Bloomberg) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"Nextdc\" OR NEXTDC) (halt OR delay OR power) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(NiSource OR \"La Porte\" OR \"Microsoft\" \"data center\" \"Indiana\" OR \"1,100 MW\" OR \"1100 MW\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"NiSource\" OR \"La Porte\") Microsoft since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(TSMC OR \"Kumamoto\" OR \"熊本\") (3nm OR \"3 nm\" OR 2028 OR \"6000\" OR wpm OR fab) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Hormuz OR \"Strait of Hormuz\" OR \"naval mine\" OR tanker) (Reuters OR Bloomberg OR AP OR \"Associated Press\" OR official OR IRGC) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Hormuz) (UKMTO OR CENTCOM OR \"ship name\" OR \"vessel name\" OR tanker name) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Nscale OR \"Microsoft\" Nscale) (deny OR denied OR \"not true\" OR correction OR \"still proceeding\" OR \"contract remains\" OR \"relationship strong\" OR \"other contracts\" OR reallocated OR continue) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Nscale) (\"relationship remains strong\" OR \"other contracts unaffected\" OR \"exploring alternative\" OR \"project will continue\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Nextdc OR NEXTDC) (deny OR correction OR \"no delay\" OR \"power secured\" OR \"trading halt lifted\" OR false OR incorrect) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"NiSource\" OR \"La Porte\") (Microsoft) (old OR previous OR earlier OR \"already announced\" OR 2025 OR 2024 OR \"re-post\" OR republish) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(TSMC OR Kumamoto OR \"熊本\") (3nm OR 2028 OR \"6000\") (correction OR deny OR \"not accurate\" OR \"original plan\" OR \"no change\" OR false) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Hormuz) (tanker OR mine OR IRGC) (deny OR false OR \"not confirmed\" OR \"no evidence\" OR \"misidentified\" OR \"different vessel\" OR \"unconfirmed\" OR UKMTO) since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(Hormuz) (UKMTO OR \"no substantiation\" OR \"unknown projectiles\") since:2026-10-18_15:38:52_UTC until:2026-10-19_00:00:00_UTC",
+      "(\"NiSource\" OR \"La Porte\" Microsoft) since:2026-10-01 until:2026-10-18_15:38:52_UTC"
+    ],
+    "gaps": [
+      "Grok采集器转述，未独立直读X；非权威转述不得直接选卡",
+      "第一轮语义补充为日期范围，已要求第二轮全部精确since/until",
+      "五项新候选权威X原帖不足；未将二传与AI回答当官方证据。"
+    ]
+  },
+  "checklist": [
+    {
+      "item": "news:market-focus",
+      "status": "insufficient",
+      "note": "独立第一轮完成；主要新候选权威原帖不足，未采用。"
+    },
+    {
+      "item": "news:semiconductors",
+      "status": "insufficient",
+      "note": "第二轮独立两次精确窗口查询完成；候选为旧闻/观点或权威原帖不足，未采用。"
+    },
+    {
+      "item": "news:power",
+      "status": "insufficient",
+      "note": "第二轮独立两次精确窗口查询完成；候选为旧闻/观点或权威原帖不足，未采用。"
+    },
+    {
+      "item": "news:ai-adoption",
+      "status": "insufficient",
+      "note": "第二轮独立两次精确窗口查询完成；候选为旧闻/观点或权威原帖不足，未采用。"
+    },
+    {
+      "item": "news:capital-cost",
+      "status": "insufficient",
+      "note": "第二轮独立两次精确窗口查询完成；候选为旧闻/观点或权威原帖不足，未采用。"
+    },
+    {
+      "item": "news:geopolitics",
+      "status": "insufficient",
+      "note": "第二轮独立两次精确窗口查询完成；候选为旧闻/观点或权威原帖不足，未采用。"
+    },
+    {
+      "item": "news:market-structure",
+      "status": "insufficient",
+      "note": "第二轮独立两次精确窗口查询完成；候选为旧闻/观点或权威原帖不足，未采用。"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "nscale-msft-uk-grid-ipo-20261018",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "hormuz-tankers-mine-claim-20261018",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "cpi-ppi-weekend-commentary-20261018",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "既有数据评论，无窗口内新事实；不采用数值"
+    },
+    {
+      "eventKey": "black-monday-anniversary-20261018",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "周年/观点/传闻，无已证实强制平仓新事实"
+    },
+    {
+      "eventKey": "hbm-tsmc-3nm-discussion-20261018",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "旧待核主题无明确实质进展，不重复研究或发布"
+    },
+    {
+      "eventKey": "hbm-tsmc-3nm-discussion-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "与旧待核相同，无官方新进展，复用缺口"
+    },
+    {
+      "eventKey": "tsmc-kumamoto-3nm-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "nextdc-melbourne-grid-risk-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "nscale-msft-uk-grid-ipo-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "nisource-msft-laporte-power-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "窗口前已有Oct16同一合同转述，无窗口内实质进展"
+    },
+    {
+      "eventKey": "bernstein-pipeline-credible-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "非权威二传分析，未确立新事实"
+    },
+    {
+      "eventKey": "anthropic-q3-old-repost-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "更早Q3报道重发，不采用数值"
+    },
+    {
+      "eventKey": "gpu-capital-cost-analysis-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "分析观点，非新利率或融资事实"
+    },
+    {
+      "eventKey": "gpu-financing-floor-opinion-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "观点，无新事实"
+    },
+    {
+      "eventKey": "spx-gamma-opinion-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "无具体可核验仓位或期权数据"
+    },
+    {
+      "eventKey": "breadth-opinion-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "无新可核验宽度数据"
+    }
+  ],
+  "selectionRationale": "两轮独立查询后按新增事实、来源和传导筛选；旧闻/观点与权威原帖不足的事件均不入选，不为配额降低门槛。",
+  "excludedCandidates": [
+    {
+      "eventKey": "nscale-msft-uk-grid-ipo-20261018",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "hormuz-tankers-mine-claim-20261018",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "cpi-ppi-weekend-commentary-20261018",
+      "reason": "既有数据评论，无窗口内新事实；不采用数值"
+    },
+    {
+      "eventKey": "black-monday-anniversary-20261018",
+      "reason": "周年/观点/传闻，无已证实强制平仓新事实"
+    },
+    {
+      "eventKey": "hbm-tsmc-3nm-discussion-20261018",
+      "reason": "旧待核主题无明确实质进展，不重复研究或发布"
+    },
+    {
+      "eventKey": "hbm-tsmc-3nm-discussion-20261018",
+      "reason": "与旧待核相同，无官方新进展，复用缺口"
+    },
+    {
+      "eventKey": "tsmc-kumamoto-3nm-20261018",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "nextdc-melbourne-grid-risk-20261018",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "nscale-msft-uk-grid-ipo-20261018",
+      "reason": "追源未找到公司/政府/权威媒体本人原帖；反证未弥补缺口，暂不收录"
+    },
+    {
+      "eventKey": "nisource-msft-laporte-power-20261018",
+      "reason": "窗口前已有Oct16同一合同转述，无窗口内实质进展"
+    },
+    {
+      "eventKey": "bernstein-pipeline-credible-20261018",
+      "reason": "非权威二传分析，未确立新事实"
+    },
+    {
+      "eventKey": "anthropic-q3-old-repost-20261018",
+      "reason": "更早Q3报道重发，不采用数值"
+    },
+    {
+      "eventKey": "gpu-capital-cost-analysis-20261018",
+      "reason": "分析观点，非新利率或融资事实"
+    },
+    {
+      "eventKey": "gpu-financing-floor-opinion-20261018",
+      "reason": "观点，无新事实"
+    },
+    {
+      "eventKey": "spx-gamma-opinion-20261018",
+      "reason": "无具体可核验仓位或期权数据"
+    },
+    {
+      "eventKey": "breadth-opinion-20261018",
+      "reason": "无新可核验宽度数据"
+    }
+  ],
+  "focus": [],
+  "insights": [],
+  "shortfallReason": "本轮查询完成但无合格新增；主要候选均缺权威X本人原帖，NiSource为旧合同转述。",
+  "carriedOver": [],
+  "id": "2026-10-19-0800",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T00:24:36.491Z",
+  "counts": {
+    "focus": 0,
+    "insights": 0,
+    "total": 0
+  }
+}
