@@ -1,56 +1,77 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-19T00:25:55.618Z",
-  "cutoff": "2026-10-19T08:00:00+08:00",
+  "updatedAt": "2026-10-19T13:02:31.403Z",
+  "cutoff": "2026-10-19T20:30:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "GMOI约261亿日元拟采购消息获BloombergJapan原帖支持；doubleAI采购二传待核。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "mu",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "查询完成；普通webinar预告排除，未见合格产能/长约/毛利新增。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "intc",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "查询完成；未见可确认18A外部客户/代工新订单，评级与旧数据排除。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "goog",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "去掉误排AI/product词后补齐财务/TPU/capex查询，仍无合格新增。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "avgo",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "查询完成；Jalapeno/Turin部署缺原采访X帖，保留待核。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "vrt",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "官方WWT案例原帖已核，实际新增部署日期未知，宣传不当新订单。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "tsm",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "查询完成；旧财报与HBM工艺细节二传无权威实质进展，不重研旧案。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "gmo-nvidia-server-acquisition-plan-20261019",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "GMOI拟取得NVIDIA GPU服务器等，金额约261亿日元",
+      "fact": "BloombergJapan 报道，GMOI拟从NVIDIA取得GPU服务器等，金额约261亿日元。原帖使用“将取得”的表述，没有说明具体交付日期、型号或台数。",
+      "whyItMatters": "这是一条潜在算力设备采购的新增披露，可用于观察NVIDIA客户资本开支。计划金额不等于当期NVIDIA收入；交付、验收和采购范围决定其兑现节奏。",
+      "counterCase": "若采购延期、范围调整或尚未完成合同和验收，收入兑现就可能后移；不能据本帖推断已交付、短期收入规模或全行业供不应求。",
+      "affected": [
+        "NVIDIA算力设备需求",
+        "客户资本开支"
+      ],
+      "author": "BloombergJapan",
+      "publishedAt": "2026-10-19T08:30:08Z",
+      "url": "https://x.com/BloombergJapan/status/2112098963314610361",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
     {
       "eventKey": "samsung-tsmc-next-hbm-media-2026-10-18",
       "tabIds": [
@@ -554,7 +575,5 @@
       ]
     }
   ],
-  "retainedItems": [],
-  "lastAttemptAt": "2026-10-19T07:00:29.021Z",
-  "attemptedCutoff": "2026-10-19T15:00:00+08:00"
+  "retainedItems": []
 }

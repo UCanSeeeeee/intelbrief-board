@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-19T07:00:28.894Z",
-  "asOf": "2026-10-19T15:00:00+08:00",
+  "updatedAt": "2026-10-19T13:02:49.761Z",
+  "asOf": "2026-10-19T20:30:00+08:00",
   "events": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
@@ -28356,6 +28356,131 @@
       "readingDate": "2026-10-19",
       "retainUntil": "2026-10-20T00:00:00.000Z",
       "lateDiscovery": false
+    },
+    {
+      "eventKey": "china-q3-gdp-20261019",
+      "firstSeenAt": "2026-10-19T13:02:49.761Z",
+      "firstEdition": "2026-10-19-2030",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "china-q3-gdp-20261019",
+        "collectionUnit": "news:market-focus",
+        "title": "中国三季度GDP同比增长4.5%，超预期不等于内需全面回暖",
+        "fact": "中国第三季度经济同比增长4.5%。Reuters报道这一增速好于预期，并缓解为达年度目标而加大刺激的压力；FT也报道了4.5%的增速。两家媒体依据同一官方统计发布，不能视作两份独立数据。",
+        "impact": "未来两周，较强的增长读数可能降低市场对大规模追加刺激的预期，影响全球工业需求和风险偏好。美国企业能否受益仍取决于其中国订单与客户支出；总量增速不能直接证明消费、房地产或企业利润同步改善。",
+        "direction": "双向",
+        "horizon": "未来两周至2026-11-02；观察后续政策及企业订单、消费与投资证据",
+        "affected": [
+          "美股中国需求敞口",
+          "全球工业与半导体需求预期",
+          "宏观风险偏好"
+        ],
+        "counterCase": "若后续消费和投资持续偏弱，或政策仍明显加码，增长超预期会减少刺激的解释就被削弱；官方修订与原始口径不一致需更正。",
+        "eventTime": null,
+        "eventTimeNote": "数据发布日为2026-10-19，统计期为2026年第三季度；未核对精确发布时刻，不用发帖时间代替事件时间。",
+        "selectionReason": "本轮少数有可识别主流财经媒体原帖、影响跨国需求与政策预期的新增事实；不因数量不足采用评级二传。",
+        "credibilityReason": "Reuters和FT原帖由Grok返回，均引用同一NBS数据，未独立直读官方原文；只采用其共同支持的增速和有限政策解释。",
+        "change": "新增",
+        "attentionEvidence": "Reuters及FT在窗口内分别报道季度增长；没有横向互动数据，不声称全网关注排名。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2112013367296643525",
+            "postId": "2112013367296643525",
+            "username": "Reuters",
+            "publishedAt": "2026-10-19T02:50:00Z",
+            "checkedAt": "2026-10-19T12:41:04.981509Z",
+            "excerpt": "China's economic growth rebounded to 4.5% year-on-year in the third quarter",
+            "verification": "collector-report",
+            "verificationNote": "Grok网页版追源返回，执行器未独立直读X或国家统计局原文；Reuters报道引用官方数据，未读取外链全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/FT/status/2112008874639171660",
+            "postId": "2112008874639171660",
+            "username": "FT",
+            "publishedAt": "2026-10-19T02:32:09Z",
+            "checkedAt": "2026-10-19T12:41:04.981509Z",
+            "excerpt": "China’s economy expands 4.5% in third quarter",
+            "verification": "collector-report",
+            "verificationNote": "Grok网页版返回的媒体原帖；与Reuters同据NBS，未独立直读X或付费文章全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "Reuters和FT原帖由Grok返回，均引用同一NBS数据，未独立直读官方原文；只采用其共同支持的增速和有限政策解释。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-19-2030",
+      "lastCheckedAt": "2026-10-19T13:02:49.761Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-19T13:02:49.761Z",
+      "readingDate": "2026-10-19",
+      "retainUntil": "2026-10-20T00:00:00.000Z",
+      "lastMaterialAt": "2026-10-19T13:02:49.761Z",
+      "lastMaterialEdition": "2026-10-19-2030",
+      "lateDiscovery": false
     }
   ],
   "applied": [
@@ -28383,19 +28508,18 @@
     "2026-10-18-2030:2026-10-18T12:53:31.672Z",
     "manual-30b3a9b8-87cc-487a-90ea-a07c82b5affe:2026-10-18T16:00:20.316Z",
     "2026-10-19-0800:2026-10-19T00:24:36.491Z",
-    "2026-10-19-1500:2026-10-19T07:00:28.894Z"
+    "2026-10-19-1500:2026-10-19T07:00:28.894Z",
+    "2026-10-19-2030:2026-10-19T13:02:49.761Z"
   ],
-  "warnings": [
-    "本期采集失败，保留上次待阅内容；不是本期新增或已重新核验。"
-  ],
-  "lastStatus": "failed",
+  "warnings": [],
+  "lastStatus": "partial",
   "selected": {
     "focus": [
+      "china-q3-gdp-20261019",
       "msft-nscale-essex-exit-2026-10-18",
       "boc-oil-inflation-outlook-2026-10-17",
       "russia-ukraine-steel-power-claim-2026-10-17",
-      "venezuela-oil-investment-expectation-2026-10-17",
-      "anthropic-north-star-blackstone-10pct-2026-10-17"
+      "venezuela-oil-investment-expectation-2026-10-17"
     ],
     "insights": [
       "ai-junk-financing-coreweave-bloomberg-2026-10-17",
@@ -28419,5 +28543,5 @@
     "weekendCarry": false,
     "retainUntil": "2026-10-20T00:00:00.000Z"
   },
-  "latestEditionId": "2026-10-19-1500"
+  "latestEditionId": "2026-10-19-2030"
 }

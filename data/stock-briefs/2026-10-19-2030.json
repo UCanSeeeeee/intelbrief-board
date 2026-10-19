@@ -1,0 +1,420 @@
+{
+  "trigger": "scheduled",
+  "scheduledFor": "2026-10-19T20:30:00+08:00",
+  "windowStart": "2026-10-19T00:00:00.000Z",
+  "displayWindowStart": "2026-10-16T16:00:00.000Z",
+  "displayWindowEnd": "2026-10-19T12:30:00.000Z",
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T12:30:00.000Z",
+      "cutoff": "2026-10-19T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T12:30:00.000Z",
+      "cutoff": "2026-10-19T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "tsmc-kumamoto-3nm-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T12:30:00.000Z",
+      "cutoff": "2026-10-19T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:power",
+          "key": "nscale-msft-uk-grid-ipo-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "nextdc-melbourne-grid-risk-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T12:30:00.000Z",
+      "cutoff": "2026-10-19T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T12:30:00.000Z",
+      "cutoff": "2026-10-19T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T12:30:00.000Z",
+      "cutoff": "2026-10-19T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "hormuz-tankers-mine-claim-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T12:30:00.000Z",
+      "cutoff": "2026-10-19T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ],
+  "status": "partial",
+  "summary": "本轮两轮独立增量检索；1条合格焦点，无合格多学科新增；累计重点保留。",
+  "marketContext": "北京时间周一20:30，信息截止12:30Z；不引用未核验盘前价格或未来发帖。",
+  "coverage": {
+    "method": "已登录Grok网页版，两轮独立发现、候选追源和独立反证；执行器未直读X。",
+    "queries": [
+      "仅做美股讯息侧栏第一轮市场焦点发现。精确X发帖窗口[2026-10-19T00:00:00Z,2026-10-19T12:30:00Z)，截止之后不可采用。宽扫宏观政策/财政利率美元信用、地缘能源航运/关税出口管制、大型AI公司订单资本开支融资与重大交易、市场宽度去杠杆等。只返回窗口内首次披露或实质进展候选；排除旧闻重发、喊单和无来源数字。请实际搜索X，提供每个候选作者、准确UTC发帖时间、真实status链接、短原文、事件发生时间(未知就未知)、归因和覆盖缺口；事实/观点/传闻分开。不要替我买卖，不足可零，未查询项明确请求失败，不用记忆补写。",
+      "独立第二轮，重新搜索X，不把第一轮候选改名。精确发帖窗口[2026-10-19T00:00:00Z,2026-10-19T12:30:00Z)，用有效时间语法并逐帖过滤；不要since/until同日期造成零宽窗。六包逐项回答：(1)半导体：HBM/封装/设备/出口许可的订单、产能、良率、库存、价格是否改变瓶颈和利润分配？(2)电力：数据中心并网/PPA/燃机/核电/变压器/冷却/许可有何落实或延期取消，资本开支是否转为可用算力？(3)AI落地：付费席位/续费/收入/部署/推理成本/利润能否支持上游投资？(4)资本成本：财政期限溢价/信用/债务再融资如何改变AI重资本回报门槛？(5)地缘能源物流：实际供应损失、制裁、关税、航运中断和替代量，而非政治口水。(6)市场结构：宽度、集中度、仓位、Gamma/机械流/去杠杆有何可核验新增？每包独立实际查询并报searched/no-result/failed、查询词和缺口；候选返回作者、准确UTC、真实status链接、短原文及事件时间/归因。只有增量，旧闻与传闻标清，零条允许。重点半导体→电力→AI，区分物理瓶颈与金融/终端现金流，勿用记忆补写。"
+    ],
+    "gaps": [
+      "网页检索非X全量；部分首轮时间过滤返回空后通过有效语法补查。",
+      "两条评级未取得银行/主流财经一手帖，保留待核。",
+      "第二轮二传与旧闻落选，不采用未核验工艺、并网年份、容量或ARR数字。"
+    ]
+  },
+  "selectionRationale": "只采纳有Reuters/FT增量来源的GDP事实并保留替代解释；其他条目证据或增量价值不足；两轮不跨组填数。",
+  "checklist": [
+    {
+      "item": "news:market-focus",
+      "status": "covered",
+      "note": "实际查询完成；六主题返回及落选见独立第二轮报告，不代表搜尽X。"
+    },
+    {
+      "item": "news:semiconductors",
+      "status": "covered",
+      "note": "实际查询完成；六主题返回及落选见独立第二轮报告，不代表搜尽X。"
+    },
+    {
+      "item": "news:power",
+      "status": "covered",
+      "note": "实际查询完成；六主题返回及落选见独立第二轮报告，不代表搜尽X。"
+    },
+    {
+      "item": "news:ai-adoption",
+      "status": "covered",
+      "note": "实际查询完成；六主题返回及落选见独立第二轮报告，不代表搜尽X。"
+    },
+    {
+      "item": "news:capital-cost",
+      "status": "covered",
+      "note": "实际查询完成；六主题返回及落选见独立第二轮报告，不代表搜尽X。"
+    },
+    {
+      "item": "news:geopolitics",
+      "status": "covered",
+      "note": "实际查询完成；六主题返回及落选见独立第二轮报告，不代表搜尽X。"
+    },
+    {
+      "item": "news:market-structure",
+      "status": "covered",
+      "note": "实际查询完成；六主题返回及落选见独立第二轮报告，不代表搜尽X。"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "china-q3-gdp-20261019",
+      "round": 1,
+      "decision": "selected",
+      "reason": "Reuters与FT窗口内报道4.5%增长，反证保留内需及刺激力度边界；媒体同据NBS，非两个独立统计样本。"
+    },
+    {
+      "eventKey": "jpm-intel-neutral-20261019",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。"
+    },
+    {
+      "eventKey": "goldman-coreweave-buy-20261019",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。"
+    },
+    {
+      "eventKey": "hormuz-tankers-mine-claim-20261018",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "10月18日事件二传，没有已证实实质进展，复用已有pending，不重新研究。"
+    },
+    {
+      "eventKey": "samsung-tsmc-hbm-process-detail-20261018",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "存量二传工艺细节，无权威进展，不重研"
+    },
+    {
+      "eventKey": "micron-webinar-20261021",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "一般活动预告，无已兑现订单/产能/收入增量，价值不足"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "已入库同事件；新增年份/容量/芯片数未获权威证据，保留旧卡且不更新"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-repost-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "同事件二传非独立来源"
+    },
+    {
+      "eventKey": "ai-arr-spaces-rumors-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "无来源传闻数字，不予追源空跑或采用"
+    },
+    {
+      "eventKey": "market-concentration-old-stats-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "旧数字汇总，无增量机械流证据，不为观点重搜旧统计"
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "eventKey": "jpm-intel-neutral-20261019",
+      "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。"
+    },
+    {
+      "eventKey": "goldman-coreweave-buy-20261019",
+      "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。"
+    },
+    {
+      "eventKey": "hormuz-tankers-mine-claim-20261018",
+      "reason": "10月18日事件二传，没有已证实实质进展，复用已有pending，不重新研究。"
+    },
+    {
+      "eventKey": "samsung-tsmc-hbm-process-detail-20261018",
+      "reason": "存量二传工艺细节，无权威进展，不重研"
+    },
+    {
+      "eventKey": "micron-webinar-20261021",
+      "reason": "一般活动预告，无已兑现订单/产能/收入增量，价值不足"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "reason": "已入库同事件；新增年份/容量/芯片数未获权威证据，保留旧卡且不更新"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-repost-20261019",
+      "reason": "同事件二传非独立来源"
+    },
+    {
+      "eventKey": "ai-arr-spaces-rumors-20261019",
+      "reason": "无来源传闻数字，不予追源空跑或采用"
+    },
+    {
+      "eventKey": "market-concentration-old-stats-20261019",
+      "reason": "旧数字汇总，无增量机械流证据，不为观点重搜旧统计"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "china-q3-gdp-20261019",
+      "collectionUnit": "news:market-focus",
+      "title": "中国三季度GDP同比增长4.5%，超预期不等于内需全面回暖",
+      "fact": "中国第三季度经济同比增长4.5%。Reuters报道这一增速好于预期，并缓解为达年度目标而加大刺激的压力；FT也报道了4.5%的增速。两家媒体依据同一官方统计发布，不能视作两份独立数据。",
+      "impact": "未来两周，较强的增长读数可能降低市场对大规模追加刺激的预期，影响全球工业需求和风险偏好。美国企业能否受益仍取决于其中国订单与客户支出；总量增速不能直接证明消费、房地产或企业利润同步改善。",
+      "direction": "双向",
+      "horizon": "未来两周至2026-11-02；观察后续政策及企业订单、消费与投资证据",
+      "affected": [
+        "美股中国需求敞口",
+        "全球工业与半导体需求预期",
+        "宏观风险偏好"
+      ],
+      "counterCase": "若后续消费和投资持续偏弱，或政策仍明显加码，增长超预期会减少刺激的解释就被削弱；官方修订与原始口径不一致需更正。",
+      "eventTime": null,
+      "eventTimeNote": "数据发布日为2026-10-19，统计期为2026年第三季度；未核对精确发布时刻，不用发帖时间代替事件时间。",
+      "selectionReason": "本轮少数有可识别主流财经媒体原帖、影响跨国需求与政策预期的新增事实；不因数量不足采用评级二传。",
+      "credibilityReason": "Reuters和FT原帖由Grok返回，均引用同一NBS数据，未独立直读官方原文；只采用其共同支持的增速和有限政策解释。",
+      "change": "新增",
+      "attentionEvidence": "Reuters及FT在窗口内分别报道季度增长；没有横向互动数据，不声称全网关注排名。",
+      "sources": [
+        {
+          "url": "https://x.com/Reuters/status/2112013367296643525",
+          "postId": "2112013367296643525",
+          "username": "Reuters",
+          "publishedAt": "2026-10-19T02:50:00Z",
+          "checkedAt": "2026-10-19T12:41:04.981509Z",
+          "excerpt": "China's economic growth rebounded to 4.5% year-on-year in the third quarter",
+          "verification": "collector-report",
+          "verificationNote": "Grok网页版追源返回，执行器未独立直读X或国家统计局原文；Reuters报道引用官方数据，未读取外链全文。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FT/status/2112008874639171660",
+          "postId": "2112008874639171660",
+          "username": "FT",
+          "publishedAt": "2026-10-19T02:32:09Z",
+          "checkedAt": "2026-10-19T12:41:04.981509Z",
+          "excerpt": "China’s economy expands 4.5% in third quarter",
+          "verification": "collector-report",
+          "verificationNote": "Grok网页版返回的媒体原帖；与Reuters同据NBS，未独立直读X或付费文章全文。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "Reuters和FT原帖由Grok返回，均引用同一NBS数据，未独立直读官方原文；只采用其共同支持的增速和有限政策解释。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [],
+  "shortfallReason": "独立两轮查询已完成，合格新增仅1条；评级缺权威原帖，其他为旧闻、二传、活动预告或无来源数字，不凑5+10。",
+  "carriedOver": [],
+  "id": "2026-10-19-2030",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T13:02:49.761Z",
+  "counts": {
+    "focus": 1,
+    "insights": 0,
+    "total": 1
+  }
+}

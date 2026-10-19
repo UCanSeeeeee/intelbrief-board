@@ -1,44 +1,177 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-19T00:25:55.598Z",
-  "cutoff": "2026-10-19T08:00:00+08:00",
+  "updatedAt": "2026-10-19T13:02:31.390Z",
+  "cutoff": "2026-10-19T20:30:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "本增量5帖核对，1规则+2新热度；存量2条有效热度按缓存补位。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "jensen-huang",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "已查本人及媒体采访关键词，二次引用证据不足，0合格新增。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "donald-trump",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "POTUS空、同步源评论排除；WhiteHouse新1条准确互动热度，旧有效热度保留。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "trillion-leaders",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "列明的高层本人账号增量查询返回空；不是全体高管全量覆盖。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "research-reports",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "实际查询及追源完成；Goldman/JPM/MS/BofA仅二传，证据不足，不是请求失败。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "elon-universal-high-income-20261019",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 将相关讨论表述为“全民高收入”",
+      "fact": "Elon Musk 在一条讨论“全民基本收入”的回复中，将措辞改为“全民高收入”（universal high income）。",
+      "whyItMatters": "这是一条概念性短回复，没有分配金额、财政来源、时间表或已执行政策；作为热度动态保留。",
+      "counterCase": "后续正式政策或公司执行安排才可能改变这一判断；不能从短回复推导已经落实的收入计划。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-19T08:09:37Z",
+      "url": "https://x.com/elonmusk/status/2112093799694372952",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 6391,
+        "reposts": 561,
+        "quotes": 135,
+        "replies": 569,
+        "capturedAt": "2026-10-19T12:45:09.500386Z",
+        "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-spacex-children-shares-20261019",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 表示计划明年向美国儿童赠送SpaceX股份",
+      "fact": "Elon Musk 表示，明年将给美国每个孩子一股自己的 SpaceX 股份，并称这将是多次赠送的开始。",
+      "whyItMatters": "这是面向未来的个人表述，未提供具体实施日期、资格、估值或法律安排；热度不代表赠股已经发生。",
+      "counterCase": "若后续未出现正式执行文件，不能把计划当成已发放股票或已批准的方案。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-19T07:52:45Z",
+      "url": "https://x.com/elonmusk/status/2112089556615123114",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 256860,
+        "reposts": 25496,
+        "quotes": 7265,
+        "replies": 16317,
+        "capturedAt": "2026-10-19T12:45:09.500386Z",
+        "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-inference-rental-20261019",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 称曾尝试向云厂商租用推理算力",
+      "fact": "Elon Musk 描述，SpaceX 曾尝试向 AWS、GCP 等租用推理算力，以把负载从训练集群分流。帖子未说明对话日期、规模、价格或是否成交。",
+      "whyItMatters": "训练与推理争用集群时，外租可改变算力采购结构及利用率；这是参与者对尝试租赁的表述，尚不足以确认云厂商缺货、实际新增订单或财务影响。",
+      "counterCase": "若租赁没有成交、只是历史经历或云厂商另有可用资源，就不能由此推断当前供给短缺；需后续合同、容量或厂商回应。",
+      "affected": [
+        "推理算力租赁",
+        "训练集群负载",
+        "AWS",
+        "Google Cloud"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-19T03:05:35Z",
+      "url": "https://x.com/elonmusk/status/2112017286764659176",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "rule",
+      "engagement": {
+        "likes": 2526,
+        "reposts": 248,
+        "quotes": 51,
+        "replies": 329,
+        "capturedAt": "2026-10-19T12:45:09.500386Z",
+        "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "wh-airport-landing-20261019",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse 发布Air Force One抵达机场动态",
+      "fact": "WhiteHouse 发布照片，表示 Air Force One 首次降落于佛罗里达州 Palm Beach County 的 President Donald J. Trump International Airport。",
+      "whyItMatters": "这是官方账号的出行动向动态，未提供新增产业、贸易或能源政策；作为热度动态保留，具体航班事件日期未独立核对。",
+      "counterCase": "若没有后续可执行政策披露，不能把照片和到访当成经济政策变化。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-19T01:00:43Z",
+      "url": "https://x.com/WhiteHouse/status/2111985862384783771",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 17959,
+        "reposts": 1859,
+        "quotes": 113,
+        "replies": 977,
+        "capturedAt": "2026-10-19T12:45:09.500386Z",
+        "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
     {
       "eventKey": "elon-public-shares-suggestion-20261018",
       "tabIds": [
@@ -55,6 +188,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "engagement",
       "engagement": {
         "likes": 16001,
@@ -64,13 +203,7 @@
         "views": 657937,
         "capturedAt": "2026-10-19T00:15:27.831Z",
         "source": "Grok网页版X工具实际整数；capturedAt为执行器读取返回并落盘时刻，上游精确抓取时刻未知"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "whitehouse-border-crossings-20261018",
@@ -88,6 +221,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [],
       "selection": "engagement",
       "engagement": {
         "likes": 2861,
@@ -97,8 +231,7 @@
         "views": 144575,
         "capturedAt": "2026-10-19T00:15:27.831Z",
         "source": "Grok网页版X工具实际整数；capturedAt为执行器读取返回并落盘时刻，上游精确抓取时刻未知"
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "elon-starship-competitor-opinion-20261018",
@@ -116,6 +249,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "engagement",
       "engagement": {
         "likes": 14188,
@@ -125,118 +264,7 @@
         "views": 2242341,
         "capturedAt": "2026-10-19T00:15:27.831Z",
         "source": "Grok网页版X工具实际整数；capturedAt为执行器读取返回并落盘时刻，上游精确抓取时刻未知"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-optimus-cybercab-opinion-2026-10-18",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Optimus与Cybercab将构成Tesla的大部分价值（热度动态）",
-      "fact": "Elon Musk表达长期判断，认为Optimus与Cybercab将构成Tesla的大部分价值，并把超级智能、机器人、太阳能和太空运输列为可大规模扩张的方向。本条没有披露新的交付、量产或资本开支数据。",
-      "whyItMatters": "用于观察本人对AI与机器人的资本配置叙事；尚未提供收入、成本或投产增量，不能据此上调经营预测。",
-      "counterCase": "需由交付、单位经济与现金回款验证；观点本身不构成产品已兑现或投资回报保证。",
-      "affected": [
-        "Tesla AI与机器人"
-      ],
-      "author": "Elon Musk (@elonmusk)",
-      "publishedAt": "2026-10-18T05:01:05Z",
-      "url": "https://x.com/elonmusk/status/2111683964721037767",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 13639,
-        "reposts": 1045,
-        "quotes": 245,
-        "replies": 624,
-        "views": 420760,
-        "capturedAt": "2026-10-18T11:51:00Z",
-        "source": "Grok网页版x_thread_fetch实际返回"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "trump-sync-bush-political-comment-2026-10-18",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "同步源评论Bush家族的政治立场（热度动态）",
-      "fact": "TrumpDailyPosts同步源批评Bush家族成员在堕胎等议题上的政治立场。本条是同步搬运，非Donald Trump本人在X直发，也不是一项新政策。",
-      "whyItMatters": "只显示人物来源的可观察互动热度；内容缺少明确产业与经济传导，不进入重点榜。",
-      "counterCase": "政治立场争论不能替代法规、预算或行政执行证据。",
-      "affected": [
-        "Donald Trump公开动态"
-      ],
-      "author": "TrumpDailyPosts（同步源）",
-      "publishedAt": "2026-10-18T04:59:06Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2111683469038297253",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 313,
-        "reposts": 14,
-        "quotes": 0,
-        "replies": 7,
-        "views": 8904,
-        "capturedAt": "2026-10-18T11:51:00Z",
-        "source": "Grok网页版x_thread_fetch实际返回"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "trump-sync-global-political-comment-2026-10-18",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "同步源发布全球政治评论（热度动态）",
-      "fact": "TrumpDailyPosts同步源发布了对全球政治动向的意识形态评论。本条为账号同步搬运，非Donald Trump在X本人直发；未给出可执行的贸易、半导体、电力或财政政策。",
-      "whyItMatters": "仅按人物页热度补位规则保留，用于区分政治声量与政策行动；不作为行业或美股方向信号。",
-      "counterCase": "只有出现正式政策文件、执行时间与经济暴露，才可进入政策影响分析。",
-      "affected": [
-        "Donald Trump公开动态"
-      ],
-      "author": "TrumpDailyPosts（同步源）",
-      "publishedAt": "2026-10-18T03:10:19Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2111656089888395450",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 1148,
-        "reposts": 235,
-        "quotes": 17,
-        "replies": 65,
-        "views": 83781,
-        "capturedAt": "2026-10-18T11:51:00Z",
-        "source": "Grok网页版x_keyword_search实际返回"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "gs-pb-ai-deleveraging-research-2026-10-17",
@@ -1108,7 +1136,5 @@
       "selection": "rule"
     }
   ],
-  "retainedItems": [],
-  "lastAttemptAt": "2026-10-19T07:00:29.017Z",
-  "attemptedCutoff": "2026-10-19T15:00:00+08:00"
+  "retainedItems": []
 }

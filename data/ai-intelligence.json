@@ -1,38 +1,60 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-19T00:25:55.632Z",
-  "cutoff": "2026-10-19T08:00:00+08:00",
+  "updatedAt": "2026-10-19T13:02:31.406Z",
+  "cutoff": "2026-10-19T20:30:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "官方账号及产品/API关键词已查询；用户体验、旧闻与二传排除，无合格新增。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "官方账号及企业/API/云/安全关键词已查询；用户体验和旧合作转述排除，无合格新增。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "官方账号及模型/Agent/TPU查询已完成；Copilot旧公告执行日缺本日官方X确认，排除。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "failed",
-        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
-        "cutoff": "2026-10-19T08:00:00+08:00"
+        "status": "complete",
+        "note": "其他实验室、中国AI与政策、开源查询已完成；MiniMax新增1条，权重仍为未来计划。",
+        "cutoff": "2026-10-19T20:30:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "minimax-m31-flash-release-20261019",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "MiniMax 发布M3.1 Flash并公布API价格，权重计划10月23日开放",
+      "fact": "MiniMax 发布M3.1 Flash，公布API统一计价：每百万输入token 0.15美元、输出token 0.60美元、缓存读取token 0.015美元，并提供API、M Plan与桌面MiniMax Code入口。官方表示权重将于10月23日发布；截至本次截止仍是未来计划，许可证未确认。",
+      "whyItMatters": "新的API价格为开发者比较推理与智能体成本提供了报价基准，但产品入口不等于已经完成调用或客户采用；真实任务质量、速度、额度与服务限制仍需独立验证，不能把厂商评测和token用量当成收入。",
+      "counterCase": "若真实任务质量、调用限制或额外成本抵消报价优势，成本吸引力就可能减弱；若权重延期或许可受限，不能按已开源产品评估。",
+      "affected": [
+        "模型API价格竞争",
+        "开发者推理成本",
+        "智能体工作流"
+      ],
+      "author": "MiniMax_AI",
+      "publishedAt": "2026-10-19T11:56:23Z",
+      "url": "https://x.com/MiniMax_AI/status/2112150867868541221",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "people": []
+    },
     {
       "eventKey": "anthropic-public-benefit-fund-20261018",
       "tabIds": [
@@ -461,32 +483,7 @@
           "intro": "Meta创始人兼CEO"
         }
       ]
-    },
-    {
-      "eventKey": "goog-ai-gemini-robotics-on-device-2-2026-10-12",
-      "tabIds": [
-        "goog-ai"
-      ],
-      "title": "DeepMind：Gemini Robotics On-Device 2 数小时即可适配新机器人",
-      "fact": "@duc_daily 引述 SiliconANGLE 称，DeepMind 表示只需数小时训练即可把 Gemini Robotics On-Device 2 适配到新机器人。",
-      "whyItMatters": "降低机器人模型适配成本，有助于谷歌在实体 AI 平台竞争中获取硬件伙伴。",
-      "counterCase": "二手转述；适配效果与商用客户未披露。",
-      "affected": [
-        "Google DeepMind",
-        "机器人"
-      ],
-      "author": "duc_daily",
-      "publishedAt": "2026-10-12T08:28:29.000Z",
-      "url": "https://x.com/duc_daily/status/2109561832797020445",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "goog-ai": 3
-      },
-      "people": []
     }
   ],
-  "retainedItems": [],
-  "lastAttemptAt": "2026-10-19T07:00:29.022Z",
-  "attemptedCutoff": "2026-10-19T15:00:00+08:00"
+  "retainedItems": []
 }

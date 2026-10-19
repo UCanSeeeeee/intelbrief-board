@@ -1,5 +1,117 @@
 {
   "schemaVersion": 1,
-  "updatedAt": null,
-  "editions": []
+  "updatedAt": "2026-10-19T13:02:32.726Z",
+  "editions": [
+    {
+      "date": "2026-10-19",
+      "items": [
+        {
+          "id": "2026-10-19-walkability-shapes-walking",
+          "knowledgeKey": "walkability-shapes-walking",
+          "topic": "健康",
+          "title": "走得少，不一定只怪自律",
+          "intuition": "走路少，主要是自己不够自律。",
+          "fact": "一项追踪搬迁的自然实验发现，搬到更便于步行的城市后，同一个人的平均步数增加；搬向相反环境则下降。",
+          "explanation": "环境改变了日常出行的便利性，习惯也会随可用路线和目的地变化。",
+          "boundary": "搬家并非随机安排，不能排除工作等变化；研究测的是步数，不能直接推断搬家能延寿。",
+          "people": [],
+          "sources": [
+            {
+              "label": "步行环境自然实验",
+              "publisher": "Nature",
+              "url": "https://www.nature.com/articles/s41586-025-09321-3",
+              "publishedDate": "2025-08-13",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-18T17:08:34Z"
+            }
+          ]
+        },
+        {
+          "id": "2026-10-19-prosocial-spending-measurement-replication",
+          "knowledgeKey": "prosocial-spending-measurement-replication",
+          "topic": "生活",
+          "title": "给别人花钱更快乐，要看怎么测",
+          "intuition": "给别人花钱，总会比给自己花钱快乐。",
+          "fact": "原研究支持当天幸福感提高，但后续近似复现的原指标未出现显著差异；新增的单题感受指标支持原方向。",
+          "explanation": "不同问题测量的感受并不相同，换一个指标得到支持，不等于原结论已经复现。",
+          "boundary": "研究关注短期自报感受，不能推成长期幸福公式；不显著也不等于证明完全无效。",
+          "people": [],
+          "sources": [
+            {
+              "label": "消费与幸福感原研究",
+              "publisher": "Science / PubMed",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/18356530/",
+              "publishedDate": "2008-03-21",
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-18T17:08:34Z"
+            },
+            {
+              "label": "2022年独立复现",
+              "publisher": "PLOS One",
+              "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0272434",
+              "publishedDate": null,
+              "accessLevel": "full-text",
+              "checkedAt": "2026-10-18T17:08:34Z",
+              "dateNote": "发表于2022年，确切月日未确认。"
+            }
+          ]
+        },
+        {
+          "id": "2026-10-19-base-rate-changes-positive-predictive-value",
+          "knowledgeKey": "base-rate-changes-positive-predictive-value",
+          "topic": "统计",
+          "title": "检验阳性，不等于有病概率就是“准确度”",
+          "intuition": "检验很准，阳性就几乎肯定有病。",
+          "fact": "虚构例子：万人中有病率1%，敏感度与特异度都为99%，预期约99个真阳性、99个假阳性；阳性者中真有病约一半。",
+          "explanation": "没有病的人基数大，即使误报比例很小，也会产生不少假阳性。",
+          "boundary": "例子只解释基准率与条件概率，不代表任何实际检验或个人诊断；真实人群与检验性能可能不同。",
+          "people": [],
+          "sources": [
+            {
+              "label": "贝叶斯定理：基准率演示",
+              "publisher": "Rice University等大学团队 · OnlineStatBook",
+              "url": "https://onlinestatbook.com/2/probability/bayes_demo.html",
+              "publishedDate": null,
+              "accessLevel": "full-text",
+              "checkedAt": "2026-10-19T13:01:00.215185Z",
+              "dateNote": "页面未标明发表日期。"
+            }
+          ]
+        },
+        {
+          "id": "2026-10-19-independent-events-do-not-compensate",
+          "knowledgeKey": "independent-events-do-not-compensate",
+          "topic": "行为认知",
+          "title": "连续五次正面，下一次反面也未必更可能",
+          "intuition": "连续出现正面，反面该轮到了。",
+          "fact": "若硬币公平且每次抛掷独立，连续五次正面后，下一次反面的概率仍为一半。",
+          "explanation": "长期比例接近一半，不需要下一次主动补偿；过去的结果不会改变独立试验的概率。",
+          "boundary": "关键是公平与独立的前提。抽签不放回、有状态装置或条件变化时，不能照搬这个结论。",
+          "people": [],
+          "sources": [
+            {
+              "label": "独立事件与赌徒谬误",
+              "publisher": "Rice University等大学团队 · OnlineStatBook",
+              "url": "https://onlinestatbook.com/2/probability/gambler.html",
+              "publishedDate": null,
+              "accessLevel": "full-text",
+              "checkedAt": "2026-10-19T13:01:00.215185Z",
+              "dateNote": "页面未标明发表日期。"
+            }
+          ]
+        }
+      ],
+      "coverage": {
+        "status": "partial",
+        "note": "4条合格独立知识点；睡眠候选的2004勘误正文未取得，无法判断对结论的影响，保留1条缺额，不以未核验内容补满。两项复用旧论文证据，两项新核对大学原始教育材料。",
+        "queries": [
+          "复用Nature步行环境与Science消费幸福感及独立复现，旧证据未变不重搜。",
+          "Grok发现：睡眠主客观适应、阳性基准率、独立随机事件；之后核对PubMed与大学教育原文。",
+          "Van Dongen Sleep 2004 27(4):600勘误定点补核；未取得正文不发布。",
+          "直接核对OnlineStatBook Bayes与Gambler原始教育正文及大学开发者首页；Penn State检索节选仅交叉，直接打开失败不冒称成功。"
+        ],
+        "checkedAt": "2026-10-19T13:01:00.215185Z"
+      }
+    }
+  ]
 }
