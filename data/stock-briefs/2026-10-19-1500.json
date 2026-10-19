@@ -1,0 +1,209 @@
+{
+  "trigger": "scheduled",
+  "scheduledFor": "2026-10-19T15:00:00+08:00",
+  "windowStart": "2026-10-19T00:00:00.000Z",
+  "displayWindowStart": "2026-10-16T16:00:00.000Z",
+  "displayWindowEnd": "2026-10-19T07:00:00.000Z",
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T07:00:00.000Z",
+      "cutoff": "2026-10-19T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T07:00:00.000Z",
+      "cutoff": "2026-10-19T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "tsmc-kumamoto-3nm-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T07:00:00.000Z",
+      "cutoff": "2026-10-19T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:power",
+          "key": "nscale-msft-uk-grid-ipo-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "nextdc-melbourne-grid-risk-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T07:00:00.000Z",
+      "cutoff": "2026-10-19T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T07:00:00.000Z",
+      "cutoff": "2026-10-19T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T07:00:00.000Z",
+      "cutoff": "2026-10-19T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "hormuz-tankers-mine-claim-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-19T00:00:00.000Z",
+      "end": "2026-10-19T07:00:00.000Z",
+      "cutoff": "2026-10-19T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ],
+  "status": "failed",
+  "summary": "本期X采集入口不可用，保留此前已收录重点。",
+  "marketContext": "截止北京时间2026-10-19 15:00；尚未取得本期X检索结果，不作当前市场判断。",
+  "coverage": {
+    "method": "Grok网页版入口失败；Bot暂停，未使用第三路径",
+    "status": "failed",
+    "queries": [],
+    "gaps": [
+      "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    ]
+  },
+  "checklist": [
+    {
+      "item": "news:market-focus",
+      "status": "insufficient",
+      "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "item": "news:semiconductors",
+      "status": "insufficient",
+      "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "item": "news:power",
+      "status": "insufficient",
+      "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "item": "news:ai-adoption",
+      "status": "insufficient",
+      "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "item": "news:capital-cost",
+      "status": "insufficient",
+      "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "item": "news:geopolitics",
+      "status": "insufficient",
+      "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "item": "news:market-structure",
+      "status": "insufficient",
+      "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    }
+  ],
+  "candidates": [],
+  "selectionRationale": "两轮发现均未能执行，不排序或补造候选；已有重点留在持久池。",
+  "excludedCandidates": [],
+  "focus": [],
+  "insights": [],
+  "shortfallReason": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
+  "carriedOver": [],
+  "id": "2026-10-19-1500",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T07:00:28.894Z",
+  "counts": {
+    "focus": 0,
+    "insights": 0,
+    "total": 0
+  }
+}

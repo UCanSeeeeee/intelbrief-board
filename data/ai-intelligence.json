@@ -3,31 +3,31 @@
   "updatedAt": "2026-10-19T00:25:55.632Z",
   "cutoff": "2026-10-19T08:00:00+08:00",
   "source": "X only",
-  "status": "complete",
+  "status": "failed",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "complete",
-        "note": "既定精确增量查询完成，无合格新增；无关闲聊/促销/社区自评已排除，旧榜保留。",
+        "status": "failed",
+        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
         "cutoff": "2026-10-19T08:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "complete",
-        "note": "官方基金公告原文/精确时间已核，独立反证完成；1条组织承诺新卡，执行/治理缺口保留。",
+        "status": "failed",
+        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
         "cutoff": "2026-10-19T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "complete",
-        "note": "既定精确增量查询完成，无合格新增；无关闲聊/促销/社区自评已排除，旧榜保留。",
+        "status": "failed",
+        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
         "cutoff": "2026-10-19T08:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "complete",
-        "note": "既定精确增量查询完成，无合格新增；无关闲聊/促销/社区自评已排除，旧榜保留。",
+        "status": "failed",
+        "note": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。",
         "cutoff": "2026-10-19T08:00:00+08:00"
       }
     ]
@@ -486,5 +486,7 @@
       "people": []
     }
   ],
-  "retainedItems": []
+  "retainedItems": [],
+  "lastAttemptAt": "2026-10-19T07:00:29.022Z",
+  "attemptedCutoff": "2026-10-19T15:00:00+08:00"
 }

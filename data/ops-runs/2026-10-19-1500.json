@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-19-1500",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-19T14:56:44+08:00",
+  "updatedAt": "2026-10-19T15:00:48+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "19d705b306c1c92a65691fec06aad732ca6c8d34",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-19T15:00:02+08:00",
+      "detail": "首次写入前已pull --ff-only，原master干净且已同步；前置操作未独立计时"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-19T15:00:03+08:00",
+      "detail": "已读本轮入口、知识库/SOP及各栏契约；同版本复用，逐对象计划已落盘"
+    },
+    {
+      "name": "search",
+      "status": "failed",
+      "at": "2026-10-19T15:00:03+08:00",
+      "detail": "Grok网页入口空白；23对象未提交查询，不推进成功截止。CNN/VIX/Nasdaq例外成功，学习未到期、宏观未触发"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-19T15:00:47+08:00",
+      "detail": "失败期次及人物/个股/AI失败状态已按发布契约合并；23成功截止及累计卡片、时间线、周榜保留；官方日历和指标刷新"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-19T15:00:48+08:00",
+      "detail": "按用户要求未运行test/check/build/本地预览/额外回归；写入契约与来源真实性、明确路径差异已审查"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "failed",
+      "detail": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    "people": {
+      "status": "failed",
+      "detail": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    "tickers": {
+      "status": "failed",
+      "detail": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    "ai": {
+      "status": "failed",
+      "detail": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "Nasdaq原始1263家、入选80家；pendingReview为空；10月29日超额3家按现有规则留truncated"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "低频检查，无到期/过时触发，不重查全表"
+    }
+  },
+  "status": "failed",
+  "error": {
+    "stage": "search",
+    "message": "Grok网页入口空白；23对象未提交查询，不推进成功截止。CNN/VIX/Nasdaq例外成功，学习未到期、宏观未触发",
+    "stackSnippet": null
+  },
+  "commitHash": null,
+  "notes": [
+    "冻结北京时间15:00；按collection plan串行执行，不运行本地测试/check/build/预览"
+  ],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-19T14:57:40+08:00",
+      "endedAt": "2026-10-19T14:58:45+08:00",
+      "durationMs": 65000,
+      "detail": "本批结果和逐对象失败报告已落盘；截止尚未到，进度record将在官方日历关闭后执行，不提前推进未来截止"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-19T14:57:40+08:00",
+      "endedAt": "2026-10-19T14:58:45+08:00",
+      "durationMs": 65000,
+      "detail": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T14:58:45+08:00",
+      "durationMs": 0,
+      "detail": "发现未取得候选；入口失败，不空跑"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T14:58:45+08:00",
+      "durationMs": 0,
+      "detail": "发现未取得候选；入口失败，不空跑"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-19T14:58:46+08:00",
+      "endedAt": "2026-10-19T14:58:46+08:00",
+      "durationMs": 0,
+      "detail": "本批结果和逐对象失败报告已落盘；截止尚未到，进度record将在官方日历关闭后执行，不提前推进未来截止"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-19T14:58:46+08:00",
+      "endedAt": "2026-10-19T14:58:46+08:00",
+      "durationMs": 0,
+      "detail": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T14:58:46+08:00",
+      "durationMs": 0,
+      "detail": "发现未取得候选；入口失败，不空跑"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T14:58:46+08:00",
+      "durationMs": 0,
+      "detail": "发现未取得候选；入口失败，不空跑"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-19T14:58:46+08:00",
+      "endedAt": "2026-10-19T14:58:47+08:00",
+      "durationMs": 1000,
+      "detail": "本批结果和逐对象失败报告已落盘；截止尚未到，进度record将在官方日历关闭后执行，不提前推进未来截止"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-19T14:58:46+08:00",
+      "endedAt": "2026-10-19T14:58:46+08:00",
+      "durationMs": 0,
+      "detail": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T14:58:46+08:00",
+      "durationMs": 0,
+      "detail": "发现未取得候选；入口失败，不空跑"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T14:58:46+08:00",
+      "durationMs": 0,
+      "detail": "发现未取得候选；入口失败，不空跑"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-19T14:58:47+08:00",
+      "endedAt": "2026-10-19T14:58:47+08:00",
+      "durationMs": 0,
+      "detail": "本批结果和逐对象失败报告已落盘；截止尚未到，进度record将在官方日历关闭后执行，不提前推进未来截止"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-19T14:58:47+08:00",
+      "endedAt": "2026-10-19T14:58:47+08:00",
+      "durationMs": 0,
+      "detail": "Grok网页内容区空白，无输入框且无法确认登录；新开grok.com及刷新均未恢复。未提交X查询。Bot周额度耗尽且暂停；不尝试第三路径。"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T14:58:47+08:00",
+      "durationMs": 0,
+      "detail": "发现未取得候选；入口失败，不空跑"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T14:58:47+08:00",
+      "durationMs": 0,
+      "detail": "发现未取得候选；入口失败，不空跑"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-19T14:58:54+08:00",
+      "durationMs": 0,
+      "detail": "15:00 learning.components的papers/basics/counterintuitive均为false，不补采早间论文或趣事"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-19T14:58:55+08:00",
+      "endedAt": "2026-10-19T14:59:08+08:00",
+      "durationMs": 13000,
+      "detail": "今日无到期/过时触发；最近官方核对10月18日，下一事件10月21日；复用已保存证据"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-19T14:59:09+08:00",
+      "endedAt": "2026-10-19T15:00:02+08:00",
+      "durationMs": 53000,
+      "detail": "三周日历成功刷新，pendingReview=0，无stale；无新增结果待评，不重复核验旧评分"
+    }
+  ]
+}
