@@ -1,181 +1,40 @@
-/* News-only indicator and edition geometry; reading.css supplies shared typography and themes. */
-body[data-page="news"] .main.wide {
-  --news-gap: 20px;
-  max-width: 1360px;
-  padding-top: 24px;
-}
-
-body[data-page="news"] .news-page-header {
-  align-items: center;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 4px 24px;
-  margin-bottom: 18px;
-}
-
-body[data-page="news"] .news-page-header h1 { font-size: 24px; }
-body[data-page="news"] .page-emoji { width: 28px; height: 28px; flex-basis: 28px; }
-body[data-page="news"] .brief-edition-only {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-}
-body[data-page="news"] .brief-toolbar { gap: 10px; }
-body[data-page="news"] .brief-toolbar select {
-  flex: 0 1 236px;
-  width: 236px;
-  min-height: 44px;
-  padding: 9px 12px;
-  border-color: var(--border-subtle);
-  font-size: 12px;
-}
-body[data-page="news"] #reading-context {
-  grid-column: 1;
-  grid-row: 2;
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-/* At 1280px: 216 sidebar + 80 gutters + (532 + 16 + 436) = 1280. */
-body[data-page="news"] .market-metrics {
-  grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
-  gap: 16px;
-  margin-bottom: 0;
-}
-body[data-page="news"] .market-sentiment {
-  padding: 14px 18px;
-  border-color: var(--border-subtle);
-  border-radius: 8px;
-}
-body[data-page="news"] .sentiment-heading { gap: 6px 10px; margin-bottom: 8px; }
-body[data-page="news"] .sentiment-heading h2 { font-size: 13px; font-weight: 500; }
-body[data-page="news"] .sentiment-heading h2 span { margin-left: 6px; }
-body[data-page="news"] .sentiment-body { align-items: flex-start; gap: 10px 18px; margin-bottom: 10px; }
-body[data-page="news"] .sentiment-reading > div { gap: 5px; }
-body[data-page="news"] .sentiment-number { font-size: 30px; letter-spacing: -.025em; }
-body[data-page="news"] .sentiment-rating { margin-left: 4px; font-size: 13px; font-weight: 500; }
-body[data-page="news"] .sentiment-reading p { margin-top: 3px; font-size: 12px; }
-body[data-page="news"] .sentiment-history { gap: 10px 20px; }
-body[data-page="news"] .sentiment-history dt { font-size: 12px; }
-body[data-page="news"] .sentiment-history dd { font-size: 16px; margin-top: 1px; }
-body[data-page="news"] .sentiment-meter { height: 5px; margin: 8px 0 6px; }
-body[data-page="news"] .sentiment-pointer { top: -3px; height: 11px; }
-body[data-page="news"] .sentiment-legend { font-size: 12px; gap: 6px; }
-body[data-page="news"] .sentiment-meta { margin: 8px 0 0; font-size: 12px; line-height: 1.5; }
-body[data-page="news"] .vix-body { display: grid; grid-template-columns: minmax(112px, .8fr) minmax(0, 1.2fr); gap: 12px; align-items: center; }
-body[data-page="news"] .vix-bands { gap: 4px 10px; margin: 0; }
-body[data-page="news"] .vix-band {
-  gap: 0 6px;
-  padding: 4px 0;
-  font-size: 12px;
-  line-height: 1.6;
-  border: 0;
-  border-bottom: 1px solid var(--border-subtle);
-  border-radius: 0;
-  background: transparent;
-}
-body[data-page="news"] .vix-band.is-active { border-bottom-color: var(--accent-blue); color: var(--text); }
-
-body[data-page="news"] .main > .section {
-  margin-top: 26px;
-  margin-bottom: 36px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-}
-body[data-page="news"] .section-header {
-  padding: 0;
-  margin-bottom: 14px;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-}
-body[data-page="news"] .section-header h2 { font-size: 18px; font-weight: 600; }
-body[data-page="news"] .x-feed { gap: 16px; }
-body[data-page="news"] .brief-card {
-  padding: 20px 24px;
-  border-color: var(--border-subtle);
-  border-radius: 8px;
-  box-shadow: none;
-}
-body[data-page="news"] .brief-author {
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 16px;
-  margin-bottom: 8px;
-  font-size: 12px;
-  line-height: 1.7;
-}
-body[data-page="news"] .brief-author strong { font-weight: 500; }
-body[data-page="news"] .brief-author .signal-verification { margin: 0; font-size: 12px; }
-body[data-page="news"] .brief-change { margin-left: auto; }
-body[data-page="news"] .brief-card-top { margin: 0 0 12px; }
-body[data-page="news"] .brief-card-top h3 { font-size: 20px; font-weight: 600; line-height: 1.5; letter-spacing: -.01em; }
-body[data-page="news"] .card-people { margin: 0 0 14px; font-size: 12px; }
-body[data-page="news"] .person-chip { padding: 0; border: 0; border-radius: 0; }
-body[data-page="news"] .brief-copy {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: 28px;
-  align-items: start;
-}
-body[data-page="news"] .brief-copy > p { min-width: 0; margin: 0; color: var(--text); font-size: 15px; line-height: 1.8; }
-body[data-page="news"] .brief-copy > p > strong { display: block; margin: 0 0 6px; color: var(--text-secondary); font-size: 12px; font-weight: 500; }
-body[data-page="news"] .brief-copy .brief-impact { padding-left: 24px; border-left: 1px solid var(--border-subtle); }
-body[data-page="news"] .brief-knowledge { margin: 16px 0 0; padding: 0; border: 0; }
-body[data-page="news"] .brief-knowledge > strong { font-size: 13px; font-weight: 500; }
-body[data-page="news"] .brief-knowledge p { font-size: 13px; margin: 4px 0 0; }
-body[data-page="news"] .brief-scope { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-top: 16px; }
-body[data-page="news"] .brief-scope > p { margin: 0; font-size: 12px; color: var(--text-muted); line-height: 1.8; }
-body[data-page="news"] .brief-scope strong { color: var(--text-muted); font-size: inherit; }
-body[data-page="news"] .brief-primary-source { margin-top: 12px; padding-top: 10px; }
-body[data-page="news"] .brief-primary-source p, body[data-page="news"] .brief-primary-source a { font-size: 12px; }
-body[data-page="news"] .brief-primary-source a { min-height: 24px; }
-body[data-page="news"] .retained-news { display: grid; gap: 16px; margin-top: 10px; padding-top: 20px; border-top: 1px solid var(--border); }
-body[data-page="news"] .retained-news > h3 { margin: 0; color: var(--text-secondary); font-size: 15px; font-weight: 500; }
-body[data-page="news"] .brief-corrections { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--border); }
-body[data-page="news"] .brief-corrections > h2 { font-size: 18px; }
-
+/* News-only structure. Shared type, surfaces and spacing live in reading.css. */
+.news-page-header { align-items: center; grid-template-columns: minmax(0, 1fr) auto; }
+.news-page-header .brief-edition-only { grid-column: 2; grid-row: 1 / span 2; border: 0; margin: 0; padding: 0; background: transparent; }
+.news-page-header #reading-context { grid-column: 1; grid-row: 2; margin: 0; }
+.brief-edition-only .brief-toolbar { gap: 10px; margin: 0; }
+.brief-edition-only .brief-toolbar select { flex: 0 1 236px; width: 236px; min-height: 44px; padding: 9px 12px; border-color: var(--border-subtle); }
+.market-metrics { grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr); gap: 16px; margin: 0; }
+.market-metrics > .market-sentiment { margin: 0; border-color: var(--border-subtle); border-radius: 8px; }
+.sentiment-heading { gap: 6px 10px; }
+.sentiment-heading h2 { font-weight: 500; }
+.sentiment-heading h2 span { margin-left: 6px; }
+.sentiment-body { align-items: flex-start; gap: 12px 18px; }
+.sentiment-reading > div { gap: 5px; }
+.sentiment-number { font-size: 30px; letter-spacing: -.025em; }
+.sentiment-rating { margin-left: 4px; font-weight: 500; }
+.sentiment-history dd { font-size: 16px; margin-top: 2px; }
+.sentiment-meter { height: 5px; }
+.sentiment-pointer { top: -3px; height: 11px; }
+.vix-body { display: grid; align-items: start; }
+.vix-bands { margin: 0; }
+.vix-band { gap: 0 6px; padding: 4px 0; border: 0; border-radius: 0; background: transparent; }
+.brief-change { margin-left: auto; }
+.brief-card-top { align-items: flex-start; }
+.retained-news { display: grid; border-top: 1px solid var(--border); }
+.retained-news > h3 { margin: 0; color: var(--text-secondary); font-weight: 500; }
+.brief-corrections { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+.brief-corrections > h2 { font-size: 19px; }
 @media (max-width: 1120px) and (min-width: 769px) {
-  body[data-page="news"] .main.wide { padding-right: 24px; padding-left: 24px; }
-  body[data-page="news"] .market-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  body[data-page="news"] .sentiment-body { display: block; }
-  body[data-page="news"] .sentiment-history { margin-top: 8px; justify-content: space-between; gap: 8px; }
-  body[data-page="news"] .vix-body { grid-template-columns: 1fr; gap: 8px; }
-  body[data-page="news"] .brief-copy { grid-template-columns: 1fr; gap: 14px; }
-  body[data-page="news"] .brief-copy .brief-impact { padding-left: 0; border: 0; }
+  .sentiment-body { display: grid; gap: 12px; }
+  .sentiment-history { justify-content: space-between; }
 }
-
 @media (max-width: 768px) {
-  body[data-page="news"] .main.wide { padding: 68px 16px 36px; }
-  body[data-page="news"] .news-page-header { grid-template-columns: 1fr; gap: 6px; margin-bottom: 16px; }
-  body[data-page="news"] .news-page-header h1 { font-size: 22px; }
-  body[data-page="news"] #reading-context { grid-column: 1; grid-row: 2; }
-  body[data-page="news"] .brief-edition-only { grid-column: 1; grid-row: 3; margin-top: 6px; }
-  body[data-page="news"] .brief-toolbar { flex-wrap: nowrap; gap: 12px; }
-  body[data-page="news"] .brief-toolbar select { flex: 1 1 0; width: auto; min-width: 0; }
-  body[data-page="news"] .market-metrics { grid-template-columns: 1fr; gap: 12px; }
-  body[data-page="news"] .market-sentiment { padding: 14px; }
-  body[data-page="news"] .sentiment-body { gap: 8px 16px; margin-bottom: 8px; }
-  body[data-page="news"] .sentiment-history { width: auto; gap: 12px; }
-  body[data-page="news"] .sentiment-number { font-size: 28px; }
-  body[data-page="news"] .sentiment-legend { flex-wrap: wrap; gap: 3px 8px; font-size: 12px; }
-  body[data-page="news"] .sentiment-legend span { flex: 1 1 44px; }
-  body[data-page="news"] .vix-body { grid-template-columns: minmax(108px, .8fr) minmax(0, 1.2fr); }
-  body[data-page="news"] .brief-card { padding: 16px; }
-  body[data-page="news"] .brief-author { gap: 3px 12px; }
-  body[data-page="news"] .brief-change { margin-left: 0; }
-  body[data-page="news"] .brief-card-top h3 { font-size: 18px; }
-  body[data-page="news"] .brief-copy { grid-template-columns: 1fr; gap: 14px; }
-  body[data-page="news"] .brief-copy .brief-impact { padding-left: 0; border: 0; }
-  body[data-page="news"] .brief-primary-source { gap: 6px; }
-  body[data-page="news"] .brief-primary-source a { display: inline-flex; align-items: center; min-height: 44px; }
-}
-
-@media (max-width: 360px) {
-  body[data-page="news"] .vix-body { grid-template-columns: 1fr; }
-  body[data-page="news"] .sentiment-history { width: 100%; justify-content: space-between; }
+  .news-page-header { grid-template-columns: 1fr; }
+  .news-page-header .brief-edition-only { grid-column: 1; grid-row: 3; }
+  .brief-edition-only .brief-toolbar { flex-wrap: nowrap; }
+  .brief-edition-only .brief-toolbar select { flex: 1 1 0; width: auto; min-width: 0; }
+  .sentiment-history { width: auto; }
+  .sentiment-number { font-size: 28px; }
+  .brief-change { margin-left: 0; }
 }

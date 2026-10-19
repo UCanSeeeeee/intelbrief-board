@@ -30,6 +30,17 @@ test('comfort typography and continuous reading are shared by every page', () =>
   assert.ok(html.indexOf('href="news.css"') < html.indexOf('href="reading.css"'));
 });
 
+test('one spacing owner prevents stacked child margins and uneven card padding', () => {
+  const css = read('reading.css');
+  assert.match(css, /--card-pad-block: 24px/);
+  assert.match(css, /--card-pad-block: 20px; --card-pad-inline: 20px/);
+  assert.match(css, /:is\(\.brief-card, \.signal-card, \.learning-card\) > \* \{ margin: 0; \}/);
+  assert.match(css, /\.lesson-version > h3/);
+  assert.match(css, /\.earnings-card-top[^}]+margin: 0/);
+  assert.match(css, /\.sentiment-legend[^}]+grid-template-columns: repeat\(5, minmax\(0, 1fr\)\)/);
+  assert.doesNotMatch(read('news.css'), /\.brief-card\s*\{|\.brief-copy\s*\{/);
+});
+
 test('people ticker and AI cards expose complete facts and judgments after metadata', () => {
   for (const file of ['people.js', 'tickers.js', 'ai.js']) {
     const source = read(file);
