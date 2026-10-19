@@ -90,7 +90,7 @@ body[data-page] .brief-scope strong, .signal-card .signal-scope > strong { color
 body[data-page] .brief-primary-source, .signal-card footer, .learning-card footer { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: baseline; gap: 8px 18px; margin: 0; padding: 0; border: 0; font-size: 14px; color: var(--text-muted); }
 body[data-page] .brief-primary-source p, body[data-page] .brief-primary-source a, .signal-card footer a, .learning-card footer a { font-size: 14px; line-height: 1.8; }
 body[data-page] .brief-primary-source a, .signal-card footer a, .learning-card footer a, .result-sources a { display: inline-flex; align-items: center; min-height: 32px; color: var(--accent-blue); }
-body[data-page] .retained-news { gap: 28px; margin-top: 20px; padding-top: 24px; }
+body[data-page] .retained-news { gap: var(--space-block); margin: 0; padding-top: var(--space-block); }
 body[data-page] .retained-news > h3 { font-size: 17px; }
 .learning-card p { max-width: none; font-size: 17px; line-height: 1.85; }
 .learning-card p > strong { margin-bottom: 6px; font-size: 14px; font-weight: 500; color: var(--text-secondary); }
@@ -170,11 +170,12 @@ body[data-page="news"] .sentiment-history { gap: 12px 16px; }
 body[data-page="news"] .vix-body { grid-template-columns: 1fr; gap: 12px; }
 body[data-page="news"] .vix-bands { gap: 4px 12px; }
 body[data-page="news"] .vix-band { border: 0; }
-body[data-page="news"] .vix-band.is-active { font-weight: 600; color: var(--text); }
-body[data-page="news"] .sentiment-legend { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; align-items: start; }
+body[data-page="news"] .vix-band.is-active { font-weight: 600; color: var(--text); background: transparent; }
+body[data-page="news"] .sentiment-legend { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; align-items: end; }
 body[data-page="news"] .sentiment-legend span { min-width: 0; text-align: center; }
 body[data-page="news"] .sentiment-legend span:first-child { text-align: left; }
 body[data-page="news"] .sentiment-legend span:last-child { text-align: right; }
+body[data-page="news"] .sentiment-bound { display: block; font-size: 14px; line-height: 1.5; font-variant-numeric: tabular-nums; }
 /* One owner per vertical gap: legacy child margins must not add a second gap. */
 body[data-page] :is(.brief-card, .signal-card, .learning-card) > * { margin: 0; }
 body[data-page] :is(.brief-card, .signal-card, .learning-card) > :last-child { margin-bottom: 0; }

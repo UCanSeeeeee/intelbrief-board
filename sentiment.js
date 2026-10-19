@@ -18,7 +18,7 @@ function render(data) {
     <div class="sentiment-body"><div class="sentiment-reading"><div><strong class="sentiment-number">${number(data.score)}</strong><span class="sentiment-denominator"> / 100</span><strong class="sentiment-rating">${LABELS[data.rating]}</strong></div>${deltaText?`<p>${deltaText}</p>`:''}</div>
     <dl class="sentiment-history">${[['close', '上次收盘'], ['week', '一周前'], ['month', '一月前']].map(([key, label]) => `<div><dt>${label}</dt><dd>${number(data.previous[key])}</dd></div>`).join('')}</dl></div>
     <div class="sentiment-meter" role="meter" aria-label="CNN美股恐惧与贪婪指数" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${data.score}" aria-valuetext="${number(data.score)}，${LABELS[data.rating]}"><span class="sentiment-zone zone-extreme-fear"></span><span class="sentiment-zone zone-fear"></span><span class="sentiment-zone zone-neutral"></span><span class="sentiment-zone zone-greed"></span><span class="sentiment-zone zone-extreme-greed"></span><span class="sentiment-pointer" style="left:${data.score}%" aria-hidden="true"></span></div>
-    <div class="sentiment-legend" aria-hidden="true"><span>0 极度恐惧</span><span>恐惧</span><span>中性</span><span>贪婪</span><span>极度贪婪 100</span></div>
+    <div class="sentiment-legend" aria-hidden="true"><span><small class="sentiment-bound">0</small>极度恐惧</span><span>恐惧</span><span>中性</span><span>贪婪</span><span><small class="sentiment-bound">100</small>极度贪婪</span></div>
     <p class="sentiment-meta">${escape(time(data.timestamp))}（北京时间） · <a href="${CNN_URL}" target="_blank" rel="noopener noreferrer">CNN ↗</a>${data.source.method === 'mirror' ? ` · <a href="${MIRROR_URL}" target="_blank" rel="noopener noreferrer">镜像 ↗</a>` : ''}</p>`;
   displayed = data;
 }
