@@ -9,13 +9,15 @@ function validateJournalLearning(config, data, now=new Date()) {
   const journals=new Map((config?.journalPolicy?.journals||[]).map(j=>[j.id,j]));
   const registry=loadRegistry().people;
   const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
-  const ids=new Set(), dois=new Set(), slots=new Set();
+  const ids=new Set(), dois=new Set(), slots=new Map();
+  const dailyLimit=config?.journalPolicy?.dailyLimitPerJournal;
+  if(dailyLimit!==3)fail('两刊每天各最多3篇');
   for(const p of data.reviews) {
     const journal=journals.get(p.journal), doi=String(p.doi||'').toLowerCase();
     if(!text(p.id)||ids.has(p.id))fail('论文选读ID缺失或重复');ids.add(p.id);
     if(!journal||p.journalName!==journal.name||!journal.doiPrefixes.some(prefix=>doi.startsWith(prefix))||dois.has(doi))fail('论文须为对应正刊、正确DOI且不得重复');dois.add(doi);
     if(!date(p.selectedDate)||p.selectedDate>today||!date(p.publishedDate)||p.publishedDate>p.selectedDate)fail('论文发表或选读日期无效');
-    const slot=p.journal+':'+p.selectedDate;if(slots.has(slot))fail('每刊每天最多一篇');slots.add(slot);
+    const slot=p.journal+':'+p.selectedDate;slots.set(slot,(slots.get(slot)||0)+1);if(slots.get(slot)>dailyLimit)fail('每刊每天最多3篇');
     const canonical=journal?.id==='nature'?journal.urlPrefix+doi.replace('10.1038/',''):journal?.urlPrefix+doi;
     if(!https(p.paperUrl)||p.paperUrl!==canonical)fail('缺少正刊规范原文链接');
     for(const key of ['title','originalTitle','category','takeaway','stage','accessNote'])if(!text(p[key]))fail(`论文缺少${key}`);
@@ -30,7 +32,7 @@ function validateJournalLearning(config, data, now=new Date()) {
   for(const id of ['nature','science']) {
     const c=data.coverage?.[id];
     if(!c||!date(c.date)||!['complete','partial','failed'].includes(c.status)||!text(c.note)||!Array.isArray(c.queries)||!Number.isFinite(Date.parse(c.checkedAt)))fail(`${id}缺少本轮覆盖及缺口`);
-    if(c?.status==='complete'&&!data.reviews.some(p=>p.journal===id&&p.selectedDate===c.date))fail(`${id}没有当日内容不能标完成`);
+    if(c?.status==='complete'&&data.reviews.filter(p=>p.journal===id&&p.selectedDate===c.date).length!==dailyLimit)fail(`${id}不足3篇不能标完成`);
   }
   return {errors,papers:data.reviews.length};
 }

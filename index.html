@@ -22,41 +22,36 @@
         <a href="macro.html" data-nav="macro"><span class="nav-icon" aria-hidden="true">◉</span> 宏观大事</a>
         <a href="earnings.html" data-nav="earnings"><span class="nav-icon" aria-hidden="true">▤</span> 财报日历</a>
       </nav>
-      <div class="sidebar-footer">只收录可回到 X 原帖的证据<br />不提供交易指令</div>
     </aside>
     <main class="main wide" id="main" tabindex="-1">
       <header class="page-header">
         <h1><img class="page-emoji" src="assets/fluent/newspaper.png" alt="" width="36" height="36" />美股讯息</h1>
-        <p class="subtitle">聚焦影响美股的变化 · 半导体、电力、AI 落地</p>
-        <div class="meta">
-          <span class="badge">来源：X</span>
-          <span>北京时间 · 工作日 08:00 / 15:00 / 20:30 · 周末 08:00 启动整理</span>
-        </div>
       </header>
+      <div class="market-metrics">
       <section id="market-sentiment" class="market-sentiment" aria-labelledby="sentiment-title" aria-live="polite">
         <div class="sentiment-heading"><h2 id="sentiment-title">恐惧与贪婪指数 <span>美股 · CNN</span></h2></div>
-        <p class="sentiment-note">正在读取最近公布值；休市不等于0分。</p>
+        <p class="sentiment-note">正在读取指数</p>
       </section>
+      <section id="market-vix" class="market-sentiment" aria-labelledby="vix-title" aria-live="polite"><div class="sentiment-heading"><h2 id="vix-title">VIX</h2></div><p class="sentiment-note">正在读取指数</p></section>
+      </div>
       <section class="brief-overview brief-edition-only" aria-label="简报期次">
         <div class="brief-toolbar"><label for="edition-select">简报期次</label><select id="edition-select" disabled><option>正在加载</option></select></div>
       </section>
       <p id="reading-context" class="brief-intro" aria-live="polite"></p>
       <section class="section">
-        <div class="section-header"><h2>市场焦点 <span id="focus-count">上限 5 条</span></h2></div>
-        <p class="brief-intro">按影响范围、时效与预期差比较；“最关注”是本期检索范围内的判断，不等于全网排名。</p>
+        <div class="section-header"><h2>市场焦点 </h2></div>
         <div id="brief-focus" class="x-feed"></div>
       </section>
       <section class="section">
-        <div class="section-header"><h2>多学科认知与夜雨知识库 <span id="insights-count">上限 10 条</span></h2></div>
-        <p class="brief-intro">从宏观、地缘、产业、资金结构与行为视角选出最多十件事，写清传导链与影响判断。</p>
+        <div class="section-header"><h2>多学科认知与夜雨知识库 </h2></div>
         <div id="brief-insights" class="x-feed"></div>
       </section>
       <div id="brief-audit"></div>
-      <p class="disclaimer">定时简报，不是连续行情终端。可信度为未校准的证据初评，不代表真伪或涨跌概率。采集不足会显示缺额，不用旧闻凑数。</p>
     </main>
   </div>
   <script src="app.js"></script>
   <script src="briefs.js"></script>
   <script type="module" src="sentiment.js"></script>
+  <script type="module" src="volatility.js"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+{
+  "type": "editorial-revision",
+  "scope": "只重写已选两篇论文的结论和实验过程，保留来源、原始发表日、选读日与阅读边界；不冒称已补齐每日六篇。",
+  "evidence": "沿用2026-10-19-health-life.json已核验的期刊正文节选、原论文摘要和2022复现正文。新增基础知识基于项目知识库，不附会成新闻原帖事实。",
+  "metricPlan": {
+    "sourceRoute": "Grok网页版原生界面刷新后仍为空白，未获得Grok结果；VIX作为用户新授权的非X指标，直接核对Cboe公开来源。",
+    "questions": ["确认Cboe VIX官方数据入口、实际字段与日期口径", "来源是收盘还是盘中；只展示实际口径", "按用户图片四档显示，20和30进入下一档、40仍在30–40档"],
+    "plannedSources": ["https://www.cboe.com/tradable_products/vix/", "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"],
+    "exclude": "不引用图片下方历史恐慌事件，不复制交易建议。",
+    "result": "Cboe官方页面与CSV均给出2026-10-16收盘19.99，前收16.46；原CDN地址307跳转至官方cdn-api.cboe.com。按实际重定向更新固定来源并成功写入快照，未冒称盘中实时。",
+    "source": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+  }
+}

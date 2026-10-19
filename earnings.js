@@ -23,11 +23,10 @@
       <div class="earnings-card-top">
         <strong>${escape(item.symbol)}</strong>
         <span class="badge">${escape(item.timeLabel)}</span>
-        ${item.selection === 'autonomous' ? '<span class="badge">自主判断</span>' : ''}
         ${themes}
       </div>
       <p class="earnings-name">${escape(item.name)}</p>
-      <details open class="company-details"><summary>公司与收录说明</summary><p class="earnings-blurb">${escape(blurbs[item.symbol] || item.businessBlurb || '主营信息暂未收录。')}</p><p>${escape(item.selectionReason || '')}</p></details>
+      <p class="earnings-blurb">${escape(blurbs[item.symbol] || item.businessBlurb || '')}</p>
       <p class="earnings-meta">${escape(money(item.marketCapUsd))}${item.epsForecast ? ` · EPS 预期 ${escape(item.epsForecast)}` : ''}</p>
       <p class="earnings-result"><strong>结果</strong> ${escape(resultText)}${result.summary ? ` · ${escape(result.summary)}` : ''}</p>
       ${Array.isArray(result.sources) ? `<div class="result-sources">${result.sources.map(s => typeof s === 'string' ? { url: s } : s).filter(s => /^https:\/\//.test(s?.url || '')).map((s, i) => `<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.name || s.title || `评分依据 ${i + 1}`)} ↗</a>`).join(' · ')}</div>` : ''}
@@ -42,20 +41,15 @@
     const updated = payload.updatedAt
       ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(payload.updatedAt))
       : '未知';
-    $('earnings-state').textContent = `更新于 ${updated}（北京时间） · ${week.label} 重要 ${week.counts?.important ?? 0} / 原始 ${week.counts?.raw ?? 0}`;
-    $('earnings-summary').innerHTML = `<p class="calendar-range">${escape(week.label)} · ${escape(week.weekStart)} 至 ${escape(week.weekEnd)}（美东日期）</p><details open class="reading-rules"><summary>本周范围与筛选规则</summary><div class="earnings-summary-card">
-      <p><strong>${escape(week.label)}</strong> ${escape(week.weekStart)} → ${escape(week.weekEnd)}</p>
-      <p><strong>主源</strong> ${escape(payload.source?.name || 'Nasdaq')}</p>
-      <p><strong>筛选</strong> 主题池（半导体 / 电力 / 软件 / 老牛股 / 新兴科技）优先，其余超大市值自主判断；每日最多 ${escape(payload.policy?.maxPerDay)} 家</p>
-    </div></details>`;
+    $('earnings-state').textContent = `更新于 ${updated}（北京时间）`;
+    $('earnings-summary').innerHTML = `<p class="calendar-range">${escape(week.weekStart)} 至 ${escape(week.weekEnd)}（美东日期）</p>`;
     $('earnings-board').innerHTML = (week.days || []).map((day) => {
       const body = day.items?.length
         ? `<div class="earnings-grid">${day.items.map(item => card(item, day.date)).join('')}</div>`
-        : `<p class="calendar-empty">当日无入选重点公司 · 原始日历 ${escape(day.rawCount)} 家</p>`;
+        : `<p class="calendar-empty">暂无重点财报</p>`;
       return `<section class="earnings-day${day.items?.length ? '' : ' calendar-empty-day'}">
-        <header class="earnings-day-head"><h2><time datetime="${escape(day.date)}">${escape(dayLabel(day.date))}</time><small>美东披露日期</small></h2><span>重点 ${escape(day.items.length)} 家 · 日历 ${escape(day.rawCount)} 家</span></header>
+        <header class="earnings-day-head"><h2><time datetime="${escape(day.date)}">${escape(dayLabel(day.date))}</time><small>美东披露日期</small></h2></header>
         ${day.stale ? `<p class="brief-small">当日日历拉取失败，显示的是上次数据（可能过时）。</p>` : ''}
-        ${day.truncated?.length ? `<p class="brief-small">另有 ${escape(day.truncated.length)} 家超出每日上限未展示：${escape(day.truncated.join('、'))}</p>` : ''}
         ${body}
       </section>`;
     }).join('');

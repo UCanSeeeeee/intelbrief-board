@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+const fs=require('node:fs'),path=require('node:path');
+(async()=>{const {fetchVix,validVix}=await import('../market-volatility.mjs');const latest=await fetchVix();const file=path.resolve(__dirname,'../data/market-volatility.json');if(fs.existsSync(file)){const old=JSON.parse(fs.readFileSync(file,'utf8'));if(validVix(old)&&old.asOfDate>latest.asOfDate){console.log('VIX来源日期回退，保留既有值');return;}}fs.writeFileSync(file+'.tmp',JSON.stringify(latest,null,2)+'\n');fs.renameSync(file+'.tmp',file);console.log(`VIX ${latest.value.toFixed(2)}，${latest.asOfDate}美东收盘，Cboe官方数据。`);})().catch(error=>{console.error(error.message);process.exitCode=1;});

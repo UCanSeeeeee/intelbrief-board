@@ -6,7 +6,7 @@
 
 首次接手读[AGENTS](AGENTS.md)、本文、[待办](TASKS.md)，再按需读取专题。修改前拉取，完成审查差异后提交推送，不默认执行本地测试、check、build或预览。当前文件只维护有效状态，修改历史按需查Git。
 
-- X讯息只走Grok网页版，唯一备用是额度可用时的Grok Bot；不直访X、用X API或普通搜索补采。财报、宏观、CNN情绪、论文和反直觉小知识适用各自限定的非X来源例外，不扩展新闻路径。
+- X讯息只走Grok网页版，唯一备用是额度可用时的Grok Bot；不直访X、用X API或普通搜索补采。财报、宏观、CNN情绪、VIX、论文和反直觉小知识适用各自限定的非X来源例外，不扩展新闻路径。
 - 不编原文、作者、链接、价格或时间；采集器转述不冒充本模型独立直读，评分不是真伪或涨跌概率。
 - 数量通常是上限，不足可为0条。人物页按专门规则补充标明身份的热度动态，不能拿互动量证明可信度。
 - 不发帖、私信、点赞、关注或交易，不保存凭证，不读取仓库外私有知识或个人资料。
@@ -23,7 +23,7 @@
 
 ## 文件路由
 
-美股讯息顶部显示[CNN恐惧与贪婪指数](docs/MARKET_SENTIMENT.md)，包含数值、情绪、历史比较及北京时间；来源为CNN／明确标注的公开镜像，Cloudflare只读按需获取并缓存，发布快照兜底。它不是新闻更新按钮，历史简报切换不改变当前情绪快照。
+美股讯息顶部并排[CNN情绪](docs/MARKET_SENTIMENT.md)与[VIX](docs/MARKET_VOLATILITY.md)：保留数值、日期、来源，VIX按用户四档并标美东收盘；只读接口与快照兜底，不触发新闻。前台不展示规则/配额、检索/阅读过程和固定免责声明，正文与必要异常仍完整显示。
 
 | 需要处理的问题 | 唯一主要入口 |
 |---|---|
@@ -36,11 +36,11 @@
 | UI及侧栏顺序 | docs/DESIGN_SYSTEM.md；styles.css |
 | 知识库和Grok检索SOP | config/research-guidance.json指向的项目资料 |
 | 美股5+10及冻结归档 | docs/STOCK_BRIEF.md；config/stock-brief.json；data/stock-briefs |
-| 顶部情绪指标、来源与降级 | docs/MARKET_SENTIMENT.md；market-sentiment.mjs；data/market-sentiment.json |
+| 顶部情绪/VIX、来源与降级 | docs/MARKET_SENTIMENT.md、docs/MARKET_VOLATILITY.md；market-sentiment.mjs、market-volatility.mjs |
 | 人物与合集 | docs/PEOPLE_INTELLIGENCE_ROADMAP.md；config/people-intelligence.json |
 | 个股NVDA/MU/INTC/GOOG/AVGO/VRT/TSM | docs/TICKER_INTELLIGENCE.md；config/ticker-intelligence.json |
 | OPENAI/ANTHROPIC/GOOG(AI)/其他 | docs/AI_INTELLIGENCE.md；config/ai-intelligence.json |
-| 每日趣事、知识专业版与故事版 | docs/DAILY_LEARNING.md；config/learning.json；data/learning.json |
+| 基础知识专业版与故事版 | docs/DAILY_LEARNING.md；config/learning.json；data/learning.json |
 | Nature/Science健康生活选读 | docs/JOURNAL_PAPERS.md；data/journal-learning.json；learning:publish-papers |
 | 每日5条反直觉小知识 | docs/COUNTERINTUITIVE_KNOWLEDGE.md；data/counterintuitive-learning.json；learning:publish-counterintuitive |
 | 宏观、财报日期及结果 | docs/MACRO_EVENTS.md、docs/EARNINGS_CALENDAR.md |

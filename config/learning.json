@@ -2,22 +2,15 @@
   "schemaVersion": 1,
   "tabs": [
     {
-      "id": "curiosities",
-      "label": "每日趣事",
-      "eyebrow": "当天发现 · 最多 3 条",
-      "description": "只收有趣、反直觉且能引出知识的问题；不是八卦，也不重复搬运美股讯息。"
-    },
-    {
       "id": "basics",
       "label": "基础知识讲解",
       "eyebrow": "同一知识点 · 两种表达",
       "description": "专业版保留术语、机制与观察指标；故事版让普通成年人不依赖行业背景也能理解同一条因果链。"
     },
-    {"id":"nature","label":"Nature","eyebrow":"每日一篇 · 健康与生活选读","description":"从健康、日常生活中发现值得理解的问题；用统计看清证据，不把反直觉包装成噱头。"},
-    {"id":"science","label":"Science","eyebrow":"每日一篇 · 健康与生活选读","description":"关注生活、行为与反直觉发现；讲清怎么研究、发现什么、能否推广，让普通成年人也读得懂。"},
+    {"id":"nature","label":"Nature","eyebrow":"每日三篇 · 08:00","description":"结论在前，说明实验过程、结果和结论边界。"},
+    {"id":"science","label":"Science","eyebrow":"每日三篇 · 08:00","description":"结论在前，说明实验过程、结果和结论边界。"},
     {"id":"counterintuitive","label":"反直觉小知识","eyebrow":"每天目标 5 条 · 有证据，不猎奇","description":"围绕健康、生活与统计，讲清常见直觉哪里不完整、证据说明什么，以及不能推广到哪里。"}
   ],
-  "dailyCuriosityLimit": 3,
   "dailyNewLessonLimit": 1,
   "storyAudienceMinimumAge": 18,
   "priorityOrder": ["半导体", "电力", "AI 落地"],
@@ -31,15 +24,15 @@
     "refreshRule": "沿用每日学习批次：工作日20:30、周末08:00，每天一组，已有条目不覆盖，失败保留往期；不单独触发采集或部署，随常规批次统一发布。"
   },
   "journalPolicy": {
-    "dailyLimitPerJournal": 1,
+    "dailyLimitPerJournal": 3,
     "preferredRecentDays": 30,
     "targetChineseCharacters": [200, 400],
     "journals": [{"id":"nature","name":"Nature","doiPrefixes":["10.1038/s41586-","10.1038/nature"],"urlPrefix":"https://www.nature.com/articles/"},{"id":"science","name":"Science","doiPrefixes":["10.1126/science."],"urlPrefix":"https://www.science.org/doi/"}],
     "accessLabels": {"full-text":"正文已核对","partial":"正文节选已核对","abstract":"摘要速读"},
     "recommendedTopics": ["健康：睡眠、运动、饮食与习惯","生活：幸福感、人际关系与消费选择","统计：相关与因果、样本与风险表达","反直觉：有证据的常识修正，不追求猎奇"],
     "focusRule": "论文栏目独立于美股的半导体、电力、AI优先级；不主推技术机制、芯片或模型性能，不强行联系股票。",
-    "selectionRule": "每天每刊目标1篇；优先近30天，允许标注往期精选，不重复DOI，不用子刊替代；来源或价值不足可空缺，不凑数。反直觉是可选特点，不能作为硬性配额。",
+    "selectionRule": "每天每刊目标3篇、上限3篇；优先近30天，允许标注往期精选，不重复DOI，不用子刊替代；来源或价值不足可空缺，不凑数。先写明确结论，再写对象、对照、干预、测量与结果，不展示阅读/检索过程。",
     "sourceRule": "Grok可用时先发现，再回正刊及合法公开资料核对；Grok不可用记录原因，允许直接检索期刊、Crossref/PubMed及作者/机构公开版本。此例外仅限论文。",
-    "refreshRule": "沿用学习批次：工作日20:30、周末08:00；两刊各独立处理，一刊失败不阻塞另一刊或原学习内容。旧选读保留可回看。"
+    "refreshRule": "每天北京时间08:00总编排更新两刊，各目标3篇；按DOI去重，同日可补足余下名额，20:30不重复更新论文。一刊失败保留旧内容，不阻塞另一刊。"
   }
 }

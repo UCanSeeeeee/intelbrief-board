@@ -14,12 +14,20 @@ test('每次定时触发按侧边栏 Tab 形成隔离批次', () => {
 test('20:30 批次单独生成每日学习任务', () => {
   const plan = createPlan('2026-10-19T20:30:00+08:00');
   assert.equal(plan.batches.find(item => item.id === 'learning').action, 'run');
+  assert.deepEqual(plan.batches.find(item=>item.id==='learning').components,{papers:false,basics:true,counterintuitive:true});
+});
+
+test('08:00 only runs journal learning on weekdays',()=>{
+  const batch=createPlan('2026-10-19T08:00:00+08:00').batches.find(b=>b.id==='learning');
+  assert.equal(batch.action,'run');
+  assert.deepEqual(batch.components,{papers:true,basics:false,counterintuitive:false});
 });
 
 test('周末只运行08:00且学习跟随唯一批次',()=>{
   const morning=createPlan('2026-10-18T08:00:00+08:00');
   assert.equal(morning.scheduled,true);
   assert.equal(morning.batches.find(b=>b.id==='learning').action,'run');
+  assert.deepEqual(morning.batches.find(b=>b.id==='learning').components,{papers:true,basics:true,counterintuitive:true});
   const evening=createPlan('2026-10-18T20:30:00+08:00');
   assert.equal(evening.scheduled,false);
   assert.ok(evening.batches.every(b=>b.action==='skip'));

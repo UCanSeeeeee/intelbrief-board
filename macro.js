@@ -35,14 +35,8 @@
     const updated = payload.updatedAt
       ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(payload.updatedAt))
       : '未知';
-    $('macro-state').textContent = `更新于 ${updated}（北京时间） · ${payload.year} 年共 ${payload.counts?.total ?? 0} 件 · 本季 ${quarter.counts?.total ?? 0} 件 · 低频手动刷新`;
-    const byCat = Object.entries(quarter.counts?.byCategory || {}).map(([k, v]) => `${categoryLabel(k, payload.categories)} ${v}`).join(' · ');
-    $('macro-summary').innerHTML = `<p class="calendar-range">${escape(quarter.label)} · ${escape(quarter.start)} 至 ${escape(quarter.end)}</p><details open class="reading-rules"><summary>本季度范围与来源</summary><div class="earnings-summary-card">
-      <p><strong>${escape(quarter.label)}</strong> ${escape(quarter.start)} → ${escape(quarter.end)}</p>
-      <p><strong>焦点</strong> ${escape(payload.focus || '美股宏观')}</p>
-      <p><strong>本季构成</strong> ${escape(byCat || '无')}</p>
-      <p>按美东日期分组；具体发布时间换算为北京时间，自动处理夏令时。</p>
-    </div></details>`;
+    $('macro-state').textContent = `更新于 ${updated}（北京时间）`;
+    $('macro-summary').innerHTML = `<p class="calendar-range">${escape(quarter.start)} 至 ${escape(quarter.end)}（美东日期）</p>`;
 
     const byDay = new Map();
     for (const event of quarter.events || []) {
@@ -57,7 +51,7 @@
     $('macro-board').innerHTML = days.map((date) => {
       const items = byDay.get(date);
       return `<section class="earnings-day macro-day" data-macro-date="${escape(date)}" id="macro-day-${escape(date)}">
-        <header class="earnings-day-head"><h2>${escape(dayHead(date))}</h2><span>${escape(String(items.length))} 件 · ${escape(date)}</span></header>
+        <header class="earnings-day-head"><h2>${escape(dayHead(date))}</h2><span>${escape(date)}</span></header>
         <div class="earnings-grid">${items.map((e) => card(e, payload.categories || [])).join('')}</div>
       </section>`;
     }).join('');

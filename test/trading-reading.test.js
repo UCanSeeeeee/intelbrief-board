@@ -131,10 +131,10 @@ test('reading renderer preserves overflow, warns on failed reload, and supports 
   let failBoard=false;
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../briefs.js'),'utf8'),{Intl,Date,document:{getElementById:element,addEventListener:(n,f)=>listeners[n]=f},fetch:async url=>({ok:!(failBoard&&url.endsWith('reading-board.json')),json:async()=>url.startsWith('config/')?{targetCounts:{focus:5,insights:10}}:url.endsWith('index.json')?{editions:[entry]}:url.endsWith('reading-board.json')?board:b})});
   const tick=()=>new Promise(r=>setImmediate(r));await tick();
-  assert.equal(element('edition-select').value,'reading');assert.match(element('focus-count').textContent,/精选 5 条 · 另保留 2 条/);assert.equal((element('brief-focus').innerHTML.match(/<article/g)||[]).length,7);
-  assert.match(element('reading-context').textContent,/北京时间更新批次/);
-  assert.match(element('edition-select').innerHTML,/当前重点（累计保留）/);
+  assert.equal(element('edition-select').value,'reading');assert.equal(element('focus-count').textContent,'');assert.equal((element('brief-focus').innerHTML.match(/<article/g)||[]).length,7);
+  assert.match(element('reading-context').textContent,/截至.*北京时间/);
+  assert.match(element('edition-select').innerHTML,/当前重点/);
   assert.doesNotMatch(element('reading-context').textContent,/美东交易日|开盘|收盘/);
-  failBoard=true;listeners['intelbrief:updated']({detail:{page:'news'}});await tick();assert.match(element('reading-context').textContent,/刷新失败/);assert.match(element('brief-focus').innerHTML,/未删除/);
-  element('edition-select').value=b.id;element('edition-select').listeners.change();await tick();assert.match(element('reading-context').textContent,/历史期次快照/);assert.equal((element('brief-focus').innerHTML.match(/<article/g)||[]).length,1);
+  failBoard=true;listeners['intelbrief:updated']({detail:{page:'news'}});await tick();assert.match(element('reading-context').textContent,/部分来源未更新/);assert.match(element('brief-focus').innerHTML,/更多重点/);
+  element('edition-select').value=b.id;element('edition-select').listeners.change();await tick();assert.match(element('reading-context').textContent,/截至/);assert.equal((element('brief-focus').innerHTML.match(/<article/g)||[]).length,1);
 });

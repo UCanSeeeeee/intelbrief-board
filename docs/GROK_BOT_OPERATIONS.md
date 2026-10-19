@@ -11,8 +11,8 @@ Grok网页版为X检索第一路径；唯一备用为额度可用的Grok Bot「X
 1. 按AGENTS核对原仓库、master和改动，首次写入前`git pull --ff-only origin master`，保留他人工作。
 2. 冻结本轮截止，读取[增量采集](INCREMENTAL_COLLECTION.md)，运行`npm run collection:plan -- <CUTOFF>`。未安排的周末批次立即结束；不等待更晚截止、不补造过去期次。
 3. 按侧栏独立批次串行执行，不混用上下文或候选；每批先可靠保存结果，再按对象更新共享进度。X批次有新候选或实质变化才追源、查反证；空候选明确跳过，旧证据无变化复用。
-   美股讯息批次另运行`npm run fetch:sentiment`维护[CNN情绪卡](MARKET_SENTIMENT.md)发布快照；固定非X来源，不推进新闻窗口，失败保留旧值、不阻塞发布。前台另有Cloudflare只读按需获取，不依赖本机在线。
-4. 学习在工作日晚批/周末早批处理：趣事/知识只复用验收证据；Nature/Science按[论文SOP](JOURNAL_PAPERS.md)各独立选1篇研究，用`learning:publish-papers`合并；[反直觉小知识](COUNTERINTUITIVE_KNOWLEDGE.md)每天目标5条、上限5条，用`learning:publish-counterintuitive`合并，保留来源、边界和往期。新闻无候选不跳过独立学习内容，单项失败不阻塞其他内容。宏观只查到期或过时，财报按专门契约处理待评价结果。
+   美股讯息批次另运行`npm run fetch:sentiment`维护[CNN情绪卡](MARKET_SENTIMENT.md)发布快照，并运行npm run fetch:vix维护[VIX](MARKET_VOLATILITY.md)收盘快照；固定非X来源，不推进新闻窗口，失败保留旧值、不阻塞发布。前台另有Cloudflare只读按需获取，不依赖本机在线。
+4. 按learning.components执行：每天08:00两刊各目标3篇；基础知识与每日5条小知识在工作日20:30、周末08:00。每日趣事停用，旧记录保留。单项失败不清空其他内容；宏观只查到期/过时，财报按专门契约。
 5. 各批关闭后统一去重、归档和发布，单一写入路径；已有期次不可覆盖。手动与定时共用采集进度，不能同时写公共文件。失败只恢复失败步骤，不抹掉其他批次结果。
 6. 审查真实内容及差异，明确暂存本次文件、提交推送。默认不运行本地测试、check、build或预览；来源真实性与程序的数据写入契约仍有效。
 7. 远端及线上相关期次、目录、持久池与本次提交一致后才称发布成功。采集成功、推送成功、部署成功分别记录；只返回HTTP200不足以证明上线新内容。

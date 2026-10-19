@@ -1,4 +1,14 @@
 /* Intel Brief — Linear calm-density dark theme */
+.market-metrics { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:16px; margin-bottom:22px; }
+.market-metrics > .market-sentiment { margin:0; min-width:0; }
+.vix-bands { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:18px 0; }
+.vix-band { display:flex; flex-wrap:wrap; gap:4px 10px; padding:8px 10px; border:1px solid var(--border-subtle); border-radius:6px; color:var(--text-muted); font-size:12px; }
+.vix-band.is-active { border-color:var(--accent-blue); color:var(--text); background:var(--bg-hover); }
+.vix-low { color:#8fbfa7; }.vix-elevated { color:#bdc8d8; }.vix-fear { color:#e5af77; }.vix-extreme { color:#df9292; }
+@media(max-width:900px){.market-metrics{grid-template-columns:1fr;}}
+.person-profile.reading-profile { display:block; padding:12px 0; background:transparent; border:0; }
+.reading-profile .profile-copy h2 { font-size:17px; }
+.reading-profile .profile-copy > p { margin:4px 0 0; }
 .paper-original-title,.paper-identity { color:var(--text-secondary); font-size:12px; overflow-wrap:anywhere; }
 .paper-takeaway { padding:12px 16px; border-left:3px solid var(--accent-blue); background:var(--bg-hover); }
 .paper-stage,.paper-coverage { color:var(--text-secondary); font-size:12px; }

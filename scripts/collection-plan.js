@@ -29,12 +29,14 @@ function createPlan(cutoff, config = loadConfig(), root = ROOT) {
     let action = 'run';
     if (batch.schedule === '20:30-only' && normalized.slot !== '20:30') action = 'skip';
     if (batch.schedule === 'daily-final' && normalized.slot !== (weekend?'08:00':'20:30')) action = 'skip';
+    if (batch.schedule === 'learning-slots' && !['08:00', weekend?'08:00':'20:30'].includes(normalized.slot)) action = 'skip';
     if (batch.schedule === 'due-or-stale') action = 'check-due';
     if (!scheduled) action = 'skip';
     return {
       sequence: index + 1,
       ...batch,
       action,
+      ...(batch.id==='learning'?{components:{papers:action==='run'&&normalized.slot==='08:00',basics:action==='run'&&normalized.slot===(weekend?'08:00':'20:30'),counterintuitive:action==='run'&&normalized.slot===(weekend?'08:00':'20:30')}}:{}),
       isolated: true,
       collectionUnits: collectionUnits.filter(unit=>unit.page===batch.id),
       inputRule: '只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。',

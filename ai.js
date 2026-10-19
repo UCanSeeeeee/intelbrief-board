@@ -54,11 +54,9 @@
       ${peopleNote(item.people)}
       <p class="signal-verification">${escape(item.author || '来源待注明')} · ${escape(evidenceLabel(item))}</p>
       <p class="signal-fact"><strong>信息摘要</strong>${escape(item.fact || '尚未写明')}</p>
-      <details open class="analysis-details"><summary>影响分析</summary>
       <p><strong>影响判断</strong>${escape(item.whyItMatters || '尚未写明')}</p>
       ${affected.length ? `<div class="topic-row">${affected.map(value => `<span>${escape(value)}</span>`).join('')}</div>` : ''}
-      </details>
-      <footer><span>${escape(item.author || '来源待注明')} · ${escape(evidenceLabel(item))}</span>${url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">查看 X 原帖 ↗</a>` : '<span>原帖链接待核验</span>'}</footer>
+      <footer>${url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">查看 X 原帖 ↗</a>` : '<span>原帖链接待核验</span>'}</footer>
     </article>`;
   }
 
@@ -73,9 +71,7 @@
     return `近 ${days} 天`;
   }
   function emptySection(kind, tab) {
-    const limit = kind === 'latest' ? tab.latestLimit : tab.weeklyLimit;
-    const days = windowDays(tab, kind);
-    return `<div class="empty-state signal-empty"><strong>当前没有达到门槛的信息</strong><p>${kind === 'latest' ? `${windowLabel(days)}区最多 ${limit} 条，但不会为了凑数加入普通动态。` : `${windowLabel(days)}最多 ${limit} 件；不足时保留实际数量。`}</p></div>`;
+    return `<div class="empty-state signal-empty"><strong>暂无内容</strong></div>`;
   }
 
   function section(title, note, sectionItems, kind, tab, latestKeys) {
@@ -85,12 +81,11 @@
       duplicateCount = sectionItems.filter(item => latestKeys.has(itemKey(item))).length;
       visible = sectionItems.filter(item => !latestKeys.has(itemKey(item)));
     }
+    if (kind === 'weekly' && !visible.length && duplicateCount) return '';
     return `<section class="signal-section" aria-labelledby="${escape(tab.id)}-${kind}">
       <header class="signal-section-head">
-        <div><p class="eyebrow">${escape(note)}</p><h3 id="${escape(tab.id)}-${kind}">${escape(title)}</h3></div>
-        <span>收录 ${sectionItems.length} 条 · 上限 ${kind === 'latest' ? tab.latestLimit : tab.weeklyLimit} 条</span>
+        <div><h3 id="${escape(tab.id)}-${kind}">${escape(title)}</h3></div>
       </header>
-      ${duplicateCount ? `<p class="signal-dedup">重点榜中有 ${duplicateCount} 件已在新增价值区完整展示，这里不重复铺卡。</p>` : ''}
       <div class="signal-list">${visible.length ? visible.map(item => renderCard(item, kind === 'weekly' && parseTime(item.publishedAt) >= (displayCutoff || Date.now()) - windowMs(tab, 'latest') ? `${windowDays(tab,'latest')===1?'24h':'近窗'}新增` : '')).join('') : (duplicateCount ? '' : emptySection(kind, tab))}</div>
     </section>`;
   }
@@ -115,23 +110,16 @@
     const latestKeys = new Set(latest.map(itemKey));
     const shown = new Set([...latest,...weekly].map(itemKey));
     const retained = [...tabItems,...retainedItems.filter(i=>i.tabIds?.includes(tab.id))].filter(i=>!shown.has(itemKey(i))&&parseTime(i.publishedAt)>=now-windowMs(tab,'latest'));
-    const retainedHtml=retained.length?'<section class=\"signal-section\"><header class=\"signal-section-head\"><h3>其余仍有效的累计信息</h3><span>早报内容不会因新批次被名额挤掉</span></header><div class=\"signal-list\">'+[...new Map(retained.map(i=>[itemKey(i),i])).values()].map(i=>renderCard(i,'累计保留')).join('')+'</div></section>':'';
+    const retainedHtml=retained.length?'<section class=\"signal-section\"><header class=\"signal-section-head\"><h3>其余仍有效的累计信息</h3></header><div class=\"signal-list\">'+[...new Map(retained.map(i=>[itemKey(i),i])).values()].map(i=>renderCard(i,'累计保留')).join('')+'</div></section>':'';
     const handles = Array.isArray(tab.handles) && tab.handles.length ? tab.handles : (tab.handle ? [tab.handle] : []);
     const account = handles.length
       ? handles.map(h => `<a href="https://x.com/${escape(h)}" target="_blank" rel="noopener noreferrer">@${escape(h)} ↗</a>`).join(' · ')
-      : (tab.cashtag ? `<span>${escape(tab.cashtag)}</span>` : '<span>检索锚点见筛选边界</span>');
-    const assetEyebrow = tab.type === 'collection' ? '合集 Tab' : (tab.type === 'org' ? '实验室 Tab' : '标的 Tab');
+      : (tab.cashtag ? `<span>${escape(tab.cashtag)}</span>` : '');
     const contract = tab.contractAddress ? `<p class="ticker-contract"><strong>合约</strong><code>${escape(tab.contractAddress)}</code></p>` : '';
 
-    detail.innerHTML = `<header class="person-profile intelligence-profile">
-      <div class="person-avatar" aria-hidden="true">${escape(tab.shortLabel || tab.label)}</div>
-      <div class="profile-copy"><p class="eyebrow">${assetEyebrow}</p><h2>${escape(tab.label)}${tab.cashtag ? ` · ${escape(tab.cashtag)}` : ''}</h2><div class="profile-source">${account}</div><p>${escape(tab.identity)}</p>${contract}</div>
-      <div class="person-count"><strong>${latest.length}</strong><span>${windowLabel(latestDays)}收录</span></div>
+    detail.innerHTML = `<header class="person-profile intelligence-profile reading-profile">
+      <div class="profile-copy"><h2>${escape(tab.label)}${tab.cashtag ? ` · ${escape(tab.cashtag)}` : ''}</h2><div class="profile-source">${account}</div><p>${escape(tab.identity)}</p>${contract}</div>
     </header>
-    <details open class="reading-rules"><summary>关注范围与收录规则</summary><div class="tab-research-rule">
-      <p><strong>关注范围</strong>${escape(tab.focus)}</p>
-      <p><strong>筛选边界</strong>${escape(tab.sourceRule)}</p>
-    </div></details>
     ${section(`${windowLabel(latestDays)}新增价值`, `最多 ${tab.latestLimit} 条`, latest, 'latest', tab, latestKeys)}
     ${section(`${windowLabel(weeklyDays)}最重要五件事`, `${windowLabel(weeklyDays)} · 最多 ${tab.weeklyLimit} 件`, weekly, 'weekly', tab, latestKeys)}${retainedHtml}`;
 
@@ -177,7 +165,7 @@
         retainedItems = Array.isArray(intelligence.retainedItems) ? intelligence.retainedItems : [];
         displayCutoff = parseTime(intelligence.cutoff) || parseTime(intelligence.updatedAt);
         tabCutoffs = Object.fromEntries((intelligence.coverage?.tabs||[]).map(t=>[t.id,parseTime(t.cutoff)]));
-        state.textContent = `${tabs.length} 个 AI Tab · ${items.length} 件已入选事件`;
+        state.textContent = displayCutoff ? `截至 ${formatTime(displayCutoff)}（北京时间）` : '';
         selector.innerHTML = tabs.map(tab => `<button type="button" role="tab" id="tab-${escape(tab.id)}" aria-controls="ai-detail" aria-selected="false" tabindex="-1" data-tab="${escape(tab.id)}"><strong>${escape(tab.shortLabel || tab.label)}</strong></button>`).join('');
         if (!tabs.length) {
           detail.innerHTML = '<div class="empty-state"><strong>尚未配置AI板块顶部 Tab</strong><p>请先维护AI板块配置。</p></div>';

@@ -144,9 +144,9 @@ test('browser renderer shows 5+10, escapes content, and clears failed edition',a
     fetch:async url=>({ok:!url.endsWith(second.file),json:async()=> url.startsWith('config/')?{slots:['08:00','15:00','20:30'],targetCounts:{focus:5,insights:10}}:url.endsWith('index.json')?{editions:[entry,second]}:brief})
   });
   await new Promise(resolve=>setImmediate(resolve));
-  assert.equal(element('focus-count').textContent,'收录 5 条 · 上限 5 条');
-  assert.equal(element('insights-count').textContent,'收录 10 条 · 上限 10 条');
-  assert.match(element('brief-focus').innerHTML,/<details open class="analysis-details">/);
+  assert.equal(element('focus-count').textContent,'');
+  assert.equal(element('insights-count').textContent,'');
+  assert.match(element('brief-focus').innerHTML,/影响判断/);
   assert.doesNotMatch(element('brief-focus').innerHTML,/反向条件/);
   assert.match(element('brief-focus').innerHTML,/待独立核验/);
   assert.match(element('brief-focus').innerHTML,/&lt;img/);

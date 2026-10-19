@@ -9,7 +9,7 @@ try {
   if(input.notForPublication)throw new Error('本载荷为未入选候选，不得发布');
   const old=fs.existsSync(file)?JSON.parse(fs.readFileSync(file,'utf8')):{schemaVersion:1,reviews:[],coverage:{}};
   if(!Array.isArray(input.reviews))throw new Error('缺少本轮reviews；失败时使用空数组并写coverage');
-  for(const p of input.reviews)if(old.reviews.some(o=>o.id===p.id||o.doi.toLowerCase()===p.doi.toLowerCase()||(o.journal===p.journal&&o.selectedDate===p.selectedDate)))throw new Error('禁止覆盖既有选读或重复DOI；更正需保留依据单独处理');
+  for(const p of input.reviews)if(old.reviews.some(o=>o.id===p.id||o.doi.toLowerCase()===p.doi.toLowerCase()))throw new Error('禁止覆盖既有选读或重复DOI；同日可补至3篇，更正需保留依据单独处理');
   const data={schemaVersion:1,updatedAt:new Date().toISOString(),reviews:[...old.reviews,...input.reviews],coverage:{...old.coverage,...input.coverage}};
   const result=validateJournalLearning(JSON.parse(fs.readFileSync(path.join(root,'config/learning.json'),'utf8')),data);
   if(result.errors.length)throw new Error(result.errors.join('；'));

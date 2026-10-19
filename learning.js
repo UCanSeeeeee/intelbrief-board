@@ -1,4 +1,4 @@
-/* Daily curiosities and paired professional/story explanations. */
+/* Paired knowledge explanations and daily journal/knowledge selections. */
 (function () {
   const tabsNode = document.getElementById('learning-tabs');
   const panel = document.getElementById('learning-panel');
@@ -26,18 +26,6 @@
     return `<div class="empty-state"><strong>${escape(title)}</strong><p>${escape(text)}</p></div>`;
   }
 
-  function curiosityCard(item) {
-    const url = safeUrl(item.source?.url);
-    return `<article class="learning-card curiosity-card">
-      <div class="learning-card-head"><span class="badge">${escape(item.category)}</span><time>${escape(item.date)}</time></div>
-      <h2>${escape(item.title)}</h2>
-      <p><strong>今天发现了什么</strong>${escape(item.summary)}</p>
-      <p><strong>为什么有意思</strong>${escape(item.whyInteresting)}</p>
-      ${item.knowledgePointId ? `<p class="learning-link-note">它对应一个基础知识点，切到“基础知识讲解”可以继续读。</p>` : ''}
-      <footer><span>${escape(item.source?.author || '来源待注明')} · ${escape(formatTime(item.source?.publishedAt))}（北京时间）</span>${url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">查看 X 原帖 ↗</a>` : '<span>原帖链接待核验</span>'}</footer>
-    </article>`;
-  }
-
   function mapping(rows) {
     if (!Array.isArray(rows) || !rows.length) return '';
     return `<dl class="story-mapping">${rows.map(row => `<div><dt>${escape(row.storyRole)}</dt><dd>${escape(row.professionalMeaning)}</dd></div>`).join('')}</dl>`;
@@ -63,7 +51,7 @@
         </section>
       </div>
       ${Array.isArray(item.commonMistakes) && item.commonMistakes.length ? `<section class="lesson-mistakes"><h3>常见误区</h3>${list(item.commonMistakes)}</section>` : ''}
-      ${sources.length ? `<footer>${sources.map(source => { const url=safeUrl(source.url); return url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>` : `<span>${escape(source.label)} · 链接待核验</span>`; }).join('')}</footer>` : ''}
+      ${sources.length ? `<footer>${sources.map(source => { const url=source.url==='https://github.com/UCanSeeeeee/intelbrief-board/blob/master/knowledge/US_EQUITY_RESEARCH_KB.md'?paperUrl(source.url):safeUrl(source.url); return url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>` : `<span>${escape(source.label)} · 链接待核验</span>`; }).join('')}</footer>` : ''}
     </article>`;
   }
 
@@ -76,19 +64,16 @@
   let counterLoaded = false;
   let counterDate;
   const journalDates = {};
-  let active = 'curiosities';
+  let active = 'basics';
 
   function paperCard(item) {
-    const access = config.journalPolicy.accessLabels[item.accessLevel] || '阅读范围待确认';
-    const sections = [['problem','研究问题'],['method','怎么研究'],['findings','核心发现'],['statistics','统计提醒'],['limitations','局限与未证明'],['meaning','生活中的启发']];
-    return `<article class="learning-card paper-card"><div class="learning-card-head"><span class="badge">${escape(item.category)}</span><span class="badge">${escape(access)}</span><span class="badge">${item.selectionKind === 'classic' ? '往期精选' : '近期研究'}</span></div>
-      <h2>${escape(item.title)}</h2><p class="paper-original-title" lang="en">${escape(item.originalTitle)}</p>
-      <p class="paper-identity">${escape(item.authors.join('、'))}${item.authorsTruncated?' 等':''} · ${escape(item.journalName)} · 发表 ${escape(item.publishedDate)}${item.publicationDateNote ? ' · '+escape(item.publicationDateNote) : ''}</p>
-      <p class="paper-takeaway">${escape(item.takeaway)}</p><p class="paper-stage">研究阶段：${escape(item.stage)}</p>
+    const sections = [['method','实验过程'],['findings','实验结果'],['limitations','结论边界']];
+    return `<article class="learning-card paper-card">
+      <h2>${escape(item.title)}</h2>
+      <p class="paper-identity">${escape(item.authors.join('、'))}${item.authorsTruncated?' 等':''} · 发表 ${escape(item.publishedDate)}${item.selectionKind === 'classic'?' · 往期':''}</p>
+      <p class="paper-takeaway"><strong>结论</strong>${escape(item.takeaway)}</p>
       ${sections.map(([key,label])=>`<p><strong>${label}</strong>${escape(item.summary[key])}</p>`).join('')}
-      <p class="analogy-boundary"><strong>本次阅读范围</strong>${escape(item.accessNote)}</p>
-      ${(item.people||[]).length ? `<p class="paper-identity">${item.people.map(p=>`${escape(p.name)} · ${escape(p.intro)}`).join('；')}</p>` : ''}
-      <footer><span>选读 ${escape(item.selectedDate)}（北京时间） · DOI ${escape(item.doi)}</span><a href="${escape(paperUrl(item.paperUrl))}" target="_blank" rel="noopener noreferrer">期刊原文 ↗</a>${item.sources.map(source=>{ const url=paperUrl(source.url);return url?`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>`:'';}).join('')}</footer></article>`;
+      <footer><a href="${escape(paperUrl(item.paperUrl))}" target="_blank" rel="noopener noreferrer">原论文 ↗</a>${item.sources.filter(source=>!source.url.includes('#change-history')).map(source=>{ const url=paperUrl(source.url);return url?`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>`:'';}).join('')}</footer></article>`;
   }
 
   function journalPanel(current) {
@@ -96,11 +81,10 @@
     const dates = [...new Set(items.map(item=>item.selectedDate))];
     const selected = dates.includes(journalDates[active]) ? journalDates[active] : dates[0];
     journalDates[active] = selected;
-    const coverage = journals.coverage?.[active];
-    const status = journalError ? '论文数据读取失败；原学习栏目不受影响。' : coverage && coverage.status !== 'complete' ? `${coverage.date}：${coverage.note}；此前选读仍可回看。` : '';
-    return `<header class="learning-section-head"><p class="eyebrow">${escape(current.eyebrow)}</p><h2>${escape(current.label)} 论文选读</h2><p>${escape(current.description)}</p><p>${escape(config.journalPolicy.recommendedTopics.join('；'))}。</p></header>
+    const status = journalError ? '论文读取失败' : '';
+    return `
       ${status?`<p class="paper-coverage" role="status">${escape(status)}</p>`:''}
-      ${dates.length?`<div class="paper-date-toolbar"><label for="paper-date">选读日期（北京时间）</label><select id="paper-date">${dates.map(date=>`<option value="${date}"${date===selected?' selected':''}>${date}</option>`).join('')}</select><span>保留往期；论文不一定当天发表</span></div><div class="learning-list">${items.filter(item=>item.selectedDate===selected).map(paperCard).join('')}</div>`:empty('本刊暂无通过筛选的论文','每天目标一篇，不用子刊、旧闻伪装或不完整来源凑数；后续在每日学习批次补充。')}`;
+      ${dates.length?`${dates.length>1?`<div class="paper-date-toolbar"><label for="paper-date">日期</label><select id="paper-date">${dates.map(date=>`<option value="${date}"${date===selected?' selected':''}>${date}</option>`).join('')}</select></div>`:''}<div class="learning-list">${items.filter(item=>item.selectedDate===selected).map(paperCard).join('')}</div>`:empty('暂无选读','')}`;
   }
 
   function counterCard(item) {
@@ -108,7 +92,7 @@
     return `<article class="learning-card"><div class="learning-card-head"><span class="badge">${escape(item.topic)}</span></div><h2>${escape(item.title)}</h2>
       ${sections.map(([key,label])=>`<p><strong>${label}</strong>${escape(item[key])}</p>`).join('')}
       ${item.people.length?`<p class="paper-identity">${item.people.map(p=>`${escape(p.name)} · ${escape(p.intro)}`).join('；')}</p>`:''}
-      <footer>${item.sources.map(source=>{const url=paperUrl(source.url);return `<span>${escape(source.publisher)} · ${escape(source.publishedDate||source.dateNote)} · ${escape(config.journalPolicy.accessLabels[source.accessLevel])} · 核对 ${escape(formatTime(source.checkedAt))}（北京时间）</span>${url?`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>`:''}`;}).join('')}</footer></article>`;
+      <footer>${item.sources.map(source=>{const url=paperUrl(source.url);return `<span>${escape(source.publisher)}${source.publishedDate?' · '+escape(source.publishedDate):''}</span>${url?`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>`:''}`;}).join('')}</footer></article>`;
   }
 
   function counterPanel(current) {
@@ -117,10 +101,10 @@
     if(!available.some(edition=>edition.date===counterDate))counterDate=available[0]?.date;
     const selected = available.find(edition=>edition.date===counterDate);
     const latest = editions[0];
-    const note = counterError ? '小知识读取失败，其他学习栏目不受影响。' : latest && latest.coverage.status!=='complete' ? `${latest.date}：${latest.coverage.note}` : '';
-    return `<header class="learning-section-head"><p class="eyebrow">${escape(current.eyebrow)}</p><h2>${escape(current.label)}</h2><p>${escape(current.description)}</p></header>
+    const note = counterError ? '小知识读取失败' : latest?.coverage.status==='failed' ? '本次更新失败' : '';
+    return `
       ${note?`<p class="paper-coverage" role="status">${escape(note)}</p>`:''}
-      ${selected?`<div class="paper-date-toolbar"><label for="counter-date">知识日期（北京时间）</label><select id="counter-date">${available.map(edition=>`<option value="${edition.date}"${edition.date===counterDate?' selected':''}>${edition.date}</option>`).join('')}</select><span>收录 ${selected.items.length} 条 · 上限 ${config.counterintuitivePolicy.dailyLimit} 条 · 往期可回看</span></div><div class="learning-list">${selected.items.map(counterCard).join('')}</div>`:empty(counterLoaded?'等待首组反直觉小知识':'正在读取小知识','合格内容由每日学习批次发布，每天目标5条；不拿段子或未经核验的常识凑数。')}`;
+      ${selected?`<div class="paper-date-toolbar"><label for="counter-date">日期</label><select id="counter-date">${available.map(edition=>`<option value="${edition.date}"${edition.date===counterDate?' selected':''}>${edition.date}</option>`).join('')}</select></div><div class="learning-list">${selected.items.map(counterCard).join('')}</div>`:empty(counterLoaded?'暂无小知识':'正在读取','')}`;
   }
 
   function render() {
@@ -132,15 +116,11 @@
     });
     const current = config.tabs.find(tab => tab.id === active);
     panel.setAttribute('aria-labelledby', `learning-tab-${active}`);
-    document.getElementById('learning-focus').textContent = ['nature','science','counterintuitive'].includes(active) ? '健康 · 生活 · 统计 · 反直觉' : config.priorityOrder.join(' · ');
     state.textContent = ['nature','science'].includes(active) ? (journalError?'论文数据读取失败':journals.updatedAt?`选读整理于 ${formatTime(journals.updatedAt)}（北京时间）`:'正在读取论文选读') : data.updatedAt?`更新于 ${formatTime(data.updatedAt)}（北京时间）`:'栏目已建立，等待首批合格内容';
     if(active==='counterintuitive')state.textContent = counterError?'小知识读取失败':counterintuitive.updatedAt?`小知识整理于 ${formatTime(counterintuitive.updatedAt)}（北京时间）`:counterLoaded?'栏目已建立，等待每日学习批次':'正在读取小知识';
-    if (active === 'curiosities') {
-      const items = data.dailyCuriosities || [];
-      panel.innerHTML = `<header class="learning-section-head"><p class="eyebrow">${escape(current.eyebrow)}</p><h2>${escape(current.label)}</h2><p>${escape(current.description)}</p></header>${items.length ? `<div class="learning-list">${items.map(curiosityCard).join('')}</div>` : empty('今天暂时没有值得收录的趣事','宁可空着，也不把普通动态、段子或重复新闻塞进来。')}`;
-    } else if (active === 'basics') {
+    if (active === 'basics') {
       const items = data.lessons || [];
-      panel.innerHTML = `<header class="learning-section-head"><p class="eyebrow">${escape(current.eyebrow)}</p><h2>${escape(current.label)}</h2><p>${escape(current.description)}</p></header>${items.length ? `<div class="learning-list">${items.map(lessonCard).join('')}</div>` : empty('基础知识库正在建立','每个知识点必须同时通过专业版和故事版校验后才会发布。')}`;
+      panel.innerHTML = items.length ? `<div class="learning-list">${items.map(lessonCard).join('')}</div>` : empty('暂无知识讲解','');
     } else if(active==='counterintuitive') {
       panel.innerHTML = counterPanel(current);
     } else {

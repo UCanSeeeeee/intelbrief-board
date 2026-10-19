@@ -4,13 +4,13 @@
 
 美股讯息标题下、简报期次上方展示CNN Fear & Greed Index：0–100分、情绪标签、较上次收盘变化、上次收盘／一周前／一月前对比。这是一个双向情绪指标，不是两个指数，不混用加密同名指数或VIX。切换历史简报不改变当前情绪快照，也不将当前指数声称为历史值。
 
-固定来源：[CNN原站](https://www.cnn.com/markets/fear-and-greed)及[公开数据](https://production.dataviz.cnn.io/index/fearandgreed/graphdata)。直连被拒绝、超时或数据无效时，仅使用[whit3rabbit公开镜像](https://github.com/whit3rabbit/fear-greed-data)的[原始CNN快照](https://raw.githubusercontent.com/whit3rabbit/fear-greed-data/main/json/cnn_output.json)。镜像不是独立核验；页面必须标“公开镜像”及链接，不绕过反爬、不以其他指数替代。
+固定来源：[CNN原站](https://www.cnn.com/markets/fear-and-greed)及[公开数据](https://production.dataviz.cnn.io/index/fearandgreed/graphdata)。直连被拒绝、超时或数据无效时，仅使用[whit3rabbit公开镜像](https://github.com/whit3rabbit/fear-greed-data)的[原始CNN快照](https://raw.githubusercontent.com/whit3rabbit/fear-greed-data/main/json/cnn_output.json)。镜像不是独立核验；前台用简短“镜像”链接保留身份，不展示重复说明徽章，不绕过反爬、不以其他指数替代。
 
 用户2026-10-19新增指标要求授权这项非X数值源；不放宽X的Grok两路径规则，不占5+10数量，不改变新闻增量窗口及历史归档。来源核对时Grok因电脑锁屏不可用，使用公开资料核验，没有冒称取得Grok回答。
 
 ## 时效与失败
 
-- `timestamp`保留原始数据时间；`fetchedAt`仅记实际获取时间，二者不得混淆。页面统一北京时间，标“最近公布值”，不承诺盘中实时。
+- `timestamp`保留原始数据时间；`fetchedAt`仅记实际获取时间，二者不得混淆。前台保留北京时间和来源，不贴固定“最近公布值”标签或免责段，不承诺盘中实时。
 - 休市保留最近值；超过72小时显示“数据较旧”。这是产品提醒阈值，不是交易日或有效性判断。
 - 分值须为0–100有限数字，标签须为CNN五种已知标签，时间须有效且不明显在未来。缺失比较值显示“—”，真正0分显示0.0；来源格式变化停止采用，不自行推算。
 - 来源日期回退保留较新存档；失败保留旧快照并明确提示，没有有效数据则显示“暂不可用”，不能以0分代替失败。

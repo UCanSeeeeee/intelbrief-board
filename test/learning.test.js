@@ -4,9 +4,8 @@ const {validateLearning}=require('../scripts/lib/learning');
 
 const config={
   schemaVersion:1,
-  tabs:[{id:'curiosities'},{id:'basics'},{id:'nature'},{id:'science'},{id:'counterintuitive'}],
-  storyAudienceMinimumAge:18,
-  dailyCuriosityLimit:3
+  tabs:[{id:'basics'},{id:'nature'},{id:'science'},{id:'counterintuitive'}],
+  storyAudienceMinimumAge:18
 };
 const curiosity={
   id:'2026-10-16-example',date:'2026-10-16',category:'半导体',title:'题目',summary:'事实',whyInteresting:'原因',
