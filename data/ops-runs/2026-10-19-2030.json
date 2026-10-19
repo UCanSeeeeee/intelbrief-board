@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-19T20:35:09+08:00",
-  "updatedAt": "2026-10-19T21:05:01+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-19T21:07:42+08:00",
+  "finishedAt": "2026-10-19T21:07:42+08:00",
   "gitHeadAtStart": "96dbdbf36ec39e5105520f61003c234b0585071a",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-19T21:06:32+08:00",
+      "detail": "内容提交b80b79492989eabe68d405b8b78a51597cc87c96已push origin HEAD:master，ls-remote一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-19T21:07:42+08:00",
+      "detail": "Cloudflare Pages成功；13项公共JSON HTTP成功且与本地逐字节一致；只读VIX/CNN接口另核对"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "无到期/过时触发，复用最近官方核对"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "b80b79492989eabe68d405b8b78a51597cc87c96",
+  "notes": [
+    "已发布并线上核验。23对象全部查询接续，新闻1+0、人物4、个股1、AI1、小知识4；缺额与睡眠勘误待核保留，论文和basics本轮不重复。未运行本地测试/check/build/预览。"
+  ],
   "timings": [
     {
       "page": "news",
