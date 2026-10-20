@@ -1,0 +1,103 @@
+{
+  "runId": "2026-10-20-1500",
+  "cutoff": "2026-10-20T15:00:00+08:00",
+  "results": [
+    {
+      "unit": "tickers:nvda",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($NVDA OR NVIDIA OR from:nvidia) (order OR capacity OR demand OR supply OR pricing OR product OR customer OR capex OR export OR revenue) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets -filter:replies"
+      ],
+      "note": "实际X查询及新候选追源完成，证据不足不入选；错误网络结果排除，有效旧榜保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "tickers:mu",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($MU OR Micron OR from:MicronTech) (order OR capacity OR demand OR supply OR pricing OR product OR customer OR capex OR export OR revenue) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets -filter:replies"
+      ],
+      "note": "查询/仅X追源/反证完成；同事件新增Reuters计划罢工进展，不证实停产或断供。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "tickers:intc",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($INTC OR Intel OR from:intel) (order OR capacity OR demand OR supply OR pricing OR product OR customer OR capex OR export OR revenue) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets -filter:replies"
+      ],
+      "note": "实际X查询完成，无合格新候选；追源/反证无需执行，有效旧内容保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "tickers:goog",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($GOOG OR $GOOGL OR Alphabet OR Google OR from:Google) (order OR capacity OR demand OR supply OR pricing OR product OR customer OR capex OR export OR revenue) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets -filter:replies"
+      ],
+      "note": "实际X查询完成，无合格新候选；追源/反证无需执行，有效旧内容保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "tickers:avgo",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($AVGO OR Broadcom OR from:Broadcom) (order OR capacity OR demand OR supply OR pricing OR product OR customer OR capex OR export OR revenue) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets -filter:replies"
+      ],
+      "note": "实际X查询完成，无合格新候选；追源/反证无需执行，有效旧内容保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "tickers:vrt",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($VRT OR Vertiv OR from:Vertiv) (order OR capacity OR demand OR supply OR pricing OR product OR customer OR capex OR export OR revenue) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets -filter:replies"
+      ],
+      "note": "实际X查询完成，无合格新候选；追源/反证无需执行，有效旧内容保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "tickers:tsm",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($TSM OR TSMC OR from:tsmc_news) (order OR capacity OR demand OR supply OR pricing OR product OR customer OR capex OR export OR revenue) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets -filter:replies"
+      ],
+      "note": "实际X查询及新候选追源完成，证据不足不入选；错误网络结果排除，有效旧榜保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "tickers:nvda",
+      "key": "nebius-b200-spot-triple-20261020",
+      "status": "pending",
+      "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。"
+    },
+    {
+      "unit": "tickers:tsm",
+      "key": "tsm-cowos-260kwpm-estimate-20261020",
+      "status": "pending",
+      "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。"
+    },
+    {
+      "unit": "tickers:tsm",
+      "key": "apple-tsmc-a14-capacity-claim-20261020",
+      "status": "pending",
+      "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。"
+    }
+  ]
+}

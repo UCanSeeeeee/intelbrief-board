@@ -1,0 +1,75 @@
+{
+  "runId": "2026-10-20-1500",
+  "cutoff": "2026-10-20T15:00:00+08:00",
+  "results": [
+    {
+      "unit": "people:elon-musk",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:elonmusk since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets"
+      ],
+      "note": "本人或官方来源查询完成；规则事实有边界，热度按已保存整数与旧有效池比较；有效旧规则及周榜保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "people:jensen-huang",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(\"Jensen Huang\" OR from:JensenHuang) (NVIDIA OR AI OR chip OR interview) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets"
+      ],
+      "note": "查询及追源完成，德国官方证据窗前补遗、BG2采访证据不足，未纳新增；有效旧榜保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets"
+      ],
+      "note": "本人或官方来源查询完成；规则事实有边界，热度按已保存整数与旧有效池比较；有效旧规则及周榜保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "people:trillion-leaders",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "no-result",
+      "queries": [
+        "(from:satyanadella OR from:sundarpichai OR from:tim_cook OR from:finkd OR from:JeffBezos OR from:ajassy) since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets"
+      ],
+      "note": "所列六账号精确增量查询0结果，非全体高管覆盖；旧有效条目保留。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "people:research-reports",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(Goldman OR Nomura OR \"Morgan Stanley\" OR BofA OR JPMorgan OR UBS) (semiconductor OR memory OR power OR \"AI capex\") since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC -filter:retweets"
+      ],
+      "note": "查询及追源完成，Nomura和ETF仅二传/原报告版本不明，不入选。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "people:jensen-huang",
+      "key": "nvidia-four-german-startups-20261019",
+      "status": "pending",
+      "reason": "发现窗前官方证据，迟发现补遗单列，非本轮新增；原始时间与计划投资范围已保存。"
+    },
+    {
+      "unit": "people:research-reports",
+      "key": "nomura-memory-ai-capacity-20261020",
+      "status": "pending",
+      "reason": "只有二传报告摘要，缺原报告及版本变化证据。"
+    }
+  ]
+}

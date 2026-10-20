@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T00:29:26.023Z",
-  "cutoff": "2026-10-20T08:00:00+08:00",
+  "updatedAt": "2026-10-20T07:24:12.366Z",
+  "cutoff": "2026-10-20T15:00:00+08:00",
   "source": "X only",
   "status": "complete",
   "coverage": {
@@ -9,48 +9,102 @@
       {
         "id": "nvda",
         "status": "complete",
-        "note": "精确增量查询完成，无合格新候选；旧财报/订单/宣传按缓存排除，不代表X无任何帖子。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "实际X查询及新候选追源完成，证据不足不入选；错误网络结果排除，有效旧榜保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "mu",
         "status": "complete",
-        "note": "精确增量查询完成，无合格新候选；旧财报/订单/宣传按缓存排除，不代表X无任何帖子。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "查询/仅X追源/反证完成；同事件新增Reuters计划罢工进展，不证实停产或断供。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "intc",
         "status": "complete",
-        "note": "精确增量查询完成，无合格新候选；旧财报/订单/宣传按缓存排除，不代表X无任何帖子。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "实际X查询完成，无合格新候选；追源/反证无需执行，有效旧内容保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "goog",
         "status": "complete",
-        "note": "精确增量查询完成，无合格新候选；旧财报/订单/宣传按缓存排除，不代表X无任何帖子。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "实际X查询完成，无合格新候选；追源/反证无需执行，有效旧内容保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "avgo",
         "status": "complete",
-        "note": "精确增量查询完成，无合格新候选；旧财报/订单/宣传按缓存排除，不代表X无任何帖子。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "实际X查询完成，无合格新候选；追源/反证无需执行，有效旧内容保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "vrt",
         "status": "complete",
-        "note": "精确增量查询完成，无合格新候选；旧财报/订单/宣传按缓存排除，不代表X无任何帖子。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "实际X查询完成，无合格新候选；追源/反证无需执行，有效旧内容保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "tsm",
         "status": "complete",
-        "note": "精确增量查询完成，无合格新候选；旧财报/订单/宣传按缓存排除，不代表X无任何帖子。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "实际X查询及新候选追源完成，证据不足不入选；错误网络结果排除，有效旧榜保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "mu-taiwan-strike-risk-2026-10-15",
+      "tabIds": [
+        "mu"
+      ],
+      "title": "Reuters：Micron台湾工会计划罢工，尚未确认生产中断",
+      "fact": "Reuters报道，随着奖金争议升级，Micron在台湾的工会计划启动罢工。报道原帖描述的是计划行动，没有确认已经停产，也没有给出持续时间或产量影响。",
+      "whyItMatters": "相较此前工会取得罢工授权的风险线索，计划行动使劳资谈判与执行进度更值得关注。若停工落实并影响生产，可能扰动存储供应和成本；影响大小取决于参与范围、时长和公司应对。",
+      "counterCase": "谈判仍可能改变行动安排；桃园与台中工会的行动范围须区分，不能推断所有台湾工厂停产或HBM断供。尚无生产损失量化证据。",
+      "affected": [
+        "MU",
+        "存储供给与劳工成本"
+      ],
+      "author": "Reuters",
+      "publishedAt": "2026-10-20T04:30:18Z",
+      "url": "https://x.com/Reuters/status/2112400996559208471",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "mu": 2
+      },
+      "people": [],
+      "change": "进展",
+      "timeline": [
+        {
+          "changedAt": "2026-10-20T07:20:36.009Z",
+          "change": "进展",
+          "previous": {
+            "eventKey": "mu-taiwan-strike-risk-2026-10-15",
+            "tabIds": [
+              "mu"
+            ],
+            "title": "Micron 台湾厂区潜在罢工风险被市场讨论",
+            "fact": "研究账号转述：工会称已获足够罢工票数，关切存储供应中断；台湾为 Micron 重要产能。",
+            "whyItMatters": "供给尾部风险对紧平衡叙事的对冲。",
+            "counterCase": "若谈判解决未停产，则仅为噪音。",
+            "affected": [
+              "MU",
+              "存储供给"
+            ],
+            "author": "tenet_research",
+            "publishedAt": "2026-10-15T09:32:51.000Z",
+            "url": "https://x.com/tenet_research/status/2110665194775118202",
+            "verification": "collector-report",
+            "tier": "watch",
+            "weeklyRanks": {
+              "mu": 2
+            },
+            "people": []
+          },
+          "sourceUrl": "https://x.com/Reuters/status/2112400996559208471"
+        }
+      ]
+    },
     {
       "eventKey": "gmo-nvidia-server-acquisition-plan-20261019",
       "tabIds": [
@@ -285,29 +339,6 @@
       "people": []
     },
     {
-      "eventKey": "mu-taiwan-strike-risk-2026-10-15",
-      "tabIds": [
-        "mu"
-      ],
-      "title": "Micron 台湾厂区潜在罢工风险被市场讨论",
-      "fact": "研究账号转述：工会称已获足够罢工票数，关切存储供应中断；台湾为 Micron 重要产能。",
-      "whyItMatters": "供给尾部风险对紧平衡叙事的对冲。",
-      "counterCase": "若谈判解决未停产，则仅为噪音。",
-      "affected": [
-        "MU",
-        "存储供给"
-      ],
-      "author": "tenet_research",
-      "publishedAt": "2026-10-15T09:32:51.000Z",
-      "url": "https://x.com/tenet_research/status/2110665194775118202",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "mu": 2
-      },
-      "people": []
-    },
-    {
       "eventKey": "tsm-q3-print-ticker-2026-10-15",
       "tabIds": [
         "tsm"
@@ -444,85 +475,119 @@
         "intc": 3
       },
       "people": []
-    },
-    {
-      "eventKey": "avgo-hock-tan-casino-ft-2026-10-13",
-      "tabIds": [
-        "avgo"
-      ],
-      "title": "FT：Hock Tan 把 AI 市场比作“赌场”，芯片股下跌",
-      "fact": "@FirstSquawk 引述 FT 称，博通 CEO Hock Tan 把市场形容为“赌场”后芯片股下跌；Reuters 称其把 AI 投资者比作赌徒，但有基金经理认为该比喻过度，回调属正常修正。",
-      "whyItMatters": "AI 定制芯片龙头 CEO 的谨慎表态成为韩股与存储股抛售的催化之一。",
-      "counterCase": "可能是对投机情绪而非需求的评论；AVGO 当日收涨约 0.7%。",
-      "affected": [
-        "AVGO",
-        "SOX"
-      ],
-      "author": "FirstSquawk",
-      "publishedAt": "2026-10-13T06:18:58.000Z",
-      "url": "https://x.com/FirstSquawk/status/2109891628462907883",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "avgo": 1
-      },
-      "people": [
-        {
-          "name": "Hock Tan",
-          "intro": "博通总裁兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "vrt-mumbai-30mw-d2c-cooling-2026-10-13",
-      "tabIds": [
-        "vrt"
-      ],
-      "title": "Vertiv 在孟买数据中心部署直触芯片液冷，支持 30MW AI 负载",
-      "fact": "@voicendata_ 称 Vertiv 在 CapitaLand India Trust 孟买数据中心部署直触芯片液冷方案，支持最多 30MW 的 AI 工作负载。",
-      "whyItMatters": "印度 AI 数据中心液冷需求落地，扩展 VRT 海外订单。",
-      "counterCase": "规模较小，金额未披露。",
-      "affected": [
-        "VRT"
-      ],
-      "author": "voicendata_",
-      "publishedAt": "2026-10-13T04:50:46.000Z",
-      "url": "https://x.com/voicendata_/status/2109869431392538724",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "vrt": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "intc-lip-bu-tan-shortage-2-3-years-2026-10-13",
-      "tabIds": [
-        "intc"
-      ],
-      "title": "转述：Lip-Bu Tan 称 AI 硬件短缺可能持续 2–3 年",
-      "fact": "@movesurge 转述 Lip-Bu Tan 在新加坡表示，AI 基础设施需求持续超过供给，受产能约束影响，硬件短缺在未来 2–3 年内难以明显缓解。",
-      "whyItMatters": "若短缺延续，Intel 代工与封装产能可能获得外溢订单。",
-      "counterCase": "为二手转述；Intel 自身先进制程份额仍弱。",
-      "affected": [
-        "INTC",
-        "TSM"
-      ],
-      "author": "movesurge",
-      "publishedAt": "2026-10-13T04:12:42.000Z",
-      "url": "https://x.com/movesurge/status/2109859849924169732",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "intc": 2
-      },
-      "people": [
-        {
-          "name": "Lip-Bu Tan",
-          "intro": "英特尔CEO"
-        }
-      ]
     }
   ],
-  "retainedItems": []
+  "retainedItems": [],
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "tickers:nvda",
+      "page": "tickers",
+      "object": "nvda",
+      "label": "NVDA",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "tickers:nvda",
+          "key": "doubleai-b300-financing-20261019",
+          "status": "pending",
+          "reason": "原始媒体/客户帖或事件增量时间仍缺失；Vertiv为现有部署案例推广，无新订单/部署日期，不当新增订单。",
+          "updatedAt": "2026-10-19T12:51:43.410Z",
+          "runId": "2026-10-19-2030"
+        }
+      ]
+    },
+    {
+      "id": "tickers:mu",
+      "page": "tickers",
+      "object": "mu",
+      "label": "MU",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:intc",
+      "page": "tickers",
+      "object": "intc",
+      "label": "INTC",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:goog",
+      "page": "tickers",
+      "object": "goog",
+      "label": "GOOG",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:avgo",
+      "page": "tickers",
+      "object": "avgo",
+      "label": "AVGO",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "tickers:avgo",
+          "key": "openai-jalapeno-turin-20261019",
+          "status": "pending",
+          "reason": "原始媒体/客户帖或事件增量时间仍缺失；Vertiv为现有部署案例推广，无新订单/部署日期，不当新增订单。",
+          "updatedAt": "2026-10-19T12:51:43.410Z",
+          "runId": "2026-10-19-2030"
+        }
+      ]
+    },
+    {
+      "id": "tickers:vrt",
+      "page": "tickers",
+      "object": "vrt",
+      "label": "VRT",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:tsm",
+      "page": "tickers",
+      "object": "tsm",
+      "label": "TSM",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ]
 }

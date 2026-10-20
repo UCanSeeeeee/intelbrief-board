@@ -3,31 +3,31 @@
   "updatedAt": "2026-10-20T00:29:26.071Z",
   "cutoff": "2026-10-20T08:00:00+08:00",
   "source": "X only",
-  "status": "complete",
+  "status": "failed",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "complete",
-        "note": "精确增量查询及追源/反证完成；能力概括营销与事故二传均不入选，非请求失败。",
+        "status": "failed",
+        "note": "Grok网页版已登录但未执行成功X查询，声称X工具不可用；错误网络结果全部弃用，Bot暂停。保留08:00成功内容及截止，下次精确接续。",
         "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "complete",
-        "note": "官方及API企业/云/安全查询完成，无合格新增；不将OpenCode提供商二传当独立事件。",
+        "status": "failed",
+        "note": "Grok网页版已登录但未执行成功X查询，声称X工具不可用；错误网络结果全部弃用，Bot暂停。保留08:00成功内容及截止，下次精确接续。",
         "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "complete",
-        "note": "官方与产品查询完成；仅旧模型能力演示，无新发布/价格/可用性，不入选。",
+        "status": "failed",
+        "note": "Grok网页版已登录但未执行成功X查询，声称X工具不可用；错误网络结果全部弃用，Bot暂停。保留08:00成功内容及截止，下次精确接续。",
         "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "complete",
-        "note": "中国AI/实验室/开源/政策查询完成，无合格新增；MiniMax旧发布与未来权重计划复用。",
+        "status": "failed",
+        "note": "Grok网页版已登录但未执行成功X查询，声称X工具不可用；错误网络结果全部弃用，Bot暂停。保留08:00成功内容及截止，下次精确接续。",
         "cutoff": "2026-10-20T08:00:00+08:00"
       }
     ]
@@ -410,5 +410,71 @@
       ]
     }
   ],
-  "retainedItems": []
+  "retainedItems": [],
+  "lastAttemptAt": "2026-10-20T07:24:12.366Z",
+  "attemptedCutoff": "2026-10-20T15:00:00+08:00",
+  "collectionMode": "incremental-v1",
+  "lastAttemptCollectionUnits": [
+    {
+      "id": "ai:openai",
+      "page": "ai",
+      "object": "openai",
+      "label": "OPENAI",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "ai:openai",
+          "key": "opencode-console-api-key-incident-20261019",
+          "status": "pending",
+          "reason": "事故仅二传，无官方/负责人完整status及影响/返还原始依据",
+          "updatedAt": "2026-10-20T00:29:55.793Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "ai:anthropic",
+      "page": "ai",
+      "object": "anthropic",
+      "label": "ANTHROPIC",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "ai:goog-ai",
+      "page": "ai",
+      "object": "goog-ai",
+      "label": "GOOG",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "ai:ai-others",
+      "page": "ai",
+      "object": "ai-others",
+      "label": "其他",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ]
 }

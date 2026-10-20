@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-20-1500",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-20T14:57:37+08:00",
+  "updatedAt": "2026-10-20T15:24:45+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "4997022cbbc2c58860974deb40cda9140c559bc3",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-20T15:01:05+08:00",
+      "detail": "origin、master、干净工作区及暂存区已核对；首次写入前git pull --ff-only origin master成功。此里程碑为事后记账，无独立耗时。"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-20T15:01:05+08:00",
+      "detail": "已读当前入口、增量计划、本批知识库/SOP/新闻契约；15:00学习components全false。"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-20T15:24:11+08:00",
+      "detail": "所有侧栏批次已关闭：19对象完成，AI4失败留08:00；学习跳过，宏观无触发，财报待评价0。状态partial，不称全站采集成功。"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-20T15:24:45+08:00",
+      "detail": "全部批次关闭后统一发布器写入；持久池204→205无旧键丢失、早报重点保留，旧有效周榜无丢失；AI内容完全保留。"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-20T15:24:11+08:00",
+      "detail": "按用户要求未运行npm test/check/build/预览或额外回归；来源真实性及发布器数据契约照常。"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "1焦点0洞察；旧三重点保留。"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "2规则3热度；窗口前补遗与二传缺口单列。"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "1同事件进展；网页误调用结果排除。"
+    },
+    "ai": {
+      "status": "failed",
+      "detail": "4对象X工具不可用，成功截止留08:00；存量保留。"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "Nasdaq1268原始/80精选；pendingReview=0，不重复核已评价财报；10/29 GILD/SNDK/BUD上限截断保留。"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "低频检查无触发，未重新抓取或修改日历。"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T14:57:58+08:00",
+      "endedAt": "2026-10-20T15:07:21+08:00",
+      "durationMs": 563000,
+      "detail": "新闻完整结果先落盘后record，7对象成功截止15:00；1焦点0洞察，早报重点保留。"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-20T14:57:59+08:00",
+      "endedAt": "2026-10-20T15:04:07+08:00",
+      "durationMs": 368000,
+      "detail": "第一轮实际X发现6候选；第二轮首次无工具证据未采用，有限重试取得六包实际调用和6候选（含同事件2来源）；已保存工具查询，准备新候选追源"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:04:08+08:00",
+      "endedAt": "2026-10-20T15:05:18+08:00",
+      "durationMs": 70000,
+      "detail": "四候选原帖展开+四次X查询完成；CNBC仅支持禁令标题、ETF与LTA缺原始依据、会面为旧报道转述。均不扩展来源支持范围"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:05:18+08:00",
+      "endedAt": "2026-10-20T15:07:20+08:00",
+      "durationMs": 122000,
+      "detail": "实际三次反证搜索完成；仅CNBC有限事实收录，ETF/LTA待核，不把无反证视为证实。"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:07:50+08:00",
+      "endedAt": "2026-10-20T15:15:01+08:00",
+      "durationMs": 431000,
+      "detail": "人物完整待发布结果、候选及缺口先落盘；5对象已record至15:00；新增2规则+3热度，旧有效规则及周榜保留"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:07:50+08:00",
+      "endedAt": "2026-10-20T15:11:05+08:00",
+      "durationMs": 195000,
+      "detail": "五次实际查询完成；一对象0帖，其余候选与实际互动数已保存。"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:11:05+08:00",
+      "endedAt": "2026-10-20T15:13:05+08:00",
+      "durationMs": 120000,
+      "detail": "6原帖+3查询完成；TDP为运营者评论剔除；德国原帖窗前补遗单列，BG2/Nomura证据不足；X模型与USDA计划为本人/官方有限陈述。"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:13:05+08:00",
+      "endedAt": "2026-10-20T15:15:00+08:00",
+      "durationMs": 115000,
+      "detail": "展开记录确认实际3次X反证查询；原要求2但USDA加查1，如实记账；无独立模型效果、无已支付证据。"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:15:16+08:00",
+      "endedAt": "2026-10-20T15:20:36+08:00",
+      "durationMs": 320000,
+      "detail": "7对象实际X查询结果先落盘后record至15:00；MU同事件1进展保留旧卡时间线；其他候选不足，不用错用网页结果"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:15:16+08:00",
+      "endedAt": "2026-10-20T15:17:44+08:00",
+      "durationMs": 148000,
+      "detail": "已记录错用网络工具偏差并排除；后续7次X调用候选4事件/5来源，准备全新仅X追源确认，4空候选对象不空跑。"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:17:44+08:00",
+      "endedAt": "2026-10-20T15:18:54+08:00",
+      "durationMs": 70000,
+      "detail": "4次实际X查询完成；Reuters支持MU计划罢工有限事实，其余3项不足。错用网页输出全部排除。"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:18:54+08:00",
+      "endedAt": "2026-10-20T15:20:36+08:00",
+      "durationMs": 102000,
+      "detail": "实际两次X查询完成，MU行动范围/未停产及B200现货不可外推收入边界落盘。"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-20T15:20:55+08:00",
+      "endedAt": "2026-10-20T15:22:48+08:00",
+      "durationMs": 113000,
+      "detail": "AI请求失败；完整审计和空增量载荷已保存，失败attempt已record，4对象08:00截止不推进；旧内容保留"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-20T15:20:55+08:00",
+      "endedAt": "2026-10-20T15:22:47+08:00",
+      "durationMs": 112000,
+      "detail": "Grok声明X工具不可用，无实际X调用；17次错误网络调用全部弃用，不把计划当已查询。"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T15:22:47+08:00",
+      "durationMs": 0,
+      "detail": "发现失败且无可用候选，非无结果，不空跑。"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T15:22:47+08:00",
+      "durationMs": 0,
+      "detail": "发现失败且无可用候选，不空跑。"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:23:00+08:00",
+      "endedAt": "2026-10-20T15:23:20+08:00",
+      "durationMs": 20000,
+      "detail": "无到期或过时触发；全年覆盖有效，下一事件10/21；复用10/18官方核对缓存。"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T15:23:20+08:00",
+      "endedAt": "2026-10-20T15:24:11+08:00",
+      "durationMs": 51000,
+      "detail": "Nasdaq1268原始/80精选；pendingReview=0，不重复核已评价财报；10/29 GILD/SNDK/BUD上限截断保留。"
+    }
+  ]
+}

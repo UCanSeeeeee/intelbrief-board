@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T00:29:25.882Z",
-  "asOf": "2026-10-20T08:00:00+08:00",
+  "updatedAt": "2026-10-20T07:24:12.113Z",
+  "asOf": "2026-10-20T15:00:00+08:00",
   "events": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
@@ -28779,6 +28779,92 @@
       "lastMaterialAt": "2026-10-20T00:29:25.882Z",
       "lastMaterialEdition": "2026-10-20-0800",
       "lateDiscovery": false
+    },
+    {
+      "eventKey": "dhs-deepseek-civilian-it-20261019",
+      "firstSeenAt": "2026-10-20T07:24:12.113Z",
+      "firstEdition": "2026-10-20-1500",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "dhs-deepseek-civilian-it-20261019",
+        "collectionUnit": "news:market-focus",
+        "title": "CNBC：美国禁止政府机构系统使用DeepSeek",
+        "fact": "CNBC报道，美国禁止政府机构系统使用DeepSeek。现有报道未列出完整适用机构、生效日期或执行细则；不能据此推断美国私人用户也被全面禁止使用。",
+        "impact": "政府采购与系统准入限制可能提高中国模型进入美国公共部门的门槛，并影响模型供应商的合规与部署选择。对美国云厂商和其他模型供应商的收入影响，还取决于受影响部署规模及客户是否迁移，目前无法量化。",
+        "direction": "双向",
+        "horizon": "未来两周观察实施范围；收入影响可能更久",
+        "affected": [
+          "政府AI系统与采购",
+          "中国模型跨境部署",
+          "美国云与模型供应商"
+        ],
+        "counterCase": "若存在豁免、执行范围较小或相关部署原本很少，收入和竞争影响可能有限；未找到更正不等于不存在例外。",
+        "selectionReason": "早报仅有待核线索，本窗新增可识别财经媒体原帖，支持有限监管事实；相对一般行情评论信息增量更明确。",
+        "credibilityReason": "CNBC原帖标题支持政府机构系统禁用；没有取得官方命令或独立权威确认，适用范围与时间不外推。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "命令实际发布与生效时刻尚未由所用权威来源确认；不以报道发帖时间替代。",
+        "attentionEvidence": "有CNBC窗口内原帖报道；未取得统一互动量或跨事件热度比较，不声称全网排名。",
+        "sources": [
+          {
+            "url": "https://x.com/CNBC/status/2112430637915263208",
+            "postId": "2112430637915263208",
+            "username": "CNBC",
+            "publishedAt": "2026-10-20T06:28:05Z",
+            "checkedAt": "2026-10-20T07:07:20.367Z",
+            "excerpt": "U.S. bans DeepSeek from government agency systems amid AI rift with China",
+            "verification": "collector-report",
+            "verificationNote": "已登录Grok网页版追源及独立反证返回；执行器未独立直读X，未访问外链补采新闻。仅采用可见标题支持的范围。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "CNBC原帖标题支持政府机构系统禁用；没有取得官方命令或独立权威确认，适用范围与时间不外推。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-20-1500",
+      "lastCheckedAt": "2026-10-20T07:24:12.113Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-20T07:24:12.113Z",
+      "readingDate": "2026-10-20",
+      "retainUntil": "2026-10-21T00:00:00.000Z",
+      "lastMaterialAt": "2026-10-20T07:24:12.113Z",
+      "lastMaterialEdition": "2026-10-20-1500",
+      "lateDiscovery": false
     }
   ],
   "applied": [
@@ -28808,7 +28894,8 @@
     "2026-10-19-0800:2026-10-19T00:24:36.491Z",
     "2026-10-19-1500:2026-10-19T07:00:28.894Z",
     "2026-10-19-2030:2026-10-19T13:02:49.761Z",
-    "2026-10-20-0800:2026-10-20T00:29:25.882Z"
+    "2026-10-20-0800:2026-10-20T00:29:25.882Z",
+    "2026-10-20-1500:2026-10-20T07:24:12.113Z"
   ],
   "warnings": [],
   "lastStatus": "partial",
@@ -28816,7 +28903,8 @@
     "focus": [
       "nscale-anthropic-45bn-talks-20261019",
       "amazon-aep-xenergy-indiana-960mw-20261019",
-      "amazon-torchneuron-20261019"
+      "amazon-torchneuron-20261019",
+      "dhs-deepseek-civilian-it-20261019"
     ],
     "insights": []
   },
@@ -28829,5 +28917,5 @@
     "weekendCarry": false,
     "retainUntil": "2026-10-21T00:00:00.000Z"
   },
-  "latestEditionId": "2026-10-20-0800"
+  "latestEditionId": "2026-10-20-1500"
 }

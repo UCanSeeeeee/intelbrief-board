@@ -1,0 +1,114 @@
+{
+  "runId": "2026-10-20-1500",
+  "cutoff": "2026-10-20T15:00:00+08:00",
+  "results": [
+    {
+      "unit": "news:market-focus",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(NVDA OR TSMC OR semiconductor OR \"AI chip\" OR ASML OR \"chip capacity\") -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "(Fed OR inflation OR CPI OR PPI OR \"treasury yield\" OR \"interest rate\" OR \"long end\" OR dollar OR DXY) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "(OpenAI OR Anthropic OR \"Microsoft AI\" OR \"Google AI\" OR \"Meta AI\" OR \"AI capex\" OR \"AI order\" OR \"product failure\" OR \"major deal\") -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "(\"leveraged ETF\" OR \"semiconductor\" OR SOXX OR \"chip stocks\") (Goldman OR inflow OR record) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "(NVDA OR Nvidia) (invest OR investment OR startup OR Germany OR Europe OR capex) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "(power OR energy OR electricity OR grid OR \"data center\") (AI OR semiconductor OR NVDA) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "(tariff OR sanction OR war OR China OR Taiwan OR oil OR energy OR shipping) (US OR stock OR market) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "from:Reuters OR from:Bloomberg OR from:CNBC OR from:WSJ (semiconductor OR NVDA OR TSMC OR AI OR Fed OR inflation OR tariff OR oil) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "(breadth OR concentration OR \"market structure\" OR deleveraging OR positioning OR VIX) (semiconductor OR AI OR stock) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "DeepSeek (ban OR banned OR \"government\" OR federal OR DHS) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "(\"Iran\" OR oil OR energy OR \"safe-haven\" OR \"AI jitters\") from:Reuters OR from:Bloomberg OR from:CNBC -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+        "(Goldman) (inflow OR ETF OR semiconductor OR SOXX) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC"
+      ],
+      "note": "精确增量既定查询已执行且候选/待发布结果已保存；证据不足与无合格新增不等于请求失败，不代表X全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "news:semiconductors",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(HBM OR DRAM OR CoWoS OR yield OR ASP) (order OR capacity OR export) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC"
+      ],
+      "note": "精确增量既定查询已执行且候选/待发布结果已保存；证据不足与无合格新增不等于请求失败，不代表X全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "news:power",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(\"data center\" OR PPA OR \"liquid cooling\" OR nuclear) (MW OR contract OR permit OR grid) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC"
+      ],
+      "note": "精确增量既定查询已执行且候选/待发布结果已保存；证据不足与无合格新增不等于请求失败，不代表X全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "news:ai-adoption",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(\"enterprise AI\" OR \"paid seats\" OR \"inference cost\") (renewal OR revenue OR deployment OR security) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC"
+      ],
+      "note": "精确增量既定查询已执行且候选/待发布结果已保存；证据不足与无合格新增不等于请求失败，不代表X全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "news:capital-cost",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(treasury OR \"term premium\" OR credit OR refinancing) (AI OR capex OR yield) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC"
+      ],
+      "note": "精确增量既定查询已执行且候选/待发布结果已保存；证据不足与无合格新增不等于请求失败，不代表X全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "news:geopolitics",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(sanction OR tariff OR shipping OR \"export control\") (energy OR oil OR Iran OR China) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC"
+      ],
+      "note": "精确增量既定查询已执行且候选/待发布结果已保存；证据不足与无合格新增不等于请求失败，不代表X全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    },
+    {
+      "unit": "news:market-structure",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(breadth OR positioning OR \"leveraged ETF\" OR deleveraging OR gamma) (semiconductor OR AI OR stock) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC"
+      ],
+      "note": "精确增量既定查询已执行且候选/待发布结果已保存；证据不足与无合格新增不等于请求失败，不代表X全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-20-1500.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "news:market-focus",
+      "key": "dhs-deepseek-civilian-it-20261019",
+      "status": "resolved",
+      "reason": "新增CNBC权威报道，有限范围收录；不外推完整实施细则。"
+    },
+    {
+      "unit": "news:market-focus",
+      "key": "goldman-leveraged-etf-semiconductor-inflows-20261020",
+      "status": "pending",
+      "reason": "缺Goldman或权威媒体原帖与统计期/金额。"
+    },
+    {
+      "unit": "news:semiconductors",
+      "key": "pc-memory-lta-2027-20261020",
+      "status": "pending",
+      "reason": "缺公司/权威原始披露与签约日期。"
+    }
+  ]
+}

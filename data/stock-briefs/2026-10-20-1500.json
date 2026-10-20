@@ -1,0 +1,489 @@
+{
+  "scheduledFor": "2026-10-20T15:00:00+08:00",
+  "windowStart": "2026-10-20T00:00:00.000Z",
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:market-focus",
+          "key": "jpm-intel-neutral-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "dhs-deepseek-civilian-it-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "tsmc-kumamoto-3nm-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "citi-skhynix-q326-preview-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "mu-2027-hbm-asp-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:power",
+          "key": "nscale-msft-uk-grid-ipo-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "nextdc-melbourne-grid-risk-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:capital-cost",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "Reuters仅支持升级发生，核心假设与现金流依据不足",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:capital-cost",
+          "key": "jpm-coreweave-debt-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "hormuz-tankers-mine-claim-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "us-energy-russia-diesel-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ],
+  "displayWindowStart": "2026-10-19T07:00:00.000Z",
+  "displayWindowEnd": "2026-10-20T07:00:00.000Z",
+  "carriedOver": [],
+  "status": "partial",
+  "summary": "新增1条有限监管报道；无合格新增多学科洞察，旧重点继续保留。",
+  "marketContext": "北京时间周二15:00；美股常规时段尚未开盘，指标为各自原始时间快照。",
+  "checklist": [
+    {
+      "item": "news:market-focus",
+      "status": "covered",
+      "note": "既定精确窗口查询已完成；仅证明执行清单，不证明全量X覆盖。"
+    },
+    {
+      "item": "news:semiconductors",
+      "status": "covered",
+      "note": "既定精确窗口查询已完成；仅证明执行清单，不证明全量X覆盖。"
+    },
+    {
+      "item": "news:power",
+      "status": "covered",
+      "note": "既定精确窗口查询已完成；仅证明执行清单，不证明全量X覆盖。"
+    },
+    {
+      "item": "news:ai-adoption",
+      "status": "covered",
+      "note": "既定精确窗口查询已完成；仅证明执行清单，不证明全量X覆盖。"
+    },
+    {
+      "item": "news:capital-cost",
+      "status": "covered",
+      "note": "既定精确窗口查询已完成；仅证明执行清单，不证明全量X覆盖。"
+    },
+    {
+      "item": "news:geopolitics",
+      "status": "covered",
+      "note": "既定精确窗口查询已完成；仅证明执行清单，不证明全量X覆盖。"
+    },
+    {
+      "item": "news:market-structure",
+      "status": "covered",
+      "note": "既定精确窗口查询已完成；仅证明执行清单，不证明全量X覆盖。"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "dhs-deepseek-civilian-it-20261019",
+      "round": 1,
+      "decision": "selected",
+      "reason": "新CNBC权威报道支持有限政府机构系统禁用事实；范围、执行日和商业影响保留未知。"
+    },
+    {
+      "eventKey": "goldman-leveraged-etf-semiconductor-inflows-20261020",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "追源及独立反证后仍缺原始证据、具体统计/签约范围与时间；保留待核，不把同向二传当独立印证。"
+    },
+    {
+      "eventKey": "ai-energy-safehaven-commentary-20261020",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "市场评论与持续背景，未提供独立新增实物/政策事实；不由评论推断冲突升级。"
+    },
+    {
+      "eventKey": "copper-ai-correction-commentary-20261020",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "年内表现和投资者观点，未给新增订单/价格量化依据；不作为电力投产新事实。"
+    },
+    {
+      "eventKey": "asia-shares-oil-snapshot-20261020",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "亚洲时段市场概览，无量化幅度或独立催化，避免与避险评论重复。"
+    },
+    {
+      "eventKey": "hegseth-netanyahu-unannounced-meeting-20261020",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "Reuters为10月19日Axios报道转述，消息源知情人士，无具体政策新动作，不作为本轮实物冲击。"
+    },
+    {
+      "eventKey": "pc-memory-lta-2027-20261020",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源及独立反证后仍缺原始证据、具体统计/签约范围与时间；保留待核，不把同向二传当独立印证。"
+    },
+    {
+      "eventKey": "amazon-aep-xenergy-indiana-960mw-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "缓存已入库同事件，无实质进展；不重查。"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "缓存已入库同事件，无实质进展；不重查。"
+    },
+    {
+      "eventKey": "china-europe-container-futures-20261020",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "单一合约行情缺供给/航运及美股传导证据，不由期货下跌推断实物风险缓解。"
+    },
+    {
+      "eventKey": "hormuz-15-container-attacks-claim-20261020",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "非权威统计，地域/船型/时间与分母未清楚；无独立新政策或实物事实，不进入拟选追源池。"
+    }
+  ],
+  "coverage": {
+    "method": "已登录Grok网页版；独立第一轮与六主题第二轮实际X搜索，二轮未证实声明有限重试；仅拟选新候选追源及独立反证，旧证据复用。",
+    "queries": [
+      "(NVDA OR TSMC OR semiconductor OR \"AI chip\" OR ASML OR \"chip capacity\") -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(Fed OR inflation OR CPI OR PPI OR \"treasury yield\" OR \"interest rate\" OR \"long end\" OR dollar OR DXY) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(OpenAI OR Anthropic OR \"Microsoft AI\" OR \"Google AI\" OR \"Meta AI\" OR \"AI capex\" OR \"AI order\" OR \"product failure\" OR \"major deal\") -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(\"leveraged ETF\" OR \"semiconductor\" OR SOXX OR \"chip stocks\") (Goldman OR inflow OR record) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(NVDA OR Nvidia) (invest OR investment OR startup OR Germany OR Europe OR capex) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(power OR energy OR electricity OR grid OR \"data center\") (AI OR semiconductor OR NVDA) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(tariff OR sanction OR war OR China OR Taiwan OR oil OR energy OR shipping) (US OR stock OR market) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "from:Reuters OR from:Bloomberg OR from:CNBC OR from:WSJ (semiconductor OR NVDA OR TSMC OR AI OR Fed OR inflation OR tariff OR oil) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(breadth OR concentration OR \"market structure\" OR deleveraging OR positioning OR VIX) (semiconductor OR AI OR stock) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "DeepSeek (ban OR banned OR \"government\" OR federal OR DHS) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(\"Iran\" OR oil OR energy OR \"safe-haven\" OR \"AI jitters\") from:Reuters OR from:Bloomberg OR from:CNBC -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(Goldman) (inflow OR ETF OR semiconductor OR SOXX) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(HBM OR DRAM OR CoWoS OR yield OR ASP) (order OR capacity OR export) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(\"data center\" OR PPA OR \"liquid cooling\" OR nuclear) (MW OR contract OR permit OR grid) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(\"enterprise AI\" OR \"paid seats\" OR \"inference cost\") (renewal OR revenue OR deployment OR security) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(treasury OR \"term premium\" OR credit OR refinancing) (AI OR capex OR yield) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(sanction OR tariff OR shipping OR \"export control\") (energy OR oil OR Iran OR China) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(breadth OR positioning OR \"leveraged ETF\" OR deleveraging OR gamma) (semiconductor OR AI OR stock) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(DeepSeek OR \"Deep Seek\") (DHS OR CISA OR ban OR banned OR \"government agency\") (from:Reuters OR from:CNBC OR from:DHS OR from:CISA OR official) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(Goldman OR \"Goldman Sachs\") (\"leveraged ETF\" OR \"ETF inflows\" OR SOXX) (semiconductor OR chip) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(Lenovo OR HP OR Dell) (DRAM OR NAND OR LTA OR \"long-term\") (2027 OR contract OR agreement) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(Hegseth OR \"Pete Hegseth\") (Netanyahu OR \"Benjamin Netanyahu\") (Israel OR visit) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(DeepSeek OR \"Deep Seek\") (exemption OR exempt OR correction OR denial OR \"civilian\" OR federal OR scope OR procurement) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(Goldman OR \"leveraged ETF\") (semiconductor OR SOXX) (outflow OR inflow OR record OR correction) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC",
+      "(Lenovo OR HP OR Dell) (2027 OR LTA OR DRAM OR NAND) (denial OR correction OR signed OR contract OR agreement) -filter:replies -filter:retweets since:2026-10-20_00:00:00_UTC until:2026-10-20_07:00:00_UTC"
+    ],
+    "gaps": [
+      "CNBC仅提供禁令标题，完整政策范围及实际事件时间未知。",
+      "ETF与PC内存LTA线索证据不足，保留待核；一般行情、评论与缓存旧闻未收录。",
+      "X索引和查询范围有限；第二轮首次无工具证据未采用。"
+    ]
+  },
+  "selectionRationale": "监管报道新增明确且可归因，优先于一般行情与旧会面。六包独立发现未有充分证据支持的新多学科条目，不凑5+10；保留早报三重点及排序。",
+  "excludedCandidates": [
+    {
+      "eventKey": "goldman-leveraged-etf-semiconductor-inflows-20261020",
+      "reason": "追源及独立反证后仍缺原始证据、具体统计/签约范围与时间；保留待核，不把同向二传当独立印证。"
+    },
+    {
+      "eventKey": "ai-energy-safehaven-commentary-20261020",
+      "reason": "市场评论与持续背景，未提供独立新增实物/政策事实；不由评论推断冲突升级。"
+    },
+    {
+      "eventKey": "copper-ai-correction-commentary-20261020",
+      "reason": "年内表现和投资者观点，未给新增订单/价格量化依据；不作为电力投产新事实。"
+    },
+    {
+      "eventKey": "asia-shares-oil-snapshot-20261020",
+      "reason": "亚洲时段市场概览，无量化幅度或独立催化，避免与避险评论重复。"
+    },
+    {
+      "eventKey": "hegseth-netanyahu-unannounced-meeting-20261020",
+      "reason": "Reuters为10月19日Axios报道转述，消息源知情人士，无具体政策新动作，不作为本轮实物冲击。"
+    },
+    {
+      "eventKey": "pc-memory-lta-2027-20261020",
+      "reason": "追源及独立反证后仍缺原始证据、具体统计/签约范围与时间；保留待核，不把同向二传当独立印证。"
+    },
+    {
+      "eventKey": "amazon-aep-xenergy-indiana-960mw-20261019",
+      "reason": "缓存已入库同事件，无实质进展；不重查。"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "reason": "缓存已入库同事件，无实质进展；不重查。"
+    },
+    {
+      "eventKey": "china-europe-container-futures-20261020",
+      "reason": "单一合约行情缺供给/航运及美股传导证据，不由期货下跌推断实物风险缓解。"
+    },
+    {
+      "eventKey": "hormuz-15-container-attacks-claim-20261020",
+      "reason": "非权威统计，地域/船型/时间与分母未清楚；无独立新政策或实物事实，不进入拟选追源池。"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "dhs-deepseek-civilian-it-20261019",
+      "collectionUnit": "news:market-focus",
+      "title": "CNBC：美国禁止政府机构系统使用DeepSeek",
+      "fact": "CNBC报道，美国禁止政府机构系统使用DeepSeek。现有报道未列出完整适用机构、生效日期或执行细则；不能据此推断美国私人用户也被全面禁止使用。",
+      "impact": "政府采购与系统准入限制可能提高中国模型进入美国公共部门的门槛，并影响模型供应商的合规与部署选择。对美国云厂商和其他模型供应商的收入影响，还取决于受影响部署规模及客户是否迁移，目前无法量化。",
+      "direction": "双向",
+      "horizon": "未来两周观察实施范围；收入影响可能更久",
+      "affected": [
+        "政府AI系统与采购",
+        "中国模型跨境部署",
+        "美国云与模型供应商"
+      ],
+      "counterCase": "若存在豁免、执行范围较小或相关部署原本很少，收入和竞争影响可能有限；未找到更正不等于不存在例外。",
+      "selectionReason": "早报仅有待核线索，本窗新增可识别财经媒体原帖，支持有限监管事实；相对一般行情评论信息增量更明确。",
+      "credibilityReason": "CNBC原帖标题支持政府机构系统禁用；没有取得官方命令或独立权威确认，适用范围与时间不外推。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "命令实际发布与生效时刻尚未由所用权威来源确认；不以报道发帖时间替代。",
+      "attentionEvidence": "有CNBC窗口内原帖报道；未取得统一互动量或跨事件热度比较，不声称全网排名。",
+      "sources": [
+        {
+          "url": "https://x.com/CNBC/status/2112430637915263208",
+          "postId": "2112430637915263208",
+          "username": "CNBC",
+          "publishedAt": "2026-10-20T06:28:05Z",
+          "checkedAt": "2026-10-20T07:07:20.367Z",
+          "excerpt": "U.S. bans DeepSeek from government agency systems amid AI rift with China",
+          "verification": "collector-report",
+          "verificationNote": "已登录Grok网页版追源及独立反证返回；执行器未独立直读X，未访问外链补采新闻。仅采用可见标题支持的范围。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "CNBC原帖标题支持政府机构系统禁用；没有取得官方命令或独立权威确认，适用范围与时间不外推。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [],
+  "shortfallReason": "合格新事实及原始证据不足，实际1焦点/0洞察。",
+  "readingSelection": {
+    "focus": [
+      "nscale-anthropic-45bn-talks-20261019",
+      "amazon-aep-xenergy-indiana-960mw-20261019",
+      "amazon-torchneuron-20261019",
+      "dhs-deepseek-civilian-it-20261019"
+    ],
+    "insights": []
+  },
+  "trigger": "scheduled",
+  "id": "2026-10-20-1500",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T07:24:12.113Z",
+  "counts": {
+    "focus": 1,
+    "insights": 0,
+    "total": 1
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T00:29:25.989Z",
-  "cutoff": "2026-10-20T08:00:00+08:00",
+  "updatedAt": "2026-10-20T07:24:12.366Z",
+  "cutoff": "2026-10-20T15:00:00+08:00",
   "source": "X only",
   "status": "complete",
   "coverage": {
@@ -9,36 +9,180 @@
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "本人查询完成；0新规则、3新热度候选；赠股回复无新细节，旧有效规则及热度按累计窗和互动公式合并。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "本人或官方来源查询完成；规则事实有边界，热度按已保存整数与旧有效池比较；有效旧规则及周榜保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "jensen-huang",
         "status": "complete",
-        "note": "本人/可归因采访查询完成；两摘要无原访谈时间与可识别原媒体帖，均不足，不作为本人新事实。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "查询及追源完成，德国官方证据窗前补遗、BG2采访证据不足，未纳新增；有效旧榜保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "donald-trump",
         "status": "complete",
-        "note": "政策查询无新增；两同步源帖子核为运营者评论剔除，WhiteHouse新1热度；旧有效内容保留。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "本人或官方来源查询完成；规则事实有边界，热度按已保存整数与旧有效池比较；有效旧规则及周榜保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "trillion-leaders",
         "status": "complete",
-        "note": "列明6账号查询完成，仅Satya功能扩展新1规则；其余账号空，不等于全体高管覆盖。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "所列六账号精确增量查询0结果，非全体高管覆盖；旧有效条目保留。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       },
       {
         "id": "research-reports",
         "status": "complete",
-        "note": "机构查询及追源完成；Morgan Stanley地图无原报告/版本变化，未入选。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "note": "查询及追源完成，Nomura和ETF仅二传/原报告版本不明，不入选。",
+        "cutoff": "2026-10-20T15:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "elon-they-dont-reply-20261020",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk转引评论并简短附和",
+      "fact": "Elon Musk转引一则“他们不了解事情如何运作”的帖子，以“They really don’t”简短附和。原文未明确说明所指对象的业务事实。",
+      "whyItMatters": "本人互动较高的短评，信息量有限，不作为经营或政策新事实。",
+      "counterCase": "原帖和图片未支持更具体结论，不推测未点名对象。",
+      "affected": [
+        "X平台与AI推荐"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-20T04:14:35Z",
+      "url": "https://x.com/elonmusk/status/2112397041355866607",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 19733,
+        "reposts": 1223,
+        "quotes": 93,
+        "replies": 1070,
+        "capturedAt": "2026-10-20T07:11:05.864Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为本机保存返回时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-timeline-ai-ranking-20261020",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk称X调整排序与内容检索模型",
+      "fact": "Elon Musk介绍X时间线推荐的两项调整：新的AI排序模型预测用户停留时间，检索模型着重寻找用户会完整读完的帖子。他同时称用户活跃时长持续创新高，但未披露具体数字或独立测量。",
+      "whyItMatters": "若模型改善内容匹配，可能影响平台使用时长和广告展示机会；实际收入传导仍取决于广告需求、用户体验与独立效果数据。",
+      "counterCase": "当前是本人能力与效果陈述；没有独立部署记录、对照测试或收入数据，无法确认增长幅度及因果。",
+      "affected": [
+        "X平台与AI推荐"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-20T02:41:54Z",
+      "url": "https://x.com/elonmusk/status/2112373713937084809",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "rule",
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "whitehouse-deportations-book-20261020",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse发布移民执法宣传内容",
+      "fact": "WhiteHouse发布名为“White House Adventures”的移民执法主题宣传内容。该帖没有给出新的执行数据或政策细则。",
+      "whyItMatters": "官方账号热度动态，未达到产业或财政新事实标准。",
+      "counterCase": "宣传文字不证明新的法令、生效日或已实现效果。",
+      "affected": [
+        "美国农业与财政"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-20T02:08:32Z",
+      "url": "https://x.com/WhiteHouse/status/2112365316785197496",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 2448,
+        "reposts": 587,
+        "quotes": 34,
+        "replies": 425,
+        "capturedAt": "2026-10-20T07:11:05.864Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为本机保存返回时刻，上游精确抓取时刻未知"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "whitehouse-harvest-fuel-relief-20261020",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse转引80亿美元农民燃料救助计划",
+      "fact": "WhiteHouse转引USDA公布的Harvest Fuel Relief Program，宣布提供80亿美元用于一次性农民补助，以覆盖2026作物年度部分损失。行作物补助费率计划11月公布，在线申请将开放；这不是已经支付80亿美元。",
+      "whyItMatters": "计划可能缓解部分农户能源成本和现金流压力。实际支出与需求影响取决于资格、费率、申请和付款进度，不能将可用额度当作当期支出。",
+      "counterCase": "尚无已支付或单户到账金额的证据；具体作物与资格安排仍需后续披露。",
+      "affected": [
+        "美国农业与财政"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-20T01:58:55Z",
+      "url": "https://x.com/WhiteHouse/status/2112362899960439171",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "rule",
+      "people": []
+    },
+    {
+      "eventKey": "elon-usbc-comment-20261020",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk肯定欧盟统一USB-C接口的要求",
+      "fact": "Elon Musk表示，应肯定欧盟监管机构推动Apple产品统一使用USB-C接口的作用。",
+      "whyItMatters": "本人互动较高的评论，没有新增产品决定、经营数据或政策变化。",
+      "counterCase": "评论表达个人评价，不能据此推断Apple业务或监管立场发生变化。",
+      "affected": [
+        "X平台与AI推荐"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-20T01:02:06Z",
+      "url": "https://x.com/elonmusk/status/2112348601255125059",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 84365,
+        "reposts": 2951,
+        "quotes": 324,
+        "replies": 2329,
+        "capturedAt": "2026-10-20T07:11:05.859Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为本机保存返回时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
     {
       "eventKey": "whitehouse-real-food-savings-20261019",
       "tabIds": [
@@ -55,6 +199,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [],
       "selection": "engagement",
       "engagement": {
         "likes": 1933,
@@ -63,72 +208,7 @@
         "quotes": 84,
         "capturedAt": "2026-10-20T00:14:13.791Z",
         "source": "Grok网页版X工具实际整数；capturedAt为本机读取来源并落盘时刻，上游精确抓取时刻未知"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "elon-grok-bot-employee-20261019",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 称Grok Bot可能成为用户喜欢的“员工”",
-      "fact": "Elon Musk 在回复中称，Grok Bot可能成为用户最喜欢的员工；没有给出采用、付费、效率或经营数据。",
-      "whyItMatters": "这属于产品推广表态，互动量不能证明企业实际部署或商业回报。",
-      "counterCase": "没有具体执行或经营数据时，不从表态和互动量推断政策落地、收入或成本变化。",
-      "affected": [],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-19T16:27:50Z",
-      "url": "https://x.com/elonmusk/status/2112219181500281276",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 7012,
-        "reposts": 943,
-        "replies": 1701,
-        "quotes": 146,
-        "capturedAt": "2026-10-20T00:14:13.791Z",
-        "source": "Grok网页版X工具实际整数；capturedAt为本机读取来源并落盘时刻，上游精确抓取时刻未知"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-robotic-arm-emoji-20261019",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 发布机械臂表情回复",
-      "fact": "Elon Musk 的这条回复正文只有“🦾”，没有文字说明项目、产品、数量或时间表。",
-      "whyItMatters": "仅记录本人热度动态；一个表情无法支持机器人订单、量产或技术进展的判断。",
-      "counterCase": "没有具体执行或经营数据时，不从表态和互动量推断政策落地、收入或成本变化。",
-      "affected": [],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-19T16:24:42Z",
-      "url": "https://x.com/elonmusk/status/2112218391092285880",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "selection": "engagement",
-      "engagement": {
-        "likes": 8271,
-        "reposts": 199,
-        "replies": 339,
-        "quotes": 14,
-        "capturedAt": "2026-10-20T00:14:13.791Z",
-        "source": "Grok网页版X工具实际整数；capturedAt为本机读取来源并落盘时刻，上游精确抓取时刻未知"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "elon-direct-shares-reply-20261019",
@@ -146,6 +226,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "engagement",
       "engagement": {
         "likes": 24662,
@@ -154,13 +240,7 @@
         "quotes": 160,
         "capturedAt": "2026-10-20T00:14:13.791Z",
         "source": "Grok网页版X工具实际整数；capturedAt为本机读取来源并落盘时刻，上游精确抓取时刻未知"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "elon-spacex-children-shares-20261019",
@@ -190,75 +270,6 @@
         "reposts": 25496,
         "quotes": 7265,
         "replies": 16317,
-        "capturedAt": "2026-10-19T12:45:09.500386Z",
-        "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
-      }
-    },
-    {
-      "eventKey": "elon-inference-rental-20261019",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 称曾尝试向云厂商租用推理算力",
-      "fact": "Elon Musk 描述，SpaceX 曾尝试向 AWS、GCP 等租用推理算力，以把负载从训练集群分流。帖子未说明对话日期、规模、价格或是否成交。",
-      "whyItMatters": "训练与推理争用集群时，外租可改变算力采购结构及利用率；这是参与者对尝试租赁的表述，尚不足以确认云厂商缺货、实际新增订单或财务影响。",
-      "counterCase": "若租赁没有成交、只是历史经历或云厂商另有可用资源，就不能由此推断当前供给短缺；需后续合同、容量或厂商回应。",
-      "affected": [
-        "推理算力租赁",
-        "训练集群负载",
-        "AWS",
-        "Google Cloud"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-19T03:05:35Z",
-      "url": "https://x.com/elonmusk/status/2112017286764659176",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "likes": 2526,
-        "reposts": 248,
-        "quotes": 51,
-        "replies": 329,
-        "capturedAt": "2026-10-19T12:45:09.500386Z",
-        "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
-      }
-    },
-    {
-      "eventKey": "wh-airport-landing-20261019",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse 发布Air Force One抵达机场动态",
-      "fact": "WhiteHouse 发布照片，表示 Air Force One 首次降落于佛罗里达州 Palm Beach County 的 President Donald J. Trump International Airport。",
-      "whyItMatters": "这是官方账号的出行动向动态，未提供新增产业、贸易或能源政策；作为热度动态保留，具体航班事件日期未独立核对。",
-      "counterCase": "若没有后续可执行政策披露，不能把照片和到访当成经济政策变化。",
-      "affected": [],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-19T01:00:43Z",
-      "url": "https://x.com/WhiteHouse/status/2111985862384783771",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
-      "selection": "engagement",
-      "engagement": {
-        "likes": 17959,
-        "reposts": 1859,
-        "quotes": 113,
-        "replies": 977,
         "capturedAt": "2026-10-19T12:45:09.500386Z",
         "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
       }
@@ -1166,6 +1177,100 @@
         {
           "name": "Satya Nadella",
           "intro": "微软董事长兼CEO"
+        }
+      ]
+    }
+  ],
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "people:elon-musk",
+      "page": "people",
+      "object": "elon-musk",
+      "label": "马斯克",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "people:jensen-huang",
+      "page": "people",
+      "object": "jensen-huang",
+      "label": "黄仁勋",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "people:jensen-huang",
+          "key": "jensen-interview-summary-20261019",
+          "status": "pending",
+          "reason": "原访谈日期、原媒体帖或报告假设变化证据不足",
+          "updatedAt": "2026-10-20T00:15:06.643Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "people:jensen-huang",
+          "key": "jensen-token-costs-claim-20261019",
+          "status": "pending",
+          "reason": "原访谈日期、原媒体帖或报告假设变化证据不足",
+          "updatedAt": "2026-10-20T00:15:06.643Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "people:donald-trump",
+      "page": "people",
+      "object": "donald-trump",
+      "label": "特朗普",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "people:trillion-leaders",
+      "page": "people",
+      "object": "trillion-leaders",
+      "label": "万亿美元公司高层",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "people:research-reports",
+      "page": "people",
+      "object": "research-reports",
+      "label": "机构研报",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-20T07:00:00.000Z",
+      "cutoff": "2026-10-20T07:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "people:research-reports",
+          "key": "ms-ai-capex-map-20261019",
+          "status": "pending",
+          "reason": "原访谈日期、原媒体帖或报告假设变化证据不足",
+          "updatedAt": "2026-10-20T00:15:06.643Z",
+          "runId": "2026-10-20-0800"
         }
       ]
     }
