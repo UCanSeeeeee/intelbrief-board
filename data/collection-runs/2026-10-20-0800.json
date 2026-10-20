@@ -5013,7 +5013,7 @@
   "collectionCompletedAt": "2026-10-20T00:28:46.564Z",
   "status": "partial",
   "publication": {
-    "status": "prepared",
+    "status": "verified",
     "collectionIndependent": true,
     "localValidation": "not run; no test/check/build/preview or extra regression; publication data contracts remain active",
     "preparationStartedAt": "2026-10-20T00:29:25.815Z",
@@ -5044,7 +5044,183 @@
       "counterintuitive": "skipped by components",
       "dailyFun": "stopped",
       "localTests": "not run; no test/check/build/preview or extra regression"
-    }
+    },
+    "contentCommit": "ec293a7cc7b11fb73d4c038938552ea0abf8f31e",
+    "gitCommittedAt": "2026-10-20T08:31:20+08:00",
+    "pushConfirmedAt": "2026-10-20T00:31:50.339Z",
+    "verificationStartedAt": "2026-10-20T00:31:50.343Z",
+    "gitTimingNote": "首次Git起点写入被简单凭据模式误报中断，shell未短路而提交/推送已发生；只有Git真实提交时间与本机push确认时间，未补造完整起点/耗时。",
+    "credentialReview": {
+      "status": "false-positive-confirmed",
+      "reason": "简单sk-模式命中旧公开musk/risk事件键；逐JSON路径复核均为事件标识和其审计拷贝，无凭据。后续提交命令遇错即停止。"
+    },
+    "publicVerification": {
+      "checkedAt": "2026-10-20T00:32:07.632132+00:00",
+      "base": "https://intelbrief-board.pages.dev/",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-20-0800.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "bb2812b336024b9b16ccd504f9c94b10a75319128d1c838b2fa393c151739902",
+          "remoteSha256": "bb2812b336024b9b16ccd504f9c94b10a75319128d1c838b2fa393c151739902"
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "e82ddb64f2d4327401a00c7727e2ae8fbafd4212f468b793f34a3c792ed0ec3f",
+          "remoteSha256": "e82ddb64f2d4327401a00c7727e2ae8fbafd4212f468b793f34a3c792ed0ec3f"
+        },
+        {
+          "path": "data/reading-board.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "612d38426d7ee3e16979aa3f3261f04530fdb304414e0a00938252f7b67b463b",
+          "remoteSha256": "612d38426d7ee3e16979aa3f3261f04530fdb304414e0a00938252f7b67b463b"
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "e009d67332fe8f3f6e19a86cf18d33b7478bb6a4b9b819889c7ff57aed997d3e",
+          "remoteSha256": "e009d67332fe8f3f6e19a86cf18d33b7478bb6a4b9b819889c7ff57aed997d3e"
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "dbf4dce343215c75eb55528ee4488d8bd15b2be731ccef3f389658d84a6d0c21",
+          "remoteSha256": "dbf4dce343215c75eb55528ee4488d8bd15b2be731ccef3f389658d84a6d0c21"
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "9a92593a9e6ccfb34964d928fe1bdebc2becaa10c75a368cf66a84540e285e0c",
+          "remoteSha256": "9a92593a9e6ccfb34964d928fe1bdebc2becaa10c75a368cf66a84540e285e0c"
+        },
+        {
+          "path": "data/journal-learning.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "7a226bca6ae6dad05f51a5772656e51b4d964c46b4f31b5d1495153217fca118",
+          "remoteSha256": "7a226bca6ae6dad05f51a5772656e51b4d964c46b4f31b5d1495153217fca118"
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "5af65a0fa8cee3c61ede4e5a18c534e19be20e560a9dc3ffe7b614460e71739f",
+          "remoteSha256": "5af65a0fa8cee3c61ede4e5a18c534e19be20e560a9dc3ffe7b614460e71739f"
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "0558ac38773360ce88c1bc014fea84ea0a7f2f54467519eb564634926d851446",
+          "remoteSha256": "0558ac38773360ce88c1bc014fea84ea0a7f2f54467519eb564634926d851446"
+        },
+        {
+          "path": "data/market-volatility.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "8572b692bfefd4b24ee255dd81fced61385d747592d8bedee78a7e6ade4dfcc7",
+          "remoteSha256": "8572b692bfefd4b24ee255dd81fced61385d747592d8bedee78a7e6ade4dfcc7"
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "48a462c57047b94ce2850420300ed576a5a5118f38e67791ac5ae60626be4f81",
+          "remoteSha256": "48a462c57047b94ce2850420300ed576a5a5118f38e67791ac5ae60626be4f81"
+        },
+        {
+          "path": "data/learning.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "b43fb88a36f3d135d8bb133780284e61de4e7f5f3af35cc7d0cffbc6db51fb59",
+          "remoteSha256": "b43fb88a36f3d135d8bb133780284e61de4e7f5f3af35cc7d0cffbc6db51fb59"
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "httpSuccess": true,
+          "matchesLocal": true,
+          "localSha256": "8efc644d6ef3dd61a989ced8bd1aaa258cdabab52eadec4fd5f1c054b951bb91",
+          "remoteSha256": "8efc644d6ef3dd61a989ced8bd1aaa258cdabab52eadec4fd5f1c054b951bb91"
+        }
+      ],
+      "allMatch": true
+    },
+    "remoteMasterVerified": true,
+    "cloudflare": {
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/UCanSeeeeee/intelbrief-board/runs/118385767327"
+    },
+    "readOnlyApiVerification": {
+      "checkedAt": "2026-10-20T00:32:17.620520+00:00",
+      "results": [
+        {
+          "path": "api/vix",
+          "ok": true,
+          "response": {
+            "schemaVersion": 1,
+            "id": "cboe-vix",
+            "value": 19.99,
+            "asOfDate": "2026-10-16",
+            "quoteKind": "close",
+            "previousClose": 16.46,
+            "fetchedAt": "2026-10-20T00:32:16.714Z",
+            "source": {
+              "name": "Cboe",
+              "url": "https://www.cboe.com/tradable-products/vix",
+              "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+            },
+            "retrieval": {
+              "status": "ok"
+            }
+          }
+        },
+        {
+          "path": "api/market-sentiment",
+          "ok": true,
+          "response": {
+            "schemaVersion": 1,
+            "id": "cnn-fear-greed",
+            "market": "us-equities",
+            "score": 23.1071428571429,
+            "rating": "extreme fear",
+            "timestamp": "2026-10-19T23:48:10+00:00",
+            "fetchedAt": "2026-10-20T00:32:17.625Z",
+            "previous": {
+              "close": 17.9383219954649,
+              "week": 46.3428571428571,
+              "month": 30.4285714285714,
+              "year": 22.32857142857143
+            },
+            "source": {
+              "name": "CNN Fear & Greed Index",
+              "url": "https://www.cnn.com/markets/fear-and-greed",
+              "method": "cnn",
+              "dataUrl": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+              "mirrorUrl": null
+            },
+            "retrieval": {
+              "status": "retained",
+              "message": "来源时间早于已存档数据，保留较新值",
+              "errors": [
+                {
+                  "source": "cnn",
+                  "message": "HTTP 418"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "verifiedAt": "2026-10-20T00:32:41.653Z"
   },
   "resultStatusCorrections": {
     "at": "2026-10-20T00:29:55.145Z",
@@ -5070,5 +5246,11 @@
     "runHas7ClosedBatches": true,
     "snapshotRotation": "按既有三期规则轮换；旧快照内容保留在reading-board事件/时间线及原采集审计，不等于已读。",
     "papersDoiUnique": true
+  },
+  "resume": {
+    "collection": "所有23对象已接至2026-10-20T00:00:00Z；下轮仅从各对象成功截止接续，不重做24h",
+    "publication": "内容提交ec293a7已上线，13项公共JSON逐字节一致；仅必要审计收尾",
+    "pending": "只在有新实质进展/更正线索时继续待核候选；Bot保持暂停",
+    "learning": "2026-10-20两刊各3篇已合并；20:30不重复论文，basics/反直觉按components处理"
   }
 }

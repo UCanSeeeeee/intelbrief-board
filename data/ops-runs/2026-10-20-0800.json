@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-20T08:03:35+08:00",
-  "updatedAt": "2026-10-20T08:30:34+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-20T08:32:42+08:00",
+  "finishedAt": "2026-10-20T08:32:42+08:00",
   "gitHeadAtStart": "591dec10d5b350f94cfcb9d07c8c7fd52db2e47e",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-20T08:31:50+08:00",
+      "detail": "内容提交ec293a7cc7b11fb73d4c038938552ea0abf8f31e已push origin HEAD:master；远端与线上核对待完成"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-20T08:32:41+08:00",
+      "detail": "远端ec293a7一致，Cloudflare Pages成功，13项公共JSON逐字节一致，读取/api/vix及/api/market-sentiment真实响应"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "本轮批次完成，范围与结果见采集审计"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "ec293a7cc7b11fb73d4c038938552ea0abf8f31e",
+  "notes": [
+    "08:00批次已发布核验；质量/覆盖缺口真实保留；两刊6篇并保留往期，不声称连续可靠已验收"
+  ],
   "timings": [
     {
       "page": "news",
