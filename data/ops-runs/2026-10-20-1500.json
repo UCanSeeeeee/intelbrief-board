@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-20T14:57:37+08:00",
-  "updatedAt": "2026-10-20T15:24:45+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-20T15:27:11+08:00",
+  "finishedAt": "2026-10-20T15:27:11+08:00",
   "gitHeadAtStart": "4997022cbbc2c58860974deb40cda9140c559bc3",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-20T15:26:20+08:00",
+      "detail": "753674088cb891ad4318374b6404bef85cb7f270已push origin HEAD:master，ls-remote一致。"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-20T15:27:11+08:00",
+      "detail": "内容提交7536740远端一致；Cloudflare completed/success；13公共JSON逐字节一致；/api/vix 18.44官方10/19收盘；CNN上游418后保留本批22.9928571428571、10/20 00:00原始快照。"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "低频检查无触发，未重新抓取或修改日历。"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "753674088cb891ad4318374b6404bef85cb7f270",
+  "notes": [
+    "内容与部署已完成；19对象成功、AI4失败留08:00；错误网络结果全部弃用，缺口及迟发现补遗单列；无本地测试/check/build/预览。"
+  ],
   "timings": [
     {
       "page": "news",

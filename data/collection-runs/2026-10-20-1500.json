@@ -4837,10 +4837,10 @@
   "collectionCompletedAt": "2026-10-20T07:24:11.656Z",
   "status": "partial",
   "publication": {
-    "status": "ready-to-commit",
+    "status": "verified",
     "startedAt": "2026-10-20T07:24:11.656Z",
     "collectionIndependent": true,
-    "localValidation": "未运行test/check/build/本地预览/额外回归；只执行来源核验和发布写入契约。",
+    "localValidation": "未运行npm test/check/build/本地预览或额外回归；发布器数据契约、内容差异审阅、来源核验及远端/线上资源对照已执行。",
     "preparedAt": "2026-10-20T07:24:12.379Z",
     "tabbedResults": [
       {
@@ -5040,6 +5040,190 @@
         "reason": "既有发布器正常保留最近3个定时快照；被轮换期为0卡失败期，完整证据留Git和原collection/ops审计。未覆盖冻结期次。"
       }
     },
-    "gitStartedAt": "2026-10-20T07:25:22.137Z"
-  }
+    "gitStartedAt": "2026-10-20T07:25:22.137Z",
+    "contentCommit": "753674088cb891ad4318374b6404bef85cb7f270",
+    "pushConfirmedAt": "2026-10-20T07:26:20.376Z",
+    "remoteMasterVerified": true,
+    "verificationStartedAt": "2026-10-20T07:26:20.383Z",
+    "publicVerification": {
+      "checkedAt": "2026-10-20T07:26:22.937Z",
+      "base": "https://intelbrief-board.pages.dev/",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-20-1500.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "4f163efb483533aaea7e51e2cfc3876a06c01139482bbc866226cab17e072050",
+          "remoteSha256": "4f163efb483533aaea7e51e2cfc3876a06c01139482bbc866226cab17e072050"
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "1ed3061f41e42b9d101416378654148d261befd84282a6f3f61013cd24564f9a",
+          "remoteSha256": "1ed3061f41e42b9d101416378654148d261befd84282a6f3f61013cd24564f9a"
+        },
+        {
+          "path": "data/reading-board.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "806e0a00fe0cfe9a6f151d2fa50f6bb224eb7191fdb787bcc01294a486a161d3",
+          "remoteSha256": "806e0a00fe0cfe9a6f151d2fa50f6bb224eb7191fdb787bcc01294a486a161d3"
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "00276d963f29433b099d772750d36f93b72c96c09f95ef7cec5b4012b5b10d8f",
+          "remoteSha256": "00276d963f29433b099d772750d36f93b72c96c09f95ef7cec5b4012b5b10d8f"
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "f0caebeb2cd998cce859571b6c90a05fb46d46895c32ff5dd8c0c1aa1f25f0f4",
+          "remoteSha256": "f0caebeb2cd998cce859571b6c90a05fb46d46895c32ff5dd8c0c1aa1f25f0f4"
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "9490280948620e94ff48b22dc596c6832dc8d6efb1ce2a9d1742c9518da2ae14",
+          "remoteSha256": "9490280948620e94ff48b22dc596c6832dc8d6efb1ce2a9d1742c9518da2ae14"
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "c2d8ecb9bb04982b9dd11b4e3606fe07b85d012fcd150a7bb9f182db4ce7b60d",
+          "remoteSha256": "c2d8ecb9bb04982b9dd11b4e3606fe07b85d012fcd150a7bb9f182db4ce7b60d"
+        },
+        {
+          "path": "data/macro-events.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044",
+          "remoteSha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044"
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "05833581865a05c42022f34183c891f36415d233ea9d779b396b773a0dab1ffd",
+          "remoteSha256": "05833581865a05c42022f34183c891f36415d233ea9d779b396b773a0dab1ffd"
+        },
+        {
+          "path": "data/market-volatility.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "456d5920fe3893656bf09edda8332333048095791ee192aded62481f1397c1db",
+          "remoteSha256": "456d5920fe3893656bf09edda8332333048095791ee192aded62481f1397c1db"
+        },
+        {
+          "path": "data/learning.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "b43fb88a36f3d135d8bb133780284e61de4e7f5f3af35cc7d0cffbc6db51fb59",
+          "remoteSha256": "b43fb88a36f3d135d8bb133780284e61de4e7f5f3af35cc7d0cffbc6db51fb59"
+        },
+        {
+          "path": "data/journal-learning.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "7a226bca6ae6dad05f51a5772656e51b4d964c46b4f31b5d1495153217fca118",
+          "remoteSha256": "7a226bca6ae6dad05f51a5772656e51b4d964c46b4f31b5d1495153217fca118"
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "httpStatus": 200,
+          "matchesLocal": true,
+          "localSha256": "48a462c57047b94ce2850420300ed576a5a5118f38e67791ac5ae60626be4f81",
+          "remoteSha256": "48a462c57047b94ce2850420300ed576a5a5118f38e67791ac5ae60626be4f81"
+        }
+      ],
+      "allMatch": true,
+      "apis": [
+        {
+          "path": "api/vix",
+          "httpStatus": 200,
+          "response": {
+            "schemaVersion": 1,
+            "id": "cboe-vix",
+            "value": 18.44,
+            "asOfDate": "2026-10-19",
+            "quoteKind": "close",
+            "previousClose": 19.99,
+            "fetchedAt": "2026-10-20T07:26:22.695Z",
+            "source": {
+              "name": "Cboe",
+              "url": "https://www.cboe.com/tradable-products/vix",
+              "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+            },
+            "retrieval": {
+              "status": "ok"
+            }
+          }
+        },
+        {
+          "path": "api/market-sentiment",
+          "httpStatus": 200,
+          "response": {
+            "schemaVersion": 1,
+            "id": "cnn-fear-greed",
+            "market": "us-equities",
+            "score": 22.9928571428571,
+            "rating": "extreme fear",
+            "timestamp": "2026-10-20T00:00:00+00:00",
+            "fetchedAt": "2026-10-20T07:26:22.864Z",
+            "previous": {
+              "close": 23.1071428571429,
+              "week": 44.1142857142857,
+              "month": 30.4285714285714,
+              "year": 29.85714285714286
+            },
+            "source": {
+              "name": "CNN Fear & Greed Index",
+              "url": "https://www.cnn.com/markets/fear-and-greed",
+              "method": "cnn",
+              "dataUrl": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+              "mirrorUrl": null
+            },
+            "retrieval": {
+              "status": "retained",
+              "message": "来源时间早于已存档数据，保留较新值",
+              "errors": [
+                {
+                  "source": "cnn",
+                  "message": "HTTP 418"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "verifiedAt": "2026-10-20T07:27:11.169Z",
+    "cloudflare": {
+      "name": "Cloudflare Pages",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/UCanSeeeeee/intelbrief-board/runs/118507442280",
+      "commit": "753674088cb891ad4318374b6404bef85cb7f270"
+    }
+  },
+  "resume": {
+    "successfulObjects": 19,
+    "nextSuccessfulStart": "2026-10-20T07:00:00.000Z",
+    "failedObjects": [
+      "ai:openai",
+      "ai:anthropic",
+      "ai:goog-ai",
+      "ai:ai-others"
+    ],
+    "failedObjectSuccessfulThrough": "2026-10-20T00:00:00.000Z",
+    "note": "采集/部署独立：已保存本轮完整结果并已发布，不重做已完成历史窗口；AI下次补接08:00，其他19对象接15:00；不覆盖冻结15:00期，不恢复Bot或第三路径。",
+    "pendingSupplement": "people:jensen-huang / nvidia-four-german-startups-20261019为窗前原始证据补遗，保持原时刻，不混称本轮新增。"
+  },
+  "finishedAt": "2026-10-20T07:27:11.169Z",
+  "timingNote": "ops各批与阶段实际起止为墙钟跨度；前置准备与pull未独立计时。提交后记账时间明确标RecordedAt，模型UI工作秒数不视为本机独立计算耗时。未给无候选/失败阶段补造起点。"
 }
