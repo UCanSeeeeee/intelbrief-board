@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-20-0800",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-20T08:03:35+08:00",
+  "updatedAt": "2026-10-20T08:30:34+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "591dec10d5b350f94cfcb9d07c8c7fd52db2e47e",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-20T08:21:48+08:00",
+      "detail": "首次写入前ff-only origin master成功；本阶段时间为确认落盘时刻，早于ops start的真实拉取耗时未记录"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-20T08:21:49+08:00",
+      "detail": "已读当前AGENTS/TASKS/增量计划及各批专属知识/SOP；按需读取未变化资料，未反复加载全库"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-20T08:30:34+08:00",
+      "detail": "7批关闭，23对象查询完成，论文6篇及独立来源缺口已保存"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-20T08:30:34+08:00",
+      "detail": "发布器契约合并成功，持久池201→204，无旧事件键或有效旧周榜丢失"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-20T08:21:49+08:00",
+      "detail": "用户明确无需本地test/check/build/预览或额外回归；发布器数据契约与来源核对照常"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "X搜索非全量覆盖；采集器转述，执行器未独立直读原帖；Nscale谈判未有当事人确认；Amazon核电协议缺可确认FID/许可/投产；TorchNeuron缺独立采用与性能成本实测；Citi/MU ASP、JPM/Goldman研报假设、DHS时间与柴油原采访证据不足；第一轮工具一条无时间语义查询已记录偏差；仅采用严格窗内原帖，后续查询带精确窗口"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "Jensen两采访缺日期与原媒体帖；Morgan Stanley地图缺报告与假设变化；万亿高层仅查询列明账号，名单未获用户确认，非全部高管覆盖；互动抓取时刻为本机读取保存时刻，上游精确时间未知；网页Top排序非公式排序，由执行器按整数重排"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "全量覆盖不保证；SEMCO客户归因不足、Intel访谈原日期未知；未编造未返回原帖"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "OpenCode原始事故归因、时间、范围及返还待证，未采用1.4%等数字；Grok工具超过计划的查询次数并出现一条无时间语义查询，已记录；仅处理冻结窗内明确原帖；四对象查询完成不代表全量X覆盖，厂商营销与产品演示未当新增发布"
+    },
+    "earnings": {
+      "status": "partial",
+      "detail": "10月29日GILD/SNDK/BUD被现有每日上限截断，原始/截断证据保留；不声称覆盖全市场"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "本轮批次完成，范围与结果见采集审计"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:03:53+08:00",
+      "endedAt": "2026-10-20T08:09:56+08:00",
+      "durationMs": 363000,
+      "detail": "3条焦点0条洞察；完整候选与缺口已落盘"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:03:53+08:00",
+      "endedAt": "2026-10-20T08:07:05+08:00",
+      "durationMs": 192000,
+      "detail": "两轮独立发现和六包完成；未宣称全量覆盖"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:07:05+08:00",
+      "endedAt": "2026-10-20T08:08:21+08:00",
+      "durationMs": 76000,
+      "detail": "新候选追源完成；三项有媒体/官方原帖，其余缺证据"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:08:21+08:00",
+      "endedAt": "2026-10-20T08:09:56+08:00",
+      "durationMs": 95000,
+      "detail": "相反/限定线索保存；无权威反证不当证实"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:10:03+08:00",
+      "endedAt": "2026-10-20T08:15:06+08:00",
+      "durationMs": 303000,
+      "detail": "结果、候选及缺口已保存；待统一发布"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:10:03+08:00",
+      "endedAt": "2026-10-20T08:13:00+08:00",
+      "durationMs": 177000,
+      "detail": "五对象发现完成；营销/赠股回复降热度，采访及研报待追源"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:13:00+08:00",
+      "endedAt": "2026-10-20T08:14:13+08:00",
+      "durationMs": 73000,
+      "detail": "9指定帖及一次热度补查完成；运营者评论排除，采访研报来源不足"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:14:13+08:00",
+      "endedAt": "2026-10-20T08:15:06+08:00",
+      "durationMs": 53000,
+      "detail": "新候选反证完成；热度无执行外推，来源缺口保留"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:15:14+08:00",
+      "endedAt": "2026-10-20T08:17:23+08:00",
+      "durationMs": 129000,
+      "detail": "结果、候选及缺口已保存；待统一发布"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:15:14+08:00",
+      "endedAt": "2026-10-20T08:17:23+08:00",
+      "durationMs": 129000,
+      "detail": "七对象完成，零合格新候选"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T08:17:23+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，无需执行"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T08:17:23+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，无需执行"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:17:29+08:00",
+      "endedAt": "2026-10-20T08:21:21+08:00",
+      "durationMs": 232000,
+      "detail": "结果、候选及缺口已保存；待统一发布"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:17:29+08:00",
+      "endedAt": "2026-10-20T08:19:34+08:00",
+      "durationMs": 125000,
+      "detail": "四对象完成；官方概括与第三方密钥事故待核，演示旧模型排除"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:19:34+08:00",
+      "endedAt": "2026-10-20T08:20:37+08:00",
+      "durationMs": 63000,
+      "detail": "官方声明为概括营销；事故仅二传，无合格新卡"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:20:37+08:00",
+      "endedAt": "2026-10-20T08:21:21+08:00",
+      "durationMs": 44000,
+      "detail": "独立两条查询完成；无反证不证明候选成立"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:21:21+08:00",
+      "endedAt": "2026-10-20T08:27:40+08:00",
+      "durationMs": 379000,
+      "detail": "两刊各3篇准备，既有2篇不覆盖；basics/小知识按components跳过"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:21:21+08:00",
+      "endedAt": "2026-10-20T08:25:03+08:00",
+      "durationMs": 222000,
+      "detail": "近期发现+明确题名有限补查完成，6个待核有效候选，综述排除"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:22:18+08:00",
+      "endedAt": "2026-10-20T08:27:40+08:00",
+      "durationMs": 322000,
+      "detail": "6篇核对完成，摘要与节选范围真实保存"
+    },
+    {
+      "page": "learning",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:25:20+08:00",
+      "endedAt": "2026-10-20T08:27:40+08:00",
+      "durationMs": 140000,
+      "detail": "睡眠两更正、减法部分复现及复现项目正式争议已入正文边界"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:27:52+08:00",
+      "endedAt": "2026-10-20T08:28:10+08:00",
+      "durationMs": 18000,
+      "detail": "无到期/过时触发，复用10/18官方核对缓存"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T08:28:10+08:00",
+      "endedAt": "2026-10-20T08:28:46+08:00",
+      "durationMs": 36000,
+      "detail": "Nasdaq刷新完成，pendingReview=0，截断明确保留"
+    }
+  ]
+}

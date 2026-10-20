@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-19T13:02:31.390Z",
-  "cutoff": "2026-10-19T20:30:00+08:00",
+  "updatedAt": "2026-10-20T00:29:25.989Z",
+  "cutoff": "2026-10-20T08:00:00+08:00",
   "source": "X only",
   "status": "complete",
   "coverage": {
@@ -9,60 +9,151 @@
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "本增量5帖核对，1规则+2新热度；存量2条有效热度按缓存补位。",
-        "cutoff": "2026-10-19T20:30:00+08:00"
+        "note": "本人查询完成；0新规则、3新热度候选；赠股回复无新细节，旧有效规则及热度按累计窗和互动公式合并。",
+        "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "jensen-huang",
         "status": "complete",
-        "note": "已查本人及媒体采访关键词，二次引用证据不足，0合格新增。",
-        "cutoff": "2026-10-19T20:30:00+08:00"
+        "note": "本人/可归因采访查询完成；两摘要无原访谈时间与可识别原媒体帖，均不足，不作为本人新事实。",
+        "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "donald-trump",
         "status": "complete",
-        "note": "POTUS空、同步源评论排除；WhiteHouse新1条准确互动热度，旧有效热度保留。",
-        "cutoff": "2026-10-19T20:30:00+08:00"
+        "note": "政策查询无新增；两同步源帖子核为运营者评论剔除，WhiteHouse新1热度；旧有效内容保留。",
+        "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "trillion-leaders",
         "status": "complete",
-        "note": "列明的高层本人账号增量查询返回空；不是全体高管全量覆盖。",
-        "cutoff": "2026-10-19T20:30:00+08:00"
+        "note": "列明6账号查询完成，仅Satya功能扩展新1规则；其余账号空，不等于全体高管覆盖。",
+        "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "research-reports",
         "status": "complete",
-        "note": "实际查询及追源完成；Goldman/JPM/MS/BofA仅二传，证据不足，不是请求失败。",
-        "cutoff": "2026-10-19T20:30:00+08:00"
+        "note": "机构查询及追源完成；Morgan Stanley地图无原报告/版本变化，未入选。",
+        "cutoff": "2026-10-20T08:00:00+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "elon-universal-high-income-20261019",
+      "eventKey": "whitehouse-real-food-savings-20261019",
       "tabIds": [
-        "elon-musk"
+        "donald-trump"
       ],
-      "title": "Elon Musk 将相关讨论表述为“全民高收入”",
-      "fact": "Elon Musk 在一条讨论“全民基本收入”的回复中，将措辞改为“全民高收入”（universal high income）。",
-      "whyItMatters": "这是一条概念性短回复，没有分配金额、财政来源、时间表或已执行政策；作为热度动态保留。",
-      "counterCase": "后续正式政策或公司执行安排才可能改变这一判断；不能从短回复推导已经落实的收入计划。",
+      "title": "WhiteHouse 发布“REAL FOOD, REAL SAVINGS”动态",
+      "fact": "WhiteHouse 发布“REAL FOOD, REAL SAVINGS”文字与媒体图；可见文字没有提供新政策条款或执行安排。",
+      "whyItMatters": "该帖按官方账号热度动态记录，不能仅凭口号推断价格、补贴或监管政策变化。",
+      "counterCase": "没有具体执行或经营数据时，不从表态和互动量推断政策落地、收入或成本变化。",
       "affected": [],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-19T08:09:37Z",
-      "url": "https://x.com/elonmusk/status/2112093799694372952",
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-19T22:18:10Z",
+      "url": "https://x.com/WhiteHouse/status/2112307345841705112",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
       "selection": "engagement",
       "engagement": {
-        "likes": 6391,
-        "reposts": 561,
-        "quotes": 135,
-        "replies": 569,
-        "capturedAt": "2026-10-19T12:45:09.500386Z",
-        "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
+        "likes": 1933,
+        "reposts": 391,
+        "replies": 719,
+        "quotes": 84,
+        "capturedAt": "2026-10-20T00:14:13.791Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为本机读取来源并落盘时刻，上游精确抓取时刻未知"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "elon-grok-bot-employee-20261019",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 称Grok Bot可能成为用户喜欢的“员工”",
+      "fact": "Elon Musk 在回复中称，Grok Bot可能成为用户最喜欢的员工；没有给出采用、付费、效率或经营数据。",
+      "whyItMatters": "这属于产品推广表态，互动量不能证明企业实际部署或商业回报。",
+      "counterCase": "没有具体执行或经营数据时，不从表态和互动量推断政策落地、收入或成本变化。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-19T16:27:50Z",
+      "url": "https://x.com/elonmusk/status/2112219181500281276",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 7012,
+        "reposts": 943,
+        "replies": 1701,
+        "quotes": 146,
+        "capturedAt": "2026-10-20T00:14:13.791Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为本机读取来源并落盘时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-robotic-arm-emoji-20261019",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 发布机械臂表情回复",
+      "fact": "Elon Musk 的这条回复正文只有“🦾”，没有文字说明项目、产品、数量或时间表。",
+      "whyItMatters": "仅记录本人热度动态；一个表情无法支持机器人订单、量产或技术进展的判断。",
+      "counterCase": "没有具体执行或经营数据时，不从表态和互动量推断政策落地、收入或成本变化。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-19T16:24:42Z",
+      "url": "https://x.com/elonmusk/status/2112218391092285880",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 8271,
+        "reposts": 199,
+        "replies": 339,
+        "quotes": 14,
+        "capturedAt": "2026-10-20T00:14:13.791Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为本机读取来源并落盘时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-direct-shares-reply-20261019",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 再谈直接向公众分配股份",
+      "fact": "Elon Musk 回应称，股份是未来经济的权益，直接向公众分配股份是一种方式。回复没有新增赠股资格、时间表或执行文件。",
+      "whyItMatters": "这是对既有赠股观点的回应；热度动态不证明赠股已实施。",
+      "counterCase": "没有具体执行或经营数据时，不从表态和互动量推断政策落地、收入或成本变化。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-19T15:58:16Z",
+      "url": "https://x.com/elonmusk/status/2112211740884975910",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "engagement",
+      "engagement": {
+        "likes": 24662,
+        "reposts": 1445,
+        "replies": 1257,
+        "quotes": 160,
+        "capturedAt": "2026-10-20T00:14:13.791Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为本机读取来源并落盘时刻，上游精确抓取时刻未知"
       },
       "people": [
         {
@@ -87,6 +178,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "engagement",
       "engagement": {
         "likes": 256860,
@@ -95,13 +192,7 @@
         "replies": 16317,
         "capturedAt": "2026-10-19T12:45:09.500386Z",
         "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "elon-inference-rental-20261019",
@@ -124,6 +215,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "selection": "rule",
       "engagement": {
         "likes": 2526,
@@ -132,13 +229,7 @@
         "replies": 329,
         "capturedAt": "2026-10-19T12:45:09.500386Z",
         "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "wh-airport-landing-20261019",
@@ -156,6 +247,12 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "selection": "engagement",
       "engagement": {
         "likes": 17959,
@@ -164,106 +261,6 @@
         "replies": 977,
         "capturedAt": "2026-10-19T12:45:09.500386Z",
         "source": "Grok网页版x_thread_fetch实际整数；capturedAt为本机收到并保存来源返回的时刻，上游精确抓取时刻未知"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-public-shares-suggestion-20261018",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 建议将股份直接交给公众",
-      "fact": "Elon Musk 回复 Anthropic 有关公益基金的公告，建议“将股份直接交给公众”。",
-      "whyItMatters": "这是关于公益股权分配方式的个人建议；没有证据显示公司据此执行分股，也没有新增订单或收入事实。",
-      "counterCase": "若出现公司正式实施方案，才能评价执行和股权影响；本帖仅为观点。",
-      "affected": [],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-18T20:16:44Z",
-      "url": "https://x.com/elonmusk/status/2111914396490604547",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "engagement",
-      "engagement": {
-        "likes": 16001,
-        "reposts": 701,
-        "replies": 807,
-        "quotes": 128,
-        "views": 657937,
-        "capturedAt": "2026-10-19T00:15:27.831Z",
-        "source": "Grok网页版X工具实际整数；capturedAt为执行器读取返回并落盘时刻，上游精确抓取时刻未知"
-      }
-    },
-    {
-      "eventKey": "whitehouse-border-crossings-20261018",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse 发布边境数据宣传动态",
-      "fact": "WhiteHouse 表示，DHS 报告的财政年度边境越境数量降至历史低位，并称没有向境内释放移民。",
-      "whyItMatters": "这条官方宣传动态未达到本栏产业与投资传导规则；尚未取得财政年度定义、计数口径和独立统计核验。",
-      "counterCase": "原始 DHS/CBP 报告的范围与口径可能改变比较，不能将本帖当作独立统计证明。",
-      "affected": [],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-18T17:51:02Z",
-      "url": "https://x.com/WhiteHouse/status/2111877732258676788",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [],
-      "selection": "engagement",
-      "engagement": {
-        "likes": 2861,
-        "reposts": 673,
-        "replies": 818,
-        "quotes": 39,
-        "views": 144575,
-        "capturedAt": "2026-10-19T00:15:27.831Z",
-        "source": "Grok网页版X工具实际整数；capturedAt为执行器读取返回并落盘时刻，上游精确抓取时刻未知"
-      }
-    },
-    {
-      "eventKey": "elon-starship-competitor-opinion-20261018",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 评论 Starship 与竞争者计划",
-      "fact": "Elon Musk 在引用讨论中表示，即使竞争者未来的计划也落后于 Starship。",
-      "whyItMatters": "这是一条竞争观点与热度动态，未提供可独立验证的新产能、订单、成本或领先程度数据。",
-      "counterCase": "需独立的飞行、复用、有效载荷与成本数据比较，不能以该表态证明领先。",
-      "affected": [],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-18T17:02:36Z",
-      "url": "https://x.com/elonmusk/status/2111865541472190881",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "engagement",
-      "engagement": {
-        "likes": 14188,
-        "reposts": 1158,
-        "replies": 773,
-        "quotes": 105,
-        "views": 2242341,
-        "capturedAt": "2026-10-19T00:15:27.831Z",
-        "source": "Grok网页版X工具实际整数；capturedAt为执行器读取返回并落盘时刻，上游精确抓取时刻未知"
       }
     },
     {
@@ -1136,5 +1133,41 @@
       "selection": "rule"
     }
   ],
-  "retainedItems": []
+  "retainedItems": [
+    {
+      "eventKey": "satya-project-perception-expansion-20261019",
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "title": "Satya Nadella 宣布扩展Project Perception的智能体安全能力",
+      "fact": "Satya Nadella 表示，将模型视为内部风险、把安全控制放在模型之外的原则正用于Project Perception扩展：新增持续评估智能体风险、调整权限与遏制威胁的能力。",
+      "whyItMatters": "权限与风险控制会影响企业将智能体接入实际工作流的可行性；这是功能扩展宣布，尚不足以证明风险下降、付费采用或安全成本改善。",
+      "counterCase": "若实际部署、权限控制或风险评估效果不及预期，安全能力未必足以降低采用障碍；需要客户使用和测量证据。",
+      "affected": [
+        "企业AI智能体治理",
+        "权限与安全控制"
+      ],
+      "author": "satyanadella",
+      "publishedAt": "2026-10-19T13:05:44Z",
+      "url": "https://x.com/satyanadella/status/2112168320946634932",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "selection": "rule",
+      "engagement": {
+        "likes": 1336,
+        "reposts": 234,
+        "replies": 194,
+        "quotes": 76,
+        "capturedAt": "2026-10-20T00:14:13.791Z",
+        "source": "Grok网页版X工具实际整数；capturedAt为本机读取来源并落盘时刻，上游精确抓取时刻未知"
+      },
+      "people": [
+        {
+          "name": "Satya Nadella",
+          "intro": "微软董事长兼CEO"
+        }
+      ]
+    }
+  ]
 }

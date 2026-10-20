@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-19T13:02:31.406Z",
-  "cutoff": "2026-10-19T20:30:00+08:00",
+  "updatedAt": "2026-10-20T00:29:26.071Z",
+  "cutoff": "2026-10-20T08:00:00+08:00",
   "source": "X only",
   "status": "complete",
   "coverage": {
@@ -9,26 +9,26 @@
       {
         "id": "openai",
         "status": "complete",
-        "note": "官方账号及产品/API关键词已查询；用户体验、旧闻与二传排除，无合格新增。",
-        "cutoff": "2026-10-19T20:30:00+08:00"
+        "note": "精确增量查询及追源/反证完成；能力概括营销与事故二传均不入选，非请求失败。",
+        "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "anthropic",
         "status": "complete",
-        "note": "官方账号及企业/API/云/安全关键词已查询；用户体验和旧合作转述排除，无合格新增。",
-        "cutoff": "2026-10-19T20:30:00+08:00"
+        "note": "官方及API企业/云/安全查询完成，无合格新增；不将OpenCode提供商二传当独立事件。",
+        "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
         "status": "complete",
-        "note": "官方账号及模型/Agent/TPU查询已完成；Copilot旧公告执行日缺本日官方X确认，排除。",
-        "cutoff": "2026-10-19T20:30:00+08:00"
+        "note": "官方与产品查询完成；仅旧模型能力演示，无新发布/价格/可用性，不入选。",
+        "cutoff": "2026-10-20T08:00:00+08:00"
       },
       {
         "id": "ai-others",
         "status": "complete",
-        "note": "其他实验室、中国AI与政策、开源查询已完成；MiniMax新增1条，权重仍为未来计划。",
-        "cutoff": "2026-10-19T20:30:00+08:00"
+        "note": "中国AI/实验室/开源/政策查询完成，无合格新增；MiniMax旧发布与未来权重计划复用。",
+        "cutoff": "2026-10-20T08:00:00+08:00"
       }
     ]
   },
@@ -50,27 +50,6 @@
       "author": "MiniMax_AI",
       "publishedAt": "2026-10-19T11:56:23Z",
       "url": "https://x.com/MiniMax_AI/status/2112150867868541221",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-public-benefit-fund-20261018",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic 宣布公益基金股份承诺",
-      "fact": "Anthropic 宣布设立全资公益基金实体，起步承诺为公司5%的股份；公司估值相对既定基线每上涨50%，董事会可酌情决定最多再追加2%。",
-      "whyItMatters": "这是一项新的组织与股权承诺，公益用途和治理执行值得跟踪。公告未说明已完成股份划转或现金支付，也未提供产品收入或客户采用的新数据。",
-      "counterCase": "估值基线、实际划转时间、治理细节及约20%整体承诺的分母仍未明确；后续官方执行方案或更正可能改变对承诺范围的理解。",
-      "affected": [
-        "Anthropic",
-        "AI企业治理"
-      ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-18T18:07:51Z",
-      "url": "https://x.com/AnthropicAI/status/2111881963657412903",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
@@ -427,60 +406,6 @@
         {
           "name": "Logan Kilpatrick",
           "intro": "谷歌AI Studio负责人"
-        }
-      ]
-    },
-    {
-      "eventKey": "nvda-ocp-open-ai-factory-spec-2026-10-12",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "AMD/NVDA/GOOGL/META 推动 AI 工厂开放数据中心规范",
-      "fact": "转述称多家公司推动 Open Data Center Specification v0.7，覆盖物理布局与电力韧性，旨在加快 AI 数据中心建设。",
-      "whyItMatters": "标准化可能缩短交付周期，但也摊薄专有集成溢价。",
-      "counterCase": "规范若无大客户落地则影响有限。",
-      "affected": [
-        "NVDA",
-        "AMD",
-        "GOOGL",
-        "META"
-      ],
-      "author": "MikeLongTerm",
-      "publishedAt": "2026-10-12T18:46:23.000Z",
-      "url": "https://x.com/MikeLongTerm/status/2109717334289977451",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "ai-others": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "meta-muse-wonder-ai-others-2026-10-12",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "Meta 发布 Muse Wonder frontier 模型族",
-      "fact": "Mark Zuckerberg / @Meta 宣布 Muse Wonder 与 Muse Wonder Full，定位 frontier agent 模型，经 API/Muse Code 分发。",
-      "whyItMatters": "改变 AI 实验室竞争格局与企业 agent 采购选项。",
-      "counterCase": "基准不可复现或分发受限则影响有限。",
-      "affected": [
-        "META",
-        "OpenAI",
-        "Anthropic"
-      ],
-      "author": "finkd",
-      "publishedAt": "2026-10-12T16:55:01.000Z",
-      "url": "https://x.com/finkd/status/2109689305073614918",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "ai-others": 4
-      },
-      "people": [
-        {
-          "name": "Mark Zuckerberg",
-          "intro": "Meta创始人兼CEO"
         }
       ]
     }

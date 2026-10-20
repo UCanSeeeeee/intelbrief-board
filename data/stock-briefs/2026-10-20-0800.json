@@ -1,0 +1,631 @@
+{
+  "scheduledFor": "2026-10-20T08:00:00+08:00",
+  "windowStart": "2026-10-19T12:30:00.000Z",
+  "displayWindowStart": "2026-10-19T00:00:00Z",
+  "displayWindowEnd": "2026-10-20T08:00:00+08:00",
+  "carriedOver": [],
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-19T12:30:00.000Z",
+      "end": "2026-10-20T00:00:00.000Z",
+      "cutoff": "2026-10-20T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:market-focus",
+          "key": "jpm-intel-neutral-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        }
+      ]
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-19T12:30:00.000Z",
+      "end": "2026-10-20T00:00:00.000Z",
+      "cutoff": "2026-10-20T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "tsmc-kumamoto-3nm-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-19T12:30:00.000Z",
+      "end": "2026-10-20T00:00:00.000Z",
+      "cutoff": "2026-10-20T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:power",
+          "key": "nscale-msft-uk-grid-ipo-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "nextdc-melbourne-grid-risk-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-19T12:30:00.000Z",
+      "end": "2026-10-20T00:00:00.000Z",
+      "cutoff": "2026-10-20T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-19T12:30:00.000Z",
+      "end": "2026-10-20T00:00:00.000Z",
+      "cutoff": "2026-10-20T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-19T12:30:00.000Z",
+      "end": "2026-10-20T00:00:00.000Z",
+      "cutoff": "2026-10-20T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "hormuz-tankers-mine-claim-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-19T12:30:00.000Z",
+      "end": "2026-10-20T00:00:00.000Z",
+      "cutoff": "2026-10-20T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ],
+  "status": "partial",
+  "summary": "算力交易谈判、核电部署协议与Trainium软件迁移工具出现新披露，分别受融资、建设和实际采用约束。",
+  "marketContext": "北京时间2026-10-20早间，截止对应美东2026-10-19晚间；只采集截止前原帖。",
+  "checklist": [
+    {
+      "item": "news:market-focus",
+      "status": "covered",
+      "note": "精确增量查询完成；无合格候选/证据不足见分批审计，非请求失败。"
+    },
+    {
+      "item": "news:semiconductors",
+      "status": "insufficient",
+      "note": "精确增量查询完成；无合格候选/证据不足见分批审计，非请求失败。"
+    },
+    {
+      "item": "news:power",
+      "status": "insufficient",
+      "note": "精确增量查询完成；无合格候选/证据不足见分批审计，非请求失败。"
+    },
+    {
+      "item": "news:ai-adoption",
+      "status": "no-result",
+      "note": "精确增量查询完成；无合格候选/证据不足见分批审计，非请求失败。"
+    },
+    {
+      "item": "news:capital-cost",
+      "status": "insufficient",
+      "note": "精确增量查询完成；无合格候选/证据不足见分批审计，非请求失败。"
+    },
+    {
+      "item": "news:geopolitics",
+      "status": "insufficient",
+      "note": "精确增量查询完成；无合格候选/证据不足见分批审计，非请求失败。"
+    },
+    {
+      "item": "news:market-structure",
+      "status": "no-result",
+      "note": "精确增量查询完成；无合格候选/证据不足见分批审计，非请求失败。"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "nscale-anthropic-45bn-talks-20261019",
+      "round": 1,
+      "decision": "selected",
+      "reason": "媒体/官方原帖支持有限主张，反证后按阶段及缺口表述"
+    },
+    {
+      "eventKey": "amazon-aep-xenergy-indiana-960mw-20261019",
+      "round": 1,
+      "decision": "selected",
+      "reason": "媒体/官方原帖支持有限主张，反证后按阶段及缺口表述"
+    },
+    {
+      "eventKey": "amazon-torchneuron-20261019",
+      "round": 1,
+      "decision": "selected",
+      "reason": "媒体/官方原帖支持有限主张，反证后按阶段及缺口表述"
+    },
+    {
+      "eventKey": "china-ai-export-draft-20261016",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "旧闻无实质进展"
+    },
+    {
+      "eventKey": "dhs-deepseek-civilian-it-20261019",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "amazon-aep-xenergy-indiana-960mw-20261019",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "同核电事件二传合并"
+    },
+    {
+      "eventKey": "ai-capex-chain-opinion-20261019",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "纯供应链观点无新增事实"
+    },
+    {
+      "eventKey": "ai-headline-summary-20261019",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "重复汇总非独立证据"
+    },
+    {
+      "eventKey": "citi-skhynix-q326-preview-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "mu-2027-hbm-asp-claim-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "缓存命中旧事件，未见新实质变化"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "同旧事件二传无新增"
+    },
+    {
+      "eventKey": "goldman-coreweave-buy-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "Reuters仅支持升级发生，核心假设与现金流依据不足"
+    },
+    {
+      "eventKey": "jpm-coreweave-debt-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "us-energy-russia-diesel-claim-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "spx-negative-gamma-opinion-20261019",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "缺可验证持仓、OI、资金流依据，不将通用机制当事实"
+    }
+  ],
+  "coverage": {
+    "method": "已登录Grok网页版；独立两轮发现、六主题包，新候选追源与独立反证；旧证据复用",
+    "queries": [
+      "仅美股讯息侧栏，第一轮市场焦点独立发现；精确增量[2026-10-19T12:30:00Z,2026-10-20T00:00:00Z)；宏观政策/地缘能源航运/大型公司AI资本开支订单融资指引/市场结构；返回作者时间status原文及真实缺口。",
+      "第二轮独立六包同一精确增量窗：半导体HBM封装产能库存交期；电力并网PPA液冷许可投产；AI付费席位续费API单位经济；资本成本信用国债融资；地缘能源物流供给与制裁；市场结构宽度杠杆Gamma。每包列实际查询与候选，无结果或失败分别标。",
+      "仅针对新增Nscale-Anthropic谈判、Amazon/AEP/X-energy SMR协议、TorchNeuron、DHS DeepSeek移除候选及第二轮新候选，Grok取得官方/Reuters/Bloomberg/FT原帖，精确时间与关键原文，区分阶段及同源关系。",
+      "独立查上述新候选更正/否认、旧闻日期、融资/FID/许可/投产与实际采用空缺；不以没有找到反证证明成立。"
+    ],
+    "gaps": [
+      "X搜索非全量覆盖；采集器转述，执行器未独立直读原帖",
+      "Nscale谈判未有当事人确认；Amazon核电协议缺可确认FID/许可/投产；TorchNeuron缺独立采用与性能成本实测",
+      "Citi/MU ASP、JPM/Goldman研报假设、DHS时间与柴油原采访证据不足",
+      "第一轮工具一条无时间语义查询已记录偏差；仅采用严格窗内原帖，后续查询带精确窗口"
+    ]
+  },
+  "selectionRationale": "第一轮按对算力支出、可用供电和供应商迁移约束的影响选择3条；第二轮六包没有同时满足新事实、权威证据与传导的候选，不用评级/二传补足洞察。",
+  "excludedCandidates": [
+    {
+      "eventKey": "china-ai-export-draft-20261016",
+      "reason": "旧闻无实质进展"
+    },
+    {
+      "eventKey": "dhs-deepseek-civilian-it-20261019",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "amazon-aep-xenergy-indiana-960mw-20261019",
+      "reason": "同核电事件二传合并"
+    },
+    {
+      "eventKey": "ai-capex-chain-opinion-20261019",
+      "reason": "纯供应链观点无新增事实"
+    },
+    {
+      "eventKey": "ai-headline-summary-20261019",
+      "reason": "重复汇总非独立证据"
+    },
+    {
+      "eventKey": "citi-skhynix-q326-preview-20261019",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "mu-2027-hbm-asp-claim-20261019",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "reason": "缓存命中旧事件，未见新实质变化"
+    },
+    {
+      "eventKey": "msft-nscale-essex-exit-2026-10-18",
+      "reason": "同旧事件二传无新增"
+    },
+    {
+      "eventKey": "goldman-coreweave-buy-20261019",
+      "reason": "Reuters仅支持升级发生，核心假设与现金流依据不足"
+    },
+    {
+      "eventKey": "jpm-coreweave-debt-20261019",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "us-energy-russia-diesel-claim-20261019",
+      "reason": "权威原帖或实质新增证据不足，保留待核"
+    },
+    {
+      "eventKey": "spx-negative-gamma-opinion-20261019",
+      "reason": "缺可验证持仓、OI、资金流依据，不将通用机制当事实"
+    }
+  ],
+  "shortfallReason": "真实查询完成，3条焦点、0条洞察达到有限主张的来源门槛；其余旧闻、观点或证据不足，不凑数。",
+  "focus": [
+    {
+      "eventKey": "nscale-anthropic-45bn-talks-20261019",
+      "collectionUnit": "news:market-focus",
+      "title": "FT报道Anthropic与Nscale洽谈第二笔数十亿美元算力交易",
+      "fact": "FT报道，Anthropic与Nscale正洽谈第二笔数十亿美元交易；TechCrunch称正在讨论与8月450亿美元协议相近规模的另一笔算力交易。当前披露阶段是谈判，金额与条款尚无双方正式确认。",
+      "impact": "谈判反映潜在算力需求，但只有转为合同、资金落实并完成交付，才可能形成设备与云服务收入。未来两周可观察正式协议与融资披露，不能把谈判金额直接计为订单或收入。",
+      "direction": "双向",
+      "horizon": "未来两周；项目交付与商业兑现可能跨更长期",
+      "affected": [
+        "AI算力采购",
+        "Nscale融资与建设",
+        "算力设备供应链"
+      ],
+      "counterCase": "若谈判终止、规模下调或融资与建设延迟，潜在需求兑现会减弱；媒体报道未替代最终合同。",
+      "selectionReason": "新算力交易谈判涉及需求与融资的共同约束；金额明确保留媒体归因。",
+      "credibilityReason": "可识别媒体或官方X原帖支持有限主张；未独立直读，不将报道、厂商陈述当已执行结果。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "公开披露为2026-10-19；精确协议签署、谈判或产品可用时刻未确认，不用发帖时间代替。",
+      "attentionEvidence": "有可识别公司或财经/科技媒体在本窗公开发布；没有统一互动数据，不声称全网排名。",
+      "sources": [
+        {
+          "url": "https://x.com/TechCrunch/status/2112329217601949966",
+          "postId": "2112329217601949966",
+          "username": "TechCrunch",
+          "publishedAt": "2026-10-19T23:45:05Z",
+          "checkedAt": "2026-10-20T00:08:21.012Z",
+          "excerpt": "The two companies are reportedly discussing yet another deal of the same magnitude.",
+          "verification": "collector-report",
+          "verificationNote": "Grok已登录网页版定向追源返回；执行器未独立直读X。媒体/厂商主张及证据边界按正文区分，未访问外链补采。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 24,
+            "band": "very-low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 17,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 10
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "文本含传闻或未确认措辞",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        },
+        {
+          "url": "https://x.com/FT/status/2112314982390022147",
+          "postId": "2112314982390022147",
+          "username": "FT",
+          "publishedAt": "2026-10-19T22:48:31Z",
+          "checkedAt": "2026-10-20T00:08:21.012Z",
+          "excerpt": "Anthropic and Nscale in talks for second multibillion-dollar deal",
+          "verification": "collector-report",
+          "verificationNote": "Grok已登录网页版定向追源返回；执行器未独立直读X。媒体/厂商主张及证据边界按正文区分，未访问外链补采。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 24,
+        "label": "规则初评，未校准",
+        "reason": "可识别媒体或官方X原帖支持有限主张；未独立直读，不将报道、厂商陈述当已执行结果。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "amazon-aep-xenergy-indiana-960mw-20261019",
+      "collectionUnit": "news:market-focus",
+      "title": "Amazon与X-energy新核电协议涉及接近1GW规划供电",
+      "fact": "TechCrunch报道，Amazon与X-energy已达成另一项向电网投放核电的协议，规划发电规模接近1吉瓦。协议披露不等于电站已建成，也没有足够证据确认最终投资决定、开工或可用供电日期。",
+      "impact": "长周期核电规划可能扩大未来数据中心供电选择；近期算力交付仍受电网、许可、建设和融资约束。协议容量无法直接消除现有并网瓶颈，也不能视为近期已投入使用的电力。",
+      "direction": "双向",
+      "horizon": "未来两周；项目交付与商业兑现可能跨更长期",
+      "affected": [
+        "数据中心长期供电",
+        "核电设备与开发",
+        "Amazon基础设施"
+      ],
+      "counterCase": "若许可、投资或建设没有推进，供电落地会后移；需要正式里程碑，不能把接近1GW当现有容量。",
+      "selectionReason": "将大型云厂商的电力协议与可运行算力区分，避免意向容量直接转成收入。",
+      "credibilityReason": "可识别媒体或官方X原帖支持有限主张；未独立直读，不将报道、厂商陈述当已执行结果。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "公开披露为2026-10-19；精确协议签署、谈判或产品可用时刻未确认，不用发帖时间代替。",
+      "attentionEvidence": "有可识别公司或财经/科技媒体在本窗公开发布；没有统一互动数据，不声称全网排名。",
+      "sources": [
+        {
+          "url": "https://x.com/TechCrunch/status/2112227043639177387",
+          "postId": "2112227043639177387",
+          "username": "TechCrunch",
+          "publishedAt": "2026-10-19T16:59:05Z",
+          "checkedAt": "2026-10-20T00:08:21.012Z",
+          "excerpt": "Amazon and X-energy have inked another deal to deploy nuclear power to the grid. This one will generate nearly 1 gigawatt of electricity.",
+          "verification": "collector-report",
+          "verificationNote": "Grok已登录网页版定向追源返回；执行器未独立直读X。媒体/厂商主张及证据边界按正文区分，未访问外链补采。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 31,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 29,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 31,
+        "label": "规则初评，未校准",
+        "reason": "可识别媒体或官方X原帖支持有限主张；未独立直读，不将报道、厂商陈述当已执行结果。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "amazon-torchneuron-20261019",
+      "collectionUnit": "news:market-focus",
+      "title": "Amazon推出TorchNeuron，称PyTorch代码可迁至Trainium而无需重写",
+      "fact": "Amazon介绍新的开源工具TorchNeuron，并称开发者可把PyTorch代码运行在AWS Trainium芯片上而无需重写。这是厂商对工具能力的陈述，尚没有独立证据证明所有工作流兼容、实际迁移成本或大规模采用。",
+      "impact": "若迁移门槛下降，开发者选择训练硬件的范围可能扩大，并影响加速器竞争与云成本。但框架兼容只是迁移的一环，算子、性能、运维与供给共同决定真实经济性；发布本身不等于客户转换。",
+      "direction": "双向",
+      "horizon": "未来两周；项目交付与商业兑现可能跨更长期",
+      "affected": [
+        "AWS Trainium",
+        "PyTorch开发工作流",
+        "加速器软件生态"
+      ],
+      "counterCase": "若实际任务仍需大量适配，或性能与总成本未改善，迁移吸引力就可能受限；需独立工作负载和采用数据。",
+      "selectionReason": "厂商官方新工具披露直接关系硬件切换成本，能力主张保留验证边界。",
+      "credibilityReason": "可识别媒体或官方X原帖支持有限主张；未独立直读，不将报道、厂商陈述当已执行结果。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "公开披露为2026-10-19；精确协议签署、谈判或产品可用时刻未确认，不用发帖时间代替。",
+      "attentionEvidence": "有可识别公司或财经/科技媒体在本窗公开发布；没有统一互动数据，不声称全网排名。",
+      "sources": [
+        {
+          "url": "https://x.com/amazon/status/2112182407256277095",
+          "postId": "2112182407256277095",
+          "username": "amazon",
+          "publishedAt": "2026-10-19T14:01:42Z",
+          "checkedAt": "2026-10-20T00:08:21.012Z",
+          "excerpt": "Introducing TorchNeuron, a new open-source tool that lets developers take their PyTorch code and run it on @awscloud Trainium chips, no rewrite required.",
+          "verification": "collector-report",
+          "verificationNote": "Grok已登录网页版定向追源返回；执行器未独立直读X。媒体/厂商主张及证据边界按正文区分，未访问外链补采。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "可识别媒体或官方X原帖支持有限主张；未独立直读，不将报道、厂商陈述当已执行结果。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [],
+  "trigger": "scheduled",
+  "id": "2026-10-20-0800",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T00:29:25.882Z",
+  "counts": {
+    "focus": 3,
+    "insights": 0,
+    "total": 3
+  }
+}
