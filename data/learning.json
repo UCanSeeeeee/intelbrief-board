@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-19T04:14:38Z",
+  "updatedAt": "2026-10-20T12:31:21.842499Z",
   "dailyCuriosities": [
     {
       "id": "2026-10-18-demand-is-not-funding",
@@ -163,6 +163,53 @@
       "sources": [
         {
           "label": "项目研究知识库：现金流与资本开支",
+          "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/knowledge/US_EQUITY_RESEARCH_KB.md"
+        }
+      ]
+    },
+    {
+      "id": "announced-capacity-versus-usable-compute",
+      "title": "公布了算力规模，为什么还不能马上产生收入？",
+      "category": "电力约束与产能兑现",
+      "updatedAt": "2026-10-20T12:31:21.842499Z",
+      "professional": {
+        "definition": "公布容量、已下单设备、已接通电力与实际可用算力是不同阶段。名义规模描述计划或设备上限，运营能力还受供电、冷却、建设、许可、网络和调试约束。",
+        "mechanism": "设备到货后，若并网或冷却尚未就绪，可能仍无法稳定运行。可运行之后还需客户使用、验收与付费，才能连接收入和现金回款；各阶段不能简单互换。",
+        "whyItMatters": "阅读数据中心公告时，需要识别项目已完成哪一步。设备商的订单进度与运营商的收入兑现时间可能不同，融资成本也会在等待期间继续影响回报。",
+        "signals": [
+          "公告写的是意向、合同、开工、并网还是投产",
+          "电力可用日期、建设和冷却进度是否明确",
+          "设备利用率、客户验收与现金回款是否得到证据支持"
+        ]
+      },
+      "story": {
+        "title": "烤箱到了，面包店还不一定能开门",
+        "body": "这是虚构的教学例子。一家面包店订了十台烤箱，宣布自己有很大的生产规模。烤箱运到店里，供电改造却还没有结束；电接好了，通风和验收又需要时间。等设备终于能用，还要有顾客下单并付款。十台烤箱说明店主买了设备，不能直接证明今天就能卖出多少面包。烤箱厂家可能已经拿到订单，店主却还在等待开业，两者的现金流时间并不一样。",
+        "mapping": [
+          {
+            "storyRole": "十台烤箱与店主公告",
+            "professionalMeaning": "设备或名义容量不等于实际运营能力"
+          },
+          {
+            "storyRole": "接电、通风和验收",
+            "professionalMeaning": "供电、冷却、建设及许可约束"
+          },
+          {
+            "storyRole": "顾客购买并付款",
+            "professionalMeaning": "客户采用、收入兑现与现金回款"
+          }
+        ],
+        "boundary": "数据中心的合同、计费、调试和融资更复杂；类比只帮助区分阶段，不能据此估算任何公司的具体收入或延期。"
+      },
+      "commonMistakes": [
+        "把意向容量当成已投产规模。",
+        "把设备下单当成独立终端客户已经付费。",
+        "用供应商订单证明运营商已经产生自由现金流。"
+      ],
+      "relatedCuriosityIds": [],
+      "sources": [
+        {
+          "label": "项目研究知识库：AI实物瓶颈与资本开支",
           "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/knowledge/US_EQUITY_RESEARCH_KB.md"
         }
       ]

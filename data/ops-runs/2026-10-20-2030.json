@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-20-2030",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-20T20:27:17+08:00",
+  "updatedAt": "2026-10-20T20:33:24+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "7162544c024a03bd6ecb66d1edb07c4f268bc36c",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-20T20:27:17+08:00",
+      "detail": null
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-20T20:33:23+08:00",
+      "detail": "当前执行入口及各批契约已读取"
+    },
+    {
+      "name": "search",
+      "status": "failed",
+      "at": "2026-10-20T20:33:23+08:00",
+      "detail": "Grok页面空白，23对象未能查询；学习复用缓存、指标/财报独立完成"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-20T20:33:24+08:00",
+      "detail": "七批已关闭；失败审计、学习1+5、指标、财报与存量保留已落盘"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-20T20:32:22+08:00",
+      "detail": "用户明确不要求本地test/check/build/预览；发布器数据契约正常执行"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "failed",
+      "detail": "Grok空白；无查询完成，23对象成功截止全部保留。"
+    },
+    "people": {
+      "status": "failed",
+      "detail": "Grok空白；无查询完成，23对象成功截止全部保留。"
+    },
+    "tickers": {
+      "status": "failed",
+      "detail": "Grok空白；无查询完成，23对象成功截止全部保留。"
+    },
+    "ai": {
+      "status": "failed",
+      "detail": "Grok空白；无查询完成，23对象成功截止全部保留。"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "日历80精选、待评价0"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "无到期或过时触发，复用官方日历缓存"
+    }
+  },
+  "status": "failed",
+  "error": {
+    "stage": "search",
+    "message": "Grok页面空白，23对象未能查询；学习复用缓存、指标/财报独立完成",
+    "stackSnippet": null
+  },
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-20T20:27:17+08:00",
+      "endedAt": "2026-10-20T20:30:15+08:00",
+      "durationMs": 178000,
+      "detail": "Grok空白；无查询完成，23对象成功截止全部保留。"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-20T20:27:17+08:00",
+      "endedAt": "2026-10-20T20:29:50+08:00",
+      "durationMs": 153000,
+      "detail": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T20:29:50+08:00",
+      "durationMs": 0,
+      "detail": "来源故障、无新候选，无需执行"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T20:29:51+08:00",
+      "durationMs": 0,
+      "detail": "来源故障、无新候选，无需执行"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-20T20:29:51+08:00",
+      "endedAt": "2026-10-20T20:30:15+08:00",
+      "durationMs": 24000,
+      "detail": "Grok空白；无查询完成，23对象成功截止全部保留。"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-20T20:29:51+08:00",
+      "endedAt": "2026-10-20T20:29:51+08:00",
+      "durationMs": 0,
+      "detail": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T20:29:51+08:00",
+      "durationMs": 0,
+      "detail": "来源故障、无新候选，无需执行"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T20:29:51+08:00",
+      "durationMs": 0,
+      "detail": "来源故障、无新候选，无需执行"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-20T20:29:52+08:00",
+      "endedAt": "2026-10-20T20:30:15+08:00",
+      "durationMs": 23000,
+      "detail": "Grok空白；无查询完成，23对象成功截止全部保留。"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-20T20:29:52+08:00",
+      "endedAt": "2026-10-20T20:29:52+08:00",
+      "durationMs": 0,
+      "detail": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T20:29:52+08:00",
+      "durationMs": 0,
+      "detail": "来源故障、无新候选，无需执行"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T20:29:52+08:00",
+      "durationMs": 0,
+      "detail": "来源故障、无新候选，无需执行"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-20T20:29:52+08:00",
+      "endedAt": "2026-10-20T20:30:15+08:00",
+      "durationMs": 23000,
+      "detail": "Grok空白；无查询完成，23对象成功截止全部保留。"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-20T20:29:52+08:00",
+      "endedAt": "2026-10-20T20:29:52+08:00",
+      "durationMs": 0,
+      "detail": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T20:29:52+08:00",
+      "durationMs": 0,
+      "detail": "来源故障、无新候选，无需执行"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-20T20:29:53+08:00",
+      "durationMs": 0,
+      "detail": "来源故障、无新候选，无需执行"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T20:29:53+08:00",
+      "endedAt": "2026-10-20T20:31:22+08:00",
+      "durationMs": 89000,
+      "detail": "复用早报核验证据新增五条独立知识点，基础知识新增一条；论文/趣事跳过"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T20:31:38+08:00",
+      "endedAt": "2026-10-20T20:31:38+08:00",
+      "durationMs": 0,
+      "detail": "当日无到期条目，全年覆盖有效，沿用已核官方日历，无外部检索"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-20T20:31:38+08:00",
+      "endedAt": "2026-10-20T20:32:21+08:00",
+      "durationMs": 43000,
+      "detail": "Nasdaq80精选、pendingReview=0，GILD/SNDK/BUD上限截断已留证"
+    }
+  ]
+}

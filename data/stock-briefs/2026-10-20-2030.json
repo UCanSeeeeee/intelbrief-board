@@ -1,0 +1,282 @@
+{
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-20T12:30:00.000Z",
+      "cutoff": "2026-10-20T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:market-focus",
+          "key": "jpm-intel-neutral-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-leveraged-etf-semiconductor-inflows-20261020",
+          "status": "pending",
+          "reason": "缺Goldman或权威媒体原帖与统计期/金额。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        }
+      ]
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-20T12:30:00.000Z",
+      "cutoff": "2026-10-20T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "tsmc-kumamoto-3nm-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "citi-skhynix-q326-preview-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "mu-2027-hbm-asp-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "pc-memory-lta-2027-20261020",
+          "status": "pending",
+          "reason": "缺公司/权威原始披露与签约日期。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-20T12:30:00.000Z",
+      "cutoff": "2026-10-20T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:power",
+          "key": "nscale-msft-uk-grid-ipo-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "nextdc-melbourne-grid-risk-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-20T12:30:00.000Z",
+      "cutoff": "2026-10-20T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-20T12:30:00.000Z",
+      "cutoff": "2026-10-20T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:capital-cost",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "Reuters仅支持升级发生，核心假设与现金流依据不足",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:capital-cost",
+          "key": "jpm-coreweave-debt-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-20T12:30:00.000Z",
+      "cutoff": "2026-10-20T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "hormuz-tankers-mine-claim-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "us-energy-russia-diesel-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-20T12:30:00.000Z",
+      "cutoff": "2026-10-20T12:30:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ],
+  "scheduledFor": "2026-10-20T20:30:00+08:00",
+  "windowStart": "2026-10-20T07:00:00.000Z",
+  "displayWindowStart": "2026-10-19T12:30:00Z",
+  "displayWindowEnd": "2026-10-20T12:30:00Z",
+  "carriedOver": [],
+  "status": "failed",
+  "summary": "本轮X来源不可用，保留已有重点。",
+  "marketContext": "北京时间周二20:30；美股常规时段尚未开盘。",
+  "checklist": [
+    {
+      "item": "news:market-focus",
+      "status": "insufficient",
+      "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "item": "news:semiconductors",
+      "status": "insufficient",
+      "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "item": "news:power",
+      "status": "insufficient",
+      "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "item": "news:ai-adoption",
+      "status": "insufficient",
+      "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "item": "news:capital-cost",
+      "status": "insufficient",
+      "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "item": "news:geopolitics",
+      "status": "insufficient",
+      "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    },
+    {
+      "item": "news:market-structure",
+      "status": "insufficient",
+      "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    }
+  ],
+  "candidates": [],
+  "coverage": {
+    "method": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
+    "queries": [],
+    "gaps": [
+      "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。"
+    ]
+  },
+  "selectionRationale": "发现无法执行，未生成候选；旧内容保留，不冒充零新增。",
+  "excludedCandidates": [],
+  "focus": [],
+  "insights": [],
+  "shortfallReason": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
+  "trigger": "scheduled",
+  "id": "2026-10-20-2030",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T12:32:21.762Z",
+  "counts": {
+    "focus": 0,
+    "insights": 0,
+    "total": 0
+  }
+}
