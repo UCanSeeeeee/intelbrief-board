@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-20T20:27:17+08:00",
-  "updatedAt": "2026-10-20T20:33:24+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-20T20:35:03+08:00",
+  "finishedAt": "2026-10-20T20:35:03+08:00",
   "gitHeadAtStart": "7162544c024a03bd6ecb66d1edb07c4f268bc36c",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-20T20:34:04+08:00",
+      "detail": "ea2f8b1ab29dfc4d384cf7e8af204082e547da0f 已推master，ls-remote一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-20T20:35:03+08:00",
+      "detail": "Cloudflare ea2f8b1成功，13公开JSON逐字节一致；官方只读/api/vix成功"
     }
   ],
   "pages": {
@@ -77,14 +77,12 @@
       "detail": "无到期或过时触发，复用官方日历缓存"
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "Grok页面空白，23对象未能查询；学习复用缓存、指标/财报独立完成",
-    "stackSnippet": null
-  },
-  "commitHash": null,
-  "notes": [],
+  "status": "partial",
+  "error": null,
+  "commitHash": "ea2f8b1ab29dfc4d384cf7e8af204082e547da0f",
+  "notes": [
+    "学习1+5、财报及指标已发布核验；Grok空白，23对象未查询且不推进成功截止"
+  ],
   "timings": [
     {
       "page": "news",

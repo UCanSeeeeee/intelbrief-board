@@ -2395,8 +2395,107 @@
   "collectionCompletedAt": "2026-10-20T12:32:48.813Z",
   "status": "partial",
   "publication": {
-    "status": "prepared",
-    "note": "已完成数据契约写入；23对象来源故障；保存失败期次、205存量事件及全部人物/个股/AI卡；学习1+5、指标和财报独立更新。"
+    "status": "verified",
+    "contentCommit": "ea2f8b1ab29dfc4d384cf7e8af204082e547da0f",
+    "remoteConfirmedAt": "2026-10-20T12:34:04.396032+00:00",
+    "cloudflare": "success",
+    "checkUrl": "https://dash.cloudflare.com/?to=/654fc092fc71c4dc81184933d5b808b9/pages/view/intelbrief-board/3cf8d07d-5a44-4d83-b5b3-0444a53946c2",
+    "verification": {
+      "checkedAt": "2026-10-20T12:34:43.668103+00:00",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-20-2030.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/reading-board.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/learning.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/journal-learning.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/market-volatility.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "status": 200,
+          "bytesMatch": true
+        }
+      ],
+      "vixApi": {
+        "status": 200,
+        "data": {
+          "schemaVersion": 1,
+          "id": "cboe-vix",
+          "value": 18.44,
+          "asOfDate": "2026-10-19",
+          "quoteKind": "close",
+          "previousClose": 19.99,
+          "fetchedAt": "2026-10-20T12:34:44.325Z",
+          "source": {
+            "name": "Cboe",
+            "url": "https://www.cboe.com/tradable-products/vix",
+            "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          },
+          "retrieval": {
+            "status": "ok"
+          }
+        }
+      }
+    },
+    "verificationTransportNote": "初次Python urllib 13资源均403；同URL curl及Node返回200，curl重取13项逐字节一致，保留客户端差异，不推断服务故障。"
   },
-  "timingNote": "各批及阶段以ops.timings实际记录为准；首次记录早于截止被保护拒绝后，20:30统一补记失败attempt，造成行政收尾跨度重叠，不表示并行检索；无实际X调用，不可将这些跨度称纯模型耗时。Git/线上核验另记。"
+  "timingNote": "各批及阶段以ops.timings实际记录为准；首次记录早于截止被保护拒绝后，20:30统一补记失败attempt，造成行政收尾跨度重叠，不表示并行检索；无实际X调用，不可将这些跨度称纯模型耗时。Git/线上核验另记。",
+  "finishedAt": "2026-10-20T12:35:02.725464+00:00",
+  "resume": {
+    "x": "23对象均失败；19对象从15:00接续，4 AI对象从08:00接续。下次仅按现有成功截止计划，不重搜展示窗。",
+    "publication": "内容与失败记录已发布；下次若仅部署失败，复用此完整audit输出，不重采集。"
+  }
 }
