@@ -4826,9 +4826,144 @@
   ],
   "pending": [],
   "publication": {
-    "status": "saved-locally",
-    "savedAt": "2026-10-21T07:09:02.395Z",
-    "briefId": "2026-10-21-1500"
+    "status": "verified",
+    "contentCommit": "e5931eb933729a9fc80f901f9e0cc13f117fb200",
+    "remoteConfirmed": true,
+    "cloudflare": "completed/success",
+    "checkUrl": "https://github.com/UCanSeeeeee/intelbrief-board/runs/119089209891",
+    "deploymentUrl": "https://dash.cloudflare.com/?to=/654fc092fc71c4dc81184933d5b808b9/pages/view/intelbrief-board/8040452b-e1f1-40f8-a081-5579de4931b8",
+    "verifiedAt": "2026-10-21T07:11:13.980Z",
+    "verification": {
+      "startedAt": "2026-10-21T07:10:37.232Z",
+      "checkedAt": "2026-10-21T07:10:38.863Z",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-21-1500.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/reading-board.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/learning.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/journal-learning.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/market-volatility.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "status": 200,
+          "bytesMatch": true
+        }
+      ],
+      "apis": [
+        {
+          "path": "/api/vix",
+          "status": 200,
+          "data": {
+            "schemaVersion": 1,
+            "id": "cboe-vix",
+            "value": 17.31,
+            "asOfDate": "2026-10-20",
+            "quoteKind": "close",
+            "previousClose": 18.44,
+            "fetchedAt": "2026-10-21T07:10:38.772Z",
+            "source": {
+              "name": "Cboe",
+              "url": "https://www.cboe.com/tradable-products/vix",
+              "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+            },
+            "retrieval": {
+              "status": "ok"
+            }
+          }
+        },
+        {
+          "path": "/api/market-sentiment",
+          "status": 200,
+          "data": {
+            "schemaVersion": 1,
+            "id": "cnn-fear-greed",
+            "market": "us-equities",
+            "score": 27.2,
+            "rating": "fear",
+            "timestamp": "2026-10-21T00:00:00+00:00",
+            "fetchedAt": "2026-10-21T07:10:38.956Z",
+            "previous": {
+              "close": 27.2,
+              "week": 26.6566893424036,
+              "month": 34.1714285714286,
+              "year": 28.542857142857148
+            },
+            "source": {
+              "name": "CNN Fear & Greed Index",
+              "url": "https://www.cnn.com/markets/fear-and-greed",
+              "method": "cnn",
+              "dataUrl": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+              "mirrorUrl": null
+            },
+            "retrieval": {
+              "status": "retained",
+              "message": "来源时间早于已存档数据，保留较新值",
+              "errors": [
+                {
+                  "source": "cnn",
+                  "message": "HTTP 418"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "note": "采集失败与发布成功分开；本次仅归档失败状态并刷新官方快照，未制造新X卡。CNN只读API上游418后保留与发布相同27.2/00:00Z快照；VIX官方17.31/10月20日收盘一致。"
   },
   "timingNote": "ops记录实际调用前后墙钟；预检和最初UI检查未独立计时，不回填起点。",
   "sourceAttempts": [
@@ -4991,5 +5126,185 @@
         "sha256": "d4904883df56552c65b5d8260d488a7698ef44e4adcfc9914dae56a652d35d67"
       }
     ]
+  },
+  "finishedAt": "2026-10-21T07:11:13.980Z",
+  "timing": {
+    "startedAt": "2026-10-21T15:04:07+08:00",
+    "finishedAt": "2026-10-21T15:11:13+08:00",
+    "wallClockMs": 426000,
+    "steps": [
+      {
+        "page": "news",
+        "name": "batch",
+        "status": "failed",
+        "startedAt": "2026-10-21T15:04:07+08:00",
+        "endedAt": "2026-10-21T15:06:04+08:00",
+        "durationMs": 117000,
+        "detail": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。"
+      },
+      {
+        "page": "news",
+        "name": "discovery",
+        "status": "failed",
+        "startedAt": "2026-10-21T15:04:07+08:00",
+        "endedAt": "2026-10-21T15:06:04+08:00",
+        "durationMs": 117000,
+        "detail": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。"
+      },
+      {
+        "page": "news",
+        "name": "source-verification",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-21T15:06:04+08:00",
+        "durationMs": 0,
+        "detail": "发现失败、没有新候选，无需执行。"
+      },
+      {
+        "page": "news",
+        "name": "counter-evidence",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-21T15:06:04+08:00",
+        "durationMs": 0,
+        "detail": "发现失败、没有新候选，无需执行。"
+      },
+      {
+        "page": "people",
+        "name": "batch",
+        "status": "failed",
+        "startedAt": "2026-10-21T15:06:04+08:00",
+        "endedAt": "2026-10-21T15:06:18+08:00",
+        "durationMs": 14000,
+        "detail": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。"
+      },
+      {
+        "page": "people",
+        "name": "discovery",
+        "status": "failed",
+        "startedAt": "2026-10-21T15:06:04+08:00",
+        "endedAt": "2026-10-21T15:06:18+08:00",
+        "durationMs": 14000,
+        "detail": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。"
+      },
+      {
+        "page": "people",
+        "name": "source-verification",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-21T15:06:18+08:00",
+        "durationMs": 0,
+        "detail": "发现失败、没有新候选，无需执行。"
+      },
+      {
+        "page": "people",
+        "name": "counter-evidence",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-21T15:06:18+08:00",
+        "durationMs": 0,
+        "detail": "发现失败、没有新候选，无需执行。"
+      },
+      {
+        "page": "tickers",
+        "name": "batch",
+        "status": "failed",
+        "startedAt": "2026-10-21T15:06:18+08:00",
+        "endedAt": "2026-10-21T15:06:34+08:00",
+        "durationMs": 16000,
+        "detail": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。"
+      },
+      {
+        "page": "tickers",
+        "name": "discovery",
+        "status": "failed",
+        "startedAt": "2026-10-21T15:06:19+08:00",
+        "endedAt": "2026-10-21T15:06:34+08:00",
+        "durationMs": 15000,
+        "detail": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。"
+      },
+      {
+        "page": "tickers",
+        "name": "source-verification",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-21T15:06:34+08:00",
+        "durationMs": 0,
+        "detail": "发现失败、没有新候选，无需执行。"
+      },
+      {
+        "page": "tickers",
+        "name": "counter-evidence",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-21T15:06:34+08:00",
+        "durationMs": 0,
+        "detail": "发现失败、没有新候选，无需执行。"
+      },
+      {
+        "page": "ai",
+        "name": "batch",
+        "status": "failed",
+        "startedAt": "2026-10-21T15:06:35+08:00",
+        "endedAt": "2026-10-21T15:06:52+08:00",
+        "durationMs": 17000,
+        "detail": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。"
+      },
+      {
+        "page": "ai",
+        "name": "discovery",
+        "status": "failed",
+        "startedAt": "2026-10-21T15:06:35+08:00",
+        "endedAt": "2026-10-21T15:06:52+08:00",
+        "durationMs": 17000,
+        "detail": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。"
+      },
+      {
+        "page": "ai",
+        "name": "source-verification",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-21T15:06:52+08:00",
+        "durationMs": 0,
+        "detail": "发现失败、没有新候选，无需执行。"
+      },
+      {
+        "page": "ai",
+        "name": "counter-evidence",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-21T15:06:52+08:00",
+        "durationMs": 0,
+        "detail": "发现失败、没有新候选，无需执行。"
+      },
+      {
+        "page": "learning",
+        "name": "batch",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-21T15:06:52+08:00",
+        "durationMs": 0,
+        "detail": "15:00三项learning.components均false，不重复论文或采集趣事"
+      },
+      {
+        "page": "macro",
+        "name": "batch",
+        "status": "ok",
+        "startedAt": "2026-10-21T15:06:52+08:00",
+        "endedAt": "2026-10-21T15:07:28+08:00",
+        "durationMs": 36000,
+        "detail": "无到期/过时触发；仅复用已核官方日历，不重复检索。"
+      },
+      {
+        "page": "earnings",
+        "name": "batch",
+        "status": "ok",
+        "startedAt": "2026-10-21T15:07:28+08:00",
+        "endedAt": "2026-10-21T15:08:20+08:00",
+        "durationMs": 52000,
+        "detail": "81精选/1269原始；10月29日截断TTE/GILD/BUD，保留缺口，不重复结果核验。"
+      }
+    ],
+    "note": "只统计首个ops起点之后墙钟；此前预检/拉取/UI初检未独立计时。跳过子阶段没有起点，0表示未执行。发布后审计收尾不含在此区间。"
   }
 }
