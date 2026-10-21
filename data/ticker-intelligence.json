@@ -3,49 +3,49 @@
   "updatedAt": "2026-10-21T00:30:43.398Z",
   "cutoff": "2026-10-21T08:00:00+08:00",
   "source": "X only",
-  "status": "partial",
+  "status": "failed",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "complete",
-        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "status": "failed",
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "mu",
-        "status": "partial",
-        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "status": "failed",
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "intc",
-        "status": "partial",
-        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "status": "failed",
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "goog",
-        "status": "complete",
-        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "status": "failed",
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "avgo",
-        "status": "complete",
-        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "status": "failed",
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "vrt",
-        "status": "complete",
-        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "status": "failed",
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "tsm",
-        "status": "complete",
-        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "status": "failed",
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T08:00:00+08:00"
       }
     ]
@@ -592,8 +592,8 @@
       ]
     }
   ],
-  "lastAttemptAt": "2026-10-21T00:30:43.401Z",
-  "attemptedCutoff": "2026-10-21T08:00:00+08:00",
+  "lastAttemptAt": "2026-10-21T07:09:02.395Z",
+  "attemptedCutoff": "2026-10-21T15:00:00+08:00",
   "hotspots": [
     {
       "tabId": "nvda",
@@ -1027,77 +1027,59 @@
     "tabs": [
       {
         "id": "nvda",
-        "status": "complete",
-        "queries": [
-          "($NVDA OR NVIDIA) since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies"
-        ],
-        "note": "Top样本10条，另5条补取；入选3个不同事件，不代表全X排名。",
+        "status": "failed",
+        "queries": [],
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T04:27:58.157Z"
+        "lastAttemptAt": "2026-10-21T07:09:02.395Z"
       },
       {
         "id": "mu",
-        "status": "complete",
-        "queries": [
-          "($MU OR Micron) since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies"
-        ],
-        "note": "Top样本10条，另5条补取；排除Next alert/Retweet+Follow广告，仅2个有具体内容的事件。样本互动较低。",
+        "status": "failed",
+        "queries": [],
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T04:27:58.157Z"
+        "lastAttemptAt": "2026-10-21T07:09:02.395Z"
       },
       {
         "id": "intc",
-        "status": "complete",
-        "queries": [
-          "($INTC OR Intel) since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies"
-        ],
-        "note": "Top样本10条，另5条补取；收2条具体制程/安装讨论，排除缺具体交易内容的代工传闻。",
+        "status": "failed",
+        "queries": [],
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T04:27:58.157Z"
+        "lastAttemptAt": "2026-10-21T07:09:02.395Z"
       },
       {
         "id": "goog",
-        "status": "complete",
-        "queries": [
-          "($GOOG OR $GOOGL OR Alphabet) since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies",
-          "($GOOG OR $GOOGL OR Alphabet) (cloud OR TPU OR capex OR Gemini OR antitrust) min_faves:5 since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies"
-        ],
-        "note": "两次Top查询各10条，主题补查改善相关性；入选3个事件。专家帖只得到明确标记的截断摘录，不补写其余内容。",
+        "status": "failed",
+        "queries": [],
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T04:27:58.157Z"
+        "lastAttemptAt": "2026-10-21T07:09:02.395Z"
       },
       {
         "id": "avgo",
-        "status": "complete",
-        "queries": [
-          "($AVGO OR Broadcom) since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies",
-          "($AVGO OR Broadcom) (ASIC OR chip OR AI OR networking OR VMware) min_faves:5 since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies"
-        ],
-        "note": "两次Top各10条，排除晒持仓、清单引流和正文未完整取得的指引数字转述；入选2个具体事件。",
+        "status": "failed",
+        "queries": [],
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T04:27:58.157Z"
+        "lastAttemptAt": "2026-10-21T07:09:02.395Z"
       },
       {
         "id": "vrt",
-        "status": "complete",
-        "queries": [
-          "($VRT OR Vertiv) since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies",
-          "($VRT OR Vertiv) (cooling OR power OR earnings OR liquid) min_faves:5 since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies"
-        ],
-        "note": "两次Top各10条；入选电网约束和财报预期两个事件，不收空泛看多重复条目。",
+        "status": "failed",
+        "queries": [],
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T04:27:58.157Z"
+        "lastAttemptAt": "2026-10-21T07:09:02.395Z"
       },
       {
         "id": "tsm",
-        "status": "complete",
-        "queries": [
-          "($TSM OR TSMC) since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies",
-          "($TSM OR TSMC) (CoWoS OR capacity OR earnings OR Japan OR capex) min_faves:5 since:2026-10-20_04:15:00_UTC until:2026-10-21_04:15:00_UTC -filter:replies"
-        ],
-        "note": "两次Top各10条；收2个具体讨论，排除BingX交易广告及旧财报简单复述。",
+        "status": "failed",
+        "queries": [],
+        "note": "Grok网页版可见页面持续空白、无输入框，无法提交本批查询；Bot暂停且无第三路径。未执行查询，不是无结果。",
         "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T04:27:58.157Z"
+        "lastAttemptAt": "2026-10-21T07:09:02.395Z"
       }
     ]
   },
