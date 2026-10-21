@@ -1,7 +1,7 @@
 /* Read-only presentation shared by the daily stream and independent ticker hotspots. */
 (function () {
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const parse = value => value && Number.isFinite(Date.parse(value)) ? Date.parse(value) : 0;
+  const parse = value => typeof value === 'number' ? (Number.isFinite(value) ? value : 0) : value && Number.isFinite(Date.parse(value)) ? Date.parse(value) : 0;
   const day = value => parse(value) ? new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(value)) : '';
   const time = value => parse(value) ? new Intl.DateTimeFormat('zh-CN', {timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(value)) : '未查明';
   const safeUrl = value => /^https:\/\/(?:x|twitter)\.com\/[a-zA-Z0-9_]{1,15}\/status\/\d+$/.test(value || '') ? value : '';

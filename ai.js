@@ -8,7 +8,7 @@
   const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[character]));
-  const parseTime = value => value && Number.isFinite(Date.parse(value)) ? Date.parse(value) : 0;
+  const parseTime = value => typeof value === 'number' ? (Number.isFinite(value) ? value : 0) : value && Number.isFinite(Date.parse(value)) ? Date.parse(value) : 0;
   const formatTime = value => parseTime(value) ? new Intl.DateTimeFormat('zh-CN', {
     timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit',
     hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
