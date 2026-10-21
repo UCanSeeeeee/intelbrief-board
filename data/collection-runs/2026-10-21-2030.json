@@ -5415,8 +5415,118 @@
   ],
   "pending": [],
   "publication": {
-    "status": "ready-to-commit",
-    "preparedAt": "2026-10-21T12:40:32.786Z"
+    "status": "verified",
+    "contentCommit": "2f35e0f27a3ad97a1953692a2e516b193fcbbe17",
+    "remoteConfirmed": true,
+    "cloudflare": "completed/success",
+    "deploymentUrl": "https://dash.cloudflare.com/?to=/654fc092fc71c4dc81184933d5b808b9/pages/view/intelbrief-board/b7b53f7a-ab7b-46cb-85b9-d7c211361648",
+    "checkRunId": 119227757310,
+    "verification": {
+      "startedAt": "2026-10-21T12:42:43.322Z",
+      "checkedAt": "2026-10-21T12:42:44.864Z",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-21-2030.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 13356
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 1024
+        },
+        {
+          "path": "data/reading-board.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 2832507
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 50789
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 102723
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 17623
+        },
+        {
+          "path": "data/learning.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 16871
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 29285
+        },
+        {
+          "path": "data/journal-learning.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 34717
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 84522
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 629
+        },
+        {
+          "path": "data/market-volatility.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 414
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "status": 200,
+          "bytesMatch": true,
+          "bytes": 8067
+        }
+      ],
+      "vixApi": {
+        "status": 200,
+        "data": {
+          "schemaVersion": 1,
+          "id": "cboe-vix",
+          "value": 17.31,
+          "asOfDate": "2026-10-20",
+          "quoteKind": "close",
+          "previousClose": 18.44,
+          "fetchedAt": "2026-10-21T12:42:45.143Z",
+          "source": {
+            "name": "Cboe",
+            "url": "https://www.cboe.com/tradable-products/vix",
+            "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          },
+          "retrieval": {
+            "status": "ok"
+          }
+        }
+      }
+    },
+    "verifiedAt": "2026-10-21T12:43:12.793Z",
+    "note": "采集失败与发布成功独立；13项发布JSON匹配、固定只读/api/vix匹配官方17.31/10月20日收盘。仅验证已部署数据，未做本地测试/构建/预览。"
   },
   "sourceAttempts": [
     {
@@ -5748,5 +5858,12 @@
     "successfulThroughUnchanged": true,
     "units": 30,
     "failedObjects": 30
+  },
+  "finishedAt": "2026-10-21T12:43:12.798Z",
+  "timing": {
+    "opsStartedAt": "2026-10-21T20:31:51+08:00",
+    "contentVerifiedAt": "2026-10-21T12:42:44.864Z",
+    "elapsedToContentVerificationSeconds": 653.864,
+    "note": "从首个ops日志至内容部署资源核验的墙钟；不含更早的只读准备与后续回执收尾，不能声称纯模型耗时。"
   }
 }

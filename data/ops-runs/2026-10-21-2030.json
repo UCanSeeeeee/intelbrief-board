@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-21T20:31:51+08:00",
-  "updatedAt": "2026-10-21T20:41:47+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-21T20:43:13+08:00",
+  "finishedAt": "2026-10-21T20:43:13+08:00",
   "gitHeadAtStart": "c4b71ec0d8bc74ceac8ad397514a38632ee3a5c0",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-21T20:43:13+08:00",
+      "detail": "内容2f35e0f已推送，远端master一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-21T20:43:13+08:00",
+      "detail": "Cloudflare成功；13项JSON逐字节匹配；只读VIX API匹配"
     }
   ],
   "pages": {
@@ -77,13 +77,9 @@
       "detail": null
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "X来源入口失败，30对象未查询；学习和官方例外分别完成",
-    "stackSnippet": null
-  },
-  "commitHash": null,
+  "status": "partial",
+  "error": null,
+  "commitHash": "2f35e0f27a3ad97a1953692a2e516b193fcbbe17",
   "notes": [],
   "timings": [
     {
