@@ -52,6 +52,6 @@ function mergeHotspots(input,config,existing,cutoff,now=new Date()){
   }
   const chosen=new Set(hotspots.map(i=>i.tabId+':'+i.eventKey));
   const hotspotRetained=[...new Map(prior.filter(i=>!chosen.has(i.tabId+':'+i.eventKey)&&Date.parse(i.lastMaterialAt||i.firstIncludedAt||i.publishedAt)>=Date.parse(cutoff)-7*86400000).map(i=>[i.tabId+':'+i.eventKey,i])).values()];
-  return {...existing,hotspots,hotspotRetained,hotspotCoverage:{tabs:[...reports.values()]},hotspotCutoff:[...reports.values()].some(r=>r.status!=='failed')?cutoff:existing.hotspotCutoff||null};
+  return require('../../daily-records').capture(existing,{...existing,hotspots,hotspotRetained,hotspotCoverage:{tabs:[...reports.values()]},hotspotCutoff:[...reports.values()].some(r=>r.status!=='failed')?cutoff:existing.hotspotCutoff||null});
 }
 module.exports={mergeHotspots,heatCompare,stamps};

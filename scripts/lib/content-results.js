@@ -199,7 +199,7 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
   // Display overflow is not a new search window and must not erase a morning rule item.
   const retainedItems=[...(existing?.items||[]),...(existing?.retainedItems||[])].filter(old=>!keys.has(old.eventKey)&&!urls.has(old.url)&&old.selection!=='engagement').map(old=>({...old,weeklyRanks:{},tabIds:(old.tabIds||[]).filter(id=>allowed.has(id)&&Date.parse(old.publishedAt)>=tabCutoff(id)-windowDays(allowed.get(id)).latest*dayMs)})).filter(old=>old.tabIds.length);
   const uniqueRetained=[...new Map(retainedItems.map(i=>[i.eventKey,i])).values()];
-  const data={schemaVersion:1,updatedAt:now.toISOString(),cutoff,source:'X only',status,coverage:{tabs:[...reports.values()]},items:stableItems,retainedItems:uniqueRetained};
+  const data=require('../../daily-records').capture(existing,{schemaVersion:1,updatedAt:now.toISOString(),cutoff,source:'X only',status,coverage:{tabs:[...reports.values()]},items:stableItems,retainedItems:uniqueRetained});
   const message=status==='failed'?`所有${kind}Tab采集失败`:`${items.length} 件入选事件${failures.length?`；${failures.length} 个Tab未完整检查`:'；全部Tab已完整检查'}`;
   return {data,status,message,failures};
 }

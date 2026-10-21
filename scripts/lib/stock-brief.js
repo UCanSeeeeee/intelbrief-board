@@ -176,15 +176,8 @@ function saveBrief(brief, root = ROOT) {
   fs.writeFileSync(coverageFile+'.tmp',JSON.stringify(coverage,null,2)+'\n');fs.renameSync(coverageFile+'.tmp',coverageFile);
   const entry = { id: brief.id, trigger: brief.trigger || 'scheduled', scheduledFor: brief.scheduledFor, generatedAt: brief.generatedAt, status: brief.status, counts: brief.counts, file: `${brief.id}.json` };
   const sorted = [entry, ...index.editions.filter(e => e.id !== brief.id)].sort((a,b) => Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor));
-  // Manual tests never evict scheduled archives: each trigger has its own limit.
-  const limit = trigger => (typeof config.historyLimit === 'object' ? config.historyLimit[trigger] : config.historyLimit) || 3;
-  const kept = [], expiredList = [], seen = { scheduled: 0, manual: 0 };
-  for (const e of sorted) { const t = e.trigger || 'scheduled'; (seen[t]++ < limit(t) ? kept : expiredList).push(e); }
-  index.editions = kept;
-  for (const expired of expiredList) {
-    const expiredFile = path.join(dir, expired.file);
-    if (fs.existsSync(expiredFile)) fs.rmSync(expiredFile);
-  }
+  // One combined display limit. Frozen evidence files are never deleted by rotation.
+  index.editions = sorted.slice(0,Number.isInteger(config.historyLimit)?config.historyLimit:3);
   const temporary = `${indexFile}.${process.pid}.tmp`;
   fs.writeFileSync(temporary, JSON.stringify(index, null, 2) + '\n');
   fs.renameSync(temporary, indexFile);

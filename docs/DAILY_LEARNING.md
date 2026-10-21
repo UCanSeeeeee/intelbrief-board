@@ -2,6 +2,8 @@
 
 四个顶部Tab：基础知识讲解、Nature、Science、反直觉小知识。默认基础知识。每日趣事停止采集和展示；旧dailyCuriosities及其关联保留为历史证据。
 
+基础知识按真实`updatedAt`倒序，最新知识先读；专业解释和故事全文保留，不折叠。日期未知不补造。
+
 ## 执行时间
 
 - 每天北京时间08:00：Nature、Science各目标3篇、上限3篇，两刊独立，不凑数。按[论文SOP](JOURNAL_PAPERS.md)执行。

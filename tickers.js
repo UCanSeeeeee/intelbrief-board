@@ -91,6 +91,9 @@
   }
 
   function renderTab(tab, intelligenceItems) {
+    const notice=window.IntelligenceView.collectionNotice(intelligenceData,tab.id);
+    const cutoff=tabCutoffs[tab.id]||displayCutoff;
+    state.textContent=[cutoff?`截至 ${formatTime(cutoff)}（北京时间）`:'',notice].filter(Boolean).join(' · ');
     selector.querySelectorAll('[role="tab"]').forEach(button => {
       const isActive = button.dataset.tab === tab.id;
       button.classList.toggle('active', isActive);

@@ -33,7 +33,12 @@ function migrateBoard(previous) {
   }
   return validateBoard(out);
 }
-function readBoard(root){return migrateBoard(validateBoard(fs.existsSync(fileAt(root))?JSON.parse(fs.readFileSync(fileAt(root),'utf8')):emptyBoard()));}
+function readBoard(root){
+  const board=migrateBoard(validateBoard(fs.existsSync(fileAt(root))?JSON.parse(fs.readFileSync(fileAt(root),'utf8')):emptyBoard()));
+  const indexFile=path.join(root,'data/stock-briefs/index.json');
+  if(!board.lastUsableCutoff&&fs.existsSync(indexFile))board.lastUsableCutoff=JSON.parse(fs.readFileSync(indexFile,'utf8')).editions.filter(e=>e.status!=='failed'&&(!board.asOf||Date.parse(e.scheduledFor)<=Date.parse(board.asOf))).sort((a,b)=>Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor))[0]?.scheduledFor||null;
+  return board;
+}
 function advance(previous,brief) {
   const out=migrateBoard(previous),signature=`${brief.id}:${brief.generatedAt}`;
   if(out.applied.includes(signature))return out;
@@ -74,6 +79,8 @@ function advance(previous,brief) {
   } else out.warnings.push('本期采集失败，保留上次待阅内容；不是本期新增或已重新核验。');
   out.events=[...items.values()];
   out.applied.push(signature);out.asOf=brief.scheduledFor;out.updatedAt=brief.generatedAt;out.period=context(brief.scheduledFor);out.lastStatus=brief.status;out.latestEditionId=brief.id;
+  if(brief.status!=='failed')out.lastUsableCutoff=brief.scheduledFor;
+  out.coverage={status:brief.status==='failed'?'failed':brief.coverage?.status|| (brief.coverage?.gaps?.length?'partial':'complete')};
   out.selected={};
   for(const [group,limit]of [['focus',5],['insights',10]]) {
     const active=out.events.filter(e=>e.state==='active'&&e.group===group);
@@ -86,7 +93,7 @@ function advance(previous,brief) {
       out.selected[group]=active.slice(0,limit).map(e=>e.eventKey);
     }
   }
-  return validateBoard(out);
+  return validateBoard(require('../../daily-records').capture(previous,out));
 }
 function writeBoard(root,board){const file=fileAt(root);fs.mkdirSync(path.dirname(file),{recursive:true});const temp=file+'.tmp';fs.writeFileSync(temp,JSON.stringify(board,null,2)+'\n');fs.renameSync(temp,file);}
 module.exports={emptyBoard,readBoard,advance,writeBoard,fileAt,validateBoard,migrateBoard};

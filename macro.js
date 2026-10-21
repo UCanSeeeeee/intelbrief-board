@@ -9,6 +9,23 @@
 
   let payload = null;
   let activeId = 'q1';
+  let earnings = null;
+
+  function quarterEvents(quarter) {
+    const sourceEvents=quarter.events||[];
+    const references=sourceEvents.filter(e=>e.category==='mega-earnings');
+    const symbols=new Map(references.map(e=>[e.symbol,e]));
+    const days=(earnings?.weeks||[]).flatMap(w=>w.days||[]);
+    const covered=new Set(days.map(d=>d.date));
+    const linked=days.flatMap(d=>(d.items||[]).filter(i=>symbols.has(i.symbol)&&d.date>=quarter.start&&d.date<=quarter.end).map(item=>{
+      const ref=symbols.get(item.symbol);
+      return {...ref,id:`mega-earnings-${d.date}-${item.symbol}`,date:d.date,title:`超关注财报 · ${item.symbol}（${item.name.trim()}）`,timeEt:item.timeLabel,referencePeriod:item.fiscalQuarterEnding,
+        notes:item.epsForecast?`EPS 预期 ${item.epsForecast}`:'',
+        sources:[{name:'财报日历',url:'earnings.html'},{name:'Nasdaq',url:'https://www.nasdaq.com/market-activity/earnings'}]};
+    }));
+    // Old evidence stays in JSON; current-window earnings are read from one source only.
+    return [...sourceEvents.filter(e=>e.category!=='mega-earnings'),...references.filter(e=>!covered.has(e.date)).map(e=>({...e,notes:'',sources:[{name:'Nasdaq',url:'https://www.nasdaq.com/market-activity/earnings'}]})),...linked];
+  }
 
   function card(event, catalog) {
     const sources = (event.sources || []).map((s) =>
@@ -20,7 +37,7 @@
         <span class="calendar-importance">${escape(importanceLabel[event.importance] || event.importance || '常规')}</span>
       </div>
       <p class="earnings-name">${escape(event.title)}</p>
-      <p class="earnings-blurb">${escape(event.notes || '')}</p>
+      ${event.notes?`<p class="earnings-blurb">${escape(event.notes)}</p>`:''}
       </div><div class="macro-timing">
       <p class="earnings-meta calendar-time">${escape(IntelCalendar.macroTime(event))}</p>
       ${event.referencePeriod ? `<p class="earnings-meta">对应 ${escape(event.referencePeriod)}</p>` : ''}
@@ -41,7 +58,7 @@
     $('macro-summary').innerHTML = `<p class="calendar-range">${escape(quarter.start)} 至 ${escape(quarter.end)}（美东日期）</p>`;
 
     const byDay = new Map();
-    for (const event of quarter.events || []) {
+    for (const event of quarterEvents(quarter)) {
       if (!byDay.has(event.date)) byDay.set(event.date, []);
       byDay.get(event.date).push(event);
     }
@@ -109,9 +126,11 @@
     activate(pickDefaultQuarter());
   }
 
-  fetch('data/macro-events.json', { cache: 'no-store' })
-    .then((r) => { if (!r.ok) throw new Error('读取失败'); return r.json(); })
-    .then((data) => { payload = data; mountTabs(); })
+  Promise.all([
+    fetch('data/macro-events.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('读取失败');return r.json();}),
+    fetch('data/earnings-calendar.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('读取失败');return r.json();}).catch(()=>null)
+  ])
+    .then(([data,calendar]) => { payload = data; earnings=calendar; mountTabs(); if(!calendar)$('macro-state').textContent+=' · 财报数据读取失败'; })
     .catch(() => {
       $('macro-state').textContent = '宏观日程读取失败';
       $('macro-board').innerHTML = `<div class="empty-state"><strong>读取失败</strong><p>请稍后重试，或检查 data/macro-events.json。</p></div>`;

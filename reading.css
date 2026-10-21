@@ -157,6 +157,9 @@ body:is([data-page="earnings"], [data-page="macro"]) .earnings-day-head { positi
 .calendar-session { margin-left: auto; color: var(--text-secondary); font-size: 14px; }
 .earnings-copy { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: start; gap: 24px; margin: 0; }
 .earnings-copy > div { min-width: 0; }
+.earnings-copy .earnings-outcome { grid-column: 1 / -1; }
+.collection-notice { margin: 0 0 16px; color: var(--text); font-size: 14px; line-height: 1.8; }
+.lesson-card { scroll-margin-top: 80px; }
 .earnings-card .earnings-blurb { margin: 0; padding: 0; border: 0; font-size: 16px; line-height: 1.85; }
 .earnings-themes { margin: 10px 0 0; color: var(--text-secondary); font-size: 14px; }
 .earnings-outcome { display: grid; align-content: start; gap: var(--space-label); padding: 0; border: 0; }

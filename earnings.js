@@ -27,8 +27,7 @@
       <div class="earnings-copy"><div>
       <p class="earnings-blurb">${escape(blurbs[item.symbol] || item.businessBlurb || '')}</p>
       ${themes ? `<p class="earnings-themes">${themes}</p>` : ''}
-      </div><div class="earnings-outcome">
-      <p class="earnings-meta">${escape(money(item.marketCapUsd))}${item.epsForecast ? ` · EPS 预期 ${escape(item.epsForecast)}` : ''}</p>
+      </div><div><p class="earnings-meta">${escape(money(item.marketCapUsd))}${item.epsForecast ? ` · EPS 预期 ${escape(item.epsForecast)}` : ''}</p></div><div class="earnings-outcome">
       <p class="earnings-result"><strong>结果</strong> ${escape(resultText)}${result.summary ? ` · ${escape(result.summary)}` : ''}</p>
       ${Array.isArray(result.sources) ? `<div class="result-sources">${result.sources.map(s => typeof s === 'string' ? { url: s } : s).filter(s => /^https:\/\//.test(s?.url || '')).map((s, i) => `<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.name || s.title || `评分依据 ${i + 1}`)} ↗</a>`).join(' · ')}</div>` : ''}
       </div></div>
@@ -49,12 +48,16 @@
       const body = day.items?.length
         ? `<div class="earnings-grid">${day.items.map(item => card(item, day.date)).join('')}</div>`
         : `<p class="calendar-empty">暂无重点财报</p>`;
-      return `<section class="earnings-day${day.items?.length ? '' : ' calendar-empty-day'}">
+      return `<section id="earnings-day-${escape(day.date)}" class="earnings-day${day.items?.length ? '' : ' calendar-empty-day'}">
         <header class="earnings-day-head"><h2><time datetime="${escape(day.date)}">${escape(dayLabel(day.date))}</time><small>美东披露日期</small></h2></header>
         ${day.stale ? `<p class="brief-small">当日日历拉取失败，显示的是上次数据（可能过时）。</p>` : ''}
         ${body}
       </section>`;
     }).join('');
+    const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+    const days=week.days||[];
+    const target=week.id==='current'?(days.find(d=>d.date>=today&&d.items?.length)||[...days].reverse().find(d=>d.items?.length)||days[0]):days[0];
+    if(target)requestAnimationFrame(()=>document.getElementById('earnings-day-'+target.date)?.scrollIntoView({block:'start',behavior:'auto'}));
   }
 
   function activate(id) {

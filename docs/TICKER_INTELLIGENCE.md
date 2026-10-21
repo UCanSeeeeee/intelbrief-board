@@ -22,6 +22,8 @@ NVDA、MU、INTC、GOOG、AVGO、VRT、TSM。
 
 按实际样本可见likes降序，并列比较reposts、replies，再按发帖时间；缺项为null、零为0，不估算、不混成分数，不宣称全X前三。保存原文/明确标注截断的摘录、作者、URL、准确发帖时间、事件时间/未知、互动和真实观察时刻。`capturedAt`是本机读取Grok结果的时刻，不是假称X工具提供的抓取时间。热度不证明事实或涨跌。
 
+赞、转发、回复均无正数时，卡片标“非官方 · 讨论线索”，不标热门；真实零值与原始证据保留，不补造热度阈值。跨板块原帖重复按AGENTS保留，不作为缺陷。
+
 仍是一个tickers侧边栏批次。宽搜公司/cashtag，样本低质可在同一窗口补一次产业主题Top查询，不无限重试。事实对象`tickers:<id>`与热点对象`tickers:<id>:hotspots`共用进度文件但独立接续；新热点不沿用旧事实成功游标。首次24h，后续严格增量并合并24h存量；查询完成、入选数、发布成功分别记录。审计`output.hotspots`保存后才推进热点游标。
 
 - 标准返回`tabs/items`及独立`hotspotTabs/hotspots`，`prepareTickerIntelligence`合并两流。缺少热点载荷记失败缺口并保留旧热点，不写成无新增。

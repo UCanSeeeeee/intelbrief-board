@@ -16,15 +16,9 @@
   }));
   function entries(section) {
     if(section.error)return [];
-    if(section.id==='news')return (section.data.events||[]).filter(e=>e.state==='active'||(e.review&&e.state!=='served')).map(e=>({
-      item:e.event,at:e.review&&e.state!=='active'?e.review.checkedAt:e.lastMaterialAt||e.firstSeenAt,
-      group:e.group==='focus'?'市场焦点':'多学科洞察',review:e.review&&e.state!=='active'?e.review:null,
-      history:(e.history||[]).filter(h=>h.event)
-    }));
-    const values=[...new Map([...(section.data.items||[]),...(section.data.retainedItems||[])].map(i=>[V.key(i),i])).values()];
-    const out=values.map(item=>({item,at:V.materialAt(item),tabIds:item.tabIds||[],legacy:!item.lastMaterialAt&&!item.firstIncludedAt}));
-    if(section.id==='tickers')for(const item of [...new Map([...(section.data.hotspots||[]),...(section.data.hotspotRetained||[])].map(i=>[i.tabId+':'+V.key(i),i])).values()])out.push({item,at:V.materialAt(item),tabIds:[item.tabId],hotspot:true});
-    return out;
+    return window.DailyRecords.merge({},section.data)
+      .filter(row=>row.item.selection!=='engagement')
+      .map(row=>section.id==='news'?{...row,group:row.group==='focus'?'市场焦点':'多学科洞察'}:row);
   }
   loaded.forEach(s=>{s.entries=entries(s);});
   const cutoffDays=loaded.filter(s=>!s.error).map(s=>V.day(s.data.hotspotCutoff||s.data.cutoff||s.data.asOf)).filter(Boolean);
@@ -53,7 +47,8 @@
         }).join('');
         return `<section class="daily-subsection"><header><h3>${V.escape(group.label)}</h3>${section.id!=='news'?`<a href="${section.path}?tab=${encodeURIComponent(group.id)}">查看栏目 ↗</a>`:''}</header><div class="signal-list">${html}</div></section>`;
       }).join('');
-      return `<section class="daily-category" id="daily-${section.id}"><header class="daily-category-head"><h2>${section.name}</h2><a href="${section.path}">进入栏目 ↗</a></header>${section.error?'<p class="empty-state">本栏目读取失败，其他栏目仍可阅读。</p>':sections||'<p class="daily-empty">本日暂无新增或实质进展</p>'}</section>`;
+      const notice=section.error?'':V.collectionNotice(section.data);
+      return `<section class="daily-category" id="daily-${section.id}"><header class="daily-category-head"><h2>${section.name}</h2><a href="${section.path}">进入栏目 ↗</a></header>${section.error?'<p class="empty-state">本栏目读取失败，其他栏目仍可阅读。</p>':`${notice?`<p class="collection-notice" role="status">${V.escape(notice)}</p>`:''}${sections||`<p class="daily-empty">${notice?'所选日期暂无已收录内容':'本日暂无新增或实质进展'}</p>`}`}</section>`;
     }).join('');
     const url=new URL(location.href);url.searchParams.set('date',selected);history.replaceState(null,'',url.pathname+url.search);
   }

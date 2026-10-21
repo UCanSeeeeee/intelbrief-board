@@ -91,6 +91,9 @@
   }
 
   function renderTab(tab, intelligenceItems) {
+    const notice=window.IntelligenceView.collectionNotice(intelligenceData,tab.id);
+    const cutoff=tabCutoffs[tab.id]||displayCutoff;
+    state.textContent=[cutoff?`截至 ${formatTime(cutoff)}（北京时间）`:'',notice].filter(Boolean).join(' · ');
     selector.querySelectorAll('[role="tab"]').forEach(button => {
       const isActive = button.dataset.tab === tab.id;
       button.classList.toggle('active', isActive);
@@ -131,6 +134,7 @@
   }
 
   let tabs = [];
+  let intelligenceData = {};
   let items = [];
   let retainedItems = [];
   let displayCutoff = 0;
@@ -160,6 +164,7 @@
   function load() {
     return Promise.all([json('config/ai-intelligence.json'), json('data/ai-intelligence.json')])
       .then(([config, intelligence]) => {
+        intelligenceData = intelligence;
         tabs = Array.isArray(config.tabs) ? config.tabs : [];
         items = Array.isArray(intelligence.items) ? intelligence.items : [];
         retainedItems = Array.isArray(intelligence.retainedItems) ? intelligence.retainedItems : [];

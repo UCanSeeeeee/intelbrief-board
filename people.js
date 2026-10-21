@@ -97,6 +97,9 @@
   }
 
   function renderTab(tab, intelligenceItems) {
+    const notice=window.IntelligenceView.collectionNotice(intelligenceData,tab.id);
+    const cutoff=tabCutoffs[tab.id]||displayCutoff;
+    state.textContent=[cutoff?`截至 ${formatTime(cutoff)}（北京时间）`:'',notice].filter(Boolean).join(' · ');
     selector.querySelectorAll('[role="tab"]').forEach(button => {
       const isActive = button.dataset.tab === tab.id;
       button.classList.toggle('active', isActive);
@@ -135,6 +138,7 @@
   }
 
   let tabs = [];
+  let intelligenceData = {};
   let items = [];
   let retainedItems = [];
   let displayCutoff = 0;
@@ -164,6 +168,7 @@
   function load() {
     return Promise.all([json('config/people-intelligence.json'), json('data/people-intelligence.json')])
       .then(([config, intelligence]) => {
+        intelligenceData = intelligence;
         tabs = Array.isArray(config.tabs) ? config.tabs : [];
         items = Array.isArray(intelligence.items) ? intelligence.items : [];
         retainedItems = Array.isArray(intelligence.retainedItems) ? intelligence.retainedItems : [];
@@ -175,9 +180,9 @@
           detail.innerHTML = '<div class="empty-state"><strong>尚未配置顶部 Tab</strong><p>请先维护人物情报配置。</p></div>';
           return;
         }
-        // Product rule 2026-10-15: every entry opens the first configured tab (马斯克).
-        // In-session tab clicks still work; URL deep-links are not restored on load.
-        active = tabs[0];
+        const query=new URLSearchParams(location.search);
+        const person=query.get('person')?.toLowerCase();
+        active=tabs.find(t=>t.id===query.get('tab'))||tabs.find(t=>person&&t.handle?.toLowerCase()===person)||tabs[0];
         renderTab(active, items);
       })
       .catch(error => {

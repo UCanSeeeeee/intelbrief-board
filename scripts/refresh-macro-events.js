@@ -21,4 +21,4 @@ for (const q of data.quarters) {
 }
 console.log(`[macro] year=${data.year} events=${n} byQuarter=${JSON.stringify(data.counts?.byQuarter)}`);
 console.log(`[macro] refresh mode=${cfg.refresh?.mode}; not tied to brief slots.`);
-console.log('[macro] To update: edit data/macro-events.json with official dates only, then npm run check && git commit && git push.');
+console.log('[macro] To update: follow AGENTS pull/edit/commit/push rules; no local validation prerequisite. Earnings display joins the shared earnings calendar.');

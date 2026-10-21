@@ -33,7 +33,7 @@
 
   function lessonCard(item) {
     const sources = Array.isArray(item.sources) ? item.sources : [];
-    return `<article class="learning-card lesson-card">
+    return `<article id="lesson-${escape(item.id)}" class="learning-card lesson-card">
       <header class="lesson-head"><div><span class="lesson-category">${escape(item.category)}</span><h2>${escape(item.title)}</h2></div><time>更新 ${escape(formatTime(item.updatedAt))}</time></header>
       <div class="lesson-versions">
         <section class="lesson-version professional-version" aria-labelledby="${escape(item.id)}-professional">
@@ -119,8 +119,8 @@
     state.textContent = ['nature','science'].includes(active) ? (journalError?'论文数据读取失败':journals.updatedAt?`选读整理于 ${formatTime(journals.updatedAt)}（北京时间）`:'正在读取论文选读') : data.updatedAt?`更新于 ${formatTime(data.updatedAt)}（北京时间）`:'栏目已建立，等待首批合格内容';
     if(active==='counterintuitive')state.textContent = counterError?'小知识读取失败':counterintuitive.updatedAt?`小知识整理于 ${formatTime(counterintuitive.updatedAt)}（北京时间）`:counterLoaded?'栏目已建立，等待每日学习批次':'正在读取小知识';
     if (active === 'basics') {
-      const items = data.lessons || [];
-      panel.innerHTML = items.length ? `<div class="learning-list">${items.map(lessonCard).join('')}</div>` : empty('暂无知识讲解','');
+      const items = [...(data.lessons || [])].sort((a,b)=>Date.parse(b.updatedAt||b.date||0)-Date.parse(a.updatedAt||a.date||0));
+      panel.innerHTML = items.length ? `<nav class="daily-jumps" aria-label="知识目录">${items.map(i=>`<a href="#lesson-${escape(i.id)}">${escape(i.title)}</a>`).join('')}</nav><div class="learning-list">${items.map(lessonCard).join('')}</div>` : empty('暂无知识讲解','');
     } else if(active==='counterintuitive') {
       panel.innerHTML = counterPanel(current);
     } else {
