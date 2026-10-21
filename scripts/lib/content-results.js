@@ -93,6 +93,9 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     const ranks=item.weeklyRanks||{};
     for(const [tabId,rank] of Object.entries(ranks)) requireValue(item.tabIds.includes(tabId)&&Number.isInteger(rank)&&rank>=1&&rank<=allowed.get(tabId).weeklyLimit,`${kind}周榜排名无效`);
     const out={eventKey:item.eventKey.trim(),tabIds:item.tabIds,title:item.title.trim(),fact:item.fact.trim(),whyItMatters:item.whyItMatters.trim(),counterCase:item.counterCase.trim(),affected:item.affected.map(String),author:item.author.trim(),publishedAt:item.publishedAt,url:item.url,verification:'collector-report',tier:item.tier,weeklyRanks:ranks};
+    const prior=[...(existing?.items||[]),...(existing?.retainedItems||[])].find(old=>old.eventKey===item.eventKey);
+    for(const field of ['eventTime','eventTimeNote','originalText','excerpt'])if((item[field]??prior?.[field])!=null)out[field]=item[field]??prior[field];
+    Object.assign(out,require('./ticker-hotspots').stamps(out,prior,now));
     if(config.selectionPolicy){out.selection=item.selection||'rule';if(item.engagement!=null)out.engagement=item.engagement;}
     try{annotateCard(out,undefined,`${kind}.${out.eventKey}`);}catch(error){requireValue(false,error.message);}
     return out;
@@ -162,6 +165,7 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
     keys.add(old.eventKey); urls.add(old.url);
     const retained={eventKey:old.eventKey,tabIds:keepTabIds,title:String(old.title||'').trim(),fact:String(old.fact||'').trim(),whyItMatters:String(old.whyItMatters||'').trim(),counterCase:String(old.counterCase||'').trim(),affected:Array.isArray(old.affected)?old.affected.map(String):[],author:String(old.author||'').trim(),publishedAt:old.publishedAt,url:old.url,verification:'collector-report',tier:old.tier==='must-read'?'must-read':'watch',weeklyRanks:ranks};
     if(Array.isArray(old.people)) retained.people=old.people;
+    for(const field of ['firstIncludedAt','lastMaterialAt','eventTime','eventTimeNote','originalText','excerpt'])if(old[field]!=null)retained[field]=old[field];
     if(config.selectionPolicy){retained.selection=old.selection||'rule';if(old.engagement!=null)retained.engagement=old.engagement;}
     try{annotateCard(retained,undefined,`${kind}.retained.${retained.eventKey}`);}catch(error){requireValue(false,error.message);}
     items.push(retained);
@@ -200,7 +204,16 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
   return {data,status,message,failures};
 }
 function preparePeopleIntelligence(input,config,existing,cutoff,now=new Date()){return prepareTabbedIntelligence(input,config,existing,cutoff,now,'人物情报');}
-function prepareTickerIntelligence(input,config,existing,cutoff,now=new Date()){return prepareTabbedIntelligence(input,config,existing,cutoff,now,'个股情报');}
+function prepareTickerIntelligence(input,config,existing,cutoff,now=new Date()){
+  const result=prepareTabbedIntelligence(input,config,existing,cutoff,now,'个股情报');
+  if(config.hotspotPolicy?.enabled){
+    const missing=!Array.isArray(input.hotspotTabs)||!Array.isArray(input.hotspots);
+    const hotInput=missing?{hotspotTabs:config.tabs.map(t=>({id:t.id,status:'failed',queries:[],note:'采集器未交付独立热点结果，不能写成无新增'})),hotspots:[]}:input;
+    result.data=require('./ticker-hotspots').mergeHotspots(hotInput,config,{...existing,...result.data},cutoff,now);
+    if(hotInput.hotspotTabs.some(r=>r.status!=='complete')){if(result.status!=='failed')result.status='partial';result.data.status=result.status;result.message+='；热点存在采集缺口';}
+  }
+  return result;
+}
 function prepareCryptoIntelligence(input,config,existing,cutoff,now=new Date()){return prepareTabbedIntelligence(input,config,existing,cutoff,now,'加密情报');}
 function prepareAiIntelligence(input,config,existing,cutoff,now=new Date()){return prepareTabbedIntelligence(input,config,existing,cutoff,now,'AI板块情报');}
 function prepareShortsIntelligence(input,config,existing,cutoff,now=new Date()){return prepareTabbedIntelligence(input,config,existing,cutoff,now,'板块空头');}

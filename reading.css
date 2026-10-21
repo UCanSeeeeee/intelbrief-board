@@ -1,4 +1,4 @@
-/* Comfort reading, shared by all seven active pages; loaded after news geometry. */
+/* Comfort reading, shared by all active pages; loaded after news geometry. */
 :root {
   color-scheme: light;
   --bg: #f3f4f6; --bg-elevated: #f3f4f6; --bg-card: #fcfcfd; --bg-hover: #e7e9ee;
@@ -66,6 +66,28 @@ body[data-page] .section-header h2, .signal-section .signal-section-head h3 { ma
 body[data-page] .x-feed, .signal-list, .learning-list { gap: var(--space-block); }
 body[data-page] .brief-card, .signal-card, .learning-card { display: flex; flex-direction: column; gap: var(--space-related); padding: var(--card-pad-block) var(--card-pad-inline); border: 1px solid var(--border-subtle); border-radius: 8px; background: var(--bg-card); box-shadow: none; }
 .signal-card-engagement { border-style: solid; opacity: 1; }
+.daily-date { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-secondary); }
+.daily-date select { min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; color: var(--text); background: var(--bg-card); font: inherit; }
+.daily-jumps { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0 0 24px; font-size: 14px; }
+.daily-jumps a { display: inline-flex; align-items: center; min-height: 44px; color: var(--text-secondary); }
+.daily-category { margin: 0 0 48px; scroll-margin-top: 16px; }
+.daily-category-head { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 20px; padding: 16px 0; margin-bottom: 24px; border-top: 2px solid var(--border); border-bottom: 1px solid var(--border-subtle); background: var(--bg); }
+.daily-category-head h2 { margin: 0; font-size: 22px; font-weight: 600; }
+.daily-category-head a, .daily-subsection > header a { font-size: 14px; color: var(--text-secondary); }
+.daily-subsection { margin: 0 0 32px; }
+.daily-subsection > header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; align-items: baseline; margin: 0 0 16px; }
+.daily-subsection > header h3 { margin: 0; font-size: 18px; font-weight: 600; }
+.daily-entry { scroll-margin-top: 100px; }
+.daily-empty, .hotspot-status, .hotspot-caveat, .daily-duplicate { color: var(--text-secondary); font-size: 14px; line-height: 1.8; margin: 0 0 16px; }
+.signal-card .hotspot-caveat { margin: 0; color: var(--amber); }
+.daily-history { padding: 16px 28px; color: var(--text-secondary); font-size: 14px; line-height: 1.8; }
+.daily-history h5 { margin: 0 0 8px; font-size: 14px; }
+.daily-history p { margin: 0 0 8px; }
+.hotspot-cutoff { font-size: 14px; color: var(--text-muted); }
+@media (max-width: 1100px) {
+  .daily-category-head { padding-left: 44px; }
+  .daily-category { scroll-margin-top: 8px; }
+}
 body[data-page] .brief-author, .signal-card .signal-meta { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: baseline; gap: 4px 14px; margin: 0; font-size: 14px; line-height: 1.7; color: var(--text-muted); }
 body[data-page] .brief-author strong, .signal-author strong { font-weight: 500; color: var(--text-secondary); }
 body[data-page] .brief-author .signal-verification, .signal-card .signal-verification { margin: 0; font-size: 14px; }

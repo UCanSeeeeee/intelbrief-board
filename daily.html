@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日更新 — 美股情报</title>
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="reading.css" />
+</head>
+<body data-page="daily">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-controls="sidebar" aria-expanded="false"><span aria-hidden="true">☰</span></button>
+  <div class="overlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="站点导航">
+      <div class="logo"><div class="logo-mark">简</div><div class="logo-text">美股情报</div></div>
+      <nav class="nav" aria-label="主导航">
+        <a href="daily.html" data-nav="daily"><span class="nav-icon" aria-hidden="true">≡</span> 每日更新</a>
+        <a href="index.html" data-nav="news"><span class="nav-icon" aria-hidden="true">▣</span> 美股讯息</a>
+        <a href="people.html" data-nav="people"><span class="nav-icon" aria-hidden="true">◎</span> 具体人物</a>
+        <a href="tickers.html" data-nav="tickers"><span class="nav-icon" aria-hidden="true">◇</span> 具体个股</a>
+        <a href="ai.html" data-nav="ai"><span class="nav-icon" aria-hidden="true">⬡</span> AI板块</a>
+        <a href="learning.html" data-nav="learning"><span class="nav-icon" aria-hidden="true">◈</span> 每日学习</a>
+        <a href="macro.html" data-nav="macro"><span class="nav-icon" aria-hidden="true">◉</span> 宏观大事</a>
+        <a href="earnings.html" data-nav="earnings"><span class="nav-icon" aria-hidden="true">▤</span> 财报日历</a>
+      </nav>
+    </aside>
+    <main class="main wide" id="main" tabindex="-1">
+      <header class="page-header"><h1>每日更新</h1><div class="daily-date"><label for="daily-date">北京时间</label><select id="daily-date" aria-label="阅读日期"><option>正在读取…</option></select></div></header>
+      <nav class="daily-jumps" aria-label="本页栏目"><a href="#daily-news">美股讯息</a><a href="#daily-people">具体人物</a><a href="#daily-tickers">具体个股</a><a href="#daily-ai">AI板块</a></nav>
+      <div id="daily-board"><p class="empty-state">正在读取当日更新…</p></div>
+      <noscript>请启用 JavaScript，或从侧边栏分别阅读原栏目。</noscript>
+    </main>
+  </div>
+  <script src="app.js"></script>
+  <script src="intelligence-view.js"></script>
+  <script src="daily.js"></script>
+</body>
+</html>

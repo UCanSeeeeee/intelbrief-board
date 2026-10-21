@@ -97,6 +97,22 @@ for (const tab of tickerTabs.values()) {
   if (ranks.length > tab.weeklyLimit || new Set(ranks).size !== ranks.length) fail(`${tab.label} invalid weekly ranking`);
 }
 const equityIds = ['nvda','mu','intc','goog','avgo','vrt','tsm'];
+if(tickerConfig.hotspotPolicy?.enabled){
+  const seen=new Set();
+  for(const item of [...(tickerData.hotspots||[]),...(tickerData.hotspotRetained||[])]){
+    const identity=item.tabId+':'+item.eventKey;
+    if(!tickerTabs.has(item.tabId)||!item.eventKey||seen.has(identity))fail('ticker hotspots: invalid or duplicate event');seen.add(identity);
+    const match=/^https:\/\/(?:x|twitter)\.com\/([a-zA-Z0-9_]{1,15})\/status\/\d+$/.exec(item.url||'');
+    if(!match||match[1].toLowerCase()!==String(item.author).replace(/^@/,'').toLowerCase())fail('ticker hotspots: author/url mismatch');
+    if(item.sourceNature!=='non-official'||item.verification!=='collector-report'||item.weeklyRanks)fail('ticker hotspots: cannot become verified facts or weekly ranking');
+    if(!item.originalText||!item.caveat||!Number.isFinite(Date.parse(item.publishedAt))||(!item.eventTime&&!item.eventTimeNote))fail('ticker hotspots: missing original text/time/boundary');
+    if(!Number.isFinite(Date.parse(item.engagement?.capturedAt))||!['likes','reposts','replies'].some(k=>Number.isInteger(item.engagement?.[k])))fail('ticker hotspots: missing observed engagement');
+  }
+  for(const id of tickerTabs.keys()){
+    if(!tickerData.hotspotCoverage?.tabs?.some(r=>r.id===id))fail(id+': missing hotspot coverage');
+    if((tickerData.hotspots||[]).filter(i=>i.tabId===id).length>tickerConfig.hotspotPolicy.limit)fail(id+': too many hotspots');
+  }
+}
 if ([...tickerTabs.keys()].sort().join() !== equityIds.slice().sort().join()) fail('ticker tabs must be equity-only NVDA/MU/INTC/GOOG/AVGO/VRT/TSM');
 for (const tab of tickerTabs.values()) if (tab.assetClass === 'crypto' || tab.assetClass === 'crypto-token' || tab.contractAddress) fail(`${tab.id} crypto fields not allowed on equity ticker page`);
 

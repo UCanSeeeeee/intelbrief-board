@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T00:21:18.467Z",
+  "updatedAt": "2026-10-21T04:27:58.180Z",
   "migration": {
     "auditFile": "data/collection-runs/2026-10-18-2030.json",
     "cutoff": "2026-10-18T12:30:00.000Z",
@@ -236,6 +236,76 @@
       "lastAttemptEnd": "2026-10-21T00:00:00.000Z",
       "lastAttemptStatus": "searched",
       "lastSuccessAt": "2026-10-21T00:21:18.467Z"
+    },
+    "tickers:nvda:hotspots": {
+      "lastAttemptAt": "2026-10-21T04:27:58.180Z",
+      "lastAttemptEnd": "2026-10-21T04:15:00.000Z",
+      "lastAttemptStatus": "searched",
+      "note": "Top样本10条，另5条补取；入选3个不同事件，不代表全X排名。",
+      "through": "2026-10-21T04:15:00.000Z",
+      "lastSuccessAt": "2026-10-21T04:27:58.180Z",
+      "runId": "2026-10-21-1215-ticker-hotspots",
+      "evidenceFile": "data/collection-runs/2026-10-21-1215-ticker-hotspots.json"
+    },
+    "tickers:mu:hotspots": {
+      "lastAttemptAt": "2026-10-21T04:27:58.180Z",
+      "lastAttemptEnd": "2026-10-21T04:15:00.000Z",
+      "lastAttemptStatus": "searched",
+      "note": "Top样本10条，另5条补取；排除Next alert/Retweet+Follow广告，仅2个有具体内容的事件。样本互动较低。",
+      "through": "2026-10-21T04:15:00.000Z",
+      "lastSuccessAt": "2026-10-21T04:27:58.180Z",
+      "runId": "2026-10-21-1215-ticker-hotspots",
+      "evidenceFile": "data/collection-runs/2026-10-21-1215-ticker-hotspots.json"
+    },
+    "tickers:intc:hotspots": {
+      "lastAttemptAt": "2026-10-21T04:27:58.180Z",
+      "lastAttemptEnd": "2026-10-21T04:15:00.000Z",
+      "lastAttemptStatus": "searched",
+      "note": "Top样本10条，另5条补取；收2条具体制程/安装讨论，排除缺具体交易内容的代工传闻。",
+      "through": "2026-10-21T04:15:00.000Z",
+      "lastSuccessAt": "2026-10-21T04:27:58.180Z",
+      "runId": "2026-10-21-1215-ticker-hotspots",
+      "evidenceFile": "data/collection-runs/2026-10-21-1215-ticker-hotspots.json"
+    },
+    "tickers:goog:hotspots": {
+      "lastAttemptAt": "2026-10-21T04:27:58.180Z",
+      "lastAttemptEnd": "2026-10-21T04:15:00.000Z",
+      "lastAttemptStatus": "searched",
+      "note": "两次Top查询各10条，主题补查改善相关性；入选3个事件。专家帖只得到明确标记的截断摘录，不补写其余内容。",
+      "through": "2026-10-21T04:15:00.000Z",
+      "lastSuccessAt": "2026-10-21T04:27:58.180Z",
+      "runId": "2026-10-21-1215-ticker-hotspots",
+      "evidenceFile": "data/collection-runs/2026-10-21-1215-ticker-hotspots.json"
+    },
+    "tickers:avgo:hotspots": {
+      "lastAttemptAt": "2026-10-21T04:27:58.180Z",
+      "lastAttemptEnd": "2026-10-21T04:15:00.000Z",
+      "lastAttemptStatus": "searched",
+      "note": "两次Top各10条，排除晒持仓、清单引流和正文未完整取得的指引数字转述；入选2个具体事件。",
+      "through": "2026-10-21T04:15:00.000Z",
+      "lastSuccessAt": "2026-10-21T04:27:58.180Z",
+      "runId": "2026-10-21-1215-ticker-hotspots",
+      "evidenceFile": "data/collection-runs/2026-10-21-1215-ticker-hotspots.json"
+    },
+    "tickers:vrt:hotspots": {
+      "lastAttemptAt": "2026-10-21T04:27:58.180Z",
+      "lastAttemptEnd": "2026-10-21T04:15:00.000Z",
+      "lastAttemptStatus": "searched",
+      "note": "两次Top各10条；入选电网约束和财报预期两个事件，不收空泛看多重复条目。",
+      "through": "2026-10-21T04:15:00.000Z",
+      "lastSuccessAt": "2026-10-21T04:27:58.180Z",
+      "runId": "2026-10-21-1215-ticker-hotspots",
+      "evidenceFile": "data/collection-runs/2026-10-21-1215-ticker-hotspots.json"
+    },
+    "tickers:tsm:hotspots": {
+      "lastAttemptAt": "2026-10-21T04:27:58.180Z",
+      "lastAttemptEnd": "2026-10-21T04:15:00.000Z",
+      "lastAttemptStatus": "searched",
+      "note": "两次Top各10条；收2个具体讨论，排除BingX交易广告及旧财报简单复述。",
+      "through": "2026-10-21T04:15:00.000Z",
+      "lastSuccessAt": "2026-10-21T04:27:58.180Z",
+      "runId": "2026-10-21-1215-ticker-hotspots",
+      "evidenceFile": "data/collection-runs/2026-10-21-1215-ticker-hotspots.json"
     }
   },
   "pending": [
@@ -694,6 +764,13 @@
     "2026-10-21-0800:ai:openai:2026-10-20T00:00:00.000Z:2026-10-21T00:00:00.000Z",
     "2026-10-21-0800:ai:anthropic:2026-10-20T00:00:00.000Z:2026-10-21T00:00:00.000Z",
     "2026-10-21-0800:ai:goog-ai:2026-10-20T00:00:00.000Z:2026-10-21T00:00:00.000Z",
-    "2026-10-21-0800:ai:ai-others:2026-10-20T00:00:00.000Z:2026-10-21T00:00:00.000Z"
+    "2026-10-21-0800:ai:ai-others:2026-10-20T00:00:00.000Z:2026-10-21T00:00:00.000Z",
+    "2026-10-21-1215-ticker-hotspots:tickers:nvda:hotspots:2026-10-20T04:15:00.000Z:2026-10-21T04:15:00.000Z",
+    "2026-10-21-1215-ticker-hotspots:tickers:mu:hotspots:2026-10-20T04:15:00.000Z:2026-10-21T04:15:00.000Z",
+    "2026-10-21-1215-ticker-hotspots:tickers:intc:hotspots:2026-10-20T04:15:00.000Z:2026-10-21T04:15:00.000Z",
+    "2026-10-21-1215-ticker-hotspots:tickers:goog:hotspots:2026-10-20T04:15:00.000Z:2026-10-21T04:15:00.000Z",
+    "2026-10-21-1215-ticker-hotspots:tickers:avgo:hotspots:2026-10-20T04:15:00.000Z:2026-10-21T04:15:00.000Z",
+    "2026-10-21-1215-ticker-hotspots:tickers:vrt:hotspots:2026-10-20T04:15:00.000Z:2026-10-21T04:15:00.000Z",
+    "2026-10-21-1215-ticker-hotspots:tickers:tsm:hotspots:2026-10-20T04:15:00.000Z:2026-10-21T04:15:00.000Z"
   ]
 }

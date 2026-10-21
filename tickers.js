@@ -121,6 +121,7 @@
       <div class="profile-copy"><h2>${escape(tab.label)}${tab.cashtag ? ` · ${escape(tab.cashtag)}` : ''}</h2><div class="profile-source">${account}</div><p>${escape(tab.identity)}</p>${contract}</div>
     </header>
     ${section(`${windowLabel(latestDays)}新增价值`, `最多 ${tab.latestLimit} 条`, latest, 'latest', tab, latestKeys)}
+    ${hotspotPolicy?.enabled ? window.IntelligenceView.hotspotSection(intelligenceData, tab, hotspotPolicy) : ''}
     ${section(`${windowLabel(weeklyDays)}最重要五件事`, `${windowLabel(weeklyDays)} · 最多 ${tab.weeklyLimit} 件`, weekly, 'weekly', tab, latestKeys)}${retainedHtml}`;
 
     const url = new URL(location.href);
@@ -135,6 +136,8 @@
   let retainedItems = [];
   let displayCutoff = 0;
   let tabCutoffs = {};
+  let intelligenceData = {};
+  let hotspotPolicy;
   let active;
 
   function activate(tab, focus) {
@@ -160,12 +163,14 @@
   function load() {
     return Promise.all([json('config/ticker-intelligence.json'), json('data/ticker-intelligence.json')])
       .then(([config, intelligence]) => {
+        intelligenceData = intelligence;
+        hotspotPolicy = config.hotspotPolicy;
         tabs = Array.isArray(config.tabs) ? config.tabs : [];
         items = Array.isArray(intelligence.items) ? intelligence.items : [];
         retainedItems = Array.isArray(intelligence.retainedItems) ? intelligence.retainedItems : [];
         displayCutoff = parseTime(intelligence.cutoff) || parseTime(intelligence.updatedAt);
         tabCutoffs = Object.fromEntries((intelligence.coverage?.tabs||[]).map(t=>[t.id,parseTime(t.cutoff)]));
-        state.textContent = displayCutoff ? `截至 ${formatTime(displayCutoff)}（北京时间）` : '';
+        state.textContent = displayCutoff ? `价值信息截至 ${formatTime(displayCutoff)}（北京时间）` : '';
         selector.innerHTML = tabs.map(tab => `<button type="button" role="tab" id="tab-${escape(tab.id)}" aria-controls="ticker-detail" aria-selected="false" tabindex="-1" data-tab="${escape(tab.id)}"><strong>${escape(tab.symbol || tab.shortLabel || tab.label)}</strong></button>`).join('');
         if (!tabs.length) {
           detail.innerHTML = '<div class="empty-state"><strong>尚未配置个股顶部 Tab</strong><p>请先维护个股情报配置。</p></div>';

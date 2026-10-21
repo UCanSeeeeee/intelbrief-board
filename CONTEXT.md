@@ -49,7 +49,7 @@
 | 来源评分与数据契约 | docs/X_DATA_CONTRACT.md；sources/x-sources.json；scripts/lib/credibility.js |
 | 人名原文及≤15字简介 | config/person-registry.json；scripts/lib/person-names.js |
 
-侧栏顺序为美股讯息、具体人物、具体个股、AI板块、每日学习、宏观大事、财报日历；人物默认马斯克Tab。加密暂时停用，板块空头不展示或采集。其原始资料不构成恢复权限。
+侧栏顺序为每日更新、美股讯息、具体人物、具体个股、AI板块、每日学习、宏观大事、财报日历；人物默认马斯克Tab。每日更新为[只读连续阅读流](docs/DAILY_UPDATES.md)，聚合前四个来源栏目当日新增/实质进展，不增加采集任务。所有配置股票在价值区之外增加独立[X热点](docs/TICKER_INTELLIGENCE.md)，最多3个不同事件，标非官方；与事实检索游标分离，热度不当可信度。加密暂时停用，板块空头不展示或采集。其原始资料不构成恢复权限。
 
 ## 发布
 

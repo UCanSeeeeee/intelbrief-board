@@ -10,7 +10,7 @@ function units(root=ROOT){
   return news.concat(['people','tickers','ai'].flatMap(page=>{
     const name=page==='tickers'?'ticker':page;
     const cfg=JSON.parse(fs.readFileSync(path.join(root,'config/'+name+'-intelligence.json'),'utf8'));
-    return cfg.tabs.map(tab=>({id:page+':'+tab.id,page,object:tab.id,label:tab.label}));
+    return cfg.tabs.flatMap(tab=>[{id:page+':'+tab.id,page,object:tab.id,label:tab.label},...(page==='tickers'&&cfg.hotspotPolicy?.enabled?[{id:page+':'+tab.id+':hotspots',page,object:tab.id+':hotspots',tabId:tab.id,kind:'hotspots',label:tab.label+' X热点'}]:[])]);
   }));
 }
 function read(root=ROOT){return fs.existsSync(at(root))?JSON.parse(fs.readFileSync(at(root),'utf8')):{schemaVersion:1,units:{},pending:[],receipts:[]};}
@@ -49,7 +49,8 @@ function apply(root,input,now=new Date()){
     const anchor=old?.through||old?.pendingFrom;
     if(anchor&&Date.parse(start)!==Date.parse(anchor))throw new Error('必须严格接续该对象上次成功截止，不能跨过缺口或重复宽搜');
     const page=result.unit.split(':')[0],batch=proof.batches?.find(b=>b.page===page);
-    if(result.status!=='failed'&&!(page==='news'?Array.isArray(batch?.output?.focus)&&Array.isArray(batch?.output?.insights):Array.isArray(batch?.output?.items)))throw new Error('成功进度必须先保存该批完整待发布结果；只有计划或条数不够');
+    const completeOutput=result.unit.endsWith(':hotspots')?Array.isArray(batch?.output?.hotspots):page==='news'?Array.isArray(batch?.output?.focus)&&Array.isArray(batch?.output?.insights):Array.isArray(batch?.output?.items);
+    if(result.status!=='failed'&&!completeOutput)throw new Error('成功进度必须先保存该批完整待发布结果；只有计划或条数不够');
     state.units[result.unit]={...old,lastAttemptAt:now.toISOString(),lastAttemptEnd:end,lastAttemptStatus:result.status,note:result.note};
     if(result.status!=='failed')Object.assign(state.units[result.unit],{through:end,lastSuccessAt:now.toISOString(),runId:input.runId,evidenceFile:result.evidenceFile});
     else state.units[result.unit].pendingFrom=anchor||start;
