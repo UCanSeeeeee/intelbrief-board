@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-21T08:01:37+08:00",
-  "updatedAt": "2026-10-21T08:31:24+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-21T08:35:18+08:00",
+  "finishedAt": "2026-10-21T08:35:18+08:00",
   "gitHeadAtStart": "70b725f2eb04feca6471d1828336772202ff9082",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-21T08:34:32+08:00",
+      "detail": "7ac0e747已push origin HEAD:master，ls-remote一致；Git开始点未仪表化，不补造"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-21T08:35:18+08:00",
+      "detail": "Cloudflare 7ac0e74成功；13公开JSON逐字节一致；VIX官方接口正常，CNN418时保留较新存档"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "复用已核官方日历，不重复全表查询"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "7ac0e7476234b1695d77bd48799fe14b70d0a8a4",
+  "notes": [
+    "23对象真实X窗口已接续，候选/论文质量缺口保留；内容已上线13JSON一致；未做本地test/check/build/预览"
+  ],
   "timings": [
     {
       "page": "news",
