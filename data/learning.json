@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T12:31:21.842499Z",
+  "updatedAt": "2026-10-21T12:37:33.332Z",
   "dailyCuriosities": [
     {
       "id": "2026-10-18-demand-is-not-funding",
@@ -210,6 +210,53 @@
       "sources": [
         {
           "label": "项目研究知识库：AI实物瓶颈与资本开支",
+          "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/knowledge/US_EQUITY_RESEARCH_KB.md"
+        }
+      ]
+    },
+    {
+      "id": "index-weights-versus-market-breadth",
+      "title": "指数涨了，为什么多数股票还可能下跌？",
+      "category": "市场结构与指数权重",
+      "updatedAt": "2026-10-21T12:37:33.332Z",
+      "professional": {
+        "definition": "市值加权指数按成分股的权重汇总收益；市场宽度描述同一成分池中有多少股票参与上涨。指数涨跌与上涨家数回答不同问题。",
+        "mechanism": "当少数大权重股票上涨时，其贡献可能抵消更多小权重股票下跌。比较等权表现、上涨下跌家数与权重贡献，可以分辨上涨集中还是扩散；比较必须使用一致的股票范围和时间。",
+        "whyItMatters": "仅看指数点位，容易把少数公司的上涨误读成所有行业需求改善。宽度可补充观察参与范围，但本身不能证明未来必涨或必跌，也不能说明资金流入的具体原因。",
+        "signals": [
+          "同一成分池、同一时段的上涨与下跌家数",
+          "市值加权与等权表现的差异",
+          "主要成分股对指数收益的贡献及集中度"
+        ]
+      },
+      "story": {
+        "title": "一条商业街，两种营业额统计",
+        "body": "这是虚构的教学例子。一条街有十家店，一家大店占上期总营业额的60%，其余九家合计占40%。大店增长2%，九家各下降1%，全街总额仍增长0.8%。老板看总额会说生意增长，但按店家计数，十家里有九家下降。两份统计都可能正确，只是回答的问题不同。",
+        "mapping": [
+          {
+            "storyRole": "大店占总额60%",
+            "professionalMeaning": "大权重成分对加权结果贡献较大"
+          },
+          {
+            "storyRole": "全街总额增长0.8%",
+            "professionalMeaning": "按既有权重汇总的收益可以为正"
+          },
+          {
+            "storyRole": "九家店下降",
+            "professionalMeaning": "家数所反映的参与广度较弱"
+          }
+        ],
+        "boundary": "营业额变化不等同股票总回报，真实指数还涉及调仓、分红与编制规则；例子只解释权重和家数为何不同。"
+      },
+      "commonMistakes": [
+        "指数上涨就认定大多数股票都上涨。",
+        "用不同股票池或不同时段比较宽度。",
+        "仅凭宽度偏弱推断必然下跌或资金离场。"
+      ],
+      "relatedCuriosityIds": [],
+      "sources": [
+        {
+          "label": "项目知识库I05：指数集中与市场宽度",
           "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/knowledge/US_EQUITY_RESEARCH_KB.md"
         }
       ]

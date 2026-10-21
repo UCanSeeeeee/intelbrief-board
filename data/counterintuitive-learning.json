@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T12:31:22.214Z",
+  "updatedAt": "2026-10-21T12:37:33.641Z",
   "editions": [
     {
       "date": "2026-10-19",
@@ -314,6 +314,226 @@
           "复用早报已验收论文 10.1126/science.aap9559 的结论、样本与更正/复现边界，不新增外部检索。"
         ],
         "checkedAt": "2026-10-20T12:31:21.842499Z"
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "items": [
+        {
+          "id": "2026-10-21-health-education-rewires-support-networks",
+          "knowledgeKey": "health-education-rewires-support-networks",
+          "topic": "生活",
+          "title": "健康教育还可能改变人们向谁求助",
+          "intuition": "健康教育只增加个人知识，不会改变人际关系。",
+          "fact": "110个村庄的随机试验次级分析发现，低覆盖与高覆盖时，受教育者和其他人的求助联系变化方向不同。",
+          "explanation": "干预可能重排信息与支持渠道；整体连接数相近，也可能掩盖关系重组。",
+          "boundary": "这是单一地区的网络分析，部分比较较不稳健；不能据此断言教育改善或损害健康。",
+          "people": [],
+          "sources": [
+            {
+              "label": "Nature原文与方法/讨论",
+              "publisher": "Nature",
+              "url": "https://www.nature.com/articles/s41586-026-11154-7",
+              "publishedDate": "2026-10-14",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-21T00:26:12.591074+00:00"
+            },
+            {
+              "label": "PubMed元数据",
+              "publisher": "原论文索引或作者机构",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42875503/",
+              "publishedDate": null,
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-21T00:26:12.591074+00:00",
+              "dateNote": "辅助来源未单列原始日期；沿用既有核验日期及阅读范围，未重新阅读或补猜。"
+            }
+          ]
+        },
+        {
+          "id": "2026-10-21-memory-can-regulate-sleep-in-mice",
+          "knowledgeKey": "memory-can-regulate-sleep-in-mice",
+          "topic": "健康",
+          "title": "记忆也能反过来影响小鼠睡眠",
+          "intuition": "睡眠帮助记忆，记忆本身不会影响睡眠。",
+          "fact": "小鼠实验中，激活负向记忆回路增加觉醒，抑制可阻断线索诱发的觉醒；正向记忆活动支持睡眠连续性。",
+          "explanation": "这提示睡眠与记忆可能双向调节，而非单向储存关系。",
+          "boundary": "脑回路操纵不同于日常回忆；动物结果不能证明想开心事能治疗人的失眠，也不能替代人体试验。",
+          "people": [],
+          "sources": [
+            {
+              "label": "Science原文入口",
+              "publisher": "Science",
+              "url": "https://www.science.org/doi/10.1126/science.aed8630",
+              "publishedDate": "2026-06-04",
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-21T00:26:12.591074+00:00"
+            },
+            {
+              "label": "PubMed摘要与元数据",
+              "publisher": "原论文索引或作者机构",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42241552/",
+              "publishedDate": null,
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-21T00:26:12.591074+00:00",
+              "dateNote": "辅助来源未单列原始日期；沿用既有核验日期及阅读范围，未重新阅读或补猜。"
+            },
+            {
+              "label": "作者机构公开摘要",
+              "publisher": "原论文索引或作者机构",
+              "url": "https://mcgovern.life.tsinghua.edu.cn/en/infoshow-2888.html",
+              "publishedDate": null,
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-21T00:26:12.591074+00:00",
+              "dateNote": "辅助来源未单列原始日期；沿用既有核验日期及阅读范围，未重新阅读或补猜。"
+            },
+            {
+              "label": "清华大学作者机构实验说明",
+              "publisher": "原论文索引或作者机构",
+              "url": "https://www.tsinghua.edu.cn/info/1175/126722.htm",
+              "publishedDate": null,
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-21T00:26:12.591074+00:00",
+              "dateNote": "辅助来源未单列原始日期；沿用既有核验日期及阅读范围，未重新阅读或补猜。"
+            }
+          ]
+        },
+        {
+          "id": "2026-10-21-sleep-duration-biological-age-is-nonlinear",
+          "knowledgeKey": "sleep-duration-biological-age-is-nonlinear",
+          "topic": "统计",
+          "title": "睡得更久，不一定对应更年轻的生物指标",
+          "intuition": "睡眠越长，身体的生物年龄指标就越年轻。",
+          "fact": "UK Biobank资料中的23个年龄钟有9个呈U形关联，样本最低点因器官与性别而异。",
+          "explanation": "疾病既可能影响睡眠，也可能影响年龄指标；观察到的曲线不等于改变睡眠的效果。",
+          "boundary": "原文已有引文与图轴更正；不能把组均最低点当个人最佳时长，或据此主动减少睡眠。",
+          "people": [],
+          "sources": [
+            {
+              "label": "Nature原文",
+              "publisher": "Nature",
+              "url": "https://www.nature.com/articles/s41586-026-10524-5",
+              "publishedDate": "2026-05-13",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-20T00:27:40.733Z"
+            },
+            {
+              "label": "作者更正",
+              "publisher": "原论文索引或作者机构",
+              "url": "https://www.nature.com/articles/s41586-026-10920-x",
+              "publishedDate": null,
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-20T00:27:40.733Z",
+              "dateNote": "辅助来源未单列原始日期；沿用既有核验日期及阅读范围，未重新阅读或补猜。"
+            },
+            {
+              "label": "出版更正",
+              "publisher": "原论文索引或作者机构",
+              "url": "https://www.nature.com/articles/s41586-026-11273-1",
+              "publishedDate": null,
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-20T00:27:40.733Z",
+              "dateNote": "辅助来源未单列原始日期；沿用既有核验日期及阅读范围，未重新阅读或补猜。"
+            },
+            {
+              "label": "作者机构更正记录",
+              "publisher": "原论文索引或作者机构",
+              "url": "https://kclpure.kcl.ac.uk/portal/en/publications/author-correction-sleep-chart-of-biological-ageing-clocks-in-midd/",
+              "publishedDate": null,
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-20T00:27:40.733Z",
+              "dateNote": "辅助来源未单列原始日期；沿用既有核验日期及阅读范围，未重新阅读或补猜。"
+            }
+          ]
+        },
+        {
+          "id": "2026-10-21-retrieval-practice-is-active-learning",
+          "knowledgeKey": "retrieval-practice-is-active-learning",
+          "topic": "行为认知",
+          "title": "答对一次后，继续回想仍可能帮助记忆",
+          "intuition": "测试只检查学会了多少，答对的内容无需再练。",
+          "fact": "大学生词对实验中，继续提取的一周回忆约80%，停止继续测试的两组约36%和33%；后续课堂元分析也支持提取练习。",
+          "explanation": "从记忆中找答案本身是一种练习，熟悉感不能代替延迟回忆表现。",
+          "boundary": "这不等于反复阅读无用；词对效果不能套到所有学科，反馈、题型和材料会改变收益，机制也非单一。",
+          "people": [],
+          "sources": [
+            {
+              "label": "原研究作者公开PDF：设计、结果和讨论节选",
+              "publisher": "Purdue University",
+              "url": "https://learninglab.psych.purdue.edu/downloads/2008/2008_Karpicke_Roediger_Science.pdf",
+              "publishedDate": "2008-02-15",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-21T12:37:33.332Z"
+            },
+            {
+              "label": "原研究摘要与元数据",
+              "publisher": "PubMed / Science",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/18276894/",
+              "publishedDate": "2008-02-15",
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-21T12:37:33.332Z"
+            },
+            {
+              "label": "课堂测试系统综述与元分析摘要",
+              "publisher": "PubMed / Psychological Bulletin",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33683913/",
+              "publishedDate": "2021-03-08",
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-21T12:37:33.332Z"
+            }
+          ]
+        },
+        {
+          "id": "2026-10-21-choice-overload-depends-on-context",
+          "knowledgeKey": "choice-overload-depends-on-context",
+          "topic": "生活",
+          "title": "选项多会不会更难选，要看任务条件",
+          "intuition": "选项越多，就一定越难决定、越不满意。",
+          "fact": "2010年对50项实验的综合平均效应近零，但研究间差异大；后续元分析发现，复杂度、难度、偏好不确定和目标会调节过载。",
+          "explanation": "选择负担取决于比较要求与自己的偏好是否清楚，数量只是一部分。",
+          "boundary": "平均近零不证明过载不存在，也不证明减选总有效；后续论文有统计标注更正，结论需连同条件理解。",
+          "people": [],
+          "sources": [
+            {
+              "label": "2010元分析作者公开版本：摘要及讨论",
+              "publisher": "Journal of Consumer Research / 作者",
+              "url": "https://www.scheibehenne.de/ScheibehenneGreifenederTodd2010.pdf",
+              "publishedDate": "2010-02-10",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-21T12:37:33.332Z"
+            },
+            {
+              "label": "2015元分析作者公开版本：摘要及讨论",
+              "publisher": "Journal of Consumer Psychology / 作者",
+              "url": "https://chernev.com/wp-content/uploads/2017/02/ChoiceOverload_JCP_2015.pdf",
+              "publishedDate": "2014-08-29",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-21T12:37:33.332Z"
+            },
+            {
+              "label": "后续元分析正式更正：系数与t统计量标注",
+              "publisher": "Journal of Consumer Psychology",
+              "url": "https://myscp.onlinelibrary.wiley.com/doi/10.1016/j.jcps.2015.07.001",
+              "publishedDate": "2015-07-27",
+              "accessLevel": "full-text",
+              "checkedAt": "2026-10-21T12:37:33.332Z"
+            }
+          ]
+        }
+      ],
+      "coverage": {
+        "status": "complete",
+        "note": "5个独立知识点，跨期knowledgeKey去重；3项复用已核论文缓存，2项按限定非X科普例外核对原始研究及后续证据。Grok网页不可用，未冒称Grok发现。保持原论文核验时间及阅读边界；不更新论文栏目。",
+        "queries": [
+          "Karpicke Roediger 2008 The critical importance of retrieval for learning original study correction replication",
+          "Scheibehenne Greifeneder Todd 2010 choice overload meta analysis 50 studies mean effect zero correction",
+          "Choice overload: A conceptual review and meta-analysis 2015 99 observations 7202",
+          "critical importance of retrieval correction 2008",
+          "Testing (quizzing) boosts classroom learning meta analytic review 2021 222 studies",
+          "10.1126/science.1152408 pubmed",
+          "10.1016/j.jcps.2014.08.002 corrigendum correction",
+          "Making memories, again Lasry Levy Tremblay 2008 full text"
+        ],
+        "checkedAt": "2026-10-21T12:37:33.332Z"
       }
     }
   ]
