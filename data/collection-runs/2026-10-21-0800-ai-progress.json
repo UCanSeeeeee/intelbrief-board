@@ -1,0 +1,58 @@
+{
+  "runId": "2026-10-21-0800",
+  "cutoff": "2026-10-21T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "ai:openai",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(OpenAI OR ChatGPT OR Codex) (release OR API OR pricing OR enterprise OR outage OR regulation) since:2026-10-20_00:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "实际X查询有返回；前置网络材料未采用，候选官方重新限定X追源；覆盖缺口另记。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "ai:anthropic",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(Anthropic OR Claude) (release OR API OR deployment OR pricing OR safety OR partnership) since:2026-10-20_00:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "实际X查询有返回；前置网络材料未采用，候选官方重新限定X追源；覆盖缺口另记。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "ai:goog-ai",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(Gemini OR DeepMind OR Veo OR TPU) (release OR API OR agent OR safety OR policy) since:2026-10-20_00:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "实际X查询有返回；前置网络材料未采用，候选官方重新限定X追源；覆盖缺口另记。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "ai:ai-others",
+      "start": "2026-10-20T00:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(Mistral OR Qwen OR DeepSeek OR \"open weights\" OR \"AI policy\") (release OR regulation OR license OR deployment) since:2026-10-20_00:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "实际X查询有返回；前置网络材料未采用，候选官方重新限定X追源；覆盖缺口另记。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "ai:goog-ai",
+      "key": "veo-preview-api-stop-clue-20261020",
+      "status": "pending",
+      "reason": "官方可用性变更原帖未返回，缺精确线索证据不入选"
+    }
+  ]
+}

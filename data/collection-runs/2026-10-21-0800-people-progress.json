@@ -1,0 +1,76 @@
+{
+  "runId": "2026-10-21-0800",
+  "cutoff": "2026-10-21T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "people:elon-musk",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:elonmusk since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "查询完成；筛选和证据缺口另记，不代表全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "people:jensen-huang",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(\"Jensen Huang\" OR from:JensenHuang) (NVIDIA OR interview OR demand OR roadmap) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "查询完成；筛选和证据缺口另记，不代表全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets",
+        "(from:WhiteHouse OR from:POTUS OR from:TrumpDailyPosts) -filter:replies -filter:retweets since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC"
+      ],
+      "note": "查询完成；筛选和证据缺口另记，不代表全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "people:trillion-leaders",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "no-result",
+      "queries": [
+        "(from:satyanadella OR from:sundarpichai OR from:tim_cook OR from:JeffBezos OR from:andy_jassy OR from:alexandr_wang) (AI OR capex OR revenue OR chip OR power) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "查询完成；筛选和证据缺口另记，不代表全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "people:research-reports",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(Nomura OR Goldman OR JPMorgan OR \"Morgan Stanley\" OR \"Bank of America\" OR SemiAnalysis) (semiconductor OR HBM OR AI OR datacenter) (forecast OR estimate OR thesis OR capex) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "查询完成；筛选和证据缺口另记，不代表全量覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "people:research-reports",
+      "key": "jpm-ai-compute-gap-20261020",
+      "status": "pending",
+      "reason": "新研报二传经追源和反证，关键数字/相对旧版变化未证实"
+    },
+    {
+      "unit": "people:research-reports",
+      "key": "bofa-ai-capex-wacc-20261020",
+      "status": "pending",
+      "reason": "新研报二传经追源和反证，关键数字/相对旧版变化未证实"
+    }
+  ]
+}

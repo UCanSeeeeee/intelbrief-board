@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-21-0800",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-21T08:01:37+08:00",
+  "updatedAt": "2026-10-21T08:31:24+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "70b725f2eb04feca6471d1828336772202ff9082",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-21T08:02:05+08:00",
+      "detail": "origin/master和干净工作区已核，ff-only拉取成功，未补造拉取起点"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-21T08:31:24+08:00",
+      "detail": "现行入口、项目知识库/SOP与本批契约已读；未重复整库"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-21T08:31:24+08:00",
+      "detail": "23对象真实X查询完成；候选质量不足与故障偏差分开；各刊1论文、4财报完成"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-21T08:31:24+08:00",
+      "detail": "七批结果及共享对象截止落盘后统一合并；持久池与有效旧榜保留"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-21T08:31:24+08:00",
+      "detail": "用户要求不运行test/check/build/本地预览/额外回归；来源核验、发布器契约和保留审查照常"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "查询完成但未通过来源门槛，保留旧重点"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "6新热度，0新规则；原始研报缺口保留"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "1新NVDA报道，未采用交付比例和其他未核数字"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "2新官方声明，性能与成本没有独立实测"
+    },
+    "earnings": {
+      "status": "partial",
+      "detail": "GE82/RTX84/ISRG78/NFLX58；NetflixPDF403但官方索引与公开对照已核"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "复用已核官方日历，不重复全表查询"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:02:05+08:00",
+      "endedAt": "2026-10-21T08:07:37+08:00",
+      "durationMs": 332000,
+      "detail": "两轮六包完成，0新卡，7对象已落盘后推进；缓存核电探索"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:02:05+08:00",
+      "endedAt": "2026-10-21T08:05:39+08:00",
+      "durationMs": 214000,
+      "detail": "独立两轮及六包实际X查询完成，F摘要数与面板不一致保留面板"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:05:39+08:00",
+      "endedAt": "2026-10-21T08:06:32+08:00",
+      "durationMs": 53000,
+      "detail": "6项追源完成，5空；SpaceX官方只有报告链接，二传数字未证实"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:06:32+08:00",
+      "endedAt": "2026-10-21T08:07:36+08:00",
+      "durationMs": 64000,
+      "detail": "独立3查，未取得否定或更正；关键权威证据仍不足"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:07:37+08:00",
+      "endedAt": "2026-10-21T08:12:33+08:00",
+      "durationMs": 296000,
+      "detail": "6新热度候选已保存，5对象先落盘后record；两研报待核"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:07:37+08:00",
+      "endedAt": "2026-10-21T08:10:18+08:00",
+      "durationMs": 161000,
+      "detail": "五对象实际X查询；有帖未通过与无结果分开，Trump热度定向补查"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:10:18+08:00",
+      "endedAt": "2026-10-21T08:11:13+08:00",
+      "durationMs": 55000,
+      "detail": "JPM0、BofA1非目标；三官方热度有原文和整数互动"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:11:13+08:00",
+      "endedAt": "2026-10-21T08:12:32+08:00",
+      "durationMs": 79000,
+      "detail": "研报独立反证查询空；未提升二传地位"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:12:33+08:00",
+      "endedAt": "2026-10-21T08:17:29+08:00",
+      "durationMs": 296000,
+      "detail": "1新卡，MU旧卡及时间线复用，INTC待核；7对象先结果后record"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:12:33+08:00",
+      "endedAt": "2026-10-21T08:15:25+08:00",
+      "durationMs": 172000,
+      "detail": "有限重试真实X工具成功，7对象查询完成，3待核候选；首次网络材料全部弃用"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:15:25+08:00",
+      "endedAt": "2026-10-21T08:16:14+08:00",
+      "durationMs": 49000,
+      "detail": "Reuters支持NVDA超过300万张/350亿美元报道；5-10%未核；MU旧风险复用，INTC未核"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:16:14+08:00",
+      "endedAt": "2026-10-21T08:17:29+08:00",
+      "durationMs": 75000,
+      "detail": "2项独立X查询完成，返回同源二传不作独立数值证明；NVDA交付边界保留"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:17:29+08:00",
+      "endedAt": "2026-10-21T08:21:18+08:00",
+      "durationMs": 229000,
+      "detail": "2官方公告新卡，4对象已先结果后record；Veo待核"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:17:30+08:00",
+      "endedAt": "2026-10-21T08:19:17+08:00",
+      "durationMs": 107000,
+      "detail": "4真实X调用可见；此前4网络调用作废，最终只用X的声明不准确"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:19:18+08:00",
+      "endedAt": "2026-10-21T08:20:04+08:00",
+      "durationMs": 46000,
+      "detail": "真实X追源确认OpenAIDevs缓存公告与DeepSeek开源声明；Veo官方查询空"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:20:04+08:00",
+      "endedAt": "2026-10-21T08:21:18+08:00",
+      "durationMs": 74000,
+      "detail": "两独立X查询完成；同源讨论不作独立实测，部署缺口待核"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:21:19+08:00",
+      "endedAt": "2026-10-21T08:26:28+08:00",
+      "durationMs": 309000,
+      "detail": "两刊各1篇保存为完整载荷，其余各2缺口；basics/小知识按components跳过"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:21:19+08:00",
+      "endedAt": "2026-10-21T08:23:48+08:00",
+      "durationMs": 149000,
+      "detail": "Grok取得Nature近期1、Science往期1；超过预算如实记录，不凑至每刊3"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:23:13+08:00",
+      "endedAt": "2026-10-21T08:26:12+08:00",
+      "durationMs": 179000,
+      "detail": "Nature原始正文节选/元数据、Science摘要及作者机构实验说明已核；Science403不绕过"
+    },
+    {
+      "page": "learning",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:24:10+08:00",
+      "endedAt": "2026-10-21T08:26:13+08:00",
+      "durationMs": 123000,
+      "detail": "定向更正/复现未返回；Nature次级结局、多重比较，Science动物外推边界进入正文，计时边界见审计"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:26:28+08:00",
+      "endedAt": "2026-10-21T08:26:47+08:00",
+      "durationMs": 19000,
+      "detail": "无官方宏观到期/过时触发；10月21日所列仅财报，归财报批；存量保持"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-21T08:26:48+08:00",
+      "endedAt": "2026-10-21T08:30:02+08:00",
+      "durationMs": 194000,
+      "detail": "81精选/1269原始；4家公司官方披露确认及评分载荷保存，待统一写入；PDF与口径缺口已记"
+    }
+  ]
+}

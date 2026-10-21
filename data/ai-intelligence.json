@@ -1,57 +1,77 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T00:29:26.071Z",
-  "cutoff": "2026-10-20T08:00:00+08:00",
+  "updatedAt": "2026-10-21T00:30:43.404Z",
+  "cutoff": "2026-10-21T08:00:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定真实X查询完成；官方声明、独立实测与待核分开，非X误用材料弃用。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定真实X查询完成；官方声明、独立实测与待核分开，非X误用材料弃用。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "status": "partial",
+        "note": "既定真实X查询完成；官方声明、独立实测与待核分开，非X误用材料弃用。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定真实X查询完成；官方声明、独立实测与待核分开，非X误用材料弃用。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "minimax-m31-flash-release-20261019",
+      "eventKey": "openai-12h-prompt-cache-20261020",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI Developers 宣布API可选12小时提示缓存",
+      "fact": "OpenAI Developers 宣布，API现在可选12小时提示缓存，使全天重复使用的共享指令、工具和上下文保留更久；官方称相隔数小时的请求仍可使用较低的缓存输入费率。",
+      "whyItMatters": "对长时间运行但请求间歇的智能体，更长缓存可能提高重复上下文的计费可预测性；实际节省取决于命中率、上下文复用及适用模型和计费条件，公告没有给出独立成本实测。",
+      "counterCase": "这是官方能力与计费说明，不能推算所有工作负载的节省比例；支持范围、失效条件和实际命中仍需部署核对。",
+      "affected": [
+        "AI API",
+        "长时智能体"
+      ],
+      "author": "@OpenAIDevs",
+      "publishedAt": "2026-10-20T17:56:38Z",
+      "url": "https://x.com/OpenAIDevs/status/2112603916076781778",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {},
+      "people": []
+    },
+    {
+      "eventKey": "deepseek-deepinfer-open-source-20261020",
       "tabIds": [
         "ai-others"
       ],
-      "title": "MiniMax 发布M3.1 Flash并公布API价格，权重计划10月23日开放",
-      "fact": "MiniMax 发布M3.1 Flash，公布API统一计价：每百万输入token 0.15美元、输出token 0.60美元、缓存读取token 0.015美元，并提供API、M Plan与桌面MiniMax Code入口。官方表示权重将于10月23日发布；截至本次截止仍是未来计划，许可证未确认。",
-      "whyItMatters": "新的API价格为开发者比较推理与智能体成本提供了报价基准，但产品入口不等于已经完成调用或客户采用；真实任务质量、速度、额度与服务限制仍需独立验证，不能把厂商评测和token用量当成收入。",
-      "counterCase": "若真实任务质量、调用限制或额外成本抵消报价优势，成本吸引力就可能减弱；若权重延期或许可受限，不能按已开源产品评估。",
+      "title": "DeepSeek 宣布开源生产推理框架DeepInfer",
+      "fact": "DeepSeek 宣布将内部推理框架DeepInfer完整开源，并称它已用于大规模运行DeepSeek-V4.1-Flash。高吞吐、低延迟、降低计算成本和能耗均为官方对该生产栈的说明。",
+      "whyItMatters": "公开生产推理栈为开发者提供更多部署与优化选择；能否降低真实总成本，还取决于硬件、缓存、负载均衡和分布式集成工作，开源发布本身不等于可直接复现其生产效果。",
+      "counterCase": "未取得独立吞吐、延迟、能耗或许可证核对结果；社区提到实现缺口但尚未核实，不当作已证实缺陷，也不采用二传性能百分比。",
       "affected": [
-        "模型API价格竞争",
-        "开发者推理成本",
-        "智能体工作流"
+        "开源推理框架",
+        "AI部署"
       ],
-      "author": "MiniMax_AI",
-      "publishedAt": "2026-10-19T11:56:23Z",
-      "url": "https://x.com/MiniMax_AI/status/2112150867868541221",
+      "author": "@deepseek_ai",
+      "publishedAt": "2026-10-20T09:30:19Z",
+      "url": "https://x.com/deepseek_ai/status/2112476496283775135",
       "verification": "collector-report",
-      "tier": "watch",
+      "tier": "must-read",
       "weeklyRanks": {},
       "people": []
     },
@@ -352,77 +372,19 @@
         "ai-others": 2
       },
       "people": []
-    },
-    {
-      "eventKey": "ai-others-exa-100m-arr-2026-10-13",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "Exa 年化收入破 1 亿美元，月请求 20 亿次",
-      "fact": "Will Bryk 称 Exa 年化收入超过 1 亿美元，三年来几乎每年增长 10 倍，每月处理约 20 亿次请求、服务 20 万以上团队，并预测 2030 年 AI 代理搜索量将是人类的 1000 倍。",
-      "whyItMatters": "代理按次付费调用搜索接口的商业模式规模化，是 AI 落地的付费证据。",
-      "counterCase": "创始人自述未经审计；客户可能多为融资驱动的初创公司。",
-      "affected": [
-        "AI 代理生态",
-        "GOOGL 搜索"
-      ],
-      "author": "WilliamBryk",
-      "publishedAt": "2026-10-13T17:23:43.000Z",
-      "url": "https://x.com/WilliamBryk/status/2110058915589464192",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "ai-others": 5
-      },
-      "people": [
-        {
-          "name": "Will Bryk",
-          "intro": "Exa联合创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "goog-ai-gemini-4-argon-rollout-2026-10-13",
-      "tabIds": [
-        "goog-ai"
-      ],
-      "title": "Gemini 4 Argon 向全球 Google AI Pro 与 Ultra 订阅者推出",
-      "fact": "@GeminiApp 称 Gemini 4 Argon 即日起向全球 Google AI Pro 与 Ultra 订阅者推出，并有更多 Gemini 应用更新；Logan Kilpatrick 称 Argon 为“大模型”，广泛服务能力有限，正开发可面向数十亿用户的版本。",
-      "whyItMatters": "前沿模型以付费订阅为首发渠道，直接拉动订阅收入与 TPU 推理需求。",
-      "counterCase": "限量开放说明推理算力受限；能力领先带来的用量增益正在下降。",
-      "affected": [
-        "GOOGL",
-        "AVGO"
-      ],
-      "author": "GeminiApp",
-      "publishedAt": "2026-10-13T16:09:18.000Z",
-      "url": "https://x.com/GeminiApp/status/2110040189817237836",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "goog-ai": 2
-      },
-      "people": [
-        {
-          "name": "Logan Kilpatrick",
-          "intro": "谷歌AI Studio负责人"
-        }
-      ]
     }
   ],
   "retainedItems": [],
-  "lastAttemptAt": "2026-10-20T12:32:48.805Z",
-  "attemptedCutoff": "2026-10-20T20:30:00+08:00",
   "collectionMode": "incremental-v1",
-  "lastAttemptCollectionUnits": [
+  "collectionUnits": [
     {
       "id": "ai:openai",
       "page": "ai",
       "object": "openai",
       "label": "OPENAI",
       "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
@@ -443,8 +405,8 @@
       "object": "anthropic",
       "label": "ANTHROPIC",
       "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
@@ -456,8 +418,8 @@
       "object": "goog-ai",
       "label": "GOOG",
       "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
@@ -469,12 +431,14 @@
       "object": "ai-others",
       "label": "其他",
       "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
       "pending": []
     }
-  ]
+  ],
+  "lastAttemptAt": "2026-10-21T00:30:43.405Z",
+  "attemptedCutoff": "2026-10-21T08:00:00+08:00"
 }

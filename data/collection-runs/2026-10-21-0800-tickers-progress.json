@@ -1,0 +1,97 @@
+{
+  "runId": "2026-10-21-0800",
+  "cutoff": "2026-10-21T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "tickers:nvda",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(NVDA OR NVIDIA) (orders OR capacity OR margin OR financing OR export) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "真实X重试查询有返回；候选质量缺口不等于失败，首次网络结果未采用。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "tickers:mu",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(MU OR Micron) (HBM OR DRAM OR ASP OR orders OR supply OR cashflow) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "真实X重试查询有返回；候选质量缺口不等于失败，首次网络结果未采用。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "tickers:intc",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(INTC OR Intel) (18A OR foundry OR yield OR order OR capex) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "真实X重试查询有返回；候选质量缺口不等于失败，首次网络结果未采用。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "tickers:goog",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(GOOG OR Alphabet OR Google) (capex OR earnings OR cashflow OR regulatory) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "真实X重试查询有返回；候选质量缺口不等于失败，首次网络结果未采用。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "tickers:avgo",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(AVGO OR Broadcom) (ASIC OR networking OR order OR guidance OR customer) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "真实X重试查询有返回；候选质量缺口不等于失败，首次网络结果未采用。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "tickers:vrt",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(VRT OR Vertiv) (cooling OR power OR order OR backlog OR deployment) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "真实X重试查询有返回；候选质量缺口不等于失败，首次网络结果未采用。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    },
+    {
+      "unit": "tickers:tsm",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(TSM OR TSMC) (capacity OR yield OR 2nm OR packaging OR guidance) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets"
+      ],
+      "note": "真实X重试查询有返回；候选质量缺口不等于失败，首次网络结果未采用。",
+      "evidenceFile": "data/collection-runs/2026-10-21-0800.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "tickers:intc",
+      "key": "intel-14a-customers-20261020",
+      "status": "pending",
+      "reason": "公司与权威原帖未支持14A客户确定说法，保留待核"
+    },
+    {
+      "unit": "tickers:mu",
+      "key": "mu-strike-oct22-duration-20261020",
+      "status": "pending",
+      "reason": "10月22日/一天细节缺权威确认，原风险不更新"
+    }
+  ]
+}

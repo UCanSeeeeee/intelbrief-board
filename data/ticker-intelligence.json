@@ -1,56 +1,77 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T07:24:12.366Z",
-  "cutoff": "2026-10-20T15:00:00+08:00",
+  "updatedAt": "2026-10-21T00:30:43.398Z",
+  "cutoff": "2026-10-21T08:00:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T15:00:00+08:00"
+        "status": "complete",
+        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "mu",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T15:00:00+08:00"
+        "status": "partial",
+        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "intc",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T15:00:00+08:00"
+        "status": "partial",
+        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "goog",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T15:00:00+08:00"
+        "status": "complete",
+        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "avgo",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T15:00:00+08:00"
+        "status": "complete",
+        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "vrt",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T15:00:00+08:00"
+        "status": "complete",
+        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       },
       {
         "id": "tsm",
-        "status": "failed",
-        "note": "Grok网页版新页空白；一次刷新及一次切换既有会话仍无正文/输入框，无法提交查询。Bot额度耗尽暂停，不使用第三路径。",
-        "cutoff": "2026-10-20T15:00:00+08:00"
+        "status": "complete",
+        "note": "既定X查询已完成；新增与待核/缓存复用见独立审计。",
+        "cutoff": "2026-10-21T08:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "nvda-china-rtx5500-orders-20261020",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "Reuters：三家中国互联网公司据报订购逾350亿美元NVIDIA显卡",
+      "fact": "Reuters援引两名消息人士报道，ByteDance、Alibaba与Tencent合计订购超过300万张NVIDIA RTX PRO 5500显卡，价值超过350亿美元。报道将其描述为在美国对华限制下抢购较低性能、符合出口规则的产品；这不是NVIDIA的公开订单确认。",
+      "whyItMatters": "受限市场的需求可能转向可出口产品，为NVIDIA形成额外销售机会；订单只有在产能分配、出口规则与实际交付落实后才转为收入和现金流。本报道提供需求线索，尚不能据此上调已实现收入。",
+      "counterCase": "订单可能受到可交付数量、规则变化或客户取消影响。未核实只能交付5%–10%的说法，也未采用二传的全球产量数字；实际下单时刻、客户分拆和交付安排仍未知。",
+      "affected": [
+        "NVDA",
+        "AI服务器供应链"
+      ],
+      "author": "@Reuters",
+      "publishedAt": "2026-10-20T15:45:00Z",
+      "url": "https://x.com/Reuters/status/2112570788339761238",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {},
+      "people": []
+    },
     {
       "eventKey": "mu-taiwan-strike-risk-2026-10-15",
       "tabIds": [
@@ -73,7 +94,6 @@
         "mu": 2
       },
       "people": [],
-      "change": "进展",
       "timeline": [
         {
           "changedAt": "2026-10-20T07:20:36.009Z",
@@ -103,28 +123,8 @@
           },
           "sourceUrl": "https://x.com/Reuters/status/2112400996559208471"
         }
-      ]
-    },
-    {
-      "eventKey": "gmo-nvidia-server-acquisition-plan-20261019",
-      "tabIds": [
-        "nvda"
       ],
-      "title": "GMOI拟取得NVIDIA GPU服务器等，金额约261亿日元",
-      "fact": "BloombergJapan 报道，GMOI拟从NVIDIA取得GPU服务器等，金额约261亿日元。原帖使用“将取得”的表述，没有说明具体交付日期、型号或台数。",
-      "whyItMatters": "这是一条潜在算力设备采购的新增披露，可用于观察NVIDIA客户资本开支。计划金额不等于当期NVIDIA收入；交付、验收和采购范围决定其兑现节奏。",
-      "counterCase": "若采购延期、范围调整或尚未完成合同和验收，收入兑现就可能后移；不能据本帖推断已交付、短期收入规模或全行业供不应求。",
-      "affected": [
-        "NVIDIA算力设备需求",
-        "客户资本开支"
-      ],
-      "author": "BloombergJapan",
-      "publishedAt": "2026-10-19T08:30:08Z",
-      "url": "https://x.com/BloombergJapan/status/2112098963314610361",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": []
+      "change": "进展"
     },
     {
       "eventKey": "samsung-tsmc-next-hbm-media-2026-10-18",
@@ -452,29 +452,6 @@
         "mu": 5
       },
       "people": []
-    },
-    {
-      "eventKey": "intc-bofa-density-gap-tsmc-2026-10-13",
-      "tabIds": [
-        "intc"
-      ],
-      "title": "转述：美银亚洲称 TSMC 与 Intel 晶体管密度差距或扩至 50%–60%",
-      "fact": "@Alex_Intel_ 转述美银亚洲研报：在 TSMC A16/A12 节点与 Intel 18A-P/14A 对比时，晶体管密度差距可能扩大到约 50%/60%，并强调 TSMC 每个主要节点 15–20 万片以上的月产能规模。",
-      "whyItMatters": "技术与规模差距影响 Intel 代工争取外部大客户的能力。",
-      "counterCase": "转述者带立场；研报原文未直读，密度不等于性能与成本。",
-      "affected": [
-        "INTC",
-        "TSM"
-      ],
-      "author": "Alex_Intel_",
-      "publishedAt": "2026-10-13T16:43:20.000Z",
-      "url": "https://x.com/Alex_Intel_/status/2110048755059917097",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "intc": 3
-      },
-      "people": []
     }
   ],
   "retainedItems": [],
@@ -485,9 +462,9 @@
       "page": "tickers",
       "object": "nvda",
       "label": "NVDA",
-      "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
@@ -499,6 +476,14 @@
           "reason": "原始媒体/客户帖或事件增量时间仍缺失；Vertiv为现有部署案例推广，无新订单/部署日期，不当新增订单。",
           "updatedAt": "2026-10-19T12:51:43.410Z",
           "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "tickers:nvda",
+          "key": "nebius-b200-spot-triple-20261020",
+          "status": "pending",
+          "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。",
+          "updatedAt": "2026-10-20T07:20:36.477Z",
+          "runId": "2026-10-20-1500"
         }
       ]
     },
@@ -507,9 +492,9 @@
       "page": "tickers",
       "object": "mu",
       "label": "MU",
-      "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
@@ -520,9 +505,9 @@
       "page": "tickers",
       "object": "intc",
       "label": "INTC",
-      "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
@@ -533,9 +518,9 @@
       "page": "tickers",
       "object": "goog",
       "label": "GOOG",
-      "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
@@ -546,9 +531,9 @@
       "page": "tickers",
       "object": "avgo",
       "label": "AVGO",
-      "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
@@ -568,9 +553,9 @@
       "page": "tickers",
       "object": "vrt",
       "label": "VRT",
-      "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
@@ -581,15 +566,32 @@
       "page": "tickers",
       "object": "tsm",
       "label": "TSM",
-      "start": "2026-10-20T00:00:00.000Z",
-      "end": "2026-10-20T07:00:00.000Z",
-      "cutoff": "2026-10-20T07:00:00.000Z",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T00:00:00.000Z",
+      "cutoff": "2026-10-21T00:00:00.000Z",
       "needsQuery": true,
       "bootstrap": false,
       "catchingUp": false,
-      "pending": []
+      "pending": [
+        {
+          "unit": "tickers:tsm",
+          "key": "tsm-cowos-260kwpm-estimate-20261020",
+          "status": "pending",
+          "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。",
+          "updatedAt": "2026-10-20T07:20:36.477Z",
+          "runId": "2026-10-20-1500"
+        },
+        {
+          "unit": "tickers:tsm",
+          "key": "apple-tsmc-a14-capacity-claim-20261020",
+          "status": "pending",
+          "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。",
+          "updatedAt": "2026-10-20T07:20:36.477Z",
+          "runId": "2026-10-20-1500"
+        }
+      ]
     }
   ],
-  "lastAttemptAt": "2026-10-20T12:32:48.804Z",
-  "attemptedCutoff": "2026-10-20T20:30:00+08:00"
+  "lastAttemptAt": "2026-10-21T00:30:43.401Z",
+  "attemptedCutoff": "2026-10-21T08:00:00+08:00"
 }

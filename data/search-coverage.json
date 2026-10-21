@@ -612,6 +612,44 @@
       "status": "failed",
       "queries": [],
       "recordedAt": "2026-10-20T12:32:21.762Z"
+    },
+    {
+      "jobId": "2026-10-21-0800",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-20T07:00:00.000Z",
+      "end": "2026-10-21T08:00:00+08:00",
+      "status": "partial",
+      "queries": [
+        "(Federal Reserve OR Treasury OR inflation OR credit) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets",
+        "(tariffs OR sanctions OR export controls OR oil OR shipping disruption) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets",
+        "(AI capex OR earnings guidance OR major financing OR datacenter orders) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets",
+        "(market breadth OR deleveraging OR fund positioning OR gamma) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies -filter:retweets",
+        "(AI OR semiconductor OR datacenter OR NVDA OR \"capital expenditure\" OR capex) (earnings OR guidance OR financing OR order OR orders) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(\"Federal Reserve\" OR Fed OR inflation OR Treasury) (rate OR policy OR minutes OR speech) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(tariff OR tariffs OR sanction OR \"export control\" OR rare earth OR yttrium OR oil) (China OR Japan OR supply) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(gamma OR GEX OR \"market breadth\" OR deleveraging OR \"fund positioning\") since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(SMCI OR \"Super Micro\" OR NVDA OR TSMC) (earnings OR guidance OR order) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(\"rare earth\" OR yttrium OR \"export control\") since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(SpaceX OR SPCX) earnings since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "\"Super Micro\" OR SMCI \"preliminary\" OR \"FQ1\" OR \"AI platform\" since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(HBM OR CoWoS OR semiconductor) (orders OR yield OR capacity OR ASP OR delay) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(datacenter OR grid OR nuclear OR transformer OR PPA) (MW OR GW OR permit OR connected OR delay) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(AI OR agent OR inference) (paid OR renewal OR margin OR revenue OR deployment OR outage) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(Treasury OR \"real yields\" OR \"term premium\" OR \"credit spreads\" OR refinancing OR yen) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(sanctions OR tariffs OR \"export controls\" OR oil OR shipping) (supply OR disruption OR exemption) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(\"market breadth\" OR \"index concentration\" OR \"fund positioning\" OR gamma OR \"leveraged ETF\") (flows OR deleveraging OR rebalance) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(from:Supermicro OR from:WSJ OR from:Reuters) (SMCI OR Super Micro) preliminary since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC",
+        "(from:Reuters OR from:business OR from:FT) Taiwan export orders September since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC",
+        "(from:SpaceX OR from:Reuters OR from:WSJ) earnings Q3 since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC",
+        "(from:FT OR from:Reuters) yttrium Japan since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC",
+        "(from:PhoenixTailings OR from:DeptofWar OR from:Reuters) Rochester since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC",
+        "(from:Daytona OR from:TechCrunch) Daytona funding since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC",
+        "(SMCI OR \"Super Micro\" OR \"Taiwan export orders\") (correction OR revised OR false OR preliminary OR unaudited) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(SpaceX OR Daytona) (earnings OR funding) (correction OR denied OR cashflow OR retention) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies",
+        "(yttrium OR \"Phoenix Tailings\") (shortage OR permit OR funding) (delay OR correction OR inventory OR alternative) since:2026-10-20_07:00:00_UTC until:2026-10-21_00:00:00_UTC -filter:replies"
+      ],
+      "recordedAt": "2026-10-21T00:30:43.885Z"
     }
   ]
 }
