@@ -31,7 +31,8 @@ function collectorPrompt(job,root,start,previous,window={}) {
     const tickerConfig=JSON.parse(fs.readFileSync(path.join(root,'config/ticker-intelligence.json'),'utf8'));
     const currentPath=path.join(root,'data/ticker-intelligence.json');
     const current=fs.existsSync(currentPath)?JSON.parse(fs.readFileSync(currentPath,'utf8')):{items:[]};
-    return common+guidance+`\n只更新“具体个股”页面，顶部Tab配置：${JSON.stringify(tickerConfig)}。当前价值事件：${JSON.stringify(current.items||[])}。当前热点：${JSON.stringify(current.hotspots||[])}。价值区latest滚动24小时最多5条、周榜7天最多5条；不足可为0。items为完整滚动快照，保留仍达标的旧条目，不整体清空。仅美股股权标的，按配置cashtag、公司名与账号查询，优先半导体、电力、AI落地。每个Tab返回tabs:[{id,status:complete|partial|failed,note}]；items:[{eventKey,tabIds,title,fact,whyItMatters,counterCase,affected,author,publishedAt,url,verification:collector-report,tier:must-read|watch,weeklyRanks}]。事实区需新增事实、传导链和内部反向条件，原帖真实准确；失败不能写成暂无新增。`+hotspotContract;
+    const runtimeContract='\n顶层必须保留collectionPath=grok-web或grok-app、checkedAt=实际读取检查完成时间ISO含时区、collectionMode和collectionUnits。checkedAt不能早于截止，不是发帖时间。engagement.capturedAt由实际界面读取者填写；主路径source=grok-web-observed，若按授权切换Bot则source=grok-app-observed，不误标采集路径。';
+    return common+guidance+`\n只更新“具体个股”页面，顶部Tab配置：${JSON.stringify(tickerConfig)}。当前价值事件：${JSON.stringify(current.items||[])}。当前热点：${JSON.stringify(current.hotspots||[])}。价值区latest滚动24小时最多5条、周榜7天最多5条；不足可为0。items为完整滚动快照，保留仍达标的旧条目，不整体清空。仅美股股权标的，按配置cashtag、公司名与账号查询，优先半导体、电力、AI落地。每个Tab返回tabs:[{id,status:complete|partial|failed,note}]；items:[{eventKey,tabIds,title,fact,whyItMatters,counterCase,affected,author,publishedAt,url,verification:collector-report,tier:must-read|watch,weeklyRanks}]。事实区需新增事实、传导链和内部反向条件，原帖真实准确；失败不能写成暂无新增。`+hotspotContract+runtimeContract;
   }
 
   if(job.page==='ai') {
