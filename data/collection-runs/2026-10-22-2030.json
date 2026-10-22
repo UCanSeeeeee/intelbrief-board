@@ -5505,7 +5505,106 @@
     }
   ],
   "publication": {
-    "status": "prepared"
+    "status": "verified",
+    "contentCommit": "0e571dde961934fa59cab552da39674a38e7546c",
+    "remoteConfirmed": true,
+    "verificationStartedAt": "2026-10-22T12:43:45.951Z",
+    "deploymentId": "da8bcee8-0fc3-4758-877f-e48c3d3e2b65",
+    "cloudflare": "completed/success",
+    "verification": {
+      "checkedAt": "2026-10-22T12:43:58.706Z",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-22-2030.json",
+          "bytesMatch": true,
+          "sha256": "cbcb3d45451b58380c15464dc9d062dee755b3cdb5980865a285f7a862550c8c"
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "bytesMatch": true,
+          "sha256": "0d0c0fdb0642273fa866c91ab8c85f68fe291392a869c19ae1f981289730f62b"
+        },
+        {
+          "path": "data/reading-board.json",
+          "bytesMatch": true,
+          "sha256": "3dec2b0aeacebc89940366e74aea44659f064925eabb724b8d6c48894f575f65"
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "bytesMatch": true,
+          "sha256": "e0a0a2c4e7d72e2211cdc357b7c1518112c280feb570db6feb638c580fba6fee"
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "bytesMatch": true,
+          "sha256": "b6004edbf7c90e932c68574c37abc7b1c4775523efd8d46bccd5d9d88b764aa7"
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "bytesMatch": true,
+          "sha256": "92514412c2d58888421d0aac2ec3cdbc5eb28e33b14bd4317565377451776185"
+        },
+        {
+          "path": "data/learning.json",
+          "bytesMatch": true,
+          "sha256": "d753fd4bd8f1e36dc5200187bb77aaa79e98e86bcd1fc200f6aca345a23abf15"
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "bytesMatch": true,
+          "sha256": "4b9d0bffb86c8a2f4527c63dcbf20ad93ce98fba08aa169665dcbd5d9268443b"
+        },
+        {
+          "path": "data/journal-learning.json",
+          "bytesMatch": true,
+          "sha256": "be4b9dc014d52c2b227233ada9c4ddc0dba4f0d0e677968f2490f00e58a71f8c"
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "bytesMatch": true,
+          "sha256": "d9bc68e8703b8eb1f63e0f158407b3b2b814e1d9fe73bca9f4178d3cdd44c4b2"
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "bytesMatch": true,
+          "sha256": "9160027db2de0eaeee3076e656818f1e31f27f91b9393b782b9f312df87256ef"
+        },
+        {
+          "path": "data/market-volatility.json",
+          "bytesMatch": true,
+          "sha256": "c7b57bd8e8bb53c427695283d3ada3e234d49a33953c36c755928b2a4bf49f4c"
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "bytesMatch": true,
+          "sha256": "a0c920bc74582213c5fcb3290de68f2db190cf048becf75a6c839a446cf21721"
+        }
+      ],
+      "apis": [
+        {
+          "path": "/api/vix",
+          "data": {
+            "schemaVersion": 1,
+            "id": "cboe-vix",
+            "value": 16.68,
+            "asOfDate": "2026-10-21",
+            "quoteKind": "close",
+            "previousClose": 17.31,
+            "fetchedAt": "2026-10-22T12:43:58.640Z",
+            "source": {
+              "name": "Cboe",
+              "url": "https://www.cboe.com/tradable-products/vix",
+              "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+            },
+            "retrieval": {
+              "status": "ok"
+            }
+          }
+        }
+      ]
+    },
+    "verifiedAt": "2026-10-22T12:44:30.967Z",
+    "note": "13项线上JSON与本地发布载荷逐字节一致；采集失败与发布成功分开。"
   },
   "timingNote": "实际阶段按ops墙钟记录；准备与界面操作包含在批次跨度。",
   "learningPlannedScope": {
@@ -5608,5 +5707,184 @@
     "selectedPreserved": true,
     "throughUnchanged": true,
     "oldLessonsRetained": true
+  },
+  "finishedAt": "2026-10-22T12:44:30.968Z",
+  "timing": {
+    "source": "data/ops-runs/2026-10-22-2030.json",
+    "wallClock": true,
+    "steps": [
+      {
+        "page": "news",
+        "name": "batch",
+        "status": "failed",
+        "startedAt": "2026-10-22T20:32:52+08:00",
+        "endedAt": "2026-10-22T20:37:28+08:00",
+        "durationMs": 276000,
+        "detail": "已保存部分候选、10次X查询及缺口；7对象未推进。CNN和VIX已成功保存。"
+      },
+      {
+        "page": "news",
+        "name": "discovery",
+        "status": "failed",
+        "startedAt": "2026-10-22T20:32:52+08:00",
+        "endedAt": "2026-10-22T20:36:37+08:00",
+        "durationMs": 225000,
+        "detail": "第一轮实际X搜索及部分结果已取得；锁屏中断完整候选读取，第二轮未执行。未完成，不推进。"
+      },
+      {
+        "page": "news",
+        "name": "source-verification",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-22T20:36:38+08:00",
+        "durationMs": 0,
+        "detail": "已有部分新候选，但Mac锁定无法继续Grok；是来源阻断而非无候选。"
+      },
+      {
+        "page": "news",
+        "name": "counter-evidence",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-22T20:36:39+08:00",
+        "durationMs": 0,
+        "detail": "Mac锁定来源阻断，部分候选留待核，不发布。"
+      },
+      {
+        "page": "people",
+        "name": "batch",
+        "status": "failed",
+        "startedAt": "2026-10-22T20:37:45+08:00",
+        "endedAt": "2026-10-22T20:37:47+08:00",
+        "durationMs": 2000,
+        "detail": null
+      },
+      {
+        "page": "people",
+        "name": "discovery",
+        "status": "failed",
+        "startedAt": "2026-10-22T20:37:46+08:00",
+        "endedAt": "2026-10-22T20:37:46+08:00",
+        "durationMs": 0,
+        "detail": "Mac锁定，无法操作Grok；本批查询未提交。"
+      },
+      {
+        "page": "people",
+        "name": "source-verification",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-22T20:37:46+08:00",
+        "durationMs": 0,
+        "detail": "无新候选，发现未执行，跳过。"
+      },
+      {
+        "page": "people",
+        "name": "counter-evidence",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-22T20:37:47+08:00",
+        "durationMs": 0,
+        "detail": "无新候选，发现未执行，跳过。"
+      },
+      {
+        "page": "tickers",
+        "name": "batch",
+        "status": "failed",
+        "startedAt": "2026-10-22T20:37:47+08:00",
+        "endedAt": "2026-10-22T20:37:49+08:00",
+        "durationMs": 2000,
+        "detail": null
+      },
+      {
+        "page": "tickers",
+        "name": "discovery",
+        "status": "failed",
+        "startedAt": "2026-10-22T20:37:47+08:00",
+        "endedAt": "2026-10-22T20:37:48+08:00",
+        "durationMs": 1000,
+        "detail": "Mac锁定，无法操作Grok；本批查询未提交。"
+      },
+      {
+        "page": "tickers",
+        "name": "source-verification",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-22T20:37:48+08:00",
+        "durationMs": 0,
+        "detail": "无新候选，发现未执行，跳过。"
+      },
+      {
+        "page": "tickers",
+        "name": "counter-evidence",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-22T20:37:48+08:00",
+        "durationMs": 0,
+        "detail": "无新候选，发现未执行，跳过。"
+      },
+      {
+        "page": "ai",
+        "name": "batch",
+        "status": "failed",
+        "startedAt": "2026-10-22T20:37:49+08:00",
+        "endedAt": "2026-10-22T20:37:50+08:00",
+        "durationMs": 1000,
+        "detail": null
+      },
+      {
+        "page": "ai",
+        "name": "discovery",
+        "status": "failed",
+        "startedAt": "2026-10-22T20:37:49+08:00",
+        "endedAt": "2026-10-22T20:37:50+08:00",
+        "durationMs": 1000,
+        "detail": "Mac锁定，无法操作Grok；本批查询未提交。"
+      },
+      {
+        "page": "ai",
+        "name": "source-verification",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-22T20:37:50+08:00",
+        "durationMs": 0,
+        "detail": "无新候选，发现未执行，跳过。"
+      },
+      {
+        "page": "ai",
+        "name": "counter-evidence",
+        "startedAt": null,
+        "status": "skipped",
+        "endedAt": "2026-10-22T20:37:50+08:00",
+        "durationMs": 0,
+        "detail": "无新候选，发现未执行，跳过。"
+      },
+      {
+        "page": "learning",
+        "name": "batch",
+        "status": "ok",
+        "startedAt": "2026-10-22T20:37:51+08:00",
+        "endedAt": "2026-10-22T20:39:37+08:00",
+        "durationMs": 106000,
+        "detail": "基础知识1课与5个独立小知识；论文components=false跳过。1缓存复用/4限定教育核验，更正和访问范围留审计。"
+      },
+      {
+        "page": "macro",
+        "name": "batch",
+        "status": "ok",
+        "startedAt": "2026-10-22T20:39:53+08:00",
+        "endedAt": "2026-10-22T20:39:53+08:00",
+        "durationMs": 0,
+        "detail": "复用当日官方核验缓存，无非财报到期/过时触发，不额外查询。"
+      },
+      {
+        "page": "earnings",
+        "name": "batch",
+        "status": "ok",
+        "startedAt": "2026-10-22T20:39:54+08:00",
+        "endedAt": "2026-10-22T20:41:25+08:00",
+        "durationMs": 91000,
+        "detail": "Nasdaq1276原始/82精选；新增SCCO按SEC正式稿及财报前收入预期评78分，待评价0；旧评价不重查。"
+      }
+    ],
+    "note": "只用实际ops开始/结束；新闻包含导航纠正、读取和锁屏中断；后续X批次为确认已知锁屏阻断和落盘时间，不声称实际查询耗时。准备和后续回执独立。"
   }
 }

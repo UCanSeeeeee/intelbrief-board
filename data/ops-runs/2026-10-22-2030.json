@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-22T20:32:52+08:00",
-  "updatedAt": "2026-10-22T20:41:51+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-22T20:44:30+08:00",
+  "finishedAt": "2026-10-22T20:44:30+08:00",
   "gitHeadAtStart": "bd21002bb0d9b80dfb4d2476ed2c6a77fe992e5c",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-22T20:43:46+08:00",
+      "detail": "0e571dde961934fa59cab552da39674a38e7546c已推送，远端master一致。"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-22T20:44:30+08:00",
+      "detail": "Cloudflare da8bcee8部署成功；13项公开JSON逐字节一致，固定只读/api/vix为16.68、10月21日收盘。"
     }
   ],
   "pages": {
@@ -77,14 +77,12 @@
       "detail": null
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "Grok首次X发现后Mac锁定中断；学习限定来源和日历完成，X成功截止不推进。",
-    "stackSnippet": null
-  },
-  "commitHash": null,
-  "notes": [],
+  "status": "partial",
+  "error": null,
+  "commitHash": "0e571dde961934fa59cab552da39674a38e7546c",
+  "notes": [
+    "发布已核验；X查询被Mac锁屏阻断，30对象保留08:00成功截止；学习/日历/指标完成。"
+  ],
   "timings": [
     {
       "page": "news",
