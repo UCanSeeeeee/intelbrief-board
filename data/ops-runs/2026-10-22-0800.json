@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-22T07:57:14+08:00",
-  "updatedAt": "2026-10-22T08:27:28+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-22T08:29:39+08:00",
+  "finishedAt": "2026-10-22T08:29:39+08:00",
   "gitHeadAtStart": "282900948dd2dde47393898e85c9311f8c603963",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": "2026-10-22T08:26:28+08:00",
-      "detail": "准备明确路径暂存与内容提交；尚未推送"
+      "status": "ok",
+      "at": "2026-10-22T08:27:43+08:00",
+      "detail": "内容621a348已push origin HEAD:master，ls-remote一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-22T08:29:39+08:00",
+      "detail": "Cloudflare621a348成功；14项公开JSON字节一致；固定只读/api/vix正常17.31/10月20收盘"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "无到期/过时触发，旧官方日历不刷新"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "621a34806ff074ebf48021a64af4e6beb248d48d",
+  "notes": [
+    "内容已发布核验；质量缺口Nature3/Science2、5家财报unknown；30对象均接续成功，非请求失败。未跑本地验证。"
+  ],
   "timings": [
     {
       "page": "news",
