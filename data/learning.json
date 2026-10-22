@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T12:37:33.332Z",
+  "updatedAt": "2026-10-22T12:39:37.162Z",
   "dailyCuriosities": [
     {
       "id": "2026-10-18-demand-is-not-funding",
@@ -257,6 +257,54 @@
       "sources": [
         {
           "label": "项目知识库I05：指数集中与市场宽度",
+          "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/knowledge/US_EQUITY_RESEARCH_KB.md"
+        }
+      ]
+    },
+    {
+      "id": "supplier-investment-versus-independent-demand",
+      "title": "供应商投资客户，为什么不能单凭订单确认终端需求？",
+      "category": "循环融资与终端需求",
+      "updatedAt": "2026-10-22T12:39:37.162Z",
+      "professional": {
+        "definition": "供应商投资客户，是资金流向；客户向供应商采购，是订单流向。独立终端需求来自最终使用者愿意持续付款，两者不能只靠合同金额相互证明。",
+        "mechanism": "供应商投入股权或提供融资后，客户可能将部分资金用于采购该供应商的设备。这可以降低融资约束、加快建设，也会使投资、订单和收入彼此关联。需要继续追到外部用户的实际使用、付费与回款，判断现金流能否覆盖能耗、折旧与利息。",
+        "whyItMatters": "AI基础设施的投资和采购容易形成反馈。同一笔资金经过多家公司，不能被当作多份独立需求证据；关联安排本身也不能证明交易虚假，仍需核对合同、资金用途与外部回款。",
+        "signals": [
+          "最终付费客户的使用量、续约与实际回款",
+          "供应商投资、贷款和客户采购的金额与时间关系",
+          "订单取消权、交付验收及付款条件",
+          "剔除关联融资后，运营产生的现金能否支撑持续投入"
+        ]
+      },
+      "story": {
+        "title": "面包机厂投资面包店",
+        "body": "这是虚构的教学场景。面包机厂看好一家面包店，投资100元，面包店再用其中80元买机器。机器厂有了订单，面包店有了设备，合作可能让原本缺钱的生意开起来。但不能据此说街坊已经买走了80元面包：面包是否卖得动，要看顾客以后是否持续付款。如果街坊喜欢、店铺不断回款，这套合作可能创造价值；如果主要靠机器厂下一轮注资才能续购设备，订单增长就还没有独立顾客来支撑。检查时既要看机器有没有真实交付，也要看现金最后来自谁。",
+        "mapping": [
+          {
+            "storyRole": "机器厂投资面包店",
+            "professionalMeaning": "供应商向客户提供股权资金"
+          },
+          {
+            "storyRole": "面包店用投资款买机器",
+            "professionalMeaning": "融资与采购可能存在关联"
+          },
+          {
+            "storyRole": "街坊持续买面包并付款",
+            "professionalMeaning": "独立终端采用与现金回款"
+          }
+        ],
+        "boundary": "例子简化了股权收益、信贷、交付和不同合同安排。真实合作可同时有战略价值和财务风险，不能仅凭资金闭环断定造假，也不能用订单金额推算利润。"
+      },
+      "commonMistakes": [
+        "把投资公告和采购合同算作两份独立终端需求。",
+        "看到关联融资便直接判断欺诈。",
+        "只看合同规模，忽略实际使用、交付和回款。"
+      ],
+      "relatedCuriosityIds": [],
+      "sources": [
+        {
+          "label": "项目研究知识库 I02、I01：循环融资与资本开支",
           "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/knowledge/US_EQUITY_RESEARCH_KB.md"
         }
       ]

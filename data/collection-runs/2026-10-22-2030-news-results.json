@@ -1,0 +1,94 @@
+{
+  "runId": "2026-10-22-2030",
+  "cutoff": "2026-10-22T20:30:00+08:00",
+  "results": [
+    {
+      "unit": "news:market-focus",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-22T12:30:00.000Z",
+      "status": "failed",
+      "queries": [
+        "(AI OR semiconductor OR chip OR NVIDIA OR NVDA OR TSMC OR ASML OR power OR electricity OR data center OR capex OR guidance) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC) -filter:replies",
+        "(Fed OR inflation OR CPI OR employment OR jobs OR treasury OR yield OR rate OR FOMC OR Powell) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC) min_faves:5 -filter:replies",
+        "(tariff OR geopolitics OR China OR export control OR energy OR oil OR shipping OR LNG) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC) min_faves:5 -filter:replies",
+        "(Meta OR META OR \"Meta Platforms\") (capex OR guidance OR earnings OR revenue) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(CoreWeave OR CRWV OR LRCX OR Lam Research OR Tesla OR TSLA) (capex OR AI OR spend OR guidance) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(breadth OR concentration OR delever OR hedge OR \"long short\" OR \"net sold\") (AI OR tech OR semiconductor) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "from:zerohedge (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(Tesla OR TSLA) (capex OR \"capital expenditure\" OR spend OR guidance) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(Lam Research OR LRCX) (guidance OR forecast OR beat OR miss) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(\"jobless claims\" OR \"initial claims\" OR employment OR CPI OR inflation) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC) min_faves:10"
+      ],
+      "note": "Grok第一轮实际X搜索后，在读取完整候选时Mac锁定；自动解锁失败，第一轮候选保存不完整、独立第二轮未执行，无法继续追源/反证。",
+      "evidenceFile": "data/collection-runs/2026-10-22-2030.json"
+    },
+    {
+      "unit": "news:semiconductors",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-22T12:30:00.000Z",
+      "status": "failed",
+      "queries": [],
+      "note": "Grok第一轮实际X搜索后，在读取完整候选时Mac锁定；自动解锁失败，第一轮候选保存不完整、独立第二轮未执行，无法继续追源/反证。",
+      "evidenceFile": "data/collection-runs/2026-10-22-2030.json"
+    },
+    {
+      "unit": "news:power",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-22T12:30:00.000Z",
+      "status": "failed",
+      "queries": [],
+      "note": "Grok第一轮实际X搜索后，在读取完整候选时Mac锁定；自动解锁失败，第一轮候选保存不完整、独立第二轮未执行，无法继续追源/反证。",
+      "evidenceFile": "data/collection-runs/2026-10-22-2030.json"
+    },
+    {
+      "unit": "news:ai-adoption",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-22T12:30:00.000Z",
+      "status": "failed",
+      "queries": [],
+      "note": "Grok第一轮实际X搜索后，在读取完整候选时Mac锁定；自动解锁失败，第一轮候选保存不完整、独立第二轮未执行，无法继续追源/反证。",
+      "evidenceFile": "data/collection-runs/2026-10-22-2030.json"
+    },
+    {
+      "unit": "news:capital-cost",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-22T12:30:00.000Z",
+      "status": "failed",
+      "queries": [],
+      "note": "Grok第一轮实际X搜索后，在读取完整候选时Mac锁定；自动解锁失败，第一轮候选保存不完整、独立第二轮未执行，无法继续追源/反证。",
+      "evidenceFile": "data/collection-runs/2026-10-22-2030.json"
+    },
+    {
+      "unit": "news:geopolitics",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-22T12:30:00.000Z",
+      "status": "failed",
+      "queries": [],
+      "note": "Grok第一轮实际X搜索后，在读取完整候选时Mac锁定；自动解锁失败，第一轮候选保存不完整、独立第二轮未执行，无法继续追源/反证。",
+      "evidenceFile": "data/collection-runs/2026-10-22-2030.json"
+    },
+    {
+      "unit": "news:market-structure",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-22T12:30:00.000Z",
+      "status": "failed",
+      "queries": [],
+      "note": "Grok第一轮实际X搜索后，在读取完整候选时Mac锁定；自动解锁失败，第一轮候选保存不完整、独立第二轮未执行，无法继续追源/反证。",
+      "evidenceFile": "data/collection-runs/2026-10-22-2030.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "news:market-focus",
+      "key": "zerohedge-premarket-20261022",
+      "status": "pending",
+      "reason": "未完成候选读取/原始追源/独立反证，二传数字不发布。"
+    },
+    {
+      "unit": "news:market-focus",
+      "key": "tapeandticker-premarket-20261022",
+      "status": "pending",
+      "reason": "采集器二传，官方/权威原始证据与反证未取得，不发布。"
+    }
+  ]
+}

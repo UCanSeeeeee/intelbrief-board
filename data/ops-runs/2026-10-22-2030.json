@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-22-2030",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-22T20:32:52+08:00",
+  "updatedAt": "2026-10-22T20:41:51+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "bd21002bb0d9b80dfb4d2476ed2c6a77fe992e5c",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-22T20:32:52+08:00",
+      "detail": null
+    },
+    {
+      "name": "read",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "search",
+      "status": "failed",
+      "at": "2026-10-22T20:41:25+08:00",
+      "detail": "Grok首次X发现后Mac锁定中断；学习限定来源和日历完成，X成功截止不推进。"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-22T20:41:51+08:00",
+      "detail": "全部7批已关闭；失败期次、原池/榜、1课5知识及日历/指标已合并。"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-22T20:41:26+08:00",
+      "detail": "用户明确不需要本地test/check/build/预览或额外回归；仅执行发布器数据契约及来源核对。"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "failed",
+      "detail": "锁屏中断，第一轮输出不全、第二轮未执行。"
+    },
+    "people": {
+      "status": "failed",
+      "detail": "已保存逐对象失败结果，不推进成功截止。"
+    },
+    "tickers": {
+      "status": "failed",
+      "detail": "已保存逐对象失败结果，不推进成功截止。"
+    },
+    "ai": {
+      "status": "failed",
+      "detail": "已保存逐对象失败结果，不推进成功截止。"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": null
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": null
+    }
+  },
+  "status": "failed",
+  "error": {
+    "stage": "search",
+    "message": "Grok首次X发现后Mac锁定中断；学习限定来源和日历完成，X成功截止不推进。",
+    "stackSnippet": null
+  },
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-22T20:32:52+08:00",
+      "endedAt": "2026-10-22T20:37:28+08:00",
+      "durationMs": 276000,
+      "detail": "已保存部分候选、10次X查询及缺口；7对象未推进。CNN和VIX已成功保存。"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-22T20:32:52+08:00",
+      "endedAt": "2026-10-22T20:36:37+08:00",
+      "durationMs": 225000,
+      "detail": "第一轮实际X搜索及部分结果已取得；锁屏中断完整候选读取，第二轮未执行。未完成，不推进。"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T20:36:38+08:00",
+      "durationMs": 0,
+      "detail": "已有部分新候选，但Mac锁定无法继续Grok；是来源阻断而非无候选。"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T20:36:39+08:00",
+      "durationMs": 0,
+      "detail": "Mac锁定来源阻断，部分候选留待核，不发布。"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-22T20:37:45+08:00",
+      "endedAt": "2026-10-22T20:37:47+08:00",
+      "durationMs": 2000,
+      "detail": null
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-22T20:37:46+08:00",
+      "endedAt": "2026-10-22T20:37:46+08:00",
+      "durationMs": 0,
+      "detail": "Mac锁定，无法操作Grok；本批查询未提交。"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T20:37:46+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现未执行，跳过。"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T20:37:47+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现未执行，跳过。"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-22T20:37:47+08:00",
+      "endedAt": "2026-10-22T20:37:49+08:00",
+      "durationMs": 2000,
+      "detail": null
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-22T20:37:47+08:00",
+      "endedAt": "2026-10-22T20:37:48+08:00",
+      "durationMs": 1000,
+      "detail": "Mac锁定，无法操作Grok；本批查询未提交。"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T20:37:48+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现未执行，跳过。"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T20:37:48+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现未执行，跳过。"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-22T20:37:49+08:00",
+      "endedAt": "2026-10-22T20:37:50+08:00",
+      "durationMs": 1000,
+      "detail": null
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-22T20:37:49+08:00",
+      "endedAt": "2026-10-22T20:37:50+08:00",
+      "durationMs": 1000,
+      "detail": "Mac锁定，无法操作Grok；本批查询未提交。"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T20:37:50+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现未执行，跳过。"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T20:37:50+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现未执行，跳过。"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T20:37:51+08:00",
+      "endedAt": "2026-10-22T20:39:37+08:00",
+      "durationMs": 106000,
+      "detail": "基础知识1课与5个独立小知识；论文components=false跳过。1缓存复用/4限定教育核验，更正和访问范围留审计。"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T20:39:53+08:00",
+      "endedAt": "2026-10-22T20:39:53+08:00",
+      "durationMs": 0,
+      "detail": "复用当日官方核验缓存，无非财报到期/过时触发，不额外查询。"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T20:39:54+08:00",
+      "endedAt": "2026-10-22T20:41:25+08:00",
+      "durationMs": 91000,
+      "detail": "Nasdaq1276原始/82精选；新增SCCO按SEC正式稿及财报前收入预期评78分，待评价0；旧评价不重查。"
+    }
+  ]
+}

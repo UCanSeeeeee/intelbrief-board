@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T12:37:33.641Z",
+  "updatedAt": "2026-10-22T12:39:37.484Z",
   "editions": [
     {
       "date": "2026-10-19",
@@ -534,6 +534,172 @@
           "Making memories, again Lasry Levy Tremblay 2008 full text"
         ],
         "checkedAt": "2026-10-21T12:37:33.332Z"
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "items": [
+        {
+          "id": "2026-10-22-knowledge-1",
+          "people": [],
+          "knowledgeKey": "milk-composition-is-not-simple-diet-copy",
+          "topic": "健康",
+          "title": "乳汁不是母亲饮食的简单复印件",
+          "intuition": "母亲吃了什么，乳汁就按同样比例变化。",
+          "fact": "三个队列的1543份乳样显示，共同分子变化与母体营养和婴儿生长相关。",
+          "explanation": "乳腺功能也参与成分调节，不能只由饮食推断乳汁质量。",
+          "boundary": "乳样数不等于人数；关联未证明某种分子导致生长，候选指标不能当家庭检测或补充处方。",
+          "sources": [
+            {
+              "label": "Science原文入口",
+              "publisher": "Science",
+              "url": "https://www.science.org/doi/10.1126/science.aee7240",
+              "publishedDate": "2026-10-08",
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-22T00:19:55.941636+00:00"
+            },
+            {
+              "label": "PubMed摘要与作者日期",
+              "publisher": "PubMed",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42848910/",
+              "publishedDate": "2026-10-08",
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-22T00:19:55.941636+00:00"
+            },
+            {
+              "label": "NYU作者机构研究说明",
+              "publisher": "NYU Langone",
+              "url": "https://nyulangone.org/news/human-milk-offers-window-mammary-gland-function-and-its-links-infant-growth",
+              "publishedDate": null,
+              "accessLevel": "abstract",
+              "checkedAt": "2026-10-22T00:19:55.941636+00:00",
+              "dateNote": "已核缓存未单列机构说明发布日期；不以论文日期代替网页日期。"
+            }
+          ],
+          "evidenceReuse": {
+            "file": "data/journal-learning.json",
+            "doi": "10.1126/science.aee7240",
+            "checkedAt": "2026-10-22T00:19:55.941636+00:00"
+          }
+        },
+        {
+          "id": "2026-10-22-knowledge-2",
+          "people": [],
+          "knowledgeKey": "short-activity-bouts-count",
+          "topic": "健康",
+          "title": "运动不足十分钟，也不等于白做",
+          "intuition": "一段运动不满十分钟，就没有健康价值。",
+          "fact": "WHO 2020指南取消了有氧活动须连续至少十分钟才计入的要求，短段活动也可累积。",
+          "explanation": "证据支持关注活动总量，而不是把十分钟当作起效开关。",
+          "boundary": "短时有效不表示任意强度、时长的收益相同，也不替代总体活动量；这条规则不能推算个人疗效。",
+          "sources": [
+            {
+              "label": "WHO指南建议章节：活动段时长",
+              "publisher": "World Health Organization",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK566046/?report=printable",
+              "publishedDate": "2020-11-25",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-22T12:39:37.162Z"
+            },
+            {
+              "label": "WHO身体活动事实表",
+              "publisher": "World Health Organization",
+              "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity/",
+              "publishedDate": "2024-06-26",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-22T12:39:37.162Z"
+            }
+          ]
+        },
+        {
+          "id": "2026-10-22-knowledge-3",
+          "people": [],
+          "knowledgeKey": "skewed-mean-versus-typical",
+          "topic": "统计",
+          "title": "平均数上升，多数人的情况仍可能没变",
+          "intuition": "平均值更高，就代表典型个体也更高。",
+          "fact": "NIST统计教材说明，极端大值能拉动均值，中位数按排序确定，对尾部极值较稳健。",
+          "explanation": "少数极端变化会改变总和，却未必改变排在中间的个体。",
+          "boundary": "均值并非错误；研究总量、人均资源和典型个体是不同问题，要同时看分布及统计口径。",
+          "sources": [
+            {
+              "label": "统计手册：位置量与稳健性",
+              "publisher": "NIST",
+              "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+              "publishedDate": null,
+              "accessLevel": "full-text",
+              "checkedAt": "2026-10-22T12:39:37.162Z",
+              "dateNote": "教育页面未标原始发布日期，未以抓取日期代替。"
+            }
+          ]
+        },
+        {
+          "id": "2026-10-22-knowledge-4",
+          "people": [],
+          "knowledgeKey": "simpson-reversal-confounding",
+          "topic": "统计",
+          "title": "每组都较好，合起来仍可能不占优",
+          "intuition": "各小组成功率都高，总成功率一定也高。",
+          "fact": "统计上的分组关联，合并后可以减弱、消失甚至反向。",
+          "explanation": "各组基础成功率不同，而比较双方分配到各组的比例也不同，总数使用了不同权重。",
+          "boundary": "不能因此认定分组结果永远正确；该控制哪些变量，要依据问题和因果关系，随意分组也可能误导。",
+          "sources": [
+            {
+              "label": "分组与总体关联、因果推断边界",
+              "publisher": "Stanford Encyclopedia of Philosophy",
+              "url": "https://plato.stanford.edu/entries/paradox-simpson/",
+              "publishedDate": "2021-03-24",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-22T12:39:37.162Z"
+            }
+          ],
+          "sourceRevisionNote": "教育页面标明2026-06-06实质修订；仅使用定义、加权解释与因果边界。"
+        },
+        {
+          "id": "2026-10-22-knowledge-5",
+          "people": [],
+          "knowledgeKey": "regression-to-mean-is-not-treatment",
+          "topic": "行为认知",
+          "title": "低谷后的进步，未必全是新方法的功劳",
+          "intuition": "挑最差的一次后开始改进，再测变好就证明方法有效。",
+          "fact": "因随机波动而极端的测量，再测时往往更接近平均；这叫均值回归。",
+          "explanation": "第一次低分可能混有疲劳或偶然误差；误差不重复，分数就可能回升。",
+          "boundary": "这是群体倾向，不能保证个人逆转，也不能否定真实效果；应结合多次基线和可比对照判断。",
+          "sources": [
+            {
+              "label": "研究机构教育资料：均值回归",
+              "publisher": "Institute for Work & Health",
+              "url": "https://www.iwh.on.ca/what-researchers-mean-by/regression-to-mean",
+              "publishedDate": null,
+              "accessLevel": "full-text",
+              "checkedAt": "2026-10-22T12:39:37.162Z",
+              "dateNote": "来源标明2014年11月，未标具体日。"
+            }
+          ],
+          "sourceDateNote": "来源标明2014年11月，未给日，未虚构具体日。",
+          "correctionReplicationCheck": {
+            "note": "Barnett 2005综述索引列2015更正dyv161，原更正正文不可读，未采用其公式；本卡根据独立IWH教育正文解释定性机制，不声称核过公式。"
+          }
+        }
+      ],
+      "coverage": {
+        "status": "complete",
+        "note": "5个独立知识点：1条复用早报合格论文缓存，4条限定官方/研究机构教育资料核验。Mac锁定后Grok不可用；非X只用于本栏目。往期不变。",
+        "queries": [
+          "site.who.int 2020 physical activity guidelines bouts 10 minutes removed",
+          "site.itl.nist.gov mean median skewed extreme values",
+          "site.online.stat.psu.edu Simpson paradox aggregated",
+          "regression to the mean what it is how to deal Barnett 2005 PubMed",
+          "\"10.1093/ije/dyv161\" correction regression equation",
+          "site.online.stat.psu.edu \"Simpson\" \"paradox\"",
+          "\"World Health Organization 2020 guidelines\" correction 10 minutes",
+          "\"Regression to the mean\" 2005 erratum 2015",
+          "site.who.int \"10 minutes\" \"2020\" \"physical activity\"",
+          "site.pubmed.ncbi.nlm.nih.gov \"World Health Organization 2020 guidelines\"",
+          "site.pubmed.ncbi.nlm.nih.gov \"26270438\" \"formula\"",
+          "site.who.int \"physical activity\" \"26 June 2024\""
+        ],
+        "checkedAt": "2026-10-22T12:39:37.162Z"
       }
     }
   ]

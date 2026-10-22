@@ -717,6 +717,27 @@
       "status": "failed",
       "queries": [],
       "recordedAt": "2026-10-22T07:04:55.753Z"
+    },
+    {
+      "jobId": "2026-10-22-2030",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-22T20:30:00+08:00",
+      "status": "failed",
+      "queries": [
+        "(AI OR semiconductor OR chip OR NVIDIA OR NVDA OR TSMC OR ASML OR power OR electricity OR data center OR capex OR guidance) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC) -filter:replies",
+        "(Fed OR inflation OR CPI OR employment OR jobs OR treasury OR yield OR rate OR FOMC OR Powell) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC) min_faves:5 -filter:replies",
+        "(tariff OR geopolitics OR China OR export control OR energy OR oil OR shipping OR LNG) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC) min_faves:5 -filter:replies",
+        "(Meta OR META OR \"Meta Platforms\") (capex OR guidance OR earnings OR revenue) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(CoreWeave OR CRWV OR LRCX OR Lam Research OR Tesla OR TSLA) (capex OR AI OR spend OR guidance) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(breadth OR concentration OR delever OR hedge OR \"long short\" OR \"net sold\") (AI OR tech OR semiconductor) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "from:zerohedge (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(Tesla OR TSLA) (capex OR \"capital expenditure\" OR spend OR guidance) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(Lam Research OR LRCX) (guidance OR forecast OR beat OR miss) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC)",
+        "(\"jobless claims\" OR \"initial claims\" OR employment OR CPI OR inflation) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC) min_faves:10"
+      ],
+      "recordedAt": "2026-10-22T12:41:51.670Z"
     }
   ]
 }
