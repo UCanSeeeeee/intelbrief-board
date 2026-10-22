@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-22-1500",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-22T15:00:08+08:00",
+  "updatedAt": "2026-10-22T15:05:36+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "eb17eb2c768a00ff421436290ea86825739b8039",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-22T15:00:08+08:00",
+      "detail": null
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-22T15:04:55+08:00",
+      "detail": "按批读取当前契约，项目KB/SOP本轮只读一次按哈希复用；学习按false跳过"
+    },
+    {
+      "name": "search",
+      "status": "failed",
+      "at": "2026-10-22T15:04:55+08:00",
+      "detail": "30个X对象入口失败，实际查询0、成功截止未推进；后两阶段跳过；官方指标/财报单独完成"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-22T15:05:36+08:00",
+      "detail": "完整结果先落盘再record，失败归档及全部存量/精选原序保留，未产生新X卡"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-22T15:05:36+08:00",
+      "detail": "用户要求未运行test/check/build/预览/额外回归；仅发布契约和数据/来源保留审查"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "failed",
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    "people": {
+      "status": "failed",
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    "tickers": {
+      "status": "failed",
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    "ai": {
+      "status": "failed",
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "三周共1280原始/82入选；仅新增pendingReview需官方核验，本轮0家；已评分公司复用不重查。"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "复用今早审计，无到期/过时触发"
+    }
+  },
+  "status": "failed",
+  "error": {
+    "stage": "search",
+    "message": "30个X对象入口失败，实际查询0、成功截止未推进；后两阶段跳过；官方指标/财报单独完成",
+    "stackSnippet": null
+  },
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-22T15:00:08+08:00",
+      "endedAt": "2026-10-22T15:02:29+08:00",
+      "durationMs": 141000,
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-22T15:00:08+08:00",
+      "endedAt": "2026-10-22T15:02:27+08:00",
+      "durationMs": 139000,
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T15:02:27+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现失败，不空跑"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T15:02:27+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现失败，不空跑"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-22T15:02:29+08:00",
+      "endedAt": "2026-10-22T15:02:53+08:00",
+      "durationMs": 24000,
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-22T15:02:29+08:00",
+      "endedAt": "2026-10-22T15:02:53+08:00",
+      "durationMs": 24000,
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T15:02:53+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现失败，不空跑"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T15:02:53+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现失败，不空跑"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-22T15:02:53+08:00",
+      "endedAt": "2026-10-22T15:03:04+08:00",
+      "durationMs": 11000,
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-22T15:02:53+08:00",
+      "endedAt": "2026-10-22T15:03:04+08:00",
+      "durationMs": 11000,
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T15:03:04+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现失败，不空跑"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T15:03:04+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现失败，不空跑"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-22T15:03:04+08:00",
+      "endedAt": "2026-10-22T15:03:33+08:00",
+      "durationMs": 29000,
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-22T15:03:04+08:00",
+      "endedAt": "2026-10-22T15:03:33+08:00",
+      "durationMs": 29000,
+      "detail": "Grok网页版首页新页及一次刷新仍空白，无输入框；无法提交查询或核实登录，Bot保持暂停，未执行查询，不是无结果。"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T15:03:33+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现失败，不空跑"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T15:03:33+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，发现失败，不空跑"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-22T15:03:33+08:00",
+      "durationMs": 0,
+      "detail": "learning.components papers/basics/counterintuitive均false；已读三SOP及config，不执行查询，不改早报学习"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T15:03:33+08:00",
+      "endedAt": "2026-10-22T15:03:33+08:00",
+      "durationMs": 0,
+      "detail": "无非财报到期或明确过时触发，不重复官方宽查"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T15:03:33+08:00",
+      "endedAt": "2026-10-22T15:04:25+08:00",
+      "durationMs": 52000,
+      "detail": "三周共1280原始/82入选；仅新增pendingReview需官方核验，本轮0家；已评分公司复用不重查。"
+    }
+  ]
+}
