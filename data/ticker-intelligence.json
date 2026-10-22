@@ -1,77 +1,56 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T00:30:43.398Z",
-  "cutoff": "2026-10-21T08:00:00+08:00",
+  "updatedAt": "2026-10-22T00:24:43.290Z",
+  "cutoff": "2026-10-22T08:00:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "failed",
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定X事实查询完成，候选未达到新事实门槛，保留有效旧内容。",
+        "cutoff": "2026-10-22T08:00:00+08:00"
       },
       {
         "id": "mu",
-        "status": "failed",
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定X事实查询完成，候选未达到新事实门槛，保留有效旧内容。",
+        "cutoff": "2026-10-22T08:00:00+08:00"
       },
       {
         "id": "intc",
-        "status": "failed",
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定X事实查询完成，候选未达到新事实门槛，保留有效旧内容。",
+        "cutoff": "2026-10-22T08:00:00+08:00"
       },
       {
         "id": "goog",
-        "status": "failed",
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定X事实查询完成，候选未达到新事实门槛，保留有效旧内容。",
+        "cutoff": "2026-10-22T08:00:00+08:00"
       },
       {
         "id": "avgo",
-        "status": "failed",
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定X事实查询完成，候选未达到新事实门槛，保留有效旧内容。",
+        "cutoff": "2026-10-22T08:00:00+08:00"
       },
       {
         "id": "vrt",
-        "status": "failed",
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定X事实查询完成，候选未达到新事实门槛，保留有效旧内容。",
+        "cutoff": "2026-10-22T08:00:00+08:00"
       },
       {
         "id": "tsm",
-        "status": "failed",
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T08:00:00+08:00"
+        "status": "complete",
+        "note": "既定X事实查询完成，候选未达到新事实门槛，保留有效旧内容。",
+        "cutoff": "2026-10-22T08:00:00+08:00"
       }
     ]
   },
   "items": [
-    {
-      "eventKey": "nvda-china-rtx5500-orders-20261020",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "Reuters：三家中国互联网公司据报订购逾350亿美元NVIDIA显卡",
-      "fact": "Reuters援引两名消息人士报道，ByteDance、Alibaba与Tencent合计订购超过300万张NVIDIA RTX PRO 5500显卡，价值超过350亿美元。报道将其描述为在美国对华限制下抢购较低性能、符合出口规则的产品；这不是NVIDIA的公开订单确认。",
-      "whyItMatters": "受限市场的需求可能转向可出口产品，为NVIDIA形成额外销售机会；订单只有在产能分配、出口规则与实际交付落实后才转为收入和现金流。本报道提供需求线索，尚不能据此上调已实现收入。",
-      "counterCase": "订单可能受到可交付数量、规则变化或客户取消影响。未核实只能交付5%–10%的说法，也未采用二传的全球产量数字；实际下单时刻、客户分拆和交付安排仍未知。",
-      "affected": [
-        "NVDA",
-        "AI服务器供应链"
-      ],
-      "author": "@Reuters",
-      "publishedAt": "2026-10-20T15:45:00Z",
-      "url": "https://x.com/Reuters/status/2112570788339761238",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {},
-      "people": []
-    },
     {
       "eventKey": "mu-taiwan-strike-risk-2026-10-15",
       "tabIds": [
@@ -93,38 +72,7 @@
       "weeklyRanks": {
         "mu": 2
       },
-      "people": [],
-      "timeline": [
-        {
-          "changedAt": "2026-10-20T07:20:36.009Z",
-          "change": "进展",
-          "previous": {
-            "eventKey": "mu-taiwan-strike-risk-2026-10-15",
-            "tabIds": [
-              "mu"
-            ],
-            "title": "Micron 台湾厂区潜在罢工风险被市场讨论",
-            "fact": "研究账号转述：工会称已获足够罢工票数，关切存储供应中断；台湾为 Micron 重要产能。",
-            "whyItMatters": "供给尾部风险对紧平衡叙事的对冲。",
-            "counterCase": "若谈判解决未停产，则仅为噪音。",
-            "affected": [
-              "MU",
-              "存储供给"
-            ],
-            "author": "tenet_research",
-            "publishedAt": "2026-10-15T09:32:51.000Z",
-            "url": "https://x.com/tenet_research/status/2110665194775118202",
-            "verification": "collector-report",
-            "tier": "watch",
-            "weeklyRanks": {
-              "mu": 2
-            },
-            "people": []
-          },
-          "sourceUrl": "https://x.com/Reuters/status/2112400996559208471"
-        }
-      ],
-      "change": "进展"
+      "people": []
     },
     {
       "eventKey": "samsung-tsmc-next-hbm-media-2026-10-18",
@@ -596,6 +544,164 @@
   "attemptedCutoff": "2026-10-21T20:30:00+08:00",
   "hotspots": [
     {
+      "eventKey": "nvda-hotspot-2113008387256357345",
+      "tabId": "nvda",
+      "title": "Nikkei关注NVIDIA等AI相关股票买盘",
+      "fact": "Nikkei在标题中称，道指继续上涨，NVIDIA等AI相关股出现广泛买盘。这里记录该媒体对市场交易的描述。",
+      "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+      "caveat": "这是媒体归因而非NVIDIA订单或公司经营披露；没有独立核对该标题中的指数涨幅。",
+      "author": "@nikkei",
+      "publishedAt": "2026-10-21T20:43:51Z",
+      "url": "https://x.com/nikkei/status/2113008387256357345",
+      "originalText": "NYダウ、続伸し360ドル高　NVIDIAなどAI関連に幅広い買い",
+      "eventTime": null,
+      "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "engagement": {
+        "likes": 67,
+        "reposts": 15,
+        "replies": 2,
+        "capturedAt": "2026-10-22T00:10:38.355110+00:00",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+      "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+      "people": []
+    },
+    {
+      "eventKey": "mu-hotspot-2112803102902608225",
+      "tabId": "mu",
+      "title": "X用户关注Micron技术说明会",
+      "fact": "@micron_girl发帖关注Micron技术说明会，并预测发布内容可能影响存储股。",
+      "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+      "caveat": "活动安排与市场影响均为非官方帖的说法；原文“今夜23时”未说明时区，未当作新的待举行官方日程。",
+      "author": "@micron_girl",
+      "publishedAt": "2026-10-21T07:08:08Z",
+      "url": "https://x.com/micron_girl/status/2112803102902608225",
+      "originalText": "🚨メモリ株の救世主、ついに登場！？🔥 🇺🇸 Micronが今夜23時、技術説明会を開催！！ 発表内容次第では、今夜のメモリ株が大きく動く可能性も！？🔥🔥🚀 注目ポイントはこちら👀✨",
+      "eventTime": null,
+      "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "engagement": {
+        "likes": 202,
+        "reposts": 34,
+        "replies": 34,
+        "capturedAt": "2026-10-22T00:10:38.355113+00:00",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+      "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+      "people": []
+    },
+    {
+      "tabId": "mu",
+      "eventKey": "mu-taiwan-strike-discussion-20261021",
+      "title": "台湾员工计划罢工，生产影响尚未确认",
+      "fact": "该账号称，美光台湾员工计划10月22日因利润分享诉求举行一天罢工。帖子明确表示，尚未确认生产中断；若行动扩大到较大的台中业务，才可能影响DRAM与HBM供应。",
+      "whyItMatters": "需把劳资行动、实际停产和产品交付影响分开。只有出现产线或交货受影响的证据，才有依据调整短期供应判断。",
+      "caveat": "计划罢工与风险范围均未独立核验；不能把可能影响写成已经停产。本样本互动很低。",
+      "author": "@marketnewsdata",
+      "url": "https://x.com/marketnewsdata/status/2112700163341094960",
+      "publishedAt": "2026-10-21T00:19:05Z",
+      "eventTimeNote": "作者所述计划日期为10月22日，具体时刻及是否执行未知",
+      "originalText": "$MU Micron workers in Taiwan plan a one-day strike on October 22 over profit-sharing demands. No production disruption confirmed, but escalation to Micron’s larger Taichung operations could threaten DRAM and HBM supply.",
+      "verification": "collector-report",
+      "sourceNature": "non-official",
+      "engagement": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "views": 8,
+        "capturedAt": "2026-10-21T04:24:40Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-21T04:27:13.260Z",
+      "lastMaterialAt": "2026-10-21T04:27:13.260Z",
+      "people": []
+    },
+    {
+      "eventKey": "goog-hotspot-2112952056730341585",
+      "tabId": "goog",
+      "title": "TrendSpider讨论GOOG与200日均线",
+      "fact": "TrendSpider称GOOG已跌至200日简单移动均线之下，并将其形容为折价区。",
+      "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+      "caveat": "均线位置及折价判断为该账号的图表观点，未独立复算；低于均线不证明便宜或将反弹。",
+      "author": "@TrendSpider",
+      "publishedAt": "2026-10-21T17:00:01Z",
+      "url": "https://x.com/TrendSpider/status/2112952056730341585",
+      "originalText": "Google $GOOG back in the bargain aisle below its 200-day SMA 👀",
+      "eventTime": null,
+      "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "engagement": {
+        "likes": 486,
+        "reposts": 35,
+        "replies": 34,
+        "capturedAt": "2026-10-22T00:10:38.355117+00:00",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+      "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+      "people": []
+    },
+    {
+      "eventKey": "avgo-meta-inference-2113037641889255746",
+      "tabId": "avgo",
+      "title": "X分析将Meta推理成本与Broadcom定制芯片联系",
+      "fact": "@TheValueist根据其对Meta财报的解读，认为推理经济性约束可能增加定制芯片、先进封装和以太网的重要性，并将Broadcom列为相关公司。",
+      "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+      "caveat": "这是作者机制分析；所引10倍效率改善及超过1GW合作规模未取得本轮原始帖，不作为已核事实。原文长帖截断，未知部分未补写。",
+      "author": "@TheValueist",
+      "publishedAt": "2026-10-21T22:40:06Z",
+      "url": "https://x.com/TheValueist/status/2113037641889255746",
+      "originalText": "$META KEY READ-THROUGHS FROM META PLATFORMS’ Q3 2026 EARNINGS CALL (1/2) ... AI SEMICONDUCTORS: CUSTOM SILICON BECOMES MORE IMPORTANT AS INFERENCE ECONOMICS BECOME THE CONSTRAINT (READ-THROUGH 1) Affected company: Broadcom (AVGO: US). ... Call evidence: Meta expects more than a 10x improvement in Muse compute efficiency over the next year... Meta’s announced partnership covers multiple MTIA generations, chip design, advanced packaging, and Ethernet networking, with an initial commitment exceeding 1 GW...",
+      "eventTime": null,
+      "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "engagement": {
+        "likes": 5,
+        "reposts": 0,
+        "replies": 2,
+        "capturedAt": "2026-10-22T00:11:18.239172+00:00",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+      "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+      "people": []
+    },
+    {
+      "eventKey": "tsm-hotspot-2112943280333971692",
+      "tabId": "tsm",
+      "title": "X用户转引TSMC信用评级上调消息",
+      "fact": "@HizeroSkyrocket转引一则TSMC评级上调消息，并将其与AI需求扩张联系。",
+      "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+      "caveat": "本轮未找到Moody’s或公司原帖，评级档位与调整生效日期未核实；保留为非官方讨论线索，不作已确认评级事实。",
+      "author": "@HizeroSkyrocket",
+      "publishedAt": "2026-10-21T16:25:09Z",
+      "url": "https://x.com/HizeroSkyrocket/status/2112943280333971692",
+      "originalText": "ムーディーズ、AI需要拡大でTSMCの格付けをAa2に引き上げ",
+      "eventTime": null,
+      "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "engagement": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "capturedAt": "2026-10-22T00:10:38.355125+00:00",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+      "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+      "people": []
+    }
+  ],
+  "hotspotRetained": [
+    {
       "tabId": "nvda",
       "eventKey": "nvda-compute-deployment-bottlenecks-20261020",
       "title": "大规模算力上线：不只是缺电",
@@ -702,32 +808,6 @@
         "reposts": 0,
         "replies": 1,
         "views": 21,
-        "capturedAt": "2026-10-21T04:24:40Z",
-        "source": "grok-web-observed"
-      },
-      "firstIncludedAt": "2026-10-21T04:27:13.260Z",
-      "lastMaterialAt": "2026-10-21T04:27:13.260Z",
-      "people": []
-    },
-    {
-      "tabId": "mu",
-      "eventKey": "mu-taiwan-strike-discussion-20261021",
-      "title": "台湾员工计划罢工，生产影响尚未确认",
-      "fact": "该账号称，美光台湾员工计划10月22日因利润分享诉求举行一天罢工。帖子明确表示，尚未确认生产中断；若行动扩大到较大的台中业务，才可能影响DRAM与HBM供应。",
-      "whyItMatters": "需把劳资行动、实际停产和产品交付影响分开。只有出现产线或交货受影响的证据，才有依据调整短期供应判断。",
-      "caveat": "计划罢工与风险范围均未独立核验；不能把可能影响写成已经停产。本样本互动很低。",
-      "author": "@marketnewsdata",
-      "url": "https://x.com/marketnewsdata/status/2112700163341094960",
-      "publishedAt": "2026-10-21T00:19:05Z",
-      "eventTimeNote": "作者所述计划日期为10月22日，具体时刻及是否执行未知",
-      "originalText": "$MU Micron workers in Taiwan plan a one-day strike on October 22 over profit-sharing demands. No production disruption confirmed, but escalation to Micron’s larger Taichung operations could threaten DRAM and HBM supply.",
-      "verification": "collector-report",
-      "sourceNature": "non-official",
-      "engagement": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0,
-        "views": 8,
         "capturedAt": "2026-10-21T04:24:40Z",
         "source": "grok-web-observed"
       },
@@ -1022,69 +1102,255 @@
       "people": []
     }
   ],
-  "hotspotRetained": [],
   "hotspotCoverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "failed",
-        "queries": [],
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T12:40:32.769Z"
+        "status": "complete",
+        "queries": [
+          "($NVDA OR NVIDIA) since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC"
+        ],
+        "note": "独立热点实际查询完成；INTC/VRT低质样本及一次产业补查均无合格条目，其他具体讨论及未核事实已分开。",
+        "cutoff": "2026-10-22T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-22T00:24:43.290Z"
       },
       {
         "id": "mu",
-        "status": "failed",
-        "queries": [],
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T12:40:32.769Z"
+        "status": "complete",
+        "queries": [
+          "($MU OR \"Micron\") since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC"
+        ],
+        "note": "独立热点实际查询完成；INTC/VRT低质样本及一次产业补查均无合格条目，其他具体讨论及未核事实已分开。",
+        "cutoff": "2026-10-22T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-22T00:24:43.290Z"
       },
       {
         "id": "intc",
-        "status": "failed",
-        "queries": [],
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T12:40:32.769Z"
+        "status": "complete",
+        "queries": [
+          "($INTC OR Intel) since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC",
+          "(INTC OR Intel) (18A OR foundry OR customer) since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC"
+        ],
+        "note": "独立热点实际查询完成；INTC/VRT低质样本及一次产业补查均无合格条目，其他具体讨论及未核事实已分开。",
+        "cutoff": "2026-10-22T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-22T00:24:43.290Z"
       },
       {
         "id": "goog",
-        "status": "failed",
-        "queries": [],
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T12:40:32.769Z"
+        "status": "complete",
+        "queries": [
+          "($GOOG OR Google OR Alphabet) since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC"
+        ],
+        "note": "独立热点实际查询完成；INTC/VRT低质样本及一次产业补查均无合格条目，其他具体讨论及未核事实已分开。",
+        "cutoff": "2026-10-22T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-22T00:24:43.290Z"
       },
       {
         "id": "avgo",
-        "status": "failed",
-        "queries": [],
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T12:40:32.769Z"
+        "status": "complete",
+        "queries": [
+          "($AVGO OR Broadcom) since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC",
+          "(AVGO OR Broadcom) (ASIC OR ethernet OR network) since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC"
+        ],
+        "note": "独立热点实际查询完成；INTC/VRT低质样本及一次产业补查均无合格条目，其他具体讨论及未核事实已分开。",
+        "cutoff": "2026-10-22T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-22T00:24:43.290Z"
       },
       {
         "id": "vrt",
-        "status": "failed",
-        "queries": [],
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T12:40:32.769Z"
+        "status": "complete",
+        "queries": [
+          "($VRT OR Vertiv) since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC",
+          "(VRT OR Vertiv) (cooling OR power OR order) since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC"
+        ],
+        "note": "独立热点实际查询完成；INTC/VRT低质样本及一次产业补查均无合格条目，其他具体讨论及未核事实已分开。",
+        "cutoff": "2026-10-22T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-22T00:24:43.290Z"
       },
       {
         "id": "tsm",
-        "status": "failed",
-        "queries": [],
-        "note": "Grok网页版新页在确认完整https://grok.com/后仍空白，一次刷新及既有会话复查无正文/输入框；无法确认当前登录或提交X查询。Bot暂停，不使用第三路径。未执行查询，不是无结果。",
-        "cutoff": "2026-10-21T12:15:00+08:00",
-        "lastAttemptAt": "2026-10-21T12:40:32.769Z"
+        "status": "complete",
+        "queries": [
+          "($TSM OR TSMC) since:2026-10-21_04:15:00_UTC until:2026-10-22_00:00:00_UTC"
+        ],
+        "note": "独立热点实际查询完成；INTC/VRT低质样本及一次产业补查均无合格条目，其他具体讨论及未核事实已分开。",
+        "cutoff": "2026-10-22T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-22T00:24:43.290Z"
       }
     ]
   },
-  "hotspotCutoff": "2026-10-21T12:15:00+08:00",
+  "hotspotCutoff": "2026-10-22T08:00:00+08:00",
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "nvda-hotspot-2113008387256357345",
+        "tabId": "nvda",
+        "title": "Nikkei关注NVIDIA等AI相关股票买盘",
+        "fact": "Nikkei在标题中称，道指继续上涨，NVIDIA等AI相关股出现广泛买盘。这里记录该媒体对市场交易的描述。",
+        "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+        "caveat": "这是媒体归因而非NVIDIA订单或公司经营披露；没有独立核对该标题中的指数涨幅。",
+        "author": "@nikkei",
+        "publishedAt": "2026-10-21T20:43:51Z",
+        "url": "https://x.com/nikkei/status/2113008387256357345",
+        "originalText": "NYダウ、続伸し360ドル高　NVIDIAなどAI関連に幅広い買い",
+        "eventTime": null,
+        "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "engagement": {
+          "likes": 67,
+          "reposts": 15,
+          "replies": 2,
+          "capturedAt": "2026-10-22T00:10:38.355110+00:00",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+        "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+        "people": []
+      },
+      "tabIds": [
+        "nvda"
+      ],
+      "hotspot": true,
+      "at": "2026-10-22T00:24:43.290Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "mu-hotspot-2112803102902608225",
+        "tabId": "mu",
+        "title": "X用户关注Micron技术说明会",
+        "fact": "@micron_girl发帖关注Micron技术说明会，并预测发布内容可能影响存储股。",
+        "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+        "caveat": "活动安排与市场影响均为非官方帖的说法；原文“今夜23时”未说明时区，未当作新的待举行官方日程。",
+        "author": "@micron_girl",
+        "publishedAt": "2026-10-21T07:08:08Z",
+        "url": "https://x.com/micron_girl/status/2112803102902608225",
+        "originalText": "🚨メモリ株の救世主、ついに登場！？🔥 🇺🇸 Micronが今夜23時、技術説明会を開催！！ 発表内容次第では、今夜のメモリ株が大きく動く可能性も！？🔥🔥🚀 注目ポイントはこちら👀✨",
+        "eventTime": null,
+        "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "engagement": {
+          "likes": 202,
+          "reposts": 34,
+          "replies": 34,
+          "capturedAt": "2026-10-22T00:10:38.355113+00:00",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+        "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+        "people": []
+      },
+      "tabIds": [
+        "mu"
+      ],
+      "hotspot": true,
+      "at": "2026-10-22T00:24:43.290Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "goog-hotspot-2112952056730341585",
+        "tabId": "goog",
+        "title": "TrendSpider讨论GOOG与200日均线",
+        "fact": "TrendSpider称GOOG已跌至200日简单移动均线之下，并将其形容为折价区。",
+        "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+        "caveat": "均线位置及折价判断为该账号的图表观点，未独立复算；低于均线不证明便宜或将反弹。",
+        "author": "@TrendSpider",
+        "publishedAt": "2026-10-21T17:00:01Z",
+        "url": "https://x.com/TrendSpider/status/2112952056730341585",
+        "originalText": "Google $GOOG back in the bargain aisle below its 200-day SMA 👀",
+        "eventTime": null,
+        "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "engagement": {
+          "likes": 486,
+          "reposts": 35,
+          "replies": 34,
+          "capturedAt": "2026-10-22T00:10:38.355117+00:00",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+        "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog"
+      ],
+      "hotspot": true,
+      "at": "2026-10-22T00:24:43.290Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "avgo-meta-inference-2113037641889255746",
+        "tabId": "avgo",
+        "title": "X分析将Meta推理成本与Broadcom定制芯片联系",
+        "fact": "@TheValueist根据其对Meta财报的解读，认为推理经济性约束可能增加定制芯片、先进封装和以太网的重要性，并将Broadcom列为相关公司。",
+        "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+        "caveat": "这是作者机制分析；所引10倍效率改善及超过1GW合作规模未取得本轮原始帖，不作为已核事实。原文长帖截断，未知部分未补写。",
+        "author": "@TheValueist",
+        "publishedAt": "2026-10-21T22:40:06Z",
+        "url": "https://x.com/TheValueist/status/2113037641889255746",
+        "originalText": "$META KEY READ-THROUGHS FROM META PLATFORMS’ Q3 2026 EARNINGS CALL (1/2) ... AI SEMICONDUCTORS: CUSTOM SILICON BECOMES MORE IMPORTANT AS INFERENCE ECONOMICS BECOME THE CONSTRAINT (READ-THROUGH 1) Affected company: Broadcom (AVGO: US). ... Call evidence: Meta expects more than a 10x improvement in Muse compute efficiency over the next year... Meta’s announced partnership covers multiple MTIA generations, chip design, advanced packaging, and Ethernet networking, with an initial commitment exceeding 1 GW...",
+        "eventTime": null,
+        "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "engagement": {
+          "likes": 5,
+          "reposts": 0,
+          "replies": 2,
+          "capturedAt": "2026-10-22T00:11:18.239172+00:00",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+        "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+        "people": []
+      },
+      "tabIds": [
+        "avgo"
+      ],
+      "hotspot": true,
+      "at": "2026-10-22T00:24:43.290Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "tsm-hotspot-2112943280333971692",
+        "tabId": "tsm",
+        "title": "X用户转引TSMC信用评级上调消息",
+        "fact": "@HizeroSkyrocket转引一则TSMC评级上调消息，并将其与AI需求扩张联系。",
+        "whyItMatters": "用于观察该股票的具体讨论主题；作者解读、媒体归因和公司实际业务变化需分开判断。",
+        "caveat": "本轮未找到Moody’s或公司原帖，评级档位与调整生效日期未核实；保留为非官方讨论线索，不作已确认评级事实。",
+        "author": "@HizeroSkyrocket",
+        "publishedAt": "2026-10-21T16:25:09Z",
+        "url": "https://x.com/HizeroSkyrocket/status/2112943280333971692",
+        "originalText": "ムーディーズ、AI需要拡大でTSMCの格付けをAa2に引き上げ",
+        "eventTime": null,
+        "eventTimeNote": "实际事件或讨论所援引事项的准确时间未独立核实；保留真实发帖时间。",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "engagement": {
+          "likes": 1,
+          "reposts": 0,
+          "replies": 0,
+          "capturedAt": "2026-10-22T00:10:38.355125+00:00",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-22T00:24:43.290Z",
+        "lastMaterialAt": "2026-10-22T00:24:43.290Z",
+        "people": []
+      },
+      "tabIds": [
+        "tsm"
+      ],
+      "hotspot": true,
+      "at": "2026-10-22T00:24:43.290Z",
+      "legacy": false
+    },
     {
       "item": {
         "tabId": "nvda",
@@ -1689,38 +1955,7 @@
         "weeklyRanks": {
           "mu": 2
         },
-        "people": [],
-        "timeline": [
-          {
-            "changedAt": "2026-10-20T07:20:36.009Z",
-            "change": "进展",
-            "previous": {
-              "eventKey": "mu-taiwan-strike-risk-2026-10-15",
-              "tabIds": [
-                "mu"
-              ],
-              "title": "Micron 台湾厂区潜在罢工风险被市场讨论",
-              "fact": "研究账号转述：工会称已获足够罢工票数，关切存储供应中断；台湾为 Micron 重要产能。",
-              "whyItMatters": "供给尾部风险对紧平衡叙事的对冲。",
-              "counterCase": "若谈判解决未停产，则仅为噪音。",
-              "affected": [
-                "MU",
-                "存储供给"
-              ],
-              "author": "tenet_research",
-              "publishedAt": "2026-10-15T09:32:51.000Z",
-              "url": "https://x.com/tenet_research/status/2110665194775118202",
-              "verification": "collector-report",
-              "tier": "watch",
-              "weeklyRanks": {
-                "mu": 2
-              },
-              "people": []
-            },
-            "sourceUrl": "https://x.com/Reuters/status/2112400996559208471"
-          }
-        ],
-        "change": "进展"
+        "people": []
       },
       "tabIds": [
         "mu"

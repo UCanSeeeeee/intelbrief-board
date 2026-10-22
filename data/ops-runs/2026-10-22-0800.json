@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-22-0800",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-22T07:57:14+08:00",
+  "updatedAt": "2026-10-22T08:27:28+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "282900948dd2dde47393898e85c9311f8c603963",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-22T08:25:32+08:00",
+      "detail": "首次写入前ff-only成功，确切起止未单独仪表化"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-22T08:27:28+08:00",
+      "detail": "按需读取当前AGENTS/入口/知识/SOP/契约；未仪表化阅读起点"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-22T08:25:32+08:00",
+      "detail": "各批已关闭；30个X对象成功接续；独立质量缺口保留"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-22T08:25:32+08:00",
+      "detail": "统一内容合并与冻结归档已写入"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-22T08:25:32+08:00",
+      "detail": "用户明确不运行本地test/check/build/preview或额外回归；仅来源与发布器契约"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": "2026-10-22T08:26:28+08:00",
+      "detail": "准备明确路径暂存与内容提交；尚未推送"
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "3新卡，4旧重点续留；来源覆盖缺口已保存"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "2规则8热度，保留所有有效旧周榜"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "0事实新卡5新热点，低质不凑数"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "2新卡，独立归因和开放范围边界保留"
+    },
+    "earnings": {
+      "status": "partial",
+      "detail": "7评分5unknown；pendingReview0"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "无到期/过时触发，旧官方日历不刷新"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T07:57:37+08:00",
+      "endedAt": "2026-10-22T08:02:49+08:00",
+      "durationMs": 312000,
+      "detail": "完整中间结果先保存，7对象record"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-22T07:57:37+08:00",
+      "endedAt": "2026-10-22T08:00:11+08:00",
+      "durationMs": 154000,
+      "detail": "独立两轮已执行；第一轮额外web材料作废，补查宏观；六包各一次X调用"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:00:11+08:00",
+      "endedAt": "2026-10-22T08:01:02+08:00",
+      "durationMs": 51000,
+      "detail": "五项X追源完成：三项官方声明、两项缺失；不采用1GW成本/收入数字"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:01:02+08:00",
+      "endedAt": "2026-10-22T08:02:49+08:00",
+      "durationMs": 107000,
+      "detail": "4组实际X反证；3项新增官方声明，定量二传未采用"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:02:49+08:00",
+      "endedAt": "2026-10-22T08:07:22+08:00",
+      "durationMs": 273000,
+      "detail": "完整结果先落盘；5对象record；2规则8热度"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:02:49+08:00",
+      "endedAt": "2026-10-22T08:04:37+08:00",
+      "durationMs": 108000,
+      "detail": "五对象实际X查询完成，网页搜索材料作废；仅X候选进入下一阶段"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:04:37+08:00",
+      "endedAt": "2026-10-22T08:05:42+08:00",
+      "durationMs": 65000,
+      "detail": "六组X调用完成，OpenShell与NHS原帖取得，FSD二传数字及研报假设不采用"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:05:42+08:00",
+      "endedAt": "2026-10-22T08:07:22+08:00",
+      "durationMs": 100000,
+      "detail": "2组真实X反证，硬件隔离非独立审计，潜在覆盖非付费席位"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:07:23+08:00",
+      "endedAt": "2026-10-22T08:12:41+08:00",
+      "durationMs": 318000,
+      "detail": "完整结果已保存并record14对象；0事实新卡/5独立热点"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:07:23+08:00",
+      "endedAt": "2026-10-22T08:10:52+08:00",
+      "durationMs": 209000,
+      "detail": "14次X查询+3次有限产业补查；INTC/VRT低质热点不收"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:10:52+08:00",
+      "endedAt": "2026-10-22T08:11:35+08:00",
+      "durationMs": 43000,
+      "detail": "4项X追源；VRT公告缺公司关联，INTC仅施工不证租厂/客户，热点两项缺原始数字"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:11:35+08:00",
+      "endedAt": "2026-10-22T08:12:40+08:00",
+      "durationMs": 65000,
+      "detail": "2项热点反证无返回，保留不确定性"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:12:41+08:00",
+      "endedAt": "2026-10-22T08:16:22+08:00",
+      "durationMs": 221000,
+      "detail": "完整结果先落盘再record4对象，2条新增"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:12:41+08:00",
+      "endedAt": "2026-10-22T08:14:10+08:00",
+      "durationMs": 89000,
+      "detail": "4对象实际X查询各4返回；4次误用web已弃用，DeepInfer旧闻及已知缺口缓存复用"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:14:11+08:00",
+      "endedAt": "2026-10-22T08:15:00+08:00",
+      "durationMs": 49000,
+      "detail": "3项X追源；PHP及Model Garden官方声明取得，Claude新功能缺官方原帖"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:15:00+08:00",
+      "endedAt": "2026-10-22T08:16:22+08:00",
+      "durationMs": 82000,
+      "detail": "实际3次X反证；并行归因与计划开放范围入卡"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:16:22+08:00",
+      "endedAt": "2026-10-22T08:19:56+08:00",
+      "durationMs": 214000,
+      "detail": "0 Nature/1 Science，独立缺口3/2；旧选读保留，晚间不重做"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:16:23+08:00",
+      "endedAt": "2026-10-22T08:18:25+08:00",
+      "durationMs": 122000,
+      "detail": "Grok16次搜索已中断；汇总无合格新候选，不把配额当质量"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:18:25+08:00",
+      "endedAt": "2026-10-22T08:19:56+08:00",
+      "durationMs": 91000,
+      "detail": "Science原摘要+作者机构说明核实；Nature无新正刊合格项"
+    },
+    {
+      "page": "learning",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:19:02+08:00",
+      "endedAt": "2026-10-22T08:19:56+08:00",
+      "durationMs": 54000,
+      "detail": "有限更正复现定向核对；未返回不当不存在"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:19:56+08:00",
+      "endedAt": "2026-10-22T08:20:09+08:00",
+      "durationMs": 13000,
+      "detail": "复核日历无非财报到期/过时触发，复用缓存不宽搜"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-22T08:20:09+08:00",
+      "endedAt": "2026-10-22T08:24:32+08:00",
+      "durationMs": 263000,
+      "detail": "12家逐项查询：7评分5unknown，pendingReview清空；来源口径与缺口已保存"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T00:30:43.646Z",
+  "updatedAt": "2026-10-22T00:24:43.536Z",
   "reviews": [
     {
       "id": "nature-2026-10-19-walkability",
@@ -492,70 +492,93 @@
         }
       ],
       "checkedAt": "2026-10-21T00:26:12.591074+00:00"
+    },
+    {
+      "id": "2026-10-22-science-aee7240",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.aee7240",
+      "title": "乳汁分子谱能反映母体营养与婴儿生长的共同变化",
+      "originalTitle": "Shared patterns of human milk composition link mammary gland function to infant growth",
+      "authors": [
+        "April Jauhal"
+      ],
+      "authorsNote": "仅列第一作者，非完整名单。",
+      "people": [
+        {
+          "name": "April Jauhal",
+          "intro": "母婴营养研究作者"
+        }
+      ],
+      "publishedDate": "2026-10-08",
+      "selectedDate": "2026-10-22",
+      "selectionKind": "recent",
+      "category": "母婴营养与统计关联",
+      "stage": "跨队列多组学与生长轨迹分析",
+      "takeaway": "三个队列中，乳汁的共同分子变化与母体营养状态和婴儿生长相联系；乳汁不是单纯反映母亲吃了什么的固定配方。",
+      "summary": {
+        "problem": "乳汁成分除了提供营养，能否反映乳腺功能及母婴健康之间的联系？",
+        "method": "研究分析加拿大、巴基斯坦和布基纳法索三个队列的1543份乳样，比较乳汁分子谱、母体营养状态与婴儿生长轨迹。测量覆盖代谢物、蛋白质、微量与宏量营养素及乳寡糖，并结合轨迹建模；数据包含两项随机营养试验。",
+        "findings": "不同队列出现与母体营养及婴儿生长相关的共同乳汁成分轴。模型识别出七个候选标志物，涉及乳汁合成、屏障及免疫修复功能；较高戊酰肉碱和较低泛酸也是相关信号。",
+        "statistics": "1543是乳样数，不能当作1543名独立母婴。可读摘要未给每组人数、完整试验对照方案或临床效应大小；这里只报告跨队列比较与候选标志物，不量化营养补充对生长的因果效果。",
+        "limitations": "多组学关联不能证明某个乳汁分子导致婴儿生长变化。泛酸—辅酶A—戊酰肉碱通路仍待功能验证；七项指标尚非家庭检测或补充营养处方，不能把队列结果直接推广到所有母婴。",
+        "meaning": "先区分可随营养变化的成分、较稳定的成分及乳腺状态信号，再研究干预，不用单一分子评价乳汁质量。"
+      },
+      "paperUrl": "https://www.science.org/doi/10.1126/science.aee7240",
+      "accessLevel": "abstract",
+      "accessNote": "已核PubMed原始摘要/元数据及NYU作者机构研究说明；Science原站403，未读正文或补充方法，未补造随机组对照与效应。",
+      "sources": [
+        {
+          "label": "Science原文入口",
+          "url": "https://www.science.org/doi/10.1126/science.aee7240"
+        },
+        {
+          "label": "PubMed摘要与作者日期",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42848910/"
+        },
+        {
+          "label": "NYU作者机构研究说明",
+          "url": "https://nyulangone.org/news/human-milk-offers-window-mammary-gland-function-and-its-links-infant-growth"
+        }
+      ],
+      "checkedAt": "2026-10-22T00:19:55.941636+00:00",
+      "correctionReplicationCheck": {
+        "queries": [
+          "\"Shared patterns of human milk composition\" preprint randomized supplementation control",
+          "\"10.1126/science.aee7240\" correction retraction replication"
+        ],
+        "checkedAt": "2026-10-22T00:19:55.941636+00:00",
+        "note": "定向返回原摘要、机构说明与作者代码归档，未返回明确更正/撤稿或独立复现；不等同证明不存在。代码归档不当独立复现，未运行代码。"
+      },
+      "authorsTruncated": true
     }
   ],
   "coverage": {
     "nature": {
-      "date": "2026-10-21",
+      "date": "2026-10-22",
       "status": "partial",
-      "note": "本次检索仅有1篇合格近期候选，余2名额保留缺口；不代表全刊没有其他合格研究。",
+      "note": "0篇新增，各3名额缺3；Grok与限定核对未得未收录正刊合格研究，子刊/重复DOI不收，不凑数。",
       "queries": [
-        "site:nature.com/articles 2026 September October sleep physical activity diet health wellbeing statistics",
-        "site:science.org/doi 2026 September October sleep health happiness behaviour causal replication",
-        "site:nature.com/articles sleep physical activity diet health 2026",
-        "site:science.org/doi sleep health happiness behaviour 2026",
-        "site:nature.com/articles 2026 sleep OR \"physical activity\" OR diet OR wellbeing OR happiness OR behaviour site:nature.com/articles -Communications -Medicine -\"Scientific Reports\"",
-        "\"Nature\" 2026 sleep health OR activity OR diet OR wellbeing OR causal site:nature.com/articles/s41586",
-        "site:science.org/doi/10.1126/science 2026 sleep OR health OR happiness OR behaviour OR causal",
-        "brown fat Nature 2026",
-        "site:nature.com/articles/s41586-026 2026 sleep OR \"physical activity\" OR diet OR wellbeing OR \"well-being\" OR happiness OR behaviour OR causal",
-        "\"published\" 2026 September OR October site:science.org/doi/10.1126/science sleep OR health OR happiness OR activity OR diet OR behaviour",
-        "site:science.org/doi/10.1126/science.ae 2026 sleep OR activity OR diet OR wellbeing",
-        "site:nature.com/articles/s41586-026 2026 \"sleep\" OR \"physical activity\" OR \"diet\" OR \"well-being\" OR \"happiness\" OR \"exercise\"",
-        "\"Science\" 2026 \"September\" OR \"October\" sleep OR \"physical activity\" OR diet OR wellbeing OR happiness site:science.org",
-        "site:nature.com/articles 2026-10 OR \"October 2026\" OR \"September 2026\" (sleep OR \"physical activity\" OR diet OR wellbeing OR happiness OR exercise OR \"causal inference\")",
-        "\"10.1126/science\" 2026 (sleep OR activity OR diet OR happiness OR wellbeing OR behavior OR causal) \"October\" OR \"September\"",
-        "Gómez-Banoy Nature brown fat DOI",
-        "site:science.org/doi/10.1126/science \"2026\" \"sleep\" \"October\" OR \"September\"",
-        "\"Memory reactivation underlies\" Science DOI",
-        "site:nature.com/articles/s41586-026-11154-7",
-        "site:nature.com/articles/s41586-026 2026 \"social\" OR network OR intervention OR causal",
-        "10.1126/science.aed8630 PubMed",
-        "\"Memory reactivation underlies experience-dependent adaptive regulation of sleep\" authors mice",
-        "\"s41586-026-11154-7\" correction retraction replication"
+        "Nature health lifestyle human trial sleep exercise diet statistics 2026 September October main journal original research",
+        "Science health lifestyle human experiment sleep social behavior reproducibility 2026 September October main journal original research",
+        "site:nature.com/articles/s41586 randomized trial human exercise diet wellbeing 2025 2026 Nature",
+        "10.1126/science.aee7240 human milk composition",
+        "\"Shared patterns of human milk composition\" preprint randomized supplementation control; \"10.1126/science.aee7240\" correction retraction replication"
       ],
-      "checkedAt": "2026-10-21T00:26:12.591074+00:00"
+      "checkedAt": "2026-10-22T00:19:55.941636+00:00"
     },
     "science": {
-      "date": "2026-10-21",
+      "date": "2026-10-22",
       "status": "partial",
-      "note": "本次仅选1篇已核往期研究，近期覆盖不足，余2名额保留缺口；原站403，样本量/定量效应未核。",
+      "note": "1篇新增，各3名额缺2；人乳研究仅陈述有证据的跨队列比较，随机干预对照与效应未取得不推断；往期保留。",
       "queries": [
-        "site:nature.com/articles 2026 September October sleep physical activity diet health wellbeing statistics",
-        "site:science.org/doi 2026 September October sleep health happiness behaviour causal replication",
-        "site:nature.com/articles sleep physical activity diet health 2026",
-        "site:science.org/doi sleep health happiness behaviour 2026",
-        "site:nature.com/articles 2026 sleep OR \"physical activity\" OR diet OR wellbeing OR happiness OR behaviour site:nature.com/articles -Communications -Medicine -\"Scientific Reports\"",
-        "\"Nature\" 2026 sleep health OR activity OR diet OR wellbeing OR causal site:nature.com/articles/s41586",
-        "site:science.org/doi/10.1126/science 2026 sleep OR health OR happiness OR behaviour OR causal",
-        "brown fat Nature 2026",
-        "site:nature.com/articles/s41586-026 2026 sleep OR \"physical activity\" OR diet OR wellbeing OR \"well-being\" OR happiness OR behaviour OR causal",
-        "\"published\" 2026 September OR October site:science.org/doi/10.1126/science sleep OR health OR happiness OR activity OR diet OR behaviour",
-        "site:science.org/doi/10.1126/science.ae 2026 sleep OR activity OR diet OR wellbeing",
-        "site:nature.com/articles/s41586-026 2026 \"sleep\" OR \"physical activity\" OR \"diet\" OR \"well-being\" OR \"happiness\" OR \"exercise\"",
-        "\"Science\" 2026 \"September\" OR \"October\" sleep OR \"physical activity\" OR diet OR wellbeing OR happiness site:science.org",
-        "site:nature.com/articles 2026-10 OR \"October 2026\" OR \"September 2026\" (sleep OR \"physical activity\" OR diet OR wellbeing OR happiness OR exercise OR \"causal inference\")",
-        "\"10.1126/science\" 2026 (sleep OR activity OR diet OR happiness OR wellbeing OR behavior OR causal) \"October\" OR \"September\"",
-        "Gómez-Banoy Nature brown fat DOI",
-        "site:science.org/doi/10.1126/science \"2026\" \"sleep\" \"October\" OR \"September\"",
-        "\"Memory reactivation underlies\" Science DOI",
-        "site:nature.com/articles/s41586-026-11154-7",
-        "site:nature.com/articles/s41586-026 2026 \"social\" OR network OR intervention OR causal",
-        "10.1126/science.aed8630 PubMed",
-        "\"Memory reactivation underlies experience-dependent adaptive regulation of sleep\" authors mice",
-        "\"s41586-026-11154-7\" correction retraction replication"
+        "Nature health lifestyle human trial sleep exercise diet statistics 2026 September October main journal original research",
+        "Science health lifestyle human experiment sleep social behavior reproducibility 2026 September October main journal original research",
+        "site:nature.com/articles/s41586 randomized trial human exercise diet wellbeing 2025 2026 Nature",
+        "10.1126/science.aee7240 human milk composition",
+        "\"Shared patterns of human milk composition\" preprint randomized supplementation control; \"10.1126/science.aee7240\" correction retraction replication"
       ],
-      "checkedAt": "2026-10-21T00:26:12.591074+00:00"
+      "checkedAt": "2026-10-22T00:19:55.941636+00:00"
     }
   }
 }

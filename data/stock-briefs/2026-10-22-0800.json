@@ -1,0 +1,710 @@
+{
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-21T00:00:00.000Z",
+      "end": "2026-10-22T00:00:00.000Z",
+      "cutoff": "2026-10-22T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:market-focus",
+          "key": "jpm-intel-neutral-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-leveraged-etf-semiconductor-inflows-20261020",
+          "status": "pending",
+          "reason": "缺Goldman或权威媒体原帖与统计期/金额。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "smci-preliminary-fq127-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "taiwan-sept-export-orders-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "spacex-q3-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，仅官方报告链接未含数字与AI传导，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "japan-yttrium-shortage-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "phoenix-tailings-rochester-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-21T00:00:00.000Z",
+      "end": "2026-10-22T00:00:00.000Z",
+      "cutoff": "2026-10-22T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "tsmc-kumamoto-3nm-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "citi-skhynix-q326-preview-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "mu-2027-hbm-asp-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "pc-memory-lta-2027-20261020",
+          "status": "pending",
+          "reason": "缺公司/权威原始披露与签约日期。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-21T00:00:00.000Z",
+      "end": "2026-10-22T00:00:00.000Z",
+      "cutoff": "2026-10-22T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:power",
+          "key": "nscale-msft-uk-grid-ipo-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "nextdc-melbourne-grid-risk-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-21T00:00:00.000Z",
+      "end": "2026-10-22T00:00:00.000Z",
+      "cutoff": "2026-10-22T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:ai-adoption",
+          "key": "daytona-financing-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-21T00:00:00.000Z",
+      "end": "2026-10-22T00:00:00.000Z",
+      "cutoff": "2026-10-22T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:capital-cost",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "Reuters仅支持升级发生，核心假设与现金流依据不足",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:capital-cost",
+          "key": "jpm-coreweave-debt-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-21T00:00:00.000Z",
+      "end": "2026-10-22T00:00:00.000Z",
+      "cutoff": "2026-10-22T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "hormuz-tankers-mine-claim-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "us-energy-russia-diesel-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-21T00:00:00.000Z",
+      "end": "2026-10-22T00:00:00.000Z",
+      "cutoff": "2026-10-22T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ],
+  "scheduledFor": "2026-10-22T08:00:00+08:00",
+  "windowStart": "2026-10-21T00:00:00.000Z",
+  "displayWindowStart": "2026-10-21T00:00:00.000Z",
+  "displayWindowEnd": "2026-10-22T00:00:00.000Z",
+  "carriedOver": [],
+  "status": "partial",
+  "summary": "新增3项官方产业进展，实施与经济效果边界保留。",
+  "marketContext": "北京时间08:00冻结；逐对象增量，非实时行情。",
+  "checklist": [
+    {
+      "item": "news:market-focus",
+      "status": "covered",
+      "note": "实际X查询已完成；有返回但无可用候选与查询空分开；质量缺口见候选"
+    },
+    {
+      "item": "news:semiconductors",
+      "status": "covered",
+      "note": "实际X查询已完成；有返回但无可用候选与查询空分开；质量缺口见候选"
+    },
+    {
+      "item": "news:power",
+      "status": "covered",
+      "note": "实际X查询已完成；有返回但无可用候选与查询空分开；质量缺口见候选"
+    },
+    {
+      "item": "news:ai-adoption",
+      "status": "covered",
+      "note": "实际X查询已完成；有返回但无可用候选与查询空分开；质量缺口见候选"
+    },
+    {
+      "item": "news:capital-cost",
+      "status": "covered",
+      "note": "实际X查询已完成；有返回但无可用候选与查询空分开；质量缺口见候选"
+    },
+    {
+      "item": "news:geopolitics",
+      "status": "covered",
+      "note": "实际X查询已完成；有返回但无可用候选与查询空分开；质量缺口见候选"
+    },
+    {
+      "item": "news:market-structure",
+      "status": "covered",
+      "note": "实际X查询已完成；有返回但无可用候选与查询空分开；质量缺口见候选"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "nvda-supply-chain-capacity-20261021",
+      "round": 1,
+      "decision": "selected",
+      "reason": "取得官方X声明，边界纳入正文"
+    },
+    {
+      "eventKey": "smci-preliminary-fq127-20261020",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "旧候选无已证实进展复用缓存；或定向追源未取得关键原始证据，留待核"
+    },
+    {
+      "eventKey": "spacex-q3-20261020",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "旧候选无已证实进展复用缓存；或定向追源未取得关键原始证据，留待核"
+    },
+    {
+      "eventKey": "jensen-ai-factory-dsx-20261021",
+      "round": 1,
+      "decision": "selected",
+      "reason": "取得官方X声明，边界纳入正文"
+    },
+    {
+      "eventKey": "nebius-spot-gpu-20261021",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "旧候选无已证实进展复用缓存；或定向追源未取得关键原始证据，留待核"
+    },
+    {
+      "eventKey": "nvidia-ai-ran-call-20261021",
+      "round": 1,
+      "decision": "selected",
+      "reason": "取得官方X声明，边界纳入正文"
+    },
+    {
+      "eventKey": "ai-stack-commentary-20261021",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "AI-generated generic synthesis, not original fact"
+    },
+    {
+      "eventKey": "meta-muse-agents-20261021",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "New secondhand quantitative claim requires original"
+    },
+    {
+      "eventKey": "diesel-sanctions-commentary-20261021",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "Old pending diesel claim; commentary lacks new document or implementation evidence; cache retained"
+    }
+  ],
+  "coverage": {
+    "method": "Grok网页版实际X查询；普通web材料弃用，新增经独立限定X追源",
+    "queries": [
+      "NVIDIA OR NVDA OR TSMC OR semiconductor (order OR orders OR capex OR capacity OR demand) since:2026-10-21 until:2026-10-22",
+      "(SpaceX OR SMCI OR \"Super Micro\" OR earnings) (AI OR semiconductor OR chip) since:2026-10-21 until:2026-10-22",
+      "(power OR electricity OR energy) (AI OR data center OR semiconductor) since:2026-10-21 until:2026-10-22",
+      "\"NVIDIA\" (capacity OR partners OR expand OR Amkor OR KYEC OR IBIDEN) since:2026-10-21 until:2026-10-22",
+      "(SpaceX OR SPCX) (earnings OR profit OR revenue OR AI) since:2026-10-21 until:2026-10-22",
+      "(\"Super Micro\" OR SMCI) (guidance OR revenue OR forecast OR $18) since:2026-10-21 until:2026-10-22",
+      "\"Super Micro\" OR SMCI (raised OR guide OR guidance OR $18.5) since:2026-10-21 until:2026-10-22",
+      "from:nvidia OR \"NVIDIA Newsroom\" OR \"supply chain partners\" since:2026-10-21 until:2026-10-22",
+      "(Meta OR META) (earnings OR capex OR AI) since:2026-10-21 until:2026-10-22",
+      "\"NVIDIA\" (\"supply chain\" OR Amkor OR \"capacity reservation\") since:2026-10-21 until:2026-10-22",
+      "(Fed OR Treasury OR tariff OR sanctions OR oil OR credit OR yields) since:2026-10-21 until:2026-10-22",
+      "(HBM OR packaging OR foundry) (orders OR capacity OR yield OR price) since:2026-10-21 until:2026-10-22",
+      "(grid OR PPA OR turbine OR nuclear OR cooling) (AI OR datacenter) since:2026-10-21 until:2026-10-22",
+      "(AI OR agent) (paying OR revenue OR enterprise OR adoption) since:2026-10-21 until:2026-10-22",
+      "(AI OR datacenter) (debt OR credit OR refinancing OR capex) since:2026-10-21 until:2026-10-22",
+      "(sanctions OR war OR tariff) (energy OR shipping OR chips) since:2026-10-21 until:2026-10-22",
+      "(breadth OR ETF OR deleveraging OR gamma OR concentration) since:2026-10-21 until:2026-10-22",
+      "(from:NVIDIA OR from:NVIDIANewsroom OR from:Reuters) (supply OR capacity OR packaging) since:2026-10-21 until:2026-10-22",
+      "(from:NVIDIA OR from:NVIDIANewsroom) (DSX OR POD OR GW) since:2026-10-21 until:2026-10-22",
+      "(from:nebius OR from:Reuters) (spot OR pricing) since:2026-10-21 until:2026-10-22",
+      "(from:NVIDIA OR from:TMobile OR from:nokia) (RAN OR call) since:2026-10-21 until:2026-10-22",
+      "(from:Meta OR from:MetaNewsroom OR from:Reuters) (Muse OR agents OR earnings) since:2026-10-21 until:2026-10-22",
+      "(NVIDIA OR Amkor OR IBIDEN OR KYEC) (capacity OR packaging) (delay OR cancel OR shortage OR correction) since:2026-10-21 until:2026-10-22",
+      "\"DSX POD\" (14 OR prepared) (power OR permit OR delay OR site) since:2026-10-21 until:2026-10-22",
+      "(\"AI-RAN\" OR \"AI RAN\") (commercial OR call) (trial OR revenue OR limitation OR correction) since:2026-10-21 until:2026-10-22",
+      "(Nebius \"spot pricing\" OR Meta Muse) (correction OR false OR clarification) since:2026-10-21 until:2026-10-22"
+    ],
+    "gaps": [
+      "X只为既定查询样本，非全量覆盖",
+      "第一轮未经允许web调用弃用；选中事件经独立限定X追源重取",
+      "Nebius现货定价、Meta Muse数量与1GW经济性关键证据不足"
+    ]
+  },
+  "selectionRationale": "供给扩产优先焦点；部署与AI-RAN分属不同技术/商业传导。余项无证据不凑数。",
+  "excludedCandidates": [
+    {
+      "eventKey": "smci-preliminary-fq127-20261020",
+      "reason": "旧候选无已证实进展复用缓存；或定向追源未取得关键原始证据，留待核"
+    },
+    {
+      "eventKey": "spacex-q3-20261020",
+      "reason": "旧候选无已证实进展复用缓存；或定向追源未取得关键原始证据，留待核"
+    },
+    {
+      "eventKey": "nebius-spot-gpu-20261021",
+      "reason": "旧候选无已证实进展复用缓存；或定向追源未取得关键原始证据，留待核"
+    },
+    {
+      "eventKey": "ai-stack-commentary-20261021",
+      "reason": "AI-generated generic synthesis, not original fact"
+    },
+    {
+      "eventKey": "meta-muse-agents-20261021",
+      "reason": "New secondhand quantitative claim requires original"
+    },
+    {
+      "eventKey": "diesel-sanctions-commentary-20261021",
+      "reason": "Old pending diesel claim; commentary lacks new document or implementation evidence; cache retained"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "nvda-supply-chain-capacity-20261021",
+      "title": "NVIDIA宣布联合供应链伙伴扩充组件、封装与测试产能",
+      "fact": "NVIDIA宣布与Amkor、IBIDEN、KYEC、Samsung Mechanics、SPIL及Unimicron合作，在全球扩大关键组件、先进封装和测试供应。该帖没有给出新增产能规模、投产日或已交付数量。",
+      "impact": "若合作转为可用产能，可能缓解GPU之外的供应瓶颈，并将设备与资本开支需求传向基板、封测等环节；公告本身尚不能换算成NVIDIA新增收入。",
+      "counterCase": "扩产可能面临客户需求变化、其他组件短缺与投产时滞；反证样本没有取得本次取消或延期的一手材料，也没有独立证明全部瓶颈已缓解。",
+      "collectionUnit": "news:market-focus",
+      "direction": "待定",
+      "horizon": "未来数季产能与交付验证",
+      "affected": [
+        "NVDA",
+        "半导体基板与封测供应链"
+      ],
+      "selectionReason": "窗口内新增官方可追溯声明，改变供给或落地验证进度；与其他事件分别记录。",
+      "credibilityReason": "Grok实际X检索返回官方原帖；本机未独立直读，声明的实施及经济效果尚无独立验证。",
+      "change": "新增",
+      "eventTime": "2026-10-21T14:54:03Z",
+      "eventTimeNote": "以官方公开声明时间为可知时点；未取得实际实施完成的独立时刻。",
+      "sources": [
+        {
+          "username": "nvidia",
+          "publishedAt": "2026-10-21T14:54:03Z",
+          "url": "https://x.com/nvidia/status/2112920354230296993",
+          "postId": "2112920354230296993",
+          "excerpt": "Demand for compute is extraordinary. NVIDIA and our partners are building new capacity to meet it. We’re working with Amkor, IBIDEN, KYEC, Samsung Mechanics, SPIL, and Unimicron to expand our supply around the world, from essential components to advanced packaging and testing. Together, we’re building the capacity to put more NVIDIA infrastructure in the hands of businesses and developers.",
+          "verification": "collector-report",
+          "checkedAt": "2026-10-22T00:01:30.587433+00:00",
+          "verificationNote": "Grok网页版实际X工具返回；执行器未独立直读X。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 49,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 92,
+            "claimScore": 47,
+            "breakdown": {
+              "directness": 30,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "账号在人工来源表中登记为机构一手来源"
+            ],
+            "warnings": [
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "attentionEvidence": "公司官方新增供应链合作公告，关联AI硬件多环节供给；不以互动热度或全网排序作证明。",
+      "people": [],
+      "credibility": {
+        "score": 49,
+        "label": "规则初评，未校准",
+        "reason": "Grok实际X检索返回官方原帖；本机未独立直读，声明的实施及经济效果尚无独立验证。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [
+    {
+      "eventKey": "jensen-ai-factory-dsx-20261021",
+      "title": "NVIDIA发布DSX POD，称就绪场地最快14天部署",
+      "fact": "NVIDIA宣布DSX POD采用交付前集成和测试的AI工厂设计，并称在准备就绪的场地最快14天部署。该声明有明确场地前提，未提供独立项目验收记录。",
+      "impact": "把集成测试前移可能减少现场施工和调试时间，但电力、土地、许可与冷却是否就绪仍决定算力何时能投入使用；不能把模块部署时间当作整个数据中心建设周期。",
+      "counterCase": "未取得独立交付时长或全项目成本验证；没有采用二传1GW约500亿美元成本、400亿美元年收入及2027首交付数字。若供电、许可或场地准备延误，模块提速不等于收入提前兑现。",
+      "collectionUnit": "news:power",
+      "direction": "待定",
+      "horizon": "未来项目交付与验收",
+      "affected": [
+        "NVDA",
+        "数据中心建设与供电"
+      ],
+      "selectionReason": "窗口内新增官方可追溯声明，改变供给或落地验证进度；与其他事件分别记录。",
+      "credibilityReason": "Grok实际X检索返回官方原帖；本机未独立直读，声明的实施及经济效果尚无独立验证。",
+      "change": "新增",
+      "eventTime": "2026-10-21T12:23:25Z",
+      "eventTimeNote": "以官方公开声明时间为可知时点；未取得实际实施完成的独立时刻。",
+      "sources": [
+        {
+          "username": "nvidia",
+          "publishedAt": "2026-10-21T12:23:25Z",
+          "url": "https://x.com/nvidia/status/2112882448530800716",
+          "postId": "2112882448530800716",
+          "excerpt": "AI builders need computing capacity they can put to work sooner. We introduced DSX POD at NVIDIA GTC Berlin: AI factories integrated and tested before delivery, enabling deployment at prepared sites in as little as 14 days.",
+          "verification": "collector-report",
+          "checkedAt": "2026-10-22T00:01:30.587436+00:00",
+          "verificationNote": "Grok网页版实际X工具返回；执行器未独立直读X。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 49,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 92,
+            "claimScore": 49,
+            "breakdown": {
+              "directness": 30,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 2,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "账号在人工来源表中登记为机构一手来源"
+            ],
+            "warnings": [
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "knowledgeCards": [
+        "I03",
+        "I01",
+        "R06"
+      ],
+      "disciplines": [
+        "工程建设",
+        "电力与资本配置"
+      ],
+      "knowledgeApplication": "I03把模块集成效率与供电许可等物理约束分开；I01/R06提醒资本开支、交付和收入兑现存在不同时间尺度。",
+      "people": [],
+      "credibility": {
+        "score": 49,
+        "label": "规则初评，未校准",
+        "reason": "Grok实际X检索返回官方原帖；本机未独立直读，声明的实施及经济效果尚无独立验证。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    },
+    {
+      "eventKey": "nvidia-ai-ran-call-20261021",
+      "title": "Nokia宣布与T-Mobile、NVIDIA完成商网站点AI-RAN呼叫",
+      "fact": "Nokia宣布与T-Mobile、NVIDIA在商用蜂窝站点完成AI-RAN呼叫，称其从实验室进入生产网络。该声明证明一次网络试验进度，没有公布采购合同、部署规模或收入。",
+      "impact": "AI算力进入无线接入网提供数据中心以外的需求验证场景；只有后续扩展试验、运营指标和采购落地，才可能转为芯片及通信设备收入。",
+      "counterCase": "完成呼叫不等于大规模商用与可持续利润；独立评论亦区分试验与变现，但评论并非审计或订单证明，能耗、成本和运营可靠性仍待验证。",
+      "collectionUnit": "news:ai-adoption",
+      "direction": "待定",
+      "horizon": "后续试验、采购及经营指标",
+      "affected": [
+        "NVDA",
+        "Nokia",
+        "电信运营商网络"
+      ],
+      "selectionReason": "窗口内新增官方可追溯声明，改变供给或落地验证进度；与其他事件分别记录。",
+      "credibilityReason": "Grok实际X检索返回官方原帖；本机未独立直读，声明的实施及经济效果尚无独立验证。",
+      "change": "新增",
+      "eventTime": "2026-10-21T09:26:43Z",
+      "eventTimeNote": "以官方公开声明时间为可知时点；未取得实际实施完成的独立时刻。",
+      "sources": [
+        {
+          "username": "nokia",
+          "publishedAt": "2026-10-21T09:26:43Z",
+          "url": "https://x.com/nokia/status/2112837980448518609",
+          "postId": "2112837980448518609",
+          "excerpt": "AI-RAN just crossed an important threshold. Together with @TMobile and @NVIDIA, Nokia has completed the world’s first AI-RAN call at a commercial cell site, moving AI-RAN from the lab into a live production network. And we’re only getting started.",
+          "verification": "collector-report",
+          "checkedAt": "2026-10-22T00:01:30.587438+00:00",
+          "verificationNote": "Grok网页版实际X工具返回；执行器未独立直读X。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 30,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 27,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "knowledgeCards": [
+        "I03",
+        "I10",
+        "R05"
+      ],
+      "disciplines": [
+        "通信工程",
+        "企业收入与成本"
+      ],
+      "knowledgeApplication": "I10要求从技术验证经过采用、采购和成本传到利润；R05区分官方里程碑与市场叙事，单次呼叫不能代替商业规模证据。",
+      "people": [],
+      "credibility": {
+        "score": 30,
+        "label": "规则初评，未校准",
+        "reason": "Grok实际X检索返回官方原帖；本机未独立直读，声明的实施及经济效果尚无独立验证。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "shortfallReason": "仅三项达到来源和传导门槛，其他二传或旧候选不凑数。",
+  "readingDecisions": [
+    {
+      "eventKey": "nscale-anthropic-45bn-talks-20261019",
+      "action": "keep",
+      "reason": "复用持久池已核验证据：仍有后续合同/监管/采用观察价值，未取得本轮已证实更正；续留累计阅读，不冒称新进展或重新直读。",
+      "sourceUrl": "https://x.com/TechCrunch/status/2112329217601949966",
+      "checkedAt": "2026-10-22T00:02:42.271309+00:00"
+    },
+    {
+      "eventKey": "amazon-aep-xenergy-indiana-960mw-20261019",
+      "action": "keep",
+      "reason": "复用持久池已核验证据：仍有后续合同/监管/采用观察价值，未取得本轮已证实更正；续留累计阅读，不冒称新进展或重新直读。",
+      "sourceUrl": "https://x.com/TechCrunch/status/2112227043639177387",
+      "checkedAt": "2026-10-22T00:02:42.271323+00:00"
+    },
+    {
+      "eventKey": "amazon-torchneuron-20261019",
+      "action": "keep",
+      "reason": "复用持久池已核验证据：仍有后续合同/监管/采用观察价值，未取得本轮已证实更正；续留累计阅读，不冒称新进展或重新直读。",
+      "sourceUrl": "https://x.com/amazon/status/2112182407256277095",
+      "checkedAt": "2026-10-22T00:02:42.271325+00:00"
+    },
+    {
+      "eventKey": "dhs-deepseek-civilian-it-20261019",
+      "action": "keep",
+      "reason": "复用持久池已核验证据：仍有后续合同/监管/采用观察价值，未取得本轮已证实更正；续留累计阅读，不冒称新进展或重新直读。",
+      "sourceUrl": "https://x.com/CNBC/status/2112430637915263208",
+      "checkedAt": "2026-10-22T00:02:42.271327+00:00"
+    }
+  ],
+  "readingSelection": {
+    "focus": [
+      "nvda-supply-chain-capacity-20261021",
+      "nscale-anthropic-45bn-talks-20261019",
+      "amazon-aep-xenergy-indiana-960mw-20261019",
+      "amazon-torchneuron-20261019",
+      "dhs-deepseek-civilian-it-20261019"
+    ],
+    "insights": [
+      "jensen-ai-factory-dsx-20261021",
+      "nvidia-ai-ran-call-20261021"
+    ]
+  },
+  "trigger": "scheduled",
+  "id": "2026-10-22-0800",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T00:24:43.751Z",
+  "counts": {
+    "focus": 1,
+    "insights": 2,
+    "total": 3
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-21T12:38:18.928Z",
+  "updatedAt": "2026-10-22T00:20:15.552Z",
   "timezone": "Asia/Shanghai",
   "activeWeekId": "current",
   "source": {
@@ -749,8 +749,8 @@
               "name": "Meta Platforms, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$1,797,112,860,000",
-              "marketCapUsd": 1797112860000,
+              "marketCap": "$1,768,606,140,000",
+              "marketCapUsd": 1768606140000,
               "epsForecast": "$4.98",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -760,11 +760,30 @@
               "selectionReason": "主题：软件",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
+                "status": "unknown",
                 "score": null,
                 "band": null,
-                "summary": null,
-                "checkedAt": null
+                "summary": "已取得Meta发布的官方财报新闻稿：营收$646.0亿、GAAP EPS $3.83；诉讼费用$98.9亿，剔除此项影响的EPS为$7.40，自由现金流负$21.2亿。Nasdaq日历预期$4.98与公开其他预期存在显著口径差异，尚未取得可比一致预期；不把剔单项EPS直接当统一调整EPS，不评分。",
+                "sources": [
+                  "https://www.prnewswire.com/news-releases/meta-reports-third-quarter-2026-results-302915964.html",
+                  "https://investor.atmeta.com/home/default.aspx"
+                ],
+                "facts": {
+                  "revenueUsdBn": 64.6,
+                  "gaapEps": 3.83,
+                  "epsExLegalCharge": 7.4,
+                  "legalChargeUsdBn": 9.89,
+                  "freeCashFlowUsdBn": -2.12,
+                  "q4RevenueGuidanceUsdBn": [
+                    73,
+                    76
+                  ],
+                  "capexGuidanceUsdBn": [
+                    135,
+                    145
+                  ]
+                },
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -772,8 +791,8 @@
               "name": "Tesla, Inc. ",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$1,453,670,400,000",
-              "marketCapUsd": 1453670400000,
+              "marketCap": "$1,477,144,350,000",
+              "marketCapUsd": 1477144350000,
               "epsForecast": "$0.22",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -783,11 +802,17 @@
               "selectionReason": "主题：新兴科技",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
+                "status": "unknown",
                 "score": null,
                 "band": null,
-                "summary": null,
-                "checkedAt": null
+                "summary": "官方已确认发布Q3财报，但本次可读IR首页未呈现Q3股东更新下载正文，8-K可读节选仅说明附表。第三方EPS/收入与日历口径不一致，未用X二传或论坛数字补财报，不评分；等待可核官方结果与可比预期。",
+                "sources": [
+                  "https://ir.tesla.com/press-release/tesla-releases-third-quarter-2026-financial-results",
+                  "https://ir.tesla.com/",
+                  "https://ir.tesla.com/_flysystem/s3/sec/000162828026066738/tsla-20261021-gen.pdf"
+                ],
+                "facts": {},
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -795,8 +820,8 @@
               "name": "Lam Research Corporation",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$340,637,712,000",
-              "marketCapUsd": 340637712000,
+              "marketCap": "$329,687,761,000",
+              "marketCapUsd": 329687761000,
               "epsForecast": "$2.17",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -806,11 +831,16 @@
               "selectionReason": "主题：AI半导体",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
+                "status": "unknown",
                 "score": null,
                 "band": null,
-                "summary": null,
-                "checkedAt": null
+                "summary": "官方会议预告和公开一致预期已找到，但本次定向搜索未取得9月季度正式结果正文；会议日期与已披露不混同，未编造收入、EPS或评分，待正式结果可读后补核。",
+                "sources": [
+                  "https://newsroom.lamresearch.com/2026-09-30-Lam-Research-Corporation-Announces-September-Quarter-Financial-Conference-Call",
+                  "https://www.earningswhispers.com/calendar/20261021/3"
+                ],
+                "facts": {},
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -818,8 +848,8 @@
               "name": "Texas Instruments Incorporated",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$252,193,341,000",
-              "marketCapUsd": 252193341000,
+              "marketCap": "$253,681,943,000",
+              "marketCapUsd": 253681943000,
               "epsForecast": "$2.40",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -829,11 +859,33 @@
               "selectionReason": "主题：AI半导体",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 80,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "官方三季度EPS $2.62（含原指引外1美分减项），高于Nasdaq日历预期$2.40；营收$60.6亿，同比增28%。Q4营收指引$58亿–63亿、EPS $2.45–2.79。过去12个月经营现金流$99亿、自由现金流$84亿，注意这是累计口径；收入一致预期尚未独立取得，不量化营收惊喜，综合超预期。",
+                "facts": {
+                  "eps": 2.62,
+                  "calendarEpsForecast": 2.4,
+                  "revenueUsdBn": 6.06,
+                  "q4RevenueGuidanceUsdBn": [
+                    5.8,
+                    6.3
+                  ],
+                  "q4EpsGuidance": [
+                    2.45,
+                    2.79
+                  ],
+                  "trailing12mOperatingCashUsdBn": 9.9,
+                  "trailing12mFreeCashFlowUsdBn": 8.4
+                },
+                "sources": [
+                  "https://investor.ti.com/static-files/92651fc5-a8bf-4327-b864-55e178f45abd",
+                  "https://api.nasdaq.com/api/calendar/earnings?date=2026-10-21"
+                ],
+                "reportedDate": "2026-10-21",
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00",
+                "scoredAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -841,8 +893,8 @@
               "name": "NextEra Energy, Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$163,060,924,000",
-              "marketCapUsd": 163060924000,
+              "marketCap": "$164,500,242,000",
+              "marketCapUsd": 164500242000,
               "epsForecast": "$1.20",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -852,11 +904,30 @@
               "selectionReason": "主题：电力",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 68,
+                "band": "inline",
+                "bandLabel": "符合预期",
+                "summary": "调整EPS $1.24略高于日历/公开预期约$1.19–1.20；GAAP EPS $2.28，不能与调整预期混比。官方披露新增3.7GW可再生及储能储备项目，总储备约36.7GW，FPL监管资本同比增9.2%。项目储备不等于投产或已实现收入；所读官方节选未给完整收入与现金流对照，收入预期来源亦有差异，不量化该项惊喜，综合符合预期。",
+                "facts": {
+                  "adjustedEps": 1.24,
+                  "gaapEps": 2.28,
+                  "consensusAdjustedEpsRange": [
+                    1.19,
+                    1.2
+                  ],
+                  "backlogAddedGw": 3.7,
+                  "backlogGw": 36.7,
+                  "fplRegulatoryCapitalGrowthPct": 9.2
+                },
+                "sources": [
+                  "https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/reports-and-fillings/quarterly-earnings/2026/Q3%202026/2026-1021%20NEEQ32026News%20Release%20vFinal.pdf",
+                  "https://terminal.hyperstocks.io/earnings/nee",
+                  "https://api.nasdaq.com/api/calendar/earnings?date=2026-10-21"
+                ],
+                "reportedDate": "2026-10-21",
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00",
+                "scoredAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -864,8 +935,8 @@
               "name": "Philip Morris International Inc",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$313,359,237,000",
-              "marketCapUsd": 313359237000,
+              "marketCap": "$311,566,828,000",
+              "marketCapUsd": 311566828000,
               "epsForecast": "$2.30",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -873,11 +944,42 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 72,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "调整EPS $2.36高于FactSet/Zacks预期$2.30；营收约$114.4亿，公开收入预期$113.2亿与$114.1亿有差异，不混算惊喜。GAAP EPS $2.12同比降4.9%，受股权投资公允价值调整影响。全年GAAP区间$7.11–7.26，加披露调整项$1.18对应调整EPS $8.29–8.44；剔汇率为$8.11–8.26，公告标明本次为汇率调整，不写成经营预期普遍上修。",
+                "facts": {
+                  "adjustedEps": 2.36,
+                  "gaapEps": 2.12,
+                  "consensusAdjustedEps": 2.3,
+                  "revenueUsdBn": 11.44,
+                  "consensusRevenueUsdBnRange": [
+                    11.32,
+                    11.41
+                  ],
+                  "fyGaapEpsGuidance": [
+                    7.11,
+                    7.26
+                  ],
+                  "fyAdjustmentsPerShare": 1.18,
+                  "fyAdjustedEpsGuidance": [
+                    8.29,
+                    8.44
+                  ],
+                  "fyExCurrencyAdjustedEpsGuidance": [
+                    8.11,
+                    8.26
+                  ]
+                },
+                "sources": [
+                  "https://www.pmi.com/investor-relations/press-releases-and-events/press-releases-overview/press-release-details?newsId=30486",
+                  "https://www.zacks.com/stock/news/3012027/pm-q3-earnings-beat-estimates-on-strong-pricing-sales-growth",
+                  "https://finance.yahoo.com/markets/stocks/articles/philip-morris-q3-adjusted-earnings-113405022.html"
+                ],
+                "reportedDate": "2026-10-21",
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00",
+                "scoredAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -885,8 +987,8 @@
               "name": "SAP SE",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$277,678,817,000",
-              "marketCapUsd": 277678817000,
+              "marketCap": "$281,302,893,000",
+              "marketCapUsd": 281302893000,
               "epsForecast": "$2.03",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -894,11 +996,15 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
+                "status": "unknown",
                 "score": null,
                 "band": null,
-                "summary": null,
-                "checkedAt": null
+                "summary": "本次可读SAP官方IR仍为Q3结果发布安排，未取得实际披露数字、币种/ADR与非IFRS可比口径。日历预期$2.03不能与未知欧元EPS直接比较，不评分；等结果正文可核。",
+                "sources": [
+                  "https://www.sap.com/corporate-en/investors"
+                ],
+                "facts": {},
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -906,8 +1012,8 @@
               "name": "Thermo Fisher Scientific Inc",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$251,198,915,000",
-              "marketCapUsd": 251198915000,
+              "marketCap": "$254,153,196,000",
+              "marketCapUsd": 254153196000,
               "epsForecast": "$6.40",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -915,11 +1021,30 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 77,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "调整EPS $6.68高于可比公开预期$6.40，GAAP EPS为$4.64；营收$121.4亿，高于公开预期约$119.2亿–119.5亿，内生增长6%。调整营业利润率24.5%。公开电话会转录提示关税退款带来一次性助益，不能把全部利润增量当经常性；本次官方新闻稿把更新全年指引留待电话会，未将二传指引当已核官方数字，评为超预期。",
+                "facts": {
+                  "adjustedEps": 6.68,
+                  "gaapEps": 4.64,
+                  "consensusAdjustedEps": 6.4,
+                  "revenueUsdBn": 12.14,
+                  "consensusRevenueUsdBnRange": [
+                    11.92,
+                    11.95
+                  ],
+                  "organicRevenueGrowthPct": 6,
+                  "adjustedOperatingMarginPct": 24.5
+                },
+                "sources": [
+                  "https://ir.thermofisher.com/investors/news-events/news/news-details/2026/Thermo-Fisher-Scientific-Reports-Third-Quarter-2026-Results/default.aspx",
+                  "https://www.marketbeat.com/earnings/reports/2026-10-21-thermo-fisher-scientific-inc-stock/"
+                ],
+                "reportedDate": "2026-10-21",
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00",
+                "scoredAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -927,8 +1052,8 @@
               "name": "International Business Machines Corporation",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$222,711,153,000",
-              "marketCapUsd": 222711153000,
+              "marketCap": "$227,921,150,000",
+              "marketCapUsd": 227921150000,
               "epsForecast": "$2.88",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -936,11 +1061,16 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
+                "status": "unknown",
                 "score": null,
                 "band": null,
-                "summary": null,
-                "checkedAt": null
+                "summary": "官方可读页面仅取得10月21日财报会议预告，尚未取得正式Q3结果正文；公开营收预期不是实际结果，未凭会议时间认定已发布或补写分数。",
+                "sources": [
+                  "https://newsroom.ibm.com/2026-10-07-ibm-to-announce-third-quarter-2026-financial-results",
+                  "https://newsroom.ibm.com/announcements"
+                ],
+                "facts": {},
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -948,8 +1078,8 @@
               "name": "Abbott Laboratories",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$180,063,683,000",
-              "marketCapUsd": 180063683000,
+              "marketCap": "$177,277,764,000",
+              "marketCapUsd": 177277764000,
               "epsForecast": "$1.43",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -957,11 +1087,35 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 63,
+                "band": "inline",
+                "bandLabel": "符合预期",
+                "summary": "调整EPS $1.42略低于预期$1.43，营收$130.13亿略高于公开预期$129.7亿；可比销售增7.0%，报告增长14.5%含口径差异。全年调整EPS区间收窄至$5.50–5.55，维持原中点，Q4 $1.62–1.67。GAAP EPS仅$0.53，不能用调整利润掩盖指定项目和费用；小幅盈利不及与营收、指引稳定并存，综合符合预期。",
+                "facts": {
+                  "adjustedEps": 1.42,
+                  "gaapEps": 0.53,
+                  "consensusAdjustedEps": 1.43,
+                  "revenueUsdBn": 13.013,
+                  "consensusRevenueUsdBn": 12.97,
+                  "comparableSalesGrowthPct": 7,
+                  "fyAdjustedEpsGuidance": [
+                    5.5,
+                    5.55
+                  ],
+                  "q4AdjustedEpsGuidance": [
+                    1.62,
+                    1.67
+                  ]
+                },
+                "sources": [
+                  "https://abbott.mediaroom.com/2026-10-21-Abbott-Reports-Third-Quarter-2026-Results-and-Reaffirms-Full-Year-EPS-Guidance",
+                  "https://market.news/calendar/earnings/us",
+                  "https://api.nasdaq.com/api/calendar/earnings?date=2026-10-21"
+                ],
+                "reportedDate": "2026-10-21",
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00",
+                "scoredAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -969,8 +1123,8 @@
               "name": "AT&T Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$158,975,345,000",
-              "marketCapUsd": 158975345000,
+              "marketCap": "$160,482,869,000",
+              "marketCapUsd": 160482869000,
               "epsForecast": "$0.61",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -978,11 +1132,29 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 78,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "调整EPS $0.65高于Zacks可比预期$0.61，营收约$323亿高于约$316.8亿；全年调整EPS上调至约$2.40，长期资本投入下调。季度自由现金流$50亿、净债务约$1498亿。持续经营GAAP EPS $0.13，含墨西哥待售业务非现金减值及离职费用，不能混同调整利润；综合超预期但资产处置与债务风险仍在。",
+                "facts": {
+                  "adjustedEps": 0.65,
+                  "continuingGaapEps": 0.13,
+                  "consensusAdjustedEps": 0.61,
+                  "revenueUsdBn": 32.3,
+                  "consensusRevenueUsdBn": 31.68,
+                  "freeCashFlowUsdBn": 5,
+                  "netDebtUsdBn": 149.8,
+                  "fyAdjustedEpsGuidanceApprox": 2.4
+                },
+                "sources": [
+                  "https://www.sec.gov/Archives/edgar/data/732717/000073271726000370/t-3q2026exhibit991.htm",
+                  "https://www.prnewswire.com/news-releases/att-delivers-strong-third-quarter-2026-results-with-its-best-consolidated-service-revenue-growth-in-more-than-four-years-302915334.html",
+                  "https://www.zacks.com/stock/news/3011578/att-t-q3-earnings-and-revenues-top-estimates"
+                ],
+                "reportedDate": "2026-10-21",
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00",
+                "scoredAt": "2026-10-22T00:24:32.088419+00:00"
               }
             },
             {
@@ -990,8 +1162,8 @@
               "name": "Danaher Corporation",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$157,771,153,000",
-              "marketCapUsd": 157771153000,
+              "marketCap": "$157,637,591,000",
+              "marketCapUsd": 157637591000,
               "epsForecast": "$1.92",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -999,11 +1171,35 @@
               "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
+                "status": "scored",
+                "score": 80,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "调整EPS $2.11高于FactSet预期$1.92，GAAP EPS $1.71；营收约$65.5亿–66亿，与公开预期$65.5亿–65.6亿接近，不用四舍五入声称明显收入超预期。全年调整EPS上调至$8.57–8.62，经营现金流$19亿、自由现金流$16亿。Q4排除呼吸检测的内生增长指引4%–5%，呼吸检测约150基点拖累，综合超预期。",
+                "facts": {
+                  "adjustedEps": 2.11,
+                  "gaapEps": 1.71,
+                  "consensusAdjustedEps": 1.92,
+                  "revenueRoundedUsdBn": 6.6,
+                  "revenueReportedPrecisionNote": "官方新闻摘要四舍五入6.6，公开精确值6.55；不混算惊喜",
+                  "consensusRevenueUsdBnRange": [
+                    6.55,
+                    6.56
+                  ],
+                  "operatingCashFlowUsdBn": 1.9,
+                  "freeCashFlowUsdBn": 1.6,
+                  "fyAdjustedEpsGuidance": [
+                    8.57,
+                    8.62
+                  ]
+                },
+                "sources": [
+                  "https://investors.danaher.com/2026-10-21-Danaher-Reports-Third-Quarter-2026-Results",
+                  "https://finance.yahoo.com/markets/stocks/articles/danaher-fiscal-q3-adjusted-earnings-100905969.html"
+                ],
+                "reportedDate": "2026-10-21",
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00",
+                "scoredAt": "2026-10-22T00:24:32.088419+00:00"
               }
             }
           ]
@@ -1162,8 +1358,8 @@
               "name": "Cadence Design Systems, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$89,739,559,000",
-              "marketCapUsd": 89739559000,
+              "marketCap": "$88,089,960,000",
+              "marketCapUsd": 88089960000,
               "epsForecast": "$1.60",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1185,8 +1381,8 @@
               "name": "Verizon Communications Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$183,433,331,000",
-              "marketCapUsd": 183433331000,
+              "marketCap": "$185,053,692,000",
+              "marketCapUsd": 185053692000,
               "epsForecast": "$1.27",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -1206,8 +1402,8 @@
               "name": "Welltower Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$168,301,150,000",
-              "marketCapUsd": 168301150000,
+              "marketCap": "$171,594,957,000",
+              "marketCapUsd": 171594957000,
               "epsForecast": "$1.64",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -1236,8 +1432,8 @@
               "name": "Visa Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$719,919,380,000",
-              "marketCapUsd": 719919380000,
+              "marketCap": "$726,441,070,000",
+              "marketCapUsd": 726441070000,
               "epsForecast": "$3.43",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1259,8 +1455,8 @@
               "name": "Coca-Cola Company (The)",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$401,944,150,000",
-              "marketCapUsd": 401944150000,
+              "marketCap": "$402,245,321,000",
+              "marketCapUsd": 402245321000,
               "epsForecast": "$0.87",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1282,8 +1478,8 @@
               "name": "Robinhood Markets, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$86,779,421,000",
-              "marketCapUsd": 86779421000,
+              "marketCap": "$88,298,873,000",
+              "marketCapUsd": 88298873000,
               "epsForecast": "$0.55",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1305,8 +1501,8 @@
               "name": "Hubbell Inc",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$24,562,919,400",
-              "marketCapUsd": 24562919400,
+              "marketCap": "$24,267,057,200",
+              "marketCapUsd": 24267057200,
               "epsForecast": "$5.77",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1328,8 +1524,8 @@
               "name": "Enphase Energy, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$4,047,590,660",
-              "marketCapUsd": 4047590660,
+              "marketCap": "$4,259,022,080",
+              "marketCapUsd": 4259022080,
               "epsForecast": "$0.18",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1351,8 +1547,8 @@
               "name": "BigBear.ai, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$1,016,528,320",
-              "marketCapUsd": 1016528320,
+              "marketCap": "$1,040,503,040",
+              "marketCapUsd": 1040503040,
               "epsForecast": "($0.05)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1374,8 +1570,8 @@
               "name": "HSBC Holdings plc",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$326,893,437,000",
-              "marketCapUsd": 326893437000,
+              "marketCap": "$319,229,985,000",
+              "marketCapUsd": 319229985000,
               "epsForecast": "$2.13",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -1395,8 +1591,8 @@
               "name": "Novartis AG",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$286,604,394,000",
-              "marketCapUsd": 286604394000,
+              "marketCap": "$293,168,415,000",
+              "marketCapUsd": 293168415000,
               "epsForecast": "$2.25",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -1416,30 +1612,9 @@
               "name": "Southern Copper Corporation",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$168,351,449,000",
-              "marketCapUsd": 168351449000,
+              "marketCap": "$168,818,672,000",
+              "marketCapUsd": 168818672000,
               "epsForecast": "$2.04",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "BA",
-              "name": "Boeing Company (The)",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$151,292,625,000",
-              "marketCapUsd": 151292625000,
-              "epsForecast": "($0.21)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
               "selection": "autonomous",
@@ -1458,9 +1633,30 @@
               "name": "Seagate Technology Holdings PLC",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$151,139,500,000",
-              "marketCapUsd": 151139500000,
+              "marketCap": "$154,414,760,000",
+              "marketCapUsd": 154414760000,
               "epsForecast": "$7.17",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "BA",
+              "name": "Boeing Company (The)",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$150,541,779,000",
+              "marketCapUsd": 150541779000,
+              "epsForecast": "($0.21)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
               "selection": "autonomous",
@@ -1488,8 +1684,8 @@
               "name": "Alphabet Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$4,209,321,440,000",
-              "marketCapUsd": 4209321440000,
+              "marketCap": "$4,161,563,260,000",
+              "marketCapUsd": 4161563260000,
               "epsForecast": "$2.94",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1511,8 +1707,8 @@
               "name": "Alphabet Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$4,209,321,440,000",
-              "marketCapUsd": 4209321440000,
+              "marketCap": "$4,161,563,260,000",
+              "marketCapUsd": 4161563260000,
               "epsForecast": "$2.94",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1534,8 +1730,8 @@
               "name": "Microsoft Corporation",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$3,961,677,150,000",
-              "marketCapUsd": 3961677150000,
+              "marketCap": "$3,949,424,800,000",
+              "marketCapUsd": 3949424800000,
               "epsForecast": "$4.71",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1557,8 +1753,8 @@
               "name": "GE Vernova Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$241,948,082,000",
-              "marketCapUsd": 241948082000,
+              "marketCap": "$237,124,780,000",
+              "marketCapUsd": 237124780000,
               "epsForecast": "$4.03",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1580,8 +1776,8 @@
               "name": "KLA Corporation ",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$217,153,077,000",
-              "marketCapUsd": 217153077000,
+              "marketCap": "$211,071,746,000",
+              "marketCapUsd": 211071746000,
               "epsForecast": "$1.18",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1603,8 +1799,8 @@
               "name": "ServiceNow, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$150,302,245,000",
-              "marketCapUsd": 150302245000,
+              "marketCap": "$154,624,360,000",
+              "marketCapUsd": 154624360000,
               "epsForecast": "$0.56",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1626,8 +1822,8 @@
               "name": "Fortinet, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$125,831,889,000",
-              "marketCapUsd": 125831889000,
+              "marketCap": "$125,413,671,000",
+              "marketCapUsd": 125413671000,
               "epsForecast": "$0.77",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1649,8 +1845,8 @@
               "name": "Vertiv Holdings, LLC",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$79,338,365,000",
-              "marketCapUsd": 79338365000,
+              "marketCap": "$78,368,195,000",
+              "marketCapUsd": 78368195000,
               "epsForecast": "$1.82",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1672,8 +1868,8 @@
               "name": "American Electric Power Company, Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$67,897,238,000",
-              "marketCapUsd": 67897238000,
+              "marketCap": "$69,258,232,000",
+              "marketCapUsd": 69258232000,
               "epsForecast": "$2.01",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1695,8 +1891,8 @@
               "name": "Generac Holdings Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$11,406,519,300",
-              "marketCapUsd": 11406519300,
+              "marketCap": "$11,482,638,300",
+              "marketCapUsd": 11482638300,
               "epsForecast": "$2.38",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1718,8 +1914,8 @@
               "name": "Amphenol Corporation",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$197,967,823,000",
-              "marketCapUsd": 197967823000,
+              "marketCap": "$195,600,499,000",
+              "marketCapUsd": 195600499000,
               "epsForecast": "$0.73",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -1739,8 +1935,8 @@
               "name": "T-Mobile US, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$167,433,306,000",
-              "marketCapUsd": 167433306000,
+              "marketCap": "$169,213,952,000",
+              "marketCapUsd": 169213952000,
               "epsForecast": "$2.86",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2115,8 +2311,8 @@
               "name": "Dominion Energy, Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$54,715,310,000",
-              "marketCapUsd": 54715310000,
+              "marketCap": "$55,269,409,000",
+              "marketCapUsd": 55269409000,
               "epsForecast": "$1.17",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2138,8 +2334,8 @@
               "name": "Exelon Corporation",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$43,777,892,000",
-              "marketCapUsd": 43777892000,
+              "marketCap": "$44,417,888,000",
+              "marketCapUsd": 44417888000,
               "epsForecast": "$0.80",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2161,8 +2357,8 @@
               "name": "Cameco Corporation",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$35,126,895,000",
-              "marketCapUsd": 35126895000,
+              "marketCap": "$34,935,386,000",
+              "marketCapUsd": 34935386000,
               "epsForecast": "$0.23",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2184,8 +2380,8 @@
               "name": "ExxonMobil Holdings Corporation",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$733,071,670,000",
-              "marketCapUsd": 733071670000,
+              "marketCap": "$731,344,670,000",
+              "marketCapUsd": 731344670000,
               "epsForecast": "$3.93",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2205,8 +2401,8 @@
               "name": "AbbVie Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$499,528,729,000",
-              "marketCapUsd": 499528729000,
+              "marketCap": "$510,838,276,000",
+              "marketCapUsd": 510838276000,
               "epsForecast": "$3.76",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2226,8 +2422,8 @@
               "name": "Chevron Corporation",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$443,303,789,000",
-              "marketCapUsd": 443303789000,
+              "marketCap": "$445,951,345,000",
+              "marketCapUsd": 445951345000,
               "epsForecast": "$4.78",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2247,8 +2443,8 @@
               "name": "AstraZeneca PLC",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$257,368,998,000",
-              "marketCapUsd": 257368998000,
+              "marketCap": "$255,926,469,000",
+              "marketCapUsd": 255926469000,
               "epsForecast": "$2.16",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
