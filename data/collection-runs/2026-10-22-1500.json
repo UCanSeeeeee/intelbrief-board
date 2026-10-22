@@ -5245,7 +5245,216 @@
     }
   ],
   "publication": {
-    "status": "ready-to-push"
+    "status": "verified",
+    "contentCommit": "bf886d9da74229ca3c28993eb1e344e58647aef6",
+    "remoteConfirmed": true,
+    "verificationStartedAt": "2026-10-22T07:06:49.927350+00:00",
+    "verification": {
+      "startedAt": "2026-10-22T07:07:41.980430+00:00",
+      "checkedAt": "2026-10-22T07:07:47.231984+00:00",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-22-1500.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/reading-board.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/learning.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/journal-learning.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "data/market-volatility.json",
+          "status": 200,
+          "bytesMatch": true
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "status": 200,
+          "bytesMatch": true
+        }
+      ],
+      "apis": [
+        {
+          "path": "/api/vix",
+          "status": 200,
+          "data": {
+            "schemaVersion": 1,
+            "id": "cboe-vix",
+            "value": 16.68,
+            "asOfDate": "2026-10-21",
+            "quoteKind": "close",
+            "previousClose": 17.31,
+            "fetchedAt": "2026-10-22T07:07:45.866Z",
+            "source": {
+              "name": "Cboe",
+              "url": "https://www.cboe.com/tradable-products/vix",
+              "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+            },
+            "retrieval": {
+              "status": "ok"
+            }
+          }
+        },
+        {
+          "path": "/api/market-sentiment",
+          "status": 200,
+          "data": {
+            "schemaVersion": 1,
+            "id": "cnn-fear-greed",
+            "market": "us-equities",
+            "score": 31.3142857142857,
+            "rating": "fear",
+            "timestamp": "2026-10-22T00:00:00+00:00",
+            "fetchedAt": "2026-10-22T07:07:47.083Z",
+            "previous": {
+              "close": 31.3714285714286,
+              "week": 30.3428571428571,
+              "month": 35.0285714285714,
+              "year": 26.37142857142857
+            },
+            "source": {
+              "name": "CNN Fear & Greed Index",
+              "url": "https://www.cnn.com/markets/fear-and-greed",
+              "method": "cnn",
+              "dataUrl": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+              "mirrorUrl": null
+            },
+            "retrieval": {
+              "status": "retained",
+              "message": "来源时间早于已存档数据，保留较新值",
+              "errors": [
+                {
+                  "source": "cnn",
+                  "message": "HTTP 418"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "transportNote": "初次Python urllib带run参数均403；普通curl直接公开URL成功，不改登录/权限或来源。"
+    },
+    "verificationAttempts": [
+      {
+        "startedAt": "2026-10-22T07:07:05.993572+00:00",
+        "checkedAt": "2026-10-22T07:07:09.566388+00:00",
+        "resources": [
+          {
+            "path": "data/stock-briefs/2026-10-22-1500.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/stock-briefs/index.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/reading-board.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/people-intelligence.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/ticker-intelligence.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/ai-intelligence.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/learning.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/counterintuitive-learning.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/journal-learning.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/earnings-calendar.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/market-sentiment.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "data/market-volatility.json",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "config/company-blurbs.json",
+            "error": "HTTP Error 403: Forbidden"
+          }
+        ],
+        "apis": [
+          {
+            "path": "/api/vix",
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "path": "/api/market-sentiment",
+            "error": "HTTP Error 403: Forbidden"
+          }
+        ]
+      }
+    ],
+    "cloudflare": "completed/success",
+    "checkUrl": "https://github.com/UCanSeeeeee/intelbrief-board/runs/119689042146",
+    "deploymentId": "1365aa12-ddc1-4ba1-bb8f-92f249d28492",
+    "verifiedAt": "2026-10-22T07:08:16.881Z",
+    "note": "内容提交bf886d9已核对；13项公开JSON逐字节一致；VIX16.68/10月21日收盘一致，CNN接口直连418后保留同一31.3142857142857/00:00Z快照。采集失败与部署成功分开。"
   },
   "timingNote": "记录真实墙钟跨度；前置读取、初次既有页观察在ops起点前，不补造耗时。",
   "marketSnapshots": {
@@ -5368,5 +5577,12 @@
     "failed": 30,
     "successAnchorsPreserved": true,
     "pendingAndReceiptsPreserved": true
+  },
+  "finishedAt": "2026-10-22T07:08:16.920Z",
+  "timing": {
+    "startedAt": "2026-10-22T15:00:08+08:00",
+    "finishedAt": "2026-10-22T15:08:16+08:00",
+    "wallDurationMs": 488000,
+    "note": "墙钟跨度；不含计时起点前的入口读取/最初UI观察及之后回执提交收尾，不代表纯采集耗时。"
   }
 }

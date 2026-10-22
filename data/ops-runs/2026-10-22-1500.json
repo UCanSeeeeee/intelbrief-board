@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-22T15:00:08+08:00",
-  "updatedAt": "2026-10-22T15:05:36+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-22T15:08:16+08:00",
+  "finishedAt": "2026-10-22T15:08:16+08:00",
   "gitHeadAtStart": "eb17eb2c768a00ff421436290ea86825739b8039",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-22T15:06:49+08:00",
+      "detail": "bf886d9da74229ca3c28993eb1e344e58647aef6已推送；ls-remote完全一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-22T15:08:16+08:00",
+      "detail": "Cloudflare成功；13项JSON完全一致，VIX官方收盘与CNN保留快照一致"
     }
   ],
   "pages": {
@@ -77,14 +77,12 @@
       "detail": "复用今早审计，无到期/过时触发"
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "30个X对象入口失败，实际查询0、成功截止未推进；后两阶段跳过；官方指标/财报单独完成",
-    "stackSnippet": null
-  },
-  "commitHash": null,
-  "notes": [],
+  "status": "partial",
+  "error": null,
+  "commitHash": "bf886d9da74229ca3c28993eb1e344e58647aef6",
+  "notes": [
+    "X30对象入口失败，旧内容与成功截止保留；官方指标、财报及发布已核验，无本地test/check/build/预览。"
+  ],
   "timings": [
     {
       "page": "news",
