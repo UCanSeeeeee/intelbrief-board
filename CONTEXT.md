@@ -42,7 +42,7 @@
 | 人物与合集 | docs/PEOPLE_INTELLIGENCE_ROADMAP.md；config/people-intelligence.json |
 | 个股NVDA/MU/INTC/GOOG/AVGO/VRT/TSM | docs/TICKER_INTELLIGENCE.md；config/ticker-intelligence.json |
 | OPENAI/ANTHROPIC/GOOG(AI)/其他 | docs/AI_INTELLIGENCE.md；config/ai-intelligence.json |
-| 基础知识专业版与故事版 | docs/DAILY_LEARNING.md；config/learning.json；data/learning.json |
+| 基础知识／寓言讲概念 | docs/DAILY_LEARNING.md（原始提示词与故事先行契约）；config/learning.json；data/learning.json |
 | Nature/Science健康生活选读 | docs/JOURNAL_PAPERS.md；data/journal-learning.json；learning:publish-papers |
 | 每日5条反直觉小知识 | docs/COUNTERINTUITIVE_KNOWLEDGE.md；data/counterintuitive-learning.json；learning:publish-counterintuitive |
 | 宏观、财报日期及结果 | docs/MACRO_EVENTS.md、docs/EARNINGS_CALENDAR.md |

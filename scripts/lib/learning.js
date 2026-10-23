@@ -26,7 +26,10 @@ function validateLearning(config, learning) {
     if (!professional.definition || !professional.mechanism || !professional.whyItMatters || !Array.isArray(professional.signals) || !professional.signals.length) fail(`learning lesson ${item.id}: incomplete professional version`);
     if (!story.title || !story.body || !Array.isArray(story.mapping) || !story.mapping.length || story.mapping.some(row => !row.storyRole || !row.professionalMeaning) || !story.boundary) fail(`learning lesson ${item.id}: incomplete story version`);
     if (!Array.isArray(item.commonMistakes) || !Array.isArray(item.relatedCuriosityIds) || item.relatedCuriosityIds.some(id => !curiosityIds.has(id))) fail(`learning lesson ${item.id}: invalid relations`);
-    if (!Array.isArray(item.sources) || !item.sources.length || item.sources.some(source => !source.label || !lessonSource(source.url))) fail(`learning lesson ${item.id}: invalid sources`);
+    if (item.format && item.format !== 'fable-reveal') fail(`learning lesson ${item.id}: unsupported format`);
+    if (item.format === 'fable-reveal' && (!item.concept?.trim() || item.title.includes(item.concept) || story.title?.includes(item.concept))) fail(`learning lesson ${item.id}: missing concept or title reveals answer`);
+    const allowedSource = source => lessonSource(source.url) || (item.format === 'fable-reveal' && source.kind === 'academic-reference' && (config.fablePolicy?.academicReferenceUrls || []).includes(source.url) && source.reviewScope?.trim() && Number.isFinite(Date.parse(source.checkedAt)));
+    if (!Array.isArray(item.sources) || !item.sources.length || item.sources.some(source => !source.label || !allowedSource(source))) fail(`learning lesson ${item.id}: invalid sources`);
   }
   return {errors,curiosities:curiosityIds.size,lessons:lessonIds.size};
 }

@@ -33,6 +33,27 @@
 
   function lessonCard(item) {
     const sources = Array.isArray(item.sources) ? item.sources : [];
+    if (item.format === 'fable-reveal') {
+      return `<article id="lesson-${escape(item.id)}" class="learning-card lesson-card fable-card">
+        <header class="lesson-head"><h2>${escape(item.title)}</h2><time>更新 ${escape(formatTime(item.updatedAt))}</time></header>
+        <div class="lesson-versions">
+          <section class="lesson-version fable-story" aria-label="寓言故事">
+            ${String(item.story.body).split(/\n\s*\n/).filter(Boolean).map(paragraph=>`<p>${escape(paragraph)}</p>`).join('')}
+          </section>
+          <section class="lesson-version fable-explanation" aria-labelledby="${escape(item.id)}-concept">
+            <h3 id="${escape(item.id)}-concept">故事背后：${escape(item.concept)}</h3>
+            <p><strong>定义</strong>${escape(item.professional.definition)}</p>
+            <p><strong>运行机制</strong>${escape(item.professional.mechanism)}</p>
+            <p><strong>为什么重要</strong>${escape(item.professional.whyItMatters)}</p>
+            ${list(item.professional.signals)}
+            ${mapping(item.story.mapping)}
+            <p class="analogy-boundary"><strong>类比边界</strong>${escape(item.story.boundary)}</p>
+          </section>
+        </div>
+        ${item.commonMistakes?.length?`<section class="lesson-mistakes"><h3>常见误区</h3>${list(item.commonMistakes)}</section>`:''}
+        ${sources.length?`<footer>${sources.map(source=>{const url=paperUrl(source.url);return url?`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.label)} ↗</a>`:'';}).join('')}</footer>`:''}
+      </article>`;
+    }
     return `<article id="lesson-${escape(item.id)}" class="learning-card lesson-card">
       <header class="lesson-head"><div><span class="lesson-category">${escape(item.category)}</span><h2>${escape(item.title)}</h2></div><time>更新 ${escape(formatTime(item.updatedAt))}</time></header>
       <div class="lesson-versions">

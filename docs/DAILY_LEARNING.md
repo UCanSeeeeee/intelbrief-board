@@ -2,7 +2,7 @@
 
 四个顶部Tab：基础知识讲解、Nature、Science、反直觉小知识。默认基础知识。每日趣事停止采集和展示；旧dailyCuriosities及其关联保留为历史证据。
 
-基础知识按真实`updatedAt`倒序，最新知识先读；专业解释和故事全文保留，不折叠。日期未知不补造。
+基础知识按真实`updatedAt`倒序，最新知识先读；专业解释和故事全文保留，不折叠。新写内容采用下方「寓言讲概念」格式，旧内容保留原顺序，不批量改写。日期未知不补造。
 
 ## 执行时间
 
@@ -15,8 +15,21 @@
 
 专业版professional保存definition、mechanism、whyItMatters和signals，写准确概念、过程与约束、意义和可观察指标。故事版story面向无行业背景的成年人，明确例子是虚构，mapping解释类比关系，boundary指出失真；两版不产生不同事实。
 
-字段仍为id/title/category/updatedAt/professional/story/commonMistakes/relatedCuriosityIds/sources；新内容relatedCuriosityIds为空，旧关系保留。来源复用已验收X材料或公开项目研究知识库，知识解释不冒充新闻原帖事实，不扩大X采集路径。
+字段仍为id/title/category/updatedAt/professional/story/commonMistakes/relatedCuriosityIds/sources；新内容relatedCuriosityIds为空，旧关系保留。来源复用已验收X材料或公开项目研究知识库；为用户指定的跨领域研究生概念可核对教材、大学讲义、原始方法论文，实际核对的链接登记到`config/learning.json`的`fablePolicy.academicReferenceUrls`。此范围只用于概念教学，不采集实时新闻或扩大X采集路径。
+
+## 寓言讲概念
+
+用户2026-10-24原始提示词（原文保留）：
+
+> 请你从某个领域里，选择一个研究生水平的概念。然后写一个寓言故事，用间接的方式把这个概念讲清楚。不要一开始就说答案，尽量到故事快结束的时候，才让人意识到原来讲的是这个概念。故事结束后，再解释这个概念
+
+- 在现有基础知识Tab内实现，不新增侧栏、顶部Tab或定时任务；沿用basics时段和每天最多1篇名额。用户本次授权立即制作首篇，后续按既有批次选题。
+- 一篇只讲透一个研究生课程中使用的概念；领域不限于美股，可来自统计、经济、心理、生态等。难度来自机制、假设与边界，不靠术语堆砌；面向无专门背景的成年人。
+- 新条目用`format: fable-reveal`和`concept`。`title`与`story.title`使用故事名，目录、开场和故事主体不出现概念答案；接近结尾通过人物发现或行动结果揭示机制，不靠最后硬贴术语。
+- 固定阅读顺序：寓言全文 → 概念名称与专业解释 → 角色/因果映射 → 类比边界与误区 → 来源。全部默认展开，不能用折叠或点击揭晓阻断阅读。故事用空行分段，标题不剧透。
+- `professional`保留定义、机制、意义与判断问题；需要时给可核对的小型推导，区别相关与因果。明确寓言是虚构，数字是教学设定，不包装成真实实验或新闻。不得将类比当作证明或将一个特例推广为普遍规律。
+- 作者独立创作故事，核对概念与来源；保存真实核对范围，不因引用论文就声称读过全文。无合格概念或证据时保留旧内容，不凑数、不复刻旧知识点。
 
 ## 页面
 
-四个Tab支持方向键、Home、End，URL为?tab=basics、nature、science或counterintuitive。两版同时展开、手机单栏。论文结论在前、实验过程明确；不展示阅读范围、覆盖说明和单日期选择器，内部契约保留。遵守[设计系统](DESIGN_SYSTEM.md)。
+四个Tab支持方向键、Home、End，URL为?tab=basics、nature、science或counterintuitive。两版同时展开、手机单栏；寓言先故事后解释，旧卡专业在前。论文结论在前、实验过程明确；不展示阅读范围、覆盖说明和单日期选择器，内部契约保留。遵守[设计系统](DESIGN_SYSTEM.md)。
