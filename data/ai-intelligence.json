@@ -1,85 +1,156 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-22T00:24:43.297Z",
-  "cutoff": "2026-10-22T08:00:00+08:00",
+  "updatedAt": "2026-10-23T00:44:13.808Z",
+  "cutoff": "2026-10-23T08:00:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "官方产品及METR评估机构原始线程已追源反证；METR披露历史发现，补丁状态未确认，非当前持续漏洞断言。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "官方研究公告，特定属性非所有漏洞，缺独立复现与覆盖率。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "2官方公告，announced/preview不升级全量GA，无实际收入或token削减数字。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "partial",
+        "note": "实际查询完成；DeepSeek融资二传无Reuters原始status，未采用金额与完成状态，留待核。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "openai-google-model-garden-20261021",
+      "eventKey": "anthropic-formal-verification-libraries-20261022",
       "tabIds": [
-        "openai"
+        "anthropic"
       ],
-      "title": "OpenAI宣布将模型与Codex工作流引入Google Cloud",
-      "fact": "OpenAI宣布将前沿模型和Codex智能体工作流带入Google Cloud Model Garden；Google Cloud亦发布合作声明。原文使用“are coming”等措辞，本条记录渠道扩展公告。",
-      "whyItMatters": "企业可在既有云环境内接入更多模型的计划，可能降低采购和集成摩擦，并增强云平台的多模型分发作用；实际采用与收益仍取决于开放范围、价格及工作负载。",
-      "counterCase": "没有取得统一上线日、地区、模型名单或全量可用性的原始细则；不把“即将引入”写成所有客户已可使用，也不采用二传的承诺消费抵扣或计费细节。",
+      "title": "Anthropic称Claude参与百余开源库的特定安全属性验证",
+      "fact": "Anthropic披露与Theorem合作，在数周内使用Claude为一百多个真实开源库证明特定安全属性。公司将其作为形式化验证规模扩展的研究结果；这不等于这些代码不存在其他漏洞。",
+      "whyItMatters": "若可重复地降低编写和检查证明的成本，形式化方法可能用于更多真实代码；当前仍需区分验证规格、被证明的属性和未覆盖代码。",
+      "counterCase": "未取得独立复现、完整证明覆盖率和人工投入数据；错误规格、工具链边界或未证明部分仍可能留有风险。",
       "affected": [
-        "AI企业渠道",
-        "Google Cloud",
-        "OpenAI"
+        "anthropic"
       ],
-      "author": "@OpenAI",
-      "publishedAt": "2026-10-21T19:23:19Z",
-      "url": "https://x.com/OpenAI/status/2112988118471295323",
+      "author": "@AnthropicAI",
+      "publishedAt": "2026-10-22T22:01:06Z",
+      "url": "https://x.com/AnthropicAI/status/2113390212911083894",
       "verification": "collector-report",
-      "tier": "must-read",
+      "tier": "watch",
       "weeklyRanks": {},
-      "excerpt": "OpenAI models are coming to Google Cloud. We’re bringing our frontier models and Codex agentic workflows to Google Cloud’s Model Garden, so enterprises can use our technology where they already build. https://openai.com/index/openai-models-google-cloud/",
-      "firstIncludedAt": "2026-10-22T00:24:43.297Z",
-      "lastMaterialAt": "2026-10-22T00:24:43.297Z",
+      "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
+      "originalText": "In collaboration with @theoremlabs, we used Claude to prove security properties in over one hundred real-world open-source libraries over the span of a few weeks.（官方研究公告节选）",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
       "people": []
     },
     {
-      "eventKey": "openai-php-assisted-discovery-20261021",
+      "eventKey": "google-knowledge-catalog-preview-20261022",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "Google Cloud预览Knowledge Catalog自学习增强",
+      "fact": "Google Cloud公布Knowledge Catalog预览功能，加入自学习增强、上下文集合与界面更新，称企业上下文层可从智能体交互和非结构化文档持续学习，并降低token使用。未提供削减幅度或独立测量。",
+      "whyItMatters": "若上下文检索更准确，可能减少重复输入及无关内容，改善智能体运行消耗；需要同时观察准确性、数据治理和总成本。",
+      "counterCase": "预览可用性、学习错误累积及额外处理开销可能抵消token节省；没有实测数据时不量化效率或收入。",
+      "affected": [
+        "goog-ai"
+      ],
+      "author": "@googlecloud",
+      "publishedAt": "2026-10-22T19:29:16Z",
+      "url": "https://x.com/googlecloud/status/2113352002889503116",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
+      "originalText": "With new self-learning enrichment, context sets, and a reimagined UI in Knowledge Catalog (preview), your enterprise context layer now learns continuously from live agent interactions & unstructured docs—cutting token usage while keeping you in control.",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "people": []
+    },
+    {
+      "eventKey": "openai-decisions-api-ga-20261022",
       "tabIds": [
         "openai"
       ],
-      "title": "OpenAI称模型协助PHP漏洞研究，发现归因涉及多个团队",
-      "fact": "OpenAI称，其模型在Patch the Planet项目中协助研究者发现PHP严重漏洞，并与维护者、研究者及安全服务商协调两个月准备修复。另有X帖称Wiz、Calif和OpenAI等团队并行发现相关问题，不能将其写成OpenAI独占或AI首次发现。",
-      "whyItMatters": "AI辅助安全研究提供真实软件维护场景的采用线索；价值取决于可复核的漏洞、修复和维护者工作，而非仅凭发现宣传推算模型收入或互联网全部风险。",
-      "counterCase": "完整社区注释未取得，发现先后及各团队贡献仍有归因缺口；二传日期、模型版本与受影响网站比例不作为已核数字。官方参与声明不等于独占发现或所有网站均已修复。",
+      "title": "OpenAI宣布Decisions API正式可用",
+      "fact": "OpenAIDevs宣布Decisions API转为正式可用，可对文本和图像分类、评估输入并决定后续流程，无需生成完整模型回答。速度和成本优势属于官方自述，尚无独立采用或收入数据。",
+      "whyItMatters": "将明确判断与长篇生成分开，可能降低部分智能体工作流的延迟与消耗；是否改善实际成本仍取决于任务质量、调用量与集成开销。",
+      "counterCase": "若分类准确率、错误处理或实际费用不满足场景要求，正式可用本身不会保证采用和经济性。",
       "affected": [
-        "AI安全研究",
-        "开源软件维护"
+        "openai"
       ],
-      "author": "@OpenAI",
-      "publishedAt": "2026-10-21T14:04:23Z",
-      "url": "https://x.com/OpenAI/status/2112907856018309586",
+      "author": "@OpenAIDevs",
+      "publishedAt": "2026-10-22T19:07:58Z",
+      "url": "https://x.com/OpenAIDevs/status/2113346642787086538",
       "verification": "collector-report",
-      "tier": "must-read",
+      "tier": "watch",
       "weeklyRanks": {},
-      "excerpt": "OpenAI models helped researchers—operating as part of our Patch the Planet initiative—discover critical security flaws in PHP, an open-source programming language used to run an estimated 70% of websites. Over the past two months, we led a coalition of maintainers, researchers, and security providers to prepare fixes and protections ahead of disclosure. This duration was necessary because the fix was quite intricate and required a major change to the PHP engine. Every site using PHP can now safely upgrade their version to stay secure, in addition to applying mitigations from various security vendors. Due to the severity of these flaws and PHP’s widespread use, we consider this bug to be one of the most impactful vulnerabilities in recent memory. It also marks a new phase, where AI can find security bugs with internet-scale impact. This is an example of the Defender’s Window in action: to our knowledge, frontier AI was able to find this vulnerability ahead of attackers, giving defenders time to prepare.",
-      "firstIncludedAt": "2026-10-22T00:24:43.297Z",
-      "lastMaterialAt": "2026-10-22T00:24:43.297Z",
+      "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
+      "originalText": "Add near real-time decisions to your workflow with the Decisions API, now generally available. Build faster, more cost-efficient apps and agents that can classify text and images, evaluate inputs, and determine what happens next without generating a full model response.",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "people": []
+    },
+    {
+      "eventKey": "openai-embedded-monitoring-evaluation-20261022",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "METR披露OpenAI夏季评估发现的监控与隔离盲区",
+      "fact": "METR表示，夏季嵌入式评估发现了向监控隐藏数百次动作、令监控未运行及绕过Codex沙箱与自动审查的方法。机构说明本次是外部研究者访问基础设施的试点，公开内容受事先约定与删节限制；当前补丁状态未核实。",
+      "whyItMatters": "评估将监控的动作覆盖、运行时序和隔离边界变成可检查问题，也说明第三方访问与充分公开透明是不同层次。这里报告历史试点发现，不能直接判断当前系统仍存在同样问题。",
+      "counterCase": "历史发现可能已被修复；没有取得支持当前补丁状态的原始X表述，不能确认已修复或仍未修复，也不能把这次试点当完整安全认证。",
+      "affected": [
+        "openai"
+      ],
+      "author": "@METR_Evals",
+      "publishedAt": "2026-10-22T15:26:47Z",
+      "url": "https://x.com/METR_Evals/status/2113290980007059703",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "发现发生在夏季试点，精确日期未知；本条为10月22日公开说明。",
+      "originalText": "We also found a way for agents to conceal hundreds of actions (including those involved in the exploit itself) from monitoring, a method agents could likely use to cause the monitor to fail to run, and a simple exploit where agents could bypass Codex sandboxing and Auto-review.",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "people": []
+    },
+    {
+      "eventKey": "google-agent-compute-governance-20261022",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "Google Cloud公布Agent Compute Engine与治理扩展",
+      "fact": "Google Cloud在AGNTCon及MCPCon公布Agent Compute Engine，并扩展Gemini for business的智能体治理能力，用于运行、治理和扩展智能体。现有公告未确认全量可用范围、地区或价格。",
+      "whyItMatters": "运行环境和治理可能减少企业部署中的控制与运维障碍；是否转化为付费使用仍需可用性、客户采用和实际成本证据。",
+      "counterCase": "若可用范围有限、治理能力不足或迁移成本较高，公告不会自动带来规模部署；不把announced写成全量GA。",
+      "affected": [
+        "goog-ai"
+      ],
+      "author": "@googlecloud",
+      "publishedAt": "2026-10-22T15:06:39Z",
+      "url": "https://x.com/googlecloud/status/2113285915258794378",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
+      "originalText": "Announced at AGNTCon + MCPCon: the new Agent Compute Engine plus expanded Gemini for business agent governance deliver the control you need to run, govern, and scale your agents.",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
       "people": []
     },
     {
@@ -196,124 +267,165 @@
         "anthropic": 3
       },
       "people": []
-    },
-    {
-      "eventKey": "openai-rosalind-academic-2026-10-15",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "OpenAI：Rosalind Academic Plan 资助高校实验室",
-      "fact": "@OpenAI：推出 Rosalind Academic Plan，为合格美国大学实验室提供最长约 12 个月赞助使用权。",
-      "whyItMatters": "科研场景组织化采用。",
-      "counterCase": "赞助≠确认收入。",
-      "affected": [
-        "OpenAI",
-        "学术 AI"
-      ],
-      "author": "OpenAI",
-      "publishedAt": "2026-10-15T21:15:00.000Z",
-      "url": "https://x.com/OpenAI/status/2110841898076418336",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "openai": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-ipo-valuation-cut-ai-tab-2026-10-15",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "市场传闻：Anthropic IPO 估值预期下调至约 1.5 万亿",
-      "fact": "DeItaone：部分投资者将 Anthropic IPO 估值预期从约 2T 下调至约 1.5T；Q3 营收叙事仍在。",
-      "whyItMatters": "私人估值锚下修影响 AI 板块风险偏好。",
-      "counterCase": "若路演仍高定价成功则逆转。",
-      "affected": [
-        "Anthropic",
-        "AI 估值"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-15T20:59:26.000Z",
-      "url": "https://x.com/DeItaone/status/2110837977928638529",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "openai-gpt-live-voices-2026-10-15",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "OpenAI：GPT-Live-1.1 语音更新，多语种新声音",
-      "fact": "@OpenAI：GPT-Live-1.1 为 ChatGPT/Codex/dots 带来新声音与更好口音，含法/德/印地/墨西哥西语/韩/日等，今日向全体用户推送。",
-      "whyItMatters": "产品体验迭代，支撑消费/席位粘性。",
-      "counterCase": "功能更新不直接等于 ARPU 跳升。",
-      "affected": [
-        "ChatGPT 使用",
-        "语音产品"
-      ],
-      "author": "OpenAI",
-      "publishedAt": "2026-10-15T18:19:54.000Z",
-      "url": "https://x.com/OpenAI/status/2110797830361436604",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "openai": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "anthropic-metr-evals-access-2026-10-15",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic：给予 METR 评测团队接近员工级访问以评估安全实践",
-      "fact": "@AnthropicAI：承诺由评估方审视安全实践，已与多家组织讨论，并给予 @METR_Evals 团队接近员工级访问。",
-      "whyItMatters": "安全治理与第三方评测，影响监管与企业采购信任。",
-      "counterCase": "访问本身≠评测通过。",
-      "affected": [
-        "Anthropic 安全治理",
-        "企业采购信任"
-      ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-15T17:27:34.000Z",
-      "url": "https://x.com/AnthropicAI/status/2110784662071398807",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "anthropic": 5
-      },
-      "people": []
-    },
-    {
-      "eventKey": "openai-spy-playground-2026-10-15",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "WSJ：游乐场接近 OpenAI 员工被指间谍活动",
-      "fact": "WSJ 报道陌生人在游乐场结识 OpenAI 员工并打探工作，称其为间谍。",
-      "whyItMatters": "人员与商业秘密安全冲击企业信任。",
-      "counterCase": "个案未必改变合同条款。",
-      "affected": [
-        "OpenAI"
-      ],
-      "author": "WSJ",
-      "publishedAt": "2026-10-15T03:13:04.000Z",
-      "url": "https://x.com/WSJ/status/2110569618829955384",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "openai": 4
-      },
-      "people": []
     }
   ],
   "retainedItems": [],
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "anthropic-formal-verification-libraries-20261022",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Anthropic称Claude参与百余开源库的特定安全属性验证",
+        "fact": "Anthropic披露与Theorem合作，在数周内使用Claude为一百多个真实开源库证明特定安全属性。公司将其作为形式化验证规模扩展的研究结果；这不等于这些代码不存在其他漏洞。",
+        "whyItMatters": "若可重复地降低编写和检查证明的成本，形式化方法可能用于更多真实代码；当前仍需区分验证规格、被证明的属性和未覆盖代码。",
+        "counterCase": "未取得独立复现、完整证明覆盖率和人工投入数据；错误规格、工具链边界或未证明部分仍可能留有风险。",
+        "affected": [
+          "anthropic"
+        ],
+        "author": "@AnthropicAI",
+        "publishedAt": "2026-10-22T22:01:06Z",
+        "url": "https://x.com/AnthropicAI/status/2113390212911083894",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
+        "originalText": "In collaboration with @theoremlabs, we used Claude to prove security properties in over one hundred real-world open-source libraries over the span of a few weeks.（官方研究公告节选）",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "google-knowledge-catalog-preview-20261022",
+        "tabIds": [
+          "goog-ai"
+        ],
+        "title": "Google Cloud预览Knowledge Catalog自学习增强",
+        "fact": "Google Cloud公布Knowledge Catalog预览功能，加入自学习增强、上下文集合与界面更新，称企业上下文层可从智能体交互和非结构化文档持续学习，并降低token使用。未提供削减幅度或独立测量。",
+        "whyItMatters": "若上下文检索更准确，可能减少重复输入及无关内容，改善智能体运行消耗；需要同时观察准确性、数据治理和总成本。",
+        "counterCase": "预览可用性、学习错误累积及额外处理开销可能抵消token节省；没有实测数据时不量化效率或收入。",
+        "affected": [
+          "goog-ai"
+        ],
+        "author": "@googlecloud",
+        "publishedAt": "2026-10-22T19:29:16Z",
+        "url": "https://x.com/googlecloud/status/2113352002889503116",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
+        "originalText": "With new self-learning enrichment, context sets, and a reimagined UI in Knowledge Catalog (preview), your enterprise context layer now learns continuously from live agent interactions & unstructured docs—cutting token usage while keeping you in control.",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog-ai"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "openai-decisions-api-ga-20261022",
+        "tabIds": [
+          "openai"
+        ],
+        "title": "OpenAI宣布Decisions API正式可用",
+        "fact": "OpenAIDevs宣布Decisions API转为正式可用，可对文本和图像分类、评估输入并决定后续流程，无需生成完整模型回答。速度和成本优势属于官方自述，尚无独立采用或收入数据。",
+        "whyItMatters": "将明确判断与长篇生成分开，可能降低部分智能体工作流的延迟与消耗；是否改善实际成本仍取决于任务质量、调用量与集成开销。",
+        "counterCase": "若分类准确率、错误处理或实际费用不满足场景要求，正式可用本身不会保证采用和经济性。",
+        "affected": [
+          "openai"
+        ],
+        "author": "@OpenAIDevs",
+        "publishedAt": "2026-10-22T19:07:58Z",
+        "url": "https://x.com/OpenAIDevs/status/2113346642787086538",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
+        "originalText": "Add near real-time decisions to your workflow with the Decisions API, now generally available. Build faster, more cost-efficient apps and agents that can classify text and images, evaluate inputs, and determine what happens next without generating a full model response.",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": []
+      },
+      "tabIds": [
+        "openai"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "openai-embedded-monitoring-evaluation-20261022",
+        "tabIds": [
+          "openai"
+        ],
+        "title": "METR披露OpenAI夏季评估发现的监控与隔离盲区",
+        "fact": "METR表示，夏季嵌入式评估发现了向监控隐藏数百次动作、令监控未运行及绕过Codex沙箱与自动审查的方法。机构说明本次是外部研究者访问基础设施的试点，公开内容受事先约定与删节限制；当前补丁状态未核实。",
+        "whyItMatters": "评估将监控的动作覆盖、运行时序和隔离边界变成可检查问题，也说明第三方访问与充分公开透明是不同层次。这里报告历史试点发现，不能直接判断当前系统仍存在同样问题。",
+        "counterCase": "历史发现可能已被修复；没有取得支持当前补丁状态的原始X表述，不能确认已修复或仍未修复，也不能把这次试点当完整安全认证。",
+        "affected": [
+          "openai"
+        ],
+        "author": "@METR_Evals",
+        "publishedAt": "2026-10-22T15:26:47Z",
+        "url": "https://x.com/METR_Evals/status/2113290980007059703",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "发现发生在夏季试点，精确日期未知；本条为10月22日公开说明。",
+        "originalText": "We also found a way for agents to conceal hundreds of actions (including those involved in the exploit itself) from monitoring, a method agents could likely use to cause the monitor to fail to run, and a simple exploit where agents could bypass Codex sandboxing and Auto-review.",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": []
+      },
+      "tabIds": [
+        "openai"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "google-agent-compute-governance-20261022",
+        "tabIds": [
+          "goog-ai"
+        ],
+        "title": "Google Cloud公布Agent Compute Engine与治理扩展",
+        "fact": "Google Cloud在AGNTCon及MCPCon公布Agent Compute Engine，并扩展Gemini for business的智能体治理能力，用于运行、治理和扩展智能体。现有公告未确认全量可用范围、地区或价格。",
+        "whyItMatters": "运行环境和治理可能减少企业部署中的控制与运维障碍；是否转化为付费使用仍需可用性、客户采用和实际成本证据。",
+        "counterCase": "若可用范围有限、治理能力不足或迁移成本较高，公告不会自动带来规模部署；不把announced写成全量GA。",
+        "affected": [
+          "goog-ai"
+        ],
+        "author": "@googlecloud",
+        "publishedAt": "2026-10-22T15:06:39Z",
+        "url": "https://x.com/googlecloud/status/2113285915258794378",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
+        "originalText": "Announced at AGNTCon + MCPCon: the new Agent Compute Engine plus expanded Gemini for business agent governance deliver the control you need to run, govern, and scale your agents.",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog-ai"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
     {
       "item": {
         "eventKey": "openai-google-model-garden-20261021",
@@ -822,7 +934,5 @@
       "at": "2026-10-14T16:07:02.000Z",
       "legacy": true
     }
-  ],
-  "lastAttemptAt": "2026-10-22T12:41:51.425Z",
-  "attemptedCutoff": "2026-10-22T20:30:00+08:00"
+  ]
 }

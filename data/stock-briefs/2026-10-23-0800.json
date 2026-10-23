@@ -1,0 +1,681 @@
+{
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-23T00:00:00.000Z",
+      "cutoff": "2026-10-23T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:market-focus",
+          "key": "jpm-intel-neutral-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-leveraged-etf-semiconductor-inflows-20261020",
+          "status": "pending",
+          "reason": "缺Goldman或权威媒体原帖与统计期/金额。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "smci-preliminary-fq127-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "taiwan-sept-export-orders-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "spacex-q3-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，仅官方报告链接未含数字与AI传导，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "japan-yttrium-shortage-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "phoenix-tailings-rochester-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "nebius-spot-gpu-20261021",
+          "status": "pending",
+          "reason": "旧候选无已证实进展复用缓存；或定向追源未取得关键原始证据，留待核",
+          "updatedAt": "2026-10-22T00:02:48.855Z",
+          "runId": "2026-10-22-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "zerohedge-premarket-20261022",
+          "status": "pending",
+          "reason": "未完成候选读取/原始追源/独立反证，二传数字不发布。",
+          "updatedAt": "2026-10-22T12:37:28.674Z",
+          "runId": "2026-10-22-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "tapeandticker-premarket-20261022",
+          "status": "pending",
+          "reason": "采集器二传，官方/权威原始证据与反证未取得，不发布。",
+          "updatedAt": "2026-10-22T12:37:28.674Z",
+          "runId": "2026-10-22-2030"
+        }
+      ]
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-23T00:00:00.000Z",
+      "cutoff": "2026-10-23T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "tsmc-kumamoto-3nm-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "citi-skhynix-q326-preview-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "mu-2027-hbm-asp-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "pc-memory-lta-2027-20261020",
+          "status": "pending",
+          "reason": "缺公司/权威原始披露与签约日期。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-23T00:00:00.000Z",
+      "cutoff": "2026-10-23T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:power",
+          "key": "nscale-msft-uk-grid-ipo-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "nextdc-melbourne-grid-risk-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-23T00:00:00.000Z",
+      "cutoff": "2026-10-23T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:ai-adoption",
+          "key": "daytona-financing-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:ai-adoption",
+          "key": "meta-muse-agents-20261021",
+          "status": "pending",
+          "reason": "New secondhand quantitative claim requires original",
+          "updatedAt": "2026-10-22T00:02:48.855Z",
+          "runId": "2026-10-22-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-23T00:00:00.000Z",
+      "cutoff": "2026-10-23T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:capital-cost",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "Reuters仅支持升级发生，核心假设与现金流依据不足",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:capital-cost",
+          "key": "jpm-coreweave-debt-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-23T00:00:00.000Z",
+      "cutoff": "2026-10-23T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "hormuz-tankers-mine-claim-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "us-energy-russia-diesel-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-23T00:00:00.000Z",
+      "cutoff": "2026-10-23T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ],
+  "scheduledFor": "2026-10-23T08:00:00+08:00",
+  "windowStart": "2026-10-22T00:00:00.000Z",
+  "displayWindowStart": "2026-10-22T00:00:00.000Z",
+  "displayWindowEnd": "2026-10-23T00:00:00.000Z",
+  "carriedOver": [],
+  "status": "partial",
+  "summary": "新增TSMC供应链替代线索与Bloom收入及指引；未核数字留待核，存量重点续留。",
+  "marketContext": "北京时间08:00冻结；不将前收盘行情称为实时。",
+  "checklist": [
+    {
+      "item": "market-focus",
+      "status": "covered",
+      "note": "按本对象精确增量窗口执行，详见查询与证据缺口。"
+    },
+    {
+      "item": "semiconductors",
+      "status": "covered",
+      "note": "按本对象精确增量窗口执行，详见查询与证据缺口。"
+    },
+    {
+      "item": "power",
+      "status": "covered",
+      "note": "按本对象精确增量窗口执行，详见查询与证据缺口。"
+    },
+    {
+      "item": "ai-adoption",
+      "status": "covered",
+      "note": "按本对象精确增量窗口执行，详见查询与证据缺口。"
+    },
+    {
+      "item": "capital-cost",
+      "status": "covered",
+      "note": "按本对象精确增量窗口执行，详见查询与证据缺口。"
+    },
+    {
+      "item": "geopolitics",
+      "status": "no-result",
+      "note": "按本对象精确增量窗口执行，详见查询与证据缺口。"
+    },
+    {
+      "item": "market-structure",
+      "status": "covered",
+      "note": "按本对象精确增量窗口执行，详见查询与证据缺口。"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "tsmc-rare-earth-equipment-20261022",
+      "round": 1,
+      "decision": "selected",
+      "reason": "Reuters原始X披露，仅发布寻求替代这一有限主张。"
+    },
+    {
+      "eventKey": "bloom-q3-2026-revenue-guidance-20261022",
+      "round": 2,
+      "decision": "selected",
+      "reason": "Bloom官方原帖确认收入和指引，剔除未证实MW细节。"
+    },
+    {
+      "eventKey": "gm-vac-magnet-20261022",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "非AI相关大中型股范围且二传"
+    },
+    {
+      "eventKey": "meta-fcf-negative-20261022",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "未取得具体FCF/capex原始X数字"
+    },
+    {
+      "eventKey": "treasury-yields-conflict-20261022",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "收益率bp口径冲突且无新政策硬事实"
+    },
+    {
+      "eventKey": "chatgpt-pro-allowance-20261022",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "二传缺正式政策原帖和实际采用/单位经济数据"
+    },
+    {
+      "eventKey": "tips-5y-auction-20261022",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "未取得原始权威X数字"
+    },
+    {
+      "eventKey": "equity-breadth-20261022",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "未取得可比成分池统计来源"
+    }
+  ],
+  "coverage": {
+    "method": "grok-web / X-only，两轮独立发现；有候选才追源反证。",
+    "queries": [
+      "(Fed OR FOMC OR inflation OR CPI OR PPI OR employment OR NFP OR payroll OR treasury OR yields OR \"long end\" OR \"10y\" OR \"30y\" OR \"dollar\" OR DXY OR credit OR fiscal OR deficit OR \"debt ceiling\" OR rates) (US OR America OR \"United States\") since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "(sanction OR tariff OR \"export control\" OR embargo OR \"critical mineral\" OR lithium OR rare earth OR oil OR gas OR LNG OR shipping OR tanker OR pipeline) (US OR China OR Russia OR Iran OR Europe) (supply OR cost OR disruption OR ban OR restriction) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "(NVIDIA OR NVDA OR TSMC OR \"Taiwan Semi\" OR AMD OR Broadcom OR semiconductor OR chip OR \"AI chip\" OR \"power grid\" OR electricity OR \"data center\" OR \"hyperscaler\" OR \"capex\" OR order OR guidance OR capacity OR \"grid connection\" OR financing) (AI OR semiconductor) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "(\"fund flow\" OR \"net flow\" OR outflow OR inflow OR deleverag* OR \"forced selling\" OR \"margin call\" OR \"positioning\" OR breadth OR \"advance decline\" OR \"put call\" OR \"hedge fund\" OR \"CTA\" OR \"risk parity\") (equity OR stock OR market) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "(TSMC OR \"Taiwan Semiconductor\") (rare-earth OR \"rare earth\" OR magnet) since:2026-10-22 until:2026-10-23",
+      "(GM OR \"General Motors\") (rare-earth OR magnet OR e-VAC OR VAC) since:2026-10-22 until:2026-10-23",
+      "(Meta OR META) (capex OR \"capital expenditure\" OR spending OR FCF OR \"free cash flow\") AI since:2026-10-22 until:2026-10-23",
+      "(\"10-year\" OR \"10y\" OR \"10 year\" OR treasury) (yield OR yields) (Fed OR inflation OR CPI) since:2026-10-22 until:2026-10-23",
+      "(fund flow OR \"net inflow\" OR \"net outflow\" OR \"ETF flow\" OR \"equity flow\") (US OR America OR SPX OR \"S&P\") since:2026-10-22 until:2026-10-23",
+      "from:Reuters (TSMC OR \"rare earth\" OR magnet OR GM OR Meta) since:2026-10-22 until:2026-10-23",
+      "(\"Meta\" OR META) (earnings OR \"free cash flow\" OR FCF OR \"capital expenditure\" OR capex) since:2026-10-22 until:2026-10-23",
+      "(Zimbabwe) (lithium) (ban OR export) since:2026-10-22 until:2026-10-23",
+      "new facts on US treasury yields inflation or Fed policy affecting capital costs on October 22 2026",
+      "(\"TSMC\" OR TSMC) (\"rare earth\" OR rare-earth OR magnets) (Reuters OR exclusive OR survey OR suppliers) since:2026-10-22 until:2026-10-23",
+      "from:ReutersBiz OR from:Reuters (TSMC OR semiconductor OR \"rare earth\") since:2026-10-22 until:2026-10-23",
+      "(HBM OR DRAM OR \"advanced packaging\" OR CoWoS OR \"chip equipment\" OR ASML OR \"lead time\" OR yield OR ASP OR inventory) (semiconductor OR TSMC OR NVIDIA OR Samsung OR SK Hynix OR Micron) (capacity OR order OR production OR shortage OR delay) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "(\"data center\" OR hyperscaler OR \"grid connection\" OR PPA OR transformer OR \"gas turbine\" OR \"liquid cooling\" OR \"power purchase\") (contract OR MW OR delay OR online OR commission OR capacity) (power OR electricity OR energy) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "(API OR inference OR \"token cost\" OR \"gross margin\" OR renewal OR \"paid adoption\" OR \"deployment pause\" OR \"usage revenue\") (OpenAI OR Anthropic OR \"AI model\" OR cloud OR AWS OR Azure OR GCP) (revenue OR cost OR margin) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "(\"term premium\" OR \"real yield\" OR TIPS OR \"treasury auction\" OR \"supply demand\" OR refinancing OR \"dollar credit\" OR \"funding cost\") (Treasury OR \"10y\" OR \"30y\" OR bond) (AI OR tech OR equity OR capital) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "(sanction OR \"export control\" OR \"export restriction\" OR embargo OR \"shipping ban\" OR \"energy sanction\" OR \"oil embargo\") (announced OR signed OR implemented OR effective) (China OR Russia OR Iran OR US) (supply OR cost OR volume) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "(breadth OR \"equal weight\" OR \"equal-weighted\" OR \"weight contribution\" OR \"fund positioning\" OR Gamma OR \"dealer gamma\" OR \"mechanical rebalancing\" OR \"CTA positioning\" OR \"net position\") (SPX OR \"S&P\" OR Nasdaq OR equity OR market) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "from:Reuters OR from:ReutersBiz OR from:TSMC (TSMC OR \"rare earth\" OR \"rare-earth\" OR magnet OR motors OR equipment) since:2026-10-22 until:2026-10-23",
+      "from:Meta OR from:MetaNewsroom OR from:Reuters OR from:Bloomberg (Meta OR META) (FCF OR \"free cash flow\" OR capex OR \"capital expenditure\" OR \"135\" OR \"145\" OR earnings) since:2026-10-22 until:2026-10-23",
+      "from:Bloom_Energy OR from:AEPnews OR from:Reuters (Bloom OR BE OR \"data center\" OR AEP OR Google OR MW OR guidance OR revenue) since:2026-10-22 until:2026-10-23",
+      "from:USTreasury OR from:Treasury OR from:Reuters OR from:Bloomberg (\"TIPS\" OR \"5-year\" OR \"5 year\" OR auction) (yield OR \"bid-to-cover\" OR BTC OR 2.367 OR 2.41) since:2026-10-22 until:2026-10-23",
+      "(TSMC) (\"rare earth\" OR rare-earth OR magnet) (denial OR deny OR correction OR \"no comment\" OR \"early stage\" OR preliminary OR \"not replacing\" OR \"risk only\" OR contingency OR \"no disruption\") since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+      "from:Bloom_Energy OR (Bloom Energy) (correction OR \"gross margin\" OR \"cash flow\" OR FCF OR backlog OR execution OR \"not delivered\" OR \"guidance\" OR \"not guaranteed\") (Q3 OR \"third quarter\" OR revenue) since:2026-10-22 until:2026-10-23 -filter:replies lang:en"
+    ],
+    "gaps": [
+      "X工具采样不代表全量X；候选证据不足与请求失败分开。",
+      "Meta/TIPS/700MW数字原始证据不足；第二轮半导体无可核验新增，地缘查询返回0，结构只有未核实观察。"
+    ]
+  },
+  "selectionRationale": "市场焦点保留可归因的半导体供应约束新线索；独立六包中Bloom有官方定量披露，其他二传因证据不足排除，不凑5+10。",
+  "excludedCandidates": [
+    {
+      "eventKey": "gm-vac-magnet-20261022",
+      "reason": "非AI相关大中型股范围且二传"
+    },
+    {
+      "eventKey": "meta-fcf-negative-20261022",
+      "reason": "未取得具体FCF/capex原始X数字"
+    },
+    {
+      "eventKey": "treasury-yields-conflict-20261022",
+      "reason": "收益率bp口径冲突且无新政策硬事实"
+    },
+    {
+      "eventKey": "chatgpt-pro-allowance-20261022",
+      "reason": "二传缺正式政策原帖和实际采用/单位经济数据"
+    },
+    {
+      "eventKey": "tips-5y-auction-20261022",
+      "reason": "未取得原始权威X数字"
+    },
+    {
+      "eventKey": "equity-breadth-20261022",
+      "reason": "未取得可比成分池统计来源"
+    }
+  ],
+  "focus": [
+    {
+      "eventKey": "tsmc-rare-earth-equipment-20261022",
+      "title": "Reuters：TSMC寻求工厂设备替代方案以降低稀土依赖",
+      "fact": "据Reuters援引消息人士的独家报道，TSMC正寻求工厂设备替代方案，以降低对中国稀土的依赖。现有可见文字未说明替代已完成、工厂停产、采购金额或利润影响。",
+      "impact": "若替代方案获得验证，可能降低设备维护与扩产的供应中断风险，同时增加重新设计、认证和采购成本；对产能和利润的净影响取决于验证时间与经济性。",
+      "direction": "双向",
+      "horizon": "未来两周关注后续披露，产业替代与产能兑现可能更久",
+      "affected": [
+        "TSM",
+        "半导体设备供应链"
+      ],
+      "counterCase": "相关替代方案未获设备验证或不具成本可行性，原有供应链风险可能持续。",
+      "selectionReason": "新增且可回查的产业供应约束线索，范围和未确认处清楚。",
+      "credibilityReason": "仅采集器转述；权威媒体或公司原帖身份与主张支持范围分别记录。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "事件实际发生的精确时间未知；公开披露时间另存来源。",
+      "collectionUnit": "news:market-focus",
+      "sources": [
+        {
+          "url": "https://x.com/Reuters/status/2113250288681292217",
+          "postId": "2113250288681292217",
+          "username": "Reuters",
+          "publishedAt": "2026-10-22T12:45:05Z",
+          "checkedAt": "2026-10-23T00:06:22.810387+00:00",
+          "excerpt": "EXCLUSIVE: TSMC seeks factory-equipment alternatives to thwart China's rare earths grip, sources say",
+          "verification": "collector-report",
+          "verificationNote": "Grok网页X工具转述，执行器未独立直读。可见为标题及链接，未读取报道正文；保留sources归因。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 24,
+            "band": "very-low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 17,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 0,
+              "recordIntegrity": 10,
+              "penalties": 10
+            },
+            "reasons": [],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "文本含传闻或未确认措辞",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "attentionEvidence": "本次X采样Reuters帖可见24赞、9转发、9回复、3引用、35051浏览，仅作可观察注意力，不称全网排名。",
+      "people": [],
+      "credibility": {
+        "score": 24,
+        "label": "规则初评，未校准",
+        "reason": "仅采集器转述；权威媒体或公司原帖身份与主张支持范围分别记录。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "insights": [
+    {
+      "eventKey": "bloom-q3-2026-revenue-guidance-20261022",
+      "title": "Bloom Energy公布第三季度收入增长并上调全年指引",
+      "fact": "Bloom Energy公布2026年第三季度收入12.358亿美元，同比增长138.1%；全年营收指引上调至44亿—46亿美元，中点同比增长122%。这些数字来自公司财报公告帖；全年数值是指引，未确认AEP的700MW是否已交付或投运。",
+      "impact": "现场供电设备的收入与指引上升，为电力设备需求转化为销售提供一项证据；若数据中心供电瓶颈持续，可能支持设备订单，但本帖没有分拆AI收入、毛利或现金回款，不能据此量化AI资本开支回报。",
+      "direction": "双向",
+      "horizon": "未来两周关注后续披露，产业替代与产能兑现可能更久",
+      "affected": [
+        "BE",
+        "数据中心电力链"
+      ],
+      "counterCase": "收入增长若伴随回款延后、利润压力或交付推迟，不能等同现金流和投资回报改善；指引仍有执行风险。",
+      "selectionReason": "新增且可回查的产业供应约束线索，范围和未确认处清楚。",
+      "credibilityReason": "仅采集器转述；权威媒体或公司原帖身份与主张支持范围分别记录。",
+      "change": "新增",
+      "eventTime": null,
+      "eventTimeNote": "事件实际发生的精确时间未知；公开披露时间另存来源。",
+      "collectionUnit": "news:power",
+      "sources": [
+        {
+          "url": "https://x.com/Bloom_Energy/status/2113361900243472691",
+          "postId": "2113361900243472691",
+          "username": "Bloom_Energy",
+          "publishedAt": "2026-10-22T20:08:36Z",
+          "checkedAt": "2026-10-23T00:06:22.810387+00:00",
+          "excerpt": "Achieved record quarterly revenue of $1,235.8 million, delivering 138.1% year-over-year growth",
+          "verification": "collector-report",
+          "verificationNote": "Grok网页X工具转述，执行器未独立直读。全年指引为计划；未取得AEP700MW或Google已供电原帖。",
+          "credibility": {
+            "version": "1.0.0",
+            "status": "auto-provisional",
+            "overall": 34,
+            "band": "low",
+            "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+            "sourceScore": 35,
+            "claimScore": 33,
+            "breakdown": {
+              "directness": 10,
+              "traceableEvidence": 7,
+              "independentCorroboration": 0,
+              "specificity": 6,
+              "recordIntegrity": 10,
+              "penalties": 0
+            },
+            "reasons": [
+              "主张包含较具体、可核验的对象或数字"
+            ],
+            "warnings": [
+              "作者未进入人工维护的来源表",
+              "帖子所附可追溯证据有限",
+              "尚无人工确认的独立 X 帖交叉印证",
+              "原帖尚未独立读取；当前证据为采集器返回"
+            ],
+            "limitations": [
+              "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+              "蓝标、点赞量和转发量不自动提高可信度",
+              "只有人工复核过独立帖子后，交叉印证项才会加分"
+            ]
+          }
+        }
+      ],
+      "knowledgeCards": [
+        "I03",
+        "I01",
+        "M02"
+      ],
+      "disciplines": [
+        "电力工程",
+        "企业财务"
+      ],
+      "knowledgeApplication": "供电瓶颈影响数据中心投运，设备商销售增长与采购方资本成本通过合同与交付相连；产品收入不能替代已并网MW或经营现金流。",
+      "people": [],
+      "credibility": {
+        "score": 34,
+        "label": "规则初评，未校准",
+        "reason": "仅采集器转述；权威媒体或公司原帖身份与主张支持范围分别记录。",
+        "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+      }
+    }
+  ],
+  "shortfallReason": "仅2项新增达到来源和增量门槛；未核实数字不补条数。",
+  "readingDecisions": [
+    {
+      "eventKey": "nscale-anthropic-45bn-talks-20261019",
+      "action": "keep",
+      "reason": "复用已保存原始来源及有限主张；本轮未发现实质更正，保留供继续阅读，不冒称新增、独立重读或交易已落实。",
+      "sourceUrl": "https://x.com/TechCrunch/status/2112329217601949966",
+      "checkedAt": "2026-10-23T00:06:22.810387+00:00"
+    },
+    {
+      "eventKey": "amazon-aep-xenergy-indiana-960mw-20261019",
+      "action": "keep",
+      "reason": "复用已保存原始来源及有限主张；本轮未发现实质更正，保留供继续阅读，不冒称新增、独立重读或交易已落实。",
+      "sourceUrl": "https://x.com/TechCrunch/status/2112227043639177387",
+      "checkedAt": "2026-10-23T00:06:22.810387+00:00"
+    },
+    {
+      "eventKey": "amazon-torchneuron-20261019",
+      "action": "keep",
+      "reason": "复用已保存原始来源及有限主张；本轮未发现实质更正，保留供继续阅读，不冒称新增、独立重读或交易已落实。",
+      "sourceUrl": "https://x.com/amazon/status/2112182407256277095",
+      "checkedAt": "2026-10-23T00:06:22.810387+00:00"
+    },
+    {
+      "eventKey": "dhs-deepseek-civilian-it-20261019",
+      "action": "keep",
+      "reason": "复用已保存原始来源及有限主张；本轮未发现实质更正，保留供继续阅读，不冒称新增、独立重读或交易已落实。",
+      "sourceUrl": "https://x.com/CNBC/status/2112430637915263208",
+      "checkedAt": "2026-10-23T00:06:22.810387+00:00"
+    },
+    {
+      "eventKey": "nvda-supply-chain-capacity-20261021",
+      "action": "keep",
+      "reason": "复用已保存原始来源及有限主张；本轮未发现实质更正，保留供继续阅读，不冒称新增、独立重读或交易已落实。",
+      "sourceUrl": "https://x.com/nvidia/status/2112920354230296993",
+      "checkedAt": "2026-10-23T00:06:22.810387+00:00"
+    },
+    {
+      "eventKey": "jensen-ai-factory-dsx-20261021",
+      "action": "keep",
+      "reason": "复用已保存原始来源及有限主张；本轮未发现实质更正，保留供继续阅读，不冒称新增、独立重读或交易已落实。",
+      "sourceUrl": "https://x.com/nvidia/status/2112882448530800716",
+      "checkedAt": "2026-10-23T00:06:22.810387+00:00"
+    },
+    {
+      "eventKey": "nvidia-ai-ran-call-20261021",
+      "action": "keep",
+      "reason": "复用已保存原始来源及有限主张；本轮未发现实质更正，保留供继续阅读，不冒称新增、独立重读或交易已落实。",
+      "sourceUrl": "https://x.com/nokia/status/2112837980448518609",
+      "checkedAt": "2026-10-23T00:06:22.810387+00:00"
+    }
+  ],
+  "readingSelection": {
+    "focus": [
+      "tsmc-rare-earth-equipment-20261022",
+      "nvda-supply-chain-capacity-20261021",
+      "nscale-anthropic-45bn-talks-20261019",
+      "amazon-aep-xenergy-indiana-960mw-20261019",
+      "amazon-torchneuron-20261019"
+    ],
+    "insights": [
+      "bloom-q3-2026-revenue-guidance-20261022",
+      "jensen-ai-factory-dsx-20261021",
+      "nvidia-ai-ran-call-20261021"
+    ]
+  },
+  "trigger": "scheduled",
+  "id": "2026-10-23-0800",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-23T00:44:27.389Z",
+  "counts": {
+    "focus": 1,
+    "insights": 1,
+    "total": 2
+  }
+}

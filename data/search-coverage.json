@@ -738,6 +738,44 @@
         "(\"jobless claims\" OR \"initial claims\" OR employment OR CPI OR inflation) (since:2026-10-22_00:00:00_UTC until:2026-10-22_12:30:00_UTC) min_faves:10"
       ],
       "recordedAt": "2026-10-22T12:41:51.670Z"
+    },
+    {
+      "jobId": "2026-10-23-0800",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-22T00:00:00.000Z",
+      "end": "2026-10-23T08:00:00+08:00",
+      "status": "partial",
+      "queries": [
+        "(Fed OR FOMC OR inflation OR CPI OR PPI OR employment OR NFP OR payroll OR treasury OR yields OR \"long end\" OR \"10y\" OR \"30y\" OR \"dollar\" OR DXY OR credit OR fiscal OR deficit OR \"debt ceiling\" OR rates) (US OR America OR \"United States\") since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "(sanction OR tariff OR \"export control\" OR embargo OR \"critical mineral\" OR lithium OR rare earth OR oil OR gas OR LNG OR shipping OR tanker OR pipeline) (US OR China OR Russia OR Iran OR Europe) (supply OR cost OR disruption OR ban OR restriction) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "(NVIDIA OR NVDA OR TSMC OR \"Taiwan Semi\" OR AMD OR Broadcom OR semiconductor OR chip OR \"AI chip\" OR \"power grid\" OR electricity OR \"data center\" OR \"hyperscaler\" OR \"capex\" OR order OR guidance OR capacity OR \"grid connection\" OR financing) (AI OR semiconductor) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "(\"fund flow\" OR \"net flow\" OR outflow OR inflow OR deleverag* OR \"forced selling\" OR \"margin call\" OR \"positioning\" OR breadth OR \"advance decline\" OR \"put call\" OR \"hedge fund\" OR \"CTA\" OR \"risk parity\") (equity OR stock OR market) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "(TSMC OR \"Taiwan Semiconductor\") (rare-earth OR \"rare earth\" OR magnet) since:2026-10-22 until:2026-10-23",
+        "(GM OR \"General Motors\") (rare-earth OR magnet OR e-VAC OR VAC) since:2026-10-22 until:2026-10-23",
+        "(Meta OR META) (capex OR \"capital expenditure\" OR spending OR FCF OR \"free cash flow\") AI since:2026-10-22 until:2026-10-23",
+        "(\"10-year\" OR \"10y\" OR \"10 year\" OR treasury) (yield OR yields) (Fed OR inflation OR CPI) since:2026-10-22 until:2026-10-23",
+        "(fund flow OR \"net inflow\" OR \"net outflow\" OR \"ETF flow\" OR \"equity flow\") (US OR America OR SPX OR \"S&P\") since:2026-10-22 until:2026-10-23",
+        "from:Reuters (TSMC OR \"rare earth\" OR magnet OR GM OR Meta) since:2026-10-22 until:2026-10-23",
+        "(\"Meta\" OR META) (earnings OR \"free cash flow\" OR FCF OR \"capital expenditure\" OR capex) since:2026-10-22 until:2026-10-23",
+        "(Zimbabwe) (lithium) (ban OR export) since:2026-10-22 until:2026-10-23",
+        "new facts on US treasury yields inflation or Fed policy affecting capital costs on October 22 2026",
+        "(\"TSMC\" OR TSMC) (\"rare earth\" OR rare-earth OR magnets) (Reuters OR exclusive OR survey OR suppliers) since:2026-10-22 until:2026-10-23",
+        "from:ReutersBiz OR from:Reuters (TSMC OR semiconductor OR \"rare earth\") since:2026-10-22 until:2026-10-23",
+        "(HBM OR DRAM OR \"advanced packaging\" OR CoWoS OR \"chip equipment\" OR ASML OR \"lead time\" OR yield OR ASP OR inventory) (semiconductor OR TSMC OR NVIDIA OR Samsung OR SK Hynix OR Micron) (capacity OR order OR production OR shortage OR delay) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "(\"data center\" OR hyperscaler OR \"grid connection\" OR PPA OR transformer OR \"gas turbine\" OR \"liquid cooling\" OR \"power purchase\") (contract OR MW OR delay OR online OR commission OR capacity) (power OR electricity OR energy) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "(API OR inference OR \"token cost\" OR \"gross margin\" OR renewal OR \"paid adoption\" OR \"deployment pause\" OR \"usage revenue\") (OpenAI OR Anthropic OR \"AI model\" OR cloud OR AWS OR Azure OR GCP) (revenue OR cost OR margin) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "(\"term premium\" OR \"real yield\" OR TIPS OR \"treasury auction\" OR \"supply demand\" OR refinancing OR \"dollar credit\" OR \"funding cost\") (Treasury OR \"10y\" OR \"30y\" OR bond) (AI OR tech OR equity OR capital) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "(sanction OR \"export control\" OR \"export restriction\" OR embargo OR \"shipping ban\" OR \"energy sanction\" OR \"oil embargo\") (announced OR signed OR implemented OR effective) (China OR Russia OR Iran OR US) (supply OR cost OR volume) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "(breadth OR \"equal weight\" OR \"equal-weighted\" OR \"weight contribution\" OR \"fund positioning\" OR Gamma OR \"dealer gamma\" OR \"mechanical rebalancing\" OR \"CTA positioning\" OR \"net position\") (SPX OR \"S&P\" OR Nasdaq OR equity OR market) since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "from:Reuters OR from:ReutersBiz OR from:TSMC (TSMC OR \"rare earth\" OR \"rare-earth\" OR magnet OR motors OR equipment) since:2026-10-22 until:2026-10-23",
+        "from:Meta OR from:MetaNewsroom OR from:Reuters OR from:Bloomberg (Meta OR META) (FCF OR \"free cash flow\" OR capex OR \"capital expenditure\" OR \"135\" OR \"145\" OR earnings) since:2026-10-22 until:2026-10-23",
+        "from:Bloom_Energy OR from:AEPnews OR from:Reuters (Bloom OR BE OR \"data center\" OR AEP OR Google OR MW OR guidance OR revenue) since:2026-10-22 until:2026-10-23",
+        "from:USTreasury OR from:Treasury OR from:Reuters OR from:Bloomberg (\"TIPS\" OR \"5-year\" OR \"5 year\" OR auction) (yield OR \"bid-to-cover\" OR BTC OR 2.367 OR 2.41) since:2026-10-22 until:2026-10-23",
+        "(TSMC) (\"rare earth\" OR rare-earth OR magnet) (denial OR deny OR correction OR \"no comment\" OR \"early stage\" OR preliminary OR \"not replacing\" OR \"risk only\" OR contingency OR \"no disruption\") since:2026-10-22 until:2026-10-23 -filter:replies lang:en",
+        "from:Bloom_Energy OR (Bloom Energy) (correction OR \"gross margin\" OR \"cash flow\" OR FCF OR backlog OR execution OR \"not delivered\" OR \"guidance\" OR \"not guaranteed\") (Q3 OR \"third quarter\" OR revenue) since:2026-10-22 until:2026-10-23 -filter:replies lang:en"
+      ],
+      "recordedAt": "2026-10-23T00:44:27.389Z"
     }
   ]
 }

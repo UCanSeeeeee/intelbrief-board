@@ -1,56 +1,111 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-22T00:24:43.290Z",
-  "cutoff": "2026-10-22T08:00:00+08:00",
+  "updatedAt": "2026-10-23T00:44:13.808Z",
+  "cutoff": "2026-10-23T08:00:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "CNBC原始帖确认需求与资金约束描述；不采用5000亿美元融资或抵押完成二传。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "mu",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "partial",
+        "note": "无合格新事实；台湾罢工窄补查及反证已执行，生产影响/路线图原始证据仍不足，保留旧风险。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "intc",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "无强官方新事实；热点样本仅无源历史数字与自身报告引流，排除不凑数。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "goog",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "无新财务事实；200日均线为已保存同事件，无实质变化不重发。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "avgo",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "partial",
+        "note": "KDDI CPO仅二传试验，无官方X原始披露；热点仅作者供应链分析，不作订单。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "vrt",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "DSX同10/21旧事件，复用缓存；30–50%及1.4x无原始证据，不新增事实或热点。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "tsm",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "独立发现后命中本轮已核Reuters及反证缓存，新增有限主张事实与明确二传热点。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "tsmc-rare-earth-equipment-20261022",
+      "tabIds": [
+        "tsm"
+      ],
+      "title": "Reuters：TSMC寻求工厂设备替代方案以降低稀土依赖",
+      "fact": "据Reuters援引消息人士的独家报道，TSMC正寻求工厂设备替代方案，以降低对中国稀土的依赖。现有可见文字未说明替代已完成、工厂停产、采购金额或利润影响。",
+      "whyItMatters": "若替代方案获得验证，可能降低设备维护与扩产的供应中断风险，同时增加重新设计、认证和采购成本；对产能和利润的净影响取决于验证时间与经济性。",
+      "counterCase": "相关替代方案未获设备验证或不具成本可行性，原有供应链风险可能持续。",
+      "affected": [
+        "TSM",
+        "半导体设备供应链"
+      ],
+      "author": "@Reuters",
+      "publishedAt": "2026-10-22T12:45:05Z",
+      "url": "https://x.com/Reuters/status/2113250288681292217",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "事件实际发生的精确时间未知；公开披露时间另存来源。",
+      "excerpt": "EXCLUSIVE: TSMC seeks factory-equipment alternatives to thwart China's rare earths grip, sources say",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "people": []
+    },
+    {
+      "eventKey": "nvda-neocloud-capital-scarcity-20261022",
+      "tabIds": [
+        "nvda"
+      ],
+      "title": "CNBC：Jensen Huang称新型云商需求强劲，但资金稀缺",
+      "fact": "CNBC报道Jensen Huang表示，neocloud需求“异常强劲”，但资本稀缺。可见文字没有给出已落实融资规模、抵押安排或新增GPU订单。",
+      "whyItMatters": "需求意向要经客户融资、基础设施建设和付款转成GPU收入；即使需求描述很强，资本约束仍可能延迟交付和回款。",
+      "counterCase": "客户获得可执行融资与供电后约束才可能缓解；没有合同和回款数据时不能把需求描述换成确定收入。",
+      "affected": [
+        "NVDA",
+        "AI云基础设施"
+      ],
+      "author": "@CNBC",
+      "publishedAt": "2026-10-22T10:29:20Z",
+      "url": "https://x.com/CNBC/status/2113216124930204114",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "相关发言的精确发生时刻未知；媒体公开时间另列。",
+      "originalText": "Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
     {
       "eventKey": "mu-taiwan-strike-risk-2026-10-15",
       "tabIds": [
@@ -191,213 +246,6 @@
       "tier": "must-read",
       "weeklyRanks": {
         "nvda": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-volvo-partnership-2026-10-15",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "NVIDIA 扩大与 Volvo Cars 安全自动驾驶合作",
-      "fact": "@nvidia：扩大与 Volvo Cars 合作，推进 Hyperion/Halos 等安全自动驾驶。",
-      "whyItMatters": "车企安全品牌+AI 平台。",
-      "counterCase": "缺交付量。",
-      "affected": [
-        "NVDA",
-        "Volvo"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-15T18:24:51.000Z",
-      "url": "https://x.com/nvidia/status/2110799078497960084",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "tsm-print-vs-funding-worry-2026-10-15",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "台积电业绩强但仍受 AI 融资担忧压制",
-      "fact": "转述：TSMC 利润大增并上修展望，但股价仍受“谁为下一轮扩建买单”质疑影响。",
-      "whyItMatters": "需求确认 vs 融资折现的结构定价。",
-      "counterCase": "若融资担忧缓解，业绩可重新主导。",
-      "affected": [
-        "TSM",
-        "AI 供应链"
-      ],
-      "author": "AIMarketMind",
-      "publishedAt": "2026-10-15T17:55:00.000Z",
-      "url": "https://x.com/AIMarketMind/status/2110791565127930251",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "tsm": 2
-      },
-      "people": []
-    },
-    {
-      "eventKey": "mu-memory-complex-selloff-2026-10-15",
-      "tabIds": [
-        "mu"
-      ],
-      "title": "存储板块抛售中 Micron 约五日跌逾一成",
-      "fact": "SemiconductorsX：近五日 Micron 约跌 11%，与 SK Hynix/Samsung 同步受 CXMT 与 2029 供给叙事冲击。",
-      "whyItMatters": "直接冲击 MU 估值与 HBM 紧平衡叙事。",
-      "counterCase": "若 HBM 长约未松、反弹延续，则属情绪杀。",
-      "affected": [
-        "MU",
-        "HBM"
-      ],
-      "author": "SemiconductorsX",
-      "publishedAt": "2026-10-15T15:21:38.000Z",
-      "url": "https://x.com/SemiconductorsX/status/2110752970631725205",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "mu": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-premarket-ai-debt-drag-2026-10-15",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "盘前观察：AI 融资担忧下芯片股承压，NVIDIA 随 CoreWeave 链条波动",
-      "fact": "DeItaone 盘前观察列出 CRWV 续跌与融资担忧；市场讨论将 neocloud 债务压力与 GPU 需求预期挂钩，NVIDIA 官号同期发布北欧/伦敦生态帖但无新财务指引。",
-      "whyItMatters": "需求预期与融资约束的短期博弈。",
-      "counterCase": "若台积电指引被解读为需求仍紧，拖累或有限。",
-      "affected": [
-        "NVDA",
-        "AI 硬件"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-15T10:05:49.000Z",
-      "url": "https://x.com/DeItaone/status/2110673491158515816",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "nvda": 5
-      },
-      "people": []
-    },
-    {
-      "eventKey": "tsm-q3-print-ticker-2026-10-15",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "台积电 Q3 营收约 467 亿美元、毛利率 66.4%，Q4 指引上修",
-      "fact": "转述：TSM Q3 营收约 $46.7B、EPS 约 $4.60、毛利率约 66%；Q4 营收指引中枢显著高于原预期，先进制程占比高。",
-      "whyItMatters": "先进制程供给与 AI 需求锚定。",
-      "counterCase": "股价仍可能受利率与亚洲风险偏好压制。",
-      "affected": [
-        "TSM",
-        "AI 供应链"
-      ],
-      "author": "StockSavvyShay",
-      "publishedAt": "2026-10-15T08:05:06.000Z",
-      "url": "https://x.com/StockSavvyShay/status/2110643114268647698",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "tsm": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "mu-aatt2-hbm-booked-ticker-2026-10-15",
-      "tabIds": [
-        "mu"
-      ],
-      "title": "Micron 台中 AATT2 开幕，2027 HBM 产能据称大多已订",
-      "fact": "转述：Micron 开设台中第二座先进封装/测试厂；称 2027 HBM 产能大多已被客户预订。",
-      "whyItMatters": "HBM 供给可见度提升。",
-      "counterCase": "缺官方原帖或罢工停产则叙事削弱。",
-      "affected": [
-        "MU",
-        "HBM"
-      ],
-      "author": "MojoTricks",
-      "publishedAt": "2026-10-15T06:59:31.000Z",
-      "url": "https://x.com/MojoTricks/status/2110626605790097752",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "mu": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "tsm-demand-exceeds-supply-2026-10-15",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "台积电：需求显著超过供给，AI 加速器 CAGR 或更高",
-      "fact": "FirstSquawk/Trade_The_News 转述电话会：需求显著超过供货能力；AI 加速器收入 CAGR 指引或上修，未见放缓。",
-      "whyItMatters": "先进制程供给瓶颈与资本开支预期核心更新。",
-      "counterCase": "完整讲稿与指引以公司材料为准。",
-      "affected": [
-        "TSM",
-        "AI 供应链"
-      ],
-      "author": "FirstSquawk",
-      "publishedAt": "2026-10-15T06:58:16.000Z",
-      "url": "https://x.com/FirstSquawk/status/2110626292337111262",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "tsm": 4
-      },
-      "people": []
-    },
-    {
-      "eventKey": "tsm-a14-n3-us-power-2026-10-15",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "台积电：台南追加 N3、A14 目标 2028，派员查美国电力",
-      "fact": "FirstSquawk：Plans Additional N3 Fab in Tainan, Targets A14 Mass Production in 2028；派遣团队审查美国电力与数据中心。",
-      "whyItMatters": "产能路线与电力约束交叉。",
-      "counterCase": "资本开支量化仍称过早。",
-      "affected": [
-        "TSM",
-        "电力"
-      ],
-      "author": "FirstSquawk",
-      "publishedAt": "2026-10-15T06:26:54.000Z",
-      "url": "https://x.com/FirstSquawk/status/2110618397746872656",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "tsm": 5
-      },
-      "people": []
-    },
-    {
-      "eventKey": "mu-china-dram-narrative-2026-10-14",
-      "tabIds": [
-        "mu"
-      ],
-      "title": "讨论：Micron 周内承压与中国 DRAM 进步叙事",
-      "fact": "search_news/转述称 Micron 周内显著回撤，市场讨论 CXMT 在更高密度 DRAM 架构与服务器产品进展引发供应担忧。",
-      "whyItMatters": "存储竞争与定价预期。",
-      "counterCase": "缺官方技术对照与客户认证。",
-      "affected": [
-        "MU",
-        "DRAM"
-      ],
-      "author": "Reematendulkar",
-      "publishedAt": "2026-10-15T01:15:48.000Z",
-      "url": "https://x.com/Reematendulkar/status/2110540107019374714",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "mu": 5
       },
       "people": []
     }
@@ -543,6 +391,125 @@
   "lastAttemptAt": "2026-10-22T12:41:51.419Z",
   "attemptedCutoff": "2026-10-22T20:30:00+08:00",
   "hotspots": [
+    {
+      "tabId": "nvda",
+      "eventKey": "nvda-neocloud-demand-discussion-20261022",
+      "author": "StockMKTNewz",
+      "url": "https://x.com/StockMKTNewz/status/2113279147279622481",
+      "publishedAt": "2026-10-22T14:39:46Z",
+      "title": "X讨论Jensen Huang对neocloud需求的描述",
+      "fact": "作者转引Jensen Huang对neocloud需求“异常强劲”的描述。该帖截取一句发言，未列订单、融资规模或回款数据。",
+      "whyItMatters": "记录本窗具体讨论与分歧，作为后续核实线索；热度及作者分析不能替代公司披露。",
+      "originalText": "Nvidia $NVDA CEO Jensen Huang said today “If you look at the fundamentals, the demand for the neo clouds is off the charts”",
+      "caveat": "只有一句引语；需求描述不等于已融资或已交付，不采用5000亿美元等未核数字。",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "事件实际发生时间未知；发帖时间独立保存。",
+      "engagement": {
+        "likes": 869,
+        "reposts": 61,
+        "replies": 67,
+        "quotes": 14,
+        "views": 77237,
+        "capturedAt": "2026-10-23T00:19:59.233374+00:00",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "tabId": "mu",
+      "eventKey": "mu-memory-roadmap-discussion-20261022",
+      "author": "stockDavid8",
+      "url": "https://x.com/stockDavid8/status/2113343572879483118",
+      "publishedAt": "2026-10-22T18:55:46Z",
+      "title": "X用户梳理Micron存储路线图",
+      "fact": "作者讨论HBM4/HBM4E、6F² DRAM与G11 NAND路线，并提及2027年下半年NAND放量计划；量产、采样和评级进度均为作者转述，未核实原始文件。",
+      "whyItMatters": "记录本窗具体讨论与分歧，作为后续核实线索；热度及作者分析不能替代公司披露。",
+      "originalText": "HBM4: Now in mass production, with HBM4E sampling underway for key customers. DRAM: Sticking with the 6F² architecture. G11 NAND: Volume ramp is expected in H2 2027.（节选，非全文）",
+      "caveat": "零赞转评的讨论线索；采样、规划与量产需分别核实，不作官方路线图。",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "事件实际发生时间未知；发帖时间独立保存。",
+      "engagement": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "views": 94,
+        "capturedAt": "2026-10-23T00:19:59.233374+00:00",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "people": []
+    },
+    {
+      "tabId": "avgo",
+      "eventKey": "avgo-network-asic-role-discussion-20261022",
+      "author": "tonarism2018",
+      "url": "https://x.com/tonarism2018/status/2113405045886918873",
+      "publishedAt": "2026-10-22T23:00:02Z",
+      "title": "X作者讨论Broadcom交换机与定制ASIC的作用",
+      "fact": "作者认为AI服务器的整体性能也取决于交换机、SerDes与定制ASIC，并将长期开发和较高切换成本视为Broadcom竞争力来源。这是供应链机制分析，未披露新订单或客户长约。",
+      "whyItMatters": "记录本窗具体讨论与分歧，作为后续核实线索；热度及作者分析不能替代公司披露。",
+      "originalText": "AIサーバーはGPUを積むだけでは完成せず、サーバー間をつなぐスイッチ、通信を速くするSerDes、顧客専用のカスタムASICが全体性能を左右します。カスタム品は開発が長く切替コストが高いので、価格競争になりにくい。（节选）",
+      "caveat": "作者观点，未核实其利润率数字；高切换成本并不保证定价或毛利，后续自我推广不作为证据。",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "事件实际发生时间未知；发帖时间独立保存。",
+      "engagement": {
+        "likes": 7,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "views": 1130,
+        "capturedAt": "2026-10-23T00:19:59.233374+00:00",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "people": []
+    },
+    {
+      "tabId": "tsm",
+      "eventKey": "tsm-rare-earth-discussion-20261022",
+      "author": "tchsignal",
+      "url": "https://x.com/tchsignal/status/2113353612743303335",
+      "publishedAt": "2026-10-22T19:35:40Z",
+      "title": "X讨论TSMC稀土设备替代的早期阶段",
+      "fact": "作者转述Reuters关于TSMC探索不依赖稀土电机的报道，并强调讨论仍属初步阶段，尚未报告大范围部署。该帖未提供制程、封装产能或营收的新数字。",
+      "whyItMatters": "记录本窗具体讨论与分歧，作为后续核实线索；热度及作者分析不能替代公司披露。",
+      "originalText": "According to Reuters, TSMC has approached equipment suppliers about motors that do not require rare earths. The talks remain preliminary, with no widespread deployment of alternative equipment reported.（节选）",
+      "caveat": "Reuters二传，只支持探索/风险预案；不称已替换、产能受损或工厂停产。",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "事件实际发生时间未知；发帖时间独立保存。",
+      "engagement": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "views": 25,
+        "capturedAt": "2026-10-23T00:19:59.233374+00:00",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "people": []
+    }
+  ],
+  "hotspotRetained": [
     {
       "eventKey": "nvda-hotspot-2113008387256357345",
       "tabId": "nvda",
@@ -698,9 +665,7 @@
       "firstIncludedAt": "2026-10-22T00:24:43.290Z",
       "lastMaterialAt": "2026-10-22T00:24:43.290Z",
       "people": []
-    }
-  ],
-  "hotspotRetained": [
+    },
     {
       "tabId": "nvda",
       "eventKey": "nvda-compute-deployment-bottlenecks-20261020",
@@ -1106,64 +1071,296 @@
     "tabs": [
       {
         "id": "nvda",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "queries": [],
-        "cutoff": "2026-10-22T08:00:00+08:00",
-        "lastAttemptAt": "2026-10-22T12:41:51.419Z"
+        "status": "complete",
+        "queries": [
+          "(NVDA OR NVIDIA) (GPU OR H100 OR H200 OR Blackwell OR demand OR order OR supply OR capex) -filter:replies since:2026-10-22 until:2026-10-23"
+        ],
+        "note": "CNBC原始帖确认需求与资金约束描述；不采用5000亿美元融资或抵押完成二传。",
+        "cutoff": "2026-10-23T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-23T00:44:13.808Z"
       },
       {
         "id": "mu",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "queries": [],
-        "cutoff": "2026-10-22T08:00:00+08:00",
-        "lastAttemptAt": "2026-10-22T12:41:51.419Z"
+        "status": "complete",
+        "queries": [
+          "(MU OR Micron OR from:MicronTech) (HBM OR DRAM OR NAND OR capacity OR ASP OR margin OR guidance OR Italy OR labor) since:2026-10-22 until:2026-10-23"
+        ],
+        "note": "无合格新事实；台湾罢工窄补查及反证已执行，生产影响/路线图原始证据仍不足，保留旧风险。",
+        "cutoff": "2026-10-23T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-23T00:44:13.808Z"
       },
       {
         "id": "intc",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "queries": [],
-        "cutoff": "2026-10-22T08:00:00+08:00",
-        "lastAttemptAt": "2026-10-22T12:41:51.419Z"
+        "status": "complete",
+        "queries": [
+          "(INTC OR Intel OR from:intel) (18A OR foundry OR packaging OR customer OR yield) since:2026-10-22 until:2026-10-23"
+        ],
+        "note": "无强官方新事实；热点样本仅无源历史数字与自身报告引流，排除不凑数。",
+        "cutoff": "2026-10-23T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-23T00:44:13.808Z"
       },
       {
         "id": "goog",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "queries": [],
-        "cutoff": "2026-10-22T08:00:00+08:00",
-        "lastAttemptAt": "2026-10-22T12:41:51.419Z"
+        "status": "complete",
+        "queries": [
+          "(GOOG OR GOOGL OR Alphabet OR Google) (Cloud OR TPU OR capex OR valuation OR earnings OR revenue) since:2026-10-22 until:2026-10-23"
+        ],
+        "note": "无新财务事实；200日均线为已保存同事件，无实质变化不重发。",
+        "cutoff": "2026-10-23T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-23T00:44:13.808Z"
       },
       {
         "id": "avgo",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "queries": [],
-        "cutoff": "2026-10-22T08:00:00+08:00",
-        "lastAttemptAt": "2026-10-22T12:41:51.419Z"
+        "status": "complete",
+        "queries": [
+          "(AVGO OR Broadcom) (ASIC OR customer OR shipment OR network OR supply OR order) since:2026-10-22 until:2026-10-23"
+        ],
+        "note": "KDDI CPO仅二传试验，无官方X原始披露；热点仅作者供应链分析，不作订单。",
+        "cutoff": "2026-10-23T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-23T00:44:13.808Z"
       },
       {
         "id": "vrt",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "queries": [],
-        "cutoff": "2026-10-22T08:00:00+08:00",
-        "lastAttemptAt": "2026-10-22T12:41:51.419Z"
+        "status": "complete",
+        "queries": [
+          "(VRT OR Vertiv) (order OR cooling OR power OR MW OR demand OR backlog) since:2026-10-22 until:2026-10-23"
+        ],
+        "note": "DSX同10/21旧事件，复用缓存；30–50%及1.4x无原始证据，不新增事实或热点。",
+        "cutoff": "2026-10-23T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-23T00:44:13.808Z"
       },
       {
         "id": "tsm",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "queries": [],
-        "cutoff": "2026-10-22T08:00:00+08:00",
-        "lastAttemptAt": "2026-10-22T12:41:51.419Z"
+        "status": "complete",
+        "queries": [
+          "(TSM OR TSMC OR from:tsmc_news) (CoWoS OR capacity OR revenue OR guidance OR customer OR process OR rare OR earth) since:2026-10-22 until:2026-10-23"
+        ],
+        "note": "独立发现后命中本轮已核Reuters及反证缓存，新增有限主张事实与明确二传热点。",
+        "cutoff": "2026-10-23T08:00:00+08:00",
+        "lastAttemptAt": "2026-10-23T00:44:13.808Z"
       }
     ]
   },
-  "hotspotCutoff": "2026-10-22T08:00:00+08:00",
+  "hotspotCutoff": "2026-10-23T08:00:00+08:00",
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "tsmc-rare-earth-equipment-20261022",
+        "tabIds": [
+          "tsm"
+        ],
+        "title": "Reuters：TSMC寻求工厂设备替代方案以降低稀土依赖",
+        "fact": "据Reuters援引消息人士的独家报道，TSMC正寻求工厂设备替代方案，以降低对中国稀土的依赖。现有可见文字未说明替代已完成、工厂停产、采购金额或利润影响。",
+        "whyItMatters": "若替代方案获得验证，可能降低设备维护与扩产的供应中断风险，同时增加重新设计、认证和采购成本；对产能和利润的净影响取决于验证时间与经济性。",
+        "counterCase": "相关替代方案未获设备验证或不具成本可行性，原有供应链风险可能持续。",
+        "affected": [
+          "TSM",
+          "半导体设备供应链"
+        ],
+        "author": "@Reuters",
+        "publishedAt": "2026-10-22T12:45:05Z",
+        "url": "https://x.com/Reuters/status/2113250288681292217",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "事件实际发生的精确时间未知；公开披露时间另存来源。",
+        "excerpt": "EXCLUSIVE: TSMC seeks factory-equipment alternatives to thwart China's rare earths grip, sources say",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": []
+      },
+      "tabIds": [
+        "tsm"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "nvda-neocloud-capital-scarcity-20261022",
+        "tabIds": [
+          "nvda"
+        ],
+        "title": "CNBC：Jensen Huang称新型云商需求强劲，但资金稀缺",
+        "fact": "CNBC报道Jensen Huang表示，neocloud需求“异常强劲”，但资本稀缺。可见文字没有给出已落实融资规模、抵押安排或新增GPU订单。",
+        "whyItMatters": "需求意向要经客户融资、基础设施建设和付款转成GPU收入；即使需求描述很强，资本约束仍可能延迟交付和回款。",
+        "counterCase": "客户获得可执行融资与供电后约束才可能缓解；没有合同和回款数据时不能把需求描述换成确定收入。",
+        "affected": [
+          "NVDA",
+          "AI云基础设施"
+        ],
+        "author": "@CNBC",
+        "publishedAt": "2026-10-22T10:29:20Z",
+        "url": "https://x.com/CNBC/status/2113216124930204114",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "相关发言的精确发生时刻未知；媒体公开时间另列。",
+        "originalText": "Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": [
+          {
+            "name": "Jensen Huang",
+            "intro": "英伟达创始人兼CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "nvda"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "nvda",
+        "eventKey": "nvda-neocloud-demand-discussion-20261022",
+        "author": "StockMKTNewz",
+        "url": "https://x.com/StockMKTNewz/status/2113279147279622481",
+        "publishedAt": "2026-10-22T14:39:46Z",
+        "title": "X讨论Jensen Huang对neocloud需求的描述",
+        "fact": "作者转引Jensen Huang对neocloud需求“异常强劲”的描述。该帖截取一句发言，未列订单、融资规模或回款数据。",
+        "whyItMatters": "记录本窗具体讨论与分歧，作为后续核实线索；热度及作者分析不能替代公司披露。",
+        "originalText": "Nvidia $NVDA CEO Jensen Huang said today “If you look at the fundamentals, the demand for the neo clouds is off the charts”",
+        "caveat": "只有一句引语；需求描述不等于已融资或已交付，不采用5000亿美元等未核数字。",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "事件实际发生时间未知；发帖时间独立保存。",
+        "engagement": {
+          "likes": 869,
+          "reposts": 61,
+          "replies": 67,
+          "quotes": 14,
+          "views": 77237,
+          "capturedAt": "2026-10-23T00:19:59.233374+00:00",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": [
+          {
+            "name": "Jensen Huang",
+            "intro": "英伟达创始人兼CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "nvda"
+      ],
+      "hotspot": true,
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "mu",
+        "eventKey": "mu-memory-roadmap-discussion-20261022",
+        "author": "stockDavid8",
+        "url": "https://x.com/stockDavid8/status/2113343572879483118",
+        "publishedAt": "2026-10-22T18:55:46Z",
+        "title": "X用户梳理Micron存储路线图",
+        "fact": "作者讨论HBM4/HBM4E、6F² DRAM与G11 NAND路线，并提及2027年下半年NAND放量计划；量产、采样和评级进度均为作者转述，未核实原始文件。",
+        "whyItMatters": "记录本窗具体讨论与分歧，作为后续核实线索；热度及作者分析不能替代公司披露。",
+        "originalText": "HBM4: Now in mass production, with HBM4E sampling underway for key customers. DRAM: Sticking with the 6F² architecture. G11 NAND: Volume ramp is expected in H2 2027.（节选，非全文）",
+        "caveat": "零赞转评的讨论线索；采样、规划与量产需分别核实，不作官方路线图。",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "事件实际发生时间未知；发帖时间独立保存。",
+        "engagement": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "views": 94,
+          "capturedAt": "2026-10-23T00:19:59.233374+00:00",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": []
+      },
+      "tabIds": [
+        "mu"
+      ],
+      "hotspot": true,
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "avgo",
+        "eventKey": "avgo-network-asic-role-discussion-20261022",
+        "author": "tonarism2018",
+        "url": "https://x.com/tonarism2018/status/2113405045886918873",
+        "publishedAt": "2026-10-22T23:00:02Z",
+        "title": "X作者讨论Broadcom交换机与定制ASIC的作用",
+        "fact": "作者认为AI服务器的整体性能也取决于交换机、SerDes与定制ASIC，并将长期开发和较高切换成本视为Broadcom竞争力来源。这是供应链机制分析，未披露新订单或客户长约。",
+        "whyItMatters": "记录本窗具体讨论与分歧，作为后续核实线索；热度及作者分析不能替代公司披露。",
+        "originalText": "AIサーバーはGPUを積むだけでは完成せず、サーバー間をつなぐスイッチ、通信を速くするSerDes、顧客専用のカスタムASICが全体性能を左右します。カスタム品は開発が長く切替コストが高いので、価格競争になりにくい。（节选）",
+        "caveat": "作者观点，未核实其利润率数字；高切换成本并不保证定价或毛利，后续自我推广不作为证据。",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "事件实际发生时间未知；发帖时间独立保存。",
+        "engagement": {
+          "likes": 7,
+          "reposts": 0,
+          "replies": 1,
+          "quotes": 0,
+          "views": 1130,
+          "capturedAt": "2026-10-23T00:19:59.233374+00:00",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": []
+      },
+      "tabIds": [
+        "avgo"
+      ],
+      "hotspot": true,
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "tsm",
+        "eventKey": "tsm-rare-earth-discussion-20261022",
+        "author": "tchsignal",
+        "url": "https://x.com/tchsignal/status/2113353612743303335",
+        "publishedAt": "2026-10-22T19:35:40Z",
+        "title": "X讨论TSMC稀土设备替代的早期阶段",
+        "fact": "作者转述Reuters关于TSMC探索不依赖稀土电机的报道，并强调讨论仍属初步阶段，尚未报告大范围部署。该帖未提供制程、封装产能或营收的新数字。",
+        "whyItMatters": "记录本窗具体讨论与分歧，作为后续核实线索；热度及作者分析不能替代公司披露。",
+        "originalText": "According to Reuters, TSMC has approached equipment suppliers about motors that do not require rare earths. The talks remain preliminary, with no widespread deployment of alternative equipment reported.（节选）",
+        "caveat": "Reuters二传，只支持探索/风险预案；不称已替换、产能受损或工厂停产。",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "事件实际发生时间未知；发帖时间独立保存。",
+        "engagement": {
+          "likes": 0,
+          "reposts": 0,
+          "replies": 1,
+          "quotes": 0,
+          "views": 25,
+          "capturedAt": "2026-10-23T00:19:59.233374+00:00",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "people": []
+      },
+      "tabIds": [
+        "tsm"
+      ],
+      "hotspot": true,
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
     {
       "item": {
         "eventKey": "nvda-hotspot-2113008387256357345",

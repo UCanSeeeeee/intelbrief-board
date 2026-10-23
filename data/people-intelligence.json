@@ -1,71 +1,142 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-22T00:26:28.088Z",
-  "cutoff": "2026-10-22T08:00:00+08:00",
+  "updatedAt": "2026-10-23T00:44:13.808Z",
+  "cutoff": "2026-10-23T08:00:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "实际Top查询及线程核对，3条本人热度，无产业新事实。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "jensen-huang",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "partial",
+        "note": "仅1条可归因回放片段；另外2条无原始访谈证据，不凑3条。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "donald-trump",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "3条WhiteHouse热度声明；未采同步号运营者评论，不确认未经核实数字。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "trillion-leaders",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "complete",
+        "note": "Pichai同访谈已保存；合并重复，Jassy Q2历史不冒充新增，无合格新事件。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "research-reports",
-        "status": "failed",
-        "note": "Mac已锁定且自动解锁失败，Grok网页无法操作；本批未提交查询，Bot仍暂停，不是无结果。",
-        "cutoff": "2026-10-22T08:00:00+08:00"
+        "status": "partial",
+        "note": "3候选均第三方汇编，不是机构/具名分析师本人原发，全部排除；查询完成但来源不足。",
+        "cutoff": "2026-10-23T08:00:00+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "elon-fsd-car-20261021",
+      "eventKey": "whitehouse-homeownership-statement-20261022",
       "tabIds": [
-        "elon-musk"
+        "donald-trump"
       ],
-      "title": "Elon Musk称FSD成为购车驱动力",
-      "fact": "Elon Musk称，人们是在购买FSD并附带一辆汽车。这是其对购车动机的判断；没有采用引用二传中的174万订阅及财务数字。",
-      "whyItMatters": "本条为来源样本中的热度动态，未提供足以改变半导体、电力或AI商业化判断的新增可核事实。",
-      "counterCase": "作者观点、活动记录与演示不能证明业务成果；互动仅反映该采集样本，不代表全X排名。",
+      "title": "白宫宣传住房与按揭成本议程",
+      "fact": "白宫表示Donald Trump正降低独栋住房和按揭成本、减少不必要的监管环节；可见声明没有列出新签署措施或可量化成效。",
+      "whyItMatters": "属于政府宣传性表述，暂无足够新政策细节支持资本成本判断。",
+      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
       "affected": [],
-      "author": "@elonmusk",
-      "publishedAt": "2026-10-21T20:54:28Z",
-      "url": "https://x.com/elonmusk/status/2113011056847278486",
+      "author": "@WhiteHouse",
+      "publishedAt": "2026-10-22T19:29:29Z",
+      "url": "https://x.com/WhiteHouse/status/2113352056723697729",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "excerpt": "People are buying FSD with a car attached, not the other way around",
-      "firstIncludedAt": "2026-10-22T00:26:28.088Z",
-      "lastMaterialAt": "2026-10-22T00:26:28.088Z",
+      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+      "originalText": "President Donald J. Trump is lowering the costs of single-family homeownership & mortgages（节选）",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 10360,
-        "reposts": 910,
-        "replies": 936,
-        "quotes": 137,
-        "capturedAt": "2026-10-22T00:06:19.551153+00:00",
-        "source": "Grok网页版X工具实际整数；capturedAt是本机观察时刻"
+        "likes": 3786,
+        "reposts": 930,
+        "replies": 1260,
+        "quotes": 122,
+        "views": 284788,
+        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
+    {
+      "eventKey": "whitehouse-farms-statement-20261022",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "白宫回顾农业税收与供应链议程",
+      "fact": "白宫回顾农业减税、市场拓展、供应链和监管议程，宣称这些措施支持农场和牧场；可见文字未给出新增措施的签署日期或执行数字。",
+      "whyItMatters": "这是对既有政策成果的自述，保留热度身份，不把总结宣传当作新增政策。",
+      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+      "affected": [],
+      "author": "@WhiteHouse",
+      "publishedAt": "2026-10-22T18:11:10Z",
+      "url": "https://x.com/WhiteHouse/status/2113332350570406313",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+      "originalText": "Historic tax relief for family farms; Expanded markets for American agriculture; Bolstered supply chains（节选）",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 2309,
+        "reposts": 650,
+        "replies": 787,
+        "quotes": 48,
+        "views": 135930,
+        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "elon-important-vote-20261022",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk呼吁参与投票",
+      "fact": "Elon Musk就德州候选人背书相关内容简短回应“投票很重要”。",
+      "whyItMatters": "属于本人高互动短回应，未提供xAI、Tesla或SpaceX经营新信息。",
+      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+      "affected": [],
+      "author": "@elonmusk",
+      "publishedAt": "2026-10-22T17:09:17Z",
+      "url": "https://x.com/elonmusk/status/2113316775291142572",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+      "originalText": "Important to vote",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 43017,
+        "reposts": 6010,
+        "replies": 2371,
+        "quotes": 194,
+        "views": 2411758,
+        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+        "source": "grok-web-observed"
       },
       "people": [
         {
@@ -75,102 +146,140 @@
       ]
     },
     {
-      "eventKey": "trump-cybercrime-20261021",
+      "eventKey": "whitehouse-hormuz-statement-20261022",
       "tabIds": [
         "donald-trump"
       ],
-      "title": "White House发布打击网络犯罪表态",
-      "fact": "White House转述Donald Trump打击网络犯罪、帮助追回受害者损失的表态。本帖没有给出新增执行措施或量化成果。",
-      "whyItMatters": "本条为来源样本中的热度动态，未提供足以改变半导体、电力或AI商业化判断的新增可核事实。",
-      "counterCase": "作者观点、活动记录与演示不能证明业务成果；互动仅反映该采集样本，不代表全X排名。",
+      "title": "白宫就霍尔木兹油运与伊朗问题表态",
+      "fact": "白宫宣称霍尔木兹海峡油运量高于冲突前，并重申伊朗不得拥有核武器。声明未提供独立通航统计，相关流量主张未获核实。",
+      "whyItMatters": "保留政府声明的关注度；未取得新执行政策或独立运输量，不能据此判断供应冲击已解除。",
+      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
       "affected": [],
       "author": "@WhiteHouse",
-      "publishedAt": "2026-10-21T19:22:50Z",
-      "url": "https://x.com/WhiteHouse/status/2112987998019326173",
+      "publishedAt": "2026-10-22T16:02:02Z",
+      "url": "https://x.com/WhiteHouse/status/2113299851265851481",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "excerpt": "We will work tirelessly to help recover what has been stolen and dismantle the criminal networks that prey on our people. No administration has taken on cybercrime syndicates that terrorize the American people like the Trump administration. The scams must end.",
-      "firstIncludedAt": "2026-10-22T00:26:28.088Z",
-      "lastMaterialAt": "2026-10-22T00:26:28.088Z",
+      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+      "originalText": "More oil is coming through the Hormuz Strait than it did prior to the conflict.（相关主张摘录，非全文）",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 4429,
-        "reposts": 1262,
-        "replies": 602,
-        "quotes": 90,
-        "capturedAt": "2026-10-22T00:06:19.551150+00:00",
-        "source": "Grok网页版X工具实际整数；capturedAt为本机观察时刻"
+        "likes": 6447,
+        "reposts": 1670,
+        "replies": 3430,
+        "quotes": 186,
+        "views": 267372,
+        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "elon-yup-court-20261022",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk回应最高法院扩员讨论",
+      "fact": "Elon Musk对最高法院扩员相关讨论回应“是的”。可见本人文字仅为一个词，不能扩写其政策主张。",
+      "whyItMatters": "保留窗口内本人讨论的注意力信号；没有新的政策或公司执行动作。",
+      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+      "affected": [],
+      "author": "@elonmusk",
+      "publishedAt": "2026-10-22T15:18:45Z",
+      "url": "https://x.com/elonmusk/status/2113288958738366650",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+      "originalText": "Yup",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 31634,
+        "reposts": 4015,
+        "replies": 1845,
+        "quotes": 143,
+        "views": 1692603,
+        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+        "source": "grok-web-observed"
       },
       "people": [
         {
-          "name": "Donald Trump",
-          "intro": "美国总统"
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
         }
       ]
     },
     {
-      "eventKey": "trump-roundtable-20261021",
+      "eventKey": "elon-true-public-money-20261022",
       "tabIds": [
-        "donald-trump"
+        "elon-musk"
       ],
-      "title": "White House发布Donald Trump圆桌活动",
-      "fact": "White House发布Donald Trump于10月21日参加圆桌活动的直播记录；本条仅记录活动。",
-      "whyItMatters": "本条为来源样本中的热度动态，未提供足以改变半导体、电力或AI商业化判断的新增可核事实。",
-      "counterCase": "作者观点、活动记录与演示不能证明业务成果；互动仅反映该采集样本，不代表全X排名。",
+      "title": "Elon Musk回应公共资金观点",
+      "fact": "Elon Musk在公共资金相关讨论中回应“确实”。本人可见文字没有展开具体财政方案。",
+      "whyItMatters": "这是简短观点回应，不代表新增财政措施或企业现金流变化。",
+      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
       "affected": [],
-      "author": "@WhiteHouse",
-      "publishedAt": "2026-10-21T18:39:27Z",
-      "url": "https://x.com/WhiteHouse/status/2112977079407157571",
+      "author": "@elonmusk",
+      "publishedAt": "2026-10-22T10:07:57Z",
+      "url": "https://x.com/elonmusk/status/2113210745710162001",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "excerpt": "President Trump Participates in a Roundtable, Oct. 21, 2026",
-      "firstIncludedAt": "2026-10-22T00:26:28.088Z",
-      "lastMaterialAt": "2026-10-22T00:26:28.088Z",
+      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+      "originalText": "True",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 1792,
-        "reposts": 527,
-        "replies": 306,
-        "quotes": 41,
-        "capturedAt": "2026-10-22T00:05:24.908866+00:00",
-        "source": "Grok网页版X工具实际整数；capturedAt是本机观察时刻"
+        "likes": 16582,
+        "reposts": 3548,
+        "replies": 1521,
+        "quotes": 117,
+        "views": 2270062,
+        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+        "source": "grok-web-observed"
       },
       "people": [
         {
-          "name": "Donald Trump",
-          "intro": "美国总统"
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
         }
       ]
     },
     {
-      "eventKey": "jensen-spark-demo-20261021",
+      "eventKey": "jensen-language-programming-replay-20261022",
       "tabIds": [
         "jensen-huang"
       ],
-      "title": "NVIDIA RTX Spark账号发布Jensen Huang演示片段",
-      "fact": "NVIDIA RTX Spark账号发布提及Jensen Huang的翻腾演示片段。该帖未给出商业部署、订单或收入数据。",
-      "whyItMatters": "本条为来源样本中的热度动态，未提供足以改变半导体、电力或AI商业化判断的新增可核事实。",
-      "counterCase": "作者观点、活动记录与演示不能证明业务成果；互动仅反映该采集样本，不代表全X排名。",
+      "title": "Jensen Huang谈AI降低编程门槛",
+      "fact": "访谈剪辑转述Jensen Huang的看法：自然语言交互可能让更多人参与编程。他以“从3000万到可能10亿”作说明；这属于观点，未提供实际新增程序员统计。",
+      "whyItMatters": "可归因访谈片段在本窗再次传播；原访谈日期未知，不当作本日新发布或已兑现用户增长。",
+      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
       "affected": [],
-      "author": "@NVIDIARTXSpark",
-      "publishedAt": "2026-10-21T17:01:17Z",
-      "url": "https://x.com/NVIDIARTXSpark/status/2112952375929397595",
+      "author": "@GeniusGTX",
+      "publishedAt": "2026-10-22T08:30:20Z",
+      "url": "https://x.com/GeniusGTX/status/2113186177776025741",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "excerpt": "When @jensenhuang asks for a somersault, you deliver.",
-      "firstIncludedAt": "2026-10-22T00:26:28.088Z",
-      "lastMaterialAt": "2026-10-22T00:26:28.088Z",
+      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+      "originalText": "I think we just went from 30 million to probably 1 billion.（剪辑摘录，非完整访谈）",
+      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 3100,
-        "reposts": 385,
-        "replies": 94,
-        "quotes": 113,
-        "capturedAt": "2026-10-22T00:05:24.908864+00:00",
-        "source": "Grok网页版X工具实际整数；capturedAt是本机观察时刻"
+        "likes": 42,
+        "reposts": 20,
+        "replies": 4,
+        "quotes": 1,
+        "views": 4789,
+        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+        "source": "grok-web-observed"
       },
       "people": [
         {
@@ -178,106 +287,6 @@
           "intro": "英伟达创始人兼CEO"
         }
       ]
-    },
-    {
-      "eventKey": "elon-share-x-20261021",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk呼吁向朋友分享X链接",
-      "fact": "Elon Musk呼吁读者向朋友分享X链接，以了解其所称的真实情况。",
-      "whyItMatters": "本条为来源样本中的热度动态，未提供足以改变半导体、电力或AI商业化判断的新增可核事实。",
-      "counterCase": "作者观点、活动记录与演示不能证明业务成果；互动仅反映该采集样本，不代表全X排名。",
-      "affected": [],
-      "author": "@elonmusk",
-      "publishedAt": "2026-10-21T16:19:16Z",
-      "url": "https://x.com/elonmusk/status/2112941801510178862",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "excerpt": "Send 𝕏 links to your friends so that they know what’s really going on",
-      "firstIncludedAt": "2026-10-22T00:26:28.088Z",
-      "lastMaterialAt": "2026-10-22T00:26:28.088Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 32459,
-        "reposts": 4953,
-        "replies": 1877,
-        "quotes": 249,
-        "capturedAt": "2026-10-22T00:05:24.908847+00:00",
-        "source": "Grok网页版X工具实际整数；capturedAt是本机观察时刻"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-legacy-media-20261021",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk批评传统新闻可信度",
-      "fact": "Elon Musk发帖批评传统新闻的可信度。这是作者对媒体的评价。",
-      "whyItMatters": "本条为来源样本中的热度动态，未提供足以改变半导体、电力或AI商业化判断的新增可核事实。",
-      "counterCase": "作者观点、活动记录与演示不能证明业务成果；互动仅反映该采集样本，不代表全X排名。",
-      "affected": [],
-      "author": "@elonmusk",
-      "publishedAt": "2026-10-21T15:38:10Z",
-      "url": "https://x.com/elonmusk/status/2112931457786081428",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "excerpt": "Some fools still think the legacy news is real. Amazing.",
-      "firstIncludedAt": "2026-10-22T00:26:28.088Z",
-      "lastMaterialAt": "2026-10-22T00:26:28.088Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 137029,
-        "reposts": 17546,
-        "replies": 6771,
-        "quotes": 1357,
-        "capturedAt": "2026-10-22T00:05:24.908685+00:00",
-        "source": "Grok网页版X工具实际整数；capturedAt是本机观察时刻"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "trump-prisoner-release-20261021",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "White House宣布一名在俄被拘美国人获释",
-      "fact": "White House宣布一名在俄罗斯被拘的美国人获释，并称其正在返乡。内容按官方声明记录。",
-      "whyItMatters": "本条为来源样本中的热度动态，未提供足以改变半导体、电力或AI商业化判断的新增可核事实。",
-      "counterCase": "作者观点、活动记录与演示不能证明业务成果；互动仅反映该采集样本，不代表全X排名。",
-      "affected": [],
-      "author": "@WhiteHouse",
-      "publishedAt": "2026-10-21T11:56:28Z",
-      "url": "https://x.com/WhiteHouse/status/2112875664743563709",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "excerpt": "President Donald J. Trump announces the release of Stephen Hubbard, taken four years ago by Russia during the Biden Administration. Stephen is on his way back home and will soon be with his family. 🇺🇸",
-      "firstIncludedAt": "2026-10-22T00:26:28.088Z",
-      "lastMaterialAt": "2026-10-22T00:26:28.088Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 9251,
-        "reposts": 2135,
-        "replies": 919,
-        "quotes": 126,
-        "capturedAt": "2026-10-22T00:06:19.551146+00:00",
-        "source": "Grok网页版X工具实际整数；capturedAt为本机观察时刻"
-      },
-      "people": []
     },
     {
       "eventKey": "nadella-nhs-main-20261021",
@@ -301,9 +310,15 @@
       "weeklyRanks": {
         "trillion-leaders": 1
       },
-      "excerpt": "Today in the UK, I saw how the Yorkshire Ambulance Service is using Copilot to cut down on administrative work and make better use of its data, and ultimately provide a better experience for medical personnel and patients. It's an early example of what's possible as NHS England expands Copilot to as many as 500,000 clinicians and support staff across the country.",
+      "people": [
+        {
+          "name": "Satya Nadella",
+          "intro": "微软董事长兼CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-22T00:26:28.088Z",
       "lastMaterialAt": "2026-10-22T00:26:28.088Z",
+      "excerpt": "Today in the UK, I saw how the Yorkshire Ambulance Service is using Copilot to cut down on administrative work and make better use of its data, and ultimately provide a better experience for medical personnel and patients. It's an early example of what's possible as NHS England expands Copilot to as many as 500,000 clinicians and support staff across the country.",
       "selection": "rule",
       "engagement": {
         "likes": 971,
@@ -312,52 +327,7 @@
         "quotes": 16,
         "capturedAt": "2026-10-22T00:06:19.551141+00:00",
         "source": "Grok网页版X工具实际整数；capturedAt为本机观察时刻"
-      },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "jensen-openshell-20261021",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "Jensen Huang介绍OpenShell智能体边界架构",
-      "fact": "NVIDIA官方帖称，Jensen Huang介绍OpenShell参考架构，帮助企业为AI智能体设定边界并在越界时停止它们。新闻室补充其将加速计算与硬件隔离的安全执行结合。",
-      "whyItMatters": "智能体权限与运行控制可能降低企业部署障碍，并增加计算、安全及身份治理的集成需求；发布参考架构尚不能证明实际安全性或商业订单。",
-      "counterCase": "合作方所称独立安全执行指隔离机制，并非独立安全审计。尚未取得可复现的攻防与成本结果，不能声称所有越权均被解决。",
-      "affected": [
-        "AI智能体",
-        "NVDA",
-        "安全基础设施"
-      ],
-      "author": "@nvidia",
-      "publishedAt": "2026-10-21T10:03:40Z",
-      "url": "https://x.com/nvidia/status/2112847277282721888",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {},
-      "excerpt": "Jensen introduces the OpenShell Reference Architecture to help businesses set boundaries for AI agents and stop them when they step outside those boundaries. Securing agents around the world. 🔒",
-      "firstIncludedAt": "2026-10-22T00:26:28.088Z",
-      "lastMaterialAt": "2026-10-22T00:26:28.088Z",
-      "selection": "rule",
-      "engagement": {
-        "likes": 494,
-        "reposts": 61,
-        "replies": 103,
-        "quotes": 49,
-        "capturedAt": "2026-10-22T00:05:24.908862+00:00",
-        "source": "Grok网页版X工具实际整数；capturedAt是本机观察时刻"
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "pichai-alex-podcast-20261021",
@@ -375,9 +345,15 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "excerpt": "Thanks for having me on Alex - great conversation!",
+      "people": [
+        {
+          "name": "Sundar Pichai",
+          "intro": "谷歌及Alphabet CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-22T00:26:28.088Z",
       "lastMaterialAt": "2026-10-22T00:26:28.088Z",
+      "excerpt": "Thanks for having me on Alex - great conversation!",
       "selection": "engagement",
       "engagement": {
         "likes": 3335,
@@ -386,13 +362,7 @@
         "quotes": 10,
         "capturedAt": "2026-10-22T00:06:19.551156+00:00",
         "source": "Grok网页版X工具实际整数；capturedAt是本机观察时刻"
-      },
-      "people": [
-        {
-          "name": "Sundar Pichai",
-          "intro": "谷歌及Alphabet CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "gs-pb-ai-deleveraging-research-2026-10-17",
@@ -644,230 +614,6 @@
         "quotes": 49,
         "views": 81561,
         "bookmarks": 62
-      }
-    },
-    {
-      "eventKey": "elon-more-than-10gw-2026-10-15",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：算力目标或许不止 10GW",
-      "fact": "@elonmusk 引用相关帖回复「Maybe more than 10GW」，延续此前算力/电力规模讨论。",
-      "whyItMatters": "上修电力与算力意向规模，连接 AI 实物瓶颈，但仍是意向而非并网合同。",
-      "counterCase": "无变电站/购电合同则停留在叙事。",
-      "affected": [
-        "xAI/算力",
-        "电力设备需求叙事"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-15T23:36:46.000Z",
-      "url": "https://x.com/elonmusk/status/2110877572011844019",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 4
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-16T12:41:12.272Z",
-        "source": "x-mcp",
-        "likes": 7367,
-        "reposts": 905,
-        "replies": 662,
-        "quotes": 78,
-        "views": 1724864,
-        "bookmarks": 441
-      }
-    },
-    {
-      "eventKey": "elon-grok-bot-paid-growth-2026-10-15",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Grok Bot 无免费档仍增长极快",
-      "fact": "@elonmusk：称从未见过 @Grok @Bot 增长如此快，且无免费档意味着用户支付意愿高于价格。",
-      "whyItMatters": "应用层付费采用信号，支持 AI 落地单位经济讨论。",
-      "counterCase": "若后续披露流失或补贴，付费叙事削弱。",
-      "affected": [
-        "xAI",
-        "AI 应用付费"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-15T22:52:49.000Z",
-      "url": "https://x.com/elonmusk/status/2110866513955868924",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 5
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-16T12:41:12.272Z",
-        "source": "x-mcp",
-        "likes": 17160,
-        "reposts": 1779,
-        "replies": 1238,
-        "quotes": 160,
-        "views": 1898076,
-        "bookmarks": 1540
-      }
-    },
-    {
-      "eventKey": "nvidia-volvo-hyperion-halos-2026-10-15",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "NVIDIA：扩大与 Volvo Cars 安全自动驾驶合作",
-      "fact": "@nvidia：扩大与 Volvo Cars 合作，结合 Hyperion、Halos OS 等推进安全自动驾驶。官号发帖，非本人直发。",
-      "whyItMatters": "汽车安全+AI 落地双线索。",
-      "counterCase": "缺交付量则难估近季收入。",
-      "affected": [
-        "NVIDIA 汽车",
-        "Volvo"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-15T18:24:51.000Z",
-      "url": "https://x.com/nvidia/status/2110799078497960084",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "jensen-huang": 3
-      },
-      "people": [],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-16T12:41:12.272Z",
-        "source": "x-mcp",
-        "likes": 783,
-        "reposts": 59,
-        "replies": 67,
-        "quotes": 18,
-        "views": 57554,
-        "bookmarks": 40
-      }
-    },
-    {
-      "eventKey": "nvidia-nemotron-35-super-vl-2026-10-15",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "NVIDIA：发布 Nemotron 3.5 Super VL 开源模型扩展",
-      "fact": "@nvidia：扩展 Nemotron 开源模型家族，推出 Nemotron 3.5 Super VL，强调视觉理解、推理与工具使用。",
-      "whyItMatters": "开源模型生态与边缘/代理部署；非数据中心出货指引。",
-      "counterCase": "开源发布不直接等于数据中心收入。",
-      "affected": [
-        "NVIDIA 软件生态",
-        "开源模型竞争"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-15T15:10:27.000Z",
-      "url": "https://x.com/nvidia/status/2110750157272719562",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "jensen-huang": 4
-      },
-      "people": [],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-16T12:41:12.272Z",
-        "source": "x-mcp",
-        "likes": 909,
-        "reposts": 106,
-        "replies": 88,
-        "quotes": 34,
-        "views": 69941,
-        "bookmarks": 92
-      }
-    },
-    {
-      "eventKey": "jensen-nvidia-stockholm-nordics-2026-10-15",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "NVIDIA 官号：北欧 Spotify/ABB 等以 NVIDIA 构建应用",
-      "fact": "@nvidia：发帖 Hello Stockholm，列举 Spotify 播客推荐与 ABB Robotics 仿真等北欧用例；可归因公司活动，非 Jensen Huang 本人财务指引。",
-      "whyItMatters": "区域落地与生态线索。",
-      "counterCase": "无新订单金额。",
-      "affected": [
-        "NVIDIA",
-        "欧洲 AI"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-15T05:14:07.000Z",
-      "url": "https://x.com/nvidia/status/2110600083892785270",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "jensen-huang": 5
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-15T13:00:15.000Z",
-        "source": "x-mcp",
-        "likes": 155,
-        "reposts": 19,
-        "replies": 36,
-        "quotes": 3,
-        "views": 26375,
-        "bookmarks": 4
-      }
-    },
-    {
-      "eventKey": "trump-diesel-sanctions-pause-sync-2026-10-15",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "同步源：Donald Trump称俄柴油入市并暂时中止对俄燃料制裁",
-      "fact": "@TrumpDailyPosts（Truth Social 同步，非本人直发）：称Donald Trump宣布俄方投放柴油并暂时中止美对俄燃料制裁。",
-      "whyItMatters": "能源—通胀政策传导线索。",
-      "counterCase": "缺 OFAC 文本或俄方确认。",
-      "affected": [
-        "柴油",
-        "制裁"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-15T04:57:00.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2110595774203728034",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "donald-trump": 3
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-15T08:02:03.197Z",
-        "source": "x-mcp",
-        "likes": 144,
-        "reposts": 40,
-        "replies": 26,
-        "quotes": 5,
-        "views": 44605,
-        "bookmarks": 9
       }
     },
     {
@@ -1176,6 +922,304 @@
     }
   ],
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "whitehouse-homeownership-statement-20261022",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "白宫宣传住房与按揭成本议程",
+        "fact": "白宫表示Donald Trump正降低独栋住房和按揭成本、减少不必要的监管环节；可见声明没有列出新签署措施或可量化成效。",
+        "whyItMatters": "属于政府宣传性表述，暂无足够新政策细节支持资本成本判断。",
+        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+        "affected": [],
+        "author": "@WhiteHouse",
+        "publishedAt": "2026-10-22T19:29:29Z",
+        "url": "https://x.com/WhiteHouse/status/2113352056723697729",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+        "originalText": "President Donald J. Trump is lowering the costs of single-family homeownership & mortgages（节选）",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 3786,
+          "reposts": 930,
+          "replies": 1260,
+          "quotes": 122,
+          "views": 284788,
+          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ]
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "whitehouse-farms-statement-20261022",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "白宫回顾农业税收与供应链议程",
+        "fact": "白宫回顾农业减税、市场拓展、供应链和监管议程，宣称这些措施支持农场和牧场；可见文字未给出新增措施的签署日期或执行数字。",
+        "whyItMatters": "这是对既有政策成果的自述，保留热度身份，不把总结宣传当作新增政策。",
+        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+        "affected": [],
+        "author": "@WhiteHouse",
+        "publishedAt": "2026-10-22T18:11:10Z",
+        "url": "https://x.com/WhiteHouse/status/2113332350570406313",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+        "originalText": "Historic tax relief for family farms; Expanded markets for American agriculture; Bolstered supply chains（节选）",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 2309,
+          "reposts": 650,
+          "replies": 787,
+          "quotes": 48,
+          "views": 135930,
+          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "elon-important-vote-20261022",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk呼吁参与投票",
+        "fact": "Elon Musk就德州候选人背书相关内容简短回应“投票很重要”。",
+        "whyItMatters": "属于本人高互动短回应，未提供xAI、Tesla或SpaceX经营新信息。",
+        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+        "affected": [],
+        "author": "@elonmusk",
+        "publishedAt": "2026-10-22T17:09:17Z",
+        "url": "https://x.com/elonmusk/status/2113316775291142572",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+        "originalText": "Important to vote",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 43017,
+          "reposts": 6010,
+          "replies": 2371,
+          "quotes": 194,
+          "views": 2411758,
+          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "whitehouse-hormuz-statement-20261022",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "白宫就霍尔木兹油运与伊朗问题表态",
+        "fact": "白宫宣称霍尔木兹海峡油运量高于冲突前，并重申伊朗不得拥有核武器。声明未提供独立通航统计，相关流量主张未获核实。",
+        "whyItMatters": "保留政府声明的关注度；未取得新执行政策或独立运输量，不能据此判断供应冲击已解除。",
+        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+        "affected": [],
+        "author": "@WhiteHouse",
+        "publishedAt": "2026-10-22T16:02:02Z",
+        "url": "https://x.com/WhiteHouse/status/2113299851265851481",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+        "originalText": "More oil is coming through the Hormuz Strait than it did prior to the conflict.（相关主张摘录，非全文）",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 6447,
+          "reposts": 1670,
+          "replies": 3430,
+          "quotes": 186,
+          "views": 267372,
+          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "elon-yup-court-20261022",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk回应最高法院扩员讨论",
+        "fact": "Elon Musk对最高法院扩员相关讨论回应“是的”。可见本人文字仅为一个词，不能扩写其政策主张。",
+        "whyItMatters": "保留窗口内本人讨论的注意力信号；没有新的政策或公司执行动作。",
+        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+        "affected": [],
+        "author": "@elonmusk",
+        "publishedAt": "2026-10-22T15:18:45Z",
+        "url": "https://x.com/elonmusk/status/2113288958738366650",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+        "originalText": "Yup",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 31634,
+          "reposts": 4015,
+          "replies": 1845,
+          "quotes": 143,
+          "views": 1692603,
+          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "elon-true-public-money-20261022",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk回应公共资金观点",
+        "fact": "Elon Musk在公共资金相关讨论中回应“确实”。本人可见文字没有展开具体财政方案。",
+        "whyItMatters": "这是简短观点回应，不代表新增财政措施或企业现金流变化。",
+        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+        "affected": [],
+        "author": "@elonmusk",
+        "publishedAt": "2026-10-22T10:07:57Z",
+        "url": "https://x.com/elonmusk/status/2113210745710162001",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+        "originalText": "True",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 16582,
+          "reposts": 3548,
+          "replies": 1521,
+          "quotes": 117,
+          "views": 2270062,
+          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "jensen-language-programming-replay-20261022",
+        "tabIds": [
+          "jensen-huang"
+        ],
+        "title": "Jensen Huang谈AI降低编程门槛",
+        "fact": "访谈剪辑转述Jensen Huang的看法：自然语言交互可能让更多人参与编程。他以“从3000万到可能10亿”作说明；这属于观点，未提供实际新增程序员统计。",
+        "whyItMatters": "可归因访谈片段在本窗再次传播；原访谈日期未知，不当作本日新发布或已兑现用户增长。",
+        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+        "affected": [],
+        "author": "@GeniusGTX",
+        "publishedAt": "2026-10-22T08:30:20Z",
+        "url": "https://x.com/GeniusGTX/status/2113186177776025741",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
+        "originalText": "I think we just went from 30 million to probably 1 billion.（剪辑摘录，非完整访谈）",
+        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
+        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 42,
+          "reposts": 20,
+          "replies": 4,
+          "quotes": 1,
+          "views": 4789,
+          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Jensen Huang",
+            "intro": "英伟达创始人兼CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "at": "2026-10-23T00:44:13.808Z",
+      "legacy": false
+    },
     {
       "item": {
         "eventKey": "elon-fsd-car-20261021",
@@ -1488,9 +1532,15 @@
         "weeklyRanks": {
           "trillion-leaders": 1
         },
-        "excerpt": "Today in the UK, I saw how the Yorkshire Ambulance Service is using Copilot to cut down on administrative work and make better use of its data, and ultimately provide a better experience for medical personnel and patients. It's an early example of what's possible as NHS England expands Copilot to as many as 500,000 clinicians and support staff across the country.",
+        "people": [
+          {
+            "name": "Satya Nadella",
+            "intro": "微软董事长兼CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-22T00:26:28.088Z",
         "lastMaterialAt": "2026-10-22T00:26:28.088Z",
+        "excerpt": "Today in the UK, I saw how the Yorkshire Ambulance Service is using Copilot to cut down on administrative work and make better use of its data, and ultimately provide a better experience for medical personnel and patients. It's an early example of what's possible as NHS England expands Copilot to as many as 500,000 clinicians and support staff across the country.",
         "selection": "rule",
         "engagement": {
           "likes": 971,
@@ -1499,13 +1549,7 @@
           "quotes": 16,
           "capturedAt": "2026-10-22T00:06:19.551141+00:00",
           "source": "Grok网页版X工具实际整数；capturedAt为本机观察时刻"
-        },
-        "people": [
-          {
-            "name": "Satya Nadella",
-            "intro": "微软董事长兼CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "trillion-leaders"
@@ -1576,9 +1620,15 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "excerpt": "Thanks for having me on Alex - great conversation!",
+        "people": [
+          {
+            "name": "Sundar Pichai",
+            "intro": "谷歌及Alphabet CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-22T00:26:28.088Z",
         "lastMaterialAt": "2026-10-22T00:26:28.088Z",
+        "excerpt": "Thanks for having me on Alex - great conversation!",
         "selection": "engagement",
         "engagement": {
           "likes": 3335,
@@ -1587,13 +1637,7 @@
           "quotes": 10,
           "capturedAt": "2026-10-22T00:06:19.551156+00:00",
           "source": "Grok网页版X工具实际整数；capturedAt是本机观察时刻"
-        },
-        "people": [
-          {
-            "name": "Sundar Pichai",
-            "intro": "谷歌及Alphabet CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "trillion-leaders"
@@ -3038,7 +3082,5 @@
       "at": "2026-09-28T20:30:02.000Z",
       "legacy": true
     }
-  ],
-  "lastAttemptAt": "2026-10-22T12:41:51.411Z",
-  "attemptedCutoff": "2026-10-22T20:30:00+08:00"
+  ]
 }
