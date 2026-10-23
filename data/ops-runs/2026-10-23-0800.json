@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-23T07:59:37+08:00",
-  "updatedAt": "2026-10-23T08:45:00+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-23T08:46:52+08:00",
+  "finishedAt": "2026-10-23T08:46:52+08:00",
   "gitHeadAtStart": "ab96467c5ea62a253215d4ec7afb36a65d0ab74e",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-23T08:45:42+08:00",
+      "detail": "内容提交0743a34已push origin HEAD:master"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-23T08:46:52+08:00",
+      "detail": "Cloudflare Pages success，远端0743a34一致，14公开JSON逐字节一致，固定只读/api/vix200且Cboe16.68/10月21日匹配"
     }
   ],
   "pages": {
@@ -77,11 +77,12 @@
       "detail": "下次非财报宏观事件10/28；财报用独立真源"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "0743a341d8d4f1aca0e167e154a77a1c221b082e",
   "notes": [
-    "08:00冻结；原仓库master干净，ff-only已成功；预检起点未独立计时"
+    "08:00冻结；原仓库master干净，ff-only已成功；预检起点未独立计时",
+    "发布verified；partial为真实候选质量与Nature缺2/Science缺1，不是部署失败。30X对象已接续，7批关闭，未运行本地测试构建。新闻计时标签偏差见分批审计，不证明稳定提速。"
   ],
   "timings": [
     {

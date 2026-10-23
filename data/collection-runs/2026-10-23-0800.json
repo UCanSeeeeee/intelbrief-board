@@ -5206,7 +5206,7 @@
     }
   ],
   "publication": {
-    "status": "assembled",
+    "status": "verified",
     "assembledAt": "2026-10-23T00:44:59.801622+00:00",
     "mergeReport": {
       "at": "2026-10-23T00:44:13.808Z",
@@ -5273,6 +5273,123 @@
         }
       },
       "unrelatedCodeOrUIChanges": false
+    },
+    "verifiedAt": "2026-10-23T00:46:38.922027+00:00",
+    "contentCommit": "0743a341d8d4f1aca0e167e154a77a1c221b082e",
+    "remoteMasterVerified": true,
+    "cloudflare": {
+      "checkRunId": 120174969744,
+      "conclusion": "success",
+      "completedAt": "2026-10-23T00:45:53Z",
+      "deploymentId": "f123e44c-3b98-4042-8621-0d20bfcdfaa3"
+    },
+    "publicResources": [
+      {
+        "path": "data/stock-briefs/2026-10-23-0800.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "5f3b9f4401251a6b090fa1f72f9be8018ae0e0b416c918508cad3eb5c5e7fcf1"
+      },
+      {
+        "path": "data/stock-briefs/index.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "eeb1da351e26add5813f1a17b25bdc92086bec063b7ba0155a12cc9df551b76e"
+      },
+      {
+        "path": "data/reading-board.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "00001ee44bf25bdcbde4433a94278cea050db4eddd2bd1bed70a65cbe3c80e4a"
+      },
+      {
+        "path": "data/people-intelligence.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "042bbafeb10f958f99b3cd3542583cc101ab3a189e5662e11d2cbdd207cbf91b"
+      },
+      {
+        "path": "data/ticker-intelligence.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "cf8a8fb2bbfe684507ed1ecef187861aea043f41fc019f5caded52f168843a2e"
+      },
+      {
+        "path": "data/ai-intelligence.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "b6b1b7ed36052a6db558da487e00e521e3982d121a7a1c4a75cfd916deab2725"
+      },
+      {
+        "path": "data/learning.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "d753fd4bd8f1e36dc5200187bb77aaa79e98e86bcd1fc200f6aca345a23abf15"
+      },
+      {
+        "path": "data/counterintuitive-learning.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "4b9d0bffb86c8a2f4527c63dcbf20ad93ce98fba08aa169665dcbd5d9268443b"
+      },
+      {
+        "path": "data/journal-learning.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "647b17bbfeef326259fc63f2d7a011c1f598cba8dda986bac6f90e5aa891ceae"
+      },
+      {
+        "path": "data/earnings-calendar.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "c0c3c6e13ee5938917a83f595e22cbbab35bc3f2a890b33182d0eaceae1712bc"
+      },
+      {
+        "path": "data/market-sentiment.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "35a124ad414b98fbcdac8e74ae5a19c0b7cdcbdeed546844af48eb3e5c8953e9"
+      },
+      {
+        "path": "data/market-volatility.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "2d6a8a7d1387de94acacbdee8db8a9ce1a886611a03039373c9c7396ba13dd91"
+      },
+      {
+        "path": "data/macro-events.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044"
+      },
+      {
+        "path": "config/company-blurbs.json",
+        "status": 200,
+        "matchesLocal": true,
+        "sha256": "a0c920bc74582213c5fcb3290de68f2db190cf048becf75a6c839a446cf21721"
+      }
+    ],
+    "verificationRetry": "Initial Python urllib returned HTTP403 before results saved; curl normal HTTPS client then used, no browser challenge or access restriction bypass.",
+    "vixApi": {
+      "status": 200,
+      "value": {
+        "schemaVersion": 1,
+        "id": "cboe-vix",
+        "value": 16.68,
+        "asOfDate": "2026-10-21",
+        "quoteKind": "close",
+        "previousClose": 17.31,
+        "fetchedAt": "2026-10-23T00:46:39.008Z",
+        "source": {
+          "name": "Cboe",
+          "url": "https://www.cboe.com/tradable-products/vix",
+          "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+        },
+        "retrieval": {
+          "status": "ok"
+        }
+      },
+      "note": "Read-only fixed /api/vix; no collection progress advance"
     }
   },
   "collectionMode": "incremental-v1",
