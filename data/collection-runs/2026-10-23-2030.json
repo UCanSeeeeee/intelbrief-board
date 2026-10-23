@@ -6274,7 +6274,7 @@
     }
   ],
   "publication": {
-    "status": "assembled",
+    "status": "verified",
     "assembledAt": "2026-10-23T12:37:38.324Z",
     "localValidation": "按用户要求，未运行npm test/check/build、预览或额外回归；仅发布器数据契约和来源/差异审查。",
     "mergeReport": [
@@ -6352,12 +6352,138 @@
       "exactOldPoolEventsPreserved": true,
       "recordNoteCorrection": "news审计将“切换后”更正为实际当前Expert，重新record失败报告同步措辞；无Grok请求重试或成功截止变化。",
       "selectedUnchanged": true,
-      "poolSelectionNote": "发布器对全失败期仍机械重排精选，审查时恢复原5焦点/2洞察顺序；没有新增/进展，不用失败检查改变旧重点。全部210事件完全未改。"
+      "poolSelectionNote": "发布器对全失败期仍机械重排精选，审查时恢复原5焦点/3洞察顺序；没有新增/进展，不用失败检查改变旧重点。全部210事件完全未改。"
     },
     "dataReviewRetry": "读取大于1MiB的既有reading-board时Node默认maxBuffer不足；只读失败，调大读取缓冲后重审，无采集重试。",
     "remoteBeforePublish": "ac2d8732586c205fbcbf8464e4dd19a6239522b9",
     "gitStartedAt": "2026-10-23T12:39:48.097Z",
-    "timingNote": "ops step仅接受采集栏目/四阶段，publication/git参数被拒绝且未写计时；Git和线上核验使用publication实际起止时间，不补造已过去的起点。"
+    "timingNote": "ops step仅接受采集栏目/四阶段，publication/git参数被拒绝且未写计时；Git和线上核验使用publication实际起止时间，不补造已过去的起点。",
+    "contentCommit": "5681ba56297490b3071275f93b30377b2e2f20f4",
+    "gitCompletedAt": "2026-10-23T12:40:23.061Z",
+    "remoteMasterVerified": true,
+    "verifyStartedAt": "2026-10-23T12:40:23.066Z",
+    "verifiedAt": "2026-10-23T12:41:36.078Z",
+    "verifyCompletedAt": "2026-10-23T12:41:36.078Z",
+    "publicResources": [
+      {
+        "path": "data/stock-briefs/2026-10-23-2030.json",
+        "matchesLocal": true,
+        "sha256": "f33c634b800a1b5c0bf4a31b7ad0cb7d9e09f52ad24ae4d2aead0c6228314fb8",
+        "status": 200
+      },
+      {
+        "path": "data/stock-briefs/index.json",
+        "matchesLocal": true,
+        "sha256": "7a1a6efacf4b473e7617624a7457b4f49ee25be4b534a56052c566b8bff5f1d0",
+        "status": 200
+      },
+      {
+        "path": "data/reading-board.json",
+        "matchesLocal": true,
+        "sha256": "43589c2999d16b1ea6231e9c9c54535e8cee527d87cea6f6b55bccb3ef69c84d",
+        "status": 200
+      },
+      {
+        "path": "data/people-intelligence.json",
+        "matchesLocal": true,
+        "sha256": "38dee4e5b9f23f1426c2f85f58637f354b0d1ecacaee7682d208789b55d7057c",
+        "status": 200
+      },
+      {
+        "path": "data/ticker-intelligence.json",
+        "matchesLocal": true,
+        "sha256": "cc6f384c551a5d628c92b8369379b2ff576cef09859ade0ec29f0b4d11fdca2a",
+        "status": 200
+      },
+      {
+        "path": "data/ai-intelligence.json",
+        "matchesLocal": true,
+        "sha256": "5d8b2c15ce277a6aa2b8818365e182799213e288e9e9bb27f0ff50fbe5ca5af7",
+        "status": 200
+      },
+      {
+        "path": "data/learning.json",
+        "matchesLocal": true,
+        "sha256": "a882a55471dc469e343e4b8f2c559b8250320b1fb945b0c2e1a4b41778151bcc",
+        "status": 200
+      },
+      {
+        "path": "data/counterintuitive-learning.json",
+        "matchesLocal": true,
+        "sha256": "d68bcea8469c982e5b382aa75ed53e5ccf85b02e87015820939b666af984d23d",
+        "status": 200
+      },
+      {
+        "path": "data/journal-learning.json",
+        "matchesLocal": true,
+        "sha256": "647b17bbfeef326259fc63f2d7a011c1f598cba8dda986bac6f90e5aa891ceae",
+        "status": 200
+      },
+      {
+        "path": "data/earnings-calendar.json",
+        "matchesLocal": true,
+        "sha256": "689ae1a73ef96cdca430ae1539bb575ed98046637d3432073ffda3eb7fc24bfa",
+        "status": 200
+      },
+      {
+        "path": "data/market-sentiment.json",
+        "matchesLocal": true,
+        "sha256": "5aeea2376ed3078e30b4e3cb4a3eb1bebfbc425498b9f7825d9e630a430ffcc4",
+        "status": 200,
+        "retriedAt": "2026-10-23T12:41:36.075Z"
+      },
+      {
+        "path": "data/market-volatility.json",
+        "matchesLocal": true,
+        "sha256": "b96813ad9693b906e7272e000247cf689eaef8f297a199be32c1daeff6fae013",
+        "status": 200
+      },
+      {
+        "path": "config/company-blurbs.json",
+        "matchesLocal": true,
+        "sha256": "d6f9082e2ef3448359c33509dd2cadd886e53b3aabd2ce063adba4e3b6d8e968",
+        "status": 200
+      }
+    ],
+    "vixApi": {
+      "status": 200,
+      "value": {
+        "schemaVersion": 1,
+        "id": "cboe-vix",
+        "value": 19.03,
+        "asOfDate": "2026-10-22",
+        "quoteKind": "close",
+        "previousClose": 16.68,
+        "fetchedAt": "2026-10-23T12:40:30.238Z",
+        "source": {
+          "name": "Cboe",
+          "url": "https://www.cboe.com/tradable-products/vix",
+          "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+        },
+        "retrieval": {
+          "status": "ok"
+        }
+      }
+    },
+    "cloudflare": {
+      "checkRunId": 120418756351,
+      "status": "completed",
+      "conclusion": "success",
+      "completedAt": "2026-10-23T12:40:16Z",
+      "deploymentId": "c71c8800-925e-4a41-9aa7-1a5454fb685d"
+    },
+    "verificationRetry": "首次13项中CNN快照返回旧字节，其余12项一致；仅重取CNN并带no-cache/新查询参数，第二次字节与本地一致。无重新采集。",
+    "preexistingWorkPreserved": {
+      "paths": [
+        "data/collection-results/2026-10-23-1500-news.json",
+        "data/collection-runs/2026-10-23-1500.json",
+        "data/ops-runs/2026-10-23-1500.json",
+        "work/run-1500.cjs",
+        "work/2026-10-23-1500-plan.json"
+      ],
+      "snapshot": "work/2026-10-23-2030/preexisting.patch",
+      "note": "不夹带未完成15:00文件；共享进度只更新本轮失败尝试，全部成功截止/receipts/pending未改。CNN/VIX为本轮授权刷新后的最新快照，15:00旧工作差异保存在本地快照。"
+    }
   },
   "timingNote": "实际ops计时为墙钟；预检及早期资料阅读未独立计时，不补造起点。模型确认时间为保存记录时刻；未记录精确点击时刻。 初次UI导航在news计时前发生，未补造起点；news计时包含两次有限刷新后核实菜单。",
   "learningPlan": {

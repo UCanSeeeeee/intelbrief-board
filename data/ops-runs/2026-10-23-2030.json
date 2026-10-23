@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-23T20:31:19+08:00",
-  "updatedAt": "2026-10-23T20:39:17+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-23T20:41:36+08:00",
+  "finishedAt": "2026-10-23T20:41:36+08:00",
   "gitHeadAtStart": "ac2d8732586c205fbcbf8464e4dd19a6239522b9",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-23T20:41:36+08:00",
+      "detail": "5681ba56297490b3071275f93b30377b2e2f20f4已推送，远端master一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-23T20:41:36+08:00",
+      "detail": "Cloudflare部署成功，13公开JSON字节一致；CNN仅重取1次，固定只读VIX接口值/日期一致"
     }
   ],
   "pages": {
@@ -77,14 +77,12 @@
       "detail": "无到期/过时触发"
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "Grok实际Expert标签无法确认4.7，30对象未查询；独立学习/日历已处理",
-    "stackSnippet": null
-  },
-  "commitHash": null,
-  "notes": [],
+  "status": "partial",
+  "error": null,
+  "commitHash": "5681ba56297490b3071275f93b30377b2e2f20f4",
+  "notes": [
+    "X模型版本未确认，30对象failed不推进；学习/日历/指标已发布核验，15:00未完成工作保留"
+  ],
   "timings": [
     {
       "page": "news",
