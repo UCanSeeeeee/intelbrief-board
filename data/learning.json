@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-22T12:39:37.162Z",
+  "updatedAt": "2026-10-23T12:37:38.324Z",
   "dailyCuriosities": [
     {
       "id": "2026-10-18-demand-is-not-funding",
@@ -305,6 +305,54 @@
       "sources": [
         {
           "label": "项目研究知识库 I02、I01：循环融资与资本开支",
+          "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/knowledge/US_EQUITY_RESEARCH_KB.md"
+        }
+      ]
+    },
+    {
+      "id": "backlog-versus-revenue-and-cash",
+      "title": "有了订单积压，为什么还不能直接算成收入？",
+      "category": "合同、交付与现金兑现",
+      "updatedAt": "2026-10-23T12:35:40.018Z",
+      "professional": {
+        "definition": "订单积压是尚待履行的业务安排，收入和现金回款分别描述交付兑现与资金收到的情况。三者处在不同阶段，不能直接用同一金额替换。",
+        "mechanism": "从意向到合同，再到设备交付、验收或服务使用，需要产能、供电、建设及客户履约配合。合同的取消、延期和付款条款也会影响兑现。订单增加可能提高未来收入的可见度，但实际结果仍受交付条件与时间约束。",
+        "whyItMatters": "半导体与数据中心项目周期长。把多年合同额当成当年收入，或把收到预付款当成最终利润，会高估兑现速度，也会漏掉建设延迟和融资压力。",
+        "signals": [
+          "合同是否有约束、是否允许取消及延期",
+          "设备、并网与客户验收的实际进展",
+          "合同执行期、计价方式及付款条件",
+          "已交付服务的使用量、回款与后续支出"
+        ]
+      },
+      "story": {
+        "title": "家具店接到一批定制桌订单",
+        "body": "这是虚构的教学场景。家具店收到一份明年分批交付的桌子合同，客户先付一部分定金。合同让老板更容易安排采购，却不表示桌子已经交到客户手里，也不表示全部货款已经收到。如果木料晚到，或者客户的新办公室迟迟不能启用，交付和后续付款都可能推后。老板需要把已签合同、已交付桌子和已收货款分开记，才能知道还有多少工作、什么时候可能收到钱，以及是否需要继续垫付成本。",
+        "mapping": [
+          {
+            "storyRole": "分批交桌合同",
+            "professionalMeaning": "未来待履行订单及兑现安排"
+          },
+          {
+            "storyRole": "木料和办公室是否就绪",
+            "professionalMeaning": "供应与客户基础设施约束"
+          },
+          {
+            "storyRole": "定金、交桌、余款",
+            "professionalMeaning": "资金、交付和收入兑现各有时点"
+          }
+        ],
+        "boundary": "类比只解释不同阶段，真实收入确认依具体合同与适用会计准则判断；不能由订单额直接推算收入、毛利或估值。"
+      },
+      "commonMistakes": [
+        "把多年合同额当作本年可确认收入。",
+        "把预付款当作已实现利润。",
+        "只看订单增长，忽略取消权、交付条件和现金支出。"
+      ],
+      "relatedCuriosityIds": [],
+      "sources": [
+        {
+          "label": "项目研究知识库：P1/P2/P3、I03合同与实物瓶颈",
           "url": "https://github.com/UCanSeeeeee/intelbrief-board/blob/master/knowledge/US_EQUITY_RESEARCH_KB.md"
         }
       ]

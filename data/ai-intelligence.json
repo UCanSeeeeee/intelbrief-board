@@ -3,31 +3,31 @@
   "updatedAt": "2026-10-23T00:44:13.808Z",
   "cutoff": "2026-10-23T08:00:00+08:00",
   "source": "X only",
-  "status": "partial",
+  "status": "failed",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "complete",
-        "note": "官方产品及METR评估机构原始线程已追源反证；METR披露历史发现，补丁状态未确认，非当前持续漏洞断言。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "complete",
-        "note": "官方研究公告，特定属性非所有漏洞，缺独立复现与覆盖率。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "complete",
-        "note": "2官方公告，announced/preview不升级全量GA，无实际收入或token削减数字。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "partial",
-        "note": "实际查询完成；DeepSeek融资二传无Reuters原始status，未采用金额与完成状态，留待核。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       }
     ]
@@ -934,5 +934,7 @@
       "at": "2026-10-14T16:07:02.000Z",
       "legacy": true
     }
-  ]
+  ],
+  "lastAttemptAt": "2026-10-23T12:37:38.324Z",
+  "attemptedCutoff": "2026-10-23T20:30:00+08:00"
 }

@@ -3,49 +3,49 @@
   "updatedAt": "2026-10-23T00:44:13.808Z",
   "cutoff": "2026-10-23T08:00:00+08:00",
   "source": "X only",
-  "status": "partial",
+  "status": "failed",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "complete",
-        "note": "CNBC原始帖确认需求与资金约束描述；不采用5000亿美元融资或抵押完成二传。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "mu",
-        "status": "partial",
-        "note": "无合格新事实；台湾罢工窄补查及反证已执行，生产影响/路线图原始证据仍不足，保留旧风险。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "intc",
-        "status": "complete",
-        "note": "无强官方新事实；热点样本仅无源历史数字与自身报告引流，排除不凑数。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "goog",
-        "status": "complete",
-        "note": "无新财务事实；200日均线为已保存同事件，无实质变化不重发。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "avgo",
-        "status": "partial",
-        "note": "KDDI CPO仅二传试验，无官方X原始披露；热点仅作者供应链分析，不作订单。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "vrt",
-        "status": "complete",
-        "note": "DSX同10/21旧事件，复用缓存；30–50%及1.4x无原始证据，不新增事实或热点。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       },
       {
         "id": "tsm",
-        "status": "complete",
-        "note": "独立发现后命中本轮已核Reuters及反证缓存，新增有限主张事实与明确二传热点。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
         "cutoff": "2026-10-23T08:00:00+08:00"
       }
     ]
@@ -388,8 +388,8 @@
       ]
     }
   ],
-  "lastAttemptAt": "2026-10-22T12:41:51.419Z",
-  "attemptedCutoff": "2026-10-22T20:30:00+08:00",
+  "lastAttemptAt": "2026-10-23T12:37:38.324Z",
+  "attemptedCutoff": "2026-10-23T20:30:00+08:00",
   "hotspots": [
     {
       "tabId": "nvda",
@@ -1918,73 +1918,59 @@
     "tabs": [
       {
         "id": "nvda",
-        "status": "complete",
-        "queries": [
-          "$NVDA since:2026-10-22_03:54:00_UTC until:2026-10-23_03:54:00_UTC"
-        ],
-        "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
+        "queries": [],
         "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-23T04:03:34.113Z"
+        "lastAttemptAt": "2026-10-23T12:37:38.324Z"
       },
       {
         "id": "mu",
-        "status": "complete",
-        "queries": [
-          "$MU since:2026-10-22_03:54:00_UTC until:2026-10-23_03:54:00_UTC"
-        ],
-        "note": "直接请求前五后，针对漏掉的已知高浏览量原帖请Grok更正；排名来自更正结果，部分指标复用首轮读数。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
+        "queries": [],
         "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-23T04:03:34.113Z"
-      },
-      {
-        "id": "goog",
-        "status": "complete",
-        "queries": [
-          "$GOOG OR $GOOGL since:2026-10-22_03:54:00_UTC until:2026-10-23_03:54:00_UTC"
-        ],
-        "note": "直接请求前五并纠正已知遗漏；Grok更正结果含241614浏览的NoLimitGains原帖。只代表返回样本，不声称全X覆盖。",
-        "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-23T04:03:34.113Z"
+        "lastAttemptAt": "2026-10-23T12:37:38.324Z"
       },
       {
         "id": "intc",
-        "status": "complete",
-        "queries": [
-          "$INTC since:2026-10-22_03:54:00_UTC until:2026-10-23_03:54:00_UTC"
-        ],
-        "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
+        "queries": [],
         "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-23T04:03:34.113Z"
+        "lastAttemptAt": "2026-10-23T12:37:38.324Z"
+      },
+      {
+        "id": "goog",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
+        "queries": [],
+        "cutoff": "2026-10-23T03:54:00Z",
+        "lastAttemptAt": "2026-10-23T12:37:38.324Z"
       },
       {
         "id": "avgo",
-        "status": "complete",
-        "queries": [
-          "$AVGO since:2026-10-22_03:54:00_UTC until:2026-10-23_03:54:00_UTC"
-        ],
-        "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
+        "queries": [],
         "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-23T04:03:34.113Z"
+        "lastAttemptAt": "2026-10-23T12:37:38.324Z"
       },
       {
         "id": "vrt",
-        "status": "complete",
-        "queries": [
-          "$VRT since:2026-10-22_03:54:00_UTC until:2026-10-23_03:54:00_UTC"
-        ],
-        "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
+        "queries": [],
         "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-23T04:03:34.113Z"
+        "lastAttemptAt": "2026-10-23T12:37:38.324Z"
       },
       {
         "id": "tsm",
-        "status": "complete",
-        "queries": [
-          "$TSM since:2026-10-22_03:54:00_UTC until:2026-10-23_03:54:00_UTC"
-        ],
-        "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+        "status": "failed",
+        "note": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。",
+        "queries": [],
         "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-23T04:03:34.113Z"
+        "lastAttemptAt": "2026-10-23T12:37:38.324Z"
       }
     ]
   },

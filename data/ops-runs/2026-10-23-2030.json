@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-23-2030",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-23T20:31:19+08:00",
+  "updatedAt": "2026-10-23T20:39:17+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "ac2d8732586c205fbcbf8464e4dd19a6239522b9",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-23T20:39:16+08:00",
+      "detail": "首次写入前ff-only成功；提交前fetch远端无并发，最初拉取未独立计时"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-23T20:39:16+08:00",
+      "detail": "读取本轮入口、知识SOP与各栏契约；同轮哈希未变化复用"
+    },
+    {
+      "name": "search",
+      "status": "failed",
+      "at": "2026-10-23T20:39:17+08:00",
+      "detail": "Grok实际Expert标签无法确认4.7，30对象未查询；独立学习/日历已处理"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-23T20:39:17+08:00",
+      "detail": "七批关闭，1基础课/5小知识、日历与指标合并；保留210池事件及全部旧卡"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-23T20:38:13+08:00",
+      "detail": "用户明确不运行本地test/check/build/预览及额外回归；来源核验与发布数据契约已处理"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "failed",
+      "detail": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，切换后标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。"
+    },
+    "people": {
+      "status": "failed",
+      "detail": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。"
+    },
+    "tickers": {
+      "status": "failed",
+      "detail": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。"
+    },
+    "ai": {
+      "status": "failed",
+      "detail": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "三周官方日历刷新，待评价0"
+    },
+    "macro": {
+      "status": "skipped",
+      "detail": "无到期/过时触发"
+    }
+  },
+  "status": "failed",
+  "error": {
+    "stage": "search",
+    "message": "Grok实际Expert标签无法确认4.7，30对象未查询；独立学习/日历已处理",
+    "stackSnippet": null
+  },
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-23T20:31:19+08:00",
+      "endedAt": "2026-10-23T20:33:01+08:00",
+      "durationMs": 102000,
+      "detail": "已保存完整失败结果并record；所有成功截止保留"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-23T20:31:19+08:00",
+      "endedAt": "2026-10-23T20:33:00+08:00",
+      "durationMs": 101000,
+      "detail": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，切换后标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-23T20:33:01+08:00",
+      "durationMs": 0,
+      "detail": "发现未执行，无新候选，不空跑"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-23T20:33:01+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，无需执行"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-23T20:33:02+08:00",
+      "endedAt": "2026-10-23T20:33:32+08:00",
+      "durationMs": 30000,
+      "detail": "已保存完整失败结果并record；所有成功截止保留"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-23T20:33:02+08:00",
+      "endedAt": "2026-10-23T20:33:31+08:00",
+      "durationMs": 29000,
+      "detail": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-23T20:33:31+08:00",
+      "durationMs": 0,
+      "detail": "发现未执行，无新候选，不空跑"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-23T20:33:31+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，无需执行"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-23T20:33:32+08:00",
+      "endedAt": "2026-10-23T20:33:34+08:00",
+      "durationMs": 2000,
+      "detail": "已保存完整失败结果并record；所有成功截止保留"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-23T20:33:32+08:00",
+      "endedAt": "2026-10-23T20:33:33+08:00",
+      "durationMs": 1000,
+      "detail": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-23T20:33:33+08:00",
+      "durationMs": 0,
+      "detail": "发现未执行，无新候选，不空跑"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-23T20:33:33+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，无需执行"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-23T20:33:34+08:00",
+      "endedAt": "2026-10-23T20:33:35+08:00",
+      "durationMs": 1000,
+      "detail": "已保存完整失败结果并record；所有成功截止保留"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-23T20:33:34+08:00",
+      "endedAt": "2026-10-23T20:33:35+08:00",
+      "durationMs": 1000,
+      "detail": "Grok已登录，刷新后可显示输入框；模型菜单仅Auto/Fast/Expert/Build/Heavy，当前标签为Expert，界面未显示4.7，无法确认指定版本。按AGENTS停止发送；Bot暂停不可用，未查询，不是无结果。"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-23T20:33:35+08:00",
+      "durationMs": 0,
+      "detail": "发现未执行，无新候选，不空跑"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-23T20:33:35+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，无需执行"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-23T20:33:36+08:00",
+      "endedAt": "2026-10-23T20:35:40+08:00",
+      "durationMs": 124000,
+      "detail": "已保存1基础课及5小知识；3条证据缓存、2条官方统计资料；论文按false跳过"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "skipped",
+      "startedAt": "2026-10-23T20:36:01+08:00",
+      "endedAt": "2026-10-23T20:36:01+08:00",
+      "durationMs": 0,
+      "detail": "无到期/过时触发，保留官方日历缓存"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-23T20:36:01+08:00",
+      "endedAt": "2026-10-23T20:36:22+08:00",
+      "durationMs": 21000,
+      "detail": "Nasdaq1282原始/83精选；pendingReview0；旧评价复用"
+    }
+  ]
+}
