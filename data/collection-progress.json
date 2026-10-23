@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T00:26:19.475Z",
+  "updatedAt": "2026-10-23T04:01:18.874Z",
   "migration": {
     "auditFile": "data/collection-runs/2026-10-18-2030.json",
     "cutoff": "2026-10-18T12:30:00.000Z",
@@ -238,74 +238,74 @@
       "lastSuccessAt": "2026-10-23T00:26:19.475Z"
     },
     "tickers:nvda:hotspots": {
-      "lastAttemptAt": "2026-10-23T00:20:10.510Z",
-      "lastAttemptEnd": "2026-10-23T00:00:00.000Z",
+      "lastAttemptAt": "2026-10-23T04:01:18.874Z",
+      "lastAttemptEnd": "2026-10-23T03:54:00.000Z",
       "lastAttemptStatus": "searched",
-      "note": "CNBC原始帖确认需求与资金约束描述；不采用5000亿美元融资或抵押完成二传。 实际查询完成，不代表全量X覆盖。",
-      "through": "2026-10-23T00:00:00.000Z",
-      "lastSuccessAt": "2026-10-23T00:20:10.510Z",
-      "runId": "2026-10-23-0800",
-      "evidenceFile": "data/collection-runs/2026-10-23-0800.json"
+      "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+      "through": "2026-10-23T03:54:00.000Z",
+      "lastSuccessAt": "2026-10-23T04:01:18.874Z",
+      "runId": "2026-10-23-1154-ticker-views",
+      "evidenceFile": "data/collection-runs/2026-10-23-1154-ticker-views.json"
     },
     "tickers:mu:hotspots": {
-      "lastAttemptAt": "2026-10-23T00:20:10.510Z",
-      "lastAttemptEnd": "2026-10-23T00:00:00.000Z",
+      "lastAttemptAt": "2026-10-23T04:01:18.874Z",
+      "lastAttemptEnd": "2026-10-23T03:54:00.000Z",
       "lastAttemptStatus": "searched",
-      "note": "无合格新事实；台湾罢工窄补查及反证已执行，生产影响/路线图原始证据仍不足，保留旧风险。 实际查询完成，不代表全量X覆盖。",
-      "through": "2026-10-23T00:00:00.000Z",
-      "lastSuccessAt": "2026-10-23T00:20:10.510Z",
-      "runId": "2026-10-23-0800",
-      "evidenceFile": "data/collection-runs/2026-10-23-0800.json"
+      "note": "直接请求前五后，针对漏掉的已知高浏览量原帖请Grok更正；排名来自更正结果，部分指标复用首轮读数。",
+      "through": "2026-10-23T03:54:00.000Z",
+      "lastSuccessAt": "2026-10-23T04:01:18.874Z",
+      "runId": "2026-10-23-1154-ticker-views",
+      "evidenceFile": "data/collection-runs/2026-10-23-1154-ticker-views.json"
     },
     "tickers:intc:hotspots": {
-      "lastAttemptAt": "2026-10-23T00:20:10.510Z",
-      "lastAttemptEnd": "2026-10-23T00:00:00.000Z",
+      "lastAttemptAt": "2026-10-23T04:01:18.874Z",
+      "lastAttemptEnd": "2026-10-23T03:54:00.000Z",
       "lastAttemptStatus": "searched",
-      "note": "无强官方新事实；热点样本仅无源历史数字与自身报告引流，排除不凑数。 实际查询完成，不代表全量X覆盖。",
-      "through": "2026-10-23T00:00:00.000Z",
-      "lastSuccessAt": "2026-10-23T00:20:10.510Z",
-      "runId": "2026-10-23-0800",
-      "evidenceFile": "data/collection-runs/2026-10-23-0800.json"
+      "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+      "through": "2026-10-23T03:54:00.000Z",
+      "lastSuccessAt": "2026-10-23T04:01:18.874Z",
+      "runId": "2026-10-23-1154-ticker-views",
+      "evidenceFile": "data/collection-runs/2026-10-23-1154-ticker-views.json"
     },
     "tickers:goog:hotspots": {
-      "lastAttemptAt": "2026-10-23T00:20:10.510Z",
-      "lastAttemptEnd": "2026-10-23T00:00:00.000Z",
+      "lastAttemptAt": "2026-10-23T04:01:18.874Z",
+      "lastAttemptEnd": "2026-10-23T03:54:00.000Z",
       "lastAttemptStatus": "searched",
-      "note": "无新财务事实；200日均线为已保存同事件，无实质变化不重发。 实际查询完成，不代表全量X覆盖。",
-      "through": "2026-10-23T00:00:00.000Z",
-      "lastSuccessAt": "2026-10-23T00:20:10.510Z",
-      "runId": "2026-10-23-0800",
-      "evidenceFile": "data/collection-runs/2026-10-23-0800.json"
+      "note": "直接请求前五并纠正已知遗漏；Grok更正结果含241614浏览的NoLimitGains原帖。只代表返回样本，不声称全X覆盖。",
+      "through": "2026-10-23T03:54:00.000Z",
+      "lastSuccessAt": "2026-10-23T04:01:18.874Z",
+      "runId": "2026-10-23-1154-ticker-views",
+      "evidenceFile": "data/collection-runs/2026-10-23-1154-ticker-views.json"
     },
     "tickers:avgo:hotspots": {
-      "lastAttemptAt": "2026-10-23T00:20:10.510Z",
-      "lastAttemptEnd": "2026-10-23T00:00:00.000Z",
+      "lastAttemptAt": "2026-10-23T04:01:18.874Z",
+      "lastAttemptEnd": "2026-10-23T03:54:00.000Z",
       "lastAttemptStatus": "searched",
-      "note": "KDDI CPO仅二传试验，无官方X原始披露；热点仅作者供应链分析，不作订单。 实际查询完成，不代表全量X覆盖。",
-      "through": "2026-10-23T00:00:00.000Z",
-      "lastSuccessAt": "2026-10-23T00:20:10.510Z",
-      "runId": "2026-10-23-0800",
-      "evidenceFile": "data/collection-runs/2026-10-23-0800.json"
+      "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+      "through": "2026-10-23T03:54:00.000Z",
+      "lastSuccessAt": "2026-10-23T04:01:18.874Z",
+      "runId": "2026-10-23-1154-ticker-views",
+      "evidenceFile": "data/collection-runs/2026-10-23-1154-ticker-views.json"
     },
     "tickers:vrt:hotspots": {
-      "lastAttemptAt": "2026-10-23T00:20:10.510Z",
-      "lastAttemptEnd": "2026-10-23T00:00:00.000Z",
+      "lastAttemptAt": "2026-10-23T04:01:18.874Z",
+      "lastAttemptEnd": "2026-10-23T03:54:00.000Z",
       "lastAttemptStatus": "searched",
-      "note": "DSX同10/21旧事件，复用缓存；30–50%及1.4x无原始证据，不新增事实或热点。 实际查询完成，不代表全量X覆盖。",
-      "through": "2026-10-23T00:00:00.000Z",
-      "lastSuccessAt": "2026-10-23T00:20:10.510Z",
-      "runId": "2026-10-23-0800",
-      "evidenceFile": "data/collection-runs/2026-10-23-0800.json"
+      "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+      "through": "2026-10-23T03:54:00.000Z",
+      "lastSuccessAt": "2026-10-23T04:01:18.874Z",
+      "runId": "2026-10-23-1154-ticker-views",
+      "evidenceFile": "data/collection-runs/2026-10-23-1154-ticker-views.json"
     },
     "tickers:tsm:hotspots": {
-      "lastAttemptAt": "2026-10-23T00:20:10.510Z",
-      "lastAttemptEnd": "2026-10-23T00:00:00.000Z",
+      "lastAttemptAt": "2026-10-23T04:01:18.874Z",
+      "lastAttemptEnd": "2026-10-23T03:54:00.000Z",
       "lastAttemptStatus": "searched",
-      "note": "独立发现后命中本轮已核Reuters及反证缓存，新增有限主张事实与明确二传热点。 实际查询完成，不代表全量X覆盖。",
-      "through": "2026-10-23T00:00:00.000Z",
-      "lastSuccessAt": "2026-10-23T00:20:10.510Z",
-      "runId": "2026-10-23-0800",
-      "evidenceFile": "data/collection-runs/2026-10-23-0800.json"
+      "note": "Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。",
+      "through": "2026-10-23T03:54:00.000Z",
+      "lastSuccessAt": "2026-10-23T04:01:18.874Z",
+      "runId": "2026-10-23-1154-ticker-views",
+      "evidenceFile": "data/collection-runs/2026-10-23-1154-ticker-views.json"
     }
   },
   "pending": [
@@ -943,6 +943,13 @@
     "2026-10-23-0800:ai:openai:2026-10-22T00:00:00.000Z:2026-10-23T00:00:00.000Z",
     "2026-10-23-0800:ai:anthropic:2026-10-22T00:00:00.000Z:2026-10-23T00:00:00.000Z",
     "2026-10-23-0800:ai:goog-ai:2026-10-22T00:00:00.000Z:2026-10-23T00:00:00.000Z",
-    "2026-10-23-0800:ai:ai-others:2026-10-22T00:00:00.000Z:2026-10-23T00:00:00.000Z"
+    "2026-10-23-0800:ai:ai-others:2026-10-22T00:00:00.000Z:2026-10-23T00:00:00.000Z",
+    "2026-10-23-1154-ticker-views:tickers:nvda:hotspots:2026-10-23T00:00:00.000Z:2026-10-23T03:54:00.000Z",
+    "2026-10-23-1154-ticker-views:tickers:mu:hotspots:2026-10-23T00:00:00.000Z:2026-10-23T03:54:00.000Z",
+    "2026-10-23-1154-ticker-views:tickers:intc:hotspots:2026-10-23T00:00:00.000Z:2026-10-23T03:54:00.000Z",
+    "2026-10-23-1154-ticker-views:tickers:goog:hotspots:2026-10-23T00:00:00.000Z:2026-10-23T03:54:00.000Z",
+    "2026-10-23-1154-ticker-views:tickers:avgo:hotspots:2026-10-23T00:00:00.000Z:2026-10-23T03:54:00.000Z",
+    "2026-10-23-1154-ticker-views:tickers:vrt:hotspots:2026-10-23T00:00:00.000Z:2026-10-23T03:54:00.000Z",
+    "2026-10-23-1154-ticker-views:tickers:tsm:hotspots:2026-10-23T00:00:00.000Z:2026-10-23T03:54:00.000Z"
   ]
 }

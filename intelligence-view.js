@@ -15,20 +15,20 @@
     if(data.hotspotCoverage?.tabs?.some(r=>r.status!=='complete'))return '本次部分热点未完成采集，保留此前内容';
     return '';
   }
-  const hasInteraction=item=>['likes','reposts','replies'].some(k=>Number.isInteger(item.engagement?.[k])&&item.engagement[k]>0);
+  const hasInteraction=item=>Number.isInteger(item.engagement?.views)&&item.engagement.views>0;
   function heatCompare(a,b) {
-    for (const metric of ['likes','reposts','replies']) {
+    for (const metric of ['views']) {
       const av=Number.isFinite(a.engagement?.[metric])?a.engagement[metric]:-1;
       const bv=Number.isFinite(b.engagement?.[metric])?b.engagement[metric]:-1;
       if(av!==bv)return bv-av;
     }
-    return parse(b.publishedAt)-parse(a.publishedAt);
+    return parse(b.publishedAt)-parse(a.publishedAt)||String(a.url).localeCompare(String(b.url));
   }
   function hotspotItems(data, tab, policy) {
     const report=data.hotspotCoverage?.tabs?.find(r=>r.id===tab.id);
     const cutoff=parse(report?.cutoff || data.hotspotCutoff);
     return (data.hotspots||[]).filter(i=>i.tabId===tab.id && (!cutoff || parse(i.publishedAt)>=cutoff-(policy?.windowDays||1)*86400000))
-      .sort(heatCompare).slice(0,policy?.limit||3);
+      .sort(heatCompare).slice(0,policy?.limit||5);
   }
   function card(item, {hotspot=false, label='', heading='h4'}={}) {
     const primary=item.sources?.[0] || {};
@@ -37,7 +37,7 @@
     const published=item.publishedAt || primary.publishedAt;
     const people=(item.people||[]).map(p=>`<span class="person-chip"><span class="person-chip-name">${escape(p.name)}</span><span class="person-chip-intro">${escape(p.intro)}</span></span>`).join('');
     const impact=item.whyItMatters || item.impact;
-    const metrics=Object.entries({likes:'赞',reposts:'转发',replies:'回复',views:'浏览'}).filter(([field])=>Number.isInteger(item.engagement?.[field])).map(([field,name])=>`${name} ${Number(item.engagement[field]).toLocaleString('zh-CN')}`).join(' · ');
+    const metrics=Object.entries({views:'浏览',likes:'赞',reposts:'转发',replies:'回复'}).filter(([field])=>Number.isInteger(item.engagement?.[field])).map(([field,name])=>`${name} ${Number(item.engagement[field]).toLocaleString('zh-CN')}`).join(' · ');
     return `<article class="signal-card${hotspot?' ticker-hotspot':''}">
       <div class="signal-card-head signal-meta"><span class="signal-author">作者 <strong>${escape(author)}</strong></span><time datetime="${escape(published)}">${escape(time(published))}（北京时间）</time><span class="signal-verification">${hotspot?(hasInteraction(item)?'非官方 · 讨论热点':'非官方 · 讨论线索'):item.selection==='engagement'?'热度动态':'待独立核验'}</span>${label?`<span>${escape(label)}</span>`:''}</div>
       <${heading}>${escape(item.title)}</${heading}>

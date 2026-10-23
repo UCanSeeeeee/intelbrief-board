@@ -3,10 +3,12 @@
   "hotspotPolicy": {
     "enabled": true,
     "appliesTo": "all-configured-tabs",
-    "limit": 3,
+    "limit": 5,
     "windowDays": 1,
     "sourceNature": "non-official",
-    "ranking": "observed-likes-reposts-replies",
+    "ranking": "grok-observed-views-desc",
+    "discovery": "direct-grok-cashtag-top-five",
+    "missingViews": "unranked-audit-only",
     "independentOfValueSelection": true
   },
   "researchPriorities": [
@@ -80,6 +82,7 @@
       "identity": "Alphabet Inc. (Google)",
       "symbol": "GOOG",
       "cashtag": "$GOOG",
+      "cashtags": ["$GOOG", "$GOOGL"],
       "handle": "Google",
       "handles": [
         "Google",

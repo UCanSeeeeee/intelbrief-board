@@ -19,13 +19,13 @@ if(input.auditFile){
     console.log('热点窗口已记录；保留原审计和游标，仅幂等合并现有载荷。');process.exit(0);
   }
   const reports=new Map(input.hotspotTabs.map(r=>[r.id,r]));
-  audit.status='complete';audit.finishedAt=new Date().toISOString();audit.conversationUrl=input.conversationUrl;
+  audit.status=input.hotspotTabs.some(r=>r.status!=='complete')?'partial':'complete';audit.finishedAt=new Date().toISOString();audit.conversationUrl=input.conversationUrl;
   audit.sourceObservation=input.observationNote;
   const batch=audit.batches.find(b=>b.page==='tickers');
-  batch.output={hotspots:data.hotspots,hotspotTabs:input.hotspotTabs};
-  batch.checklist=batch.checklist.map(c=>({...c,status:reports.get(c.tabId)?.status==='failed'?'insufficient':'covered',note:reports.get(c.tabId)?.note}));
+  batch.output={hotspots:input.hotspots,hotspotTabs:input.hotspotTabs};
+  batch.checklist=batch.checklist.map(c=>({...c,status:reports.get(c.tabId)?.status==='complete'?'covered':'insufficient',note:reports.get(c.tabId)?.note}));
   batch.excludedCandidates=input.excludedCandidates||[];
-  batch.toolEvidence='浏览器工作过程可见三股首轮10帖及5帖补取；其余四股首轮各10帖及产业主题补查各10帖的“已搜索𝕏”工具记录；没有普通网页检索。';
+  batch.toolEvidence=input.toolEvidence||'执行证据见本轮原始采集记录；未提供额外工具计数。';
   audit.collectionResults=units.map(u=>({unit:u.id,start:u.start,end:u.end,status:reports.get(u.tabId).status==='failed'?'failed':'searched',queries:reports.get(u.tabId).queries,note:reports.get(u.tabId).note,evidenceFile:input.auditFile}));
   fs.writeFileSync(auditPath,JSON.stringify(audit,null,2)+'\n');
   const state=progress.apply(root,{runId:audit.id,cutoff:input.cutoff,results:audit.collectionResults});

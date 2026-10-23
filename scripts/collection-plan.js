@@ -38,6 +38,7 @@ function createPlan(cutoff, config = loadConfig(), root = ROOT) {
       action,
       ...(batch.id==='learning'?{components:{papers:action==='run'&&normalized.slot==='08:00',basics:action==='run'&&normalized.slot===(weekend?'08:00':'20:30'),counterintuitive:action==='run'&&normalized.slot===(weekend?'08:00':'20:30')}}:{}),
       isolated: true,
+      ...(batch.id==='tickers'?{hotspotInstruction:'直接让Grok按每股cashtag返回本对象窗口内浏览量前五帖子；Google覆盖$GOOG和$GOOGL。由Grok完成检索和浏览量排序，不预先限成1候选、不附加产业主题词、不按点赞重排。保存views、作者、原文、时间、链接及覆盖缺口，缺views不排名；不另行设计多轮人工搜索流程。'}:{}),
       collectionUnits: collectionUnits.filter(unit=>unit.page===batch.id),
       inputRule: '只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。',
       outputRule: '独立记录查询、候选、缺口和结果；完成后才交给总编排合并、全站校验与发布。'

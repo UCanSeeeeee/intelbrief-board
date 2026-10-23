@@ -8,7 +8,7 @@ function stamps(item,old,now){
   return {...(old?.firstIncludedAt?{firstIncludedAt:old.firstIncludedAt}:!old?{firstIncludedAt:now.toISOString()}:{}),
     ...(changed?{lastMaterialAt:now.toISOString()}:old?.lastMaterialAt?{lastMaterialAt:old.lastMaterialAt}:{})};
 }
-function heatCompare(a,b){for(const k of ['likes','reposts','replies']){const d=(Number.isInteger(b.engagement?.[k])?b.engagement[k]:-1)-(Number.isInteger(a.engagement?.[k])?a.engagement[k]:-1);if(d)return d;}return Date.parse(b.publishedAt)-Date.parse(a.publishedAt);}
+function heatCompare(a,b){const d=(Number.isInteger(b.engagement?.views)?b.engagement.views:-1)-(Number.isInteger(a.engagement?.views)?a.engagement.views:-1);return d||Date.parse(b.publishedAt)-Date.parse(a.publishedAt)||String(a.url).localeCompare(String(b.url));}
 function mergeHotspots(input,config,existing,cutoff,now=new Date()){
   assert(config.hotspotPolicy?.enabled,'个股热点尚未启用');
   assert(date(cutoff)&&Date.parse(cutoff)<=+now,'热点截止时间无效');
@@ -29,26 +29,32 @@ function mergeHotspots(input,config,existing,cutoff,now=new Date()){
     assert(!urls.has(item.tabId+':'+item.url),'同一股票不能重复收录同一原帖');urls.add(item.tabId+':'+item.url);
     assert(date(item.publishedAt)&&Date.parse(item.publishedAt)<=Date.parse(cutoff),'热点缺少准确发帖时间或晚于截止');
     const unit=(input.hotspotCollectionUnits||input.collectionUnits||[]).find(u=>u.object===item.tabId+':hotspots');
-    const old=prior.find(p=>p.tabId===item.tabId&&p.eventKey===item.eventKey);
+    const old=prior.find(p=>p.tabId===item.tabId&&(p.url===item.url||p.eventKey===item.eventKey));
     if(unit&&!old)assert(unit.needsQuery&&Date.parse(item.publishedAt)>=Date.parse(unit.start)&&Date.parse(item.publishedAt)<Date.parse(unit.end),'热点新增超出本对象严格增量窗口');
     assert(Date.parse(item.publishedAt)>=Date.parse(cutoff)-(config.hotspotPolicy.windowDays||1)*86400000,'热点超出展示窗口');
-    for(const field of ['title','fact','whyItMatters','originalText','caveat'])assert(typeof item[field]==='string'&&item[field].trim(),'热点缺少'+field);
+    for(const field of ['title','fact','originalText'])assert(typeof item[field]==='string'&&item[field].trim(),'热点缺少'+field);
     assert(item.verification==='collector-report'&&item.sourceNature==='non-official','热点须标明非官方、采集器转述');
     assert(item.eventTime?date(item.eventTime):!!item.eventTimeNote?.trim(),'热点实际事件时间未知须注明，不能以发帖时间冒充');
     const engagement=item.engagement||{};
     assert(date(engagement.capturedAt)&&Date.parse(engagement.capturedAt)<=+now&&['grok-web-observed','grok-app-observed'].includes(engagement.source),'热点缺少实际观察时间和来源');
-    assert(['likes','reposts','replies'].some(k=>Number.isInteger(engagement[k])),'没有可见互动，不能声称热度排名');
+    assert(Number.isInteger(engagement.views)&&engagement.views>=0,'浏览量缺失，不能进入浏览量前五；请保留在未排名候选审计');
     for(const k of ['likes','reposts','replies','views'])assert(engagement[k]==null||(Number.isInteger(engagement[k])&&engagement[k]>=0),'互动数不能估算或为负');
-    const out={...item,...stamps(item,old,now)};delete out.weeklyRanks;delete out.tier;
+    const out={...item,...(old?.url===item.url?{eventKey:old.eventKey}:{}),...stamps(item,old,now)};delete out.weeklyRanks;delete out.tier;
     annotateCard(out,undefined,'ticker-hotspot.'+item.eventKey);
     return out;
   });
   const hotspots=[];
   for(const tab of config.tabs){
     const report=reports.get(tab.id),anchor=Date.parse(report.cutoff||cutoff);
-    const pool=new Map(prior.filter(i=>i.tabId===tab.id&&(report.status==='failed'||Date.parse(i.publishedAt)>=anchor-(config.hotspotPolicy.windowDays||1)*86400000)).map(i=>[i.eventKey,i]));
-    for(const item of incoming.filter(i=>i.tabId===tab.id))pool.set(item.eventKey,item);
-    hotspots.push(...[...pool.values()].sort(heatCompare).slice(0,config.hotspotPolicy.limit||3));
+    if(report.status==='failed'){hotspots.push(...(existing.hotspots||[]).filter(i=>i.tabId===tab.id));continue;}
+    const snapshot=input.hotspotSnapshot===true&&report.status==='complete';
+    if(snapshot){
+      const unit=(input.hotspotCollectionUnits||[]).find(u=>u.object===tab.id+':hotspots');
+      assert(unit&&Date.parse(unit.start)<=anchor-(config.hotspotPolicy.windowDays||1)*86400000&&Date.parse(unit.end)===anchor,'完整榜单替换须覆盖全部展示窗口');
+    }
+    const pool=new Map((snapshot?[]:prior).filter(i=>i.tabId===tab.id&&Date.parse(i.publishedAt)>=anchor-(config.hotspotPolicy.windowDays||1)*86400000).map(i=>[i.url,i]));
+    for(const item of incoming.filter(i=>i.tabId===tab.id))pool.set(item.url,item);
+    hotspots.push(...[...pool.values()].filter(i=>Number.isInteger(i.engagement?.views)&&i.engagement.views>=0).sort(heatCompare).slice(0,config.hotspotPolicy.limit||5));
   }
   const chosen=new Set(hotspots.map(i=>i.tabId+':'+i.eventKey));
   const hotspotRetained=[...new Map(prior.filter(i=>!chosen.has(i.tabId+':'+i.eventKey)&&Date.parse(i.lastMaterialAt||i.firstIncludedAt||i.publishedAt)>=Date.parse(cutoff)-7*86400000).map(i=>[i.tabId+':'+i.eventKey,i])).values()];
