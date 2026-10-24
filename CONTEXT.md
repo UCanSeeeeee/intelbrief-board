@@ -35,7 +35,7 @@
 | 当前调度、发布与运行证据 | docs/GROK_BOT_OPERATIONS.md；data/ops-runs、data/collection-runs |
 | 增量、失败恢复、耗时记录 | docs/INCREMENTAL_COLLECTION.md；data/collection-progress.json；collection:plan / collection:progress |
 | 累计阅读、周末归属、保留 | docs/TRADING_DAY_READING.md；data/reading-board.json |
-| UI及侧栏顺序 | docs/DESIGN_SYSTEM.md；styles.css |
+| UI及侧栏顺序、非默认宋徽宗审美预览（`?style=huizong`，待用户审阅） | docs/DESIGN_SYSTEM.md；styles.css、reading.css、theme.js |
 | 知识库和Grok检索SOP | config/research-guidance.json指向的项目资料 |
 | 美股5+10及冻结归档 | docs/STOCK_BRIEF.md；config/stock-brief.json；data/stock-briefs |
 | 顶部情绪/VIX、来源与降级 | docs/MARKET_SENTIMENT.md、docs/MARKET_VOLATILITY.md；market-sentiment.mjs、market-volatility.mjs |
