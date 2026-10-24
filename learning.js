@@ -42,9 +42,9 @@
           </section>
           <section class="lesson-version fable-explanation" aria-labelledby="${escape(item.id)}-concept">
             <h3 id="${escape(item.id)}-concept">故事背后：${escape(item.concept)}</h3>
-            <p><strong>定义</strong>${escape(item.professional.definition)}</p>
-            <p><strong>运行机制</strong>${escape(item.professional.mechanism)}</p>
-            <p><strong>为什么重要</strong>${escape(item.professional.whyItMatters)}</p>
+            <p>${escape(item.professional.definition)}</p>
+            <p>${escape(item.professional.mechanism)}</p>
+            <p>${escape(item.professional.whyItMatters)}</p>
             ${list(item.professional.signals)}
             ${mapping(item.story.mapping)}
             <p class="analogy-boundary"><strong>类比边界</strong>${escape(item.story.boundary)}</p>
@@ -55,20 +55,20 @@
       </article>`;
     }
     return `<article id="lesson-${escape(item.id)}" class="learning-card lesson-card">
-      <header class="lesson-head"><div><span class="lesson-category">${escape(item.category)}</span><h2>${escape(item.title)}</h2></div><time>更新 ${escape(formatTime(item.updatedAt))}</time></header>
+      <header class="lesson-head"><h2>${escape(item.title)}</h2><time>更新 ${escape(formatTime(item.updatedAt))}</time></header>
       <div class="lesson-versions">
         <section class="lesson-version professional-version" aria-labelledby="${escape(item.id)}-professional">
           <h3 id="${escape(item.id)}-professional">专业版</h3>
-          <p><strong>定义</strong>${escape(item.professional.definition)}</p>
-          <p><strong>运行机制</strong>${escape(item.professional.mechanism)}</p>
-          <p><strong>为什么重要</strong>${escape(item.professional.whyItMatters)}</p>
+          <p>${escape(item.professional.definition)}</p>
+          <p>${escape(item.professional.mechanism)}</p>
+          <p>${escape(item.professional.whyItMatters)}</p>
           ${list(item.professional.signals)}
         </section>
         <section class="lesson-version story-version" aria-labelledby="${escape(item.id)}-story">
-          <h3 id="${escape(item.id)}-story">故事版</h3><p class="story-title">${escape(item.story.title)}</p>
+          <h3 id="${escape(item.id)}-story">${escape(item.story.title)}</h3>
           <p>${escape(item.story.body)}</p>
           ${mapping(item.story.mapping)}
-          <p class="analogy-boundary"><strong>这个故事不能代替什么</strong>${escape(item.story.boundary)}</p>
+          <p class="analogy-boundary"><strong>类比边界</strong>${escape(item.story.boundary)}</p>
         </section>
       </div>
       ${Array.isArray(item.commonMistakes) && item.commonMistakes.length ? `<section class="lesson-mistakes"><h3>常见误区</h3>${list(item.commonMistakes)}</section>` : ''}

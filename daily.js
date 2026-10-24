@@ -45,10 +45,12 @@
           const history=entry.history?.length?`<section class="daily-history"><h5>事件进展时间线</h5>${entry.history.map(h=>`<p>${V.escape(V.time(h.changedAt))} · ${V.escape(h.event.fact)}</p>`).join('')}</section>`:'';
           return `<div id="${anchor}" class="daily-entry">${review}${V.card(item,{hotspot:entry.hotspot,label:entry.legacy?'发布于所选日':V.day(item.firstIncludedAt)===selected?'当日收录':'当日进展'})}${history}</div>`;
         }).join('');
-        return `<section class="daily-subsection"><header><h3>${V.escape(group.label)}</h3>${section.id!=='news'?`<a href="${section.path}?tab=${encodeURIComponent(group.id)}">查看栏目 ↗</a>`:''}</header><div class="signal-list">${html}</div></section>`;
+        const groupTitle=section.id==='news'?V.escape(group.label):`<a class="daily-heading-link" href="${section.path}?tab=${encodeURIComponent(group.id)}">${V.escape(group.label)} <span aria-hidden="true">↗</span></a>`;
+        return `<section class="daily-subsection"><header><h3>${groupTitle}</h3></header><div class="signal-list">${html}</div></section>`;
       }).join('');
       const notice=section.error?'':V.collectionNotice(section.data);
-      return `<section class="daily-category" id="daily-${section.id}"><header class="daily-category-head"><h2>${section.name}</h2><a href="${section.path}">进入栏目 ↗</a></header>${section.error?'<p class="empty-state">本栏目读取失败，其他栏目仍可阅读。</p>':`${notice?`<p class="collection-notice" role="status">${V.escape(notice)}</p>`:''}${sections||`<p class="daily-empty">${notice?'所选日期暂无已收录内容':'本日暂无新增或实质进展'}</p>`}`}</section>`;
+      const content=section.error?'<p class="empty-state">本栏目读取失败，其他栏目仍可阅读。</p>':sections?`${notice?`<p class="collection-notice" role="status">${V.escape(notice)}</p>`:''}${sections}`:notice?`<p class="collection-notice" role="status">${V.escape(notice)}；所选日期暂无已收录内容。</p>`:'<p class="daily-empty">本日暂无新增或实质进展</p>';
+      return `<section class="daily-category" id="daily-${section.id}"><header class="daily-category-head"><h2><a class="daily-heading-link" href="${section.path}">${section.name} <span aria-hidden="true">↗</span></a></h2></header>${content}</section>`;
     }).join('');
     const url=new URL(location.href);url.searchParams.set('date',selected);history.replaceState(null,'',url.pathname+url.search);
   }

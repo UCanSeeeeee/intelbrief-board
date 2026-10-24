@@ -23,10 +23,10 @@
     const primaryUrl = originalUrl(primary);
     const eventTime = event.eventTime ? time(event.eventTime) : event.eventTimeNote;
     return `<article class="x-card brief-card">
-      <div class="brief-author"><span>作者 <strong>@${escape(primary.username || '未查明')}</strong></span><span class="brief-published">发布 ${escape(time(primary.publishedAt))}（北京时间）</span><span class="signal-verification">${primary.verification === 'direct' ? '已直读原帖' : '待独立核验'}</span><span class="brief-change">${escape(changeLabel||event.change)}</span></div>
+      <div class="brief-author"><span><strong>@${escape(primary.username || '未查明')}</strong></span><span class="brief-published">发布 ${escape(time(primary.publishedAt))}（北京时间）</span><span class="signal-verification">${primary.verification === 'direct' ? '已直读原帖' : '待独立核验'}</span><span class="brief-change">${escape(changeLabel||event.change)}</span></div>
       <div class="brief-card-top"><h3>${escape(event.title)}</h3></div>
       ${peopleNote(event.people)}
-      <div class="brief-copy"><p class="brief-fact"><strong>信息摘要</strong> ${escape(event.fact)}</p><p class="brief-impact"><strong>影响判断</strong> ${escape(event.impact)}</p></div>
+      <div class="brief-copy"><p class="brief-fact">${escape(event.fact)}</p><p class="brief-impact"><strong>影响：</strong>${escape(event.impact)}</p></div>
       ${knowledge}
       <div class="brief-scope"><p><strong>影响范围</strong> ${event.affected.map(escape).join('、')}</p><p><strong>方向与窗口</strong> ${escape(event.direction)} · ${escape(event.horizon)}</p></div>
       <div class="brief-primary-source"><p><strong>事件时间</strong> ${escape(eventTime)}${event.eventTime?'（北京时间）':''}${event.futureEventNote ? ' · '+escape(event.futureEventNote) : ''}</p>${primaryUrl?`<a href="${escape(primaryUrl)}" target="_blank" rel="noopener noreferrer">原文链接 · @${escape(primary.username)} ↗</a>`:'<span>原文链接待核验</span>'}</div>

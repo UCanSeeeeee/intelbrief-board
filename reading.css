@@ -84,6 +84,9 @@ body[data-page] .brief-card, .signal-card, .learning-card { display: flex; flex-
 .daily-history h5 { margin: 0 0 8px; font-size: 14px; }
 .daily-history p { margin: 0 0 8px; }
 .hotspot-cutoff { font-size: 14px; color: var(--text-muted); }
+.daily-category-head .daily-heading-link, .daily-subsection .daily-heading-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: inherit; font: inherit; text-decoration: none; }
+.daily-heading-link > span { color: var(--text-muted); font-size: 14px; font-weight: 400; }
+.daily-heading-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 1100px) {
   .daily-category-head { padding-left: 44px; }
   .daily-category { scroll-margin-top: 8px; }
@@ -101,7 +104,7 @@ body[data-page] .card-people { margin: 0; font-size: 14px; gap: 4px 10px; }
 .person-chip { padding: 0; border: 0; border-radius: 0; }
 body[data-page] .brief-copy, .signal-copy { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: start; }
 body[data-page] .brief-copy > p, .signal-copy > p { min-width: 0; margin: 0; color: var(--text); font-size: 17px; line-height: 1.85; }
-body[data-page] .brief-copy > p > strong, .signal-copy > p > strong { display: block; margin: 0 0 6px; color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+body[data-page] .brief-copy > p > strong, .signal-copy > p > strong { display: inline; margin: 0; color: var(--text-secondary); font-size: 14px; font-weight: 500; }
 body[data-page] .brief-copy .brief-impact, .signal-copy .signal-impact { padding: 0; border: 0; }
 body[data-page] .brief-knowledge { margin: 0; padding: 0; border: 0; }
 body[data-page] .brief-knowledge > strong { font-size: 14px; font-weight: 500; color: var(--text-secondary); }

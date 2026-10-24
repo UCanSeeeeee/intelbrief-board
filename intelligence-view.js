@@ -39,10 +39,10 @@
     const impact=item.whyItMatters || item.impact;
     const metrics=Object.entries({views:'浏览',likes:'赞',reposts:'转发',replies:'回复'}).filter(([field])=>Number.isInteger(item.engagement?.[field])).map(([field,name])=>`${name} ${Number(item.engagement[field]).toLocaleString('zh-CN')}`).join(' · ');
     return `<article class="signal-card${hotspot?' ticker-hotspot':''}">
-      <div class="signal-card-head signal-meta"><span class="signal-author">作者 <strong>${escape(author)}</strong></span><time datetime="${escape(published)}">${escape(time(published))}（北京时间）</time><span class="signal-verification">${hotspot?(hasInteraction(item)?'非官方 · 讨论热点':'非官方 · 讨论线索'):item.selection==='engagement'?'热度动态':'待独立核验'}</span>${label?`<span>${escape(label)}</span>`:''}</div>
+      <div class="signal-card-head signal-meta"><span class="signal-author"><strong>${escape(author)}</strong></span><time datetime="${escape(published)}">${escape(time(published))}（北京时间）</time><span class="signal-verification">${hotspot?(hasInteraction(item)?'非官方 · 讨论热点':'非官方 · 讨论线索'):item.selection==='engagement'?'热度动态':'待独立核验'}</span>${label?`<span>${escape(label)}</span>`:''}</div>
       <${heading}>${escape(item.title)}</${heading}>
       ${people?`<p class="card-people"><strong>相关人物</strong>${people}</p>`:''}
-      <div class="signal-copy"><p class="signal-fact"><strong>信息摘要</strong>${escape(item.fact)}</p>${impact?`<p class="signal-impact"><strong>影响判断</strong>${escape(impact)}</p>`:''}</div>
+      <div class="signal-copy"><p class="signal-fact">${escape(item.fact)}</p>${impact?`<p class="signal-impact"><strong>影响：</strong>${escape(impact)}</p>`:''}</div>
       ${item.knowledgeApplication?`<div class="brief-knowledge"><strong>${escape((item.disciplines||[]).join(' × '))}</strong><p>${escape(item.knowledgeApplication)}</p></div>`:''}
       ${item.affected?.length?`<p class="signal-scope"><strong>影响范围</strong>${item.affected.map(escape).join('、')}</p>`:''}
       ${item.direction?`<p class="signal-scope"><strong>方向与窗口</strong>${escape(item.direction)} · ${escape(item.horizon)}</p>`:''}
