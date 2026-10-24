@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 1,
+  "id": "repair-trump-20261024-171520",
+  "cutoff": "2026-10-24T09:15:20Z",
+  "status": "complete",
+  "scope": "people:donald-trump only",
+  "purpose": "修复漏执行热度补位，并定点回溯七天遗漏的政策条目；普通增量与补遗分开。",
+  "diagnosis": {
+    "frontend": "people.items及retainedItems没有特朗普条目，页面按现有窗口正常过滤；不是UI隐藏。",
+    "collection": "15:42批次仅处理炼油政策候选，未执行三来源热度补位；旧热度超24小时，周榜无合格存量。"
+  },
+  "checklist": [
+    {
+      "unit": "people:donald-trump",
+      "kind": "incremental",
+      "start": "2026-10-24T07:42:00Z",
+      "end": "2026-10-24T09:15:20Z",
+      "question": "三来源新增可执行政策及公开动态",
+      "status": "no-result"
+    },
+    {
+      "kind": "repair-backfill",
+      "start": "2026-10-17T09:15:20Z",
+      "end": "2026-10-24T07:42:00Z",
+      "question": "原有周榜为何空白：定点补遗已遗漏可执行政策；最近24h按三来源返回真实互动前列用于补位",
+      "status": "covered"
+    },
+    {
+      "kind": "source-verification",
+      "question": "TrumpDailyPosts主帖是否同步本人内容；政府原帖的政策阶段与时间",
+      "status": "covered"
+    },
+    {
+      "kind": "counter-evidence",
+      "question": "是否旧闻、撤回、未签署、仅主张或落实条件缺失",
+      "status": "covered"
+    }
+  ],
+  "plannedQueries": [
+    "(from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) since:2026-10-23_09:15:20_UTC until:2026-10-24_09:15:20_UTC；不加主题词，热度按likes+2*reposts+replies+quotes",
+    "(from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) (tariff OR trade OR export OR semiconductor OR energy OR tax OR fiscal OR regulation OR AI) since:2026-10-17_09:15:20_UTC until:2026-10-24_09:15:20_UTC；周榜补遗",
+    "新增候选对应政策原线程、政府实施声明、日期及更正反查"
+  ],
+  "collectionResults": [
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-24T09:15:20Z",
+      "status": "no-result",
+      "queries": [
+        "from:TrumpDailyPosts since_time:1792827720 until_time:1792833320 -filter:replies mode:Latest",
+        "from:WhiteHouse since_time:1792827720 until_time:1792833320 -filter:replies mode:Latest",
+        "from:POTUS since_time:1792827720 until_time:1792833320"
+      ],
+      "note": "正常增量窗三来源本次未取得新帖；另有3条热度和2条政策补遗，已单列，不能冒充增量新事件。",
+      "evidenceFile": "data/collection-runs/repair-trump-20261024-171520.json"
+    }
+  ],
+  "batches": [
+    {
+      "page": "people",
+      "output": {
+        "checkedAt": "2026-10-24T09:25:41Z",
+        "collectionMode": "repair-backfill",
+        "collectionUnits": [
+          {
+            "id": "people:donald-trump",
+            "page": "people",
+            "object": "donald-trump",
+            "label": "特朗普",
+            "start": "2026-10-24T07:42:00.000Z",
+            "end": "2026-10-24T09:15:20Z",
+            "needsQuery": true
+          }
+        ],
+        "tabs": [
+          {
+            "id": "donald-trump",
+            "status": "complete",
+            "note": "三来源增量与定点遗漏修复均完成；24h入选3条热度、周榜2条主管部门原始政策披露，金额/执行阶段缺口保留。"
+          }
+        ],
+        "items": [
+          {
+            "author": "@WhiteHouse",
+            "url": "https://x.com/WhiteHouse/status/2113657252343353448",
+            "publishedAt": "2026-10-23T15:42:13Z",
+            "excerpt": "43 years ago, Hezbollah terrorists attacked U.S. Marine barracks in Beirut, Lebanon, and killed 241 Americans. We will never forget their sacrifice. The attack was directed, financed and ordered by the same evil Iranian regime that President Trump is fighting today.",
+            "engagement": {
+              "likes": 21269,
+              "reposts": 5942,
+              "replies": 2534,
+              "quotes": 471,
+              "capturedAt": "2026-10-24T09:25:41Z",
+              "source": "grok-web-observed"
+            },
+            "heatScore": 36158,
+            "eventKey": "trump-heat-2113657252343353448",
+            "tabIds": [
+              "donald-trump"
+            ],
+            "title": "白宫纪念贝鲁特军营袭击",
+            "fact": "白宫纪念1983年贝鲁特美军军营袭击中遇难的241名美国人，并在声明中指责伊朗政权支持该袭击，将纪念活动与当前对伊立场联系起来。",
+            "whyItMatters": "这反映白宫对伊朗的公开立场；需继续观察是否出现影响能源供应、航运或制裁的具体措施。",
+            "counterCase": "纪念性和立场表述不等于新的制裁或军事行动。",
+            "affected": [],
+            "eventTime": null,
+            "eventTimeNote": "纪念的是1983年10月23日的历史袭击；本次声明于2026年10月23日发布。",
+            "verification": "collector-report",
+            "tier": "watch",
+            "selection": "engagement",
+            "weeklyRanks": {}
+          },
+          {
+            "author": "@WhiteHouse",
+            "url": "https://x.com/WhiteHouse/status/2113726537677807943",
+            "publishedAt": "2026-10-23T20:17:32Z",
+            "excerpt": "Every single Democrat in Congress voted against President Trump’s historic tax cuts, including No Tax on Tips. They voted against Voter I.D. They voted against Proof of Citizenship. They voted AGAINST securing our borders. They vote against the American people.",
+            "engagement": {
+              "likes": 22842,
+              "reposts": 4849,
+              "replies": 1145,
+              "quotes": 148,
+              "capturedAt": "2026-10-24T09:25:41Z",
+              "source": "grok-web-observed"
+            },
+            "heatScore": 33833,
+            "eventKey": "trump-heat-2113726537677807943",
+            "tabIds": [
+              "donald-trump"
+            ],
+            "title": "白宫就减税与国会投票批评民主党",
+            "fact": "白宫指责国会民主党人反对包括小费免税在内的减税议程，以及选民身份、公民身份证明和边境安全措施。这是白宫对相关投票的政治表述。",
+            "whyItMatters": "涉及税收议程，但帖子没有公布新的税法生效日期或企业税率变化。",
+            "counterCase": "未独立逐项核对国会投票记录，不把该政治表述视为新立法已经生效。",
+            "affected": [],
+            "eventTime": null,
+            "eventTimeNote": "相关事件的精确发生时间未确认，发布时间另列。",
+            "verification": "collector-report",
+            "tier": "watch",
+            "selection": "engagement",
+            "weeklyRanks": {}
+          },
+          {
+            "author": "@WhiteHouse",
+            "url": "https://x.com/WhiteHouse/status/2113649451697164594",
+            "publishedAt": "2026-10-23T15:11:13Z",
+            "excerpt": "NEW UFO DROP 🛸👀 https://www.war.gov/UFO/",
+            "engagement": {
+              "likes": 14989,
+              "reposts": 3816,
+              "replies": 1311,
+              "quotes": 715,
+              "capturedAt": "2026-10-24T09:25:41Z",
+              "source": "grok-web-observed"
+            },
+            "heatScore": 24647,
+            "eventKey": "trump-heat-2113649451697164594",
+            "tabIds": [
+              "donald-trump"
+            ],
+            "title": "白宫分享 UFO 资料入口",
+            "fact": "白宫分享指向 war.gov/UFO 页面的链接，并以“新一批UFO资料”作说明。",
+            "whyItMatters": "按既定规则作为官方高互动动态保留；与半导体、电力或AI需求的直接联系尚未建立。",
+            "counterCase": "资料入口分享不构成可量化的产业或盈利变化。",
+            "affected": [],
+            "eventTime": null,
+            "eventTimeNote": "相关事件的精确发生时间未确认，发布时间另列。",
+            "verification": "collector-report",
+            "tier": "watch",
+            "selection": "engagement",
+            "weeklyRanks": {}
+          },
+          {
+            "eventKey": "trump-doe-dpa-refining-20261023",
+            "tabIds": [
+              "donald-trump"
+            ],
+            "author": "@ENERGY（美国能源部）",
+            "url": "https://x.com/ENERGY/status/2113466846372663564",
+            "publishedAt": "2026-10-23T03:05:37Z",
+            "excerpt": "@POTUS is using the Defense Production Act to increase American refining capacity to produce more diesel and more gasoline.",
+            "title": "能源部宣布动用 DPA 扩大美国炼油产能",
+            "fact": "美国能源部宣布，Donald Trump政府正在使用《国防生产法》（DPA）增加美国炼油产能，以生产更多柴油和汽油。官方帖没有给出具体拨款金额、项目清单或完成时间。",
+            "whyItMatters": "政策方向是增加成品油供给，可能缓解能源成本与通胀压力；对运输及其他耗能行业利润的影响，取决于新增产能何时真正可用。",
+            "counterCase": "法定工具启用不等于产能已经投产；缺少增量规模、建设进度和实际供应数据。",
+            "affected": [
+              "炼油",
+              "运输",
+              "通胀与能源成本"
+            ],
+            "eventTime": null,
+            "eventTimeNote": "2026年10月23日官方披露行动正在进行；具体启动时刻未知。",
+            "verification": "collector-report",
+            "tier": "watch",
+            "selection": "rule",
+            "weeklyRanks": {
+              "donald-trump": 1
+            }
+          },
+          {
+            "eventKey": "trump-usda-harvest-relief-20261020",
+            "tabIds": [
+              "donald-trump"
+            ],
+            "author": "@USDA（美国农业部）",
+            "url": "https://x.com/USDA/status/2112353534914019545",
+            "publishedAt": "2026-10-20T01:21:43Z",
+            "excerpt": "Today, @POTUS and @SecRollins announced the Harvest Fuel Relief Program — making $8 BILLION available for one-time payments to farmers facing higher costs and market disruptions. Payments to help cover a portion of estimated losses for the 2026 crop year. Row crop payment rates announced in November.",
+            "title": "农业部公布80亿美元农户援助计划",
+            "fact": "美国农业部宣布，Donald Trump政府推出 Harvest Fuel Relief Program，提供80亿美元用于向农户一次性付款，帮助覆盖2026作物年部分估计损失。补助金额依据种植面积、生产成本、产量和价格等计算；行作物补助费率将在11月公布，申请尚待开放。",
+            "whyItMatters": "援助可能缓解农户成本和现金流压力，传导至农业机械、投入品及运输需求；实际影响取决于覆盖范围、申请条件和支付时间。",
+            "counterCase": "宣布资金可用不等于农户已收到款项；具体费率和执行时间仍未明确。",
+            "affected": [
+              "农业",
+              "农机与投入品",
+              "财政支出"
+            ],
+            "eventTime": null,
+            "eventTimeNote": "官方帖于2026年10月20日称当日宣布；精确宣布时刻未知，实际支付尚未确认。",
+            "verification": "collector-report",
+            "tier": "watch",
+            "selection": "rule",
+            "weeklyRanks": {
+              "donald-trump": 2
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "model": {
+    "label": "Expert",
+    "version": null,
+    "confirmedBeforeRequest": true,
+    "confirmationWindow": [
+      "2026-10-24T09:15:20Z",
+      "2026-10-24T09:18:07Z"
+    ]
+  },
+  "conversationUrl": "https://grok.com/c/a846a5c2-3851-488e-b9c9-6e155b8986e2",
+  "queries": [
+    "from:TrumpDailyPosts since_time:1792746920 until_time:1792833320 -filter:replies mode:Top",
+    "from:POTUS since_time:1792746920 until_time:1792833320 -filter:replies mode:Top",
+    "from:WhiteHouse since_time:1792746920 until_time:1792833320 -filter:replies mode:Top",
+    "from:TrumpDailyPosts since_time:1792827720 until_time:1792833320 -filter:replies mode:Latest",
+    "from:WhiteHouse since_time:1792827720 until_time:1792833320 -filter:replies mode:Latest",
+    "from:POTUS since_time:1792228520 until_time:1792833320 mode:Latest",
+    "from:WhiteHouse (tariff OR tariffs OR \"export control\" OR semiconductor OR AI OR electricity OR tax OR fiscal OR energy OR regulation OR \"Defense Production\" OR refining OR DPA) since_time:1792228520 until_time:1792833320 mode:Latest",
+    "from:TrumpDailyPosts (tariff OR tariffs OR \"export control\" OR semiconductor OR AI OR electricity OR tax OR fiscal OR energy OR regulation OR \"Defense Production\" OR refining OR DPA) since_time:1792228520 until_time:1792833320 mode:Latest",
+    "from:WhiteHouse OR from:TrumpDailyPosts (\"signed\" OR \"executive order\" OR \"announced today\") since_time:1792228520 until_time:1792833320 mode:Latest",
+    "from:TrumpDailyPosts \"data centers\" OR \"data center\" electricity OR power OR dividend since_time:1792228520 until_time:1792833320 mode:Latest",
+    "定点读取2113845185679360101及2112550404772782230"
+  ],
+  "candidates": [
+    {
+      "author": "WhiteHouse",
+      "url": "https://x.com/WhiteHouse/status/2113657252343353448",
+      "publishedAt": "2026-10-23T15:42:13Z",
+      "excerpt": "43 years ago, Hezbollah terrorists attacked U.S. Marine barracks in Beirut, Lebanon, and killed 241 Americans. We will never forget their sacrifice. The attack was directed, financed and ordered by the same evil Iranian regime that President Trump is fighting today.",
+      "engagement": {
+        "likes": 21269,
+        "reposts": 5942,
+        "replies": 2534,
+        "quotes": 471
+      },
+      "heatScore": 36158
+    },
+    {
+      "author": "WhiteHouse",
+      "url": "https://x.com/WhiteHouse/status/2113726537677807943",
+      "publishedAt": "2026-10-23T20:17:32Z",
+      "excerpt": "Every single Democrat in Congress voted against President Trump’s historic tax cuts, including No Tax on Tips. They voted against Voter I.D. They voted against Proof of Citizenship. They voted AGAINST securing our borders. They vote against the American people.",
+      "engagement": {
+        "likes": 22842,
+        "reposts": 4849,
+        "replies": 1145,
+        "quotes": 148
+      },
+      "heatScore": 33833
+    },
+    {
+      "author": "WhiteHouse",
+      "url": "https://x.com/WhiteHouse/status/2113649451697164594",
+      "publishedAt": "2026-10-23T15:11:13Z",
+      "excerpt": "NEW UFO DROP 🛸👀 https://www.war.gov/UFO/",
+      "engagement": {
+        "likes": 14989,
+        "reposts": 3816,
+        "replies": 1311,
+        "quotes": 715
+      },
+      "heatScore": 24647
+    },
+    {
+      "author": "WhiteHouse",
+      "url": "https://x.com/WhiteHouse/status/2113768171031396854",
+      "publishedAt": "2026-10-23T23:02:58Z",
+      "excerpt": "Take a look at France. Then ask yourself what kind of future you want for America.",
+      "engagement": {
+        "likes": 10913,
+        "reposts": 2717,
+        "replies": 1361,
+        "quotes": 157
+      },
+      "heatScore": 17865
+    },
+    {
+      "author": "WhiteHouse",
+      "url": "https://x.com/WhiteHouse/status/2113674800132702467",
+      "publishedAt": "2026-10-23T16:51:57Z",
+      "excerpt": "Our incredible @FLOTUS Melania Trump has forged a ceasefire in war-torn Oleshky. Peace through strength.",
+      "engagement": {
+        "likes": 10823,
+        "reposts": 2025,
+        "replies": 2520,
+        "quotes": 233
+      },
+      "heatScore": 17626
+    },
+    {
+      "author": "TrumpDailyPosts",
+      "url": "https://x.com/TrumpDailyPosts/status/2113600573689798930",
+      "publishedAt": "2026-10-23T11:57:00Z",
+      "excerpt": "As election day approaches, do you support Attorney General Todd Blanche and AAG Harmeet Dhillon placing credentialed poll watchers at all election sites across America to ensure election integrity? Yes No",
+      "engagement": {
+        "likes": 6171,
+        "reposts": 1186,
+        "replies": 1405,
+        "quotes": 152
+      },
+      "heatScore": 10100
+    }
+  ],
+  "policyCandidates": [
+    {
+      "key": "diesel_tax_free_EO_farmers_truckers",
+      "author": "TrumpDailyPosts",
+      "url": "https://x.com/TrumpDailyPosts/status/2112550404772782230",
+      "publishedAt": "2026-10-20T14:24:00Z",
+      "excerpt": "President Trump signed an executive order allowing farmers and truckers to buy diesel tax-free by waiving the off road requirement. ... He also announced a new $8 billion Harvest Fuel Relief Program to help farmers offset diesel costs this season.",
+      "eventTime": null,
+      "note": "Grok初次把帖文时间冒作签署时间，已要求定点纠正；仅二传未确认。"
+    },
+    {
+      "key": "ai_data_centers_self_electricity_dividends",
+      "author": "TrumpDailyPosts",
+      "url": "https://x.com/TrumpDailyPosts/status/2112920796373078339",
+      "publishedAt": "2026-10-21T14:55:48Z",
+      "excerpt": "President Trump wants data centers to produce their own electricity and also pay the community they are located in dividends.",
+      "eventTime": null,
+      "note": "口头意向，待核对是否本人原文同步。"
+    }
+  ],
+  "followupQueries": [
+    "原线程2113657252343353448/2113726537677807943/2113649451697164594/2112550404772782230/2112920796373078339/2113845185679360101",
+    "from:POTUS since_time:1792827720 until_time:1792833320",
+    "from:WhiteHouse OR from:POTUS (diesel OR \"tax-free\" OR \"off-road\" OR \"Harvest Fuel\" OR \"fuel relief\") since_time:1792228520 until_time:1792833320",
+    "from:WhiteHouse OR from:POTUS (\"data center\" OR \"data centers\" OR dividend OR \"own electricity\") since_time:1792228520 until_time:1792833320",
+    "from:WhiteHouse OR from:POTUS (\"150 million\" OR refining OR \"Defense Production Act\") since_time:1792228520 until_time:1792833320",
+    "from:USDA \"Harvest Fuel\" since_time:1792228520 until_time:1792833320",
+    "from:ENERGY OR from:SecretaryWright (refining OR \"Defense Production\" OR DPA) since_time:1792228520 until_time:1792833320",
+    "原线程2113466846372663564/2112353534914019545/2113453378588037175",
+    "from:ENERGY OR from:SecretaryWright OR from:WhiteHouse OR from:POTUS (\"Defense Production Act\" OR DPA) (refining OR \"refining capacity\" OR diesel OR gasoline) until_time:1792833320",
+    "from:USDA OR from:WhiteHouse OR from:POTUS OR from:SecRollins (\"Harvest Fuel\" OR \"fuel relief\" OR \"$8 BILLION\" OR \"$8 billion\") until_time:1792833320"
+  ],
+  "verification": {
+    "heat": "三条WhiteHouse原线程确认作者、发布时间和摘要，只收热度，不进入周榜。",
+    "policy": "追至ENERGY与USDA原帖，保留已确认的DPA行动与80亿美元援助，不采用$150M金额和柴油免税EO。",
+    "counterEvidence": "定点查询更早公告、撤回、延期及主管部门原帖，未取得更早相同官方披露或撤回；这不等于全X穷尽。",
+    "excluded": [
+      {
+        "url": "https://x.com/TrumpDailyPosts/status/2112550404772782230",
+        "reason": "运营者评论非本人原文同步；柴油免税EO无官方依据；仅80亿美元部分追到USDA。"
+      },
+      {
+        "url": "https://x.com/TrumpDailyPosts/status/2112920796373078339",
+        "reason": "运营者意向转述，无正式提案或时限。"
+      },
+      {
+        "url": "https://x.com/TrumpDailyPosts/status/2113845185679360101",
+        "reason": "账号新闻视频非本人原文，$150M未确认；只采用ENERGY可证DPA行动。"
+      }
+    ]
+  },
+  "selection": {
+    "latest": {
+      "ruleCount": 0,
+      "engagementCount": 3,
+      "eligibleCandidateCount": 6,
+      "ranking": "likes+2*reposts+replies+quotes",
+      "selectedUrls": [
+        "https://x.com/WhiteHouse/status/2113657252343353448",
+        "https://x.com/WhiteHouse/status/2113726537677807943",
+        "https://x.com/WhiteHouse/status/2113649451697164594"
+      ]
+    },
+    "weekly": {
+      "count": 2,
+      "selectedUrls": [
+        "https://x.com/ENERGY/status/2113466846372663564",
+        "https://x.com/USDA/status/2112353534914019545"
+      ]
+    },
+    "note": "五条均为明确补遗收录，发帖/事件时间保留原时点，不冒充普通增量新事件。"
+  },
+  "checkedAt": "2026-10-24T09:25:41Z"
+}

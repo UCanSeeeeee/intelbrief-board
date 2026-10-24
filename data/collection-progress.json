@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24T08:13:25.170Z",
+  "updatedAt": "2026-10-24T09:25:42.811Z",
   "migration": {
     "auditFile": "data/collection-runs/2026-10-18-2030.json",
     "cutoff": "2026-10-18T12:30:00.000Z",
@@ -98,14 +98,14 @@
       "lastSuccessAt": "2026-10-24T08:01:56.246Z"
     },
     "people:donald-trump": {
-      "through": "2026-10-24T07:42:00.000Z",
-      "runId": "manual-20261024-154200",
-      "evidenceFile": "data/collection-runs/manual-20261024-154200.json",
-      "note": "检索到非官方同步号炼油资金转述，未取得可核对的本人原话或政策原帖，不升级为政策事实。",
-      "lastAttemptAt": "2026-10-24T08:01:56.246Z",
-      "lastAttemptEnd": "2026-10-24T07:42:00.000Z",
-      "lastAttemptStatus": "searched",
-      "lastSuccessAt": "2026-10-24T08:01:56.246Z"
+      "through": "2026-10-24T09:15:20.000Z",
+      "runId": "repair-trump-20261024-171520",
+      "evidenceFile": "data/collection-runs/repair-trump-20261024-171520.json",
+      "note": "正常增量窗三来源本次未取得新帖；另有3条热度和2条政策补遗，已单列，不能冒充增量新事件。",
+      "lastAttemptAt": "2026-10-24T09:25:42.811Z",
+      "lastAttemptEnd": "2026-10-24T09:15:20.000Z",
+      "lastAttemptStatus": "no-result",
+      "lastSuccessAt": "2026-10-24T09:25:42.811Z"
     },
     "people:trillion-leaders": {
       "through": "2026-10-24T07:42:00.000Z",
@@ -807,11 +807,11 @@
     {
       "unit": "people:donald-trump",
       "key": "trumpdaily-refining",
-      "status": "pending",
-      "reason": "非官方同步号炼油资金主张，缺可核对本人原话或政策原帖。",
-      "url": "https://x.com/TrumpDailyPosts/status/2113845185679360101",
-      "updatedAt": "2026-10-24T08:09:59.715Z",
-      "runId": "manual-20261024-154200"
+      "status": "resolved",
+      "reason": "已追到ENERGY原始DPA行动；$150M金额不采用，评论号视频不作为本人原话。",
+      "url": "https://x.com/ENERGY/status/2113466846372663564",
+      "updatedAt": "2026-10-24T09:25:42.811Z",
+      "runId": "repair-trump-20261024-171520"
     },
     {
       "unit": "ai:ai-others",
@@ -1061,6 +1061,7 @@
     "manual-20261024-154200:ai:openai:2026-10-23T00:00:00.000Z:2026-10-24T07:42:00.000Z",
     "manual-20261024-154200:ai:anthropic:2026-10-23T00:00:00.000Z:2026-10-24T07:42:00.000Z",
     "manual-20261024-154200:ai:goog-ai:2026-10-23T00:00:00.000Z:2026-10-24T07:42:00.000Z",
-    "manual-20261024-154200:ai:ai-others:2026-10-23T00:00:00.000Z:2026-10-24T07:42:00.000Z"
+    "manual-20261024-154200:ai:ai-others:2026-10-23T00:00:00.000Z:2026-10-24T07:42:00.000Z",
+    "repair-trump-20261024-171520:people:donald-trump:2026-10-24T07:42:00.000Z:2026-10-24T09:15:20.000Z"
   ]
 }

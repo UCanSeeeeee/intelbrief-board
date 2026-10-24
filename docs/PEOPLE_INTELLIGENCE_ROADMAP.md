@@ -38,9 +38,11 @@
 4. 规则条目 0 条：只收互动量最高的 3 条。**解释**：用户原话“以我们前面规则优先，没有的话就收录三条热度最高的动态”，执行者理解为“部分通过则补到 5、完全没有通过则只收 3”；若用户本意是“无论如何都补到 5”，改 `selectionPolicy.zeroPassFallback` 即可。
 5. 互动排序：likes + 2×reposts + replies + quotes；views 仅展示。`engagement` 只写 X 工具实际返回的 likes/reposts/replies/quotes/views，并记 `capturedAt` 与 `source`；未返回的字段不写，禁止估算。
 6. 热度动态仍守来源规则：本人账号/可归因；Trump 为 @TrumpDailyPosts 同步源（其运营者本人回复不算）及 @POTUS/@WhiteHouse；不收匿名传闻与无归因第三方转述。tier 固定 `watch`，不进重点榜（weeklyRanks），只属一个 Tab。
-7. 本 Tab 来源在窗口内根本没有帖子时仍为 0 条，并在 coverage 说明（例：Jensen Huang 本人 24h 无发帖）。
-8. 合集保留 30 天窗口；万亿高层每家公司近窗最多 2 席，热度补位同样受此限。重点榜（weekly）仍只收规则条目、最多 5 件。
-9. 人名原文与登记表简介规则（03cd6b0）不变，热度动态卡片同样适用。
+7. 热度补位单独查询本Tab来源，不加产业或可执行政策主题词；高价值门槛不套用到热度动态。TrumpDailyPosts必须明确同步/搬运身份，确认该号实际发布及可归因内容即可作为热度候选，不要求再有政府第二条确认帖；政策执行状态未核实则明确保留，不能升级为高价值政策事实。
+   政策候选追源允许使用直接相关政府主管部门的X原帖（例如能源、农业主管部门），署名采用实际发布机构；这不扩大热度账号池。对二传内容逐项核验，只采用官方支持的最小事实，未确认的金额、EO签署或执行阶段不跟随入选。
+8. 新增区为空时必须在`selectionChecks`保存实际补位查询及`no-posts`或`insufficient-evidence`原因，`eligibleCount`须为0；后者逐候选列出链接与排除理由。发布程序拒绝未完成补位检查的空结果。来源请求失败按failed保留旧数据，不能写成无帖子。周榜仅收高价值，热度动态不进入周榜。
+9. 合集保留 30 天窗口；万亿高层每家公司近窗最多 2 席，热度补位同样受此限。重点榜（weekly）仍只收规则条目、最多 5 件。
+10. 人名原文与登记表简介规则（03cd6b0）不变，热度动态卡片同样适用。
 
 校验：`scripts/lib/selection-policy.js`，由 `prepare*`（content-results）与 `npm run check` 共同执行；测试 `test/people-selection.test.js`。
 

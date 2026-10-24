@@ -77,7 +77,7 @@
     return `近 ${days} 天`;
   }
   function emptySection(kind, tab) {
-    return `<div class="empty-state signal-empty"><strong>暂无内容</strong></div>`;
+    return `<div class="empty-state signal-empty"><strong>${kind==='weekly'?'本期暂无达到价值标准的条目':'本期未取得可收录动态'}</strong></div>`;
   }
 
   function section(title, note, sectionItems, kind, tab, latestKeys) {

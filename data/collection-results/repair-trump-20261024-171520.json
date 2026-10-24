@@ -1,0 +1,28 @@
+{
+  "runId": "repair-trump-20261024-171520",
+  "cutoff": "2026-10-24T09:15:20Z",
+  "results": [
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-24T09:15:20Z",
+      "status": "no-result",
+      "queries": [
+        "from:TrumpDailyPosts since_time:1792827720 until_time:1792833320 -filter:replies mode:Latest",
+        "from:WhiteHouse since_time:1792827720 until_time:1792833320 -filter:replies mode:Latest",
+        "from:POTUS since_time:1792827720 until_time:1792833320"
+      ],
+      "note": "正常增量窗三来源本次未取得新帖；另有3条热度和2条政策补遗，已单列，不能冒充增量新事件。",
+      "evidenceFile": "data/collection-runs/repair-trump-20261024-171520.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "people:donald-trump",
+      "key": "trumpdaily-refining",
+      "status": "resolved",
+      "reason": "已追到ENERGY原始DPA行动；$150M金额不采用，评论号视频不作为本人原话。",
+      "url": "https://x.com/ENERGY/status/2113466846372663564"
+    }
+  ]
+}

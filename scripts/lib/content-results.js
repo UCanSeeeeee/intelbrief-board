@@ -203,7 +203,21 @@ function prepareTabbedIntelligence(input,config,existing,cutoff,now=new Date(),k
   const message=status==='failed'?`所有${kind}Tab采集失败`:`${items.length} 件入选事件${failures.length?`；${failures.length} 个Tab未完整检查`:'；全部Tab已完整检查'}`;
   return {data,status,message,failures};
 }
-function preparePeopleIntelligence(input,config,existing,cutoff,now=new Date()){return prepareTabbedIntelligence(input,config,existing,cutoff,now,'人物情报');}
+function preparePeopleIntelligence(input,config,existing,cutoff,now=new Date()){
+  const result=prepareTabbedIntelligence(input,config,existing,cutoff,now,'人物情报');
+  if(!config.selectionPolicy)return result;
+  for(const tab of config.tabs){
+    const report=input.tabs.find(r=>r.id===tab.id);
+    if(report.status==='failed')continue;
+    const latest=(result.data.items||[]).filter(i=>i.tabIds.includes(tab.id)&&Date.parse(i.publishedAt)>=Date.parse(cutoff)-tab.latestWindowDays*86400000);
+    if(latest.length)continue;
+    const proof=input.selectionChecks?.find(p=>p.id===tab.id);
+    requireValue(proof&&['no-posts','insufficient-evidence'].includes(proof.status)&&proof.eligibleCount===0&&Array.isArray(proof.queries)&&proof.queries.length&&proof.queries.every(q=>typeof q==='string'&&q.trim())&&proof.note?.trim(),`${tab.label}新增区为空：须先完成本来源热度补位，保存实际查询及无可收录帖的原因，不能以无高价值代替`);
+    requireValue(Array.isArray(proof.excludedCandidates),`${tab.label}热度补位须保存落选候选`);
+    if(proof.status==='insufficient-evidence')requireValue(proof.excludedCandidates.length>0&&proof.excludedCandidates.every(c=>c.url?.trim()&&c.reason?.trim()),`${tab.label}证据不足须逐候选说明，不能静默跳过补位`);
+  }
+  return result;
+}
 function prepareTickerIntelligence(input,config,existing,cutoff,now=new Date()){
   const result=prepareTabbedIntelligence(input,config,existing,cutoff,now,'个股情报');
   if(config.hotspotPolicy?.enabled){
