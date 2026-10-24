@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-24",
+  "items": [
+    {
+      "id": "2026-10-24-diet-antibiotic-context-modifies-microbiome",
+      "knowledgeKey": "diet-antibiotic-context-modifies-microbiome",
+      "topic": "健康",
+      "title": "同样是糖，对菌群的影响还取决于治疗背景",
+      "intuition": "一种食物对肠道的影响，应该在所有人身上差不多。",
+      "fact": "158名移植患者的配对数据中，甜食与糖摄入在抗生素暴露期间预测更大菌群扰动；小鼠补糖也延长了抗生素后肠球菌扩张。",
+      "explanation": "菌群已受治疗扰动时，饮食与微生物生态的相互作用可能不同；人体关联与动物干预提供不同层次证据。",
+      "boundary": "限于特定患者和动物实验；尚未证明限糖能改善患者结局，不能据此自行改变用药或严格限食。",
+      "people": [],
+      "sources": [
+        {
+          "label": "本轮已核论文：摘要、结果与讨论",
+          "url": "https://www.nature.com/articles/s41586-026-11077-3",
+          "publisher": "Nature",
+          "publishedDate": "2026-09-30",
+          "accessLevel": "partial",
+          "checkedAt": "2026-10-24T00:02:36.590283+00:00"
+        }
+      ],
+      "evidenceReuse": {
+        "reviewId": "2026-10-24-nature-s41586-026-11077-3",
+        "doi": "10.1038/s41586-026-11077-3",
+        "checkedAt": "2026-10-24T00:02:36.590283+00:00"
+      }
+    },
+    {
+      "id": "2026-10-24-sleep-insight-needs-task-exposure",
+      "knowledgeKey": "sleep-insight-needs-task-exposure",
+      "topic": "生活",
+      "title": "睡一觉可能有助发现规律，前提是先接触过问题",
+      "intuition": "既然睡眠能带来灵感，不练习也可以等睡醒再解题。",
+      "fact": "数字任务主实验中，先训练再睡的22人有13人发现捷径，两个清醒组各5/22；未先训练的补充组没有相同睡眠优势。",
+      "explanation": "结果与睡眠加工已有任务表征的解释相符，并不支持从未接触的问题会自动得到答案。",
+      "boundary": "年轻成人的结构化数字任务，不能保证一般创造力提升；其他任务的小睡研究并不总有改善。",
+      "people": [],
+      "sources": [
+        {
+          "label": "本轮论文及大学公开PDF",
+          "url": "https://www.nature.com/articles/nature02223",
+          "publisher": "Nature",
+          "publishedDate": "2004-01-22",
+          "accessLevel": "partial",
+          "checkedAt": "2026-10-24T00:02:36.590283+00:00"
+        }
+      ],
+      "evidenceReuse": {
+        "reviewId": "2026-10-24-nature-nature02223",
+        "doi": "10.1038/nature02223",
+        "checkedAt": "2026-10-24T00:02:36.590283+00:00"
+      }
+    },
+    {
+      "id": "2026-10-24-equivalent-outcomes-change-with-gain-loss-frame",
+      "knowledgeKey": "equivalent-outcomes-change-with-gain-loss-frame",
+      "topic": "行为认知",
+      "title": "结果相同，换成得或失的表达也可能改变选择",
+      "intuition": "只要概率和人数没有变，选择就不会变。",
+      "fact": "原论文两组课堂问卷中，救活表述有72%选确定方案，等价的死亡表述只有22%选确定方案。",
+      "explanation": "人们会围绕不同参考点理解得失；相同结果未必在心理上被当成同一件事。",
+      "boundary": "这是不同组对虚构情境的反应，不是证明每个人都会前后反转，也不能据此预测个人行为。",
+      "people": [],
+      "sources": [
+        {
+          "label": "原论文问题1与2",
+          "url": "https://stanford.edu/class/psych205/papers/Tversky-Kahneman-1981.pdf",
+          "publisher": "Science / Stanford公开论文",
+          "publishedDate": "1981-01-30",
+          "accessLevel": "partial",
+          "checkedAt": "2026-10-24T00:02:36.590283+00:00"
+        }
+      ],
+      "evidenceReuse": {
+        "reviewId": "2026-10-24-science-science-7455683",
+        "doi": "10.1126/science.7455683",
+        "checkedAt": "2026-10-24T00:02:36.590283+00:00"
+      }
+    },
+    {
+      "id": "2026-10-24-pvalue-is-not-hypothesis-probability",
+      "knowledgeKey": "pvalue-is-not-hypothesis-probability",
+      "topic": "统计",
+      "title": "P值不是原假设为真的概率",
+      "intuition": "P=0.03表示原假设只有3%的概率为真。",
+      "fact": "美国统计协会指出，P值不衡量假设为真的概率，也不衡量效应大小或实际重要性。",
+      "explanation": "P值是在指定模型及其假设下，描述数据与模型不相容程度的量；它没有直接计算观察数据之后假设的概率。",
+      "boundary": "解释还依赖抽样、模型和完整报告；不能单凭一个阈值下结论，也不能把不显著当成无效果。",
+      "people": [],
+      "sources": [
+        {
+          "label": "ASA官方六原则",
+          "url": "https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf",
+          "publisher": "American Statistical Association",
+          "publishedDate": "2016-03-07",
+          "accessLevel": "partial",
+          "checkedAt": "2026-10-24T00:02:36.590283+00:00"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-relative-risk-needs-baseline-and-period",
+      "knowledgeKey": "relative-risk-needs-baseline-and-period",
+      "topic": "统计",
+      "title": "风险翻倍，绝对增加仍可能只有一个百分点",
+      "intuition": "风险翻倍就意味着发生机会增加了一半或接近必然。",
+      "fact": "CDC用从每100人1人变为2人的例子说明：风险翻倍，但绝对增加是每100人1人，即1个百分点。",
+      "explanation": "倍数描述相对变化；实际增加多少，还取决于起始风险。比较时需要同一人群、分母和时间窗。",
+      "boundary": "这是说明算法的例子，不是某项治疗或疾病的实际风险；个人判断还需要获益、损害和不确定性。",
+      "people": [],
+      "sources": [
+        {
+          "label": "CDC官方风险沟通数字段落",
+          "url": "https://www.cdc.gov/public-health-risk-communication/php/about/understanding-and-applying-risk-communication-principles.html",
+          "publisher": "CDC",
+          "publishedDate": "2026-09-17",
+          "accessLevel": "partial",
+          "checkedAt": "2026-10-24T00:02:36.590283+00:00"
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "note": "5个独立知识点：3条复用本轮原论文，2条限定官方统计教育资料；跨期知识点去重，不把检索失败当无新增。",
+    "queries": [
+      "复用本次Nature糖与抗生素、睡眠洞察、Science框架选择已核证据",
+      "site:amstat.org statement p value probability hypothesis true",
+      "site:cdc.gov relative risk absolute risk denominators"
+    ],
+    "checkedAt": "2026-10-24T00:02:36.590283+00:00"
+  }
+}
