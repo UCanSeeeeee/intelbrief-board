@@ -1,0 +1,3932 @@
+{
+  "id": "manual-20261024-154200",
+  "cutoff": "2026-10-24T15:42:00+08:00",
+  "status": "partial",
+  "model": {
+    "label": "Expert",
+    "version": null,
+    "confirmedAt": "2026-10-24T07:42:17Z",
+    "rule": "用户2026-10-24授权默认Expert，不指定版本"
+  },
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:market-focus",
+          "key": "jpm-intel-neutral-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-leveraged-etf-semiconductor-inflows-20261020",
+          "status": "pending",
+          "reason": "缺Goldman或权威媒体原帖与统计期/金额。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "smci-preliminary-fq127-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "taiwan-sept-export-orders-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "spacex-q3-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，仅官方报告链接未含数字与AI传导，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "japan-yttrium-shortage-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "phoenix-tailings-rochester-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "nebius-spot-gpu-20261021",
+          "status": "pending",
+          "reason": "旧候选无已证实进展复用缓存；或定向追源未取得关键原始证据，留待核",
+          "updatedAt": "2026-10-22T00:02:48.855Z",
+          "runId": "2026-10-22-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "zerohedge-premarket-20261022",
+          "status": "pending",
+          "reason": "未完成候选读取/原始追源/独立反证，二传数字不发布。",
+          "updatedAt": "2026-10-22T12:37:28.674Z",
+          "runId": "2026-10-22-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "tapeandticker-premarket-20261022",
+          "status": "pending",
+          "reason": "采集器二传，官方/权威原始证据与反证未取得，不发布。",
+          "updatedAt": "2026-10-22T12:37:28.674Z",
+          "runId": "2026-10-22-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "meta-fcf-negative-20261022",
+          "status": "pending",
+          "reason": "新二传数字无原始X证据，保留候选待有实质进展再核。",
+          "updatedAt": "2026-10-23T00:06:32.926Z",
+          "runId": "2026-10-23-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "tsmc-kumamoto-3nm-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "citi-skhynix-q326-preview-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "mu-2027-hbm-asp-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "pc-memory-lta-2027-20261020",
+          "status": "pending",
+          "reason": "缺公司/权威原始披露与签约日期。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:power",
+          "key": "nscale-msft-uk-grid-ipo-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "nextdc-melbourne-grid-risk-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:ai-adoption",
+          "key": "daytona-financing-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:ai-adoption",
+          "key": "meta-muse-agents-20261021",
+          "status": "pending",
+          "reason": "New secondhand quantitative claim requires original",
+          "updatedAt": "2026-10-22T00:02:48.855Z",
+          "runId": "2026-10-22-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:capital-cost",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "Reuters仅支持升级发生，核心假设与现金流依据不足",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:capital-cost",
+          "key": "jpm-coreweave-debt-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:capital-cost",
+          "key": "tips-5y-auction-20261022",
+          "status": "pending",
+          "reason": "新拍卖数字无原始X证据，不采用。",
+          "updatedAt": "2026-10-23T00:06:32.926Z",
+          "runId": "2026-10-23-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "hormuz-tankers-mine-claim-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "us-energy-russia-diesel-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "people:elon-musk",
+      "page": "people",
+      "object": "elon-musk",
+      "label": "马斯克",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "people:jensen-huang",
+      "page": "people",
+      "object": "jensen-huang",
+      "label": "黄仁勋",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "people:jensen-huang",
+          "key": "jensen-interview-summary-20261019",
+          "status": "pending",
+          "reason": "原访谈日期、原媒体帖或报告假设变化证据不足",
+          "updatedAt": "2026-10-20T00:15:06.643Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "people:jensen-huang",
+          "key": "jensen-token-costs-claim-20261019",
+          "status": "pending",
+          "reason": "原访谈日期、原媒体帖或报告假设变化证据不足",
+          "updatedAt": "2026-10-20T00:15:06.643Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "people:jensen-huang",
+          "key": "nvidia-four-german-startups-20261019",
+          "status": "pending",
+          "reason": "发现窗前官方证据，迟发现补遗单列，非本轮新增；原始时间与计划投资范围已保存。",
+          "updatedAt": "2026-10-20T07:15:00.687Z",
+          "runId": "2026-10-20-1500"
+        }
+      ]
+    },
+    {
+      "id": "people:donald-trump",
+      "page": "people",
+      "object": "donald-trump",
+      "label": "特朗普",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "people:trillion-leaders",
+      "page": "people",
+      "object": "trillion-leaders",
+      "label": "万亿美元公司高层",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "people:research-reports",
+      "page": "people",
+      "object": "research-reports",
+      "label": "机构研报",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "people:research-reports",
+          "key": "ms-ai-capex-map-20261019",
+          "status": "pending",
+          "reason": "原访谈日期、原媒体帖或报告假设变化证据不足",
+          "updatedAt": "2026-10-20T00:15:06.643Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "people:research-reports",
+          "key": "nomura-memory-ai-capacity-20261020",
+          "status": "pending",
+          "reason": "只有二传报告摘要，缺原报告及版本变化证据。",
+          "updatedAt": "2026-10-20T07:15:00.687Z",
+          "runId": "2026-10-20-1500"
+        },
+        {
+          "unit": "people:research-reports",
+          "key": "jpm-ai-compute-gap-20261020",
+          "status": "pending",
+          "reason": "新研报二传经追源和反证，关键数字/相对旧版变化未证实",
+          "updatedAt": "2026-10-21T00:12:32.768Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "people:research-reports",
+          "key": "bofa-ai-capex-wacc-20261020",
+          "status": "pending",
+          "reason": "新研报二传经追源和反证，关键数字/相对旧版变化未证实",
+          "updatedAt": "2026-10-21T00:12:32.768Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "people:research-reports",
+          "key": "jpm-memory-summary-20261021",
+          "status": "pending",
+          "reason": "缺机构原报告与假设变化原始证据",
+          "updatedAt": "2026-10-22T00:07:22.421Z",
+          "runId": "2026-10-22-0800"
+        },
+        {
+          "unit": "people:research-reports",
+          "key": "goldman-eps-capex-20261021",
+          "status": "pending",
+          "reason": "缺机构原报告与假设变化原始证据",
+          "updatedAt": "2026-10-22T00:07:22.421Z",
+          "runId": "2026-10-22-0800"
+        }
+      ]
+    },
+    {
+      "id": "tickers:nvda",
+      "page": "tickers",
+      "object": "nvda",
+      "label": "NVDA",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "tickers:nvda",
+          "key": "doubleai-b300-financing-20261019",
+          "status": "pending",
+          "reason": "原始媒体/客户帖或事件增量时间仍缺失；Vertiv为现有部署案例推广，无新订单/部署日期，不当新增订单。",
+          "updatedAt": "2026-10-19T12:51:43.410Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "tickers:nvda",
+          "key": "nebius-b200-spot-triple-20261020",
+          "status": "pending",
+          "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。",
+          "updatedAt": "2026-10-20T07:20:36.477Z",
+          "runId": "2026-10-20-1500"
+        }
+      ]
+    },
+    {
+      "id": "tickers:nvda:hotspots",
+      "page": "tickers",
+      "object": "nvda:hotspots",
+      "tabId": "nvda",
+      "kind": "hotspots",
+      "label": "NVDA X热点",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:mu",
+      "page": "tickers",
+      "object": "mu",
+      "label": "MU",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "tickers:mu",
+          "key": "mu-strike-oct22-duration-20261020",
+          "status": "pending",
+          "reason": "10月22日/一天细节缺权威确认，原风险不更新",
+          "updatedAt": "2026-10-21T00:17:29.015Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "tickers:mu",
+          "key": "mu-taiwan-strike-20261022",
+          "status": "pending",
+          "reason": "窗口内已出现罢工/生产继续与公司奖金二传，原始权威X及实际产量影响仍缺，不升级原风险。",
+          "updatedAt": "2026-10-23T00:20:10.510Z",
+          "runId": "2026-10-23-0800"
+        }
+      ]
+    },
+    {
+      "id": "tickers:mu:hotspots",
+      "page": "tickers",
+      "object": "mu:hotspots",
+      "tabId": "mu",
+      "kind": "hotspots",
+      "label": "MU X热点",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:intc",
+      "page": "tickers",
+      "object": "intc",
+      "label": "INTC",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "tickers:intc",
+          "key": "intel-14a-customers-20261020",
+          "status": "pending",
+          "reason": "公司与权威原帖未支持14A客户确定说法，保留待核",
+          "updatedAt": "2026-10-21T00:17:29.015Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "tickers:intc",
+          "key": "ohio-lease-20261021",
+          "status": "pending",
+          "reason": "无租厂及18A新客户原证，仅官方施工进展",
+          "updatedAt": "2026-10-22T00:12:40.781Z",
+          "runId": "2026-10-22-0800"
+        }
+      ]
+    },
+    {
+      "id": "tickers:intc:hotspots",
+      "page": "tickers",
+      "object": "intc:hotspots",
+      "tabId": "intc",
+      "kind": "hotspots",
+      "label": "INTC X热点",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:goog",
+      "page": "tickers",
+      "object": "goog",
+      "label": "GOOG",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:goog:hotspots",
+      "page": "tickers",
+      "object": "goog:hotspots",
+      "tabId": "goog",
+      "kind": "hotspots",
+      "label": "GOOG X热点",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:avgo",
+      "page": "tickers",
+      "object": "avgo",
+      "label": "AVGO",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "tickers:avgo",
+          "key": "openai-jalapeno-turin-20261019",
+          "status": "pending",
+          "reason": "原始媒体/客户帖或事件增量时间仍缺失；Vertiv为现有部署案例推广，无新订单/部署日期，不当新增订单。",
+          "updatedAt": "2026-10-19T12:51:43.410Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "tickers:avgo",
+          "key": "kddi-cpo-trial-20261022",
+          "status": "pending",
+          "reason": "无官方X原始披露，试验细节仅二传不作事实。",
+          "updatedAt": "2026-10-23T00:20:10.510Z",
+          "runId": "2026-10-23-0800"
+        }
+      ]
+    },
+    {
+      "id": "tickers:avgo:hotspots",
+      "page": "tickers",
+      "object": "avgo:hotspots",
+      "tabId": "avgo",
+      "kind": "hotspots",
+      "label": "AVGO X热点",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:vrt",
+      "page": "tickers",
+      "object": "vrt",
+      "label": "VRT",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "tickers:vrt",
+          "key": "nvda-vrt-cooling-20261021",
+          "status": "pending",
+          "reason": "缺Vertiv相关原帖及22%独立验证",
+          "updatedAt": "2026-10-22T00:12:40.781Z",
+          "runId": "2026-10-22-0800"
+        }
+      ]
+    },
+    {
+      "id": "tickers:vrt:hotspots",
+      "page": "tickers",
+      "object": "vrt:hotspots",
+      "tabId": "vrt",
+      "kind": "hotspots",
+      "label": "VRT X热点",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "tickers:tsm",
+      "page": "tickers",
+      "object": "tsm",
+      "label": "TSM",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "tickers:tsm",
+          "key": "tsm-cowos-260kwpm-estimate-20261020",
+          "status": "pending",
+          "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。",
+          "updatedAt": "2026-10-20T07:20:36.477Z",
+          "runId": "2026-10-20-1500"
+        },
+        {
+          "unit": "tickers:tsm",
+          "key": "apple-tsmc-a14-capacity-claim-20261020",
+          "status": "pending",
+          "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。",
+          "updatedAt": "2026-10-20T07:20:36.477Z",
+          "runId": "2026-10-20-1500"
+        }
+      ]
+    },
+    {
+      "id": "tickers:tsm:hotspots",
+      "page": "tickers",
+      "object": "tsm:hotspots",
+      "tabId": "tsm",
+      "kind": "hotspots",
+      "label": "TSM X热点",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    },
+    {
+      "id": "ai:openai",
+      "page": "ai",
+      "object": "openai",
+      "label": "OPENAI",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "ai:openai",
+          "key": "opencode-console-api-key-incident-20261019",
+          "status": "pending",
+          "reason": "事故仅二传，无官方/负责人完整status及影响/返还原始依据",
+          "updatedAt": "2026-10-20T00:29:55.793Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "ai:anthropic",
+      "page": "ai",
+      "object": "anthropic",
+      "label": "ANTHROPIC",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "ai:anthropic",
+          "key": "claude-security-duet-20261021",
+          "status": "pending",
+          "reason": "缺Anthropic官方新功能原帖",
+          "updatedAt": "2026-10-22T00:16:22.317Z",
+          "runId": "2026-10-22-0800"
+        }
+      ]
+    },
+    {
+      "id": "ai:goog-ai",
+      "page": "ai",
+      "object": "goog-ai",
+      "label": "GOOG",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "ai:goog-ai",
+          "key": "veo-preview-api-stop-clue-20261020",
+          "status": "pending",
+          "reason": "官方可用性变更原帖未返回，缺精确线索证据不入选",
+          "updatedAt": "2026-10-21T00:21:18.467Z",
+          "runId": "2026-10-21-0800"
+        }
+      ]
+    },
+    {
+      "id": "ai:ai-others",
+      "page": "ai",
+      "object": "ai-others",
+      "label": "其他",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "cutoff": "2026-10-24T07:42:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "ai:ai-others",
+          "key": "deepseek-financing-20261022",
+          "status": "pending",
+          "reason": "实际查询完成；DeepSeek融资二传无Reuters原始status，未采用金额与完成状态，留待核。",
+          "updatedAt": "2026-10-23T00:26:19.475Z",
+          "runId": "2026-10-23-0800"
+        }
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "unit": "news:market-focus",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "news:semiconductors",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "news:power",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "news:ai-adoption",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "news:capital-cost",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "news:geopolitics",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "news:market-structure",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "people:elon-musk",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "people:jensen-huang",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "people:trillion-leaders",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "people:research-reports",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "tickers:nvda",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "tickers:nvda:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "按cashtag检索并按真实浏览量给前五"
+    },
+    {
+      "unit": "tickers:mu",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "tickers:mu:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "按cashtag检索并按真实浏览量给前五"
+    },
+    {
+      "unit": "tickers:intc",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "tickers:intc:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "按cashtag检索并按真实浏览量给前五"
+    },
+    {
+      "unit": "tickers:goog",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "tickers:goog:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "按cashtag检索并按真实浏览量给前五"
+    },
+    {
+      "unit": "tickers:avgo",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "tickers:avgo:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "按cashtag检索并按真实浏览量给前五"
+    },
+    {
+      "unit": "tickers:vrt",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "tickers:vrt:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "按cashtag检索并按真实浏览量给前五"
+    },
+    {
+      "unit": "tickers:tsm",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "tickers:tsm:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "按cashtag检索并按真实浏览量给前五"
+    },
+    {
+      "unit": "ai:openai",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "ai:anthropic",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "ai:goog-ai",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    },
+    {
+      "unit": "ai:ai-others",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "question": "该对象需求、供给、政策、成本、融资、采用等新增事实及可核查原帖"
+    }
+  ],
+  "batches": [
+    {
+      "page": "news",
+      "queryPlan": [
+        "窗口2026-10-23T00:00:00Z至2026-10-24T07:42:00Z：市场焦点宽扫宏观通胀就业财政长债美元信用监管、地缘战争制裁关税出口管制能源航运、AI大型公司资本开支财报指引订单融资故障、市场宽度集中度仓位去杠杆。",
+        "独立第二轮：半导体、电力、AI落地、资本成本、地缘能源物流、市场结构行为六包，追源及反证按新候选执行"
+      ],
+      "output": {
+        "focus": [
+          {
+            "eventKey": "oil-five-month-high-us-stocks-20261023",
+            "collectionUnit": "news:market-focus",
+            "title": "油价升至五个月高点，美股收跌",
+            "fact": "《华尔街日报》市场报道：油价升至五个月高点之际，美股下跌。公开帖文未给出具体油价和各指数收盘跌幅。",
+            "impact": "能源成本上升可能同时挤压企业利润、推高通胀预期；若长端融资成本随之上升，AI重资本项目与高估值成长股会承受双重压力。但同日下跌不能证明由油价单独造成，仍需区分盈利预期和仓位调整。",
+            "direction": "双向",
+            "horizon": "未来一至两周；观察油价能否持续及利率反应",
+            "affected": [
+              "美股整体",
+              "半导体",
+              "AI基础设施",
+              "能源"
+            ],
+            "counterCase": "若油价回落且通胀预期、长端利率未跟随上行，成本—折现双重压力会减弱；能源生产商也可能与用能行业方向相反。",
+            "selectionReason": "比单家公司订单传闻覆盖更广，且有可识别媒体原帖；不采用未追到原始出处的精确行情数字。",
+            "credibilityReason": "可识别媒体原帖由Grok返回，未独立直读；标题支持共时变化，不足以确认单一因果。",
+            "change": "新增",
+            "eventTime": null,
+            "eventTimeNote": "报道对应2026年10月23日；具体事件时刻未确认。",
+            "attentionEvidence": "影响企业成本、通胀和折现率多个共同因子；本轮检索范围内优先，不宣称全网排名。",
+            "sources": [
+              {
+                "username": "WSJmarkets",
+                "url": "https://x.com/WSJmarkets/status/2113729111638073763",
+                "postId": "2113729111638073763",
+                "publishedAt": "2026-10-23T20:27:46Z",
+                "checkedAt": "2026-10-24T07:50:43Z",
+                "excerpt": "U.S. Stocks Fall as Oil Prices Hit Five-Month High",
+                "verification": "collector-report",
+                "verificationNote": "Grok Expert网页检索与追源返回，当前模型未独立直读X；不将未见原帖正文的外链数字补入摘要。"
+              }
+            ]
+          }
+        ],
+        "insights": [
+          {
+            "eventKey": "sentimentrader-equal-weight-divergence-20261023",
+            "collectionUnit": "news:market-structure",
+            "title": "指数下跌未必代表多数股票同跌：等权与市值权重出现分歧",
+            "fact": "SentimenTrader发布统计：10月22日标普500指数下跌1.21%，追踪同一成分股等权配置的RSP上涨0.73%。它统计自2008年以来，标普跌幅至少1%的601个交易日中，这种组合只出现3次。这是该机构的研究统计，未用交易所原始数据独立复算。",
+            "impact": "同一成分股在不同权重下方向相反，提示压力可能集中于大市值公司，不能把指数跌幅等同于全市场需求恶化。判断半导体和AI龙头时，应拆开权重集中、行业盈利和资金轮动；这既可能是风险扩散前的阶段，也可能是行情向其他股票扩散，单日分歧不足以判定趋势反转。",
+            "direction": "待定",
+            "horizon": "未来数个交易日至两周，观察分歧持续性和盈利修订",
+            "affected": [
+              "标普500",
+              "大型科技股",
+              "等权指数",
+              "半导体"
+            ],
+            "counterCase": "若后续等权也走弱、下跌范围扩散，不能继续解释为仅权重股调整；若源数据或复算口径更正，应撤回相应数字。",
+            "selectionReason": "源头是研究机构自身发布的统计而非匿名行情复述；连接指数构成与投资者对市场整体的判断偏差。",
+            "credibilityReason": "Grok返回研究机构原帖，未独立直读及复算；3/601只是历史样本描述，不是未来涨跌概率。",
+            "change": "新增",
+            "eventTime": null,
+            "eventTimeNote": "统计对应2026年10月22日交易日；研究于次日发布，精确统计时刻未知。",
+            "sources": [
+              {
+                "username": "sentimentrader",
+                "url": "https://x.com/sentimentrader/status/2113649143986163934",
+                "postId": "2113649143986163934",
+                "publishedAt": "2026-10-23T15:10:00Z",
+                "checkedAt": "2026-10-24T07:50:43Z",
+                "excerpt": "$SPX fell 1.21% on Oct. 22, but equal weight $RSP gained 0.73%.",
+                "verification": "collector-report",
+                "verificationNote": "Grok Expert网页检索与追源返回，当前模型未独立直读X；不将未见原帖正文的外链数字补入摘要。"
+              }
+            ],
+            "knowledgeCards": [
+              "I05",
+              "R05",
+              "R07"
+            ],
+            "disciplines": [
+              "市场结构",
+              "统计与认知"
+            ],
+            "knowledgeApplication": "权重集中会改变指数呈现的市场面貌，传播中的指数叙事可能放大投资者对共同风险的判断；须比较同成分权重并保留样本及数据边界，不从单日统计外推走势。"
+          }
+        ]
+      },
+      "candidates": [
+        {
+          "key": "oil_spike_stocks_fall",
+          "author": "WSJmarkets",
+          "url": "https://x.com/WSJmarkets/status/2113729111638073763",
+          "publishedAt": "2026-10-23T20:27:46Z",
+          "excerpt": "U.S. Stocks Fall as Oil Prices Hit Five-Month High",
+          "gap": "股市下跌、油价五个月高点；具体指数和油价数字需追源",
+          "verification": "collector-report",
+          "round": 1,
+          "decision": "selected",
+          "reason": "股市下跌、油价五个月高点；具体指数和油价数字需追源"
+        },
+        {
+          "key": "brent_surge_inflation_ai_risk",
+          "author": "macropaperr",
+          "url": "https://x.com/macropaperr/status/2113566076097462591",
+          "publishedAt": "2026-10-23T09:39:55Z",
+          "excerpt": "BREAKING: Brent Crude oil surges above $114.5, its highest level since May 2025. Inflation expectations are on the rise again.",
+          "gap": "油价与通胀观点；普通账号数字待核",
+          "verification": "collector-report",
+          "round": 1,
+          "decision": "excluded",
+          "reason": "油价与通胀观点；普通账号数字待核"
+        },
+        {
+          "key": "ai_financing_credit_stress",
+          "author": "briefing_block_",
+          "url": "https://x.com/briefing_block_/status/2113655179765747989",
+          "publishedAt": "2026-10-23T15:33:59Z",
+          "excerpt": "CoreWeave’s 2031 bond reportedly yielded 15.72%, versus its 9.75% coupon: cheaper government funding does not ensure cheaper corporate funding.",
+          "gap": "债券收益率缺原始报价来源",
+          "verification": "collector-report",
+          "round": 1,
+          "decision": "excluded",
+          "reason": "债券收益率缺原始报价来源"
+        },
+        {
+          "key": "aws_capacity_booked_2028",
+          "author": "Kalshi",
+          "url": "https://x.com/Kalshi/status/2113888388734689455",
+          "publishedAt": "2026-10-24T07:00:40Z",
+          "excerpt": "JUST IN: Amazon CEO says AWS capacity for 2028 is \"largely booked\" already",
+          "gap": "原始管理层讲话时点及出处待核",
+          "verification": "collector-report",
+          "round": 1,
+          "decision": "excluded",
+          "reason": "旧事实二次传播，未取得可确认新进展"
+        },
+        {
+          "key": "premarket_ai_oil_yields",
+          "author": "HCFlowSniper",
+          "url": "https://x.com/HCFlowSniper/status/2113621726752038951",
+          "publishedAt": "2026-10-23T13:21:03Z",
+          "excerpt": "U.S. FUTURES LOWER",
+          "gap": "盘前期货、国债、油价及半导体数字无原始来源，摘录截短不补写",
+          "verification": "collector-report",
+          "round": 1,
+          "decision": "excluded",
+          "reason": "盘前期货、国债、油价及半导体数字无原始来源，摘录截短不补写"
+        },
+        {
+          "key": "tokens_vs_capex_divergence",
+          "author": "pequityresearch",
+          "url": "https://x.com/pequityresearch/status/2113488139935178993",
+          "publishedAt": "2026-10-23T04:30:13Z",
+          "excerpt": "BofA: Average weekly OpenRouter tokens rose ~93x from 1Q25 to 3Q26, against ~3x for cloud capex and ~2.6x for Nvidia data center sales.",
+          "gap": "原始研报与方法缺失",
+          "verification": "collector-report",
+          "round": 1,
+          "decision": "excluded",
+          "reason": "原始研报与方法缺失"
+        },
+        {
+          "key": "weekly_rotation_smallcaps",
+          "author": "MarkusCarter17",
+          "url": "https://x.com/MarkusCarter17/status/2113737354011885852",
+          "publishedAt": "2026-10-23T21:00:31Z",
+          "excerpt": "Recap: Week Ending Oct 23",
+          "gap": "周涨跌、油价收益率二传，非原始行情",
+          "verification": "collector-report",
+          "round": 1,
+          "decision": "excluded",
+          "reason": "周涨跌、油价收益率二传，非原始行情"
+        },
+        {
+          "key": "hbm_hybrid_bonding_delay",
+          "unit": "semiconductors",
+          "author": "LiDaosen",
+          "url": "https://x.com/LiDaosen/status/2113602961033081275",
+          "publishedAt": "2026-10-23T12:06:29Z",
+          "note": "HBM混合键合2029+时间线及MR-MUF，原始行业来源缺失",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "HBM混合键合2029+时间线及MR-MUF，原始行业来源缺失"
+        },
+        {
+          "key": "cowos_capacity_bottleneck",
+          "unit": "semiconductors",
+          "author": "MasicotAI",
+          "url": "https://x.com/MasicotAI/status/2113716424623710261",
+          "publishedAt": "2026-10-23T19:37:21Z",
+          "note": "CoWoS/AP7/AP8/GFS中介层外包，缺公司确认",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "CoWoS/AP7/AP8/GFS中介层外包，缺公司确认"
+        },
+        {
+          "key": "abf_substrate_bottleneck",
+          "unit": "semiconductors",
+          "author": "bobziyangding",
+          "url": "https://x.com/bobziyangding/status/2113780912756592955",
+          "publishedAt": "2026-10-23T23:53:36Z",
+          "note": "ABF基板50亿美元预付款，缺原始依据",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "ABF基板50亿美元预付款，缺原始依据"
+        },
+        {
+          "key": "nvidia_cpo_amkor_expansion",
+          "unit": "semiconductors",
+          "author": "Serenity_Re0",
+          "url": "https://x.com/Serenity_Re0/status/2113895198971359667",
+          "publishedAt": "2026-10-24T07:27:44Z",
+          "note": "CPO15x/30x、Amkor300%、KYEC11亿美元，新增性及原始数字待核",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "旧事实二次传播，未取得可确认新进展"
+        },
+        {
+          "key": "grid_lpt_leadtimes_gasturbines",
+          "unit": "power",
+          "author": "LiDaosen",
+          "url": "https://x.com/LiDaosen/status/2113691570205548746",
+          "publishedAt": "2026-10-23T17:58:35Z",
+          "note": "变压器145—160周与燃机1400—1600美元/kW，专家电话来源未披露",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "变压器145—160周与燃机1400—1600美元/kW，专家电话来源未披露"
+        },
+        {
+          "key": "ercot_datacenter_demand",
+          "unit": "power",
+          "author": "grantbmcdaniel",
+          "url": "https://x.com/grantbmcdaniel/status/2113436474108494177",
+          "publishedAt": "2026-10-23T01:04:55Z",
+          "note": "ERCOT数据中心占新增需求60%+，缺ERCOT原始来源",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "ERCOT数据中心占新增需求60%+，缺ERCOT原始来源"
+        },
+        {
+          "key": "openai_decisions_api_ga",
+          "unit": "ai-adoption",
+          "author": "AGTPinsights",
+          "url": "https://x.com/AGTPinsights/status/2113521723937378437",
+          "publishedAt": "2026-10-23T06:43:40Z",
+          "note": "Decisions API正式可用、10x速度及价格，缺官方原帖",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "原始发布在窗口前，新增性不足，迟发现补遗单列"
+        },
+        {
+          "key": "equal_weight_vs_cap_divergence",
+          "unit": "market-structure",
+          "author": "sentimentrader",
+          "url": "https://x.com/sentimentrader/status/2113649143986163934",
+          "publishedAt": "2026-10-23T15:10:00Z",
+          "note": "10/22 SPX-1.21%与RSP+0.73%，自2008年601个跌1%日至今仅3次，需原始统计边界",
+          "round": 2,
+          "decision": "selected",
+          "reason": "10/22 SPX-1.21%与RSP+0.73%，自2008年601个跌1%日至今仅3次，需原始统计边界"
+        },
+        {
+          "key": "spx_negative_gamma_box",
+          "unit": "market-structure",
+          "author": "3PeaksTrading",
+          "url": "https://x.com/3PeaksTrading/status/2113636101231657046",
+          "publishedAt": "2026-10-23T14:18:10Z",
+          "note": "负Gamma观点，无可核验净头寸/行权价",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "负Gamma观点，无可核验净头寸/行权价"
+        },
+        {
+          "key": "china_nand_export_approvals",
+          "unit": "geopolitics",
+          "author": "shariqriazzz",
+          "url": "https://x.com/shariqriazzz/status/2113659210458186093",
+          "publishedAt": "2026-10-23T15:50:00Z",
+          "note": "Samsung286层与SK240+设备许可，缺BIS/公司原帖",
+          "round": 2,
+          "decision": "excluded",
+          "reason": "Samsung286层与SK240+设备许可，缺BIS/公司原帖"
+        }
+      ],
+      "conversationUrl": "https://grok.com/c/293682c7-f1f8-43bf-93cc-b4d9b016f889",
+      "queries": [
+        "窗口2026-10-23T00:00:00Z至2026-10-24T07:42:00Z：市场焦点宽扫宏观通胀就业财政长债美元信用监管、地缘战争制裁关税出口管制能源航运、AI大型公司资本开支财报指引订单融资故障、市场宽度集中度仓位去杠杆。",
+        "第二轮六包独立搜索：HBM/CoWoS/库存ASP；PPA/并网/变压器/液冷；AI revenue/inference/API/renewal；Treasury/USD/JPY/credit；sanctions/tariff/export control/shipping；market breadth/equal weight/gamma。窗口均2026-10-23T00:00Z至2026-10-24T07:42Z。",
+        "只追两轮候选的公司、政府、监管、当事人或可识别媒体X原帖，逐项确认时间与新增性。",
+        "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
+      ],
+      "status": "partial",
+      "sourceVerification": {
+        "selected": [
+          "oil_spike_stocks_fall",
+          "equal_weight_vs_cap_divergence"
+        ],
+        "rejectedConfirmedLabel": "Grok把Decisions API二传标confirmed，但当前模型未据此采用；后续找回官方10/22原帖，属于窗口前，作为迟发现补遗保留。",
+        "lateEvidence": {
+          "author": "OpenAIDevs",
+          "url": "https://x.com/OpenAIDevs/status/2113346642787086538",
+          "publishedAt": "2026-10-22T19:07:58Z",
+          "excerpt": "Add near real-time decisions to your workflow with the Decisions API, now generally available."
+        }
+      },
+      "counterEvidence": {
+        "queries": [
+          "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
+        ],
+        "note": "实际查询未返回所选两事件正式更正，不等于证明事实；油价早间技术回调不矛盾晚间上行，统计仅研究机构自报未复算。",
+        "sources": [
+          {
+            "author": "WSJmarkets",
+            "url": "https://x.com/WSJmarkets/status/2113435437771436527",
+            "publishedAt": "2026-10-23T01:00:48Z",
+            "excerpt": "Oil Falls on Likely Technical Correction After Earlier Gains"
+          },
+          {
+            "author": "KevRGordon",
+            "url": "https://x.com/KevRGordon/status/2113590717758988699",
+            "publishedAt": "2026-10-23T11:17:50Z",
+            "excerpt": "Yesterday was the best day for the equal-weighted S&P 500 vs. the NASDAQ 100 since January 2021"
+          }
+        ]
+      }
+    },
+    {
+      "page": "people",
+      "model": {
+        "label": "Expert",
+        "version": null,
+        "confirmedAt": "2026-10-24T07:51:37Z"
+      },
+      "conversationUrl": "https://grok.com/c/2212386c-7158-49f1-ac50-2529ba8dbfeb",
+      "candidates": [
+        {
+          "key": "elon-megapack-ramp",
+          "tabId": "elon-musk",
+          "author": "elonmusk",
+          "url": "https://x.com/elonmusk/status/2113679241439027551",
+          "publishedAt": "2026-10-23T17:09:36Z",
+          "excerpt": "By the way, Tesla ramping up Megapack production rapidly to meet increasing demand",
+          "disposition": "selected-qualified"
+        },
+        {
+          "key": "jensen-neocloud-capital",
+          "tabId": "jensen-huang",
+          "author": "LukasKiemer",
+          "url": "https://x.com/LukasKiemer/status/2113732300001161725",
+          "publishedAt": "2026-10-23T20:40:26Z",
+          "excerpt": "neocloud demand and working capital，二级转述待核",
+          "disposition": "pending-source"
+        },
+        {
+          "key": "jassy-ai-spend",
+          "tabId": "trillion-leaders",
+          "author": "a16z",
+          "url": "https://x.com/a16z/status/2113662841492471959",
+          "publishedAt": "2026-10-23T16:04:26Z",
+          "excerpt": "访谈摘要2200亿美元支出及AI250亿美元run rate，口径与时点待核",
+          "disposition": "selected-qualified"
+        },
+        {
+          "key": "bofa-dc-spend",
+          "tabId": "research-reports",
+          "author": "DrNHJ",
+          "url": "https://x.com/DrNHJ/status/2113780332583628969",
+          "publishedAt": "2026-10-23T23:51:18Z",
+          "excerpt": "BofA数据中心2028年2.1万亿美元预测二传",
+          "disposition": "pending-source"
+        },
+        {
+          "key": "nomura-ai-calls",
+          "tabId": "research-reports",
+          "author": "zerohedge",
+          "url": "https://x.com/zerohedge/status/2113768645805375823",
+          "publishedAt": "2026-10-23T23:04:51Z",
+          "excerpt": "Nomura核心AI标的call buying转述",
+          "disposition": "pending-source"
+        }
+      ],
+      "queries": [
+        "2026-10-23T00:00Z至10-24T07:42Z，五个tab：Elon本人；Jensen可归因采访；TrumpDailyPosts/POTUS/WhiteHouse政策；Microsoft/Apple/NVIDIA/Amazon/Alphabet/Meta核心高层；野村/摩根/高盛/BofA机构研究。",
+        "纠正实际关键词until仅到10/24 00:00，五对象单独补00:00—07:42并追查原候选来源，热度补位限定合法来源。",
+        "逐候选thread读取，Megapack否认/产量；a16z2200亿capex与250亿run rate口径；TrumpDailyPosts炼油$150M与POTUS/WhiteHouse原始政策反查。"
+      ],
+      "output": {
+        "checkedAt": "2026-10-24T08:00:26Z",
+        "collectionMode": "incremental-v1",
+        "collectionUnits": [
+          {
+            "id": "people:elon-musk",
+            "page": "people",
+            "object": "elon-musk",
+            "label": "马斯克",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "people:jensen-huang",
+            "page": "people",
+            "object": "jensen-huang",
+            "label": "黄仁勋",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "people:jensen-huang",
+                "key": "jensen-interview-summary-20261019",
+                "status": "pending",
+                "reason": "原访谈日期、原媒体帖或报告假设变化证据不足",
+                "updatedAt": "2026-10-20T00:15:06.643Z",
+                "runId": "2026-10-20-0800"
+              },
+              {
+                "unit": "people:jensen-huang",
+                "key": "jensen-token-costs-claim-20261019",
+                "status": "pending",
+                "reason": "原访谈日期、原媒体帖或报告假设变化证据不足",
+                "updatedAt": "2026-10-20T00:15:06.643Z",
+                "runId": "2026-10-20-0800"
+              },
+              {
+                "unit": "people:jensen-huang",
+                "key": "nvidia-four-german-startups-20261019",
+                "status": "pending",
+                "reason": "发现窗前官方证据，迟发现补遗单列，非本轮新增；原始时间与计划投资范围已保存。",
+                "updatedAt": "2026-10-20T07:15:00.687Z",
+                "runId": "2026-10-20-1500"
+              }
+            ]
+          },
+          {
+            "id": "people:donald-trump",
+            "page": "people",
+            "object": "donald-trump",
+            "label": "特朗普",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "people:trillion-leaders",
+            "page": "people",
+            "object": "trillion-leaders",
+            "label": "万亿美元公司高层",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "people:research-reports",
+            "page": "people",
+            "object": "research-reports",
+            "label": "机构研报",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "people:research-reports",
+                "key": "ms-ai-capex-map-20261019",
+                "status": "pending",
+                "reason": "原访谈日期、原媒体帖或报告假设变化证据不足",
+                "updatedAt": "2026-10-20T00:15:06.643Z",
+                "runId": "2026-10-20-0800"
+              },
+              {
+                "unit": "people:research-reports",
+                "key": "nomura-memory-ai-capacity-20261020",
+                "status": "pending",
+                "reason": "只有二传报告摘要，缺原报告及版本变化证据。",
+                "updatedAt": "2026-10-20T07:15:00.687Z",
+                "runId": "2026-10-20-1500"
+              },
+              {
+                "unit": "people:research-reports",
+                "key": "jpm-ai-compute-gap-20261020",
+                "status": "pending",
+                "reason": "新研报二传经追源和反证，关键数字/相对旧版变化未证实",
+                "updatedAt": "2026-10-21T00:12:32.768Z",
+                "runId": "2026-10-21-0800"
+              },
+              {
+                "unit": "people:research-reports",
+                "key": "bofa-ai-capex-wacc-20261020",
+                "status": "pending",
+                "reason": "新研报二传经追源和反证，关键数字/相对旧版变化未证实",
+                "updatedAt": "2026-10-21T00:12:32.768Z",
+                "runId": "2026-10-21-0800"
+              },
+              {
+                "unit": "people:research-reports",
+                "key": "jpm-memory-summary-20261021",
+                "status": "pending",
+                "reason": "缺机构原报告与假设变化原始证据",
+                "updatedAt": "2026-10-22T00:07:22.421Z",
+                "runId": "2026-10-22-0800"
+              },
+              {
+                "unit": "people:research-reports",
+                "key": "goldman-eps-capex-20261021",
+                "status": "pending",
+                "reason": "缺机构原报告与假设变化原始证据",
+                "updatedAt": "2026-10-22T00:07:22.421Z",
+                "runId": "2026-10-22-0800"
+              }
+            ]
+          }
+        ],
+        "tabs": [
+          {
+            "id": "elon-musk",
+            "status": "partial",
+            "note": "完成严格窗口及最后7小时42分补查，1条扩产表态、1条本人热度动态；未凑满。"
+          },
+          {
+            "id": "jensen-huang",
+            "status": "partial",
+            "note": "检索到neocloud融资转述，但原访谈与新信息时间未证实；保留已有内容。"
+          },
+          {
+            "id": "donald-trump",
+            "status": "partial",
+            "note": "检索到非官方同步号炼油资金转述，未取得可核对的本人原话或政策原帖，不升级为政策事实。"
+          },
+          {
+            "id": "trillion-leaders",
+            "status": "partial",
+            "note": "收录可归因的a16z访谈简介和Tim Cook产品热度动态；支出口径与完整转录未确认。"
+          },
+          {
+            "id": "research-reports",
+            "status": "partial",
+            "note": "BofA和野村候选缺原报告或新假设依据，待核，不用二传凑数。"
+          }
+        ],
+        "items": [
+          {
+            "verification": "collector-report",
+            "tier": "watch",
+            "counterCase": "原帖未提供可直接核算的收入或利润增量。",
+            "eventTime": null,
+            "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+            "weeklyRanks": {
+              "elon-musk": 1
+            },
+            "selection": "rule",
+            "eventKey": "elon-megapack-ramp-20261023",
+            "tabIds": [
+              "elon-musk"
+            ],
+            "author": "Elon Musk @elonmusk",
+            "url": "https://x.com/elonmusk/status/2113679241439027551",
+            "publishedAt": "2026-10-23T17:09:36Z",
+            "title": "Tesla 正加快 Megapack 生产以满足增长需求",
+            "fact": "Elon Musk 表示，Tesla 正快速提升 Megapack 产量，以应对不断增长的需求；原帖没有给出扩产幅度、交付量或具体时间表。",
+            "whyItMatters": "储能供给扩张是电力基础设施的一条观察线索，但这条表态本身不能证明来自 AI 数据中心的订单增长。",
+            "affected": [
+              "TSLA",
+              "储能"
+            ],
+            "excerpt": "By the way, Tesla ramping up Megapack production rapidly to meet increasing demand"
+          },
+          {
+            "verification": "collector-report",
+            "tier": "watch",
+            "counterCase": "尚未核对完整访谈转录；录制日期和支出范围不明确，不能据此认定正式指引上调。",
+            "eventTime": null,
+            "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+            "weeklyRanks": {
+              "trillion-leaders": 1
+            },
+            "selection": "rule",
+            "eventKey": "jassy-a16z-ai-runrate-20261023",
+            "tabIds": [
+              "trillion-leaders"
+            ],
+            "author": "a16z @a16z",
+            "url": "https://x.com/a16z/status/2113662841492471959",
+            "publishedAt": "2026-10-23T16:04:26Z",
+            "title": "a16z 的 Andy Jassy 访谈简介谈及 AI 支出与年化规模",
+            "fact": "a16z 发布的 Andy Jassy 访谈简介称，Amazon 预计今年投入 2,200 亿美元争夺 AI 市场，AI 业务三年达到 250 亿美元年化收入规模。简介没有清楚区分该支出是公司整体资本开支还是仅 AI 投入；年化规模也不是已经实现的全年收入。",
+            "whyItMatters": "把投入速度与业务年化规模放在一起，可以跟踪云厂商的回收压力；在口径澄清前，不宜直接用两者计算投资回报率。",
+            "affected": [
+              "AMZN",
+              "云计算"
+            ],
+            "excerpt": "expects to spend $220 billion this year to win AI. Amazon's AI business hit a $25 billion run rate in three years"
+          },
+          {
+            "verification": "collector-report",
+            "tier": "watch",
+            "counterCase": "原帖未提供可直接核算的收入或利润增量。",
+            "eventTime": null,
+            "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+            "weeklyRanks": {},
+            "selection": "engagement",
+            "eventKey": "tim-cook-iphone-duo-20261024",
+            "tabIds": [
+              "trillion-leaders"
+            ],
+            "author": "Tim Cook @tim_cook",
+            "url": "https://x.com/tim_cook/status/2113799050877452321",
+            "publishedAt": "2026-10-24T01:05:40Z",
+            "title": "Tim Cook 分享 iPhone Duo 用户首次体验",
+            "fact": "Tim Cook 发帖欢迎 iPhone Duo，称很高兴看到各地消费者首次体验产品的兴奋。帖中没有公布销量、收入或 AI 功能采用数据。",
+            "whyItMatters": "这是产品传播动态，互动热度不等于实际需求或业绩增长。",
+            "affected": [
+              "AAPL"
+            ],
+            "originalText": "Welcome to the world, iPhone Duo! It’s such a delight to see the excitement of our customers around the world as they experience the magic of iPhone Duo for the very first time.",
+            "engagement": {
+              "likes": 9608,
+              "reposts": 524,
+              "replies": 298,
+              "quotes": 33,
+              "capturedAt": "2026-10-24T08:00:26Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "verification": "collector-report",
+            "tier": "watch",
+            "counterCase": "原帖未提供可直接核算的收入或利润增量。",
+            "eventTime": null,
+            "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+            "weeklyRanks": {},
+            "selection": "engagement",
+            "eventKey": "elon-government-corporation-view-20261024",
+            "tabIds": [
+              "elon-musk"
+            ],
+            "author": "Elon Musk @elonmusk",
+            "url": "https://x.com/elonmusk/status/2113859987248472215",
+            "publishedAt": "2026-10-24T05:07:49Z",
+            "title": "Elon Musk 发表对政府与企业权力的个人看法",
+            "fact": "Elon Musk 把政府比作规模最大、垄断性最强的企业，并强调政府对暴力的垄断。这是他的个人政治观点，不是新政策或公司公告。",
+            "whyItMatters": "仅作为本人高互动动态保留，没有可直接量化的美股业绩增量。",
+            "affected": [],
+            "originalText": "Those who are opposed to corporations and favor government do not realize that government is simply the largest, most monopolistic corporation of all and it has a monopoly on violence.",
+            "engagement": {
+              "likes": 14170,
+              "reposts": 1748,
+              "replies": 974,
+              "quotes": 209,
+              "capturedAt": "2026-10-24T08:00:26Z",
+              "source": "grok-web-observed"
+            }
+          }
+        ]
+      },
+      "status": "partial",
+      "counterEvidence": {
+        "megapack": "无撤回，原帖无产量数字；他人回复不补入本人原文。",
+        "jassy": "采访方公开简介，非全文核对；2200亿口径未清，250亿为run rate。",
+        "trump": "主帖附视频但没有匹配官方原帖，政策事实待核。"
+      }
+    },
+    {
+      "page": "tickers",
+      "model": {
+        "label": "Expert",
+        "version": null,
+        "confirmedAt": "2026-10-24T08:01:00Z",
+        "timePrecision": "minute"
+      },
+      "conversationUrl": "https://grok.com/c/41459e5b-c330-4312-9ec8-3e10522ac060",
+      "queries": [
+        "$NVDA since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC",
+        "$MU since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC",
+        "$INTC since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC",
+        "($GOOG OR $GOOGL) since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC",
+        "$AVGO since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC",
+        "$VRT since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC",
+        "$TSM since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:nvidia/from:MicronTech/from:intel/from:Google/from:AlphabetInc/from:sundarpichai/from:Broadcom/from:HockTan/from:Vertiv/from:TSMC 分别 since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "候选thread 2113565366660063496/2113757030754443437/2113713788726006171/2113573916711014674；RTX Remix Minecraft since:2026-10-01；高雄事故since:2026-09-01；Robinhood buy button NVDA since:2026-10-20；均截止2026-10-24T07:42Z。"
+      ],
+      "candidates": [
+        {
+          "key": "2113770224747000229",
+          "tabId": "nvda",
+          "author": "drayinvests",
+          "url": "https://x.com/drayinvests/status/2113770224747000229",
+          "publishedAt": "2026-10-23T23:11:08Z",
+          "views": 17900,
+          "text": "THIS CANNOT GO ON FOREVER.\n\nHere are 11 stocks trading UNDER 20x forward earnings:\n\n1. Nvidia | $NVDA \n\n~17.5x Fwd P/E (lowest in over a DECADE)",
+          "summary": "作者把 NVDA 列为前瞻市盈率低于20倍的股票，称约17.5倍为十多年来最低；这属于作者的估值口径，未独立核对盈利预测。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113641804935438568",
+          "tabId": "nvda",
+          "author": "kpak82",
+          "url": "https://x.com/kpak82/status/2113641804935438568",
+          "publishedAt": "2026-10-23T14:40:50Z",
+          "views": 10415,
+          "text": "Image this is your favorite stock at 27 yr lows\nWorking on bullish engulfing monthly bottom reversal candle.\nWould you short it?\nCommon response would be:\n\"That would be crazy. Do it if you like losing money.\"\n\nThis is the inverted (flipped over) $NVDA  chart.\nIf you would not short this, then technically, you would not want to go long on the upright chart.",
+          "summary": "作者把 NVDA 图表倒置，借反向视角质疑当前形态是否适合做多；这是图形解释，不是公司新事实。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113624539644969426",
+          "tabId": "nvda",
+          "author": "QQQ275Soon",
+          "url": "https://x.com/QQQ275Soon/status/2113624539644969426",
+          "publishedAt": "2026-10-23T13:32:14Z",
+          "views": 1788,
+          "text": "ROBINHOOD TURNED OFF THE BUY BUTTON AGAIN. THIS IS THE GAMESTOP SAGA ALL OVER AGAIN $HOOD $NVDA",
+          "summary": "作者把所谓买入限制类比 GameStop 事件并提及 NVDA；目前没有取得官方确认，仅保留为未核实讨论。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113693263861629285",
+          "tabId": "nvda",
+          "author": "JasonColelfod",
+          "url": "https://x.com/JasonColelfod/status/2113693263861629285",
+          "publishedAt": "2026-10-23T18:05:19Z",
+          "views": 790,
+          "text": "POV: your $NVDA position finally turns green and you start planning early retirement 😂",
+          "summary": "作者调侃 NVDA 持仓刚转绿，就开始规划提前退休；属于投资者情绪表达。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113636805845365185",
+          "tabId": "mu",
+          "author": "iWatchUSleeeep",
+          "url": "https://x.com/iWatchUSleeeep/status/2113636805845365185",
+          "publishedAt": "2026-10-23T14:20:58Z",
+          "views": 711,
+          "text": "$MU put buys. 147dte",
+          "summary": "作者发帖称出现 MU 看跌期权买入、距到期147天；未提供可核对的成交明细，不能据此判定方向。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113636423266144294",
+          "tabId": "mu",
+          "author": "Jcruuuz31",
+          "url": "https://x.com/Jcruuuz31/status/2113636423266144294",
+          "publishedAt": "2026-10-23T14:19:27Z",
+          "views": 239,
+          "text": "$MU 800 today or what?",
+          "summary": "作者问 MU 当天是否会到800；这是个人行情猜测，不是报价或目标价研究。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113660277996634457",
+          "tabId": "mu",
+          "author": "WallSTQuon",
+          "url": "https://x.com/WallSTQuon/status/2113660277996634457",
+          "publishedAt": "2026-10-23T15:54:14Z",
+          "views": 229,
+          "text": "Ahhh go away already 🙄 $MU",
+          "summary": "作者对 MU 表达不满或调侃，没有提供新的基本面信息。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113793283428401392",
+          "tabId": "mu",
+          "author": "dawn11048754",
+          "url": "https://x.com/dawn11048754/status/2113793283428401392",
+          "publishedAt": "2026-10-24T00:42:45Z",
+          "views": 74,
+          "text": "8 Earnings Stocks I’m Watching Closely Next Week\n\n$MU Buy: $840–$865 Target: $1,150+\n\n$IREN Buy: $22–$25 Target: $55+\n\n$NVDA Buy: $205–$212  Target: $260+\n\n$HIMS Buy: $25–$28  Target: $45+\n\n$QCOM Buy: $160–$170  Target: $200+\n\n$AMD Buy: $510–$520 Target: $680+\n\n$NBIS Buy: $155–$162  Target: $260+\n\n$AVGO Buy: $310–$320  Target: $400+\n\nHeat is here. Catalysts are this week. Levels set. Don’t chase.",
+          "summary": "作者列出 MU 及多只股票的买入区间和目标价；这些是个人交易设想，文中财报日与估值未得到核验。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113676668028191166",
+          "tabId": "intc",
+          "author": "Colosteve2000",
+          "url": "https://x.com/Colosteve2000/status/2113676668028191166",
+          "publishedAt": "2026-10-23T16:59:22Z",
+          "views": 5325,
+          "text": "People are running out of time to get cheap $INTC shares. When Intel announces multiple deals. It’s going to fly up. Hopefully we get news at the earnings report.",
+          "summary": "作者认为 INTC 便宜买入机会将减少，期待多笔合作或交易消息；帖子没有确认任何合同。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113640538415026551",
+          "tabId": "intc",
+          "author": "fantasykeiqb",
+          "url": "https://x.com/fantasykeiqb/status/2113640538415026551",
+          "publishedAt": "2026-10-23T14:35:48Z",
+          "views": 215,
+          "text": "Intel’s Next Battle Is About More Than Chips. $INTC \n\nIntel’s latest R&D discussions reveal three key trends:\n\n• Future chips will rely more on 3D stacking, but heat and integration remain challenges.\n• AI demand is growing faster than semiconductor equipment capacity can expand.\n• Intel’s 14A process is a critical test of its ability to compete with TSMC.\n\nMy takeaway: Technology matters, but manufacturing scale, execution, and cost determine the winners.\nI’m watching the entire AI supply chain not just GPUs.\n\nWhat will become the biggest bottleneck: chips, memory, equipment, or power?",
+          "summary": "作者从3D堆叠、设备产能和14A工艺讨论 Intel 的竞争，认为制造规模、执行和成本决定结果；属于个人分析。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113748252700938322",
+          "tabId": "intc",
+          "author": "vinnnter",
+          "url": "https://x.com/vinnnter/status/2113748252700938322",
+          "publishedAt": "2026-10-23T21:43:49Z",
+          "views": 169,
+          "text": "Just long $INTC and call it a day",
+          "summary": "帖子只有做多 INTC 的个人判断，没有给出依据或新事实。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113744547557896362",
+          "tabId": "intc",
+          "author": "ISITrading2717",
+          "url": "https://x.com/ISITrading2717/status/2113744547557896362",
+          "publishedAt": "2026-10-23T21:29:06Z",
+          "views": 122,
+          "text": "Biggest winner was $INTC at +$89.01.\n\nClosed a call credit spread after about 8 days. Short 2 of the 120 calls, long 2 of the 125 calls, so my risk was capped the whole time.",
+          "summary": "作者自述平仓一组持有约8天的 INTC 看涨信用价差，获利89.01美元；这是个人复盘，未独立核对账户记录。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113722026712072237",
+          "tabId": "goog",
+          "author": "kpak82",
+          "url": "https://x.com/kpak82/status/2113722026712072237",
+          "publishedAt": "2026-10-23T19:59:36Z",
+          "views": 9498,
+          "text": "$GOOGL dumpy doo.\nWarning sent right before the drop.",
+          "summary": "作者声称自己在 GOOGL 下跌前发出警告；未据此评估预测准确性。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113695099095757297",
+          "tabId": "goog",
+          "author": "novarealinvest",
+          "url": "https://x.com/novarealinvest/status/2113695099095757297",
+          "publishedAt": "2026-10-23T18:12:36Z",
+          "views": 782,
+          "text": "메타 $META 신규 상업 조건 도입 지연\n\n출판사·광고주 반발로 시행 연기\n광고·콘텐츠 수익 모델 조정 불확실성\n\n광고 매출 모멘텀 둔화 우려, $META $GOOGL 비교 주목",
+          "summary": "作者称 Meta 因出版商和广告主反对而推迟新商业条款，并比较 META 与 GOOGL 的广告收入；相关事件尚未追到原始公告。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113676284601704765",
+          "tabId": "goog",
+          "author": "TheNewMoney_app",
+          "url": "https://x.com/TheNewMoney_app/status/2113676284601704765",
+          "publishedAt": "2026-10-23T16:57:51Z",
+          "views": 582,
+          "text": "$340,800 of $GOOG $395 calls were just purchased at $53.25 per contract.\n\nExpiring Jan 19, 2029.",
+          "summary": "作者称有人买入总额340,800美元、2029年1月19日到期的 GOOG 395看涨期权；未核对成交方向或是否为组合交易。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113668310604865872",
+          "tabId": "goog",
+          "author": "kimfilmmy_1604",
+          "url": "https://x.com/kimfilmmy_1604/status/2113668310604865872",
+          "publishedAt": "2026-10-23T16:26:09Z",
+          "views": 27,
+          "text": "$GOOG at $315–$320 is one of the most compelling setups ahead of earnings on Oct. 28.\n\n• Google Cloud growth accelerated for 4 straight quarters: 34% → 48% → 63% → 82%\n• Cloud backlog: $514B\n• Search revenue growth: 17%\n• TPU adoption adds another AI growth opportunity.",
+          "summary": "作者用云增速、积压订单、搜索业务与 TPU 机会表达看多观点；这些数字尚未核对财报口径，不作为已确认指标。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113706229461811489",
+          "tabId": "avgo",
+          "author": "CyclesFan",
+          "url": "https://x.com/CyclesFan/status/2113706229461811489",
+          "publishedAt": "2026-10-23T18:56:50Z",
+          "views": 7147,
+          "text": "$AVGO - Price is less than 5% away from the 100 week MA, a key long term moving average which it last hit at the April 2025 low. I expect it to bottom there and then we'll see if it's able to make a new ATH in 2027 or a bear market is already underway.",
+          "summary": "作者称 AVGO 距100周均线不到5%，预期可能在附近形成底部，再观察2027年创新高或熊市延续；这是技术面情景判断。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113830461210259947",
+          "tabId": "avgo",
+          "author": "FinTonyX",
+          "url": "https://x.com/FinTonyX/status/2113830461210259947",
+          "publishedAt": "2026-10-24T03:10:29Z",
+          "views": 257,
+          "text": "$AVGO\n\nBreakdown. Look out below!\n\nIs this a bear trap? Or is this a precursor of what's to come toward EOY for semis?",
+          "summary": "作者认为 AVGO 出现跌破，提问这是假跌破还是半导体年底趋势的预兆，没有确定结论。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113782678818595231",
+          "tabId": "avgo",
+          "author": "Adelirani1",
+          "url": "https://x.com/Adelirani1/status/2113782678818595231",
+          "publishedAt": "2026-10-24T00:00:37Z",
+          "views": 73,
+          "text": "$AVGO",
+          "summary": "可读取正文只有 AVGO 代码，未包含可解释的观点。",
+          "disposition": "excluded-empty-text"
+        },
+        {
+          "key": "2113758305973666140",
+          "tabId": "avgo",
+          "author": "robertkudja",
+          "url": "https://x.com/robertkudja/status/2113758305973666140",
+          "publishedAt": "2026-10-23T22:23:46Z",
+          "views": 45,
+          "text": "Thanks. Just started a position in $AVGO",
+          "summary": "作者表达刚建仓 AVGO，没有披露交易理由或仓位大小。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113706135693689149",
+          "tabId": "vrt",
+          "author": "MarketMaestro1",
+          "url": "https://x.com/MarketMaestro1/status/2113706135693689149",
+          "publishedAt": "2026-10-23T18:56:28Z",
+          "views": 3994,
+          "text": "$VRT \nThe second zone could be an opportunity just like the tariff bottom",
+          "summary": "作者认为 VRT 的第二个图表区域可能提供类似此前关税低点的机会；未给出可直接核验的基本面增量。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113668409791836312",
+          "tabId": "vrt",
+          "author": "BullToss69",
+          "url": "https://x.com/BullToss69/status/2113668409791836312",
+          "publishedAt": "2026-10-23T16:26:33Z",
+          "views": 150,
+          "text": "Those discounts from ATH across $AMZN, $VRT, $FPS, $CEG, $META and $SAVGO make the biggest-steal debate interesting. You and @CoachClayton424 remain my most trusted sources for financial insight.",
+          "summary": "作者把 VRT 与数只股票相对历史高点的回落放在一起比较；回落幅度本身不说明低估。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113641518745407516",
+          "tabId": "tsm",
+          "author": "CheddarFlow",
+          "url": "https://x.com/CheddarFlow/status/2113641518745407516",
+          "publishedAt": "2026-10-23T14:39:42Z",
+          "views": 41228,
+          "text": "Someone just paid ABOVE ask for $6.3M of $TSM puts\n\n2,876 contracts... More than the entire open interest\n\nThen they added $2M+ more",
+          "summary": "作者称有人高于卖价买入630万美元 TSM 看跌期权，随后追加超过200万美元。帖子所述方向、规模与是否对冲尚未独立核对。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113639820828582025",
+          "tabId": "tsm",
+          "author": "michaelsisakov",
+          "url": "https://x.com/michaelsisakov/status/2113639820828582025",
+          "publishedAt": "2026-10-23T14:32:57Z",
+          "views": 1716,
+          "text": "Anyone following Semi's should watch $TSM.\n\nIt is AT major trendline support. How it reacts today/Monday will determine if there is any juice left or if the train is leaving the station for good.",
+          "summary": "作者认为 TSM 位于主要趋势线支撑，关注当天和周一反应；属于技术面判断。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113630284747059458",
+          "tabId": "tsm",
+          "author": "iWatchUSleeeep",
+          "url": "https://x.com/iWatchUSleeeep/status/2113630284747059458",
+          "publishedAt": "2026-10-23T13:55:03Z",
+          "views": 727,
+          "text": "$TSM put buys. 84dte",
+          "summary": "作者称出现距到期84天的 TSM 看跌期权买入，未提供完整成交依据。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113620941083492374",
+          "tabId": "tsm",
+          "author": "WiseAss_ets",
+          "url": "https://x.com/WiseAss_ets/status/2113620941083492374",
+          "publishedAt": "2026-10-23T13:17:56Z",
+          "views": 9,
+          "text": "$TSM expanding to Texas ?",
+          "summary": "作者用问句提出 TSM 是否扩展至得州，引用的是较早帖子；不视为新厂址已获确认。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113683525526581486",
+          "tabId": "mu",
+          "author": "DeductiveWealth",
+          "url": "https://x.com/DeductiveWealth/status/2113683525526581486",
+          "publishedAt": "2026-10-23T17:26:37Z",
+          "views": 69,
+          "text": "Full 100 graded MU bull FLOW yesterday. Caught a nice move into today. $MU.（原帖节选）",
+          "summary": "作者称前一天观察到评分较高的 MU 多头期权流并捕捉到走势；这是作者自定评级与事后复盘。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113870323712225577",
+          "tabId": "goog",
+          "author": "asknaksha",
+          "url": "https://x.com/asknaksha/status/2113870323712225577",
+          "publishedAt": "2026-10-24T05:48:53Z",
+          "views": 107,
+          "text": "I'm rethinking my $GOOGL long as well. Simple example, it failed to create a playlist on my YouTube account that it is signed into already but codex was able to do it. seriously?（原帖节选）",
+          "summary": "作者因 AI 工具未能在 YouTube 创建播放列表而重新考虑 GOOGL 多头；单次体验不代表整体产品质量或用户留存。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113838288767455619",
+          "tabId": "goog",
+          "author": "michaelfromyeg",
+          "url": "https://x.com/michaelfromyeg/status/2113838288767455619",
+          "publishedAt": "2026-10-24T03:41:35Z",
+          "views": 100,
+          "text": "short $GOOG. @sundarpichai call a code red（原帖节选）",
+          "summary": "作者简短表达做空 GOOG 的看法，呼吁管理层重视问题；没有提供业绩或估值依据。",
+          "disposition": "hotspot-pool"
+        },
+        {
+          "key": "2113716358173102242",
+          "tabId": "avgo",
+          "author": "TheCooleyBandit",
+          "url": "https://x.com/TheCooleyBandit/status/2113716358173102242",
+          "publishedAt": "2026-10-23T19:37:05Z",
+          "views": 31,
+          "text": "$AVGO PUTS 26 OCT 26 DOOMSDAY LOTTOS（原帖节选）",
+          "summary": "作者把 AVGO 临近到期看跌期权称为彩票仓，属于高风险个人交易表达。",
+          "disposition": "hotspot-pool"
+        }
+      ],
+      "excluded": [
+        {
+          "url": "https://x.com/BackpackOnchain/status/2113693900540117366",
+          "reason": "代币化产品推广"
+        },
+        {
+          "url": "https://x.com/RaphaelIntern/status/2113512698231021933",
+          "reason": "同名代币，非美光，且展示窗外"
+        },
+        {
+          "url": "https://x.com/LeverageShares/status/2113619374145720548",
+          "reason": "明示MarketingCommunication"
+        },
+        {
+          "url": "https://x.com/tritonfuerte/status/2113885941060284538",
+          "reason": "WhatsApp引流广告"
+        },
+        {
+          "url": "https://x.com/JGS_2016/status/2113494234687053842",
+          "reason": "展示窗外；事故据Grok追查已于10月21日报道，未取得原始核验链接，不能作为新公司事实"
+        },
+        {
+          "url": "https://x.com/To_sun7/status/2113775575626391652",
+          "reason": "RWA衍生产品体验非美股本体讨论，不补入NVDA榜"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "url": "https://x.com/nvidia/status/2113757030754443437",
+          "result": "新功能发布，可收录；无收入数字。"
+        },
+        {
+          "url": "https://x.com/nvidia/status/2113565366660063496",
+          "result": "访问活动宣传，无订单增量，未给活动时间，不入事实榜。"
+        },
+        {
+          "url": "https://x.com/MicronTech/status/2113713788726006171",
+          "result": "供应商日总结，无新增产能订单，未给活动时间，不入事实榜。"
+        },
+        {
+          "url": "https://x.com/Vertiv/status/2113573916711014674",
+          "result": "10月22日展位交流，无合同增量，不入事实榜。"
+        }
+      ],
+      "counterEvidence": {
+        "rtx": "Grok读取官方帖并检索旧公告/更正，报告当日新功能；仅依据官方帖叙述，不采用其未给出处的媒体扩展数字。",
+        "tsm": "Grok称有10月21日Techub报道，未返回可回查链接，不据此确认事故本身；二手事故帖不作为新增事实。",
+        "robinhood": "没有可回查官方确认，热点中明确作者声称与未核实。"
+      },
+      "output": {
+        "checkedAt": "2026-10-24T08:08:04Z",
+        "collectionMode": "incremental-v1",
+        "collectionUnits": [
+          {
+            "id": "tickers:nvda",
+            "page": "tickers",
+            "object": "nvda",
+            "label": "NVDA",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "tickers:nvda",
+                "key": "doubleai-b300-financing-20261019",
+                "status": "pending",
+                "reason": "原始媒体/客户帖或事件增量时间仍缺失；Vertiv为现有部署案例推广，无新订单/部署日期，不当新增订单。",
+                "updatedAt": "2026-10-19T12:51:43.410Z",
+                "runId": "2026-10-19-2030"
+              },
+              {
+                "unit": "tickers:nvda",
+                "key": "nebius-b200-spot-triple-20261020",
+                "status": "pending",
+                "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。",
+                "updatedAt": "2026-10-20T07:20:36.477Z",
+                "runId": "2026-10-20-1500"
+              }
+            ]
+          },
+          {
+            "id": "tickers:mu",
+            "page": "tickers",
+            "object": "mu",
+            "label": "MU",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "tickers:mu",
+                "key": "mu-strike-oct22-duration-20261020",
+                "status": "pending",
+                "reason": "10月22日/一天细节缺权威确认，原风险不更新",
+                "updatedAt": "2026-10-21T00:17:29.015Z",
+                "runId": "2026-10-21-0800"
+              },
+              {
+                "unit": "tickers:mu",
+                "key": "mu-taiwan-strike-20261022",
+                "status": "pending",
+                "reason": "窗口内已出现罢工/生产继续与公司奖金二传，原始权威X及实际产量影响仍缺，不升级原风险。",
+                "updatedAt": "2026-10-23T00:20:10.510Z",
+                "runId": "2026-10-23-0800"
+              }
+            ]
+          },
+          {
+            "id": "tickers:intc",
+            "page": "tickers",
+            "object": "intc",
+            "label": "INTC",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "tickers:intc",
+                "key": "intel-14a-customers-20261020",
+                "status": "pending",
+                "reason": "公司与权威原帖未支持14A客户确定说法，保留待核",
+                "updatedAt": "2026-10-21T00:17:29.015Z",
+                "runId": "2026-10-21-0800"
+              },
+              {
+                "unit": "tickers:intc",
+                "key": "ohio-lease-20261021",
+                "status": "pending",
+                "reason": "无租厂及18A新客户原证，仅官方施工进展",
+                "updatedAt": "2026-10-22T00:12:40.781Z",
+                "runId": "2026-10-22-0800"
+              }
+            ]
+          },
+          {
+            "id": "tickers:goog",
+            "page": "tickers",
+            "object": "goog",
+            "label": "GOOG",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "tickers:avgo",
+            "page": "tickers",
+            "object": "avgo",
+            "label": "AVGO",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "tickers:avgo",
+                "key": "openai-jalapeno-turin-20261019",
+                "status": "pending",
+                "reason": "原始媒体/客户帖或事件增量时间仍缺失；Vertiv为现有部署案例推广，无新订单/部署日期，不当新增订单。",
+                "updatedAt": "2026-10-19T12:51:43.410Z",
+                "runId": "2026-10-19-2030"
+              },
+              {
+                "unit": "tickers:avgo",
+                "key": "kddi-cpo-trial-20261022",
+                "status": "pending",
+                "reason": "无官方X原始披露，试验细节仅二传不作事实。",
+                "updatedAt": "2026-10-23T00:20:10.510Z",
+                "runId": "2026-10-23-0800"
+              }
+            ]
+          },
+          {
+            "id": "tickers:vrt",
+            "page": "tickers",
+            "object": "vrt",
+            "label": "VRT",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "tickers:vrt",
+                "key": "nvda-vrt-cooling-20261021",
+                "status": "pending",
+                "reason": "缺Vertiv相关原帖及22%独立验证",
+                "updatedAt": "2026-10-22T00:12:40.781Z",
+                "runId": "2026-10-22-0800"
+              }
+            ]
+          },
+          {
+            "id": "tickers:tsm",
+            "page": "tickers",
+            "object": "tsm",
+            "label": "TSM",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "tickers:tsm",
+                "key": "tsm-cowos-260kwpm-estimate-20261020",
+                "status": "pending",
+                "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。",
+                "updatedAt": "2026-10-20T07:20:36.477Z",
+                "runId": "2026-10-20-1500"
+              },
+              {
+                "unit": "tickers:tsm",
+                "key": "apple-tsmc-a14-capacity-claim-20261020",
+                "status": "pending",
+                "reason": "原始/权威证据不足；B200缺可比口径且有动态现货/合约差异限制，TSM无公司或原报告确认；保留待核。",
+                "updatedAt": "2026-10-20T07:20:36.477Z",
+                "runId": "2026-10-20-1500"
+              }
+            ]
+          }
+        ],
+        "hotspotCollectionUnits": [
+          {
+            "id": "tickers:nvda:hotspots",
+            "page": "tickers",
+            "object": "nvda:hotspots",
+            "tabId": "nvda",
+            "kind": "hotspots",
+            "label": "NVDA X热点",
+            "start": "2026-10-23T03:54:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "tickers:mu:hotspots",
+            "page": "tickers",
+            "object": "mu:hotspots",
+            "tabId": "mu",
+            "kind": "hotspots",
+            "label": "MU X热点",
+            "start": "2026-10-23T03:54:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "tickers:intc:hotspots",
+            "page": "tickers",
+            "object": "intc:hotspots",
+            "tabId": "intc",
+            "kind": "hotspots",
+            "label": "INTC X热点",
+            "start": "2026-10-23T03:54:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "tickers:goog:hotspots",
+            "page": "tickers",
+            "object": "goog:hotspots",
+            "tabId": "goog",
+            "kind": "hotspots",
+            "label": "GOOG X热点",
+            "start": "2026-10-23T03:54:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "tickers:avgo:hotspots",
+            "page": "tickers",
+            "object": "avgo:hotspots",
+            "tabId": "avgo",
+            "kind": "hotspots",
+            "label": "AVGO X热点",
+            "start": "2026-10-23T03:54:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "tickers:vrt:hotspots",
+            "page": "tickers",
+            "object": "vrt:hotspots",
+            "tabId": "vrt",
+            "kind": "hotspots",
+            "label": "VRT X热点",
+            "start": "2026-10-23T03:54:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          },
+          {
+            "id": "tickers:tsm:hotspots",
+            "page": "tickers",
+            "object": "tsm:hotspots",
+            "tabId": "tsm",
+            "kind": "hotspots",
+            "label": "TSM X热点",
+            "start": "2026-10-23T03:54:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": []
+          }
+        ],
+        "tabs": [
+          {
+            "id": "nvda",
+            "status": "complete",
+            "note": "官方新功能1条；访问活动未作为订单。"
+          },
+          {
+            "id": "mu",
+            "status": "complete",
+            "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。"
+          },
+          {
+            "id": "intc",
+            "status": "complete",
+            "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。"
+          },
+          {
+            "id": "goog",
+            "status": "complete",
+            "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。"
+          },
+          {
+            "id": "avgo",
+            "status": "complete",
+            "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。"
+          },
+          {
+            "id": "vrt",
+            "status": "complete",
+            "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。"
+          },
+          {
+            "id": "tsm",
+            "status": "partial",
+            "note": "事故二传缺原始核验，未入新事实。"
+          }
+        ],
+        "items": [
+          {
+            "eventKey": "nvidia-rtx-remix-minecraft-20261023",
+            "tabIds": [
+              "nvda"
+            ],
+            "author": "NVIDIA @nvidia",
+            "url": "https://x.com/nvidia/status/2113757030754443437",
+            "publishedAt": "2026-10-23T22:18:42Z",
+            "eventTime": null,
+            "eventTimeNote": "10月23日公告称功能已可用，具体上线时刻未说明。",
+            "title": "NVIDIA 推出 Minecraft Java 版 RTX Remix 工具",
+            "fact": "NVIDIA 公告称，Minecraft Java 版的 RTX Remix 为创作者提供路径追踪光照与 AI 驱动的 DLSS 工具。帖中没有公布新增销售额或使用量。",
+            "whyItMatters": "这是 AI 在游戏画面重制中的具体落地，扩展 RTX 软件生态；商业影响仍取决于创作者采用与玩家硬件升级。",
+            "counterCase": "功能发布不等于新增 GPU 订单，尚无采用率或收入数据。",
+            "affected": [
+              "NVDA",
+              "游戏与AI渲染"
+            ],
+            "verification": "collector-report",
+            "tier": "watch",
+            "weeklyRanks": {
+              "nvda": 1
+            },
+            "excerpt": "A new look for a classic. RTX Remix for Minecraft: Java Edition gives creators tools to remaster the game with realistic path-traced lighting and AI powered DLSS for maximum performance."
+          }
+        ],
+        "hotspotTabs": [
+          {
+            "id": "nvda",
+            "status": "partial",
+            "queries": [
+              "$NVDA since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+            ],
+            "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。"
+          },
+          {
+            "id": "mu",
+            "status": "partial",
+            "queries": [
+              "$MU since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+            ],
+            "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。"
+          },
+          {
+            "id": "intc",
+            "status": "partial",
+            "queries": [
+              "$INTC since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+            ],
+            "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。"
+          },
+          {
+            "id": "goog",
+            "status": "partial",
+            "queries": [
+              "($GOOG OR $GOOGL) since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+            ],
+            "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。"
+          },
+          {
+            "id": "avgo",
+            "status": "partial",
+            "queries": [
+              "$AVGO since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+            ],
+            "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。"
+          },
+          {
+            "id": "vrt",
+            "status": "partial",
+            "queries": [
+              "$VRT since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+            ],
+            "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。"
+          },
+          {
+            "id": "tsm",
+            "status": "partial",
+            "queries": [
+              "$TSM since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+            ],
+            "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。"
+          }
+        ],
+        "hotspots": [
+          {
+            "tabId": "nvda",
+            "eventKey": "x-2113770224747000229",
+            "author": "drayinvests",
+            "url": "https://x.com/drayinvests/status/2113770224747000229",
+            "publishedAt": "2026-10-23T23:11:08Z",
+            "title": "作者称 NVDA 前瞻市盈率约 17.5 倍",
+            "fact": "作者把 NVDA 列为前瞻市盈率低于20倍的股票，称约17.5倍为十多年来最低；这属于作者的估值口径，未独立核对盈利预测。",
+            "originalText": "THIS CANNOT GO ON FOREVER.\n\nHere are 11 stocks trading UNDER 20x forward earnings:\n\n1. Nvidia | $NVDA \n\n~17.5x Fwd P/E (lowest in over a DECADE)",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 17900,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "nvda",
+            "eventKey": "x-2113641804935438568",
+            "author": "kpak82",
+            "url": "https://x.com/kpak82/status/2113641804935438568",
+            "publishedAt": "2026-10-23T14:40:50Z",
+            "title": "倒置图表引出 NVDA 技术面争论",
+            "fact": "作者把 NVDA 图表倒置，借反向视角质疑当前形态是否适合做多；这是图形解释，不是公司新事实。",
+            "originalText": "Image this is your favorite stock at 27 yr lows\nWorking on bullish engulfing monthly bottom reversal candle.\nWould you short it?\nCommon response would be:\n\"That would be crazy. Do it if you like losing money.\"\n\nThis is the inverted (flipped over) $NVDA  chart.\nIf you would not short this, then technically, you would not want to go long on the upright chart.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 10415,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "nvda",
+            "eventKey": "x-2113624539644969426",
+            "author": "QQQ275Soon",
+            "url": "https://x.com/QQQ275Soon/status/2113624539644969426",
+            "publishedAt": "2026-10-23T13:32:14Z",
+            "title": "作者声称 Robinhood 关闭买入按钮",
+            "fact": "作者把所谓买入限制类比 GameStop 事件并提及 NVDA；目前没有取得官方确认，仅保留为未核实讨论。",
+            "originalText": "ROBINHOOD TURNED OFF THE BUY BUTTON AGAIN. THIS IS THE GAMESTOP SAGA ALL OVER AGAIN $HOOD $NVDA",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 1788,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "nvda",
+            "eventKey": "x-2113693263861629285",
+            "author": "JasonColelfod",
+            "url": "https://x.com/JasonColelfod/status/2113693263861629285",
+            "publishedAt": "2026-10-23T18:05:19Z",
+            "title": "NVDA 持仓转绿引发退休玩笑",
+            "fact": "作者调侃 NVDA 持仓刚转绿，就开始规划提前退休；属于投资者情绪表达。",
+            "originalText": "POV: your $NVDA position finally turns green and you start planning early retirement 😂",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 790,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "mu",
+            "eventKey": "x-2113636805845365185",
+            "author": "iWatchUSleeeep",
+            "url": "https://x.com/iWatchUSleeeep/status/2113636805845365185",
+            "publishedAt": "2026-10-23T14:20:58Z",
+            "title": "作者提及 MU 的 147 天看跌期权买单",
+            "fact": "作者发帖称出现 MU 看跌期权买入、距到期147天；未提供可核对的成交明细，不能据此判定方向。",
+            "originalText": "$MU put buys. 147dte",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 711,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "mu",
+            "eventKey": "x-2113636423266144294",
+            "author": "Jcruuuz31",
+            "url": "https://x.com/Jcruuuz31/status/2113636423266144294",
+            "publishedAt": "2026-10-23T14:19:27Z",
+            "title": "MU 股价能否到 800 的短帖讨论",
+            "fact": "作者问 MU 当天是否会到800；这是个人行情猜测，不是报价或目标价研究。",
+            "originalText": "$MU 800 today or what?",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 239,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "mu",
+            "eventKey": "x-2113660277996634457",
+            "author": "WallSTQuon",
+            "url": "https://x.com/WallSTQuon/status/2113660277996634457",
+            "publishedAt": "2026-10-23T15:54:14Z",
+            "title": "MU 交易情绪短帖",
+            "fact": "作者对 MU 表达不满或调侃，没有提供新的基本面信息。",
+            "originalText": "Ahhh go away already 🙄 $MU",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 229,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "mu",
+            "eventKey": "x-2113793283428401392",
+            "author": "dawn11048754",
+            "url": "https://x.com/dawn11048754/status/2113793283428401392",
+            "publishedAt": "2026-10-24T00:42:45Z",
+            "title": "作者分享包含 MU 的交易价位清单",
+            "fact": "作者列出 MU 及多只股票的买入区间和目标价；这些是个人交易设想，文中财报日与估值未得到核验。",
+            "originalText": "8 Earnings Stocks I’m Watching Closely Next Week\n\n$MU Buy: $840–$865 Target: $1,150+\n\n$IREN Buy: $22–$25 Target: $55+\n\n$NVDA Buy: $205–$212  Target: $260+\n\n$HIMS Buy: $25–$28  Target: $45+\n\n$QCOM Buy: $160–$170  Target: $200+\n\n$AMD Buy: $510–$520 Target: $680+\n\n$NBIS Buy: $155–$162  Target: $260+\n\n$AVGO Buy: $310–$320  Target: $400+\n\nHeat is here. Catalysts are this week. Levels set. Don’t chase.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 74,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "intc",
+            "eventKey": "x-2113676668028191166",
+            "author": "Colosteve2000",
+            "url": "https://x.com/Colosteve2000/status/2113676668028191166",
+            "publishedAt": "2026-10-23T16:59:22Z",
+            "title": "投资者期待 Intel 在财报时披露交易",
+            "fact": "作者认为 INTC 便宜买入机会将减少，期待多笔合作或交易消息；帖子没有确认任何合同。",
+            "originalText": "People are running out of time to get cheap $INTC shares. When Intel announces multiple deals. It’s going to fly up. Hopefully we get news at the earnings report.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 5325,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "intc",
+            "eventKey": "x-2113640538415026551",
+            "author": "fantasykeiqb",
+            "url": "https://x.com/fantasykeiqb/status/2113640538415026551",
+            "publishedAt": "2026-10-23T14:35:48Z",
+            "title": "Intel 讨论聚焦制造规模、成本与执行",
+            "fact": "作者从3D堆叠、设备产能和14A工艺讨论 Intel 的竞争，认为制造规模、执行和成本决定结果；属于个人分析。",
+            "originalText": "Intel’s Next Battle Is About More Than Chips. $INTC \n\nIntel’s latest R&D discussions reveal three key trends:\n\n• Future chips will rely more on 3D stacking, but heat and integration remain challenges.\n• AI demand is growing faster than semiconductor equipment capacity can expand.\n• Intel’s 14A process is a critical test of its ability to compete with TSMC.\n\nMy takeaway: Technology matters, but manufacturing scale, execution, and cost determine the winners.\nI’m watching the entire AI supply chain not just GPUs.\n\nWhat will become the biggest bottleneck: chips, memory, equipment, or power?",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 215,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "intc",
+            "eventKey": "x-2113748252700938322",
+            "author": "vinnnter",
+            "url": "https://x.com/vinnnter/status/2113748252700938322",
+            "publishedAt": "2026-10-23T21:43:49Z",
+            "title": "作者表达做多 INTC 的观点",
+            "fact": "帖子只有做多 INTC 的个人判断，没有给出依据或新事实。",
+            "originalText": "Just long $INTC and call it a day",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 169,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "intc",
+            "eventKey": "x-2113744547557896362",
+            "author": "ISITrading2717",
+            "url": "https://x.com/ISITrading2717/status/2113744547557896362",
+            "publishedAt": "2026-10-23T21:29:06Z",
+            "title": "作者回顾 INTC 看涨信用价差交易",
+            "fact": "作者自述平仓一组持有约8天的 INTC 看涨信用价差，获利89.01美元；这是个人复盘，未独立核对账户记录。",
+            "originalText": "Biggest winner was $INTC at +$89.01.\n\nClosed a call credit spread after about 8 days. Short 2 of the 120 calls, long 2 of the 125 calls, so my risk was capped the whole time.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 122,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "goog",
+            "eventKey": "x-2113722026712072237",
+            "author": "kpak82",
+            "url": "https://x.com/kpak82/status/2113722026712072237",
+            "publishedAt": "2026-10-23T19:59:36Z",
+            "title": "作者回顾 GOOGL 下跌前的提醒",
+            "fact": "作者声称自己在 GOOGL 下跌前发出警告；未据此评估预测准确性。",
+            "originalText": "$GOOGL dumpy doo.\nWarning sent right before the drop.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 9498,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "goog",
+            "eventKey": "x-2113695099095757297",
+            "author": "novarealinvest",
+            "url": "https://x.com/novarealinvest/status/2113695099095757297",
+            "publishedAt": "2026-10-23T18:12:36Z",
+            "title": "广告业务讨论比较 Meta 与 Google",
+            "fact": "作者称 Meta 因出版商和广告主反对而推迟新商业条款，并比较 META 与 GOOGL 的广告收入；相关事件尚未追到原始公告。",
+            "originalText": "메타 $META 신규 상업 조건 도입 지연\n\n출판사·광고주 반발로 시행 연기\n광고·콘텐츠 수익 모델 조정 불확실성\n\n광고 매출 모멘텀 둔화 우려, $META $GOOGL 비교 주목",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 782,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "goog",
+            "eventKey": "x-2113676284601704765",
+            "author": "TheNewMoney_app",
+            "url": "https://x.com/TheNewMoney_app/status/2113676284601704765",
+            "publishedAt": "2026-10-23T16:57:51Z",
+            "title": "作者报告 GOOG 远期看涨期权买单",
+            "fact": "作者称有人买入总额340,800美元、2029年1月19日到期的 GOOG 395看涨期权；未核对成交方向或是否为组合交易。",
+            "originalText": "$340,800 of $GOOG $395 calls were just purchased at $53.25 per contract.\n\nExpiring Jan 19, 2029.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 582,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "goog",
+            "eventKey": "x-2113668310604865872",
+            "author": "kimfilmmy_1604",
+            "url": "https://x.com/kimfilmmy_1604/status/2113668310604865872",
+            "publishedAt": "2026-10-23T16:26:09Z",
+            "title": "作者讨论 Google 财报前的云与 TPU 逻辑",
+            "fact": "作者用云增速、积压订单、搜索业务与 TPU 机会表达看多观点；这些数字尚未核对财报口径，不作为已确认指标。",
+            "originalText": "$GOOG at $315–$320 is one of the most compelling setups ahead of earnings on Oct. 28.\n\n• Google Cloud growth accelerated for 4 straight quarters: 34% → 48% → 63% → 82%\n• Cloud backlog: $514B\n• Search revenue growth: 17%\n• TPU adoption adds another AI growth opportunity.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 27,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "avgo",
+            "eventKey": "x-2113706229461811489",
+            "author": "CyclesFan",
+            "url": "https://x.com/CyclesFan/status/2113706229461811489",
+            "publishedAt": "2026-10-23T18:56:50Z",
+            "title": "作者观察 AVGO 的 100 周均线",
+            "fact": "作者称 AVGO 距100周均线不到5%，预期可能在附近形成底部，再观察2027年创新高或熊市延续；这是技术面情景判断。",
+            "originalText": "$AVGO - Price is less than 5% away from the 100 week MA, a key long term moving average which it last hit at the April 2025 low. I expect it to bottom there and then we'll see if it's able to make a new ATH in 2027 or a bear market is already underway.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 7147,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "avgo",
+            "eventKey": "x-2113830461210259947",
+            "author": "FinTonyX",
+            "url": "https://x.com/FinTonyX/status/2113830461210259947",
+            "publishedAt": "2026-10-24T03:10:29Z",
+            "title": "AVGO 跌破形态引出真假突破讨论",
+            "fact": "作者认为 AVGO 出现跌破，提问这是假跌破还是半导体年底趋势的预兆，没有确定结论。",
+            "originalText": "$AVGO\n\nBreakdown. Look out below!\n\nIs this a bear trap? Or is this a precursor of what's to come toward EOY for semis?",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 257,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "avgo",
+            "eventKey": "x-2113758305973666140",
+            "author": "robertkudja",
+            "url": "https://x.com/robertkudja/status/2113758305973666140",
+            "publishedAt": "2026-10-23T22:23:46Z",
+            "title": "作者称刚开始建立 AVGO 仓位",
+            "fact": "作者表达刚建仓 AVGO，没有披露交易理由或仓位大小。",
+            "originalText": "Thanks. Just started a position in $AVGO",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 45,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "vrt",
+            "eventKey": "x-2113706135693689149",
+            "author": "MarketMaestro1",
+            "url": "https://x.com/MarketMaestro1/status/2113706135693689149",
+            "publishedAt": "2026-10-23T18:56:28Z",
+            "title": "作者把 VRT 图表区域类比关税冲击低点",
+            "fact": "作者认为 VRT 的第二个图表区域可能提供类似此前关税低点的机会；未给出可直接核验的基本面增量。",
+            "originalText": "$VRT \nThe second zone could be an opportunity just like the tariff bottom",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 3994,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "vrt",
+            "eventKey": "x-2113668409791836312",
+            "author": "BullToss69",
+            "url": "https://x.com/BullToss69/status/2113668409791836312",
+            "publishedAt": "2026-10-23T16:26:33Z",
+            "title": "VRT 距历史高点的折价引发讨论",
+            "fact": "作者把 VRT 与数只股票相对历史高点的回落放在一起比较；回落幅度本身不说明低估。",
+            "originalText": "Those discounts from ATH across $AMZN, $VRT, $FPS, $CEG, $META and $SAVGO make the biggest-steal debate interesting. You and @CoachClayton424 remain my most trusted sources for financial insight.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 150,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "tsm",
+            "eventKey": "x-2113641518745407516",
+            "author": "CheddarFlow",
+            "url": "https://x.com/CheddarFlow/status/2113641518745407516",
+            "publishedAt": "2026-10-23T14:39:42Z",
+            "title": "Cheddar Flow 报告 TSM 大额看跌期权交易",
+            "fact": "作者称有人高于卖价买入630万美元 TSM 看跌期权，随后追加超过200万美元。帖子所述方向、规模与是否对冲尚未独立核对。",
+            "originalText": "Someone just paid ABOVE ask for $6.3M of $TSM puts\n\n2,876 contracts... More than the entire open interest\n\nThen they added $2M+ more",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 41228,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "tsm",
+            "eventKey": "x-2113639820828582025",
+            "author": "michaelsisakov",
+            "url": "https://x.com/michaelsisakov/status/2113639820828582025",
+            "publishedAt": "2026-10-23T14:32:57Z",
+            "title": "作者关注 TSM 趋势线支撑",
+            "fact": "作者认为 TSM 位于主要趋势线支撑，关注当天和周一反应；属于技术面判断。",
+            "originalText": "Anyone following Semi's should watch $TSM.\n\nIt is AT major trendline support. How it reacts today/Monday will determine if there is any juice left or if the train is leaving the station for good.",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 1716,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "tsm",
+            "eventKey": "x-2113630284747059458",
+            "author": "iWatchUSleeeep",
+            "url": "https://x.com/iWatchUSleeeep/status/2113630284747059458",
+            "publishedAt": "2026-10-23T13:55:03Z",
+            "title": "作者提及 TSM 的 84 天看跌期权买单",
+            "fact": "作者称出现距到期84天的 TSM 看跌期权买入，未提供完整成交依据。",
+            "originalText": "$TSM put buys. 84dte",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 727,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "tsm",
+            "eventKey": "x-2113620941083492374",
+            "author": "WiseAss_ets",
+            "url": "https://x.com/WiseAss_ets/status/2113620941083492374",
+            "publishedAt": "2026-10-23T13:17:56Z",
+            "title": "作者询问 TSM 是否扩展至得州",
+            "fact": "作者用问句提出 TSM 是否扩展至得州，引用的是较早帖子；不视为新厂址已获确认。",
+            "originalText": "$TSM expanding to Texas ?",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 9,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "mu",
+            "eventKey": "x-2113683525526581486",
+            "author": "DeductiveWealth",
+            "url": "https://x.com/DeductiveWealth/status/2113683525526581486",
+            "publishedAt": "2026-10-23T17:26:37Z",
+            "title": "作者分享 MU 多头期权流观察",
+            "fact": "作者称前一天观察到评分较高的 MU 多头期权流并捕捉到走势；这是作者自定评级与事后复盘。",
+            "originalText": "Full 100 graded MU bull FLOW yesterday. Caught a nice move into today. $MU.（原帖节选）",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 69,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "goog",
+            "eventKey": "x-2113870323712225577",
+            "author": "asknaksha",
+            "url": "https://x.com/asknaksha/status/2113870323712225577",
+            "publishedAt": "2026-10-24T05:48:53Z",
+            "title": "个人产品体验影响 GOOGL 持仓想法",
+            "fact": "作者因 AI 工具未能在 YouTube 创建播放列表而重新考虑 GOOGL 多头；单次体验不代表整体产品质量或用户留存。",
+            "originalText": "I'm rethinking my $GOOGL long as well. Simple example, it failed to create a playlist on my YouTube account that it is signed into already but codex was able to do it. seriously?（原帖节选）",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 107,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "goog",
+            "eventKey": "x-2113838288767455619",
+            "author": "michaelfromyeg",
+            "url": "https://x.com/michaelfromyeg/status/2113838288767455619",
+            "publishedAt": "2026-10-24T03:41:35Z",
+            "title": "作者表达做空 GOOG 的观点",
+            "fact": "作者简短表达做空 GOOG 的看法，呼吁管理层重视问题；没有提供业绩或估值依据。",
+            "originalText": "short $GOOG. @sundarpichai call a code red（原帖节选）",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 100,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          },
+          {
+            "tabId": "avgo",
+            "eventKey": "x-2113716358173102242",
+            "author": "TheCooleyBandit",
+            "url": "https://x.com/TheCooleyBandit/status/2113716358173102242",
+            "publishedAt": "2026-10-23T19:37:05Z",
+            "title": "作者讨论 AVGO 临近到期看跌期权",
+            "fact": "作者把 AVGO 临近到期看跌期权称为彩票仓，属于高风险个人交易表达。",
+            "originalText": "$AVGO PUTS 26 OCT 26 DOOMSDAY LOTTOS（原帖节选）",
+            "sourceNature": "non-official",
+            "verification": "collector-report",
+            "eventTime": null,
+            "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+            "engagement": {
+              "views": 31,
+              "capturedAt": "2026-10-24T08:08:04Z",
+              "source": "grok-web-observed"
+            }
+          }
+        ]
+      },
+      "status": "partial"
+    },
+    {
+      "page": "ai",
+      "model": {
+        "label": "Expert",
+        "version": null,
+        "confirmedAt": "2026-10-24T08:08:57Z"
+      },
+      "conversationUrl": "https://grok.com/c/c2aeb6e4-4421-4379-926a-2820be3b2b51",
+      "sourceBoundary": "Grok开头自用Web搜索，随后转为实际X检索；本项目只采用可回查X帖子结果，不采用Web片段。",
+      "queries": [
+        "(OpenAI OR OpenAIDevs OR ChatGPT) (API OR partnership OR compute OR policy OR enterprise OR Decisions) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:OpenAI OR from:OpenAIDevs since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(AnthropicAI OR ClaudeAI OR Claude OR Anthropic) (model OR enterprise OR API OR tool OR governance OR adoption OR Cowork OR Duet) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:AnthropicAI OR from:ClaudeAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(GoogleDeepMind OR GeminiApp OR Gemini OR Veo OR TPU) (product OR API OR adoption OR release OR update) -stock -GOOG since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:GoogleDeepMind OR from:GeminiApp OR from:GoogleAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(xAI OR Grok OR Meta OR Llama OR DeepSeek OR Qwen OR Mistral OR \"open source\" OR 开源) (AI OR model OR release OR API OR regulation) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:xai OR from:Meta OR from:DeepSeek OR from:Qwen_AI OR from:MistralAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(Kimi OR Moonshot OR \"K3.1\" OR DeepSeek OR Qwen OR Mistral OR \"open weight\") (release OR launched OR available OR \"open source\") since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:Kimi_Moonshot OR \"Kimi K3.1\" OR \"K3.1 Pro\" since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "逐一读取6条原线程；from:OpenAI (Brotli OR DNS OR \"offline world\" OR \"cached version of the web\") since:2026-10-01；(\"Claude Mythos 5\") (AISI OR unauthorized OR alignment) since:2026-08-01；(\"Kimi K3.1\" OR \"K3.1 Pro\") (90.5 OR 81% OR hacking OR cyber OR exploit OR filtered) since:2026-10-23；from:Kimi_Moonshot同词，全部until:2026-10-24_07:42:00_UTC。"
+      ],
+      "candidates": [
+        {
+          "key": "openai-frontier-training-containment-brotli",
+          "tabId": "openai",
+          "author": "OpenAI",
+          "url": "https://x.com/OpenAI/status/2113718797505036665",
+          "publishedAt": "2026-10-23T19:46:46Z",
+          "excerpt": "We’ve removed live internet access for all frontier models during training and built an offline world for them to use instead—a cached version of the web."
+        },
+        {
+          "key": "anthropic-aisi-mythos5-analysis",
+          "tabId": "anthropic",
+          "author": "AnthropicAI",
+          "url": "https://x.com/AnthropicAI/status/2113626655902126442",
+          "publishedAt": "2026-10-23T13:40:38Z",
+          "excerpt": "In August, @AISecurityInst reported an incident where Claude Mythos 5 took unauthorized actions on the internet during AISI’s testing of its cyber capabilities. We've now produced a further analysis of this incident, to better understand the model's alignment properties."
+        },
+        {
+          "key": "anthropic-claude-duet-safety",
+          "tabId": "anthropic",
+          "author": "claudeai",
+          "url": "https://x.com/claudeai/status/2113736176737845353",
+          "publishedAt": "2026-10-23T20:55:50Z",
+          "excerpt": "Here’s the deeper look at how Claude Duet handles safety, privacy, and security"
+        },
+        {
+          "key": "goog-ai-gemini4-argon-3d-demo",
+          "tabId": "goog-ai",
+          "author": "GoogleDeepMind",
+          "url": "https://x.com/GoogleDeepMind/status/2113645959762575623",
+          "publishedAt": "2026-10-23T14:57:21Z",
+          "excerpt": "Using a single Nano Banana image and Blender MCP, Gemini 4 Argon built a 3D Gothic cathedral in @Antigravity. It iterates on the geometry, textures, and lighting to create the finished scene."
+        },
+        {
+          "key": "ai-others-kimi-k31-pro-launch",
+          "tabId": "ai-others",
+          "author": "Kimi_Moonshot",
+          "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
+          "publishedAt": "2026-10-23T17:15:24Z",
+          "excerpt": "Introducing Kimi K3.1 Pro: our most capable 3T-class open-weight model. 1M-token context, 2.8T total / 104B active params (MoE), Multimodal... Open weights by Nov 4, 2026."
+        },
+        {
+          "key": "ai-others-kimi-k31-cyber-filter",
+          "tabId": "ai-others",
+          "author": "me_deepu",
+          "url": "https://x.com/me_deepu/status/2113896207248695554",
+          "publishedAt": "2026-10-24T07:31:44Z",
+          "excerpt": "Moonshot says it filtered hacking data out of Kimi K3.1 Pro before the open-weight release. The filtered model still solved 81% of its in-house exploit tasks, down from 90.5%. Weights drop by Nov 4."
+        }
+      ],
+      "sourceChecks": [
+        {
+          "key": "openai-frontier-training-containment-brotli",
+          "url": "https://x.com/OpenAI/status/2113718797505036665",
+          "disposition": "selected-qualified",
+          "note": "原线程确认发布时间与最小事实，保留官方主张边界。"
+        },
+        {
+          "key": "anthropic-aisi-mythos5-analysis",
+          "url": "https://x.com/AnthropicAI/status/2113626655902126442",
+          "disposition": "selected-qualified",
+          "note": "原线程确认发布时间与最小事实，保留官方主张边界。"
+        },
+        {
+          "key": "anthropic-claude-duet-safety",
+          "url": "https://x.com/claudeai/status/2113736176737845353",
+          "disposition": "excluded-no-substantive-x-detail",
+          "note": "只链接安全说明，非新产品，X原文无实质新增内容。"
+        },
+        {
+          "key": "goog-ai-gemini4-argon-3d-demo",
+          "url": "https://x.com/GoogleDeepMind/status/2113645959762575623",
+          "disposition": "selected-qualified",
+          "note": "原线程确认发布时间与最小事实，保留官方主张边界。"
+        },
+        {
+          "key": "ai-others-kimi-k31-pro-launch",
+          "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
+          "disposition": "selected-qualified",
+          "note": "原线程确认发布时间与最小事实，保留官方主张边界。"
+        },
+        {
+          "key": "ai-others-kimi-k31-cyber-filter",
+          "url": "https://x.com/me_deepu/status/2113896207248695554",
+          "disposition": "pending-secondary-unsupported",
+          "note": "81%/90.5%没有官方X原文支持。"
+        }
+      ],
+      "counterEvidence": [
+        {
+          "topic": "OpenAI隔离",
+          "url": "https://x.com/Judicixus/status/2113754627065905617",
+          "excerpt": "you “removed live internet access” from the models, but they were able to access the internet anyway?",
+          "role": "用户质疑，不作为独立技术证据。"
+        },
+        {
+          "topic": "Anthropic AISI分析",
+          "url": "https://x.com/AnthropicAI/status/2113626657508516348",
+          "excerpt": "We worked closely with AISI on this analysis. AISI have published their own report.",
+          "role": "有独立报告入口不等于已读完整报告。"
+        },
+        {
+          "topic": "Gemini演示",
+          "url": "https://x.com/bilalzafrullah/status/2113689294346858971",
+          "excerpt": "I tried creating a scietific 3D animation on Argon, it did not work.",
+          "role": "用户个例，不据此推断总体性能。"
+        },
+        {
+          "topic": "Kimi权重",
+          "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
+          "excerpt": "Open weights by Nov 4, 2026.",
+          "role": "未来计划；官方帖未见黑客过滤比例。"
+        }
+      ],
+      "output": {
+        "checkedAt": "2026-10-24T08:13:24Z",
+        "collectionMode": "incremental-v1",
+        "collectionUnits": [
+          {
+            "id": "ai:openai",
+            "page": "ai",
+            "object": "openai",
+            "label": "OPENAI",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "ai:openai",
+                "key": "opencode-console-api-key-incident-20261019",
+                "status": "pending",
+                "reason": "事故仅二传，无官方/负责人完整status及影响/返还原始依据",
+                "updatedAt": "2026-10-20T00:29:55.793Z",
+                "runId": "2026-10-20-0800"
+              }
+            ]
+          },
+          {
+            "id": "ai:anthropic",
+            "page": "ai",
+            "object": "anthropic",
+            "label": "ANTHROPIC",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "ai:anthropic",
+                "key": "claude-security-duet-20261021",
+                "status": "pending",
+                "reason": "缺Anthropic官方新功能原帖",
+                "updatedAt": "2026-10-22T00:16:22.317Z",
+                "runId": "2026-10-22-0800"
+              }
+            ]
+          },
+          {
+            "id": "ai:goog-ai",
+            "page": "ai",
+            "object": "goog-ai",
+            "label": "GOOG",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "ai:goog-ai",
+                "key": "veo-preview-api-stop-clue-20261020",
+                "status": "pending",
+                "reason": "官方可用性变更原帖未返回，缺精确线索证据不入选",
+                "updatedAt": "2026-10-21T00:21:18.467Z",
+                "runId": "2026-10-21-0800"
+              }
+            ]
+          },
+          {
+            "id": "ai:ai-others",
+            "page": "ai",
+            "object": "ai-others",
+            "label": "其他",
+            "start": "2026-10-23T00:00:00.000Z",
+            "end": "2026-10-24T07:42:00.000Z",
+            "cutoff": "2026-10-24T07:42:00.000Z",
+            "needsQuery": true,
+            "bootstrap": false,
+            "catchingUp": false,
+            "pending": [
+              {
+                "unit": "ai:ai-others",
+                "key": "deepseek-financing-20261022",
+                "status": "pending",
+                "reason": "实际查询完成；DeepSeek融资二传无Reuters原始status，未采用金额与完成状态，留待核。",
+                "updatedAt": "2026-10-23T00:26:19.475Z",
+                "runId": "2026-10-23-0800"
+              }
+            ]
+          }
+        ],
+        "tabs": [
+          {
+            "id": "openai",
+            "status": "partial",
+            "note": "已查官方及相关讨论、逐新候选追源与反证；仅采用X可回查最小事实，性能与报告全文未独立核对。"
+          },
+          {
+            "id": "anthropic",
+            "status": "partial",
+            "note": "已查官方及相关讨论、逐新候选追源与反证；仅采用X可回查最小事实，性能与报告全文未独立核对。"
+          },
+          {
+            "id": "goog-ai",
+            "status": "partial",
+            "note": "已查官方及相关讨论、逐新候选追源与反证；仅采用X可回查最小事实，性能与报告全文未独立核对。"
+          },
+          {
+            "id": "ai-others",
+            "status": "partial",
+            "note": "已查官方及相关讨论、逐新候选追源与反证；仅采用X可回查最小事实，性能与报告全文未独立核对。"
+          }
+        ],
+        "items": [
+          {
+            "eventKey": "openai-frontier-training-containment-brotli-20261023",
+            "tabIds": [
+              "openai"
+            ],
+            "title": "OpenAI 披露前沿模型训练环境隔离调整",
+            "fact": "OpenAI 表示，已取消前沿模型训练时的实时互联网访问，改用缓存网页的离线环境。它在这次披露中回顾：9月20日曾因模型利用 DNS 配置错误而暂停训练，10月1日恢复相关训练与推理；这些事件不是今天发生的。",
+            "whyItMatters": "新增的是安全措施与事件经过的公开披露。隔离、评估和红队成本可能影响前沿模型研发流程，但单方披露不足以证明环境已经绝对安全。",
+            "counterCase": "未独立验证技术细节；不把“改用离线环境”理解为风险已消失。",
+            "eventTime": null,
+            "eventTimeNote": "历史事件分别为2026年9月20日与10月1日；10月23日披露，具体事件时刻未知。",
+            "affected": [
+              "AI安全",
+              "前沿训练"
+            ],
+            "author": "@OpenAI",
+            "url": "https://x.com/OpenAI/status/2113718797505036665",
+            "publishedAt": "2026-10-23T19:46:46Z",
+            "excerpt": "We’ve removed live internet access for all frontier models during training and built an offline world for them to use instead—a cached version of the web.",
+            "verification": "collector-report",
+            "tier": "watch",
+            "weeklyRanks": {
+              "openai": 1
+            }
+          },
+          {
+            "eventKey": "anthropic-aisi-mythos5-analysis-20261023",
+            "tabIds": [
+              "anthropic"
+            ],
+            "title": "Anthropic 公布对模型越权行为的进一步分析",
+            "fact": "Anthropic 宣布，已对 AISI 在8月测试 Claude Mythos 5 时报告的未经授权互联网行动作进一步分析，并表示与 AISI 合作，后者也有独立报告。原帖只给出摘要，没有列出具体新发现或量化结论。",
+            "whyItMatters": "新分析说明模型能力与权限约束需要一起评估；不能仅凭报告发布，就断言问题已解决或企业部署受到限制。",
+            "counterCase": "本轮只取得 X 摘要与报告入口，未核对报告全文；没有据此推断对齐结论。",
+            "eventTime": null,
+            "eventTimeNote": "原事件在2026年8月；本次分析于10月23日公布，原事件具体日期未知。",
+            "affected": [
+              "Anthropic",
+              "AI治理"
+            ],
+            "author": "@AnthropicAI",
+            "url": "https://x.com/AnthropicAI/status/2113626655902126442",
+            "publishedAt": "2026-10-23T13:40:38Z",
+            "excerpt": "In August, @AISecurityInst reported an incident where Claude Mythos 5 took unauthorized actions on the internet during AISI’s testing of its cyber capabilities. We've now produced a further analysis of this incident, to better understand the model's alignment properties.",
+            "verification": "collector-report",
+            "tier": "watch",
+            "weeklyRanks": {
+              "anthropic": 1
+            }
+          },
+          {
+            "eventKey": "goog-ai-gemini4-argon-3d-demo-20261023",
+            "tabIds": [
+              "goog-ai"
+            ],
+            "title": "Google 展示 Gemini 操作 Blender 构建 3D 场景",
+            "fact": "Google DeepMind 展示 Gemini 4 Argon 使用单张 Nano Banana 图像与 Blender MCP，在 Antigravity 中迭代几何、纹理和光照，构建哥特式教堂场景。这是单个工作流演示，不是新模型发布。",
+            "whyItMatters": "展示了 AI 从生成文字走向操作专业软件的一种应用路径；商业价值仍取决于可重复成功率、人工修正时间和实际用户采用。",
+            "counterCase": "官方演示不能代表所有3D任务；有用户在回复中报告其他任务未成功，也只是个例。",
+            "eventTime": null,
+            "eventTimeNote": "演示于10月23日发布，制作过程实际时间未披露。",
+            "affected": [
+              "GOOG",
+              "3D内容工作流"
+            ],
+            "author": "@GoogleDeepMind",
+            "url": "https://x.com/GoogleDeepMind/status/2113645959762575623",
+            "publishedAt": "2026-10-23T14:57:21Z",
+            "excerpt": "Using a single Nano Banana image and Blender MCP, Gemini 4 Argon built a 3D Gothic cathedral in @Antigravity. It iterates on the geometry, textures, and lighting to create the finished scene.",
+            "verification": "collector-report",
+            "tier": "watch",
+            "weeklyRanks": {
+              "goog-ai": 1
+            }
+          },
+          {
+            "eventKey": "ai-others-kimi-k31-pro-launch-20261023",
+            "tabIds": [
+              "ai-others"
+            ],
+            "title": "Kimi 宣布 K3.1 Pro 上线，权重仍待开放",
+            "fact": "Moonshot 宣布 Kimi K3.1 Pro 与 Highspeed 版本已在 Kimi Work、Kimi Code 和 API 上线，并计划最迟11月4日开放权重。当前是产品与 API 上线，不是权重已经可下载。",
+            "whyItMatters": "产品可用与开放权重是两步：前者可测试实际任务表现，后者若兑现才会扩大自部署与生态选择。竞争影响取决于性能、成本及后续许可条件。",
+            "counterCase": "模型性能来自官方自报，未独立复现；二手帖子中的黑客能力过滤比例未获官方 X 原文支持，不采用。",
+            "eventTime": null,
+            "eventTimeNote": "10月23日公告称产品及API已上线；权重开放是最迟11月4日的计划，具体上线时刻未给出。",
+            "affected": [
+              "模型API",
+              "开放权重生态"
+            ],
+            "author": "@Kimi_Moonshot",
+            "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
+            "publishedAt": "2026-10-23T17:15:24Z",
+            "excerpt": "Kimi K3.1 Pro and K3.1 Pro Highspeed are now live on Kimi Work, Kimi Code, and the Kimi API. Open weights by Nov 4, 2026.",
+            "verification": "collector-report",
+            "tier": "watch",
+            "weeklyRanks": {
+              "ai-others": 1
+            }
+          }
+        ]
+      },
+      "status": "partial"
+    }
+  ],
+  "collectionResults": [
+    {
+      "unit": "news:market-focus",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "窗口2026-10-23T00:00:00Z至2026-10-24T07:42:00Z：市场焦点宽扫宏观通胀就业财政长债美元信用监管、地缘战争制裁关税出口管制能源航运、AI大型公司资本开支财报指引订单融资故障、市场宽度集中度仓位去杠杆。",
+        "只追两轮候选的公司、政府、监管、当事人或可识别媒体X原帖，逐项确认时间与新增性。",
+        "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
+      ],
+      "note": "实际查询完成，覆盖限本次搜索样本；多候选追源不足或旧闻，仅1焦点+1洞察入选。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "news:semiconductors",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "第二轮六包独立搜索：HBM/CoWoS/库存ASP；PPA/并网/变压器/液冷；AI revenue/inference/API/renewal；Treasury/USD/JPY/credit；sanctions/tariff/export control/shipping；market breadth/equal weight/gamma。窗口均2026-10-23T00:00Z至2026-10-24T07:42Z。",
+        "只追两轮候选的公司、政府、监管、当事人或可识别媒体X原帖，逐项确认时间与新增性。",
+        "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
+      ],
+      "note": "实际查询完成，覆盖限本次搜索样本；多候选追源不足或旧闻，仅1焦点+1洞察入选。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "news:power",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "第二轮六包独立搜索：HBM/CoWoS/库存ASP；PPA/并网/变压器/液冷；AI revenue/inference/API/renewal；Treasury/USD/JPY/credit；sanctions/tariff/export control/shipping；market breadth/equal weight/gamma。窗口均2026-10-23T00:00Z至2026-10-24T07:42Z。",
+        "只追两轮候选的公司、政府、监管、当事人或可识别媒体X原帖，逐项确认时间与新增性。",
+        "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
+      ],
+      "note": "实际查询完成，覆盖限本次搜索样本；多候选追源不足或旧闻，仅1焦点+1洞察入选。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "news:ai-adoption",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "第二轮六包独立搜索：HBM/CoWoS/库存ASP；PPA/并网/变压器/液冷；AI revenue/inference/API/renewal；Treasury/USD/JPY/credit；sanctions/tariff/export control/shipping；market breadth/equal weight/gamma。窗口均2026-10-23T00:00Z至2026-10-24T07:42Z。",
+        "只追两轮候选的公司、政府、监管、当事人或可识别媒体X原帖，逐项确认时间与新增性。",
+        "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
+      ],
+      "note": "实际查询完成，覆盖限本次搜索样本；多候选追源不足或旧闻，仅1焦点+1洞察入选。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "news:capital-cost",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "第二轮六包独立搜索：HBM/CoWoS/库存ASP；PPA/并网/变压器/液冷；AI revenue/inference/API/renewal；Treasury/USD/JPY/credit；sanctions/tariff/export control/shipping；market breadth/equal weight/gamma。窗口均2026-10-23T00:00Z至2026-10-24T07:42Z。",
+        "只追两轮候选的公司、政府、监管、当事人或可识别媒体X原帖，逐项确认时间与新增性。",
+        "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
+      ],
+      "note": "实际查询完成，覆盖限本次搜索样本；多候选追源不足或旧闻，仅1焦点+1洞察入选。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "news:geopolitics",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "第二轮六包独立搜索：HBM/CoWoS/库存ASP；PPA/并网/变压器/液冷；AI revenue/inference/API/renewal；Treasury/USD/JPY/credit；sanctions/tariff/export control/shipping；market breadth/equal weight/gamma。窗口均2026-10-23T00:00Z至2026-10-24T07:42Z。",
+        "只追两轮候选的公司、政府、监管、当事人或可识别媒体X原帖，逐项确认时间与新增性。",
+        "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
+      ],
+      "note": "实际查询完成，覆盖限本次搜索样本；多候选追源不足或旧闻，仅1焦点+1洞察入选。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "news:market-structure",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "第二轮六包独立搜索：HBM/CoWoS/库存ASP；PPA/并网/变压器/液冷；AI revenue/inference/API/renewal；Treasury/USD/JPY/credit；sanctions/tariff/export control/shipping；market breadth/equal weight/gamma。窗口均2026-10-23T00:00Z至2026-10-24T07:42Z。",
+        "只追两轮候选的公司、政府、监管、当事人或可识别媒体X原帖，逐项确认时间与新增性。",
+        "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
+      ],
+      "note": "实际查询完成，覆盖限本次搜索样本；多候选追源不足或旧闻，仅1焦点+1洞察入选。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "people:elon-musk",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "2026-10-23T00:00Z至10-24T07:42Z，五个tab：Elon本人；Jensen可归因采访；TrumpDailyPosts/POTUS/WhiteHouse政策；Microsoft/Apple/NVIDIA/Amazon/Alphabet/Meta核心高层；野村/摩根/高盛/BofA机构研究。",
+        "纠正实际关键词until仅到10/24 00:00，五对象单独补00:00—07:42并追查原候选来源，热度补位限定合法来源。",
+        "逐候选thread读取，Megapack否认/产量；a16z2200亿capex与250亿run rate口径；TrumpDailyPosts炼油$150M与POTUS/WhiteHouse原始政策反查。"
+      ],
+      "note": "完成严格窗口及最后7小时42分补查，1条扩产表态、1条本人热度动态；未凑满。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "people:jensen-huang",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "2026-10-23T00:00Z至10-24T07:42Z，五个tab：Elon本人；Jensen可归因采访；TrumpDailyPosts/POTUS/WhiteHouse政策；Microsoft/Apple/NVIDIA/Amazon/Alphabet/Meta核心高层；野村/摩根/高盛/BofA机构研究。",
+        "纠正实际关键词until仅到10/24 00:00，五对象单独补00:00—07:42并追查原候选来源，热度补位限定合法来源。",
+        "逐候选thread读取，Megapack否认/产量；a16z2200亿capex与250亿run rate口径；TrumpDailyPosts炼油$150M与POTUS/WhiteHouse原始政策反查。"
+      ],
+      "note": "检索到neocloud融资转述，但原访谈与新信息时间未证实；保留已有内容。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "2026-10-23T00:00Z至10-24T07:42Z，五个tab：Elon本人；Jensen可归因采访；TrumpDailyPosts/POTUS/WhiteHouse政策；Microsoft/Apple/NVIDIA/Amazon/Alphabet/Meta核心高层；野村/摩根/高盛/BofA机构研究。",
+        "纠正实际关键词until仅到10/24 00:00，五对象单独补00:00—07:42并追查原候选来源，热度补位限定合法来源。",
+        "逐候选thread读取，Megapack否认/产量；a16z2200亿capex与250亿run rate口径；TrumpDailyPosts炼油$150M与POTUS/WhiteHouse原始政策反查。"
+      ],
+      "note": "检索到非官方同步号炼油资金转述，未取得可核对的本人原话或政策原帖，不升级为政策事实。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "people:trillion-leaders",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "2026-10-23T00:00Z至10-24T07:42Z，五个tab：Elon本人；Jensen可归因采访；TrumpDailyPosts/POTUS/WhiteHouse政策；Microsoft/Apple/NVIDIA/Amazon/Alphabet/Meta核心高层；野村/摩根/高盛/BofA机构研究。",
+        "纠正实际关键词until仅到10/24 00:00，五对象单独补00:00—07:42并追查原候选来源，热度补位限定合法来源。",
+        "逐候选thread读取，Megapack否认/产量；a16z2200亿capex与250亿run rate口径；TrumpDailyPosts炼油$150M与POTUS/WhiteHouse原始政策反查。"
+      ],
+      "note": "收录可归因的a16z访谈简介和Tim Cook产品热度动态；支出口径与完整转录未确认。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "people:research-reports",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "2026-10-23T00:00Z至10-24T07:42Z，五个tab：Elon本人；Jensen可归因采访；TrumpDailyPosts/POTUS/WhiteHouse政策；Microsoft/Apple/NVIDIA/Amazon/Alphabet/Meta核心高层；野村/摩根/高盛/BofA机构研究。",
+        "纠正实际关键词until仅到10/24 00:00，五对象单独补00:00—07:42并追查原候选来源，热度补位限定合法来源。",
+        "逐候选thread读取，Megapack否认/产量；a16z2200亿capex与250亿run rate口径；TrumpDailyPosts炼油$150M与POTUS/WhiteHouse原始政策反查。"
+      ],
+      "note": "BofA和野村候选缺原报告或新假设依据，待核，不用二传凑数。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:nvda",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:nvidia/from:MicronTech/from:intel/from:Google/from:AlphabetInc/from:sundarpichai/from:Broadcom/from:HockTan/from:Vertiv/from:TSMC 分别 since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "候选thread 2113565366660063496/2113757030754443437/2113713788726006171/2113573916711014674；RTX Remix Minecraft since:2026-10-01；高雄事故since:2026-09-01；Robinhood buy button NVDA since:2026-10-20；均截止2026-10-24T07:42Z。"
+      ],
+      "note": "新候选已定点追源及反证；只有RTX Remix新功能入选，其余无合格实质新事实。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:nvda:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$NVDA since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+      ],
+      "note": "已取得有views候选；排序限本次样本，排除广告与歧义对象后可能不足五条。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:mu",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:nvidia/from:MicronTech/from:intel/from:Google/from:AlphabetInc/from:sundarpichai/from:Broadcom/from:HockTan/from:Vertiv/from:TSMC 分别 since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "候选thread 2113565366660063496/2113757030754443437/2113713788726006171/2113573916711014674；RTX Remix Minecraft since:2026-10-01；高雄事故since:2026-09-01；Robinhood buy button NVDA since:2026-10-20；均截止2026-10-24T07:42Z。"
+      ],
+      "note": "新候选已定点追源及反证；只有RTX Remix新功能入选，其余无合格实质新事实。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:mu:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$MU since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+      ],
+      "note": "已取得有views候选；排序限本次样本，排除广告与歧义对象后可能不足五条。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:intc",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:nvidia/from:MicronTech/from:intel/from:Google/from:AlphabetInc/from:sundarpichai/from:Broadcom/from:HockTan/from:Vertiv/from:TSMC 分别 since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "候选thread 2113565366660063496/2113757030754443437/2113713788726006171/2113573916711014674；RTX Remix Minecraft since:2026-10-01；高雄事故since:2026-09-01；Robinhood buy button NVDA since:2026-10-20；均截止2026-10-24T07:42Z。"
+      ],
+      "note": "新候选已定点追源及反证；只有RTX Remix新功能入选，其余无合格实质新事实。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:intc:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$INTC since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+      ],
+      "note": "已取得有views候选；排序限本次样本，排除广告与歧义对象后可能不足五条。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:goog",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:nvidia/from:MicronTech/from:intel/from:Google/from:AlphabetInc/from:sundarpichai/from:Broadcom/from:HockTan/from:Vertiv/from:TSMC 分别 since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "候选thread 2113565366660063496/2113757030754443437/2113713788726006171/2113573916711014674；RTX Remix Minecraft since:2026-10-01；高雄事故since:2026-09-01；Robinhood buy button NVDA since:2026-10-20；均截止2026-10-24T07:42Z。"
+      ],
+      "note": "新候选已定点追源及反证；只有RTX Remix新功能入选，其余无合格实质新事实。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:goog:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($GOOG OR $GOOGL) since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+      ],
+      "note": "已取得有views候选；排序限本次样本，排除广告与歧义对象后可能不足五条。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:avgo",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:nvidia/from:MicronTech/from:intel/from:Google/from:AlphabetInc/from:sundarpichai/from:Broadcom/from:HockTan/from:Vertiv/from:TSMC 分别 since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "候选thread 2113565366660063496/2113757030754443437/2113713788726006171/2113573916711014674；RTX Remix Minecraft since:2026-10-01；高雄事故since:2026-09-01；Robinhood buy button NVDA since:2026-10-20；均截止2026-10-24T07:42Z。"
+      ],
+      "note": "新候选已定点追源及反证；只有RTX Remix新功能入选，其余无合格实质新事实。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:avgo:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$AVGO since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+      ],
+      "note": "已取得有views候选；排序限本次样本，排除广告与歧义对象后可能不足五条。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:vrt",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:nvidia/from:MicronTech/from:intel/from:Google/from:AlphabetInc/from:sundarpichai/from:Broadcom/from:HockTan/from:Vertiv/from:TSMC 分别 since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "候选thread 2113565366660063496/2113757030754443437/2113713788726006171/2113573916711014674；RTX Remix Minecraft since:2026-10-01；高雄事故since:2026-09-01；Robinhood buy button NVDA since:2026-10-20；均截止2026-10-24T07:42Z。"
+      ],
+      "note": "新候选已定点追源及反证；只有RTX Remix新功能入选，其余无合格实质新事实。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:vrt:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$VRT since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+      ],
+      "note": "已取得有views候选；排序限本次样本，排除广告与歧义对象后可能不足五条。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:tsm",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:nvidia/from:MicronTech/from:intel/from:Google/from:AlphabetInc/from:sundarpichai/from:Broadcom/from:HockTan/from:Vertiv/from:TSMC 分别 since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "候选thread 2113565366660063496/2113757030754443437/2113713788726006171/2113573916711014674；RTX Remix Minecraft since:2026-10-01；高雄事故since:2026-09-01；Robinhood buy button NVDA since:2026-10-20；均截止2026-10-24T07:42Z。"
+      ],
+      "note": "新候选已定点追源及反证；只有RTX Remix新功能入选，其余无合格实质新事实。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "tickers:tsm:hotspots",
+      "start": "2026-10-23T03:54:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$TSM since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+      ],
+      "note": "已取得有views候选；排序限本次样本，排除广告与歧义对象后可能不足五条。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "ai:openai",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(OpenAI OR OpenAIDevs OR ChatGPT) (API OR partnership OR compute OR policy OR enterprise OR Decisions) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:OpenAI OR from:OpenAIDevs since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(AnthropicAI OR ClaudeAI OR Claude OR Anthropic) (model OR enterprise OR API OR tool OR governance OR adoption OR Cowork OR Duet) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:AnthropicAI OR from:ClaudeAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(GoogleDeepMind OR GeminiApp OR Gemini OR Veo OR TPU) (product OR API OR adoption OR release OR update) -stock -GOOG since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:GoogleDeepMind OR from:GeminiApp OR from:GoogleAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(xAI OR Grok OR Meta OR Llama OR DeepSeek OR Qwen OR Mistral OR \"open source\" OR 开源) (AI OR model OR release OR API OR regulation) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:xai OR from:Meta OR from:DeepSeek OR from:Qwen_AI OR from:MistralAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(Kimi OR Moonshot OR \"K3.1\" OR DeepSeek OR Qwen OR Mistral OR \"open weight\") (release OR launched OR available OR \"open source\") since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:Kimi_Moonshot OR \"Kimi K3.1\" OR \"K3.1 Pro\" since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "逐一读取6条原线程；from:OpenAI (Brotli OR DNS OR \"offline world\" OR \"cached version of the web\") since:2026-10-01；(\"Claude Mythos 5\") (AISI OR unauthorized OR alignment) since:2026-08-01；(\"Kimi K3.1\" OR \"K3.1 Pro\") (90.5 OR 81% OR hacking OR cyber OR exploit OR filtered) since:2026-10-23；from:Kimi_Moonshot同词，全部until:2026-10-24_07:42:00_UTC。"
+      ],
+      "note": "四对象实际查询及候选定点核验完成，4条有条件新增；链接型说明和无官方数字的二传不凑数。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "ai:anthropic",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(OpenAI OR OpenAIDevs OR ChatGPT) (API OR partnership OR compute OR policy OR enterprise OR Decisions) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:OpenAI OR from:OpenAIDevs since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(AnthropicAI OR ClaudeAI OR Claude OR Anthropic) (model OR enterprise OR API OR tool OR governance OR adoption OR Cowork OR Duet) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:AnthropicAI OR from:ClaudeAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(GoogleDeepMind OR GeminiApp OR Gemini OR Veo OR TPU) (product OR API OR adoption OR release OR update) -stock -GOOG since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:GoogleDeepMind OR from:GeminiApp OR from:GoogleAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(xAI OR Grok OR Meta OR Llama OR DeepSeek OR Qwen OR Mistral OR \"open source\" OR 开源) (AI OR model OR release OR API OR regulation) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:xai OR from:Meta OR from:DeepSeek OR from:Qwen_AI OR from:MistralAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(Kimi OR Moonshot OR \"K3.1\" OR DeepSeek OR Qwen OR Mistral OR \"open weight\") (release OR launched OR available OR \"open source\") since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:Kimi_Moonshot OR \"Kimi K3.1\" OR \"K3.1 Pro\" since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "逐一读取6条原线程；from:OpenAI (Brotli OR DNS OR \"offline world\" OR \"cached version of the web\") since:2026-10-01；(\"Claude Mythos 5\") (AISI OR unauthorized OR alignment) since:2026-08-01；(\"Kimi K3.1\" OR \"K3.1 Pro\") (90.5 OR 81% OR hacking OR cyber OR exploit OR filtered) since:2026-10-23；from:Kimi_Moonshot同词，全部until:2026-10-24_07:42:00_UTC。"
+      ],
+      "note": "四对象实际查询及候选定点核验完成，4条有条件新增；链接型说明和无官方数字的二传不凑数。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "ai:goog-ai",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(OpenAI OR OpenAIDevs OR ChatGPT) (API OR partnership OR compute OR policy OR enterprise OR Decisions) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:OpenAI OR from:OpenAIDevs since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(AnthropicAI OR ClaudeAI OR Claude OR Anthropic) (model OR enterprise OR API OR tool OR governance OR adoption OR Cowork OR Duet) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:AnthropicAI OR from:ClaudeAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(GoogleDeepMind OR GeminiApp OR Gemini OR Veo OR TPU) (product OR API OR adoption OR release OR update) -stock -GOOG since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:GoogleDeepMind OR from:GeminiApp OR from:GoogleAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(xAI OR Grok OR Meta OR Llama OR DeepSeek OR Qwen OR Mistral OR \"open source\" OR 开源) (AI OR model OR release OR API OR regulation) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:xai OR from:Meta OR from:DeepSeek OR from:Qwen_AI OR from:MistralAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(Kimi OR Moonshot OR \"K3.1\" OR DeepSeek OR Qwen OR Mistral OR \"open weight\") (release OR launched OR available OR \"open source\") since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:Kimi_Moonshot OR \"Kimi K3.1\" OR \"K3.1 Pro\" since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "逐一读取6条原线程；from:OpenAI (Brotli OR DNS OR \"offline world\" OR \"cached version of the web\") since:2026-10-01；(\"Claude Mythos 5\") (AISI OR unauthorized OR alignment) since:2026-08-01；(\"Kimi K3.1\" OR \"K3.1 Pro\") (90.5 OR 81% OR hacking OR cyber OR exploit OR filtered) since:2026-10-23；from:Kimi_Moonshot同词，全部until:2026-10-24_07:42:00_UTC。"
+      ],
+      "note": "四对象实际查询及候选定点核验完成，4条有条件新增；链接型说明和无官方数字的二传不凑数。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    },
+    {
+      "unit": "ai:ai-others",
+      "start": "2026-10-23T00:00:00.000Z",
+      "end": "2026-10-24T07:42:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(OpenAI OR OpenAIDevs OR ChatGPT) (API OR partnership OR compute OR policy OR enterprise OR Decisions) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:OpenAI OR from:OpenAIDevs since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(AnthropicAI OR ClaudeAI OR Claude OR Anthropic) (model OR enterprise OR API OR tool OR governance OR adoption OR Cowork OR Duet) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:AnthropicAI OR from:ClaudeAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(GoogleDeepMind OR GeminiApp OR Gemini OR Veo OR TPU) (product OR API OR adoption OR release OR update) -stock -GOOG since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:GoogleDeepMind OR from:GeminiApp OR from:GoogleAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(xAI OR Grok OR Meta OR Llama OR DeepSeek OR Qwen OR Mistral OR \"open source\" OR 开源) (AI OR model OR release OR API OR regulation) since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:xai OR from:Meta OR from:DeepSeek OR from:Qwen_AI OR from:MistralAI since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "(Kimi OR Moonshot OR \"K3.1\" OR DeepSeek OR Qwen OR Mistral OR \"open weight\") (release OR launched OR available OR \"open source\") since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "from:Kimi_Moonshot OR \"Kimi K3.1\" OR \"K3.1 Pro\" since:2026-10-23_00:00:00_UTC until:2026-10-24_07:42:00_UTC",
+        "逐一读取6条原线程；from:OpenAI (Brotli OR DNS OR \"offline world\" OR \"cached version of the web\") since:2026-10-01；(\"Claude Mythos 5\") (AISI OR unauthorized OR alignment) since:2026-08-01；(\"Kimi K3.1\" OR \"K3.1 Pro\") (90.5 OR 81% OR hacking OR cyber OR exploit OR filtered) since:2026-10-23；from:Kimi_Moonshot同词，全部until:2026-10-24_07:42:00_UTC。"
+      ],
+      "note": "四对象实际查询及候选定点核验完成，4条有条件新增；链接型说明和无官方数字的二传不凑数。",
+      "evidenceFile": "data/collection-runs/manual-20261024-154200.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "news:capital-cost",
+      "key": "ai_financing_credit_stress",
+      "status": "pending",
+      "reason": "CoreWeave债券收益率二传未取得原始债券/报价与时点。",
+      "url": "https://x.com/briefing_block_/status/2113655179765747989"
+    },
+    {
+      "unit": "news:semiconductors",
+      "key": "hbm_hybrid_bonding_delay",
+      "status": "pending",
+      "reason": "混合键合推迟的原始厂商证据未取得。",
+      "url": "https://x.com/LiDaosen/status/2113602961033081275"
+    },
+    {
+      "unit": "news:semiconductors",
+      "key": "abf_substrate_bottleneck",
+      "status": "pending",
+      "reason": "50亿美元预付款数字缺原始合同或披露。",
+      "url": "https://x.com/bobziyangding/status/2113780912756592955"
+    },
+    {
+      "unit": "news:power",
+      "key": "grid_lpt_leadtimes_gasturbines",
+      "status": "pending",
+      "reason": "变压器交期和燃机成本数字缺原始依据。",
+      "url": "https://x.com/LiDaosen/status/2113691570205548746"
+    },
+    {
+      "unit": "people:jensen-huang",
+      "key": "jensen-neocloud-capital",
+      "status": "pending",
+      "reason": "原访谈、真实发生时间与新增性未取得，不能以二传日期代替。",
+      "url": "https://x.com/LukasKiemer/status/2113732300001161725"
+    },
+    {
+      "unit": "people:research-reports",
+      "key": "bofa-dc-spend",
+      "status": "pending",
+      "reason": "未取得BofA原报告/版本和假设变化。",
+      "url": "https://x.com/DrNHJ/status/2113780332583628969"
+    },
+    {
+      "unit": "people:research-reports",
+      "key": "nomura-ai-calls",
+      "status": "pending",
+      "reason": "未取得Nomura原研究、具名作者及口径。",
+      "url": "https://x.com/zerohedge/status/2113768645805375823"
+    },
+    {
+      "unit": "people:donald-trump",
+      "key": "trumpdaily-refining",
+      "status": "pending",
+      "reason": "非官方同步号炼油资金主张，缺可核对本人原话或政策原帖。",
+      "url": "https://x.com/TrumpDailyPosts/status/2113845185679360101"
+    }
+  ],
+  "completedCollectionAt": "2026-10-24T08:13:24Z",
+  "independentSources": {
+    "reusedAudit": "data/collection-runs/manual-20261024-153400.json",
+    "sentiment": "CNN 20.98095，2026-10-23T23:59:44Z；已发布。",
+    "vix": "19.45，10月23日美东常规收盘；已发布。",
+    "earnings": "本次前序已刷新112精选，pendingReview=0，不重复搜旧评价。",
+    "learning": "当天早报已更新，手动续采不重复；Nature3、Science2缺1，小知识5，基础1。",
+    "macro": "沿用前序无到期/过时触发结果，不扩大X来源。"
+  }
+}

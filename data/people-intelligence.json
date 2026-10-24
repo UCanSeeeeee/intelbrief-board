@@ -1,143 +1,139 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T00:44:13.808Z",
-  "cutoff": "2026-10-23T08:00:00+08:00",
+  "updatedAt": "2026-10-24T08:02:20.311Z",
+  "cutoff": "2026-10-24T15:42:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "partial",
+        "note": "完成严格窗口及最后7小时42分补查，1条扩产表态、1条本人热度动态；未凑满。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "jensen-huang",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "partial",
+        "note": "检索到neocloud融资转述，但原访谈与新信息时间未证实；保留已有内容。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "donald-trump",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "partial",
+        "note": "检索到非官方同步号炼油资金转述，未取得可核对的本人原话或政策原帖，不升级为政策事实。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "trillion-leaders",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "partial",
+        "note": "收录可归因的a16z访谈简介和Tim Cook产品热度动态；支出口径与完整转录未确认。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "research-reports",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "partial",
+        "note": "BofA和野村候选缺原报告或新假设依据，待核，不用二传凑数。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "whitehouse-homeownership-statement-20261022",
+      "eventKey": "elon-government-corporation-view-20261024",
       "tabIds": [
-        "donald-trump"
+        "elon-musk"
       ],
-      "title": "白宫宣传住房与按揭成本议程",
-      "fact": "白宫表示Donald Trump正降低独栋住房和按揭成本、减少不必要的监管环节；可见声明没有列出新签署措施或可量化成效。",
-      "whyItMatters": "属于政府宣传性表述，暂无足够新政策细节支持资本成本判断。",
-      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
+      "title": "Elon Musk 发表对政府与企业权力的个人看法",
+      "fact": "Elon Musk 把政府比作规模最大、垄断性最强的企业，并强调政府对暴力的垄断。这是他的个人政治观点，不是新政策或公司公告。",
+      "whyItMatters": "仅作为本人高互动动态保留，没有可直接量化的美股业绩增量。",
+      "counterCase": "原帖未提供可直接核算的收入或利润增量。",
       "affected": [],
-      "author": "@WhiteHouse",
-      "publishedAt": "2026-10-22T19:29:29Z",
-      "url": "https://x.com/WhiteHouse/status/2113352056723697729",
+      "author": "Elon Musk @elonmusk",
+      "publishedAt": "2026-10-24T05:07:49Z",
+      "url": "https://x.com/elonmusk/status/2113859987248472215",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-      "originalText": "President Donald J. Trump is lowering the costs of single-family homeownership & mortgages（节选）",
-      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+      "originalText": "Those who are opposed to corporations and favor government do not realize that government is simply the largest, most monopolistic corporation of all and it has a monopoly on violence.",
+      "firstIncludedAt": "2026-10-24T08:02:20.311Z",
+      "lastMaterialAt": "2026-10-24T08:02:20.311Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 3786,
-        "reposts": 930,
-        "replies": 1260,
-        "quotes": 122,
-        "views": 284788,
-        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+        "likes": 14170,
+        "reposts": 1748,
+        "replies": 974,
+        "quotes": 209,
+        "capturedAt": "2026-10-24T08:00:26Z",
         "source": "grok-web-observed"
       },
       "people": [
         {
-          "name": "Donald Trump",
-          "intro": "美国总统"
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
         }
       ]
     },
     {
-      "eventKey": "whitehouse-farms-statement-20261022",
+      "eventKey": "tim-cook-iphone-duo-20261024",
       "tabIds": [
-        "donald-trump"
+        "trillion-leaders"
       ],
-      "title": "白宫回顾农业税收与供应链议程",
-      "fact": "白宫回顾农业减税、市场拓展、供应链和监管议程，宣称这些措施支持农场和牧场；可见文字未给出新增措施的签署日期或执行数字。",
-      "whyItMatters": "这是对既有政策成果的自述，保留热度身份，不把总结宣传当作新增政策。",
-      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-      "affected": [],
-      "author": "@WhiteHouse",
-      "publishedAt": "2026-10-22T18:11:10Z",
-      "url": "https://x.com/WhiteHouse/status/2113332350570406313",
+      "title": "Tim Cook 分享 iPhone Duo 用户首次体验",
+      "fact": "Tim Cook 发帖欢迎 iPhone Duo，称很高兴看到各地消费者首次体验产品的兴奋。帖中没有公布销量、收入或 AI 功能采用数据。",
+      "whyItMatters": "这是产品传播动态，互动热度不等于实际需求或业绩增长。",
+      "counterCase": "原帖未提供可直接核算的收入或利润增量。",
+      "affected": [
+        "AAPL"
+      ],
+      "author": "Tim Cook @tim_cook",
+      "publishedAt": "2026-10-24T01:05:40Z",
+      "url": "https://x.com/tim_cook/status/2113799050877452321",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-      "originalText": "Historic tax relief for family farms; Expanded markets for American agriculture; Bolstered supply chains（节选）",
-      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
+      "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+      "originalText": "Welcome to the world, iPhone Duo! It’s such a delight to see the excitement of our customers around the world as they experience the magic of iPhone Duo for the very first time.",
+      "firstIncludedAt": "2026-10-24T08:02:20.311Z",
+      "lastMaterialAt": "2026-10-24T08:02:20.311Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 2309,
-        "reposts": 650,
-        "replies": 787,
-        "quotes": 48,
-        "views": 135930,
-        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
+        "likes": 9608,
+        "reposts": 524,
+        "replies": 298,
+        "quotes": 33,
+        "capturedAt": "2026-10-24T08:00:26Z",
         "source": "grok-web-observed"
       },
       "people": []
     },
     {
-      "eventKey": "elon-important-vote-20261022",
+      "eventKey": "elon-megapack-ramp-20261023",
       "tabIds": [
         "elon-musk"
       ],
-      "title": "Elon Musk呼吁参与投票",
-      "fact": "Elon Musk就德州候选人背书相关内容简短回应“投票很重要”。",
-      "whyItMatters": "属于本人高互动短回应，未提供xAI、Tesla或SpaceX经营新信息。",
-      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-      "affected": [],
-      "author": "@elonmusk",
-      "publishedAt": "2026-10-22T17:09:17Z",
-      "url": "https://x.com/elonmusk/status/2113316775291142572",
+      "title": "Tesla 正加快 Megapack 生产以满足增长需求",
+      "fact": "Elon Musk 表示，Tesla 正快速提升 Megapack 产量，以应对不断增长的需求；原帖没有给出扩产幅度、交付量或具体时间表。",
+      "whyItMatters": "储能供给扩张是电力基础设施的一条观察线索，但这条表态本身不能证明来自 AI 数据中心的订单增长。",
+      "counterCase": "原帖未提供可直接核算的收入或利润增量。",
+      "affected": [
+        "TSLA",
+        "储能"
+      ],
+      "author": "Elon Musk @elonmusk",
+      "publishedAt": "2026-10-23T17:09:36Z",
+      "url": "https://x.com/elonmusk/status/2113679241439027551",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-      "originalText": "Important to vote",
-      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 43017,
-        "reposts": 6010,
-        "replies": 2371,
-        "quotes": 194,
-        "views": 2411758,
-        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-        "source": "grok-web-observed"
+      "weeklyRanks": {
+        "elon-musk": 1
       },
+      "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+      "excerpt": "By the way, Tesla ramping up Megapack production rapidly to meet increasing demand",
+      "firstIncludedAt": "2026-10-24T08:02:20.311Z",
+      "lastMaterialAt": "2026-10-24T08:02:20.311Z",
+      "selection": "rule",
       "people": [
         {
           "name": "Elon Musk",
@@ -146,145 +142,35 @@
       ]
     },
     {
-      "eventKey": "whitehouse-hormuz-statement-20261022",
+      "eventKey": "jassy-a16z-ai-runrate-20261023",
       "tabIds": [
-        "donald-trump"
+        "trillion-leaders"
       ],
-      "title": "白宫就霍尔木兹油运与伊朗问题表态",
-      "fact": "白宫宣称霍尔木兹海峡油运量高于冲突前，并重申伊朗不得拥有核武器。声明未提供独立通航统计，相关流量主张未获核实。",
-      "whyItMatters": "保留政府声明的关注度；未取得新执行政策或独立运输量，不能据此判断供应冲击已解除。",
-      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-      "affected": [],
-      "author": "@WhiteHouse",
-      "publishedAt": "2026-10-22T16:02:02Z",
-      "url": "https://x.com/WhiteHouse/status/2113299851265851481",
+      "title": "a16z 的 Andy Jassy 访谈简介谈及 AI 支出与年化规模",
+      "fact": "a16z 发布的 Andy Jassy 访谈简介称，Amazon 预计今年投入 2,200 亿美元争夺 AI 市场，AI 业务三年达到 250 亿美元年化收入规模。简介没有清楚区分该支出是公司整体资本开支还是仅 AI 投入；年化规模也不是已经实现的全年收入。",
+      "whyItMatters": "把投入速度与业务年化规模放在一起，可以跟踪云厂商的回收压力；在口径澄清前，不宜直接用两者计算投资回报率。",
+      "counterCase": "尚未核对完整访谈转录；录制日期和支出范围不明确，不能据此认定正式指引上调。",
+      "affected": [
+        "AMZN",
+        "云计算"
+      ],
+      "author": "a16z @a16z",
+      "publishedAt": "2026-10-23T16:04:26Z",
+      "url": "https://x.com/a16z/status/2113662841492471959",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-      "originalText": "More oil is coming through the Hormuz Strait than it did prior to the conflict.（相关主张摘录，非全文）",
-      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 6447,
-        "reposts": 1670,
-        "replies": 3430,
-        "quotes": 186,
-        "views": 267372,
-        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-        "source": "grok-web-observed"
+      "weeklyRanks": {
+        "trillion-leaders": 1
       },
-      "people": []
-    },
-    {
-      "eventKey": "elon-yup-court-20261022",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk回应最高法院扩员讨论",
-      "fact": "Elon Musk对最高法院扩员相关讨论回应“是的”。可见本人文字仅为一个词，不能扩写其政策主张。",
-      "whyItMatters": "保留窗口内本人讨论的注意力信号；没有新的政策或公司执行动作。",
-      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-      "affected": [],
-      "author": "@elonmusk",
-      "publishedAt": "2026-10-22T15:18:45Z",
-      "url": "https://x.com/elonmusk/status/2113288958738366650",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-      "originalText": "Yup",
-      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 31634,
-        "reposts": 4015,
-        "replies": 1845,
-        "quotes": 143,
-        "views": 1692603,
-        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-        "source": "grok-web-observed"
-      },
+      "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+      "excerpt": "expects to spend $220 billion this year to win AI. Amazon's AI business hit a $25 billion run rate in three years",
+      "firstIncludedAt": "2026-10-24T08:02:20.311Z",
+      "lastMaterialAt": "2026-10-24T08:02:20.311Z",
+      "selection": "rule",
       "people": [
         {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-true-public-money-20261022",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk回应公共资金观点",
-      "fact": "Elon Musk在公共资金相关讨论中回应“确实”。本人可见文字没有展开具体财政方案。",
-      "whyItMatters": "这是简短观点回应，不代表新增财政措施或企业现金流变化。",
-      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-      "affected": [],
-      "author": "@elonmusk",
-      "publishedAt": "2026-10-22T10:07:57Z",
-      "url": "https://x.com/elonmusk/status/2113210745710162001",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-      "originalText": "True",
-      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 16582,
-        "reposts": 3548,
-        "replies": 1521,
-        "quotes": 117,
-        "views": 2270062,
-        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-        "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "jensen-language-programming-replay-20261022",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "Jensen Huang谈AI降低编程门槛",
-      "fact": "访谈剪辑转述Jensen Huang的看法：自然语言交互可能让更多人参与编程。他以“从3000万到可能10亿”作说明；这属于观点，未提供实际新增程序员统计。",
-      "whyItMatters": "可归因访谈片段在本窗再次传播；原访谈日期未知，不当作本日新发布或已兑现用户增长。",
-      "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-      "affected": [],
-      "author": "@GeniusGTX",
-      "publishedAt": "2026-10-22T08:30:20Z",
-      "url": "https://x.com/GeniusGTX/status/2113186177776025741",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-      "originalText": "I think we just went from 30 million to probably 1 billion.（剪辑摘录，非完整访谈）",
-      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 42,
-        "reposts": 20,
-        "replies": 4,
-        "quotes": 1,
-        "views": 4789,
-        "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-        "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
+          "name": "Andy Jassy",
+          "intro": "亚马逊CEO"
         }
       ]
     },
@@ -308,7 +194,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "trillion-leaders": 1
+        "trillion-leaders": 2
       },
       "people": [
         {
@@ -388,235 +274,6 @@
       "selection": "rule"
     },
     {
-      "eventKey": "elon-neuralink-help-millions-2026-10-16",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Neuralink 将帮助数百万人",
-      "fact": "@elonmusk 引用相关帖并称 “Neuralink will help millions of people”。",
-      "whyItMatters": "脑机接口长期叙事；近季财务映射弱。",
-      "counterCase": "无新审批/收入数据则偏愿景。",
-      "affected": [
-        "Neuralink"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-16T23:26:40.000Z",
-      "url": "https://x.com/elonmusk/status/2111237421568299266",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "elon-musk": 3
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 4653,
-        "reposts": 465,
-        "replies": 730,
-        "quotes": 62,
-        "views": 496260,
-        "bookmarks": 88
-      }
-    },
-    {
-      "eventKey": "jensen-huang-sanguine-rout-people-2026-10-16",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "Jensen Huang 据 Bloomberg：对 AI 股灾表态偏淡定",
-      "fact": "@business：称 Jensen Huang 认为 AI 技术收益将很快压过投资者担忧。非本人 X 直发。",
-      "whyItMatters": "核心供应商在抛售中定调需求叙事。",
-      "counterCase": "若后续指引下修则安抚失效。",
-      "affected": [
-        "NVDA",
-        "AI 情绪"
-      ],
-      "author": "business",
-      "publishedAt": "2026-10-16T22:45:09.000Z",
-      "url": "https://x.com/business/status/2111226970117693529",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "jensen-huang": 1
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 43,
-        "reposts": 3,
-        "replies": 14,
-        "quotes": 2,
-        "views": 19316,
-        "bookmarks": 6
-      }
-    },
-    {
-      "eventKey": "elon-southwest-starlink-people-2026-10-16",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Southwest Airlines 全面采用 Starlink",
-      "fact": "@elonmusk：评论 “Southwest Airlines going all-in with @Starlink!”。",
-      "whyItMatters": "航天通信大客户落地信号，关联 SpaceX 商业化。",
-      "counterCase": "若无正式合同细节或改造缓慢，影响有限。",
-      "affected": [
-        "SpaceX",
-        "Starlink"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-16T16:42:41.000Z",
-      "url": "https://x.com/elonmusk/status/2111135753732301178",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 1
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 16493,
-        "reposts": 1517,
-        "replies": 972,
-        "quotes": 87,
-        "views": 1131866,
-        "bookmarks": 177
-      }
-    },
-    {
-      "eventKey": "elon-tesla-fsd-slovakia-2026-10-16",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk：Tesla 监督式自动驾驶在斯洛伐克获批",
-      "fact": "@elonmusk：称 “Tesla supervised self-driving approved in Slovakia”。",
-      "whyItMatters": "自动驾驶监管准入进展，边际利好交付与软件叙事。",
-      "counterCase": "单一国家准入不等于销量拐点。",
-      "affected": [
-        "Tesla",
-        "FSD"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-16T16:25:31.000Z",
-      "url": "https://x.com/elonmusk/status/2111131436191199660",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "elon-musk": 2
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 17960,
-        "reposts": 1451,
-        "replies": 971,
-        "quotes": 132,
-        "views": 1338176,
-        "bookmarks": 360
-      }
-    },
-    {
-      "eventKey": "trump-cleveland-submarine-repair-facility-2026-10-16",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "Donald Trump 宣布克利夫兰约 4.6 万平方英尺潜艇部件维修设施（同步源）",
-      "fact": "@TrumpDailyPosts 同步：称将在俄亥俄克利夫兰建约 46,000 平方英尺潜艇部件维修/制造设施，服务美海军新旧潜艇关键部件；在 Youngstown 集会宣布。属 Truth Social 搬运同步源，非本人 X 直发。",
-      "whyItMatters": "可执行国防工业设施承诺，边际关联制造业与财政订单。",
-      "counterCase": "无拨款账单/合同则停留在竞选式宣布。",
-      "affected": [
-        "国防工业",
-        "俄亥俄制造",
-        "财政订单叙事"
-      ],
-      "author": "TrumpDailyPosts",
-      "publishedAt": "2026-10-16T11:58:00.000Z",
-      "url": "https://x.com/TrumpDailyPosts/status/2111064110548848787",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "donald-trump": 1
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-16T12:41:12.272Z",
-        "source": "x-mcp",
-        "likes": 143,
-        "reposts": 44,
-        "replies": 9,
-        "quotes": 2,
-        "views": 33700,
-        "bookmarks": 3
-      }
-    },
-    {
-      "eventKey": "nvidia-mercedes-adas-people-2026-10-16",
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "title": "NVIDIA：扩大与 Mercedes-Benz 驾驶辅助合作",
-      "fact": "@nvidia 官号：扩大与 Mercedes-Benz AG 战略合作，开发下一代驾驶辅助与自动驾驶。非 Jensen 本人账号直发。",
-      "whyItMatters": "车企 AI 落地公开进展。",
-      "counterCase": "无量产时间表则近季影响有限。",
-      "affected": [
-        "NVDA",
-        "汽车 AI"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-16T08:03:53.000Z",
-      "url": "https://x.com/nvidia/status/2111005194058179020",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "jensen-huang": 2
-      },
-      "people": [],
-      "selection": "rule",
-      "engagement": {
-        "capturedAt": "2026-10-17T00:08:00.000Z",
-        "source": "x-mcp",
-        "likes": 1608,
-        "reposts": 135,
-        "replies": 119,
-        "quotes": 49,
-        "views": 81561,
-        "bookmarks": 62
-      }
-    },
-    {
       "eventKey": "jpm-mu-26-lta-150b-backlog-2026-10-13",
       "tabIds": [
         "research-reports"
@@ -671,7 +328,7 @@
       "verification": "collector-report",
       "tier": "must-read",
       "weeklyRanks": {
-        "trillion-leaders": 2
+        "trillion-leaders": 3
       },
       "people": [
         {
@@ -727,6 +384,32 @@
       }
     },
     {
+      "eventKey": "bofa-nvda-pt-320-tam-2026-09-28",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "转述：美银上调英伟达目标价至 320 美元，2030 年 AI 数据中心系统 TAM 约 1.7 万亿美元",
+      "fact": "@KyleReidhead 称美银维持买入并将 NVDA 目标价提至 320 美元，同时把 2030 年 AI 数据中心系统 TAM 从约 1.4 万亿上修到约 1.7 万亿美元。X 二手转述，未独立核验原文。",
+      "whyItMatters": "TAM 上修延长 AI 基建景气假设，影响半导体与配套电力/网络资本开支的长周期定价。",
+      "counterCase": "若美银后续下调或公开文件无法核对 TAM 口径，转述不能作为硬证据。",
+      "affected": [
+        "NVIDIA",
+        "AI 数据中心供应链"
+      ],
+      "author": "KyleReidhead",
+      "publishedAt": "2026-09-28T20:30:02.000Z",
+      "url": "https://x.com/KyleReidhead/status/2104669988682604601",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "research-reports": 4
+      },
+      "people": [],
+      "selection": "rule"
+    }
+  ],
+  "retainedItems": [
+    {
       "eventKey": "zuckerberg-muse-wonder-frontier-2026-10-12",
       "tabIds": [
         "trillion-leaders"
@@ -745,9 +428,7 @@
       "url": "https://x.com/finkd/status/2109689305073614918",
       "verification": "collector-report",
       "tier": "must-read",
-      "weeklyRanks": {
-        "trillion-leaders": 3
-      },
+      "weeklyRanks": {},
       "people": [
         {
           "name": "Mark Zuckerberg",
@@ -785,9 +466,7 @@
       "url": "https://x.com/satyanadella/status/2109631106404487523",
       "verification": "collector-report",
       "tier": "must-read",
-      "weeklyRanks": {
-        "trillion-leaders": 4
-      },
+      "weeklyRanks": {},
       "people": [
         {
           "name": "Satya Nadella",
@@ -805,32 +484,6 @@
         "source": "x search_posts_all/get_posts_by_ids public_metrics"
       }
     },
-    {
-      "eventKey": "bofa-nvda-pt-320-tam-2026-09-28",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "转述：美银上调英伟达目标价至 320 美元，2030 年 AI 数据中心系统 TAM 约 1.7 万亿美元",
-      "fact": "@KyleReidhead 称美银维持买入并将 NVDA 目标价提至 320 美元，同时把 2030 年 AI 数据中心系统 TAM 从约 1.4 万亿上修到约 1.7 万亿美元。X 二手转述，未独立核验原文。",
-      "whyItMatters": "TAM 上修延长 AI 基建景气假设，影响半导体与配套电力/网络资本开支的长周期定价。",
-      "counterCase": "若美银后续下调或公开文件无法核对 TAM 口径，转述不能作为硬证据。",
-      "affected": [
-        "NVIDIA",
-        "AI 数据中心供应链"
-      ],
-      "author": "KyleReidhead",
-      "publishedAt": "2026-09-28T20:30:02.000Z",
-      "url": "https://x.com/KyleReidhead/status/2104669988682604601",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "research-reports": 4
-      },
-      "people": [],
-      "selection": "rule"
-    }
-  ],
-  "retainedItems": [
     {
       "eventKey": "nadella-microsoft-decision-1-2026-10-09",
       "tabIds": [
@@ -922,6 +575,169 @@
     }
   ],
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "elon-government-corporation-view-20261024",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk 发表对政府与企业权力的个人看法",
+        "fact": "Elon Musk 把政府比作规模最大、垄断性最强的企业，并强调政府对暴力的垄断。这是他的个人政治观点，不是新政策或公司公告。",
+        "whyItMatters": "仅作为本人高互动动态保留，没有可直接量化的美股业绩增量。",
+        "counterCase": "原帖未提供可直接核算的收入或利润增量。",
+        "affected": [],
+        "author": "Elon Musk @elonmusk",
+        "publishedAt": "2026-10-24T05:07:49Z",
+        "url": "https://x.com/elonmusk/status/2113859987248472215",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+        "originalText": "Those who are opposed to corporations and favor government do not realize that government is simply the largest, most monopolistic corporation of all and it has a monopoly on violence.",
+        "firstIncludedAt": "2026-10-24T08:02:20.311Z",
+        "lastMaterialAt": "2026-10-24T08:02:20.311Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 14170,
+          "reposts": 1748,
+          "replies": 974,
+          "quotes": 209,
+          "capturedAt": "2026-10-24T08:00:26Z",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-24T08:02:20.311Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "tim-cook-iphone-duo-20261024",
+        "tabIds": [
+          "trillion-leaders"
+        ],
+        "title": "Tim Cook 分享 iPhone Duo 用户首次体验",
+        "fact": "Tim Cook 发帖欢迎 iPhone Duo，称很高兴看到各地消费者首次体验产品的兴奋。帖中没有公布销量、收入或 AI 功能采用数据。",
+        "whyItMatters": "这是产品传播动态，互动热度不等于实际需求或业绩增长。",
+        "counterCase": "原帖未提供可直接核算的收入或利润增量。",
+        "affected": [
+          "AAPL"
+        ],
+        "author": "Tim Cook @tim_cook",
+        "publishedAt": "2026-10-24T01:05:40Z",
+        "url": "https://x.com/tim_cook/status/2113799050877452321",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+        "originalText": "Welcome to the world, iPhone Duo! It’s such a delight to see the excitement of our customers around the world as they experience the magic of iPhone Duo for the very first time.",
+        "firstIncludedAt": "2026-10-24T08:02:20.311Z",
+        "lastMaterialAt": "2026-10-24T08:02:20.311Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 9608,
+          "reposts": 524,
+          "replies": 298,
+          "quotes": 33,
+          "capturedAt": "2026-10-24T08:00:26Z",
+          "source": "grok-web-observed"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "at": "2026-10-24T08:02:20.311Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "elon-megapack-ramp-20261023",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Tesla 正加快 Megapack 生产以满足增长需求",
+        "fact": "Elon Musk 表示，Tesla 正快速提升 Megapack 产量，以应对不断增长的需求；原帖没有给出扩产幅度、交付量或具体时间表。",
+        "whyItMatters": "储能供给扩张是电力基础设施的一条观察线索，但这条表态本身不能证明来自 AI 数据中心的订单增长。",
+        "counterCase": "原帖未提供可直接核算的收入或利润增量。",
+        "affected": [
+          "TSLA",
+          "储能"
+        ],
+        "author": "Elon Musk @elonmusk",
+        "publishedAt": "2026-10-23T17:09:36Z",
+        "url": "https://x.com/elonmusk/status/2113679241439027551",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "elon-musk": 1
+        },
+        "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+        "excerpt": "By the way, Tesla ramping up Megapack production rapidly to meet increasing demand",
+        "firstIncludedAt": "2026-10-24T08:02:20.311Z",
+        "lastMaterialAt": "2026-10-24T08:02:20.311Z",
+        "selection": "rule",
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-24T08:02:20.311Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "jassy-a16z-ai-runrate-20261023",
+        "tabIds": [
+          "trillion-leaders"
+        ],
+        "title": "a16z 的 Andy Jassy 访谈简介谈及 AI 支出与年化规模",
+        "fact": "a16z 发布的 Andy Jassy 访谈简介称，Amazon 预计今年投入 2,200 亿美元争夺 AI 市场，AI 业务三年达到 250 亿美元年化收入规模。简介没有清楚区分该支出是公司整体资本开支还是仅 AI 投入；年化规模也不是已经实现的全年收入。",
+        "whyItMatters": "把投入速度与业务年化规模放在一起，可以跟踪云厂商的回收压力；在口径澄清前，不宜直接用两者计算投资回报率。",
+        "counterCase": "尚未核对完整访谈转录；录制日期和支出范围不明确，不能据此认定正式指引上调。",
+        "affected": [
+          "AMZN",
+          "云计算"
+        ],
+        "author": "a16z @a16z",
+        "publishedAt": "2026-10-23T16:04:26Z",
+        "url": "https://x.com/a16z/status/2113662841492471959",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "trillion-leaders": 1
+        },
+        "eventTimeNote": "事件实际发生时间未明确；保留原帖发布时间。",
+        "excerpt": "expects to spend $220 billion this year to win AI. Amazon's AI business hit a $25 billion run rate in three years",
+        "firstIncludedAt": "2026-10-24T08:02:20.311Z",
+        "lastMaterialAt": "2026-10-24T08:02:20.311Z",
+        "selection": "rule",
+        "people": [
+          {
+            "name": "Andy Jassy",
+            "intro": "亚马逊CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "at": "2026-10-24T08:02:20.311Z",
+      "legacy": false
+    },
     {
       "item": {
         "eventKey": "whitehouse-homeownership-statement-20261022",
@@ -1530,7 +1346,7 @@
         "verification": "collector-report",
         "tier": "must-read",
         "weeklyRanks": {
-          "trillion-leaders": 1
+          "trillion-leaders": 2
         },
         "people": [
           {
@@ -2822,7 +2638,7 @@
         "verification": "collector-report",
         "tier": "must-read",
         "weeklyRanks": {
-          "trillion-leaders": 2
+          "trillion-leaders": 3
         },
         "people": [
           {
@@ -2910,9 +2726,7 @@
         "url": "https://x.com/finkd/status/2109689305073614918",
         "verification": "collector-report",
         "tier": "must-read",
-        "weeklyRanks": {
-          "trillion-leaders": 3
-        },
+        "weeklyRanks": {},
         "people": [
           {
             "name": "Mark Zuckerberg",
@@ -2957,9 +2771,7 @@
         "url": "https://x.com/satyanadella/status/2109631106404487523",
         "verification": "collector-report",
         "tier": "must-read",
-        "weeklyRanks": {
-          "trillion-leaders": 4
-        },
+        "weeklyRanks": {},
         "people": [
           {
             "name": "Satya Nadella",
@@ -3082,7 +2894,5 @@
       "at": "2026-09-28T20:30:02.000Z",
       "legacy": true
     }
-  ],
-  "lastAttemptAt": "2026-10-24T00:06:32.500Z",
-  "attemptedCutoff": "2026-10-24T08:00:00+08:00"
+  ]
 }

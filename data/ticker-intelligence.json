@@ -1,110 +1,82 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T00:44:13.808Z",
-  "cutoff": "2026-10-23T08:00:00+08:00",
+  "updatedAt": "2026-10-24T08:08:24.383Z",
+  "cutoff": "2026-10-24T15:42:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "nvda",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "complete",
+        "note": "官方新功能1条；访问活动未作为订单。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "mu",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "complete",
+        "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "intc",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "complete",
+        "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "goog",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "complete",
+        "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "avgo",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "complete",
+        "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "vrt",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "complete",
+        "note": "已查官方窗口，无足够实质新事实；普通讨论在独立热点区。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       },
       {
         "id": "tsm",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "cutoff": "2026-10-23T08:00:00+08:00"
+        "status": "partial",
+        "note": "事故二传缺原始核验，未入新事实。",
+        "cutoff": "2026-10-24T15:42:00+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "tsmc-rare-earth-equipment-20261022",
-      "tabIds": [
-        "tsm"
-      ],
-      "title": "Reuters：TSMC寻求工厂设备替代方案以降低稀土依赖",
-      "fact": "据Reuters援引消息人士的独家报道，TSMC正寻求工厂设备替代方案，以降低对中国稀土的依赖。现有可见文字未说明替代已完成、工厂停产、采购金额或利润影响。",
-      "whyItMatters": "若替代方案获得验证，可能降低设备维护与扩产的供应中断风险，同时增加重新设计、认证和采购成本；对产能和利润的净影响取决于验证时间与经济性。",
-      "counterCase": "相关替代方案未获设备验证或不具成本可行性，原有供应链风险可能持续。",
-      "affected": [
-        "TSM",
-        "半导体设备供应链"
-      ],
-      "author": "@Reuters",
-      "publishedAt": "2026-10-22T12:45:05Z",
-      "url": "https://x.com/Reuters/status/2113250288681292217",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "事件实际发生的精确时间未知；公开披露时间另存来源。",
-      "excerpt": "EXCLUSIVE: TSMC seeks factory-equipment alternatives to thwart China's rare earths grip, sources say",
-      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-      "people": []
-    },
-    {
-      "eventKey": "nvda-neocloud-capital-scarcity-20261022",
+      "eventKey": "nvidia-rtx-remix-minecraft-20261023",
       "tabIds": [
         "nvda"
       ],
-      "title": "CNBC：Jensen Huang称新型云商需求强劲，但资金稀缺",
-      "fact": "CNBC报道Jensen Huang表示，neocloud需求“异常强劲”，但资本稀缺。可见文字没有给出已落实融资规模、抵押安排或新增GPU订单。",
-      "whyItMatters": "需求意向要经客户融资、基础设施建设和付款转成GPU收入；即使需求描述很强，资本约束仍可能延迟交付和回款。",
-      "counterCase": "客户获得可执行融资与供电后约束才可能缓解；没有合同和回款数据时不能把需求描述换成确定收入。",
+      "title": "NVIDIA 推出 Minecraft Java 版 RTX Remix 工具",
+      "fact": "NVIDIA 公告称，Minecraft Java 版的 RTX Remix 为创作者提供路径追踪光照与 AI 驱动的 DLSS 工具。帖中没有公布新增销售额或使用量。",
+      "whyItMatters": "这是 AI 在游戏画面重制中的具体落地，扩展 RTX 软件生态；商业影响仍取决于创作者采用与玩家硬件升级。",
+      "counterCase": "功能发布不等于新增 GPU 订单，尚无采用率或收入数据。",
       "affected": [
         "NVDA",
-        "AI云基础设施"
+        "游戏与AI渲染"
       ],
-      "author": "@CNBC",
-      "publishedAt": "2026-10-22T10:29:20Z",
-      "url": "https://x.com/CNBC/status/2113216124930204114",
+      "author": "NVIDIA @nvidia",
+      "publishedAt": "2026-10-23T22:18:42Z",
+      "url": "https://x.com/nvidia/status/2113757030754443437",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "相关发言的精确发生时刻未知；媒体公开时间另列。",
-      "originalText": "Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce",
-      "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-      "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
+      "weeklyRanks": {
+        "nvda": 1
+      },
+      "eventTimeNote": "10月23日公告称功能已可用，具体上线时刻未说明。",
+      "excerpt": "A new look for a classic. RTX Remix for Minecraft: Java Edition gives creators tools to remaster the game with realistic path-traced lighting and AI powered DLSS for maximum performance.",
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
     },
     {
       "eventKey": "mu-taiwan-strike-risk-2026-10-15",
@@ -150,102 +122,6 @@
       "tier": "watch",
       "weeklyRanks": {
         "tsm": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-huang-sanguine-ticker-2026-10-16",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "Jensen Huang：AI 股灾中表态偏淡定",
-      "fact": "Bloomberg：Huang 称 AI 收益将很快压过投资者担忧。",
-      "whyItMatters": "供应商定调有助缓和需求证伪交易。",
-      "counterCase": "指引下修则失效。",
-      "affected": [
-        "NVDA"
-      ],
-      "author": "business",
-      "publishedAt": "2026-10-16T22:45:09.000Z",
-      "url": "https://x.com/business/status/2111226970117693529",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 1
-      },
-      "people": [
-        {
-          "name": "Jensen Huang",
-          "intro": "英伟达创始人兼CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "mu-dell-memory-crunch-ticker-2026-10-16",
-      "tabIds": [
-        "mu"
-      ],
-      "title": "Michael Dell：存储短缺恶化，AI 服务器交付受 DRAM 制约",
-      "fact": "转述：Dell 约 950 亿美元 AI 服务器积压，DRAM 限制交付，新厂难在 2029 前缓解；与 MU 因过剩恐慌下跌形成对照。",
-      "whyItMatters": "客户侧证言支持存储紧平衡长尾。",
-      "counterCase": "积压取消或现货价崩则证伪。",
-      "affected": [
-        "MU",
-        "DRAM"
-      ],
-      "author": "StockSavvyShay",
-      "publishedAt": "2026-10-16T16:27:35.000Z",
-      "url": "https://x.com/StockSavvyShay/status/2111131954787889205",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "mu": 1
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-germany-industrial-ai-next-week-2026-10-16",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "消息源：德国下周或宣布与 NVIDIA 工业 AI 协议",
-      "fact": "DeItaone：德国政府消息源称下周宣布与 NVIDIA 聚焦工业 AI 的协议。",
-      "whyItMatters": "主权产业订单预期；待正式文本。",
-      "counterCase": "宣布延期或无采购量则情绪回吐。",
-      "affected": [
-        "NVDA",
-        "欧洲工业 AI"
-      ],
-      "author": "DeItaone",
-      "publishedAt": "2026-10-16T10:48:09.000Z",
-      "url": "https://x.com/DeItaone/status/2111046534175351266",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 3
-      },
-      "people": []
-    },
-    {
-      "eventKey": "nvda-mercedes-adas-ticker-2026-10-16",
-      "tabIds": [
-        "nvda"
-      ],
-      "title": "英伟达扩大与 Mercedes-Benz 自动驾驶合作",
-      "fact": "@nvidia：扩大与 Mercedes-Benz 战略合作，开发下一代驾驶辅助与自动驾驶。",
-      "whyItMatters": "汽车 AI 落地合同叙事。",
-      "counterCase": "量产延后则影响有限。",
-      "affected": [
-        "NVDA",
-        "汽车 AI"
-      ],
-      "author": "nvidia",
-      "publishedAt": "2026-10-16T08:03:53.000Z",
-      "url": "https://x.com/nvidia/status/2111005194058179020",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "nvda": 2
       },
       "people": []
     }
@@ -391,6 +267,624 @@
   "lastAttemptAt": "2026-10-24T00:06:32.500Z",
   "attemptedCutoff": "2026-10-24T08:00:00+08:00",
   "hotspots": [
+    {
+      "tabId": "nvda",
+      "eventKey": "x-2113770224747000229",
+      "author": "drayinvests",
+      "url": "https://x.com/drayinvests/status/2113770224747000229",
+      "publishedAt": "2026-10-23T23:11:08Z",
+      "title": "作者称 NVDA 前瞻市盈率约 17.5 倍",
+      "fact": "作者把 NVDA 列为前瞻市盈率低于20倍的股票，称约17.5倍为十多年来最低；这属于作者的估值口径，未独立核对盈利预测。",
+      "originalText": "THIS CANNOT GO ON FOREVER.\n\nHere are 11 stocks trading UNDER 20x forward earnings:\n\n1. Nvidia | $NVDA \n\n~17.5x Fwd P/E (lowest in over a DECADE)",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 17900,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "nvda",
+      "eventKey": "x-2113641804935438568",
+      "author": "kpak82",
+      "url": "https://x.com/kpak82/status/2113641804935438568",
+      "publishedAt": "2026-10-23T14:40:50Z",
+      "title": "倒置图表引出 NVDA 技术面争论",
+      "fact": "作者把 NVDA 图表倒置，借反向视角质疑当前形态是否适合做多；这是图形解释，不是公司新事实。",
+      "originalText": "Image this is your favorite stock at 27 yr lows\nWorking on bullish engulfing monthly bottom reversal candle.\nWould you short it?\nCommon response would be:\n\"That would be crazy. Do it if you like losing money.\"\n\nThis is the inverted (flipped over) $NVDA  chart.\nIf you would not short this, then technically, you would not want to go long on the upright chart.",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 10415,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "nvda",
+      "eventKey": "x-2113624539644969426",
+      "author": "QQQ275Soon",
+      "url": "https://x.com/QQQ275Soon/status/2113624539644969426",
+      "publishedAt": "2026-10-23T13:32:14Z",
+      "title": "作者声称 Robinhood 关闭买入按钮",
+      "fact": "作者把所谓买入限制类比 GameStop 事件并提及 NVDA；目前没有取得官方确认，仅保留为未核实讨论。",
+      "originalText": "ROBINHOOD TURNED OFF THE BUY BUTTON AGAIN. THIS IS THE GAMESTOP SAGA ALL OVER AGAIN $HOOD $NVDA",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 1788,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "nvda",
+      "eventKey": "x-2113693263861629285",
+      "author": "JasonColelfod",
+      "url": "https://x.com/JasonColelfod/status/2113693263861629285",
+      "publishedAt": "2026-10-23T18:05:19Z",
+      "title": "NVDA 持仓转绿引发退休玩笑",
+      "fact": "作者调侃 NVDA 持仓刚转绿，就开始规划提前退休；属于投资者情绪表达。",
+      "originalText": "POV: your $NVDA position finally turns green and you start planning early retirement 😂",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 790,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "mu",
+      "eventKey": "x-2113636805845365185",
+      "author": "iWatchUSleeeep",
+      "url": "https://x.com/iWatchUSleeeep/status/2113636805845365185",
+      "publishedAt": "2026-10-23T14:20:58Z",
+      "title": "作者提及 MU 的 147 天看跌期权买单",
+      "fact": "作者发帖称出现 MU 看跌期权买入、距到期147天；未提供可核对的成交明细，不能据此判定方向。",
+      "originalText": "$MU put buys. 147dte",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 711,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "mu",
+      "eventKey": "x-2113636423266144294",
+      "author": "Jcruuuz31",
+      "url": "https://x.com/Jcruuuz31/status/2113636423266144294",
+      "publishedAt": "2026-10-23T14:19:27Z",
+      "title": "MU 股价能否到 800 的短帖讨论",
+      "fact": "作者问 MU 当天是否会到800；这是个人行情猜测，不是报价或目标价研究。",
+      "originalText": "$MU 800 today or what?",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 239,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "mu",
+      "eventKey": "x-2113660277996634457",
+      "author": "WallSTQuon",
+      "url": "https://x.com/WallSTQuon/status/2113660277996634457",
+      "publishedAt": "2026-10-23T15:54:14Z",
+      "title": "MU 交易情绪短帖",
+      "fact": "作者对 MU 表达不满或调侃，没有提供新的基本面信息。",
+      "originalText": "Ahhh go away already 🙄 $MU",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 229,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "mu",
+      "eventKey": "x-2113793283428401392",
+      "author": "dawn11048754",
+      "url": "https://x.com/dawn11048754/status/2113793283428401392",
+      "publishedAt": "2026-10-24T00:42:45Z",
+      "title": "作者分享包含 MU 的交易价位清单",
+      "fact": "作者列出 MU 及多只股票的买入区间和目标价；这些是个人交易设想，文中财报日与估值未得到核验。",
+      "originalText": "8 Earnings Stocks I’m Watching Closely Next Week\n\n$MU Buy: $840–$865 Target: $1,150+\n\n$IREN Buy: $22–$25 Target: $55+\n\n$NVDA Buy: $205–$212  Target: $260+\n\n$HIMS Buy: $25–$28  Target: $45+\n\n$QCOM Buy: $160–$170  Target: $200+\n\n$AMD Buy: $510–$520 Target: $680+\n\n$NBIS Buy: $155–$162  Target: $260+\n\n$AVGO Buy: $310–$320  Target: $400+\n\nHeat is here. Catalysts are this week. Levels set. Don’t chase.",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 74,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "mu",
+      "eventKey": "x-2113683525526581486",
+      "author": "DeductiveWealth",
+      "url": "https://x.com/DeductiveWealth/status/2113683525526581486",
+      "publishedAt": "2026-10-23T17:26:37Z",
+      "title": "作者分享 MU 多头期权流观察",
+      "fact": "作者称前一天观察到评分较高的 MU 多头期权流并捕捉到走势；这是作者自定评级与事后复盘。",
+      "originalText": "Full 100 graded MU bull FLOW yesterday. Caught a nice move into today. $MU.（原帖节选）",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 69,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "intc",
+      "eventKey": "x-2113676668028191166",
+      "author": "Colosteve2000",
+      "url": "https://x.com/Colosteve2000/status/2113676668028191166",
+      "publishedAt": "2026-10-23T16:59:22Z",
+      "title": "投资者期待 Intel 在财报时披露交易",
+      "fact": "作者认为 INTC 便宜买入机会将减少，期待多笔合作或交易消息；帖子没有确认任何合同。",
+      "originalText": "People are running out of time to get cheap $INTC shares. When Intel announces multiple deals. It’s going to fly up. Hopefully we get news at the earnings report.",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 5325,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "intc",
+      "eventKey": "x-2113640538415026551",
+      "author": "fantasykeiqb",
+      "url": "https://x.com/fantasykeiqb/status/2113640538415026551",
+      "publishedAt": "2026-10-23T14:35:48Z",
+      "title": "Intel 讨论聚焦制造规模、成本与执行",
+      "fact": "作者从3D堆叠、设备产能和14A工艺讨论 Intel 的竞争，认为制造规模、执行和成本决定结果；属于个人分析。",
+      "originalText": "Intel’s Next Battle Is About More Than Chips. $INTC \n\nIntel’s latest R&D discussions reveal three key trends:\n\n• Future chips will rely more on 3D stacking, but heat and integration remain challenges.\n• AI demand is growing faster than semiconductor equipment capacity can expand.\n• Intel’s 14A process is a critical test of its ability to compete with TSMC.\n\nMy takeaway: Technology matters, but manufacturing scale, execution, and cost determine the winners.\nI’m watching the entire AI supply chain not just GPUs.\n\nWhat will become the biggest bottleneck: chips, memory, equipment, or power?",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 215,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "intc",
+      "eventKey": "x-2113748252700938322",
+      "author": "vinnnter",
+      "url": "https://x.com/vinnnter/status/2113748252700938322",
+      "publishedAt": "2026-10-23T21:43:49Z",
+      "title": "作者表达做多 INTC 的观点",
+      "fact": "帖子只有做多 INTC 的个人判断，没有给出依据或新事实。",
+      "originalText": "Just long $INTC and call it a day",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 169,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "intc",
+      "eventKey": "x-2113744547557896362",
+      "author": "ISITrading2717",
+      "url": "https://x.com/ISITrading2717/status/2113744547557896362",
+      "publishedAt": "2026-10-23T21:29:06Z",
+      "title": "作者回顾 INTC 看涨信用价差交易",
+      "fact": "作者自述平仓一组持有约8天的 INTC 看涨信用价差，获利89.01美元；这是个人复盘，未独立核对账户记录。",
+      "originalText": "Biggest winner was $INTC at +$89.01.\n\nClosed a call credit spread after about 8 days. Short 2 of the 120 calls, long 2 of the 125 calls, so my risk was capped the whole time.",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 122,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "goog",
+      "eventKey": "x-2113722026712072237",
+      "author": "kpak82",
+      "url": "https://x.com/kpak82/status/2113722026712072237",
+      "publishedAt": "2026-10-23T19:59:36Z",
+      "title": "作者回顾 GOOGL 下跌前的提醒",
+      "fact": "作者声称自己在 GOOGL 下跌前发出警告；未据此评估预测准确性。",
+      "originalText": "$GOOGL dumpy doo.\nWarning sent right before the drop.",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 9498,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "goog",
+      "eventKey": "x-2113695099095757297",
+      "author": "novarealinvest",
+      "url": "https://x.com/novarealinvest/status/2113695099095757297",
+      "publishedAt": "2026-10-23T18:12:36Z",
+      "title": "广告业务讨论比较 Meta 与 Google",
+      "fact": "作者称 Meta 因出版商和广告主反对而推迟新商业条款，并比较 META 与 GOOGL 的广告收入；相关事件尚未追到原始公告。",
+      "originalText": "메타 $META 신규 상업 조건 도입 지연\n\n출판사·광고주 반발로 시행 연기\n광고·콘텐츠 수익 모델 조정 불확실성\n\n광고 매출 모멘텀 둔화 우려, $META $GOOGL 비교 주목",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 782,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "goog",
+      "eventKey": "x-2113676284601704765",
+      "author": "TheNewMoney_app",
+      "url": "https://x.com/TheNewMoney_app/status/2113676284601704765",
+      "publishedAt": "2026-10-23T16:57:51Z",
+      "title": "作者报告 GOOG 远期看涨期权买单",
+      "fact": "作者称有人买入总额340,800美元、2029年1月19日到期的 GOOG 395看涨期权；未核对成交方向或是否为组合交易。",
+      "originalText": "$340,800 of $GOOG $395 calls were just purchased at $53.25 per contract.\n\nExpiring Jan 19, 2029.",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 582,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "goog",
+      "eventKey": "x-2113870323712225577",
+      "author": "asknaksha",
+      "url": "https://x.com/asknaksha/status/2113870323712225577",
+      "publishedAt": "2026-10-24T05:48:53Z",
+      "title": "个人产品体验影响 GOOGL 持仓想法",
+      "fact": "作者因 AI 工具未能在 YouTube 创建播放列表而重新考虑 GOOGL 多头；单次体验不代表整体产品质量或用户留存。",
+      "originalText": "I'm rethinking my $GOOGL long as well. Simple example, it failed to create a playlist on my YouTube account that it is signed into already but codex was able to do it. seriously?（原帖节选）",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 107,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "goog",
+      "eventKey": "x-2113838288767455619",
+      "author": "michaelfromyeg",
+      "url": "https://x.com/michaelfromyeg/status/2113838288767455619",
+      "publishedAt": "2026-10-24T03:41:35Z",
+      "title": "作者表达做空 GOOG 的观点",
+      "fact": "作者简短表达做空 GOOG 的看法，呼吁管理层重视问题；没有提供业绩或估值依据。",
+      "originalText": "short $GOOG. @sundarpichai call a code red（原帖节选）",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 100,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "avgo",
+      "eventKey": "x-2113706229461811489",
+      "author": "CyclesFan",
+      "url": "https://x.com/CyclesFan/status/2113706229461811489",
+      "publishedAt": "2026-10-23T18:56:50Z",
+      "title": "作者观察 AVGO 的 100 周均线",
+      "fact": "作者称 AVGO 距100周均线不到5%，预期可能在附近形成底部，再观察2027年创新高或熊市延续；这是技术面情景判断。",
+      "originalText": "$AVGO - Price is less than 5% away from the 100 week MA, a key long term moving average which it last hit at the April 2025 low. I expect it to bottom there and then we'll see if it's able to make a new ATH in 2027 or a bear market is already underway.",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 7147,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "avgo",
+      "eventKey": "x-2113830461210259947",
+      "author": "FinTonyX",
+      "url": "https://x.com/FinTonyX/status/2113830461210259947",
+      "publishedAt": "2026-10-24T03:10:29Z",
+      "title": "AVGO 跌破形态引出真假突破讨论",
+      "fact": "作者认为 AVGO 出现跌破，提问这是假跌破还是半导体年底趋势的预兆，没有确定结论。",
+      "originalText": "$AVGO\n\nBreakdown. Look out below!\n\nIs this a bear trap? Or is this a precursor of what's to come toward EOY for semis?",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 257,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "avgo",
+      "eventKey": "x-2113758305973666140",
+      "author": "robertkudja",
+      "url": "https://x.com/robertkudja/status/2113758305973666140",
+      "publishedAt": "2026-10-23T22:23:46Z",
+      "title": "作者称刚开始建立 AVGO 仓位",
+      "fact": "作者表达刚建仓 AVGO，没有披露交易理由或仓位大小。",
+      "originalText": "Thanks. Just started a position in $AVGO",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 45,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "avgo",
+      "eventKey": "x-2113716358173102242",
+      "author": "TheCooleyBandit",
+      "url": "https://x.com/TheCooleyBandit/status/2113716358173102242",
+      "publishedAt": "2026-10-23T19:37:05Z",
+      "title": "作者讨论 AVGO 临近到期看跌期权",
+      "fact": "作者把 AVGO 临近到期看跌期权称为彩票仓，属于高风险个人交易表达。",
+      "originalText": "$AVGO PUTS 26 OCT 26 DOOMSDAY LOTTOS（原帖节选）",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 31,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "vrt",
+      "eventKey": "x-2113706135693689149",
+      "author": "MarketMaestro1",
+      "url": "https://x.com/MarketMaestro1/status/2113706135693689149",
+      "publishedAt": "2026-10-23T18:56:28Z",
+      "title": "作者把 VRT 图表区域类比关税冲击低点",
+      "fact": "作者认为 VRT 的第二个图表区域可能提供类似此前关税低点的机会；未给出可直接核验的基本面增量。",
+      "originalText": "$VRT \nThe second zone could be an opportunity just like the tariff bottom",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 3994,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "vrt",
+      "eventKey": "x-2113668409791836312",
+      "author": "BullToss69",
+      "url": "https://x.com/BullToss69/status/2113668409791836312",
+      "publishedAt": "2026-10-23T16:26:33Z",
+      "title": "VRT 距历史高点的折价引发讨论",
+      "fact": "作者把 VRT 与数只股票相对历史高点的回落放在一起比较；回落幅度本身不说明低估。",
+      "originalText": "Those discounts from ATH across $AMZN, $VRT, $FPS, $CEG, $META and $SAVGO make the biggest-steal debate interesting. You and @CoachClayton424 remain my most trusted sources for financial insight.",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 150,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "tsm",
+      "eventKey": "x-2113641518745407516",
+      "author": "CheddarFlow",
+      "url": "https://x.com/CheddarFlow/status/2113641518745407516",
+      "publishedAt": "2026-10-23T14:39:42Z",
+      "title": "Cheddar Flow 报告 TSM 大额看跌期权交易",
+      "fact": "作者称有人高于卖价买入630万美元 TSM 看跌期权，随后追加超过200万美元。帖子所述方向、规模与是否对冲尚未独立核对。",
+      "originalText": "Someone just paid ABOVE ask for $6.3M of $TSM puts\n\n2,876 contracts... More than the entire open interest\n\nThen they added $2M+ more",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 41228,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "tsm",
+      "eventKey": "x-2113639820828582025",
+      "author": "michaelsisakov",
+      "url": "https://x.com/michaelsisakov/status/2113639820828582025",
+      "publishedAt": "2026-10-23T14:32:57Z",
+      "title": "作者关注 TSM 趋势线支撑",
+      "fact": "作者认为 TSM 位于主要趋势线支撑，关注当天和周一反应；属于技术面判断。",
+      "originalText": "Anyone following Semi's should watch $TSM.\n\nIt is AT major trendline support. How it reacts today/Monday will determine if there is any juice left or if the train is leaving the station for good.",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 1716,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "tsm",
+      "eventKey": "x-2113630284747059458",
+      "author": "iWatchUSleeeep",
+      "url": "https://x.com/iWatchUSleeeep/status/2113630284747059458",
+      "publishedAt": "2026-10-23T13:55:03Z",
+      "title": "作者提及 TSM 的 84 天看跌期权买单",
+      "fact": "作者称出现距到期84天的 TSM 看跌期权买入，未提供完整成交依据。",
+      "originalText": "$TSM put buys. 84dte",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 727,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    },
+    {
+      "tabId": "tsm",
+      "eventKey": "x-2113620941083492374",
+      "author": "WiseAss_ets",
+      "url": "https://x.com/WiseAss_ets/status/2113620941083492374",
+      "publishedAt": "2026-10-23T13:17:56Z",
+      "title": "作者询问 TSM 是否扩展至得州",
+      "fact": "作者用问句提出 TSM 是否扩展至得州，引用的是较早帖子；不视为新厂址已获确认。",
+      "originalText": "$TSM expanding to Texas ?",
+      "sourceNature": "non-official",
+      "verification": "collector-report",
+      "eventTime": null,
+      "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+      "engagement": {
+        "views": 9,
+        "capturedAt": "2026-10-24T08:08:04Z",
+        "source": "grok-web-observed"
+      },
+      "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+      "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+      "people": []
+    }
+  ],
+  "hotspotRetained": [
     {
       "tabId": "nvda",
       "eventKey": "nvda-neocloud-demand-discussion-20261022",
@@ -1270,9 +1764,7 @@
       "firstIncludedAt": "2026-10-23T04:01:18.857Z",
       "lastMaterialAt": "2026-10-23T04:01:18.857Z",
       "people": []
-    }
-  ],
-  "hotspotRetained": [
+    },
     {
       "tabId": "avgo",
       "eventKey": "avgo-network-asic-role-discussion-20261022",
@@ -1918,64 +2410,952 @@
     "tabs": [
       {
         "id": "nvda",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "queries": [],
-        "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-24T00:06:32.500Z"
+        "status": "partial",
+        "queries": [
+          "$NVDA since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+        ],
+        "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。",
+        "cutoff": "2026-10-24T15:42:00+08:00",
+        "lastAttemptAt": "2026-10-24T08:08:24.383Z"
       },
       {
         "id": "mu",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "queries": [],
-        "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-24T00:06:32.500Z"
+        "status": "partial",
+        "queries": [
+          "$MU since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+        ],
+        "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。",
+        "cutoff": "2026-10-24T15:42:00+08:00",
+        "lastAttemptAt": "2026-10-24T08:08:24.383Z"
       },
       {
         "id": "intc",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "queries": [],
-        "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-24T00:06:32.500Z"
+        "status": "partial",
+        "queries": [
+          "$INTC since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+        ],
+        "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。",
+        "cutoff": "2026-10-24T15:42:00+08:00",
+        "lastAttemptAt": "2026-10-24T08:08:24.383Z"
       },
       {
         "id": "goog",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "queries": [],
-        "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-24T00:06:32.500Z"
+        "status": "partial",
+        "queries": [
+          "($GOOG OR $GOOGL) since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+        ],
+        "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。",
+        "cutoff": "2026-10-24T15:42:00+08:00",
+        "lastAttemptAt": "2026-10-24T08:08:24.383Z"
       },
       {
         "id": "avgo",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "queries": [],
-        "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-24T00:06:32.500Z"
+        "status": "partial",
+        "queries": [
+          "$AVGO since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+        ],
+        "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。",
+        "cutoff": "2026-10-24T15:42:00+08:00",
+        "lastAttemptAt": "2026-10-24T08:08:24.383Z"
       },
       {
         "id": "vrt",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "queries": [],
-        "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-24T00:06:32.500Z"
+        "status": "partial",
+        "queries": [
+          "$VRT since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+        ],
+        "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。",
+        "cutoff": "2026-10-24T15:42:00+08:00",
+        "lastAttemptAt": "2026-10-24T08:08:24.383Z"
       },
       {
         "id": "tsm",
-        "status": "failed",
-        "note": "Grok首页已登录，显示Expert及服务异常横幅；模型菜单仅Auto/Fast/Expert/Build/Heavy，界面和截图未显示4.7，无法确认指定版本。按AGENTS未发送查询；Bot仍暂停，无第三路径，请求失败而非无结果。",
-        "queries": [],
-        "cutoff": "2026-10-23T03:54:00Z",
-        "lastAttemptAt": "2026-10-24T00:06:32.500Z"
+        "status": "partial",
+        "queries": [
+          "$TSM since:2026-10-23_03:54:00_UTC until:2026-10-24_07:42:00_UTC"
+        ],
+        "note": "Grok直接按cashtag返回实际views排序；样本有限，剔除广告、同名代币和空正文，缺额不凑数；不等于全网绝对前五。",
+        "cutoff": "2026-10-24T15:42:00+08:00",
+        "lastAttemptAt": "2026-10-24T08:08:24.383Z"
       }
     ]
   },
-  "hotspotCutoff": "2026-10-23T03:54:00Z",
+  "hotspotCutoff": "2026-10-24T15:42:00+08:00",
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "nvidia-rtx-remix-minecraft-20261023",
+        "tabIds": [
+          "nvda"
+        ],
+        "title": "NVIDIA 推出 Minecraft Java 版 RTX Remix 工具",
+        "fact": "NVIDIA 公告称，Minecraft Java 版的 RTX Remix 为创作者提供路径追踪光照与 AI 驱动的 DLSS 工具。帖中没有公布新增销售额或使用量。",
+        "whyItMatters": "这是 AI 在游戏画面重制中的具体落地，扩展 RTX 软件生态；商业影响仍取决于创作者采用与玩家硬件升级。",
+        "counterCase": "功能发布不等于新增 GPU 订单，尚无采用率或收入数据。",
+        "affected": [
+          "NVDA",
+          "游戏与AI渲染"
+        ],
+        "author": "NVIDIA @nvidia",
+        "publishedAt": "2026-10-23T22:18:42Z",
+        "url": "https://x.com/nvidia/status/2113757030754443437",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "nvda": 1
+        },
+        "eventTimeNote": "10月23日公告称功能已可用，具体上线时刻未说明。",
+        "excerpt": "A new look for a classic. RTX Remix for Minecraft: Java Edition gives creators tools to remaster the game with realistic path-traced lighting and AI powered DLSS for maximum performance.",
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "nvda"
+      ],
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "nvda",
+        "eventKey": "x-2113770224747000229",
+        "author": "drayinvests",
+        "url": "https://x.com/drayinvests/status/2113770224747000229",
+        "publishedAt": "2026-10-23T23:11:08Z",
+        "title": "作者称 NVDA 前瞻市盈率约 17.5 倍",
+        "fact": "作者把 NVDA 列为前瞻市盈率低于20倍的股票，称约17.5倍为十多年来最低；这属于作者的估值口径，未独立核对盈利预测。",
+        "originalText": "THIS CANNOT GO ON FOREVER.\n\nHere are 11 stocks trading UNDER 20x forward earnings:\n\n1. Nvidia | $NVDA \n\n~17.5x Fwd P/E (lowest in over a DECADE)",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 17900,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "nvda"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "nvda",
+        "eventKey": "x-2113641804935438568",
+        "author": "kpak82",
+        "url": "https://x.com/kpak82/status/2113641804935438568",
+        "publishedAt": "2026-10-23T14:40:50Z",
+        "title": "倒置图表引出 NVDA 技术面争论",
+        "fact": "作者把 NVDA 图表倒置，借反向视角质疑当前形态是否适合做多；这是图形解释，不是公司新事实。",
+        "originalText": "Image this is your favorite stock at 27 yr lows\nWorking on bullish engulfing monthly bottom reversal candle.\nWould you short it?\nCommon response would be:\n\"That would be crazy. Do it if you like losing money.\"\n\nThis is the inverted (flipped over) $NVDA  chart.\nIf you would not short this, then technically, you would not want to go long on the upright chart.",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 10415,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "nvda"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "nvda",
+        "eventKey": "x-2113624539644969426",
+        "author": "QQQ275Soon",
+        "url": "https://x.com/QQQ275Soon/status/2113624539644969426",
+        "publishedAt": "2026-10-23T13:32:14Z",
+        "title": "作者声称 Robinhood 关闭买入按钮",
+        "fact": "作者把所谓买入限制类比 GameStop 事件并提及 NVDA；目前没有取得官方确认，仅保留为未核实讨论。",
+        "originalText": "ROBINHOOD TURNED OFF THE BUY BUTTON AGAIN. THIS IS THE GAMESTOP SAGA ALL OVER AGAIN $HOOD $NVDA",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 1788,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "nvda"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "nvda",
+        "eventKey": "x-2113693263861629285",
+        "author": "JasonColelfod",
+        "url": "https://x.com/JasonColelfod/status/2113693263861629285",
+        "publishedAt": "2026-10-23T18:05:19Z",
+        "title": "NVDA 持仓转绿引发退休玩笑",
+        "fact": "作者调侃 NVDA 持仓刚转绿，就开始规划提前退休；属于投资者情绪表达。",
+        "originalText": "POV: your $NVDA position finally turns green and you start planning early retirement 😂",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 790,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "nvda"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "mu",
+        "eventKey": "x-2113636805845365185",
+        "author": "iWatchUSleeeep",
+        "url": "https://x.com/iWatchUSleeeep/status/2113636805845365185",
+        "publishedAt": "2026-10-23T14:20:58Z",
+        "title": "作者提及 MU 的 147 天看跌期权买单",
+        "fact": "作者发帖称出现 MU 看跌期权买入、距到期147天；未提供可核对的成交明细，不能据此判定方向。",
+        "originalText": "$MU put buys. 147dte",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 711,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "mu"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "mu",
+        "eventKey": "x-2113636423266144294",
+        "author": "Jcruuuz31",
+        "url": "https://x.com/Jcruuuz31/status/2113636423266144294",
+        "publishedAt": "2026-10-23T14:19:27Z",
+        "title": "MU 股价能否到 800 的短帖讨论",
+        "fact": "作者问 MU 当天是否会到800；这是个人行情猜测，不是报价或目标价研究。",
+        "originalText": "$MU 800 today or what?",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 239,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "mu"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "mu",
+        "eventKey": "x-2113660277996634457",
+        "author": "WallSTQuon",
+        "url": "https://x.com/WallSTQuon/status/2113660277996634457",
+        "publishedAt": "2026-10-23T15:54:14Z",
+        "title": "MU 交易情绪短帖",
+        "fact": "作者对 MU 表达不满或调侃，没有提供新的基本面信息。",
+        "originalText": "Ahhh go away already 🙄 $MU",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 229,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "mu"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "mu",
+        "eventKey": "x-2113793283428401392",
+        "author": "dawn11048754",
+        "url": "https://x.com/dawn11048754/status/2113793283428401392",
+        "publishedAt": "2026-10-24T00:42:45Z",
+        "title": "作者分享包含 MU 的交易价位清单",
+        "fact": "作者列出 MU 及多只股票的买入区间和目标价；这些是个人交易设想，文中财报日与估值未得到核验。",
+        "originalText": "8 Earnings Stocks I’m Watching Closely Next Week\n\n$MU Buy: $840–$865 Target: $1,150+\n\n$IREN Buy: $22–$25 Target: $55+\n\n$NVDA Buy: $205–$212  Target: $260+\n\n$HIMS Buy: $25–$28  Target: $45+\n\n$QCOM Buy: $160–$170  Target: $200+\n\n$AMD Buy: $510–$520 Target: $680+\n\n$NBIS Buy: $155–$162  Target: $260+\n\n$AVGO Buy: $310–$320  Target: $400+\n\nHeat is here. Catalysts are this week. Levels set. Don’t chase.",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 74,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "mu"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "mu",
+        "eventKey": "x-2113683525526581486",
+        "author": "DeductiveWealth",
+        "url": "https://x.com/DeductiveWealth/status/2113683525526581486",
+        "publishedAt": "2026-10-23T17:26:37Z",
+        "title": "作者分享 MU 多头期权流观察",
+        "fact": "作者称前一天观察到评分较高的 MU 多头期权流并捕捉到走势；这是作者自定评级与事后复盘。",
+        "originalText": "Full 100 graded MU bull FLOW yesterday. Caught a nice move into today. $MU.（原帖节选）",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 69,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "mu"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "intc",
+        "eventKey": "x-2113676668028191166",
+        "author": "Colosteve2000",
+        "url": "https://x.com/Colosteve2000/status/2113676668028191166",
+        "publishedAt": "2026-10-23T16:59:22Z",
+        "title": "投资者期待 Intel 在财报时披露交易",
+        "fact": "作者认为 INTC 便宜买入机会将减少，期待多笔合作或交易消息；帖子没有确认任何合同。",
+        "originalText": "People are running out of time to get cheap $INTC shares. When Intel announces multiple deals. It’s going to fly up. Hopefully we get news at the earnings report.",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 5325,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "intc"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "intc",
+        "eventKey": "x-2113640538415026551",
+        "author": "fantasykeiqb",
+        "url": "https://x.com/fantasykeiqb/status/2113640538415026551",
+        "publishedAt": "2026-10-23T14:35:48Z",
+        "title": "Intel 讨论聚焦制造规模、成本与执行",
+        "fact": "作者从3D堆叠、设备产能和14A工艺讨论 Intel 的竞争，认为制造规模、执行和成本决定结果；属于个人分析。",
+        "originalText": "Intel’s Next Battle Is About More Than Chips. $INTC \n\nIntel’s latest R&D discussions reveal three key trends:\n\n• Future chips will rely more on 3D stacking, but heat and integration remain challenges.\n• AI demand is growing faster than semiconductor equipment capacity can expand.\n• Intel’s 14A process is a critical test of its ability to compete with TSMC.\n\nMy takeaway: Technology matters, but manufacturing scale, execution, and cost determine the winners.\nI’m watching the entire AI supply chain not just GPUs.\n\nWhat will become the biggest bottleneck: chips, memory, equipment, or power?",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 215,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "intc"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "intc",
+        "eventKey": "x-2113748252700938322",
+        "author": "vinnnter",
+        "url": "https://x.com/vinnnter/status/2113748252700938322",
+        "publishedAt": "2026-10-23T21:43:49Z",
+        "title": "作者表达做多 INTC 的观点",
+        "fact": "帖子只有做多 INTC 的个人判断，没有给出依据或新事实。",
+        "originalText": "Just long $INTC and call it a day",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 169,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "intc"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "intc",
+        "eventKey": "x-2113744547557896362",
+        "author": "ISITrading2717",
+        "url": "https://x.com/ISITrading2717/status/2113744547557896362",
+        "publishedAt": "2026-10-23T21:29:06Z",
+        "title": "作者回顾 INTC 看涨信用价差交易",
+        "fact": "作者自述平仓一组持有约8天的 INTC 看涨信用价差，获利89.01美元；这是个人复盘，未独立核对账户记录。",
+        "originalText": "Biggest winner was $INTC at +$89.01.\n\nClosed a call credit spread after about 8 days. Short 2 of the 120 calls, long 2 of the 125 calls, so my risk was capped the whole time.",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 122,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "intc"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "goog",
+        "eventKey": "x-2113722026712072237",
+        "author": "kpak82",
+        "url": "https://x.com/kpak82/status/2113722026712072237",
+        "publishedAt": "2026-10-23T19:59:36Z",
+        "title": "作者回顾 GOOGL 下跌前的提醒",
+        "fact": "作者声称自己在 GOOGL 下跌前发出警告；未据此评估预测准确性。",
+        "originalText": "$GOOGL dumpy doo.\nWarning sent right before the drop.",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 9498,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "goog",
+        "eventKey": "x-2113695099095757297",
+        "author": "novarealinvest",
+        "url": "https://x.com/novarealinvest/status/2113695099095757297",
+        "publishedAt": "2026-10-23T18:12:36Z",
+        "title": "广告业务讨论比较 Meta 与 Google",
+        "fact": "作者称 Meta 因出版商和广告主反对而推迟新商业条款，并比较 META 与 GOOGL 的广告收入；相关事件尚未追到原始公告。",
+        "originalText": "메타 $META 신규 상업 조건 도입 지연\n\n출판사·광고주 반발로 시행 연기\n광고·콘텐츠 수익 모델 조정 불확실성\n\n광고 매출 모멘텀 둔화 우려, $META $GOOGL 비교 주목",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 782,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "goog",
+        "eventKey": "x-2113676284601704765",
+        "author": "TheNewMoney_app",
+        "url": "https://x.com/TheNewMoney_app/status/2113676284601704765",
+        "publishedAt": "2026-10-23T16:57:51Z",
+        "title": "作者报告 GOOG 远期看涨期权买单",
+        "fact": "作者称有人买入总额340,800美元、2029年1月19日到期的 GOOG 395看涨期权；未核对成交方向或是否为组合交易。",
+        "originalText": "$340,800 of $GOOG $395 calls were just purchased at $53.25 per contract.\n\nExpiring Jan 19, 2029.",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 582,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "goog",
+        "eventKey": "x-2113870323712225577",
+        "author": "asknaksha",
+        "url": "https://x.com/asknaksha/status/2113870323712225577",
+        "publishedAt": "2026-10-24T05:48:53Z",
+        "title": "个人产品体验影响 GOOGL 持仓想法",
+        "fact": "作者因 AI 工具未能在 YouTube 创建播放列表而重新考虑 GOOGL 多头；单次体验不代表整体产品质量或用户留存。",
+        "originalText": "I'm rethinking my $GOOGL long as well. Simple example, it failed to create a playlist on my YouTube account that it is signed into already but codex was able to do it. seriously?（原帖节选）",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 107,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "goog",
+        "eventKey": "x-2113838288767455619",
+        "author": "michaelfromyeg",
+        "url": "https://x.com/michaelfromyeg/status/2113838288767455619",
+        "publishedAt": "2026-10-24T03:41:35Z",
+        "title": "作者表达做空 GOOG 的观点",
+        "fact": "作者简短表达做空 GOOG 的看法，呼吁管理层重视问题；没有提供业绩或估值依据。",
+        "originalText": "short $GOOG. @sundarpichai call a code red（原帖节选）",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 100,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "avgo",
+        "eventKey": "x-2113706229461811489",
+        "author": "CyclesFan",
+        "url": "https://x.com/CyclesFan/status/2113706229461811489",
+        "publishedAt": "2026-10-23T18:56:50Z",
+        "title": "作者观察 AVGO 的 100 周均线",
+        "fact": "作者称 AVGO 距100周均线不到5%，预期可能在附近形成底部，再观察2027年创新高或熊市延续；这是技术面情景判断。",
+        "originalText": "$AVGO - Price is less than 5% away from the 100 week MA, a key long term moving average which it last hit at the April 2025 low. I expect it to bottom there and then we'll see if it's able to make a new ATH in 2027 or a bear market is already underway.",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 7147,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "avgo"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "avgo",
+        "eventKey": "x-2113830461210259947",
+        "author": "FinTonyX",
+        "url": "https://x.com/FinTonyX/status/2113830461210259947",
+        "publishedAt": "2026-10-24T03:10:29Z",
+        "title": "AVGO 跌破形态引出真假突破讨论",
+        "fact": "作者认为 AVGO 出现跌破，提问这是假跌破还是半导体年底趋势的预兆，没有确定结论。",
+        "originalText": "$AVGO\n\nBreakdown. Look out below!\n\nIs this a bear trap? Or is this a precursor of what's to come toward EOY for semis?",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 257,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "avgo"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "avgo",
+        "eventKey": "x-2113758305973666140",
+        "author": "robertkudja",
+        "url": "https://x.com/robertkudja/status/2113758305973666140",
+        "publishedAt": "2026-10-23T22:23:46Z",
+        "title": "作者称刚开始建立 AVGO 仓位",
+        "fact": "作者表达刚建仓 AVGO，没有披露交易理由或仓位大小。",
+        "originalText": "Thanks. Just started a position in $AVGO",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 45,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "avgo"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "avgo",
+        "eventKey": "x-2113716358173102242",
+        "author": "TheCooleyBandit",
+        "url": "https://x.com/TheCooleyBandit/status/2113716358173102242",
+        "publishedAt": "2026-10-23T19:37:05Z",
+        "title": "作者讨论 AVGO 临近到期看跌期权",
+        "fact": "作者把 AVGO 临近到期看跌期权称为彩票仓，属于高风险个人交易表达。",
+        "originalText": "$AVGO PUTS 26 OCT 26 DOOMSDAY LOTTOS（原帖节选）",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 31,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "avgo"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "vrt",
+        "eventKey": "x-2113706135693689149",
+        "author": "MarketMaestro1",
+        "url": "https://x.com/MarketMaestro1/status/2113706135693689149",
+        "publishedAt": "2026-10-23T18:56:28Z",
+        "title": "作者把 VRT 图表区域类比关税冲击低点",
+        "fact": "作者认为 VRT 的第二个图表区域可能提供类似此前关税低点的机会；未给出可直接核验的基本面增量。",
+        "originalText": "$VRT \nThe second zone could be an opportunity just like the tariff bottom",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 3994,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "vrt"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "vrt",
+        "eventKey": "x-2113668409791836312",
+        "author": "BullToss69",
+        "url": "https://x.com/BullToss69/status/2113668409791836312",
+        "publishedAt": "2026-10-23T16:26:33Z",
+        "title": "VRT 距历史高点的折价引发讨论",
+        "fact": "作者把 VRT 与数只股票相对历史高点的回落放在一起比较；回落幅度本身不说明低估。",
+        "originalText": "Those discounts from ATH across $AMZN, $VRT, $FPS, $CEG, $META and $SAVGO make the biggest-steal debate interesting. You and @CoachClayton424 remain my most trusted sources for financial insight.",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 150,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "vrt"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "tsm",
+        "eventKey": "x-2113641518745407516",
+        "author": "CheddarFlow",
+        "url": "https://x.com/CheddarFlow/status/2113641518745407516",
+        "publishedAt": "2026-10-23T14:39:42Z",
+        "title": "Cheddar Flow 报告 TSM 大额看跌期权交易",
+        "fact": "作者称有人高于卖价买入630万美元 TSM 看跌期权，随后追加超过200万美元。帖子所述方向、规模与是否对冲尚未独立核对。",
+        "originalText": "Someone just paid ABOVE ask for $6.3M of $TSM puts\n\n2,876 contracts... More than the entire open interest\n\nThen they added $2M+ more",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 41228,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "tsm"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "tsm",
+        "eventKey": "x-2113639820828582025",
+        "author": "michaelsisakov",
+        "url": "https://x.com/michaelsisakov/status/2113639820828582025",
+        "publishedAt": "2026-10-23T14:32:57Z",
+        "title": "作者关注 TSM 趋势线支撑",
+        "fact": "作者认为 TSM 位于主要趋势线支撑，关注当天和周一反应；属于技术面判断。",
+        "originalText": "Anyone following Semi's should watch $TSM.\n\nIt is AT major trendline support. How it reacts today/Monday will determine if there is any juice left or if the train is leaving the station for good.",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 1716,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "tsm"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "tsm",
+        "eventKey": "x-2113630284747059458",
+        "author": "iWatchUSleeeep",
+        "url": "https://x.com/iWatchUSleeeep/status/2113630284747059458",
+        "publishedAt": "2026-10-23T13:55:03Z",
+        "title": "作者提及 TSM 的 84 天看跌期权买单",
+        "fact": "作者称出现距到期84天的 TSM 看跌期权买入，未提供完整成交依据。",
+        "originalText": "$TSM put buys. 84dte",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 727,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "tsm"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "tabId": "tsm",
+        "eventKey": "x-2113620941083492374",
+        "author": "WiseAss_ets",
+        "url": "https://x.com/WiseAss_ets/status/2113620941083492374",
+        "publishedAt": "2026-10-23T13:17:56Z",
+        "title": "作者询问 TSM 是否扩展至得州",
+        "fact": "作者用问句提出 TSM 是否扩展至得州，引用的是较早帖子；不视为新厂址已获确认。",
+        "originalText": "$TSM expanding to Texas ?",
+        "sourceNature": "non-official",
+        "verification": "collector-report",
+        "eventTime": null,
+        "eventTimeNote": "属于作者发布时的讨论；所涉交易或事件实际时间未核实。",
+        "engagement": {
+          "views": 9,
+          "capturedAt": "2026-10-24T08:08:04Z",
+          "source": "grok-web-observed"
+        },
+        "firstIncludedAt": "2026-10-24T08:08:24.383Z",
+        "lastMaterialAt": "2026-10-24T08:08:24.383Z",
+        "people": []
+      },
+      "tabIds": [
+        "tsm"
+      ],
+      "hotspot": true,
+      "at": "2026-10-24T08:08:24.383Z",
+      "legacy": false
+    },
     {
       "item": {
         "tabId": "avgo",
