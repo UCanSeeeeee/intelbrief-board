@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-24T07:57:29+08:00",
-  "updatedAt": "2026-10-24T08:07:22+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-24T08:08:49+08:00",
+  "finishedAt": "2026-10-24T08:08:49+08:00",
   "gitHeadAtStart": "4097aa85d57b9395f8ec1004050414234caa1bf6",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-24T08:08:16+08:00",
+      "detail": "11fa121已push origin HEAD:master，ls-remote一致；仅明确本次25路径"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-24T08:08:49+08:00",
+      "detail": "内容11fa121远端一致，Cloudflare success；13公开资源逐字节匹配；只读/api/vix200且值/日期匹配"
     }
   ],
   "pages": {
@@ -77,15 +77,12 @@
       "detail": null
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "X四批30对象未查询：Expert无法确认4.7；论文与限定官方科普完成独立研究，不用于补X",
-    "stackSnippet": null
-  },
-  "commitHash": null,
+  "status": "partial",
+  "error": null,
+  "commitHash": "11fa121b18452a8d261b3e65cbc8b1d951d96d62",
   "notes": [
-    "冻结北京时间08:00；Grok界面已登录Expert但未显示4.7，服务故障横幅；准备阶段未发送请求。既有15:00未提交文件保留。"
+    "冻结北京时间08:00；Grok界面已登录Expert但未显示4.7，服务故障横幅；准备阶段未发送请求。既有15:00未提交文件保留。",
+    "已发布核验；X30对象未发送查询且截止保留，Nature3/Science2缺1，小知识5，基础课今日已满；既有15:00文件/work保留，无本地验证。"
   ],
   "timings": [
     {

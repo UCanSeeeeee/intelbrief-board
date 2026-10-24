@@ -7739,7 +7739,7 @@
     }
   ],
   "publication": {
-    "status": "ready-to-push",
+    "status": "verified",
     "assembledAt": "2026-10-24T00:06:32.500Z",
     "localValidation": "按用户要求未运行npm test/check/build、本地预览或额外回归；仅来源、发布器契约及差异审查。",
     "mergeReport": [
@@ -7777,7 +7777,240 @@
       "allSuccessCutoffsUnchanged": true
     },
     "remoteBeforePublish": "4097aa85d57b9395f8ec1004050414234caa1bf6",
-    "gitStartedAt": "2026-10-24T00:07:22.052501+00:00"
+    "gitStartedAt": "2026-10-24T00:07:22.052501+00:00",
+    "contentCommit": "11fa121b18452a8d261b3e65cbc8b1d951d96d62",
+    "remoteMasterVerified": true,
+    "gitCompletedAt": "2026-10-24T00:08:16.195403+00:00",
+    "verifyStartedAt": "2026-10-24T00:07:46.456035+00:00",
+    "preDeploymentComparison": {
+      "startedAt": "2026-10-24T00:07:46.456035+00:00",
+      "finishedAt": "2026-10-24T00:07:50.189023+00:00",
+      "commit": "11fa121b18452a8d261b3e65cbc8b1d951d96d62",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-24-0800.json",
+          "matchesLocal": false,
+          "sha256": "8501973d77cda414bb8a2300e743088b803fe76c163f534e2df14908505d1887",
+          "status": 200
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "matchesLocal": false,
+          "sha256": "7a1a6efacf4b473e7617624a7457b4f49ee25be4b534a56052c566b8bff5f1d0",
+          "status": 200
+        },
+        {
+          "path": "data/reading-board.json",
+          "matchesLocal": false,
+          "sha256": "43589c2999d16b1ea6231e9c9c54535e8cee527d87cea6f6b55bccb3ef69c84d",
+          "status": 200
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "matchesLocal": false,
+          "sha256": "38dee4e5b9f23f1426c2f85f58637f354b0d1ecacaee7682d208789b55d7057c",
+          "status": 200
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "matchesLocal": false,
+          "sha256": "cc6f384c551a5d628c92b8369379b2ff576cef09859ade0ec29f0b4d11fdca2a",
+          "status": 200
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "matchesLocal": false,
+          "sha256": "5d8b2c15ce277a6aa2b8818365e182799213e288e9e9bb27f0ff50fbe5ca5af7",
+          "status": 200
+        },
+        {
+          "path": "data/learning.json",
+          "matchesLocal": true,
+          "sha256": "767adfe378c9719e6dfa9003a9ea6a8aa948ab326ce3a99becd1a09fc68e8057",
+          "status": 200
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "matchesLocal": false,
+          "sha256": "d68bcea8469c982e5b382aa75ed53e5ccf85b02e87015820939b666af984d23d",
+          "status": 200
+        },
+        {
+          "path": "data/journal-learning.json",
+          "matchesLocal": false,
+          "sha256": "647b17bbfeef326259fc63f2d7a011c1f598cba8dda986bac6f90e5aa891ceae",
+          "status": 200
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "matchesLocal": false,
+          "sha256": "689ae1a73ef96cdca430ae1539bb575ed98046637d3432073ffda3eb7fc24bfa",
+          "status": 200
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "matchesLocal": false,
+          "sha256": "5aeea2376ed3078e30b4e3cb4a3eb1bebfbc425498b9f7825d9e630a430ffcc4",
+          "status": 200
+        },
+        {
+          "path": "data/market-volatility.json",
+          "matchesLocal": false,
+          "sha256": "b96813ad9693b906e7272e000247cf689eaef8f297a199be32c1daeff6fae013",
+          "status": 200
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "matchesLocal": false,
+          "sha256": "d6f9082e2ef3448359c33509dd2cadd886e53b3aabd2ce063adba4e3b6d8e968",
+          "status": 200
+        },
+        {
+          "path": "config/person-registry.json",
+          "matchesLocal": false,
+          "sha256": "8501973d77cda414bb8a2300e743088b803fe76c163f534e2df14908505d1887",
+          "status": 200
+        }
+      ],
+      "vixApi": {
+        "status": 200,
+        "value": {
+          "schemaVersion": 1,
+          "id": "cboe-vix",
+          "value": 19.03,
+          "asOfDate": "2026-10-22",
+          "quoteKind": "close",
+          "previousClose": 16.68,
+          "fetchedAt": "2026-10-24T00:07:50.164Z",
+          "source": {
+            "name": "Cboe",
+            "url": "https://www.cboe.com/tradable-products/vix",
+            "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          },
+          "retrieval": {
+            "status": "ok"
+          }
+        }
+      }
+    },
+    "comparisonNote": "首轮资源比较发生于Cloudflare in_progress，旧资源不匹配不当成发布完成。person-registry不在构建公开名单，首轮误纳的该项不作为公开资源；后续只比较实际公开13项。",
+    "verifiedAt": "2026-10-24T00:08:25.877251+00:00",
+    "verifyCompletedAt": "2026-10-24T00:08:25.877251+00:00",
+    "verification": {
+      "startedAt": "2026-10-24T00:08:21.958996+00:00",
+      "finishedAt": "2026-10-24T00:08:25.877251+00:00",
+      "commit": "11fa121b18452a8d261b3e65cbc8b1d951d96d62",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-24-0800.json",
+          "matchesLocal": true,
+          "sha256": "5ed39df41f0ae8eb8f4330acbcb0d33c3e7a2a07af056bb315e6e209a486020e",
+          "status": 200
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "matchesLocal": true,
+          "sha256": "bb09a65dcce2c8d9a64beadbbcaf9df0c982ca34b23bb20cafce01f59fcf6d5c",
+          "status": 200
+        },
+        {
+          "path": "data/reading-board.json",
+          "matchesLocal": true,
+          "sha256": "fa989bd285ee88589b8f49a6cdefd89dc57d08a18a4ad2a721cc85ef6e62fb9e",
+          "status": 200
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "matchesLocal": true,
+          "sha256": "b8ea021a17607589c0679064c4e484d27b20fc29b69d5ecfb0321913ba6bf2be",
+          "status": 200
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "matchesLocal": true,
+          "sha256": "032ed8681f77a87eb47c0afb9bbf9e6d404b5bac080ba29080b748d67ab39809",
+          "status": 200
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "matchesLocal": true,
+          "sha256": "74bd64e7d51899761ae86fcd0157a8c025a8be43f253e9b208403df24ac16163",
+          "status": 200
+        },
+        {
+          "path": "data/learning.json",
+          "matchesLocal": true,
+          "sha256": "767adfe378c9719e6dfa9003a9ea6a8aa948ab326ce3a99becd1a09fc68e8057",
+          "status": 200
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "matchesLocal": true,
+          "sha256": "fce67b064bd609760e1943ba991f53fc235b81346096bbee3b6e593303ac6103",
+          "status": 200
+        },
+        {
+          "path": "data/journal-learning.json",
+          "matchesLocal": true,
+          "sha256": "1f2f6b2336b46030a2d80a83c1ea121ea530cbb0c85d4d58262d022c0022fe48",
+          "status": 200
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "matchesLocal": true,
+          "sha256": "31a241e3ed81918956cfc5dfcfeb0790b669992f4e45fcdf06d7eac03aefec20",
+          "status": 200
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "matchesLocal": true,
+          "sha256": "90b5b3330bc1d69006a5e5fd10453ca91d7d37d7d42d2e22398a23b72489f221",
+          "status": 200
+        },
+        {
+          "path": "data/market-volatility.json",
+          "matchesLocal": true,
+          "sha256": "2c7557c8b439860231beee264a203cc3a97af878d2b5306aef9d727811f6afca",
+          "status": 200
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "matchesLocal": true,
+          "sha256": "c21c8624755d4d5a66a298f1c3f26ddfed59fdc78607caee3224dc2a537b6302",
+          "status": 200
+        }
+      ],
+      "vixApi": {
+        "status": 200,
+        "value": {
+          "schemaVersion": 1,
+          "id": "cboe-vix",
+          "value": 19.03,
+          "asOfDate": "2026-10-22",
+          "quoteKind": "close",
+          "previousClose": 16.68,
+          "fetchedAt": "2026-10-24T00:07:50.164Z",
+          "source": {
+            "name": "Cboe",
+            "url": "https://www.cboe.com/tradable-products/vix",
+            "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          },
+          "retrieval": {
+            "status": "ok"
+          }
+        }
+      }
+    },
+    "cloudflareChecks": [
+      {
+        "id": 120719496865,
+        "name": "Cloudflare Pages",
+        "status": "completed",
+        "conclusion": "success",
+        "detailsUrl": "https://dash.cloudflare.com/?to=/654fc092fc71c4dc81184933d5b808b9/pages/view/intelbrief-board/c9d05e48-6597-4fac-a16c-5c4d50a1ab19",
+        "completedAt": "2026-10-24T00:07:56Z"
+      }
+    ]
   },
   "timingNote": "实际ops计时为墙钟；预检及早期资料阅读未独立计时，不补造起点。模型确认时间为保存记录时刻；未记录精确点击时刻。 四批初次record于截止前被拒，审计已保存后继续独立学习，截止到达后复用报告record。X批次ops闭合跨度包含学习初步检索，不声称纯采集耗时。",
   "learningPlan": {
