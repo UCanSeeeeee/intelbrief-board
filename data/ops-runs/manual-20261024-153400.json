@@ -4,21 +4,21 @@
   "trigger": "manual",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-24T15:34:54+08:00",
-  "updatedAt": "2026-10-24T15:37:32+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-24T15:39:18+08:00",
+  "finishedAt": "2026-10-24T15:39:18+08:00",
   "gitHeadAtStart": "3546c37a5cdae502e53254fabc9c089c933393b5",
   "stages": [
     {
       "name": "pull",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-24T15:39:17+08:00",
+      "detail": "内容批次开始前已拉取成功；此时间为回填确认，不是拉取起点"
     },
     {
       "name": "read",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-24T15:39:17+08:00",
+      "detail": "已读取本次相关契约，界面检查未确认4.7"
     },
     {
       "name": "search",
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-24T15:39:17+08:00",
+      "detail": "cc58ea8已推送master"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-24T15:39:18+08:00",
+      "detail": "Cloudflare成功；6项线上资源与提交一致；X未采集"
     }
   ],
   "pages": {
@@ -77,12 +77,10 @@
       "detail": "低频日历未重查；财报从已刷新真源投影"
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "Grok菜单仅有Expert，无4.7版本标识；未发送X查询；Bot额度暂停边界不变",
-    "stackSnippet": null
-  },
-  "commitHash": null,
-  "notes": []
+  "status": "partial",
+  "error": null,
+  "commitHash": "cc58ea8",
+  "notes": [
+    "UI与指标/财报已上线；X版本门槛未确认，30对象均未查询，成功进度及旧内容未动，等待本次Expert授权。未运行本地测试。"
+  ]
 }

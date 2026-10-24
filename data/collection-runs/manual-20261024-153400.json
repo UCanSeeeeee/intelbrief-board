@@ -413,7 +413,12 @@
     "oldContentPreserved": true
   },
   "publication": {
-    "status": "pending"
+    "status": "verified",
+    "contentCommit": "cc58ea8",
+    "uiCommit": "3546c37",
+    "verifiedAt": "2026-10-24 07:39:16 UTC",
+    "resourcesMatched": ["data/market-sentiment.json", "data/market-volatility.json", "data/earnings-calendar.json", "daily.js", "learning.js", "reading.css"],
+    "note": "Cloudflare检查成功，六项线上资源与本地提交内容逐字节相同；UI已线上查看并确认栏目跳转。X内容未更新，不把指标发布当作X采集成功。"
   },
   "timingNote": "预检发生在ops日志start前；未伪造预检或各批独立检索耗时。四个X批次均未进入检索。"
 }
