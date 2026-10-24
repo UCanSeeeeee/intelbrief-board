@@ -23,7 +23,7 @@
   loaded.forEach(s=>{s.entries=entries(s);});
   const cutoffDays=loaded.filter(s=>!s.error).map(s=>V.day(s.data.hotspotCutoff||s.data.cutoff||s.data.asOf)).filter(Boolean);
   const current=cutoffDays.sort().at(-1)||V.day(new Date().toISOString());
-  const days=[...new Set([current,...loaded.flatMap(s=>s.entries.map(e=>V.day(e.at))).filter(Boolean)])].sort().reverse();
+  const days=window.DailyRecords.recentDays([current,...loaded.flatMap(s=>s.entries.map(e=>e.at))]);
   dateSelect.innerHTML=days.map(d=>`<option value="${V.escape(d)}">${V.escape(d)}</option>`).join('');
   const requested=new URLSearchParams(location.search).get('date');
   dateSelect.value=days.includes(requested)?requested:current;
