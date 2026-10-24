@@ -4,8 +4,8 @@
   "trigger": "manual",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-24T15:42:47+08:00",
-  "updatedAt": "2026-10-24T16:14:00+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-24T16:16:23+08:00",
+  "finishedAt": "2026-10-24T16:16:23+08:00",
   "gitHeadAtStart": "c6cec48d0e54edf5967100ca896e05c2db1e9b5c",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-24T16:16:22+08:00",
+      "detail": "内容提交77cbe63已推送origin/master。"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-24T16:16:22+08:00",
+      "detail": "Cloudflare success；8项线上资源字节一致；浏览器实际显示10/24新增内容。"
     }
   ],
   "pages": {
@@ -77,11 +77,12 @@
       "detail": "前序无到期/过时触发；保留存量。"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "77cbe63ee69729ea50037e617a08678593598839",
   "notes": [
-    "按用户最新要求使用Expert，不指定版本；继续本次看板内容更新"
+    "按用户最新要求使用Expert，不指定版本；继续本次看板内容更新",
+    "30对象查询完成，内容发布已核对；新闻缺额与原始证据不足不冒充完整覆盖。"
   ],
   "timings": [
     {

@@ -1,5 +1,66 @@
 {
   "id": "manual-20261024-154200",
+  "publication": {
+    "contentCommit": "77cbe63ee69729ea50037e617a08678593598839",
+    "remote": "origin/master",
+    "deployment": {
+      "provider": "Cloudflare Pages",
+      "status": "success",
+      "id": "e2999d76-0c45-4b0a-bc4c-72d373b2bb6c"
+    },
+    "verifiedAt": "2026-10-24T08:16:21Z",
+    "publicUrl": "https://intelbrief-board.pages.dev/daily?date=2026-10-24",
+    "resources": [
+      {
+        "path": "data/stock-briefs/index.json",
+        "httpStatus": 200,
+        "byteMatch": true
+      },
+      {
+        "path": "data/reading-board.json",
+        "httpStatus": 200,
+        "byteMatch": true
+      },
+      {
+        "path": "data/people-intelligence.json",
+        "httpStatus": 200,
+        "byteMatch": true
+      },
+      {
+        "path": "data/ticker-intelligence.json",
+        "httpStatus": 200,
+        "byteMatch": true
+      },
+      {
+        "path": "data/ai-intelligence.json",
+        "httpStatus": 200,
+        "byteMatch": true
+      },
+      {
+        "path": "daily.js",
+        "httpStatus": 200,
+        "byteMatch": true
+      },
+      {
+        "path": "learning.js",
+        "httpStatus": 200,
+        "byteMatch": true
+      },
+      {
+        "path": "reading.css",
+        "httpStatus": 200,
+        "byteMatch": true
+      }
+    ],
+    "visual": {
+      "page": "daily?date=2026-10-24",
+      "result": "线上实际显示新新闻、人物、28条热点与AI内容；不是本地预览。",
+      "screenshotLocal": "/tmp/intelbrief-expert-updated.png"
+    },
+    "localTests": "skipped-by-user",
+    "collectionStatus": "partial",
+    "note": "Grok Expert实际采集；未独立直读X。广告、同名代币和空正文排除；views排名仅限本次检索样本。"
+  },
   "cutoff": "2026-10-24T15:42:00+08:00",
   "status": "partial",
   "model": {
