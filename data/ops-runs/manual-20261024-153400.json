@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "period": "manual-20261024-153400",
+  "trigger": "manual",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-24T15:34:54+08:00",
+  "updatedAt": "2026-10-24T15:37:32+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "3546c37a5cdae502e53254fabc9c089c933393b5",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "read",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "search",
+      "status": "failed",
+      "at": "2026-10-24T15:36:45+08:00",
+      "detail": "Grok菜单仅有Expert，无4.7版本标识；未发送X查询；Bot额度暂停边界不变"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-24T15:37:32+08:00",
+      "detail": "指标快照、财报和未执行X的审计已落盘；全部X存量及成功进度不变"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-24T15:37:32+08:00",
+      "detail": "按用户要求未运行本地测试、check、build或预览；已审查本次数据差异"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "X未采集，成功窗口不推进；CNN21.0和VIX19.45快照已刷新"
+    },
+    "people": {
+      "status": "failed",
+      "detail": "Grok网页已登录并选中Expert；模型菜单Auto/Fast/Expert/Build/Heavy未标4.7，未发送采集请求。备用Grok Bot仍按项目规则暂停；等待用户对本次使用当前Expert的明确授权。"
+    },
+    "tickers": {
+      "status": "failed",
+      "detail": "Grok网页已登录并选中Expert；模型菜单Auto/Fast/Expert/Build/Heavy未标4.7，未发送采集请求。备用Grok Bot仍按项目规则暂停；等待用户对本次使用当前Expert的明确授权。"
+    },
+    "ai": {
+      "status": "failed",
+      "detail": "Grok网页已登录并选中Expert；模型菜单Auto/Fast/Expert/Build/Heavy未标4.7，未发送采集请求。备用Grok Bot仍按项目规则暂停；等待用户对本次使用当前Expert的明确授权。"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "Nasdaq日历112条精选，待评价0；保留已有评分及人工主题依据"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "低频日历未重查；财报从已刷新真源投影"
+    }
+  },
+  "status": "failed",
+  "error": {
+    "stage": "search",
+    "message": "Grok菜单仅有Expert，无4.7版本标识；未发送X查询；Bot额度暂停边界不变",
+    "stackSnippet": null
+  },
+  "commitHash": null,
+  "notes": []
+}
