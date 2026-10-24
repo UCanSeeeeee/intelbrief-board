@@ -1,6 +1,39 @@
 {
   "schemaVersion": 1,
   "id": "repair-trump-20261024-171520",
+  "publication": {
+    "contentCommit": "bed1dc465e29568bc4aa8104b2f7c0d5c034ab07",
+    "verifiedAt": "2026-10-24T09:28:12Z",
+    "cloudflare": "success",
+    "resources": [
+      {
+        "path": "people.js",
+        "httpStatus": 200,
+        "byteMatch": true
+      },
+      {
+        "path": "config/people-intelligence.json",
+        "httpStatus": 200,
+        "byteMatch": true
+      },
+      {
+        "path": "data/people-intelligence.json",
+        "httpStatus": 200,
+        "byteMatch": true
+      }
+    ],
+    "browser": {
+      "url": "https://intelbrief-board.pages.dev/people?tab=donald-trump",
+      "latestEngagement": 3,
+      "weeklyValue": 2,
+      "screenshotsLocal": [
+        "/tmp/intelbrief-trump-repaired.png",
+        "/tmp/intelbrief-trump-policy.png"
+      ]
+    },
+    "localTests": "not-run-per-user",
+    "note": "其他人物未重采，原有各自截止保留；仅特朗普进度接续至17:15:20。"
+  },
   "cutoff": "2026-10-24T09:15:20Z",
   "status": "complete",
   "scope": "people:donald-trump only",
