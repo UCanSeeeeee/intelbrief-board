@@ -8287,7 +8287,7 @@
     }
   ],
   "publication": {
-    "status": "ready-to-commit",
+    "status": "deployed-verified",
     "assembledAt": "2026-10-25T00:48:21.507Z",
     "localValidation": "按用户要求未运行test/check/build、预览或额外回归；来源、发布契约、差异核验另记。",
     "mergeReport": [
@@ -8311,7 +8311,7 @@
         "retained": 0
       }
     ],
-    "phase": "reviewing-diff",
+    "phase": "receipt",
     "gitReviewRecordedAt": "2026-10-25T00:48:43.646Z",
     "gitCommitStartedAt": "2026-10-25T00:50:30.287Z",
     "readingPreservation": {
@@ -8393,7 +8393,251 @@
     "opsCountCorrection": {
       "at": "2026-10-25T00:53:12.789Z",
       "note": "按原始两轮6+7=13修正ops摘要笔误，保留阶段原时戳，不更改原始返回。"
-    }
+    },
+    "contentCommit": "a5a6ed219399f5ec69559e70fca90081c63b6d80",
+    "pushedAt": "2026-10-25T00:53:34.307Z",
+    "remoteMaster": "a5a6ed219399f5ec69559e70fca90081c63b6d80",
+    "initialDeployment": {
+      "id": 121034743303,
+      "status": "in_progress",
+      "observedAt": "2026-10-25T00:53:55.258Z"
+    },
+    "temporaryResearchTabsClosedAt": "2026-10-25T00:53:55.259Z",
+    "deployment": [
+      {
+        "id": 121034816725,
+        "headSha": "a5a6ed219399f5ec69559e70fca90081c63b6d80",
+        "name": "Cloudflare Pages",
+        "status": "completed",
+        "conclusion": "success",
+        "completedAt": "2026-10-25T00:53:53Z",
+        "detailsUrl": "https://dash.cloudflare.com/?to=/654fc092fc71c4dc81184933d5b808b9/pages/view/intelbrief-board/8b756c8c-f286-4312-a70d-338d7f3bc3d4"
+      }
+    ],
+    "initialVerification": {
+      "startedAt": "2026-10-25T00:53:49.699097+00:00",
+      "finishedAt": "2026-10-25T00:54:18.400986+00:00",
+      "commit": "a5a6ed219399f5ec69559e70fca90081c63b6d80",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-25-0800.json",
+          "matchesLocal": false,
+          "sha256": "8501973d77cda414bb8a2300e743088b803fe76c163f534e2df14908505d1887",
+          "status": 200
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "matchesLocal": false,
+          "sha256": "18d34e9b03b61aa655299f69b9f4e6f2e97c6855cdc19a6e87ecad120a078144",
+          "status": 200
+        },
+        {
+          "path": "data/reading-board.json",
+          "matchesLocal": false,
+          "error": "curl: (28) Operation timed out after 25001 milliseconds with 1224924 out of 1534075 bytes received\n"
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "matchesLocal": false,
+          "sha256": "aac9857d69f059b5039ece619409b4b061ad5430ffedddb7bb23c1320528c0a4",
+          "status": 200
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "matchesLocal": false,
+          "sha256": "91c4bd6ac807eb2a8a7793f19f679271eafe43433ec3ea012c3b81daf3ea044d",
+          "status": 200
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "matchesLocal": false,
+          "sha256": "1ba2af40d40726ec88e2cf6058e8a022f528403ce36e386282053407e0f13ce9",
+          "status": 200
+        },
+        {
+          "path": "data/learning.json",
+          "matchesLocal": true,
+          "sha256": "f0ae4f211dc9a2575795cbd0e89d4beaeed14c0dd668c115bf5adeb56f947d3c",
+          "status": 200
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "matchesLocal": true,
+          "sha256": "f979aa06c19e3226b84db2b84bf58933e6846c7457f0e3213a4be6746a711019",
+          "status": 200
+        },
+        {
+          "path": "data/journal-learning.json",
+          "matchesLocal": true,
+          "sha256": "d08e801503463a1c91dff008b9e688c6ea6df163f5e516bb91714bc120c067ea",
+          "status": 200
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "matchesLocal": true,
+          "sha256": "ab37b9d53aa0606017a38bb38e055919abe7255c9f266ef610d238f8447d0c79",
+          "status": 200
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "matchesLocal": true,
+          "sha256": "a4451f77126903fbaccdb516d08982d0fb78f0d3ccbf20dc52a6ba1184d8f7b1",
+          "status": 200
+        },
+        {
+          "path": "data/market-volatility.json",
+          "matchesLocal": true,
+          "sha256": "4fb583ee89b16f50ddd02af93fcbbb0c681587663e60bea116b1bc64dbf22625",
+          "status": 200
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "matchesLocal": true,
+          "sha256": "c21c8624755d4d5a66a298f1c3f26ddfed59fdc78607caee3224dc2a537b6302",
+          "status": 200
+        },
+        {
+          "path": "config/learning.json",
+          "matchesLocal": true,
+          "sha256": "dfa4934defae2ebaa9ed573e6d81df5e936d7b0a1882bb55abc83ebca319193e",
+          "status": 200
+        }
+      ],
+      "vixApi": {
+        "status": 200,
+        "value": {
+          "schemaVersion": 1,
+          "id": "cboe-vix",
+          "value": 19.45,
+          "asOfDate": "2026-10-23",
+          "quoteKind": "close",
+          "previousClose": 19.03,
+          "fetchedAt": "2026-10-25T00:54:18.478Z",
+          "source": {
+            "name": "Cboe",
+            "url": "https://www.cboe.com/tradable-products/vix",
+            "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          },
+          "retrieval": {
+            "status": "ok"
+          }
+        }
+      },
+      "note": "部署中比较8/14一致，部分旧版及1网络超时，未作为成功；保留初次真实结果。"
+    },
+    "verification": {
+      "startedAt": "2026-10-25T00:54:35.649810+00:00",
+      "finishedAt": "2026-10-25T00:54:43.472162+00:00",
+      "commit": "a5a6ed219399f5ec69559e70fca90081c63b6d80",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-25-0800.json",
+          "matchesLocal": true,
+          "sha256": "3a04a7f686d0fefb8c4fcfe8e282abd3abf180deaed8d0377d79088913f7c5e8",
+          "status": 200
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "matchesLocal": true,
+          "sha256": "bf8747d9e28ef126bbcde035760577080f88776e978a49b1c7d11458a356021c",
+          "status": 200
+        },
+        {
+          "path": "data/reading-board.json",
+          "matchesLocal": true,
+          "sha256": "269e1d5c6bf8ae43546c6a2a285ca9beda1b3e4e7de57bec17b1c999f37f74f0",
+          "status": 200
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "matchesLocal": true,
+          "sha256": "508c30fc60b251a3b9b629a0220111dd24bb0845da260fcce11983b9c37a830c",
+          "status": 200
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "matchesLocal": true,
+          "sha256": "aaa84a0acc07e7df24719d66cecbf1e84cb4103ecb6807431851e4e741592ff5",
+          "status": 200
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "matchesLocal": true,
+          "sha256": "72526b5a8eb77f2a8d36abadf1521477449870358d3fd072e91f1b343e2cb6b5",
+          "status": 200
+        },
+        {
+          "path": "data/learning.json",
+          "matchesLocal": true,
+          "sha256": "f0ae4f211dc9a2575795cbd0e89d4beaeed14c0dd668c115bf5adeb56f947d3c",
+          "status": 200
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "matchesLocal": true,
+          "sha256": "f979aa06c19e3226b84db2b84bf58933e6846c7457f0e3213a4be6746a711019",
+          "status": 200
+        },
+        {
+          "path": "data/journal-learning.json",
+          "matchesLocal": true,
+          "sha256": "d08e801503463a1c91dff008b9e688c6ea6df163f5e516bb91714bc120c067ea",
+          "status": 200
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "matchesLocal": true,
+          "sha256": "ab37b9d53aa0606017a38bb38e055919abe7255c9f266ef610d238f8447d0c79",
+          "status": 200
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "matchesLocal": true,
+          "sha256": "a4451f77126903fbaccdb516d08982d0fb78f0d3ccbf20dc52a6ba1184d8f7b1",
+          "status": 200
+        },
+        {
+          "path": "data/market-volatility.json",
+          "matchesLocal": true,
+          "sha256": "4fb583ee89b16f50ddd02af93fcbbb0c681587663e60bea116b1bc64dbf22625",
+          "status": 200
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "matchesLocal": true,
+          "sha256": "c21c8624755d4d5a66a298f1c3f26ddfed59fdc78607caee3224dc2a537b6302",
+          "status": 200
+        },
+        {
+          "path": "config/learning.json",
+          "matchesLocal": true,
+          "sha256": "dfa4934defae2ebaa9ed573e6d81df5e936d7b0a1882bb55abc83ebca319193e",
+          "status": 200
+        }
+      ],
+      "vixApi": {
+        "status": 200,
+        "value": {
+          "schemaVersion": 1,
+          "id": "cboe-vix",
+          "value": 19.45,
+          "asOfDate": "2026-10-23",
+          "quoteKind": "close",
+          "previousClose": 19.03,
+          "fetchedAt": "2026-10-25T00:54:18.478Z",
+          "source": {
+            "name": "Cboe",
+            "url": "https://www.cboe.com/tradable-products/vix",
+            "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          },
+          "retrieval": {
+            "status": "ok"
+          }
+        }
+      }
+    },
+    "verifiedAt": "2026-10-25T00:54:53.479Z",
+    "receiptNote": "回执提交仅保存上线证据，不重新采集；本回执引用内容提交a5a6ed2的已核对部署，不递归写自身哈希。"
   },
   "learningPlan": {
     "scope": "健康、生活、统计及反直觉；仅Nature/Science正刊；两刊各最多3篇，知识5条，basics1篇寓言；先近期，旧文显式classic，DOI与knowledgeKey跨期去重。",
@@ -10245,7 +10489,8 @@
       "observedAt": "2026-10-25T00:37:31.508Z",
       "access": "abstract + metadata",
       "note": "初读在source-verification计时前，精确起止未单独记录；未声称通读全文。"
-    }
+    },
+    "conversationUrl": "https://grok.com/c/0b76cb55-3c4b-4d5c-9784-9acc2f735cda"
   },
   "learningBasics": {
     "status": "complete",
