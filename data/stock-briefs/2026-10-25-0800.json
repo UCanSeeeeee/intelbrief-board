@@ -1,0 +1,578 @@
+{
+  "scheduledFor": "2026-10-25T08:00:00+08:00",
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "news:market-focus",
+      "page": "news",
+      "object": "market-focus",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "cutoff": "2026-10-25T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:market-focus",
+          "key": "jpm-intel-neutral-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "追源只有zerohedge及交易账号汇总，未取得银行或Reuters/Bloomberg/FT原帖，评级细节与假设证据不足；候选保留待核。",
+          "updatedAt": "2026-10-19T12:41:05.291Z",
+          "runId": "2026-10-19-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "goldman-leveraged-etf-semiconductor-inflows-20261020",
+          "status": "pending",
+          "reason": "缺Goldman或权威媒体原帖与统计期/金额。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "smci-preliminary-fq127-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "taiwan-sept-export-orders-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "spacex-q3-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，仅官方报告链接未含数字与AI传导，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "japan-yttrium-shortage-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "phoenix-tailings-rochester-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "nebius-spot-gpu-20261021",
+          "status": "pending",
+          "reason": "旧候选无已证实进展复用缓存；或定向追源未取得关键原始证据，留待核",
+          "updatedAt": "2026-10-22T00:02:48.855Z",
+          "runId": "2026-10-22-0800"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "zerohedge-premarket-20261022",
+          "status": "pending",
+          "reason": "未完成候选读取/原始追源/独立反证，二传数字不发布。",
+          "updatedAt": "2026-10-22T12:37:28.674Z",
+          "runId": "2026-10-22-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "tapeandticker-premarket-20261022",
+          "status": "pending",
+          "reason": "采集器二传，官方/权威原始证据与反证未取得，不发布。",
+          "updatedAt": "2026-10-22T12:37:28.674Z",
+          "runId": "2026-10-22-2030"
+        },
+        {
+          "unit": "news:market-focus",
+          "key": "meta-fcf-negative-20261022",
+          "status": "pending",
+          "reason": "新二传数字无原始X证据，保留候选待有实质进展再核。",
+          "updatedAt": "2026-10-23T00:06:32.926Z",
+          "runId": "2026-10-23-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:semiconductors",
+      "page": "news",
+      "object": "semiconductors",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "cutoff": "2026-10-25T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:semiconductors",
+          "key": "samsung-tsmc-hbm-process-detail-20261018",
+          "status": "pending",
+          "reason": "需要Reuters或公司X原始来源，现不采用3nm/DRAM细节。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "tsmc-kumamoto-3nm-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "citi-skhynix-q326-preview-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "mu-2027-hbm-asp-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "pc-memory-lta-2027-20261020",
+          "status": "pending",
+          "reason": "缺公司/权威原始披露与签约日期。",
+          "updatedAt": "2026-10-20T07:07:20.811Z",
+          "runId": "2026-10-20-1500"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "hbm_hybrid_bonding_delay",
+          "status": "pending",
+          "reason": "混合键合推迟的原始厂商证据未取得。",
+          "url": "https://x.com/LiDaosen/status/2113602961033081275",
+          "updatedAt": "2026-10-24T08:09:59.715Z",
+          "runId": "manual-20261024-154200"
+        },
+        {
+          "unit": "news:semiconductors",
+          "key": "abf_substrate_bottleneck",
+          "status": "pending",
+          "reason": "50亿美元预付款数字缺原始合同或披露。",
+          "url": "https://x.com/bobziyangding/status/2113780912756592955",
+          "updatedAt": "2026-10-24T08:09:59.715Z",
+          "runId": "manual-20261024-154200"
+        }
+      ]
+    },
+    {
+      "id": "news:power",
+      "page": "news",
+      "object": "power",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "cutoff": "2026-10-25T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:power",
+          "key": "nscale-msft-uk-grid-ipo-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "nextdc-melbourne-grid-risk-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:power",
+          "key": "grid_lpt_leadtimes_gasturbines",
+          "status": "pending",
+          "reason": "变压器交期和燃机成本数字缺原始依据。",
+          "url": "https://x.com/LiDaosen/status/2113691570205548746",
+          "updatedAt": "2026-10-24T08:09:59.715Z",
+          "runId": "manual-20261024-154200"
+        }
+      ]
+    },
+    {
+      "id": "news:ai-adoption",
+      "page": "news",
+      "object": "ai-adoption",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "cutoff": "2026-10-25T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:ai-adoption",
+          "key": "daytona-financing-20261020",
+          "status": "pending",
+          "reason": "追源及独立反证完成，关键原始证据不足，不发布",
+          "updatedAt": "2026-10-21T00:07:36.635Z",
+          "runId": "2026-10-21-0800"
+        },
+        {
+          "unit": "news:ai-adoption",
+          "key": "meta-muse-agents-20261021",
+          "status": "pending",
+          "reason": "New secondhand quantitative claim requires original",
+          "updatedAt": "2026-10-22T00:02:48.855Z",
+          "runId": "2026-10-22-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:capital-cost",
+      "page": "news",
+      "object": "capital-cost",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "cutoff": "2026-10-25T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:capital-cost",
+          "key": "goldman-coreweave-buy-20261019",
+          "status": "pending",
+          "reason": "Reuters仅支持升级发生，核心假设与现金流依据不足",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:capital-cost",
+          "key": "jpm-coreweave-debt-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        },
+        {
+          "unit": "news:capital-cost",
+          "key": "tips-5y-auction-20261022",
+          "status": "pending",
+          "reason": "新拍卖数字无原始X证据，不采用。",
+          "updatedAt": "2026-10-23T00:06:32.926Z",
+          "runId": "2026-10-23-0800"
+        },
+        {
+          "unit": "news:capital-cost",
+          "key": "ai_financing_credit_stress",
+          "status": "pending",
+          "reason": "CoreWeave债券收益率二传未取得原始债券/报价与时点。",
+          "url": "https://x.com/briefing_block_/status/2113655179765747989",
+          "updatedAt": "2026-10-24T08:09:59.715Z",
+          "runId": "manual-20261024-154200"
+        }
+      ]
+    },
+    {
+      "id": "news:geopolitics",
+      "page": "news",
+      "object": "geopolitics",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "cutoff": "2026-10-25T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": [
+        {
+          "unit": "news:geopolitics",
+          "key": "russia-energy-terminal-vs-warehouse-20261018",
+          "status": "pending",
+          "reason": "需要权威原帖辨别设施、时点与实际损失。",
+          "updatedAt": "2026-10-18T15:48:56.229Z",
+          "runId": "manual-20261018-233852"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "hormuz-tankers-mine-claim-20261018",
+          "status": "pending",
+          "reason": "仅二传，待有权威原帖或实质进展再核；无新线索不重查。",
+          "updatedAt": "2026-10-19T00:09:57.261Z",
+          "runId": "2026-10-19-0800"
+        },
+        {
+          "unit": "news:geopolitics",
+          "key": "us-energy-russia-diesel-claim-20261019",
+          "status": "pending",
+          "reason": "权威原帖或实质新增证据不足，保留待核",
+          "updatedAt": "2026-10-20T00:29:55.378Z",
+          "runId": "2026-10-20-0800"
+        }
+      ]
+    },
+    {
+      "id": "news:market-structure",
+      "page": "news",
+      "object": "market-structure",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "cutoff": "2026-10-25T00:00:00.000Z",
+      "needsQuery": true,
+      "bootstrap": false,
+      "catchingUp": false,
+      "pending": []
+    }
+  ],
+  "windowStart": "2026-10-24T07:42:00.000Z",
+  "displayWindowStart": "2026-10-24T00:00:00.000Z",
+  "displayWindowEnd": "2026-10-25T00:00:00.000Z",
+  "carriedOver": [],
+  "status": "partial",
+  "summary": "两轮增量查询已完成，新增线索证据不足，保留累计重点。",
+  "marketContext": "北京时间周日08:00；周末消息按增量收集，存量继续可读。",
+  "checklist": [
+    {
+      "item": "news:market-focus",
+      "status": "covered",
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。"
+    },
+    {
+      "item": "news:semiconductors",
+      "status": "covered",
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。"
+    },
+    {
+      "item": "news:power",
+      "status": "covered",
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。"
+    },
+    {
+      "item": "news:ai-adoption",
+      "status": "covered",
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。"
+    },
+    {
+      "item": "news:capital-cost",
+      "status": "covered",
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。"
+    },
+    {
+      "item": "news:geopolitics",
+      "status": "covered",
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。"
+    },
+    {
+      "item": "news:market-structure",
+      "status": "covered",
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。"
+    }
+  ],
+  "candidates": [
+    {
+      "eventKey": "candidate-2114114724157591974",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "例行日程提醒，无本轮实质状态变化；还包含INTC日程疑点，不据此刷新财报。"
+    },
+    {
+      "eventKey": "candidate-2113983848891535571",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "收盘回顾与日程，不把二传价格和时点作为事实来源。"
+    },
+    {
+      "eventKey": "candidate-2114132642904092836",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "一般个人宏观观点，无可核验新增事实。"
+    },
+    {
+      "eventKey": "candidate-2114074897366557052",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114144295834067309",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "二传研判，无独立新增事实。"
+    },
+    {
+      "eventKey": "candidate-2114102057967755603",
+      "round": 1,
+      "decision": "excluded",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2113994170331214296",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114078881762439377",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114084071165100262",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2113874125223551453",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "Grok返回06:03:59Z早于07:42对象窗口；仅背景不作为本轮增量，不据此追源。"
+    },
+    {
+      "eventKey": "candidate-2114123508859257259",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114119983760314551",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114137872857006405",
+      "round": 2,
+      "decision": "excluded",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    }
+  ],
+  "coverage": {
+    "method": "Grok网页版Expert；新闻两轮独立发现、8新线索定向追源与独立反证；Grok转述不标独立直读",
+    "queries": [
+      "(Fed OR FOMC OR \"interest rate\" OR Powell OR \"rate cut\" OR inflation OR CPI) (stock OR market OR equity OR nasdaq OR sp500) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+      "(AI OR Nvidia OR NVDA OR \"OpenAI\" OR Microsoft OR Google OR Meta OR Amazon) (stock OR market OR earnings OR guidance) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+      "(oil OR energy OR OPEC OR \"Middle East\" OR Ukraine OR China OR tariff OR geopolitics) (market OR stock OR price) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+      "(VIX OR volatility OR \"market structure\" OR liquidity OR \"credit spread\" OR bond OR treasury) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+      "US stock market focus macro policy interest rates credit geopolitics energy AI companies market structure new events",
+      "(\"Fed\" OR FOMC OR Powell) (meeting OR decision OR cut OR hike) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+      "(Nvidia OR NVDA OR \"AI capex\" OR hyperscaler) (earnings OR guidance OR spend) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:10",
+      "(oil OR crude OR \"Brent\" OR WTI) (price OR surge OR attack OR Houthi OR Middle East) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+      "(\"next week\" OR Wednesday OR \"Oct 28\" OR \"October 28\") (Fed OR FOMC OR earnings OR MSFT OR GOOGL OR AMZN) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:10",
+      "(Hormuz OR Iran OR \"Middle East\" OR carrier) (oil OR market OR Fed) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:10",
+      "(\"market structure\" OR VIX OR \"credit spreads\" OR liquidity OR \"treasury yield\") since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+      "Friday market close AI doubts oil surge Fed meeting next week earnings hyperscalers",
+      "(\"10-year\" OR \"10 year\" OR \"treasury yield\" OR \"credit spread\") (Fed OR oil OR AI) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+      "Kalshi_Finance",
+      "x_keyword_search (HBM OR high bandwidth OR packaging OR CoWoS OR TSMC OR ASML OR advanced packaging OR foundry) (order OR capacity OR yield OR delivery OR ASP OR demand OR shortage) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+      "x_keyword_search (HBM OR CoWoS OR DRAM contract OR memory price) (sold out OR shortage OR ASP OR yield) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:3 mode:Latest",
+      "x_semantic_search semiconductor HBM advanced packaging CoWoS foundry capacity yield ASP demand change from_date:2026-10-24 to_date:2026-10-25",
+      "x_keyword_search (data center OR datacenter) (power OR grid OR transformer OR turbine OR cooling OR interconnection OR permit) (contract OR bottleneck OR delay OR cost) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:3 mode:Latest",
+      "x_keyword_search (transformer OR gas turbine OR interconnection OR data center power) (lead time OR delay OR backlog OR permit OR bottleneck) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:3 mode:Latest",
+      "x_semantic_search data center power grid transformer gas turbine interconnection cooling bottleneck cost from_date:2026-10-24 to_date:2026-10-25",
+      "x_keyword_search (AI OR agent OR cloud software OR robot OR adoption) (revenue OR renewal OR paid OR margin OR cash flow OR unit cost OR monetization) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+      "x_semantic_search AI adoption enterprise revenue margin cash flow agent robot paid renewal from_date:2026-10-24 to_date:2026-10-25",
+      "x_keyword_search (Stuut OR order to cash OR DSO) (AI OR agent) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC mode:Latest",
+      "x_keyword_search (Treasury OR 10-year OR long-end OR yield OR debt OR refinancing OR cost of capital) (AI OR capex OR hyperscaler) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+      "x_keyword_search (CoreWeave OR CRWV) (debt OR CDS OR credit OR refinancing OR upfront) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+      "x_keyword_search (tariff OR sanction OR export control OR Huawei OR China chips OR shipping OR Hormuz OR physical supply) (cost OR price OR delay OR shortage) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+      "x_keyword_search (oil OR crude OR Brent) (Hormuz OR Iran OR carrier OR surge) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+      "x_keyword_search (concentration OR breadth OR leveraged ETF OR SOXL OR TQQQ OR hedge OR liquidity OR VIX OR index weight) (AI OR Nasdaq OR market) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+      "x_keyword_search (VXN OR Nasdaq vol OR vol spread) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest"
+    ],
+    "gaps": [
+      "新候选关键原始证据、报价或计算口径仍不足",
+      "Grok返回1条窗口外Stuut候选已排除；@glocalinvestor作者身份未确认，不沿用误配名"
+    ]
+  },
+  "selectionRationale": "不以提醒、二传数字、泛观点充当新增；全部原精选与持久池保留。",
+  "excludedCandidates": [
+    {
+      "eventKey": "candidate-2114114724157591974",
+      "reason": "例行日程提醒，无本轮实质状态变化；还包含INTC日程疑点，不据此刷新财报。"
+    },
+    {
+      "eventKey": "candidate-2113983848891535571",
+      "reason": "收盘回顾与日程，不把二传价格和时点作为事实来源。"
+    },
+    {
+      "eventKey": "candidate-2114132642904092836",
+      "reason": "一般个人宏观观点，无可核验新增事实。"
+    },
+    {
+      "eventKey": "candidate-2114074897366557052",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114144295834067309",
+      "reason": "二传研判，无独立新增事实。"
+    },
+    {
+      "eventKey": "candidate-2114102057967755603",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2113994170331214296",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114078881762439377",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114084071165100262",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2113874125223551453",
+      "reason": "Grok返回06:03:59Z早于07:42对象窗口；仅背景不作为本轮增量，不据此追源。"
+    },
+    {
+      "eventKey": "candidate-2114123508859257259",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114119983760314551",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    },
+    {
+      "eventKey": "candidate-2114137872857006405",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。"
+    }
+  ],
+  "shortfallReason": "实际发现完成，但没有证据充分且有实质变化的新卡；两组0新增，旧重点继续保留。",
+  "focus": [],
+  "insights": [],
+  "trigger": "scheduled",
+  "id": "2026-10-25-0800",
+  "timezone": "Asia/Shanghai",
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T00:48:21.743Z",
+  "counts": {
+    "focus": 0,
+    "insights": 0,
+    "total": 0
+  }
+}

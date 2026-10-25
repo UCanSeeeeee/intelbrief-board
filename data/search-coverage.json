@@ -811,6 +811,46 @@
         "oil/Brent correction deny contrary stocks WSJ；Decisions API OpenAI correction error delay；sentimentrader equal weight RSP correction wrong data error；截止2026-10-24T07:42Z。"
       ],
       "recordedAt": "2026-10-24T08:02:37.458Z"
+    },
+    {
+      "jobId": "2026-10-25-0800",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T08:00:00+08:00",
+      "status": "partial",
+      "queries": [
+        "(Fed OR FOMC OR \"interest rate\" OR Powell OR \"rate cut\" OR inflation OR CPI) (stock OR market OR equity OR nasdaq OR sp500) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "(AI OR Nvidia OR NVDA OR \"OpenAI\" OR Microsoft OR Google OR Meta OR Amazon) (stock OR market OR earnings OR guidance) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "(oil OR energy OR OPEC OR \"Middle East\" OR Ukraine OR China OR tariff OR geopolitics) (market OR stock OR price) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "(VIX OR volatility OR \"market structure\" OR liquidity OR \"credit spread\" OR bond OR treasury) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "US stock market focus macro policy interest rates credit geopolitics energy AI companies market structure new events",
+        "(\"Fed\" OR FOMC OR Powell) (meeting OR decision OR cut OR hike) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+        "(Nvidia OR NVDA OR \"AI capex\" OR hyperscaler) (earnings OR guidance OR spend) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:10",
+        "(oil OR crude OR \"Brent\" OR WTI) (price OR surge OR attack OR Houthi OR Middle East) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+        "(\"next week\" OR Wednesday OR \"Oct 28\" OR \"October 28\") (Fed OR FOMC OR earnings OR MSFT OR GOOGL OR AMZN) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:10",
+        "(Hormuz OR Iran OR \"Middle East\" OR carrier) (oil OR market OR Fed) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:10",
+        "(\"market structure\" OR VIX OR \"credit spreads\" OR liquidity OR \"treasury yield\") since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+        "Friday market close AI doubts oil surge Fed meeting next week earnings hyperscalers",
+        "(\"10-year\" OR \"10 year\" OR \"treasury yield\" OR \"credit spread\") (Fed OR oil OR AI) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+        "Kalshi_Finance",
+        "x_keyword_search (HBM OR high bandwidth OR packaging OR CoWoS OR TSMC OR ASML OR advanced packaging OR foundry) (order OR capacity OR yield OR delivery OR ASP OR demand OR shortage) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (HBM OR CoWoS OR DRAM contract OR memory price) (sold out OR shortage OR ASP OR yield) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:3 mode:Latest",
+        "x_semantic_search semiconductor HBM advanced packaging CoWoS foundry capacity yield ASP demand change from_date:2026-10-24 to_date:2026-10-25",
+        "x_keyword_search (data center OR datacenter) (power OR grid OR transformer OR turbine OR cooling OR interconnection OR permit) (contract OR bottleneck OR delay OR cost) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:3 mode:Latest",
+        "x_keyword_search (transformer OR gas turbine OR interconnection OR data center power) (lead time OR delay OR backlog OR permit OR bottleneck) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:3 mode:Latest",
+        "x_semantic_search data center power grid transformer gas turbine interconnection cooling bottleneck cost from_date:2026-10-24 to_date:2026-10-25",
+        "x_keyword_search (AI OR agent OR cloud software OR robot OR adoption) (revenue OR renewal OR paid OR margin OR cash flow OR unit cost OR monetization) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_semantic_search AI adoption enterprise revenue margin cash flow agent robot paid renewal from_date:2026-10-24 to_date:2026-10-25",
+        "x_keyword_search (Stuut OR order to cash OR DSO) (AI OR agent) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC mode:Latest",
+        "x_keyword_search (Treasury OR 10-year OR long-end OR yield OR debt OR refinancing OR cost of capital) (AI OR capex OR hyperscaler) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (CoreWeave OR CRWV) (debt OR CDS OR credit OR refinancing OR upfront) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (tariff OR sanction OR export control OR Huawei OR China chips OR shipping OR Hormuz OR physical supply) (cost OR price OR delay OR shortage) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (oil OR crude OR Brent) (Hormuz OR Iran OR carrier OR surge) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (concentration OR breadth OR leveraged ETF OR SOXL OR TQQQ OR hedge OR liquidity OR VIX OR index weight) (AI OR Nasdaq OR market) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (VXN OR Nasdaq vol OR vol spread) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest"
+      ],
+      "recordedAt": "2026-10-25T00:48:21.743Z"
     }
   ]
 }

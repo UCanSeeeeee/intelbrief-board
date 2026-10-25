@@ -1,0 +1,70 @@
+{
+  "runId": "2026-10-25-0800",
+  "cutoff": "2026-10-25T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "ai:openai",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(OpenAI OR openai OR \"ChatGPT\" OR GPT OR Sora) (API OR api OR partnership OR partner OR safety OR regulation OR enterprise OR deploy OR \"usage policy\") since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC -filter:replies",
+        "(\"Decisions API\" OR \"prompt-to-voice\" OR \"fired safety\" OR \"Texas\" OpenAI) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC -filter:replies"
+      ],
+      "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "ai:anthropic",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(Anthropic OR Claude OR \"Claude 4\" OR Fable) (API OR enterprise OR deployment OR safety OR AWS OR \"Google Cloud\" OR Bedrock OR \"cloud channel\" OR managed) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC -filter:replies",
+        "(\"Claude Enterprise\" OR Cowork OR \"Enterprise Frontier\" OR Bedrock Anthropic OR \"Google Cloud\" Claude) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC -filter:replies"
+      ],
+      "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "ai:goog-ai",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(Gemini OR \"Google AI\" OR DeepMind OR \"Google DeepMind\" OR TPU OR \"Project Astra\" OR Argon) (product OR launch OR update OR agent OR organization OR \"open source\" OR availability) -stock -earnings -financial -report since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC -filter:replies",
+        "(\"Gemini 4\" OR Argon OR \"TPU Agent\" OR \"TorchTPU\" OR \"DeepMind Institute\") since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC -filter:replies"
+      ],
+      "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "ai:ai-others",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(\"Meta AI\" OR Llama OR Mistral OR DeepSeek OR \"open source\" OR \"open-weight\" OR policy OR \"AI Act\" OR \"government AI\" OR China OR EU OR \"US government\") (AI OR model OR lab) -crypto -bitcoin -token since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC -filter:replies",
+        "(DeepSeek OR \"Kimi K3\" OR Llama OR Mistral OR \"open-weight\" OR \"AI policy\" OR \"AI Act\") since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC -filter:replies"
+      ],
+      "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "ai:goog-ai",
+      "key": "candidate-2114137328243683713",
+      "status": "pending",
+      "reason": "定向追源与独立反证后仍缺官方原始证据，新旧未知，保留待核。",
+      "url": "https://x.com/imrahul165/status/2114137328243683713"
+    },
+    {
+      "unit": "ai:goog-ai",
+      "key": "candidate-2114144879907574007",
+      "status": "pending",
+      "reason": "定向追源与独立反证后仍缺官方原始证据，新旧未知，保留待核。",
+      "url": "https://x.com/ohayou792/status/2114144879907574007"
+    }
+  ]
+}

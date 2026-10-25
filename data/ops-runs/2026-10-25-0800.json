@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-25-0800",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-25T08:04:27+08:00",
+  "updatedAt": "2026-10-25T08:50:31+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "70acacb63b29d39fbbb45e6ad0719b2fde5d51cd",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-25T08:50:30+08:00",
+      "detail": "首次写前已ff-only成功；提交前fetch确认HEAD与origin/master无差异，预检未单独计时"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-25T08:50:30+08:00",
+      "detail": "按本批读取当前入口、项目KB/SOP及契约，未重读全资料库"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-25T08:50:31+08:00",
+      "detail": "七批已关闭，30对象report已保存后record；学习/官方例外另记缺口"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-25T08:50:31+08:00",
+      "detail": "统一装配已完成，来源及发布器契约通过；旧内容与精选核对保留"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-25T08:50:31+08:00",
+      "detail": "用户明确不需要本地test/check/build、预览或额外回归；未执行，不冒称通过"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "新闻7对象查询完成，13候选全部落选/待核，0新增；不表示无消息"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "8卡：Elon1价值4热度、WhiteHouse2热度、Goldman1热度；2空对象完成查询；同步运营者误归因已排除"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "14对象查询闭合：2事实待核不发布；35热点原始候选，33入载荷，剔除收益营销与仅图表标题各1"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "四对象查询闭合，9候选不入新增，ADK/Carbon2待核；存量按有效窗口合并保留"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "Nasdaq三周112精选，无新增待评"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "无触发，10/28 FOMC为下一已列事件"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [
+    "冻结北京时间08:00；预检pull成功；保留原未跟踪文件；不执行本地验证"
+  ],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:04:27+08:00",
+      "endedAt": "2026-10-25T08:13:17+08:00",
+      "durationMs": 530000,
+      "detail": "完整结果与collectionResults已保存，record完成；候选不足不阻塞已完成对象"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:04:27+08:00",
+      "endedAt": "2026-10-25T08:10:18+08:00",
+      "durationMs": 351000,
+      "detail": "两轮独立发现完成：第一轮6候选，第二轮六包7候选；1个AI候选时间在窗口前排除"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:10:18+08:00",
+      "endedAt": "2026-10-25T08:11:57+08:00",
+      "durationMs": 99000,
+      "detail": "8新候选定向读帖与一手查询完成；多为二传，SpotGamma最后引文返回截断；未把转述升级为独立事实"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:11:57+08:00",
+      "endedAt": "2026-10-25T08:13:17+08:00",
+      "durationMs": 80000,
+      "detail": "8线索定向反证完成；未发现反证不等于证实；二传不独立采信"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:13:18+08:00",
+      "endedAt": "2026-10-25T08:20:20+08:00",
+      "durationMs": 422000,
+      "detail": "完整结果与collectionResults已保存，record完成；候选不足不阻塞已完成对象"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:13:18+08:00",
+      "endedAt": "2026-10-25T08:18:43+08:00",
+      "durationMs": 325000,
+      "detail": "五对象及纯来源补位完成；Goldman市场评论可作热度，Trump运营者帖已排除；机构修正与追源交织，耗时不相加"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:16:22+08:00",
+      "endedAt": "2026-10-25T08:18:43+08:00",
+      "durationMs": 141000,
+      "detail": "8原候选和1机构候选定点读帖完成，保留Grok转述身份"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:18:43+08:00",
+      "endedAt": "2026-10-25T08:20:20+08:00",
+      "durationMs": 97000,
+      "detail": "新候选定向反证完成；WhiteHouse/GS只复述正文无新事实查询；两空对象后两阶段skipped"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:20:21+08:00",
+      "endedAt": "2026-10-25T08:27:49+08:00",
+      "durationMs": 448000,
+      "detail": "完整结果与collectionResults已保存，record完成；候选不足不阻塞已完成对象"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:20:21+08:00",
+      "endedAt": "2026-10-25T08:24:41+08:00",
+      "durationMs": 260000,
+      "detail": "7股事实/热点分流发现完成，2事实线索、每股5热点样本；浏览量来源Grok，非全X保证"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:24:42+08:00",
+      "endedAt": "2026-10-25T08:26:23+08:00",
+      "durationMs": 101000,
+      "detail": "两候选追源完成；NVIDIA/美使馆确认仅窗口前背景，45000许可细节未有当期一手；Jassy均为采访整理二传，不按primarySources标签直接采信"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:26:23+08:00",
+      "endedAt": "2026-10-25T08:27:49+08:00",
+      "durationMs": 86000,
+      "detail": "2新事实线索定向反证完成；5空事实对象和全部热点skipped，无空跑"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:27:50+08:00",
+      "endedAt": "2026-10-25T08:35:57+08:00",
+      "durationMs": 487000,
+      "detail": "完整结果与collectionResults已保存，record完成；候选不足不阻塞已完成对象"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:27:50+08:00",
+      "endedAt": "2026-10-25T08:31:21+08:00",
+      "durationMs": 211000,
+      "detail": "四对象实际查询完成，9候选；1个定价个人观点无新增状态排除，8个新事实线索追源"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:31:21+08:00",
+      "endedAt": "2026-10-25T08:34:39+08:00",
+      "durationMs": 198000,
+      "detail": "8候选追源与准确账号补查完成；多项更早来源或缺原始证据，补查未返回status URL的线索保留缺口"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:34:39+08:00",
+      "endedAt": "2026-10-25T08:35:56+08:00",
+      "durationMs": 77000,
+      "detail": "3新旧未知线索反证完成；已证旧背景及纯观点后两阶段skipped；无原始证据不发布"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:35:57+08:00",
+      "endedAt": "2026-10-25T08:47:02+08:00",
+      "durationMs": 665000,
+      "detail": "Nature3 Science1缺2；寓言1；5小知识合并；保留往期和停止的趣事证据"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:35:57+08:00",
+      "endedAt": "2026-10-25T08:44:58+08:00",
+      "durationMs": 541000,
+      "detail": "Grok两轮共8论文候选；Nature3可核，Science1可核，其余偏题/方法缺口/复现争议不凑；小知识排除重复样本量主题"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:37:31+08:00",
+      "endedAt": "2026-10-25T08:47:01+08:00",
+      "durationMs": 570000,
+      "detail": "4论文与1基础概念及5知识来源已核；作者/日期/样本更正已存；Grok误差未原样发布"
+    },
+    {
+      "page": "learning",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:44:59+08:00",
+      "endedAt": "2026-10-25T08:47:02+08:00",
+      "durationMs": 123000,
+      "detail": "4论文边界及解释争议已写卡；Google原始方法和复现缺口排除，Vax表序更正已核"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:47:37+08:00",
+      "endedAt": "2026-10-25T08:47:38+08:00",
+      "durationMs": 1000,
+      "detail": "无触发，保留年历"
+    },
+    {
+      "page": "macro",
+      "name": "discovery",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-25T08:47:38+08:00",
+      "durationMs": 0,
+      "detail": "无到期/明确过时触发，不采集"
+    },
+    {
+      "page": "macro",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-25T08:47:38+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，无需执行"
+    },
+    {
+      "page": "macro",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-25T08:47:38+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，无需执行"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-25T08:47:39+08:00",
+      "endedAt": "2026-10-25T08:48:21+08:00",
+      "durationMs": 42000,
+      "detail": "112精选、主营无缺、pending0、旧评分完整保留；提前网络预取时间偏差已如实记录"
+    },
+    {
+      "page": "earnings",
+      "name": "discovery",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-25T08:48:20+08:00",
+      "durationMs": 0,
+      "detail": "复用本轮提前保存的Nasdaq响应，不重拉；112精选无新增公司，2874原始条目"
+    },
+    {
+      "page": "earnings",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-25T08:48:20+08:00",
+      "durationMs": 0,
+      "detail": "pending0、结果无变化；既有已核评分无新材料不重复官方IR研究"
+    },
+    {
+      "page": "earnings",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-25T08:48:20+08:00",
+      "durationMs": 0,
+      "detail": "无新结果候选，无需执行"
+    }
+  ]
+}

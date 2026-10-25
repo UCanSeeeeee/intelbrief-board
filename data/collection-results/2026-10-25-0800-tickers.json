@@ -1,0 +1,185 @@
+{
+  "runId": "2026-10-25-0800",
+  "cutoff": "2026-10-25T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "tickers:nvda",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$NVDA since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "semantic NVDA semiconductor demand supply packaging power AI monetization",
+        "($NVDA) (demand OR supply OR capacity OR order OR power) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "事实查询完成；有候选但一手/新增证据不足，或无合格事实，不把返回热帖等同于事实新增；五空对象跳过后两阶段。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:nvda:hotspots",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$NVDA since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "cashtag增量查询已完成；Grok真实views样本排名，普通观点不作事实证明；营销与正文不足项另存。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:mu",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$MU since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "semantic MU memory shortage capacity",
+        "$MU (shortage OR sold out OR memory OR HBM) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "事实查询完成；有候选但一手/新增证据不足，或无合格事实，不把返回热帖等同于事实新增；五空对象跳过后两阶段。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:mu:hotspots",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$MU since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "cashtag增量查询已完成；Grok真实views样本排名，普通观点不作事实证明；营销与正文不足项另存。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:intc",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$INTC since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "semantic INTC demand supply packaging"
+      ],
+      "note": "事实查询完成；有候选但一手/新增证据不足，或无合格事实，不把返回热帖等同于事实新增；五空对象跳过后两阶段。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:intc:hotspots",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$INTC since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "cashtag增量查询已完成；Grok真实views样本排名，普通观点不作事实证明；营销与正文不足项另存。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:goog",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($GOOG OR $GOOGL) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "semantic GOOG AI monetization cloud"
+      ],
+      "note": "事实查询完成；有候选但一手/新增证据不足，或无合格事实，不把返回热帖等同于事实新增；五空对象跳过后两阶段。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:goog:hotspots",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($GOOG OR $GOOGL) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "cashtag增量查询已完成；Grok真实views样本排名，普通观点不作事实证明；营销与正文不足项另存。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:avgo",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$AVGO since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "semantic AVGO packaging interconnect"
+      ],
+      "note": "事实查询完成；有候选但一手/新增证据不足，或无合格事实，不把返回热帖等同于事实新增；五空对象跳过后两阶段。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:avgo:hotspots",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$AVGO since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "cashtag增量查询已完成；Grok真实views样本排名，普通观点不作事实证明；营销与正文不足项另存。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:vrt",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$VRT since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "semantic VRT data center power cooling"
+      ],
+      "note": "事实查询完成；有候选但一手/新增证据不足，或无合格事实，不把返回热帖等同于事实新增；五空对象跳过后两阶段。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:vrt:hotspots",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$VRT since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "cashtag增量查询已完成；Grok真实views样本排名，普通观点不作事实证明；营销与正文不足项另存。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:tsm",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$TSM since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "semantic TSM packaging manufacturing"
+      ],
+      "note": "事实查询完成；有候选但一手/新增证据不足，或无合格事实，不把返回热帖等同于事实新增；五空对象跳过后两阶段。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "tickers:tsm:hotspots",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$TSM since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "cashtag增量查询已完成；Grok真实views样本排名，普通观点不作事实证明；营销与正文不足项另存。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "tickers:nvda",
+      "key": "candidate-2114131343659708750",
+      "status": "pending",
+      "reason": "定向追源与独立反证已完成；关键新数字/许可状态/采访归因未获当期原始证据，不发布新事实卡。",
+      "url": "https://x.com/VIN_786/status/2114131343659708750"
+    },
+    {
+      "unit": "tickers:mu",
+      "key": "candidate-2114051018510287340",
+      "status": "pending",
+      "reason": "定向追源与独立反证已完成；关键新数字/许可状态/采访归因未获当期原始证据，不发布新事实卡。",
+      "url": "https://x.com/aleabitoreddit/status/2114051018510287340"
+    }
+  ]
+}

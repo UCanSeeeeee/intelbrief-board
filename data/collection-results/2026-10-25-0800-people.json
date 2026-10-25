@@ -1,0 +1,79 @@
+{
+  "runId": "2026-10-25-0800",
+  "cutoff": "2026-10-25T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "people:elon-musk",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:elonmusk since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "from:elonmusk (xAI OR Tesla OR Optimus OR robot OR battery OR energy OR SpaceX OR Starship OR capital OR funding OR compute OR GPU OR cluster) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "from:elonmusk since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5000",
+        "from:elonmusk Agentic OR agentic since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "from:elonmusk since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5000"
+      ],
+      "note": "查询与热度补位完成，Grok样本非全X覆盖；原文与实际互动均保存。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "people:jensen-huang",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:JensenHuang since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "Jensen Huang (interview OR speech OR keynote OR interview) since:2026-10-24 until:2026-10-25",
+        "(\"Jensen Huang\" OR @JensenHuang) (capex OR \"capital expenditure\" OR demand OR supply OR customer OR roadmap) since:2026-10-24 until:2026-10-25",
+        "from:JensenHuang since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "查询完成；未返回可收录的新候选，后两阶段无需执行，不代表全X无动态。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-24T09:15:20.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:TrumpDailyPosts since:2026-10-24_09:15:20_UTC until:2026-10-25_00:00:00_UTC",
+        "from:POTUS since:2026-10-24_09:15:20_UTC until:2026-10-25_00:00:00_UTC",
+        "from:WhiteHouse since:2026-10-24_09:15:20_UTC until:2026-10-25_00:00:00_UTC",
+        "from:TrumpDailyPosts (AI OR semiconductor OR chip OR power OR energy OR trade OR tariff OR fiscal OR tax OR regulation OR NVIDIA OR Intel) since:2026-10-24_09:15:20_UTC until:2026-10-25_00:00:00_UTC",
+        "from:WhiteHouse OR from:POTUS OR from:TrumpDailyPosts (AI OR chip OR semiconductor OR NVIDIA OR energy OR power OR tariff OR trade) since:2026-10-24_09:15:20_UTC until:2026-10-25_00:00:00_UTC",
+        "from:TrumpDailyPosts OR from:WhiteHouse since:2026-10-24_09:15:20_UTC until:2026-10-25_00:00:00_UTC min_faves:1000"
+      ],
+      "note": "实际查询与补位完成；2条官方热度，运营者评论已排除，缺1不凑。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "people:trillion-leaders",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(from:satyanadella OR from:tim_cook OR from:sundarpichai OR from:ajassy OR from:finkd OR from:zuck) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "semantic: trillion dollar company CEO CTO CFO AI demand capital expenditure supply margin financing commercialization new changes (from_date 2026-10-24 to_date 2026-10-25)",
+        "from:satyanadella OR from:tim_cook OR from:sundarpichai OR from:ajassy OR from:finkd since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC"
+      ],
+      "note": "查询完成；未返回可收录的新候选，后两阶段无需执行，不代表全X无动态。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "people:research-reports",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(from:analyst OR \"Goldman\" OR \"Morgan Stanley\" OR \"JPMorgan\" OR \"Bank of America\" OR \"Citi\" OR \"UBS\" OR \"Wells Fargo\") (NVDA OR AAPL OR MSFT OR GOOGL OR AMZN OR META OR TSLA OR AVGO) (forecast OR \"price target\" OR upgrade OR downgrade OR rating OR \"capital expenditure\" OR capex) since:2026-10-24 until:2026-10-25",
+        "(\"Goldman\" OR \"Morgan Stanley\" OR \"JPMorgan\" OR \"Bank of America\") (NVDA OR MSFT OR GOOGL) (forecast OR rating OR capex) since:2026-10-24 until:2026-10-25",
+        "(from:GoldmanSachs OR from:MorganStanley OR from:jpmorgan OR from:UBS OR from:BankofAmerica OR from:Nomura) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "x_thread_fetch 2113993917582413993"
+      ],
+      "note": "查询与热度补位完成，Grok样本非全X覆盖；原文与实际互动均保存。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    }
+  ],
+  "pending": []
+}

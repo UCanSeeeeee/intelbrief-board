@@ -1,0 +1,163 @@
+{
+  "runId": "2026-10-25-0800",
+  "cutoff": "2026-10-25T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "news:market-focus",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(Fed OR FOMC OR \"interest rate\" OR Powell OR \"rate cut\" OR inflation OR CPI) (stock OR market OR equity OR nasdaq OR sp500) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "(AI OR Nvidia OR NVDA OR \"OpenAI\" OR Microsoft OR Google OR Meta OR Amazon) (stock OR market OR earnings OR guidance) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "(oil OR energy OR OPEC OR \"Middle East\" OR Ukraine OR China OR tariff OR geopolitics) (market OR stock OR price) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "(VIX OR volatility OR \"market structure\" OR liquidity OR \"credit spread\" OR bond OR treasury) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC",
+        "US stock market focus macro policy interest rates credit geopolitics energy AI companies market structure new events",
+        "(\"Fed\" OR FOMC OR Powell) (meeting OR decision OR cut OR hike) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+        "(Nvidia OR NVDA OR \"AI capex\" OR hyperscaler) (earnings OR guidance OR spend) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:10",
+        "(oil OR crude OR \"Brent\" OR WTI) (price OR surge OR attack OR Houthi OR Middle East) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+        "(\"next week\" OR Wednesday OR \"Oct 28\" OR \"October 28\") (Fed OR FOMC OR earnings OR MSFT OR GOOGL OR AMZN) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:10",
+        "(Hormuz OR Iran OR \"Middle East\" OR carrier) (oil OR market OR Fed) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:10",
+        "(\"market structure\" OR VIX OR \"credit spreads\" OR liquidity OR \"treasury yield\") since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+        "Friday market close AI doubts oil surge Fed meeting next week earnings hyperscalers",
+        "(\"10-year\" OR \"10 year\" OR \"treasury yield\" OR \"credit spread\") (Fed OR oil OR AI) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5",
+        "Kalshi_Finance"
+      ],
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "news:semiconductors",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "x_keyword_search (HBM OR high bandwidth OR packaging OR CoWoS OR TSMC OR ASML OR advanced packaging OR foundry) (order OR capacity OR yield OR delivery OR ASP OR demand OR shortage) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (HBM OR CoWoS OR DRAM contract OR memory price) (sold out OR shortage OR ASP OR yield) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:3 mode:Latest",
+        "x_semantic_search semiconductor HBM advanced packaging CoWoS foundry capacity yield ASP demand change from_date:2026-10-24 to_date:2026-10-25"
+      ],
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "news:power",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "x_keyword_search (data center OR datacenter) (power OR grid OR transformer OR turbine OR cooling OR interconnection OR permit) (contract OR bottleneck OR delay OR cost) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:3 mode:Latest",
+        "x_keyword_search (transformer OR gas turbine OR interconnection OR data center power) (lead time OR delay OR backlog OR permit OR bottleneck) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:3 mode:Latest",
+        "x_semantic_search data center power grid transformer gas turbine interconnection cooling bottleneck cost from_date:2026-10-24 to_date:2026-10-25"
+      ],
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "news:ai-adoption",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "x_keyword_search (AI OR agent OR cloud software OR robot OR adoption) (revenue OR renewal OR paid OR margin OR cash flow OR unit cost OR monetization) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_semantic_search AI adoption enterprise revenue margin cash flow agent robot paid renewal from_date:2026-10-24 to_date:2026-10-25",
+        "x_keyword_search (Stuut OR order to cash OR DSO) (AI OR agent) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC mode:Latest"
+      ],
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "news:capital-cost",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "x_keyword_search (Treasury OR 10-year OR long-end OR yield OR debt OR refinancing OR cost of capital) (AI OR capex OR hyperscaler) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (CoreWeave OR CRWV) (debt OR CDS OR credit OR refinancing OR upfront) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest"
+      ],
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "news:geopolitics",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "x_keyword_search (tariff OR sanction OR export control OR Huawei OR China chips OR shipping OR Hormuz OR physical supply) (cost OR price OR delay OR shortage) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (oil OR crude OR Brent) (Hormuz OR Iran OR carrier OR surge) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest"
+      ],
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    },
+    {
+      "unit": "news:market-structure",
+      "start": "2026-10-24T07:42:00.000Z",
+      "end": "2026-10-25T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "x_keyword_search (concentration OR breadth OR leveraged ETF OR SOXL OR TQQQ OR hedge OR liquidity OR VIX OR index weight) (AI OR Nasdaq OR market) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest",
+        "x_keyword_search (VXN OR Nasdaq vol OR vol spread) since:2026-10-24_07:42:00_UTC until:2026-10-25_00:00:00_UTC min_faves:5 mode:Latest"
+      ],
+      "note": "实际查询已完成；Grok样本与semantic返回仍需逐帖时间核对；候选证据不足或超窗不发布，不表示搜尽X。",
+      "evidenceFile": "data/collection-runs/2026-10-25-0800.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "news:market-focus",
+      "key": "candidate-2114074897366557052",
+      "status": "pending",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。",
+      "url": "https://x.com/Coffee__Capital/status/2114074897366557052"
+    },
+    {
+      "unit": "news:market-focus",
+      "key": "candidate-2114102057967755603",
+      "status": "pending",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。",
+      "url": "https://x.com/AndrewCFollett/status/2114102057967755603"
+    },
+    {
+      "unit": "news:semiconductors",
+      "key": "candidate-2113994170331214296",
+      "status": "pending",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。",
+      "url": "https://x.com/pequityresearch/status/2113994170331214296"
+    },
+    {
+      "unit": "news:semiconductors",
+      "key": "candidate-2114078881762439377",
+      "status": "pending",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。",
+      "url": "https://x.com/HyperTechInvest/status/2114078881762439377"
+    },
+    {
+      "unit": "news:power",
+      "key": "candidate-2114084071165100262",
+      "status": "pending",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。",
+      "url": "https://x.com/glocalinvestor/status/2114084071165100262"
+    },
+    {
+      "unit": "news:capital-cost",
+      "key": "candidate-2114123508859257259",
+      "status": "pending",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。",
+      "url": "https://x.com/The_AI_Investor/status/2114123508859257259"
+    },
+    {
+      "unit": "news:geopolitics",
+      "key": "candidate-2114119983760314551",
+      "status": "pending",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。",
+      "url": "https://x.com/NSTRIKE1231/status/2114119983760314551"
+    },
+    {
+      "unit": "news:market-structure",
+      "key": "candidate-2114137872857006405",
+      "status": "pending",
+      "reason": "追源及独立反证完成，缺原始数字口径/时间/身份或仅定性观点；保留待核，不作为新增事实发布。",
+      "url": "https://x.com/spotgamma/status/2114137872857006405"
+    }
+  ]
+}

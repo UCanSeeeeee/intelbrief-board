@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24T08:13:25.347Z",
-  "cutoff": "2026-10-24T15:42:00+08:00",
+  "updatedAt": "2026-10-25T00:48:21.507Z",
+  "cutoff": "2026-10-25T08:00:00+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,26 +9,26 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "已查官方及相关讨论、逐新候选追源与反证；仅采用X可回查最小事实，性能与报告全文未独立核对。",
-        "cutoff": "2026-10-24T15:42:00+08:00"
+        "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
+        "cutoff": "2026-10-25T08:00:00+08:00"
       },
       {
         "id": "anthropic",
         "status": "partial",
-        "note": "已查官方及相关讨论、逐新候选追源与反证；仅采用X可回查最小事实，性能与报告全文未独立核对。",
-        "cutoff": "2026-10-24T15:42:00+08:00"
+        "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
+        "cutoff": "2026-10-25T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
         "status": "partial",
-        "note": "已查官方及相关讨论、逐新候选追源与反证；仅采用X可回查最小事实，性能与报告全文未独立核对。",
-        "cutoff": "2026-10-24T15:42:00+08:00"
+        "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
+        "cutoff": "2026-10-25T08:00:00+08:00"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "已查官方及相关讨论、逐新候选追源与反证；仅采用X可回查最小事实，性能与报告全文未独立核对。",
-        "cutoff": "2026-10-24T15:42:00+08:00"
+        "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
+        "cutoff": "2026-10-25T08:00:00+08:00"
       }
     ]
   },
@@ -54,11 +54,11 @@
       "weeklyRanks": {
         "openai": 1
       },
-      "eventTimeNote": "历史事件分别为2026年9月20日与10月1日；10月23日披露，具体事件时刻未知。",
-      "excerpt": "We’ve removed live internet access for all frontier models during training and built an offline world for them to use instead—a cached version of the web.",
+      "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
       "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-      "people": []
+      "eventTimeNote": "历史事件分别为2026年9月20日与10月1日；10月23日披露，具体事件时刻未知。",
+      "excerpt": "We’ve removed live internet access for all frontier models during training and built an offline world for them to use instead—a cached version of the web."
     },
     {
       "eventKey": "ai-others-kimi-k31-pro-launch-20261023",
@@ -81,11 +81,11 @@
       "weeklyRanks": {
         "ai-others": 1
       },
-      "eventTimeNote": "10月23日公告称产品及API已上线；权重开放是最迟11月4日的计划，具体上线时刻未给出。",
-      "excerpt": "Kimi K3.1 Pro and K3.1 Pro Highspeed are now live on Kimi Work, Kimi Code, and the Kimi API. Open weights by Nov 4, 2026.",
+      "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
       "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-      "people": []
+      "eventTimeNote": "10月23日公告称产品及API已上线；权重开放是最迟11月4日的计划，具体上线时刻未给出。",
+      "excerpt": "Kimi K3.1 Pro and K3.1 Pro Highspeed are now live on Kimi Work, Kimi Code, and the Kimi API. Open weights by Nov 4, 2026."
     },
     {
       "eventKey": "goog-ai-gemini4-argon-3d-demo-20261023",
@@ -108,11 +108,11 @@
       "weeklyRanks": {
         "goog-ai": 1
       },
-      "eventTimeNote": "演示于10月23日发布，制作过程实际时间未披露。",
-      "excerpt": "Using a single Nano Banana image and Blender MCP, Gemini 4 Argon built a 3D Gothic cathedral in @Antigravity. It iterates on the geometry, textures, and lighting to create the finished scene.",
+      "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
       "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-      "people": []
+      "eventTimeNote": "演示于10月23日发布，制作过程实际时间未披露。",
+      "excerpt": "Using a single Nano Banana image and Blender MCP, Gemini 4 Argon built a 3D Gothic cathedral in @Antigravity. It iterates on the geometry, textures, and lighting to create the finished scene."
     },
     {
       "eventKey": "anthropic-aisi-mythos5-analysis-20261023",
@@ -135,35 +135,11 @@
       "weeklyRanks": {
         "anthropic": 1
       },
-      "eventTimeNote": "原事件在2026年8月；本次分析于10月23日公布，原事件具体日期未知。",
-      "excerpt": "In August, @AISecurityInst reported an incident where Claude Mythos 5 took unauthorized actions on the internet during AISI’s testing of its cyber capabilities. We've now produced a further analysis of this incident, to better understand the model's alignment properties.",
+      "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
       "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-      "people": []
-    },
-    {
-      "eventKey": "deepseek-v41-flash-search-fetch-2026-10-17",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "DeepSeek发布V4.1-Flash-1017与Search/Fetch API（七天重点）",
-      "fact": "DeepSeek官方于10月17日发布V4.1-Flash-1017，称模型已在网页、App和API上线。同一官方线程宣布Search与Fetch API开放；帖文列每个端点每1000次调用0.75美元，并称通过DeepSeek Harness、Claude Code、Codex的服务端工具调用对DeepSeek API用户暂时免费，计费自10月31日16:00 UTC开始。速度、输出长度与跑分提升是厂商宣称，未作独立实测。本次原始发布时间早于24小时窗口，只收录七天重点。",
-      "whyItMatters": "模型与检索工具的联合供给可能降低Agent应用的接入成本；应分别观察模型可用能力、检索质量、任务成功率及收费后的单位经济，而不是由低价或跑分直接推断付费需求和算力收入。",
-      "counterCase": "暂免只适用于帖文限定的服务端工具调用，并非全部Search/Fetch无限免费。社区另有不可用与故障反馈，但未核验影响范围；官方没有窗口内更正也不代表持续可用性已获验证。性能提升仍是厂商宣称。",
-      "affected": [
-        "开源与中国AI",
-        "Agent检索与网页获取",
-        "AI应用单位成本"
-      ],
-      "author": "DeepSeek (@deepseek_ai)",
-      "publishedAt": "2026-10-17T08:35:54Z",
-      "url": "https://x.com/deepseek_ai/status/2111375640717033777",
-      "verification": "collector-report",
-      "tier": "must-read",
-      "weeklyRanks": {
-        "ai-others": 2
-      },
-      "people": []
+      "eventTimeNote": "原事件在2026年8月；本次分析于10月23日公布，原事件具体日期未知。",
+      "excerpt": "In August, @AISecurityInst reported an incident where Claude Mythos 5 took unauthorized actions on the internet during AISI’s testing of its cyber capabilities. We've now produced a further analysis of this incident, to better understand the model's alignment properties."
     }
   ],
   "retainedItems": [],
@@ -190,11 +166,11 @@
         "weeklyRanks": {
           "openai": 1
         },
-        "eventTimeNote": "历史事件分别为2026年9月20日与10月1日；10月23日披露，具体事件时刻未知。",
-        "excerpt": "We’ve removed live internet access for all frontier models during training and built an offline world for them to use instead—a cached version of the web.",
+        "people": [],
         "firstIncludedAt": "2026-10-24T08:13:25.347Z",
         "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-        "people": []
+        "eventTimeNote": "历史事件分别为2026年9月20日与10月1日；10月23日披露，具体事件时刻未知。",
+        "excerpt": "We’ve removed live internet access for all frontier models during training and built an offline world for them to use instead—a cached version of the web."
       },
       "tabIds": [
         "openai"
@@ -224,11 +200,11 @@
         "weeklyRanks": {
           "ai-others": 1
         },
-        "eventTimeNote": "10月23日公告称产品及API已上线；权重开放是最迟11月4日的计划，具体上线时刻未给出。",
-        "excerpt": "Kimi K3.1 Pro and K3.1 Pro Highspeed are now live on Kimi Work, Kimi Code, and the Kimi API. Open weights by Nov 4, 2026.",
+        "people": [],
         "firstIncludedAt": "2026-10-24T08:13:25.347Z",
         "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-        "people": []
+        "eventTimeNote": "10月23日公告称产品及API已上线；权重开放是最迟11月4日的计划，具体上线时刻未给出。",
+        "excerpt": "Kimi K3.1 Pro and K3.1 Pro Highspeed are now live on Kimi Work, Kimi Code, and the Kimi API. Open weights by Nov 4, 2026."
       },
       "tabIds": [
         "ai-others"
@@ -258,11 +234,11 @@
         "weeklyRanks": {
           "goog-ai": 1
         },
-        "eventTimeNote": "演示于10月23日发布，制作过程实际时间未披露。",
-        "excerpt": "Using a single Nano Banana image and Blender MCP, Gemini 4 Argon built a 3D Gothic cathedral in @Antigravity. It iterates on the geometry, textures, and lighting to create the finished scene.",
+        "people": [],
         "firstIncludedAt": "2026-10-24T08:13:25.347Z",
         "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-        "people": []
+        "eventTimeNote": "演示于10月23日发布，制作过程实际时间未披露。",
+        "excerpt": "Using a single Nano Banana image and Blender MCP, Gemini 4 Argon built a 3D Gothic cathedral in @Antigravity. It iterates on the geometry, textures, and lighting to create the finished scene."
       },
       "tabIds": [
         "goog-ai"
@@ -292,11 +268,11 @@
         "weeklyRanks": {
           "anthropic": 1
         },
-        "eventTimeNote": "原事件在2026年8月；本次分析于10月23日公布，原事件具体日期未知。",
-        "excerpt": "In August, @AISecurityInst reported an incident where Claude Mythos 5 took unauthorized actions on the internet during AISI’s testing of its cyber capabilities. We've now produced a further analysis of this incident, to better understand the model's alignment properties.",
+        "people": [],
         "firstIncludedAt": "2026-10-24T08:13:25.347Z",
         "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-        "people": []
+        "eventTimeNote": "原事件在2026年8月；本次分析于10月23日公布，原事件具体日期未知。",
+        "excerpt": "In August, @AISecurityInst reported an incident where Claude Mythos 5 took unauthorized actions on the internet during AISI’s testing of its cyber capabilities. We've now produced a further analysis of this incident, to better understand the model's alignment properties."
       },
       "tabIds": [
         "anthropic"
