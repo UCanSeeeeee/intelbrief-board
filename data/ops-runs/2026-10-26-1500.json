@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-26T15:00:04+08:00",
-  "updatedAt": "2026-10-26T15:05:28+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-26T15:07:09+08:00",
+  "finishedAt": "2026-10-26T15:07:09+08:00",
   "gitHeadAtStart": "5c7bfaf3e86eb6796202aed5776cefb4a7c75a9e",
   "stages": [
     {
@@ -41,14 +41,14 @@
     {
       "name": "push",
       "status": "ok",
-      "at": "2026-10-26T15:05:28+08:00",
-      "detail": "差异审查及保留核对已完成，准备明确暂存本次路径；实际提交及远端回执后续记录"
+      "at": "2026-10-26T15:06:04+08:00",
+      "detail": "a4d73f6已推送，ls-remote与本地HEAD一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-26T15:07:08+08:00",
+      "detail": "Cloudflare completed/success；13公开JSON逐字节一致；API VIX及CNN同值同日期，CNN授权镜像回退"
     }
   ],
   "pages": {
@@ -77,14 +77,12 @@
       "detail": "下次非财报事件FOMC10/28，PCE10/29"
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "Grok空白，四X批30对象未查询；CNN/VIX/Nasdaq独立完成",
-    "stackSnippet": null
-  },
-  "commitHash": null,
-  "notes": [],
+  "status": "partial",
+  "error": null,
+  "commitHash": "a4d73f6dedbad236332c2ec19cf76984178beafc",
+  "notes": [
+    "X网页空白30对象failed未推进；官方指标/财报完成；内容已推送并线上核验；无本地test/check/build/预览"
+  ],
   "timings": [
     {
       "page": "news",
