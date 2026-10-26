@@ -8167,7 +8167,7 @@
     }
   ],
   "publication": {
-    "status": "local-artifacts-ready",
+    "status": "verified",
     "preparedAt": "2026-10-26T00:49:40.898Z",
     "note": "以已保存结果合并，非重新采集；发布函数完成数据契约，未运行test/check/build/预览。",
     "counts": {
@@ -8189,7 +8189,267 @@
       "oldEventContentChanges": 0,
       "note": "过期状态按既定保留期转换，旧卡正文原样留存；新精选不人为续期旧消息。"
     },
-    "provenanceNote": "公开载荷collectionMode/collectionUnits同步本次真实对象窗口；内部pending清单仍以审计/progress为准。"
+    "provenanceNote": "公开载荷collectionMode/collectionUnits同步本次真实对象窗口；内部pending清单仍以审计/progress为准。",
+    "contentCommit": "84e2a48d3fa71207b3a0bafb86ddc6a1b2cf3644",
+    "remoteHeadVerified": "84e2a48d3fa71207b3a0bafb86ddc6a1b2cf3644",
+    "verifiedAt": "2026-10-26T01:00:00.982445+00:00",
+    "cloudflare": {
+      "checkRunId": 121344545632,
+      "status": "completed",
+      "conclusion": "success",
+      "completedAt": "2026-10-26T00:54:39Z",
+      "deploymentUrl": "https://dash.cloudflare.com/?to=/654fc092fc71c4dc81184933d5b808b9/pages/view/intelbrief-board/f4db20f9-47cb-403b-9d8d-af951843baed"
+    },
+    "verification": {
+      "checkedAt": "2026-10-26T00:59:21.887Z",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-26-0800.json",
+          "checkedAt": "2026-10-26T00:58:24.101Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "d93c82c2065b68113b0dbdaa2bc93ad81f07c07a6569b7094c17e180769e9b32",
+          "renderedChars": 29913
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "checkedAt": "2026-10-26T00:58:24.595Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "112f1b226d0d6cc2d11a9588beeae5ff25ce7e67f17387941a063fbc0f65c2b6",
+          "renderedChars": 1079
+        },
+        {
+          "path": "data/reading-board.json",
+          "checkedAt": "2026-10-26T00:59:11.284Z",
+          "method": "normal-browser-rendered-public-json-chunked",
+          "match": true,
+          "canonicalSha256": "c928a5ffae5d39caefd8cdfa639b888445bd3841a52a22150c76e478dea3fceb",
+          "renderedChars": 1181352,
+          "chunkCount": 20,
+          "note": "DOM正文完整分片，避免工具单次200k字符返回上限；不是服务返回损坏。"
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "checkedAt": "2026-10-26T00:58:31.144Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "3d8a4866d665d6115ab58c65f628e24747de1c476503e0004e0358f217580553",
+          "renderedChars": 69310
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "checkedAt": "2026-10-26T00:59:12.394Z",
+          "method": "normal-browser-rendered-public-json-chunked",
+          "match": true,
+          "canonicalSha256": "4755403a8108d159e305d2eac1000f7cdb44d5f901bb722cc73754c18fb6b533",
+          "renderedChars": 271217,
+          "chunkCount": 5,
+          "note": "DOM正文完整分片，避免工具单次200k字符返回上限；不是服务返回损坏。"
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "checkedAt": "2026-10-26T00:58:50.167Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "43fb746c3a08e78c13de5fe04a1d1916c48deebac6f1cf8cc83285ad7368e09e",
+          "renderedChars": 23854
+        },
+        {
+          "path": "data/journal-learning.json",
+          "checkedAt": "2026-10-26T00:58:50.839Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "e1d2c0f480625dc920e87f67c489202503ba7fe5f9b060768777a5226c3eb2fc",
+          "renderedChars": 56785
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "checkedAt": "2026-10-26T00:58:51.042Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "5f2f9eca48ba22a1ad6c86ab5e55fa333e316d7d278bb0d8e823ae8493165f3a",
+          "renderedChars": 50283
+        },
+        {
+          "path": "data/learning.json",
+          "checkedAt": "2026-10-26T00:58:51.225Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "e3e3f1da03bd79a4c1189f5a1d6bc02cf30198bac1f7c07f5792ee603d7415e1",
+          "renderedChars": 18649
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "checkedAt": "2026-10-26T00:58:51.849Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "b623825b674df62779372f98f7fe2d0a50ea90e59fe94d33565231fb3caa649f",
+          "renderedChars": 112582
+        },
+        {
+          "path": "data/macro-events.json",
+          "checkedAt": "2026-10-26T00:59:01.502Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "4b5412a627ddee56b0154eba361cbd18fc0acb1c0cf6b79c84ac42b997e6b88b",
+          "renderedChars": 49206
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "checkedAt": "2026-10-26T00:59:01.948Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "c2c478247c1fe976209d14bdfe53a9bd8e224650abd67b2056b7a1edeaf8d28d",
+          "renderedChars": 663
+        },
+        {
+          "path": "data/market-volatility.json",
+          "checkedAt": "2026-10-26T00:59:02.479Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "89cf0ae97ff556af810af23b013089438d23bf5d398d13377eb4078f5141d2b5",
+          "renderedChars": 414
+        },
+        {
+          "path": "config/learning.json",
+          "checkedAt": "2026-10-26T00:59:02.678Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "4f69175135d0a8cc8fdef6a751c675f4b5ee00f3e2d29ab560d95d492403595d",
+          "renderedChars": 2421
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "checkedAt": "2026-10-26T00:59:02.837Z",
+          "method": "normal-browser-rendered-public-json",
+          "match": true,
+          "canonicalSha256": "bf35826d11c47795372edeb9f6331b2b4611216193b23ee07bd704fb04214770",
+          "renderedChars": 5658
+        }
+      ],
+      "apiVix": {
+        "method": "normal-browser-read-only-api",
+        "checkedAt": "2026-10-26T00:59:21.887Z",
+        "body": {
+          "schemaVersion": 1,
+          "id": "cboe-vix",
+          "value": 19.45,
+          "asOfDate": "2026-10-23",
+          "quoteKind": "close",
+          "previousClose": 19.03,
+          "fetchedAt": "2026-10-26T00:59:21.818Z",
+          "source": {
+            "name": "Cboe",
+            "url": "https://www.cboe.com/tradable-products/vix",
+            "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          },
+          "retrieval": {
+            "status": "ok"
+          }
+        }
+      }
+    },
+    "initialDirectReadAttempt": {
+      "checkedAt": "2026-10-26T00:56:49.413678+00:00",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-26-0800.json",
+          "checkedAt": "2026-10-26T00:56:46.610433+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "checkedAt": "2026-10-26T00:56:46.610817+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/reading-board.json",
+          "checkedAt": "2026-10-26T00:56:46.610905+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "checkedAt": "2026-10-26T00:56:46.610970+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "checkedAt": "2026-10-26T00:56:47.094427+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "checkedAt": "2026-10-26T00:56:47.097791+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/journal-learning.json",
+          "checkedAt": "2026-10-26T00:56:47.122425+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "checkedAt": "2026-10-26T00:56:47.126013+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/learning.json",
+          "checkedAt": "2026-10-26T00:56:47.544443+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "checkedAt": "2026-10-26T00:56:47.548784+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/macro-events.json",
+          "checkedAt": "2026-10-26T00:56:47.568172+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "checkedAt": "2026-10-26T00:56:47.603232+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "data/market-volatility.json",
+          "checkedAt": "2026-10-26T00:56:47.962958+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "config/learning.json",
+          "checkedAt": "2026-10-26T00:56:47.994088+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "checkedAt": "2026-10-26T00:56:48.001635+00:00",
+          "match": false,
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "apiVix": {
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "verificationNote": "本机urllib全部403；正常IAB浏览器可读公开JSON。15资源按完整解析内容/顺序一致性核对并保存canonical SHA256，不冒称字节级比较。大文件第一次触及工具200k字符上限，随后DOM分片完整读取匹配，不是服务器JSON损坏。/api/vix只读正常返回19.45与2026-10-23。",
+    "receiptCommit": "后续提交本回执，不重新采集或修改公开内容；最终hash见Git及automation memory。"
   },
   "preservedUntracked": [
     "data/collection-results/2026-10-23-1500-news.json",
@@ -8319,5 +8579,12 @@
     ],
     "sourcePlan": "先Grok发现；正刊/Crossref/PubMed及合法作者机构版本核验样本、方法、统计、更正复现。非X例外只用于论文。",
     "createdAt": "2026-10-26T00:33:30.624729+00:00"
+  },
+  "status": "partial",
+  "finishedAt": "2026-10-26T01:00:00.982445+00:00",
+  "cleanup": {
+    "temporaryResearchTabsClosed": 5,
+    "temporaryVerificationTabsClosed": 1,
+    "userTabsModified": false
   }
 }

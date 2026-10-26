@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-26T08:04:43+08:00",
-  "updatedAt": "2026-10-26T08:54:13+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-26T09:00:01+08:00",
+  "finishedAt": "2026-10-26T09:00:01+08:00",
   "gitHeadAtStart": "85a118364ff3048cd0ae427e18683c6944c84581",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-26T09:00:01+08:00",
+      "detail": "内容84e2a48已推送，远端master完整SHA一致；无强推。"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-26T09:00:01+08:00",
+      "detail": "Cloudflare completed/success；正常浏览器15公开JSON完整内容一致，VIX19.45/10月23日；初始urllib403及工具截断未冒充成功。"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "本地日程无到期/明确过时触发，不广查。"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "84e2a48d3fa71207b3a0bafb86ddc6a1b2cf3644",
+  "notes": [
+    "所有批次关闭并已部署核验；30对象截止成功接续。内容不足按证据留缺口，Science缺2；非请求/部署失败。未运行本地test/check/build或预览。"
+  ],
   "timings": [
     {
       "page": "news",
