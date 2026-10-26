@@ -3,31 +3,31 @@
   "updatedAt": "2026-10-26T00:49:40.898Z",
   "cutoff": "2026-10-26T08:00:00+08:00",
   "source": "X only",
-  "status": "complete",
+  "status": "failed",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "complete",
-        "note": "窗口内仅普通账号二次讨论既有事项（如11月20日起模型路由器/网关需OpenAI批准方可转售、停止对前沿模型进行实时互联网训练等，均非当日新发布或官方确认），无官方账号或一手产品/API/企业/算力/安全监管增量。",
+        "status": "failed",
+        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
         "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "complete",
-        "note": "窗口内帖子均为普通账号对既有事项的转述或评论（Claude Platform于Google Cloud一般可用、Claude Tag Management API beta、Enterprise统一Chat+Cowork等，公告时间均早于窗口），无当日官方新发布、可用性变更或计费落地确认。",
+        "status": "failed",
+        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
         "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "complete",
-        "note": "窗口内可见普通账号讨论TorchTPU开源（PyTorch原生TPU后端，便于model.to(\"tpu\")）、Gemini 4 Argon早期token用量与容量约束、AI Studio计费预付调整等，均为既有事件的后续提及或二次信息，无当日官方产品发布、开发者可用性/计费新变化或采用实证一手确认。已排除Alphabet纯股价财报。",
+        "status": "failed",
+        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
         "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "complete",
-        "note": "DeepSeek/MiniMax出口登记与海外许可相关讨论均为对Reuters等既有报道（约10月23日）的转述，无窗口内官方新进展确认，按要求不重复追查融资等无明确新进展事项。无其他较小实验室/政策/开源一手增量。",
+        "status": "failed",
+        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
         "cutoff": "2026-10-26T08:00:00+08:00"
       }
     ]
@@ -537,5 +537,7 @@
       "cutoff": "2026-10-26T00:00:00.000Z",
       "needsQuery": true
     }
-  ]
+  ],
+  "lastAttemptAt": "2026-10-26T07:04:49.604Z",
+  "attemptedCutoff": "2026-10-26T15:00:00+08:00"
 }
