@@ -1,44 +1,280 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T00:48:21.507Z",
-  "cutoff": "2026-10-25T08:00:00+08:00",
+  "updatedAt": "2026-10-26T00:49:40.898Z",
+  "cutoff": "2026-10-26T08:00:00+08:00",
   "source": "X only",
-  "status": "partial",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
-        "status": "partial",
-        "note": "查询与热度补位完成，Grok样本非全X覆盖；原文与实际互动均保存。",
-        "cutoff": "2026-10-25T08:00:00+08:00"
+        "status": "complete",
+        "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+        "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "jensen-huang",
-        "status": "partial",
-        "note": "查询完成；未返回可收录的新候选，后两阶段无需执行，不代表全X无动态。",
-        "cutoff": "2026-10-25T08:00:00+08:00"
+        "status": "complete",
+        "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+        "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "donald-trump",
-        "status": "partial",
-        "note": "实际查询与补位完成；2条官方热度，运营者评论已排除，缺1不凑。",
-        "cutoff": "2026-10-25T08:00:00+08:00"
+        "status": "complete",
+        "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+        "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "trillion-leaders",
-        "status": "partial",
-        "note": "查询完成；未返回可收录的新候选，后两阶段无需执行，不代表全X无动态。",
-        "cutoff": "2026-10-25T08:00:00+08:00"
+        "status": "complete",
+        "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+        "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "research-reports",
-        "status": "partial",
-        "note": "查询与热度补位完成，Grok样本非全X覆盖；原文与实际互动均保存。",
-        "cutoff": "2026-10-25T08:00:00+08:00"
+        "status": "complete",
+        "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+        "cutoff": "2026-10-26T08:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "people-2114480131989270983",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse发布反对社会主义的政治表态",
+      "fact": "WhiteHouse表示，今天的决定会成为明天的后果，并称社会主义将带来美国无法承受的未来。",
+      "whyItMatters": "这是政治立场表达，未披露具体法律、行政措施或产业订单。",
+      "counterCase": "不把立场宣传升级为已签署或已执行政策；未推测附带视频内容。",
+      "affected": [
+        "美国政策表达"
+      ],
+      "author": "WhiteHouse @WhiteHouse",
+      "publishedAt": "2026-10-25T22:12:03Z",
+      "url": "https://x.com/WhiteHouse/status/2114480131989270983",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+      "originalText": "Today’s decisions become tomorrow’s consequences. \n\nSocialism leads to a dark future America simply cannot afford.",
+      "excerpt": "Today’s decisions become tomorrow’s consequences. \n\nSocialism leads to a dark future America simply cannot afford.",
+      "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+      "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 3890,
+        "reposts": 1075,
+        "replies": 615,
+        "quotes": 64,
+        "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+        "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "people-2114462416721633501",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk称SpaceX不收购新云服务商",
+      "fact": "Elon Musk回复收购讨论时表示：“SpaceX不收购任何新云服务商。没有意义。”这是他当时对资本配置路径的明确表态。",
+      "whyItMatters": "这削弱了把新云行业整合直接解释为SpaceX收购需求的依据；融资与GPU采购仍需分别观察。",
+      "counterCase": "声明只反映当时立场，未披露董事会决议或未来资本配置约束；不能推为永久承诺。",
+      "affected": [
+        "SpaceX",
+        "新云服务商"
+      ],
+      "author": "Elon Musk @elonmusk",
+      "publishedAt": "2026-10-25T21:01:39Z",
+      "url": "https://x.com/elonmusk/status/2114462416721633501",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 2
+      },
+      "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+      "originalText": "SpaceX is not buying any neoclouds. Pointless.",
+      "excerpt": "SpaceX is not buying any neoclouds. Pointless.",
+      "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+      "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+      "selection": "rule",
+      "engagement": {
+        "likes": 1555,
+        "reposts": 141,
+        "replies": 237,
+        "quotes": 97,
+        "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+        "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "people-2114442930891206870",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk转引俄乌战争视频并感叹仍在继续",
+      "fact": "Elon Musk转引一段与俄乌战争有关的视频，并写下“仍在继续……”；可见上下文围绕战争与伤亡。",
+      "whyItMatters": "反映他的公开表达，没有提供新的停火协议或可执行政策。",
+      "counterCase": "不从短回复或视频介绍推导新增政策、伤亡统计或战争进程。",
+      "affected": [
+        "公开政治表达"
+      ],
+      "author": "Elon Musk @elonmusk",
+      "publishedAt": "2026-10-25T19:44:13Z",
+      "url": "https://x.com/elonmusk/status/2114442930891206870",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+      "originalText": "And still it continues …",
+      "excerpt": "And still it continues …",
+      "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+      "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 11787,
+        "reposts": 1893,
+        "replies": 1580,
+        "quotes": 115,
+        "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+        "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "people-2114434646914068862",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk称SpaceX完成400亿美元GPU债务融资，并补充到货与债务性质",
+      "fact": "Elon Musk称SpaceX已完成400亿美元用于GPU的债务融资，并将融资能力归因于投资级信用及Starlink、发射业务收入。他随后补充，这主要是callable debt，GPU将在Q1与Q2到达，对本季度不是重大因素；原帖未注明这两个季度的年份，也未披露已支用比例、GPU数量或完整条款。",
+      "whyItMatters": "这为算力采购提供一项当事人披露的融资线索，也提示债权人可能区分独立经营收入与依赖AI项目的现金流。对GPU供应商的实际收入仍要经过额度支用、订单与交付；不能把400亿美元融资规模直接计成当期芯片销售。",
+      "counterCase": "交易金额与完整条款尚无银行或正式文件独立确认；callable的具体法律与支用含义不作推定。Musk关于200多家新云公司将大量退出的说法是预测；反向检索返回其他公司融资的二手线索，亦未独立核实，不能推断全行业融资关闭。",
+      "affected": [
+        "AI算力供应链",
+        "GPU供应商",
+        "新云服务商融资"
+      ],
+      "author": "Elon Musk @elonmusk",
+      "publishedAt": "2026-10-25T19:11:18Z",
+      "url": "https://x.com/elonmusk/status/2114434646914068862",
+      "verification": "collector-report",
+      "tier": "must-read",
+      "weeklyRanks": {
+        "elon-musk": 1
+      },
+      "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+      "originalText": "Pretty much. \n\nAs of the past few weeks, debt markets have almost entirely shut off access to money for any company that doesn’t have substantial revenue independent of AI data centers. \n\nSpaceX closed $40B of debt for GPUs, but we’re investment grade and have Starlink & launch revenue.\n\nThat means the 200+ neoclouds are going to see guppy-level death and consolidation. Some will make it through, but not many.",
+      "excerpt": "Pretty much. \n\nAs of the past few weeks, debt markets have almost entirely shut off access to money for any company that doesn’t have substantial revenue independent of AI data centers. \n\nSpaceX closed $40B of debt for GPUs, but we’re investment grade and have Starlink & launch revenue.\n\nThat means the 200+ neoclouds are going to see guppy-level death and consolidation. Some will make it through, but not many.",
+      "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+      "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+      "selection": "rule",
+      "engagement": {
+        "likes": 20622,
+        "reposts": 1927,
+        "replies": 1085,
+        "quotes": 1147,
+        "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+        "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "people-2114394551158722793",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse发布非法移民人口下降的主张",
+      "fact": "WhiteHouse发帖称，自Donald Trump上任以来，非法移民人口已减少超过230万。",
+      "whyItMatters": "反映白宫的政策宣传重点，帖子未列出具体新增执行措施。",
+      "counterCase": "保留为官方账号的主张；未取得支持该数字的独立统计口径，不能当成已核实人口变动。",
+      "affected": [
+        "美国移民政策"
+      ],
+      "author": "WhiteHouse @WhiteHouse",
+      "publishedAt": "2026-10-25T16:31:59Z",
+      "url": "https://x.com/WhiteHouse/status/2114394551158722793",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+      "originalText": "The illegal immigrant population is collapsing. 🇺🇸 Down 2.3 MILLION+ since President Trump took office.",
+      "excerpt": "The illegal immigrant population is collapsing. 🇺🇸 Down 2.3 MILLION+ since President Trump took office.",
+      "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+      "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 20141,
+        "reposts": 3180,
+        "replies": 1953,
+        "quotes": 257,
+        "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+        "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
+    {
+      "eventKey": "people-2114184998651822094",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk预告长按点赞发送1美元的X Money功能",
+      "fact": "Elon Musk表示，正在增加长按点赞、通过X Money向对方发送1美元的功能。",
+      "whyItMatters": "这是产品功能预告，尚不能据此判断开放范围、使用量或收入。",
+      "counterCase": "发言不证明功能已经全面开放或形成收入。",
+      "affected": [
+        "X Money"
+      ],
+      "author": "Elon Musk @elonmusk",
+      "publishedAt": "2026-10-25T02:39:17Z",
+      "url": "https://x.com/elonmusk/status/2114184998651822094",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+      "originalText": "We’re adding long press on like to send someone $1 via 𝕏 Money",
+      "excerpt": "We’re adding long press on like to send someone $1 via 𝕏 Money",
+      "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+      "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 151726,
+        "reposts": 8500,
+        "replies": 11093,
+        "quotes": 5401,
+        "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+        "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
     {
       "eventKey": "people-2114074592990150788",
       "tabIds": [
@@ -58,12 +294,18 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "elon-musk": 1
+        "elon-musk": 3
       },
-      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-      "excerpt": "Starlink V3, which only just started launching, will have ~100 times more bandwidth than the current V2 system",
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-25T00:48:21.507Z",
       "lastMaterialAt": "2026-10-25T00:48:21.507Z",
+      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
+      "excerpt": "Starlink V3, which only just started launching, will have ~100 times more bandwidth than the current V2 system",
       "selection": "rule",
       "engagement": {
         "likes": 4424,
@@ -73,246 +315,7 @@
         "views": 92806,
         "capturedAt": "2026-10-25T00:16:55.504Z",
         "source": "Grok X工具返回；本机读取记录时刻，非X提供的抓取时刻"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "people-2114065201939034225",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 关注 Starlink 在玻利维亚的使用",
-      "fact": "Elon Musk 转引相关视频，并写下“Starlink in Bolivia!”，表达对当地使用 Starlink 的关注。",
-      "whyItMatters": "该互动提供了地域拓展线索，但没有给出覆盖范围、用户数或收入。",
-      "counterCase": "这项表态不构成已核实的业务量或政策效果。",
-      "affected": [
-        "SpaceX",
-        "卫星互联网"
-      ],
-      "author": "Elon Musk @elonmusk",
-      "publishedAt": "2026-10-24T18:43:16Z",
-      "url": "https://x.com/elonmusk/status/2114065201939034225",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-      "excerpt": "Starlink in Bolivia! ❤️🇧🇴",
-      "firstIncludedAt": "2026-10-25T00:48:21.507Z",
-      "lastMaterialAt": "2026-10-25T00:48:21.507Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 10388,
-        "reposts": 1309,
-        "replies": 803,
-        "quotes": 93,
-        "views": 1088977,
-        "capturedAt": "2026-10-25T00:16:55.504Z",
-        "source": "Grok X工具返回；本机读取记录时刻，非X提供的抓取时刻"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "people-2114064620411666919",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 谈政治群体认同与判断",
-      "fact": "Elon Musk 认为，政治上的群体认同常让人难以看到己方的错误或其他群体的善行。",
-      "whyItMatters": "这是他对群体判断偏差的观点表达，没有披露新的企业经营决策。",
-      "counterCase": "这项表态不构成已核实的业务量或政策效果。",
-      "affected": [
-        "SpaceX",
-        "卫星互联网"
-      ],
-      "author": "Elon Musk @elonmusk",
-      "publishedAt": "2026-10-24T18:40:57Z",
-      "url": "https://x.com/elonmusk/status/2114064620411666919",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-      "excerpt": "Politics is incredibly tribal. Most of those in one tribe can see nothing their tribe does wrong or anything good done by another political tribe.",
-      "firstIncludedAt": "2026-10-25T00:48:21.507Z",
-      "lastMaterialAt": "2026-10-25T00:48:21.507Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 26607,
-        "reposts": 2721,
-        "replies": 2534,
-        "quotes": 260,
-        "views": 1870168,
-        "capturedAt": "2026-10-25T00:16:55.504Z",
-        "source": "Grok X工具返回；本机读取记录时刻，非X提供的抓取时刻"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "people-2114063986744275011",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 重申 Starlink 的民用使用边界",
-      "fact": "Elon Musk 重申 Starlink 是民用商业服务，不允许用于进攻性无人机打击，并强调其对乌克兰防务的作用。",
-      "whyItMatters": "该表态讨论服务的使用边界与防务角色，本轮未确认新的服务条款或执行措施。",
-      "counterCase": "这项表态不构成已核实的业务量或政策效果。",
-      "affected": [
-        "SpaceX",
-        "卫星互联网"
-      ],
-      "author": "Elon Musk @elonmusk",
-      "publishedAt": "2026-10-24T18:38:26Z",
-      "url": "https://x.com/elonmusk/status/2114063986744275011",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-      "excerpt": "Correct. Using Starlink, a civilian commercial service, for offensive drone strikes to kill people has never been allowed... Starlink remains critical to the defense of Ukraine...",
-      "firstIncludedAt": "2026-10-25T00:48:21.507Z",
-      "lastMaterialAt": "2026-10-25T00:48:21.507Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 92033,
-        "reposts": 15362,
-        "replies": 5828,
-        "quotes": 1925,
-        "views": 3695777,
-        "capturedAt": "2026-10-25T00:16:55.504Z",
-        "source": "Grok X工具返回；本机读取记录时刻，非X提供的抓取时刻"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "people-2114036686870982681",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk 表示智能体需求增长很快",
-      "fact": "Elon Musk 表示，智能体需求的增长速度超过他此前见过的情况，未提供增长率、订单或算力用量。",
-      "whyItMatters": "这反映其对需求的主观判断，尚无法据此核算相关业务规模。",
-      "counterCase": "这项表态不构成已核实的业务量或政策效果。",
-      "affected": [
-        "SpaceX",
-        "卫星互联网"
-      ],
-      "author": "Elon Musk @elonmusk",
-      "publishedAt": "2026-10-24T16:49:57Z",
-      "url": "https://x.com/elonmusk/status/2114036686870982681",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-      "excerpt": "Agentic demand is growing faster than I’ve ever seen anything grow",
-      "firstIncludedAt": "2026-10-25T00:48:21.507Z",
-      "lastMaterialAt": "2026-10-25T00:48:21.507Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 7416,
-        "reposts": 552,
-        "replies": 537,
-        "quotes": 166,
-        "views": 383023,
-        "capturedAt": "2026-10-25T00:16:55.504Z",
-        "source": "Grok X工具返回；本机读取记录时刻，非X提供的抓取时刻"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "people-2114034684325745077",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse 发布公共安全口号",
-      "fact": "WhiteHouse 官方账号发布“MAKING AMERICA SAFE AGAIN!”的公共安全表态。",
-      "whyItMatters": "正文没有给出具体措施、执行日期或可核算的政策变化。",
-      "counterCase": "这项表态不构成已核实的业务量或政策效果。",
-      "affected": [
-        "美国公共政策"
-      ],
-      "author": "WhiteHouse @WhiteHouse",
-      "publishedAt": "2026-10-24T16:42:00Z",
-      "url": "https://x.com/WhiteHouse/status/2114034684325745077",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-      "excerpt": "MAKING AMERICA SAFE AGAIN!",
-      "firstIncludedAt": "2026-10-25T00:48:21.507Z",
-      "lastMaterialAt": "2026-10-25T00:48:21.507Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 14064,
-        "reposts": 2271,
-        "replies": 1888,
-        "quotes": 171,
-        "views": 307700,
-        "capturedAt": "2026-10-25T00:16:55.504Z",
-        "source": "Grok X工具返回；本机读取记录时刻，非X提供的抓取时刻"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "people-2114021216952385944",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse 谈公共机构信任与反欺诈",
-      "fact": "WhiteHouse 表示，纳税人需要信任公共资金支持的机构，欺诈会破坏这种信任，并称 Donald Trump 政府正在打击欺诈。",
-      "whyItMatters": "这是官方对反欺诈工作的概括表态；本条没有新增预算、执行细则或效果数字。",
-      "counterCase": "这项表态不构成已核实的业务量或政策效果。",
-      "affected": [
-        "美国公共政策"
-      ],
-      "author": "WhiteHouse @WhiteHouse",
-      "publishedAt": "2026-10-24T15:48:29Z",
-      "url": "https://x.com/WhiteHouse/status/2114021216952385944",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-      "excerpt": "Americans need to trust the institutions that their tax dollars are funding. That trust is broken when fraud is allowed to run rampant. The Trump Administration is demolishing fraud at every turn.",
-      "firstIncludedAt": "2026-10-25T00:48:21.507Z",
-      "lastMaterialAt": "2026-10-25T00:48:21.507Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 5559,
-        "reposts": 1442,
-        "replies": 3169,
-        "quotes": 194,
-        "views": 199477,
-        "capturedAt": "2026-10-25T00:16:55.504Z",
-        "source": "Grok X工具返回；本机读取记录时刻，非X提供的抓取时刻"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "people-2113993917582413993",
@@ -332,10 +335,16 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-      "excerpt": "What market dynamics are investors focused on in the week ahead? Rich Privorotsky, head of European Equities trading in Goldman Sachs FICC and Equities, discusses on The Markets:",
+      "people": [
+        {
+          "name": "Rich Privorotsky",
+          "intro": "高盛欧洲股票交易主管"
+        }
+      ],
       "firstIncludedAt": "2026-10-25T00:48:21.507Z",
       "lastMaterialAt": "2026-10-25T00:48:21.507Z",
+      "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
+      "excerpt": "What market dynamics are investors focused on in the week ahead? Rich Privorotsky, head of European Equities trading in Goldman Sachs FICC and Equities, discusses on The Markets:",
       "selection": "engagement",
       "engagement": {
         "likes": 30,
@@ -345,13 +354,7 @@
         "views": 8264,
         "capturedAt": "2026-10-25T00:19:09.438Z",
         "source": "Grok X工具返回；本机读取GS定点结果的保存时刻，非X工具抓取时间"
-      },
-      "people": [
-        {
-          "name": "Rich Privorotsky",
-          "intro": "高盛欧洲股票交易主管"
-        }
-      ]
+      }
     },
     {
       "eventKey": "tim-cook-iphone-duo-20261024",
@@ -405,7 +408,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "elon-musk": 2
+        "elon-musk": 4
       },
       "people": [
         {
@@ -923,6 +926,284 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "people-2114480131989270983",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "WhiteHouse发布反对社会主义的政治表态",
+        "fact": "WhiteHouse表示，今天的决定会成为明天的后果，并称社会主义将带来美国无法承受的未来。",
+        "whyItMatters": "这是政治立场表达，未披露具体法律、行政措施或产业订单。",
+        "counterCase": "不把立场宣传升级为已签署或已执行政策；未推测附带视频内容。",
+        "affected": [
+          "美国政策表达"
+        ],
+        "author": "WhiteHouse @WhiteHouse",
+        "publishedAt": "2026-10-25T22:12:03Z",
+        "url": "https://x.com/WhiteHouse/status/2114480131989270983",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+        "originalText": "Today’s decisions become tomorrow’s consequences. \n\nSocialism leads to a dark future America simply cannot afford.",
+        "excerpt": "Today’s decisions become tomorrow’s consequences. \n\nSocialism leads to a dark future America simply cannot afford.",
+        "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+        "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 3890,
+          "reposts": 1075,
+          "replies": 615,
+          "quotes": 64,
+          "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+          "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-10-26T00:49:40.898Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2114462416721633501",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk称SpaceX不收购新云服务商",
+        "fact": "Elon Musk回复收购讨论时表示：“SpaceX不收购任何新云服务商。没有意义。”这是他当时对资本配置路径的明确表态。",
+        "whyItMatters": "这削弱了把新云行业整合直接解释为SpaceX收购需求的依据；融资与GPU采购仍需分别观察。",
+        "counterCase": "声明只反映当时立场，未披露董事会决议或未来资本配置约束；不能推为永久承诺。",
+        "affected": [
+          "SpaceX",
+          "新云服务商"
+        ],
+        "author": "Elon Musk @elonmusk",
+        "publishedAt": "2026-10-25T21:01:39Z",
+        "url": "https://x.com/elonmusk/status/2114462416721633501",
+        "verification": "collector-report",
+        "tier": "must-read",
+        "weeklyRanks": {
+          "elon-musk": 2
+        },
+        "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+        "originalText": "SpaceX is not buying any neoclouds. Pointless.",
+        "excerpt": "SpaceX is not buying any neoclouds. Pointless.",
+        "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+        "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+        "selection": "rule",
+        "engagement": {
+          "likes": 1555,
+          "reposts": 141,
+          "replies": 237,
+          "quotes": 97,
+          "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+          "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-26T00:49:40.898Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2114442930891206870",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk转引俄乌战争视频并感叹仍在继续",
+        "fact": "Elon Musk转引一段与俄乌战争有关的视频，并写下“仍在继续……”；可见上下文围绕战争与伤亡。",
+        "whyItMatters": "反映他的公开表达，没有提供新的停火协议或可执行政策。",
+        "counterCase": "不从短回复或视频介绍推导新增政策、伤亡统计或战争进程。",
+        "affected": [
+          "公开政治表达"
+        ],
+        "author": "Elon Musk @elonmusk",
+        "publishedAt": "2026-10-25T19:44:13Z",
+        "url": "https://x.com/elonmusk/status/2114442930891206870",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+        "originalText": "And still it continues …",
+        "excerpt": "And still it continues …",
+        "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+        "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 11787,
+          "reposts": 1893,
+          "replies": 1580,
+          "quotes": 115,
+          "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+          "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-26T00:49:40.898Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2114434646914068862",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk称SpaceX完成400亿美元GPU债务融资，并补充到货与债务性质",
+        "fact": "Elon Musk称SpaceX已完成400亿美元用于GPU的债务融资，并将融资能力归因于投资级信用及Starlink、发射业务收入。他随后补充，这主要是callable debt，GPU将在Q1与Q2到达，对本季度不是重大因素；原帖未注明这两个季度的年份，也未披露已支用比例、GPU数量或完整条款。",
+        "whyItMatters": "这为算力采购提供一项当事人披露的融资线索，也提示债权人可能区分独立经营收入与依赖AI项目的现金流。对GPU供应商的实际收入仍要经过额度支用、订单与交付；不能把400亿美元融资规模直接计成当期芯片销售。",
+        "counterCase": "交易金额与完整条款尚无银行或正式文件独立确认；callable的具体法律与支用含义不作推定。Musk关于200多家新云公司将大量退出的说法是预测；反向检索返回其他公司融资的二手线索，亦未独立核实，不能推断全行业融资关闭。",
+        "affected": [
+          "AI算力供应链",
+          "GPU供应商",
+          "新云服务商融资"
+        ],
+        "author": "Elon Musk @elonmusk",
+        "publishedAt": "2026-10-25T19:11:18Z",
+        "url": "https://x.com/elonmusk/status/2114434646914068862",
+        "verification": "collector-report",
+        "tier": "must-read",
+        "weeklyRanks": {
+          "elon-musk": 1
+        },
+        "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+        "originalText": "Pretty much. \n\nAs of the past few weeks, debt markets have almost entirely shut off access to money for any company that doesn’t have substantial revenue independent of AI data centers. \n\nSpaceX closed $40B of debt for GPUs, but we’re investment grade and have Starlink & launch revenue.\n\nThat means the 200+ neoclouds are going to see guppy-level death and consolidation. Some will make it through, but not many.",
+        "excerpt": "Pretty much. \n\nAs of the past few weeks, debt markets have almost entirely shut off access to money for any company that doesn’t have substantial revenue independent of AI data centers. \n\nSpaceX closed $40B of debt for GPUs, but we’re investment grade and have Starlink & launch revenue.\n\nThat means the 200+ neoclouds are going to see guppy-level death and consolidation. Some will make it through, but not many.",
+        "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+        "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+        "selection": "rule",
+        "engagement": {
+          "likes": 20622,
+          "reposts": 1927,
+          "replies": 1085,
+          "quotes": 1147,
+          "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+          "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-26T00:49:40.898Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2114394551158722793",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "WhiteHouse发布非法移民人口下降的主张",
+        "fact": "WhiteHouse发帖称，自Donald Trump上任以来，非法移民人口已减少超过230万。",
+        "whyItMatters": "反映白宫的政策宣传重点，帖子未列出具体新增执行措施。",
+        "counterCase": "保留为官方账号的主张；未取得支持该数字的独立统计口径，不能当成已核实人口变动。",
+        "affected": [
+          "美国移民政策"
+        ],
+        "author": "WhiteHouse @WhiteHouse",
+        "publishedAt": "2026-10-25T16:31:59Z",
+        "url": "https://x.com/WhiteHouse/status/2114394551158722793",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+        "originalText": "The illegal immigrant population is collapsing. 🇺🇸 Down 2.3 MILLION+ since President Trump took office.",
+        "excerpt": "The illegal immigrant population is collapsing. 🇺🇸 Down 2.3 MILLION+ since President Trump took office.",
+        "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+        "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 20141,
+          "reposts": 3180,
+          "replies": 1953,
+          "quotes": 257,
+          "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+          "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+        },
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ]
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-10-26T00:49:40.898Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2114184998651822094",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk预告长按点赞发送1美元的X Money功能",
+        "fact": "Elon Musk表示，正在增加长按点赞、通过X Money向对方发送1美元的功能。",
+        "whyItMatters": "这是产品功能预告，尚不能据此判断开放范围、使用量或收入。",
+        "counterCase": "发言不证明功能已经全面开放或形成收入。",
+        "affected": [
+          "X Money"
+        ],
+        "author": "Elon Musk @elonmusk",
+        "publishedAt": "2026-10-25T02:39:17Z",
+        "url": "https://x.com/elonmusk/status/2114184998651822094",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "仅取得发帖时间；未取得独立事件时刻。",
+        "originalText": "We’re adding long press on like to send someone $1 via 𝕏 Money",
+        "excerpt": "We’re adding long press on like to send someone $1 via 𝕏 Money",
+        "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+        "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 151726,
+          "reposts": 8500,
+          "replies": 11093,
+          "quotes": 5401,
+          "capturedAt": "2026-10-26T00:19:41.263086+00:00",
+          "source": "Grok X工具返回；本机保存回执时刻，非X提供的抓取时间。"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-26T00:49:40.898Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "people-2114074592990150788",
         "tabIds": [
           "elon-musk"
@@ -941,12 +1222,18 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "elon-musk": 1
+          "elon-musk": 3
         },
-        "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-        "excerpt": "Starlink V3, which only just started launching, will have ~100 times more bandwidth than the current V2 system",
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-25T00:48:21.507Z",
         "lastMaterialAt": "2026-10-25T00:48:21.507Z",
+        "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
+        "excerpt": "Starlink V3, which only just started launching, will have ~100 times more bandwidth than the current V2 system",
         "selection": "rule",
         "engagement": {
           "likes": 4424,
@@ -956,13 +1243,7 @@
           "views": 92806,
           "capturedAt": "2026-10-25T00:16:55.504Z",
           "source": "Grok X工具返回；本机读取记录时刻，非X提供的抓取时刻"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "elon-musk"
@@ -1264,10 +1545,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
-        "excerpt": "What market dynamics are investors focused on in the week ahead? Rich Privorotsky, head of European Equities trading in Goldman Sachs FICC and Equities, discusses on The Markets:",
+        "people": [
+          {
+            "name": "Rich Privorotsky",
+            "intro": "高盛欧洲股票交易主管"
+          }
+        ],
         "firstIncludedAt": "2026-10-25T00:48:21.507Z",
         "lastMaterialAt": "2026-10-25T00:48:21.507Z",
+        "eventTimeNote": "没有提供独立事件时刻，仅保留帖子发布时间",
+        "excerpt": "What market dynamics are investors focused on in the week ahead? Rich Privorotsky, head of European Equities trading in Goldman Sachs FICC and Equities, discusses on The Markets:",
         "selection": "engagement",
         "engagement": {
           "likes": 30,
@@ -1277,13 +1564,7 @@
           "views": 8264,
           "capturedAt": "2026-10-25T00:19:09.438Z",
           "source": "Grok X工具返回；本机读取GS定点结果的保存时刻，非X工具抓取时间"
-        },
-        "people": [
-          {
-            "name": "Rich Privorotsky",
-            "intro": "高盛欧洲股票交易主管"
-          }
-        ]
+        }
       },
       "tabIds": [
         "research-reports"
@@ -1590,7 +1871,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "elon-musk": 2
+          "elon-musk": 4
         },
         "people": [
           {
@@ -1649,304 +1930,54 @@
       ],
       "at": "2026-10-24T08:02:20.311Z",
       "legacy": false
+    }
+  ],
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "people:elon-musk",
+      "page": "people",
+      "object": "elon-musk",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "cutoff": "2026-10-26T00:00:00.000Z",
+      "needsQuery": true
     },
     {
-      "item": {
-        "eventKey": "whitehouse-homeownership-statement-20261022",
-        "tabIds": [
-          "donald-trump"
-        ],
-        "title": "白宫宣传住房与按揭成本议程",
-        "fact": "白宫表示Donald Trump正降低独栋住房和按揭成本、减少不必要的监管环节；可见声明没有列出新签署措施或可量化成效。",
-        "whyItMatters": "属于政府宣传性表述，暂无足够新政策细节支持资本成本判断。",
-        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-        "affected": [],
-        "author": "@WhiteHouse",
-        "publishedAt": "2026-10-22T19:29:29Z",
-        "url": "https://x.com/WhiteHouse/status/2113352056723697729",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-        "originalText": "President Donald J. Trump is lowering the costs of single-family homeownership & mortgages（节选）",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 3786,
-          "reposts": 930,
-          "replies": 1260,
-          "quotes": 122,
-          "views": 284788,
-          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Donald Trump",
-            "intro": "美国总统"
-          }
-        ]
-      },
-      "tabIds": [
-        "donald-trump"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
+      "id": "people:jensen-huang",
+      "page": "people",
+      "object": "jensen-huang",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "cutoff": "2026-10-26T00:00:00.000Z",
+      "needsQuery": true
     },
     {
-      "item": {
-        "eventKey": "whitehouse-farms-statement-20261022",
-        "tabIds": [
-          "donald-trump"
-        ],
-        "title": "白宫回顾农业税收与供应链议程",
-        "fact": "白宫回顾农业减税、市场拓展、供应链和监管议程，宣称这些措施支持农场和牧场；可见文字未给出新增措施的签署日期或执行数字。",
-        "whyItMatters": "这是对既有政策成果的自述，保留热度身份，不把总结宣传当作新增政策。",
-        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-        "affected": [],
-        "author": "@WhiteHouse",
-        "publishedAt": "2026-10-22T18:11:10Z",
-        "url": "https://x.com/WhiteHouse/status/2113332350570406313",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-        "originalText": "Historic tax relief for family farms; Expanded markets for American agriculture; Bolstered supply chains（节选）",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 2309,
-          "reposts": 650,
-          "replies": 787,
-          "quotes": 48,
-          "views": 135930,
-          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": []
-      },
-      "tabIds": [
-        "donald-trump"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
+      "id": "people:donald-trump",
+      "page": "people",
+      "object": "donald-trump",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "cutoff": "2026-10-26T00:00:00.000Z",
+      "needsQuery": true
     },
     {
-      "item": {
-        "eventKey": "elon-important-vote-20261022",
-        "tabIds": [
-          "elon-musk"
-        ],
-        "title": "Elon Musk呼吁参与投票",
-        "fact": "Elon Musk就德州候选人背书相关内容简短回应“投票很重要”。",
-        "whyItMatters": "属于本人高互动短回应，未提供xAI、Tesla或SpaceX经营新信息。",
-        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-        "affected": [],
-        "author": "@elonmusk",
-        "publishedAt": "2026-10-22T17:09:17Z",
-        "url": "https://x.com/elonmusk/status/2113316775291142572",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-        "originalText": "Important to vote",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 43017,
-          "reposts": 6010,
-          "replies": 2371,
-          "quotes": 194,
-          "views": 2411758,
-          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
-      },
-      "tabIds": [
-        "elon-musk"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
+      "id": "people:trillion-leaders",
+      "page": "people",
+      "object": "trillion-leaders",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "cutoff": "2026-10-26T00:00:00.000Z",
+      "needsQuery": true
     },
     {
-      "item": {
-        "eventKey": "whitehouse-hormuz-statement-20261022",
-        "tabIds": [
-          "donald-trump"
-        ],
-        "title": "白宫就霍尔木兹油运与伊朗问题表态",
-        "fact": "白宫宣称霍尔木兹海峡油运量高于冲突前，并重申伊朗不得拥有核武器。声明未提供独立通航统计，相关流量主张未获核实。",
-        "whyItMatters": "保留政府声明的关注度；未取得新执行政策或独立运输量，不能据此判断供应冲击已解除。",
-        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-        "affected": [],
-        "author": "@WhiteHouse",
-        "publishedAt": "2026-10-22T16:02:02Z",
-        "url": "https://x.com/WhiteHouse/status/2113299851265851481",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-        "originalText": "More oil is coming through the Hormuz Strait than it did prior to the conflict.（相关主张摘录，非全文）",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 6447,
-          "reposts": 1670,
-          "replies": 3430,
-          "quotes": 186,
-          "views": 267372,
-          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": []
-      },
-      "tabIds": [
-        "donald-trump"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "elon-yup-court-20261022",
-        "tabIds": [
-          "elon-musk"
-        ],
-        "title": "Elon Musk回应最高法院扩员讨论",
-        "fact": "Elon Musk对最高法院扩员相关讨论回应“是的”。可见本人文字仅为一个词，不能扩写其政策主张。",
-        "whyItMatters": "保留窗口内本人讨论的注意力信号；没有新的政策或公司执行动作。",
-        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-        "affected": [],
-        "author": "@elonmusk",
-        "publishedAt": "2026-10-22T15:18:45Z",
-        "url": "https://x.com/elonmusk/status/2113288958738366650",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-        "originalText": "Yup",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 31634,
-          "reposts": 4015,
-          "replies": 1845,
-          "quotes": 143,
-          "views": 1692603,
-          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
-      },
-      "tabIds": [
-        "elon-musk"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "elon-true-public-money-20261022",
-        "tabIds": [
-          "elon-musk"
-        ],
-        "title": "Elon Musk回应公共资金观点",
-        "fact": "Elon Musk在公共资金相关讨论中回应“确实”。本人可见文字没有展开具体财政方案。",
-        "whyItMatters": "这是简短观点回应，不代表新增财政措施或企业现金流变化。",
-        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-        "affected": [],
-        "author": "@elonmusk",
-        "publishedAt": "2026-10-22T10:07:57Z",
-        "url": "https://x.com/elonmusk/status/2113210745710162001",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-        "originalText": "True",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 16582,
-          "reposts": 3548,
-          "replies": 1521,
-          "quotes": 117,
-          "views": 2270062,
-          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
-      },
-      "tabIds": [
-        "elon-musk"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "jensen-language-programming-replay-20261022",
-        "tabIds": [
-          "jensen-huang"
-        ],
-        "title": "Jensen Huang谈AI降低编程门槛",
-        "fact": "访谈剪辑转述Jensen Huang的看法：自然语言交互可能让更多人参与编程。他以“从3000万到可能10亿”作说明；这属于观点，未提供实际新增程序员统计。",
-        "whyItMatters": "可归因访谈片段在本窗再次传播；原访谈日期未知，不当作本日新发布或已兑现用户增长。",
-        "counterCase": "互动只表示注意力；缺少新执行动作、完整语境或独立数字时不形成产业结论。",
-        "affected": [],
-        "author": "@GeniusGTX",
-        "publishedAt": "2026-10-22T08:30:20Z",
-        "url": "https://x.com/GeniusGTX/status/2113186177776025741",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "相关事件的实际发生时间未知；发帖时间另列。",
-        "originalText": "I think we just went from 30 million to probably 1 billion.（剪辑摘录，非完整访谈）",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 42,
-          "reposts": 20,
-          "replies": 4,
-          "quotes": 1,
-          "views": 4789,
-          "capturedAt": "2026-10-23T00:11:40.513451+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Jensen Huang",
-            "intro": "英伟达创始人兼CEO"
-          }
-        ]
-      },
-      "tabIds": [
-        "jensen-huang"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
+      "id": "people:research-reports",
+      "page": "people",
+      "object": "research-reports",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "cutoff": "2026-10-26T00:00:00.000Z",
+      "needsQuery": true
     }
   ]
 }

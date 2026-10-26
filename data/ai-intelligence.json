@@ -1,38 +1,66 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T00:48:21.507Z",
-  "cutoff": "2026-10-25T08:00:00+08:00",
+  "updatedAt": "2026-10-26T00:49:40.898Z",
+  "cutoff": "2026-10-26T08:00:00+08:00",
   "source": "X only",
-  "status": "partial",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "partial",
-        "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
-        "cutoff": "2026-10-25T08:00:00+08:00"
+        "status": "complete",
+        "note": "窗口内仅普通账号二次讨论既有事项（如11月20日起模型路由器/网关需OpenAI批准方可转售、停止对前沿模型进行实时互联网训练等，均非当日新发布或官方确认），无官方账号或一手产品/API/企业/算力/安全监管增量。",
+        "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "partial",
-        "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
-        "cutoff": "2026-10-25T08:00:00+08:00"
+        "status": "complete",
+        "note": "窗口内帖子均为普通账号对既有事项的转述或评论（Claude Platform于Google Cloud一般可用、Claude Tag Management API beta、Enterprise统一Chat+Cowork等，公告时间均早于窗口），无当日官方新发布、可用性变更或计费落地确认。",
+        "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "partial",
-        "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
-        "cutoff": "2026-10-25T08:00:00+08:00"
+        "status": "complete",
+        "note": "窗口内可见普通账号讨论TorchTPU开源（PyTorch原生TPU后端，便于model.to(\"tpu\")）、Gemini 4 Argon早期token用量与容量约束、AI Studio计费预付调整等，均为既有事件的后续提及或二次信息，无当日官方产品发布、开发者可用性/计费新变化或采用实证一手确认。已排除Alphabet纯股价财报。",
+        "cutoff": "2026-10-26T08:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "partial",
-        "note": "对象增量查询完成；候选多数为旧内容重发或一手不足，0新卡不等于请求失败；旧pending无新线索不复查。",
-        "cutoff": "2026-10-25T08:00:00+08:00"
+        "status": "complete",
+        "note": "DeepSeek/MiniMax出口登记与海外许可相关讨论均为对Reuters等既有报道（约10月23日）的转述，无窗口内官方新进展确认，按要求不重复追查融资等无明确新进展事项。无其他较小实验室/政策/开源一手增量。",
+        "cutoff": "2026-10-26T08:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "kimi-k31-pro-quota-reset-20261025",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "Kimi承认限流与额度消耗问题，宣布一次用量重置及参数调整",
+      "fact": "Kimi承认K3.1 Pro订阅计划存在限流和不必要的额度消耗，宣布向所有计划的订阅者提供一次用量重置，原文称恢复相当于25%的月度额度、低于25%的用量归零，并承诺用量条在原文所称PST当日结束前反映。它还称已调整参数，减少不必要的子代理调用和输出长度；具体额度处理及实际到账尚无独立确认。",
+      "whyItMatters": "这显示智能体产品的调用编排与输出长度会影响订阅额度消耗及使用体验。参数调整能否减少实际消耗、同时维持任务质量，仍需后续使用数据验证。",
+      "counterCase": "未取得到账或后台实施的独立证据；原文未列免费、试用及特殊企业合同的适用细节。25%的会计处理含义未完全说明；无更正不等于已履约，不把发帖时刻当执行时刻。",
+      "affected": [
+        "Kimi订阅者",
+        "智能体产品配额与推理成本"
+      ],
+      "author": "Kimi.ai @Kimi_Moonshot",
+      "publishedAt": "2026-10-25T20:14:44Z",
+      "url": "https://x.com/Kimi_Moonshot/status/2114450610724708492",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "ai-others": 1
+      },
+      "eventTimeNote": "公告发布时间已知；具体重置与参数调整执行时刻未知，PST为原文措辞。",
+      "originalText": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
+      "excerpt": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
+      "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+      "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+      "people": []
+    },
     {
       "eventKey": "openai-frontier-training-containment-brotli-20261023",
       "tabIds": [
@@ -79,7 +107,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 1
+        "ai-others": 2
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -146,6 +174,41 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "kimi-k31-pro-quota-reset-20261025",
+        "tabIds": [
+          "ai-others"
+        ],
+        "title": "Kimi承认限流与额度消耗问题，宣布一次用量重置及参数调整",
+        "fact": "Kimi承认K3.1 Pro订阅计划存在限流和不必要的额度消耗，宣布向所有计划的订阅者提供一次用量重置，原文称恢复相当于25%的月度额度、低于25%的用量归零，并承诺用量条在原文所称PST当日结束前反映。它还称已调整参数，减少不必要的子代理调用和输出长度；具体额度处理及实际到账尚无独立确认。",
+        "whyItMatters": "这显示智能体产品的调用编排与输出长度会影响订阅额度消耗及使用体验。参数调整能否减少实际消耗、同时维持任务质量，仍需后续使用数据验证。",
+        "counterCase": "未取得到账或后台实施的独立证据；原文未列免费、试用及特殊企业合同的适用细节。25%的会计处理含义未完全说明；无更正不等于已履约，不把发帖时刻当执行时刻。",
+        "affected": [
+          "Kimi订阅者",
+          "智能体产品配额与推理成本"
+        ],
+        "author": "Kimi.ai @Kimi_Moonshot",
+        "publishedAt": "2026-10-25T20:14:44Z",
+        "url": "https://x.com/Kimi_Moonshot/status/2114450610724708492",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "ai-others": 1
+        },
+        "eventTimeNote": "公告发布时间已知；具体重置与参数调整执行时刻未知，PST为原文措辞。",
+        "originalText": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
+        "excerpt": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
+        "firstIncludedAt": "2026-10-26T00:49:40.898Z",
+        "lastMaterialAt": "2026-10-26T00:49:40.898Z",
+        "people": []
+      },
+      "tabIds": [
+        "ai-others"
+      ],
+      "at": "2026-10-26T00:49:40.898Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "openai-frontier-training-containment-brotli-20261023",
         "tabIds": [
           "openai"
@@ -198,7 +261,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "ai-others": 1
+          "ai-others": 2
         },
         "people": [],
         "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -434,69 +497,45 @@
       ],
       "at": "2026-10-23T00:44:13.808Z",
       "legacy": false
+    }
+  ],
+  "collectionMode": "incremental-v1",
+  "collectionUnits": [
+    {
+      "id": "ai:openai",
+      "page": "ai",
+      "object": "openai",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "cutoff": "2026-10-26T00:00:00.000Z",
+      "needsQuery": true
     },
     {
-      "item": {
-        "eventKey": "openai-google-model-garden-20261021",
-        "tabIds": [
-          "openai"
-        ],
-        "title": "OpenAI宣布将模型与Codex工作流引入Google Cloud",
-        "fact": "OpenAI宣布将前沿模型和Codex智能体工作流带入Google Cloud Model Garden；Google Cloud亦发布合作声明。原文使用“are coming”等措辞，本条记录渠道扩展公告。",
-        "whyItMatters": "企业可在既有云环境内接入更多模型的计划，可能降低采购和集成摩擦，并增强云平台的多模型分发作用；实际采用与收益仍取决于开放范围、价格及工作负载。",
-        "counterCase": "没有取得统一上线日、地区、模型名单或全量可用性的原始细则；不把“即将引入”写成所有客户已可使用，也不采用二传的承诺消费抵扣或计费细节。",
-        "affected": [
-          "AI企业渠道",
-          "Google Cloud",
-          "OpenAI"
-        ],
-        "author": "@OpenAI",
-        "publishedAt": "2026-10-21T19:23:19Z",
-        "url": "https://x.com/OpenAI/status/2112988118471295323",
-        "verification": "collector-report",
-        "tier": "must-read",
-        "weeklyRanks": {},
-        "excerpt": "OpenAI models are coming to Google Cloud. We’re bringing our frontier models and Codex agentic workflows to Google Cloud’s Model Garden, so enterprises can use our technology where they already build. https://openai.com/index/openai-models-google-cloud/",
-        "firstIncludedAt": "2026-10-22T00:24:43.297Z",
-        "lastMaterialAt": "2026-10-22T00:24:43.297Z",
-        "people": []
-      },
-      "tabIds": [
-        "openai"
-      ],
-      "at": "2026-10-22T00:24:43.297Z",
-      "legacy": false
+      "id": "ai:anthropic",
+      "page": "ai",
+      "object": "anthropic",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "cutoff": "2026-10-26T00:00:00.000Z",
+      "needsQuery": true
     },
     {
-      "item": {
-        "eventKey": "openai-php-assisted-discovery-20261021",
-        "tabIds": [
-          "openai"
-        ],
-        "title": "OpenAI称模型协助PHP漏洞研究，发现归因涉及多个团队",
-        "fact": "OpenAI称，其模型在Patch the Planet项目中协助研究者发现PHP严重漏洞，并与维护者、研究者及安全服务商协调两个月准备修复。另有X帖称Wiz、Calif和OpenAI等团队并行发现相关问题，不能将其写成OpenAI独占或AI首次发现。",
-        "whyItMatters": "AI辅助安全研究提供真实软件维护场景的采用线索；价值取决于可复核的漏洞、修复和维护者工作，而非仅凭发现宣传推算模型收入或互联网全部风险。",
-        "counterCase": "完整社区注释未取得，发现先后及各团队贡献仍有归因缺口；二传日期、模型版本与受影响网站比例不作为已核数字。官方参与声明不等于独占发现或所有网站均已修复。",
-        "affected": [
-          "AI安全研究",
-          "开源软件维护"
-        ],
-        "author": "@OpenAI",
-        "publishedAt": "2026-10-21T14:04:23Z",
-        "url": "https://x.com/OpenAI/status/2112907856018309586",
-        "verification": "collector-report",
-        "tier": "must-read",
-        "weeklyRanks": {},
-        "excerpt": "OpenAI models helped researchers—operating as part of our Patch the Planet initiative—discover critical security flaws in PHP, an open-source programming language used to run an estimated 70% of websites. Over the past two months, we led a coalition of maintainers, researchers, and security providers to prepare fixes and protections ahead of disclosure. This duration was necessary because the fix was quite intricate and required a major change to the PHP engine. Every site using PHP can now safely upgrade their version to stay secure, in addition to applying mitigations from various security vendors. Due to the severity of these flaws and PHP’s widespread use, we consider this bug to be one of the most impactful vulnerabilities in recent memory. It also marks a new phase, where AI can find security bugs with internet-scale impact. This is an example of the Defender’s Window in action: to our knowledge, frontier AI was able to find this vulnerability ahead of attackers, giving defenders time to prepare.",
-        "firstIncludedAt": "2026-10-22T00:24:43.297Z",
-        "lastMaterialAt": "2026-10-22T00:24:43.297Z",
-        "people": []
-      },
-      "tabIds": [
-        "openai"
-      ],
-      "at": "2026-10-22T00:24:43.297Z",
-      "legacy": false
+      "id": "ai:goog-ai",
+      "page": "ai",
+      "object": "goog-ai",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "cutoff": "2026-10-26T00:00:00.000Z",
+      "needsQuery": true
+    },
+    {
+      "id": "ai:ai-others",
+      "page": "ai",
+      "object": "ai-others",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "cutoff": "2026-10-26T00:00:00.000Z",
+      "needsQuery": true
     }
   ]
 }

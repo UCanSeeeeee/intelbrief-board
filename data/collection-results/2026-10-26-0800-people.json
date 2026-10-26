@@ -1,0 +1,72 @@
+{
+  "runId": "2026-10-26-0800",
+  "cutoff": "2026-10-26T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "people:elon-musk",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:elonmusk (xAI OR Tesla OR robot OR Optimus OR SpaceX OR capital OR merger OR AI OR neocloud OR GPU OR debt) since:2026-10-25 until:2026-10-26",
+        "from:elonmusk since:2026-10-25 until:2026-10-26",
+        "from:elonmusk since:2026-10-25 until:2026-10-26 mode:Top"
+      ],
+      "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+      "evidenceFile": "data/collection-runs/2026-10-26-0800.json"
+    },
+    {
+      "unit": "people:jensen-huang",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "\"Jensen Huang\" OR from:NVIDIAAI OR from:nvidia (semiconductor OR power OR AI OR capex OR neocloud OR GPU OR software) since:2026-10-25 until:2026-10-26",
+        "\"Jensen Huang\" (interview OR said OR says OR keynote) since:2026-10-25 until:2026-10-26",
+        "\"Jensen Huang\" since:2026-10-25 until:2026-10-26 mode:Top"
+      ],
+      "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+      "evidenceFile": "data/collection-runs/2026-10-26-0800.json"
+    },
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse (policy OR semiconductor OR power OR AI OR tariff OR order OR capex) since:2026-10-25 until:2026-10-26",
+        "from:realDonaldTrump since:2026-10-25 until:2026-10-26",
+        "from:WhiteHouse since:2026-10-25 until:2026-10-26",
+        "from:POTUS since:2026-10-25 until:2026-10-26",
+        "from:TrumpDailyPosts since:2026-10-25 until:2026-10-26"
+      ],
+      "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+      "evidenceFile": "data/collection-runs/2026-10-26-0800.json"
+    },
+    {
+      "unit": "people:trillion-leaders",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "status": "no-result",
+      "queries": [
+        "from:satyanadella OR from:sundarpichai OR from:ajassy OR from:AndyJassy OR from:finkd OR from:tim_cook OR from:jensenhuang OR from:elonmusk (Microsoft OR Alphabet OR Amazon OR Meta OR Apple OR NVIDIA OR Broadcom) since:2026-10-25 until:2026-10-26",
+        "(from:satyanadella OR from:sundarpichai OR from:ajassy OR from:finkd OR from:tim_cook) since:2026-10-25 until:2026-10-26"
+      ],
+      "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+      "evidenceFile": "data/collection-runs/2026-10-26-0800.json"
+    },
+    {
+      "unit": "people:research-reports",
+      "start": "2026-10-25T00:00:00.000Z",
+      "end": "2026-10-26T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(from:GoldmanSachs OR from:jpmorgan OR \"Goldman\" OR \"J.P. Morgan\" OR Nomura) (semiconductor OR AI OR capex OR power OR KOSPI OR memory) since:2026-10-25 until:2026-10-26",
+        "(from:GoldmanSachs OR from:JPMorgan OR from:Nomura) since:2026-10-25 until:2026-10-26"
+      ],
+      "note": "已完成增量价值及本来源热度查询；Musk2价值2热度、WhiteHouse2热度；其他新候选缺原始归因或首次日期。",
+      "evidenceFile": "data/collection-runs/2026-10-26-0800.json"
+    }
+  ],
+  "pending": []
+}

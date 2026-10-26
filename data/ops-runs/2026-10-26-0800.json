@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-26-0800",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-26T08:04:43+08:00",
+  "updatedAt": "2026-10-26T08:54:13+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "85a118364ff3048cd0ae427e18683c6944c84581",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-26T08:04:43+08:00",
+      "detail": "origin/master核对及首次写入前ff-only拉取成功；原未跟踪审计保留"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-26T08:51:07+08:00",
+      "detail": "当前入口、各栏契约与项目知识按需读取；未改UI、Bot、调度或代码。"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-26T08:51:07+08:00",
+      "detail": "四X批30对象均完成查询并逐批保存record；学习、宏观、财报独立关闭。"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-26T08:51:07+08:00",
+      "detail": "来源证据与完整待发布结果先保存，发布函数按数据契约合并累计池。"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-26T08:51:07+08:00",
+      "detail": "用户明确不需本地test/check/build、预览或额外回归；来源与数据契约已按发布入口处理。"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "已完成7对象增量查询；22候选归并1新增，完整结果及待核已保存并record。"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "2价值4热度，缺额与归因缺口已保存；5对象查询完成。"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "0新事实、33热点，14对象完成；旧周榜/历史保留。"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "Kimi1公告，4对象查询完成，到账未独立确认。"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "Nasdaq112精选，pending0；无新增公司。"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "本地日程无到期/明确过时触发，不广查。"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:04:43+08:00",
+      "endedAt": "2026-10-26T08:12:30+08:00",
+      "durationMs": 467000,
+      "detail": "22候选归并1新增事件；先完整落盘，再推进7对象。统一发布待其余批次关闭。"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:04:44+08:00",
+      "endedAt": "2026-10-26T08:08:31+08:00",
+      "durationMs": 227000,
+      "detail": "两轮独立发现完成；第一轮8、第二轮14候选；六包均查询，市场结构未见新变化。"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:08:31+08:00",
+      "endedAt": "2026-10-26T08:10:30+08:00",
+      "durationMs": 119000,
+      "detail": "读取13线索帖后补4组官方定向查询，取得Musk本人3原帖；其余关键数字证据不足。"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:10:30+08:00",
+      "endedAt": "2026-10-26T08:12:30+08:00",
+      "durationMs": 120000,
+      "detail": "完成独立反证；未独立确认贷款文件，保留债务/Q1Q2/预测边界。"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:13:04+08:00",
+      "endedAt": "2026-10-26T08:19:42+08:00",
+      "durationMs": 398000,
+      "detail": "2价值4热度；5对象结果先落盘后record；保留旧周榜和未核线索。"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:13:05+08:00",
+      "endedAt": "2026-10-26T08:16:03+08:00",
+      "durationMs": 178000,
+      "detail": "五对象发现完成13候选；机构补位查询误带主题，将在追源中补自身无主题词查询。"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:16:03+08:00",
+      "endedAt": "2026-10-26T08:18:13+08:00",
+      "durationMs": 130000,
+      "detail": "新候选原帖已读取；融资复用缓存；2条TrumpDailyPosts缺归因排除；补完机构无主题词查询。"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:18:14+08:00",
+      "endedAt": "2026-10-26T08:19:41+08:00",
+      "durationMs": 87000,
+      "detail": "新声明反证完成；融资复用新闻缓存；无候选万亿高层跳过，未空查。"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:20:06+08:00",
+      "endedAt": "2026-10-26T08:27:23+08:00",
+      "durationMs": 437000,
+      "detail": "0新事实、33热点，14对象完成落盘后record；MU/VRT无候选后两阶段跳过。"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:20:06+08:00",
+      "endedAt": "2026-10-26T08:24:43+08:00",
+      "durationMs": 277000,
+      "detail": "7事实对象共6候选；热点35原始样本已保存，排序及中文摘要待按原文审校。"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:24:43+08:00",
+      "endedAt": "2026-10-26T08:26:19+08:00",
+      "durationMs": 96000,
+      "detail": "INTC无官方/实际访谈发布者原始X证据，客户措辞仅兴趣；TSM无原始公告；其他旧数字排除，NVDA未确认供应商。"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:26:19+08:00",
+      "endedAt": "2026-10-26T08:27:23+08:00",
+      "durationMs": 64000,
+      "detail": "INTC仍属客户兴趣非签约，TSM旧数字；未找到反证不视为已核实。"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:27:54+08:00",
+      "endedAt": "2026-10-26T08:32:43+08:00",
+      "durationMs": 289000,
+      "detail": "1新公告，4对象先完整落盘后record；旧周榜保留。"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:27:54+08:00",
+      "endedAt": "2026-10-26T08:30:18+08:00",
+      "durationMs": 144000,
+      "detail": "4对象查询，1条Kimi新候选；前三对象无合格新候选但检索有普通讨论；发现中已读Kimi原帖。"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:30:18+08:00",
+      "endedAt": "2026-10-26T08:30:19+08:00",
+      "durationMs": 1000,
+      "detail": "主张与原文比对完成，原文PST不猜换算，发帖时间不冒充调整完成时间。"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:30:19+08:00",
+      "endedAt": "2026-10-26T08:32:43+08:00",
+      "durationMs": 144000,
+      "detail": "Kimi仅承诺与参数陈述，无独立履约数据；前三空候选未空跑。"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:33:30+08:00",
+      "endedAt": "2026-10-26T08:46:32+08:00",
+      "durationMs": 782000,
+      "detail": "Nature3+Science1均往期，保留原23共27；Science缺2，basics/counterintuitive=false跳过。"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:33:31+08:00",
+      "endedAt": "2026-10-26T08:44:20+08:00",
+      "durationMs": 649000,
+      "detail": "两轮Grok发现：Nature3往期候选、Science2往期候选；近期无合格新增，未凑数。"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:39:24+08:00",
+      "endedAt": "2026-10-26T08:44:20+08:00",
+      "durationMs": 296000,
+      "detail": "Nature原始摘要/方法节选，Science MIT合法作者PDF及PubMed公开XML核对；社交媒体两更正存在，未解决影响则不发布。"
+    },
+    {
+      "page": "learning",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:44:20+08:00",
+      "endedAt": "2026-10-26T08:46:32+08:00",
+      "durationMs": 132000,
+      "detail": "更正、样本单位、RCT/自然实验与推广边界已审查；Science更正待核者不发布。"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:47:46+08:00",
+      "endedAt": "2026-10-26T08:47:46+08:00",
+      "durationMs": 0,
+      "detail": "无到期或明确过时触发，未网络广查；下次FOMC10/28/PCE10/29。"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-26T08:47:46+08:00",
+      "endedAt": "2026-10-26T08:49:33+08:00",
+      "durationMs": 107000,
+      "detail": "Nasdaq2874原始/112精选，pending0/新增公司0；既有理由及已知AXP时段保留，旧评分不重查。"
+    }
+  ]
+}
