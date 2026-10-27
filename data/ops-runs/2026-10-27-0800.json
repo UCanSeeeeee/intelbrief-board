@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-27T08:03:19+08:00",
-  "updatedAt": "2026-10-27T08:49:22+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-27T08:51:33+08:00",
+  "finishedAt": "2026-10-27T08:51:33+08:00",
   "gitHeadAtStart": "737939bb54824e737009578539d70a6a472c036d",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-27T08:50:01+08:00",
+      "detail": "95e4ba5已push；ls-remote与本地完整SHA一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-27T08:51:33+08:00",
+      "detail": "Cloudflare check121941458620 success；13线上JSON字节匹配，固定只读/api/vix正常"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "完整结果及对象执行范围见data/collection-runs/2026-10-27-0800.json"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "95e4ba5a74039a07414f31ca171be281a539b6eb",
+  "notes": [
+    "发布已核验；内容不凑数，Nature缺1/Science缺2；学习反证独立起点unknown保留真实计时边界"
+  ],
   "timings": [
     {
       "page": "news",
