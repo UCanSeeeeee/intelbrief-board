@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-27-1500",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-27T14:57:52+08:00",
+  "updatedAt": "2026-10-27T15:01:49+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "8cea8de4103ae0816c9c3e3ba6454a4b5acb73b4",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-27T15:01:48+08:00",
+      "detail": "首次写入前ff-only成功；预检无独立起点，不补造耗时"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-27T15:01:49+08:00",
+      "detail": "本批必要规范及知识SOP已读；复用同轮未变化材料"
+    },
+    {
+      "name": "search",
+      "status": "failed",
+      "at": "2026-10-27T15:01:49+08:00",
+      "detail": "X30对象未发送查询，Bot暂停；CNN/VIX/Nasdaq独立成功"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-27T15:01:49+08:00",
+      "detail": "先逐批保存失败输出再record；全部批次关闭后发布，旧内容保留"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-27T15:01:49+08:00",
+      "detail": "用户不需要本地test/check/build/预览；数据写入契约及保留核对完成"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "failed",
+      "detail": "Grok空白，未查询；原卡与成功截止保留"
+    },
+    "people": {
+      "status": "failed",
+      "detail": "Grok空白，未查询；原卡与成功截止保留"
+    },
+    "tickers": {
+      "status": "failed",
+      "detail": "Grok空白，未查询；原卡与成功截止保留"
+    },
+    "ai": {
+      "status": "failed",
+      "detail": "Grok空白，未查询；原卡与成功截止保留"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "日历已刷新，旧评分复用，缺失已核T保留"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "无到期/过时触发，复用早报日历"
+    }
+  },
+  "status": "failed",
+  "error": {
+    "stage": "search",
+    "message": "X30对象未发送查询，Bot暂停；CNN/VIX/Nasdaq独立成功",
+    "stackSnippet": null
+  },
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-27T14:57:53+08:00",
+      "endedAt": "2026-10-27T14:59:49+08:00",
+      "durationMs": 116000,
+      "detail": "失败结果及指标快照已落盘；成功截止不推进"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-27T14:57:53+08:00",
+      "endedAt": "2026-10-27T14:59:48+08:00",
+      "durationMs": 115000,
+      "detail": "既有页、新首页及一次刷新后仍空白；未发送两轮及六包查询，Bot暂停"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-27T14:59:49+08:00",
+      "durationMs": 0,
+      "detail": "发现未完成，无新候选，无需执行"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-27T14:59:49+08:00",
+      "durationMs": 0,
+      "detail": "无新候选，无需执行"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-27T14:59:49+08:00",
+      "endedAt": "2026-10-27T15:00:26+08:00",
+      "durationMs": 37000,
+      "detail": "无新候选；失败输出已落盘，成功游标不推进"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-27T14:59:49+08:00",
+      "endedAt": "2026-10-27T15:00:25+08:00",
+      "durationMs": 36000,
+      "detail": "本轮Grok入口故障复用；未发送查询"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-27T14:59:50+08:00",
+      "endedAt": "2026-10-27T15:00:27+08:00",
+      "durationMs": 37000,
+      "detail": "无新候选；失败输出已落盘，成功游标不推进"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-27T14:59:50+08:00",
+      "endedAt": "2026-10-27T15:00:26+08:00",
+      "durationMs": 36000,
+      "detail": "本轮Grok入口故障复用；未发送查询"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-27T14:59:51+08:00",
+      "endedAt": "2026-10-27T15:00:28+08:00",
+      "durationMs": 37000,
+      "detail": "无新候选；失败输出已落盘，成功游标不推进"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "failed",
+      "startedAt": "2026-10-27T14:59:51+08:00",
+      "endedAt": "2026-10-27T15:00:28+08:00",
+      "durationMs": 37000,
+      "detail": "本轮Grok入口故障复用；未发送查询"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-27T15:00:25+08:00",
+      "durationMs": 0,
+      "detail": "无新候选；失败输出已落盘，成功游标不推进"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-27T15:00:26+08:00",
+      "durationMs": 0,
+      "detail": "无新候选；失败输出已落盘，成功游标不推进"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-27T15:00:27+08:00",
+      "durationMs": 0,
+      "detail": "无新候选；失败输出已落盘，成功游标不推进"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-27T15:00:27+08:00",
+      "durationMs": 0,
+      "detail": "无新候选；失败输出已落盘，成功游标不推进"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-27T15:00:28+08:00",
+      "durationMs": 0,
+      "detail": "无新候选；失败输出已落盘，成功游标不推进"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-27T15:00:28+08:00",
+      "durationMs": 0,
+      "detail": "无新候选；失败输出已落盘，成功游标不推进"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-27T15:00:29+08:00",
+      "endedAt": "2026-10-27T15:01:02+08:00",
+      "durationMs": 33000,
+      "detail": "Nasdaq三周2879原始/112精选，pending0，无新增公司；旧评分与自主判断保留"
+    }
+  ]
+}

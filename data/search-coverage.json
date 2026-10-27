@@ -2,113 +2,6 @@
   "schemaVersion": 1,
   "records": [
     {
-      "jobId": "manual-bbb8cd73-972c-4508-8448-7dd05262cf8e",
-      "page": "news",
-      "trigger": "manual",
-      "start": "2026-10-09T16:00:00.000Z",
-      "end": "2026-10-12T19:25:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 新闻账号宽扫 10/11（DeItaone/Kobeissi/zerohedge/Walter/FirstSquawk/unusual_whales/Reuters/business）",
-        "R1 新闻账号宽扫 10/12 00:00–11:20Z",
-        "R1 新闻账号宽扫 10/09 16:00Z 起",
-        "R1 关税/出口管制/稀土 × 中国/特朗普",
-        "R1 Fed/FOMC/美债收益率/CPI",
-        "R1 原油/柴油 × 胡塞/沙特/伊朗/俄罗斯/停火",
-        "R1 AI 资本开支 × Nvidia/OpenAI/Microsoft/Meta/Oracle/TSMC",
-        "R2 半导体：HBM/DRAM/CoWoS/合约价 × 价格/产能/短缺",
-        "R2 电力：数据中心 × 电网/GW/燃气轮机/核电/并网",
-        "R2 AI 落地：收入/ARR/企业/收购 × OpenAI/Anthropic/Amazon/Salesforce/Microsoft",
-        "R2 资本成本与市场结构：期限溢价/信用利差/国债拍卖/日元/私募信贷/宽度/仓位",
-        "R2 地缘物流：霍尔木兹/油轮/胡塞 × 伊朗/阿曼/UKMTO",
-        "追源：Amazon Decart / Apple 何立峰会见",
-        "反证：克里姆林宫/佩斯科夫/泽连斯基 × energy ceasefire",
-        "R2 CPU/封测/Intel Foundry/Vertiv/Broadcom/TSMC 订单与价格"
-      ],
-      "recordedAt": "2026-10-12T11:35:11.546Z"
-    },
-    {
-      "jobId": "2026-10-12-2100",
-      "page": "news",
-      "trigger": "scheduled",
-      "start": "2026-10-09T16:00:00.000Z",
-      "end": "2026-10-12T21:00:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 宏观：Fed/FOMC/Treasury/real yield/CPI（2026-10-09T16:00Z–2026-10-12T13:00Z）",
-        "R1 胡塞/沙特/油轮/霍尔木兹",
-        "R1 新闻账号宽扫 DeItaone/FirstSquawk/Kobeissi/zerohedge/business/Reuters（10/11 13:00Z 起）",
-        "R1 新闻账号主题过滤 oil/ceasefire/Houthi/Riyadh/HBM/memory/TSMC/OpenAI",
-        "R1 能源停火 Peskov/Zelensky/Trump energy ceasefire",
-        "R2 半导体 HBM/DRAM/NAND/CoWoS/Micron/CXMT/TrendForce 价格产能",
-        "R2 电力 data center/Vertiv/gas turbine/nuclear/interconnect",
-        "R2 AI落地 OpenAI/Anthropic/Decart/ChatGPT ads/ARR",
-        "R2 市场结构 breadth/Mag7/hedge fund/SOXX/IGV",
-        "追源 OpenAI 50B ARR / FT 军援威胁 / Peskov SkyNews / Amazon Decart",
-        "反证 克里姆林宫/佩斯科夫 × energy ceasefire；油价对停火叙事回摆"
-      ],
-      "recordedAt": "2026-10-12T13:34:00.268Z"
-    },
-    {
-      "jobId": "manual-6f720182-4b4b-43cd-ad0b-5663ce6a4dba",
-      "page": "news",
-      "trigger": "manual",
-      "start": "2026-10-11T17:48:52.000Z",
-      "end": "2026-10-13T01:48:52+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 宏观 Fed/Treasury/CPI/yields/tariff 2026-10-12T01:48+08→2026-10-13T01:48+08",
-        "R1 地缘 Ukraine/Russia/Iran/Houthi/oil/ceasefire",
-        "R1 AI 大型公司 NVIDIA/OpenAI/Anthropic/Microsoft/TSMC/HBM/capex",
-        "R1 市场结构 10Y/credit spread/high yield/deleveraging",
-        "R2 半导体 HBM/CoWoS/CXMT/Micron/TSMC/ASML capacity",
-        "R2 电力 data center/gas turbine/transformer/PPA/liquid cooling",
-        "R2 AI落地 OpenAI/Anthropic ARR/API/subscription/enterprise",
-        "追源 Maia 300 from:satyanadella/Microsoft；Firmus IPO；停火违反",
-        "反证 ceasefire broke/Zelenskyy/Macron；Maia 能效承诺"
-      ],
-      "recordedAt": "2026-10-12T17:55:00.000Z"
-    },
-    {
-      "jobId": "2026-10-13-0900",
-      "page": "news",
-      "trigger": "scheduled",
-      "start": "2026-10-12T01:00:00.000Z",
-      "end": "2026-10-13T09:00:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 宏观 Fed/CPI/yields/tariff 2026-10-12T09:00+08→2026-10-13T09:00+08",
-        "R1 地缘 Ukraine/Russia/Houthi/Saudi/ceasefire/oil",
-        "R1 AI NVIDIA/MSFT/Maia/OpenAI/Anthropic/TSMC/HBM/capex",
-        "R1 市场结构 equal-weight/breadth/credit/deleveraging",
-        "R2 半导体 HBM/CoWoS/CXMT/Micron/TSMC/ASML/Nanya DRAM",
-        "R2 电力 data center/liquid cooling/Vertiv/FLEX/PPA",
-        "R2 AI落地 OpenAI ARR/Anthropic IREN/API mix",
-        "追源 satyanadella Maia；Techmeme Hock Tan；wallstengine NVDA OCP；zerohedge Houthi",
-        "反证 Maia 能效未验证；Hock Tan 融资瓶颈是否被订单证伪；停火执行"
-      ],
-      "recordedAt": "2026-10-13T01:52:01.370Z"
-    },
-    {
-      "jobId": "manual-f1176a67-c32a-469c-ab46-3c0244a63b66",
-      "page": "people",
-      "trigger": "manual",
-      "start": "2026-10-12T02:18:00.000Z",
-      "end": "2026-10-13T10:18:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 from:elonmusk -is:retweet -is:reply（24h，public_metrics）",
-        "R2 from:elonmusk (xAI OR Colossus OR Optimus OR Tesla OR SpaceX OR Starship OR Starlink OR chip OR Terafab OR power OR compute OR GPU OR Cybercab OR FSD)",
-        "R1 from:JensenHuang（24h）",
-        "R2 (from:nvidia OR from:NVIDIAAI OR from:nvidianewsroom OR \"Jensen Huang\") -is:retweet；(from:nvidia OR from:nvidianewsroom OR from:NVIDIAAI OR from:NVIDIADC)",
-        "R1 (from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) -is:retweet（24h，两页）",
-        "R2 (from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) (tariff OR chips OR semiconductor OR energy OR oil OR \"executive order\" OR tax OR China OR AI OR trade OR nuclear) -is:reply",
-        "R1/R2 万亿高管 from:satyanadella/sundarpichai/tim_cook/ajassy/finkd/hocktan/MParekh/demishassabis/kevin_scott/mustafasuleyman 等（10/12 起）",
-        "R1/R2 研报 (Morgan Stanley OR Goldman Sachs OR Nomura OR BofA OR JPMorgan OR Jefferies OR Bernstein OR UBS) × (raises OR cuts OR upgrade OR estimates) × (Nvidia OR HBM OR DRAM OR TSMC OR Broadcom OR data center OR power)",
-        "追源 get_posts_by_ids：Elon 高互动帖引用原文、Muse Wonder、Maia 300、BofA TSMC 转述"
-      ]
-    },
-    {
       "jobId": "2026-10-13-1600",
       "page": "news",
       "trigger": "scheduled",
@@ -927,6 +820,16 @@
         "(export control OR 23 AI) China (deny OR false OR correction) since:2026-10-26 until:2026-10-27"
       ],
       "recordedAt": "2026-10-27T00:48:02.764Z"
+    },
+    {
+      "jobId": "2026-10-27-1500",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-27T00:00:00.000Z",
+      "end": "2026-10-27T15:00:00+08:00",
+      "status": "failed",
+      "queries": [],
+      "recordedAt": "2026-10-27T07:01:22.473Z"
     }
   ]
 }

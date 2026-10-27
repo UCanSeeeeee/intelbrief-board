@@ -3,31 +3,31 @@
   "updatedAt": "2026-10-27T00:48:02.764Z",
   "cutoff": "2026-10-27T08:00:00+08:00",
   "source": "X only",
-  "status": "complete",
+  "status": "failed",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "complete",
-        "note": "独立发现完成，新原帖及限制核验、同轮缓存反证已保存，保留官方自述与未核边界。",
+        "status": "failed",
+        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
         "cutoff": "2026-10-27T08:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "complete",
-        "note": "独立发现完成，新原帖及限制核验、同轮缓存反证已保存，保留官方自述与未核边界。",
+        "status": "failed",
+        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
         "cutoff": "2026-10-27T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "complete",
-        "note": "实际查询完成，未取到新合格候选；无候选后两阶段跳过，保留旧有效周榜。",
+        "status": "failed",
+        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
         "cutoff": "2026-10-27T08:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "complete",
-        "note": "实际查询完成，未取到新合格候选；无候选后两阶段跳过，保留旧有效周榜。",
+        "status": "failed",
+        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
         "cutoff": "2026-10-27T08:00:00+08:00"
       }
     ]
@@ -526,5 +526,7 @@
       "at": "2026-10-24T08:13:25.347Z",
       "legacy": false
     }
-  ]
+  ],
+  "lastAttemptAt": "2026-10-27T07:01:22.458Z",
+  "attemptedCutoff": "2026-10-27T15:00:00+08:00"
 }
