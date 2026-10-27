@@ -23,16 +23,17 @@ for(const tab of source.tabs){
     hotspots.push({tabId:tab.id,eventKey:`x-${tab.id}-${p.postId}`,author:p.author,
       url:`https://x.com/${p.author}/status/${p.postId}`,publishedAt:p.publishedAt,
       title:replaceAliases(p.title),fact:replaceAliases(p.summary),originalText:p.originalText,
+      originalTextIsExcerpt:true,excerptNote:'Grok返回的原文摘录；未展示部分不补写。',
       sourceNature:'non-official',verification:'collector-report',eventTime:null,eventTimeNote:'实际事件时间未知',
       engagement:{views:p.views,likes:p.likes,reposts:p.reposts,replies:p.replies,capturedAt:tab.capturedAt||source.capturedAt,source:'grok-web-observed'}});
   }
   if(unranked.length)tab.unranked=unranked;
-  hotspotTabs.push({id:tab.id,status:tab.status==='failed'?'failed':unranked.length?'partial':tab.status,queries:[tab.query],note:tab.note||'Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。'});
+  hotspotTabs.push({id:tab.id,status:tab.status==='failed'?'failed':unranked.length?'partial':tab.status,queries:[tab.query,...(tab.followups||[])],note:tab.note||'Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。'});
 }
 if(seen.size!==allowed.size)throw new Error('未覆盖全部配置股票');
 const relative=path.relative(root,path.resolve(auditFile)).split(path.sep).join('/');
 const output={cutoff:source.cutoff,auditFile:relative,conversationUrl:source.conversationUrl,
-  hotspotSnapshot:!!audit.backfill&&audit.backfill.start===source.windowStart&&audit.backfill.end===source.cutoff,
+  hotspotSnapshot:cfg.hotspotPolicy.collectionMode==='rolling-24h-snapshot'||!!audit.backfill&&audit.backfill.start===source.windowStart&&audit.backfill.end===source.cutoff,
   observationNote:source.provenance,toolEvidence:source.toolEvidence,excludedCandidates:source.excludedCandidates||[],hotspotTabs,hotspots,
   hotspotCollectionUnits:cfg.tabs.map(t=>({id:`tickers:${t.id}:hotspots`,object:`${t.id}:hotspots`,start:source.windowStart,end:source.cutoff,needsQuery:true}))};
 audit.batches[0].sourceFile=path.relative(root,path.resolve(sourcePath)).split(path.sep).join('/');

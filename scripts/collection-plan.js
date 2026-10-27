@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const progress = require('./lib/collection-progress');
+const {hotspotPrompts} = require('./lib/ticker-hotspot-prompt');
 
 const ROOT = path.resolve(__dirname, '..');
 
@@ -39,7 +40,10 @@ function createPlan(cutoff, config = loadConfig(), root = ROOT) {
       ...(batch.id==='learning'?{components:{papers:action==='run'&&normalized.slot==='08:00',basics:action==='run'&&normalized.slot===(weekend?'08:00':'20:30'),counterintuitive:action==='run'&&normalized.slot===(weekend?'08:00':'20:30')}}:{}),
       ...(batch.id==='learning'?{lessonInstruction:'basics到期时按docs/DAILY_LEARNING.md的原始提示词写1篇fable-reveal：一个研究生水平概念，寓言在前、概念解释在后，标题和开场不剧透，机制在结尾显现，保留类比边界和可核对来源；不新增名额、不改旧卡。'}:{}),
       isolated: true,
-      ...(batch.id==='tickers'?{hotspotInstruction:'直接让Grok按每股cashtag返回本对象窗口内浏览量前五帖子；Google覆盖$GOOG和$GOOGL。由Grok完成检索和浏览量排序，不预先限成1候选、不附加产业主题词、不按点赞重排。保存views、作者、原文、时间、链接及覆盖缺口，缺views不排名；不另行设计多轮人工搜索流程。'}:{}),
+      ...(batch.id==='tickers'?{
+        hotspotInstruction:'热点与事实分开，每股独立Expert会话，只发送hotspotPrompts的简短prompt。关键词只有股票代码，发帖时间必须在截止前24小时，按浏览量前五；不加主题、账号、官方或广告等内容过滤。读取结果后本机再整理字段，不把知识库、事实门槛、JSON契约塞进检索请求。存在已知遗漏或字段错误时针对性核对，不静默接受明显缺口。',
+        hotspotPrompts:hotspotPrompts(JSON.parse(fs.readFileSync(path.join(root,'config/ticker-intelligence.json'),'utf8')),cutoff)
+      }:{}),
       collectionUnits: collectionUnits.filter(unit=>unit.page===batch.id),
       inputRule: '只读取本批次所需配置、旧数据与上游已验收证据，不把其他侧边栏候选混入本批次。',
       outputRule: '独立记录查询、候选、缺口和结果；完成后才交给总编排合并、全站校验与发布。'
@@ -53,7 +57,7 @@ function createPlan(cutoff, config = loadConfig(), root = ROOT) {
     scheduled,
     skipReason: scheduled ? null : '北京时间周末只在08:00整理一次；本时点不采集、不发布新期次。',
     sourcePriority: config.sourcePriority,
-    rule: '每个对象从上次成功查询截止严格增量；手动与定时共用进度。展示保留与搜索窗口独立。无候选不空跑追源/反证；失败仅补查失败对象。',
+    rule: '事实对象从上次成功截止严格增量；个股热点例外，每股独立查询完整24h浏览量榜。手动与定时共用记录，失败保留存量；无新事实候选不空跑追源/反证。',
     batches
   };
 }

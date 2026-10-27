@@ -22,6 +22,7 @@ if(input.auditFile){
   audit.status=input.hotspotTabs.some(r=>r.status!=='complete')?'partial':'complete';audit.finishedAt=new Date().toISOString();audit.conversationUrl=input.conversationUrl;
   audit.sourceObservation=input.observationNote;
   const batch=audit.batches.find(b=>b.page==='tickers');
+  batch.status=audit.status;
   batch.output={hotspots:input.hotspots,hotspotTabs:input.hotspotTabs};
   batch.checklist=batch.checklist.map(c=>({...c,status:reports.get(c.tabId)?.status==='complete'?'covered':'insufficient',note:reports.get(c.tabId)?.note}));
   batch.excludedCandidates=input.excludedCandidates||[];

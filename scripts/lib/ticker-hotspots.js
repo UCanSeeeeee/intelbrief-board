@@ -30,7 +30,7 @@ function mergeHotspots(input,config,existing,cutoff,now=new Date()){
     assert(date(item.publishedAt)&&Date.parse(item.publishedAt)<=Date.parse(cutoff),'热点缺少准确发帖时间或晚于截止');
     const unit=(input.hotspotCollectionUnits||input.collectionUnits||[]).find(u=>u.object===item.tabId+':hotspots');
     const old=prior.find(p=>p.tabId===item.tabId&&(p.url===item.url||p.eventKey===item.eventKey));
-    if(unit&&!old)assert(unit.needsQuery&&Date.parse(item.publishedAt)>=Date.parse(unit.start)&&Date.parse(item.publishedAt)<Date.parse(unit.end),'热点新增超出本对象严格增量窗口');
+    if(unit&&!old)assert(unit.needsQuery&&Date.parse(item.publishedAt)>=Date.parse(unit.start)&&Date.parse(item.publishedAt)<Date.parse(unit.end),'热点新增超出本对象采集窗口');
     assert(Date.parse(item.publishedAt)>=Date.parse(cutoff)-(config.hotspotPolicy.windowDays||1)*86400000,'热点超出展示窗口');
     for(const field of ['title','fact','originalText'])assert(typeof item[field]==='string'&&item[field].trim(),'热点缺少'+field);
     assert(item.verification==='collector-report'&&item.sourceNature==='non-official','热点须标明非官方、采集器转述');
@@ -47,10 +47,10 @@ function mergeHotspots(input,config,existing,cutoff,now=new Date()){
   for(const tab of config.tabs){
     const report=reports.get(tab.id),anchor=Date.parse(report.cutoff||cutoff);
     if(report.status==='failed'){hotspots.push(...(existing.hotspots||[]).filter(i=>i.tabId===tab.id));continue;}
-    const snapshot=input.hotspotSnapshot===true&&report.status==='complete';
+    const snapshot=(config.hotspotPolicy.collectionMode==='rolling-24h-snapshot'||input.hotspotSnapshot===true)&&report.status==='complete';
     if(snapshot){
-      const unit=(input.hotspotCollectionUnits||[]).find(u=>u.object===tab.id+':hotspots');
-      assert(unit&&Date.parse(unit.start)<=anchor-(config.hotspotPolicy.windowDays||1)*86400000&&Date.parse(unit.end)===anchor,'完整榜单替换须覆盖全部展示窗口');
+      const unit=(input.hotspotCollectionUnits||input.collectionUnits||[]).find(u=>u.object===tab.id+':hotspots');
+      assert(unit&&Date.parse(unit.start)===anchor-(config.hotspotPolicy.windowDays||1)*86400000&&Date.parse(unit.end)===anchor,'完整榜单替换须覆盖恰好24小时窗口');
     }
     const pool=new Map((snapshot?[]:prior).filter(i=>i.tabId===tab.id&&Date.parse(i.publishedAt)>=anchor-(config.hotspotPolicy.windowDays||1)*86400000).map(i=>[i.url,i]));
     for(const item of incoming.filter(i=>i.tabId===tab.id))pool.set(item.url,item);

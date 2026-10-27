@@ -7,7 +7,9 @@
     "windowDays": 1,
     "sourceNature": "non-official",
     "ranking": "grok-observed-views-desc",
-    "discovery": "direct-grok-cashtag-top-five",
+    "discovery": "isolated-keyword-24h-top-five",
+    "collectionMode": "rolling-24h-snapshot",
+    "contentFilters": [],
     "missingViews": "unranked-audit-only",
     "independentOfValueSelection": true
   },
@@ -43,6 +45,7 @@
       "type": "ticker",
       "identity": "Micron Technology",
       "symbol": "MU",
+      "hotspotKeywords": ["$MU"],
       "cashtag": "$MU",
       "handle": "MicronTech",
       "handles": [
@@ -81,6 +84,7 @@
       "type": "ticker",
       "identity": "Alphabet Inc. (Google)",
       "symbol": "GOOG",
+      "hotspotKeywords": ["GOOG", "GOOGL"],
       "cashtag": "$GOOG",
       "cashtags": ["$GOOG", "$GOOGL"],
       "handle": "Google",
@@ -121,6 +125,7 @@
       "type": "ticker",
       "identity": "Vertiv Holdings Co",
       "symbol": "VRT",
+      "hotspotKeywords": ["$VRT"],
       "cashtag": "$VRT",
       "handle": "Vertiv",
       "handles": [
@@ -141,6 +146,7 @@
       "type": "ticker",
       "identity": "Taiwan Semiconductor Manufacturing (TSMC)",
       "symbol": "TSM",
+      "hotspotKeywords": ["$TSM"],
       "cashtag": "$TSM",
       "handle": "tsmc_news",
       "handles": [
