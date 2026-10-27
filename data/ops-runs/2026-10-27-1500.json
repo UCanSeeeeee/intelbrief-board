@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-27T14:57:52+08:00",
-  "updatedAt": "2026-10-27T15:01:49+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-27T15:03:25+08:00",
+  "finishedAt": "2026-10-27T15:03:25+08:00",
   "gitHeadAtStart": "8cea8de4103ae0816c9c3e3ba6454a4b5acb73b4",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-27T15:02:47+08:00",
+      "detail": "8bd0625423253351caa6a12146c50475161b0b0b已推送；ls-remote一致，Cloudflare部署进行中"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-27T15:03:24+08:00",
+      "detail": "Cloudflare success；13项静态JSON逐字节一致，VIX18.39/10-26与CNN27.1/00:00Z接口已核"
     }
   ],
   "pages": {
@@ -77,14 +77,12 @@
       "detail": "无到期/过时触发，复用早报日历"
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "X30对象未发送查询，Bot暂停；CNN/VIX/Nasdaq独立成功",
-    "stackSnippet": null
-  },
-  "commitHash": null,
-  "notes": [],
+  "status": "partial",
+  "error": null,
+  "commitHash": "8bd0625423253351caa6a12146c50475161b0b0b",
+  "notes": [
+    "X30对象失败未推进成功截止；旧内容保留；CNN/VIX/Nasdaq成功，学习跳过，宏观无触发；线上已核"
+  ],
   "timings": [
     {
       "page": "news",

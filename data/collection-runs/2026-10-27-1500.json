@@ -4200,7 +4200,7 @@
     }
   ],
   "publication": {
-    "status": "local-artifacts-ready",
+    "status": "verified",
     "preparedAt": "2026-10-27T07:01:22.544Z",
     "note": "全部批次关闭后统一合并；发布函数执行数据契约，无本地test/check/build/预览。失败旧卡、周榜、每日记录、热点分区及新闻精选均核对保留。",
     "preservation": {
@@ -4222,7 +4222,199 @@
       "ai": 8
     },
     "preparationIssue": "首次prepare因checkedAt早于cutoff拒绝，在公共文件写入前停止；截止后真实复核空白，采用复核时刻重新执行发布数据契约。",
-    "localChecks": "用户要求跳过npm test/check/build/预览及额外回归；仅来源、数据契约与旧内容/成功截止保留核对。"
+    "localChecks": "用户要求跳过npm test/check/build/预览及额外回归；仅来源、数据契约与旧内容/成功截止保留核对。",
+    "contentCommit": "8bd0625423253351caa6a12146c50475161b0b0b",
+    "remoteVerified": true,
+    "verifiedAt": "2026-10-27T07:03:24.641765+00:00",
+    "cloudflare": [
+      {
+        "id": 122057276415,
+        "head_sha": "8bd0625423253351caa6a12146c50475161b0b0b",
+        "status": "completed",
+        "conclusion": "success",
+        "completed_at": "2026-10-27T07:02:43Z",
+        "details_url": "https://dash.cloudflare.com/?to=/654fc092fc71c4dc81184933d5b808b9/pages/view/intelbrief-board/2d68bdd1-6c66-4292-b68a-b6d0c5c10aa5"
+      }
+    ],
+    "resources": [
+      {
+        "path": "data/stock-briefs/2026-10-27-1500.json",
+        "checkedAt": "2026-10-27T07:02:47.833495+00:00",
+        "httpStatus": 200,
+        "bytes": 33780,
+        "sha256": "40abb29e6f3ea78158b23eeb1c0db3a34653bfc353f1bf4511ed53976bfd1776",
+        "localSha256": "40abb29e6f3ea78158b23eeb1c0db3a34653bfc353f1bf4511ed53976bfd1776",
+        "match": true
+      },
+      {
+        "path": "data/stock-briefs/index.json",
+        "checkedAt": "2026-10-27T07:02:47.833765+00:00",
+        "httpStatus": 200,
+        "bytes": 1024,
+        "sha256": "b1499ab5f008c116384caa425666f473cb6c69c89ab20b6ccd0307f644757816",
+        "localSha256": "b1499ab5f008c116384caa425666f473cb6c69c89ab20b6ccd0307f644757816",
+        "match": true
+      },
+      {
+        "path": "data/reading-board.json",
+        "checkedAt": "2026-10-27T07:02:47.835037+00:00",
+        "httpStatus": 200,
+        "bytes": 1559230,
+        "sha256": "795df1a6a7e961d6ec319d5b53bfecda45bcdf707723dfe193cd10d98372e219",
+        "localSha256": "795df1a6a7e961d6ec319d5b53bfecda45bcdf707723dfe193cd10d98372e219",
+        "match": true
+      },
+      {
+        "path": "data/people-intelligence.json",
+        "checkedAt": "2026-10-27T07:02:47.835269+00:00",
+        "httpStatus": 200,
+        "bytes": 89646,
+        "sha256": "9c14041940bf19679722975295c26bd17059e6a1f5508e4a25208b71daaa5eef",
+        "localSha256": "9c14041940bf19679722975295c26bd17059e6a1f5508e4a25208b71daaa5eef",
+        "match": true
+      },
+      {
+        "path": "data/ticker-intelligence.json",
+        "checkedAt": "2026-10-27T07:02:48.762625+00:00",
+        "httpStatus": 200,
+        "bytes": 445308,
+        "sha256": "5c4cdf657198c06f3a360a9760d9064d08171986e4f40e62c0bbbc854568a616",
+        "localSha256": "5c4cdf657198c06f3a360a9760d9064d08171986e4f40e62c0bbbc854568a616",
+        "match": true
+      },
+      {
+        "path": "data/ai-intelligence.json",
+        "checkedAt": "2026-10-27T07:02:48.895896+00:00",
+        "httpStatus": 200,
+        "bytes": 32821,
+        "sha256": "6224c61544664aba18d025da59322177ce74f3e4a3a985046b241130bbdf3146",
+        "localSha256": "6224c61544664aba18d025da59322177ce74f3e4a3a985046b241130bbdf3146",
+        "match": true
+      },
+      {
+        "path": "data/earnings-calendar.json",
+        "checkedAt": "2026-10-27T07:02:48.977863+00:00",
+        "httpStatus": 200,
+        "bytes": 126328,
+        "sha256": "ad2a1a8e77bb4d1e76b7c1ade79f82c4fd212997d3d21fb35dbb32a3597588a8",
+        "localSha256": "ad2a1a8e77bb4d1e76b7c1ade79f82c4fd212997d3d21fb35dbb32a3597588a8",
+        "match": true
+      },
+      {
+        "path": "data/macro-events.json",
+        "checkedAt": "2026-10-27T07:02:50.258891+00:00",
+        "httpStatus": 200,
+        "bytes": 57019,
+        "sha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044",
+        "localSha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044",
+        "match": true
+      },
+      {
+        "path": "data/market-sentiment.json",
+        "checkedAt": "2026-10-27T07:02:50.906497+00:00",
+        "httpStatus": 200,
+        "bytes": 654,
+        "sha256": "c9a5cef7ecf1ced721bd24b7b68694de5d5fad5e0ec688a8a6a7fdfe04da324e",
+        "localSha256": "c9a5cef7ecf1ced721bd24b7b68694de5d5fad5e0ec688a8a6a7fdfe04da324e",
+        "match": true
+      },
+      {
+        "path": "data/market-volatility.json",
+        "checkedAt": "2026-10-27T07:02:51.435018+00:00",
+        "httpStatus": 200,
+        "bytes": 414,
+        "sha256": "47c3b98a2d1c1ec7e2a8807d5f583d70f179800e0440c3215f82a24b8347dddf",
+        "localSha256": "47c3b98a2d1c1ec7e2a8807d5f583d70f179800e0440c3215f82a24b8347dddf",
+        "match": true
+      },
+      {
+        "path": "data/learning.json",
+        "checkedAt": "2026-10-27T07:02:51.579937+00:00",
+        "httpStatus": 200,
+        "bytes": 40930,
+        "sha256": "eb78bd779d62996b6d73b944537a1c0676962ccb28c1ca8a07984f72180b64d1",
+        "localSha256": "eb78bd779d62996b6d73b944537a1c0676962ccb28c1ca8a07984f72180b64d1",
+        "match": true
+      },
+      {
+        "path": "data/journal-learning.json",
+        "checkedAt": "2026-10-27T07:02:51.962308+00:00",
+        "httpStatus": 200,
+        "bytes": 90661,
+        "sha256": "fbf0d32d1516859ecb2382461025cba40e8672ba8aa66e2e5374f26c6ce88f2e",
+        "localSha256": "fbf0d32d1516859ecb2382461025cba40e8672ba8aa66e2e5374f26c6ce88f2e",
+        "match": true
+      },
+      {
+        "path": "data/counterintuitive-learning.json",
+        "checkedAt": "2026-10-27T07:02:52.127844+00:00",
+        "httpStatus": 200,
+        "bytes": 76571,
+        "sha256": "96116f8623f4271d5250e9c3288bb9580a7b0e9b292f8558334b319b78865cff",
+        "localSha256": "96116f8623f4271d5250e9c3288bb9580a7b0e9b292f8558334b319b78865cff",
+        "match": true
+      }
+    ],
+    "apiVix": {
+      "path": "api/vix",
+      "checkedAt": "2026-10-27T07:02:52.836703+00:00",
+      "httpStatus": 200,
+      "body": {
+        "schemaVersion": 1,
+        "id": "cboe-vix",
+        "value": 18.39,
+        "asOfDate": "2026-10-26",
+        "quoteKind": "close",
+        "previousClose": 19.45,
+        "fetchedAt": "2026-10-27T07:02:57.207Z",
+        "source": {
+          "name": "Cboe",
+          "url": "https://www.cboe.com/tradable-products/vix",
+          "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+        },
+        "retrieval": {
+          "status": "ok"
+        }
+      }
+    },
+    "apiSentiment": {
+      "path": "api/market-sentiment",
+      "checkedAt": "2026-10-27T07:02:57.329237+00:00",
+      "httpStatus": 200,
+      "body": {
+        "schemaVersion": 1,
+        "id": "cnn-fear-greed",
+        "market": "us-equities",
+        "score": 27.0788912579957,
+        "rating": "fear",
+        "timestamp": "2026-10-27T00:00:00+00:00",
+        "fetchedAt": "2026-10-27T07:02:58.310Z",
+        "previous": {
+          "close": 27.0788912579957,
+          "week": 29.5714285714286,
+          "month": 36.9428571428571,
+          "year": 37.34285714285715
+        },
+        "source": {
+          "name": "CNN Fear & Greed Index",
+          "url": "https://www.cnn.com/markets/fear-and-greed",
+          "method": "cnn",
+          "dataUrl": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+          "mirrorUrl": null
+        },
+        "retrieval": {
+          "status": "retained",
+          "message": "来源时间早于已存档数据，保留较新值",
+          "errors": [
+            {
+              "source": "cnn",
+              "message": "HTTP 418"
+            }
+          ]
+        }
+      }
+    },
+    "verificationNote": "13项静态JSON均HTTP200且逐字节与本地一致；VIX官方18.39/10-26，CNN27.1/00:00Z；情绪接口保留较新值并保留CNN418及来源回退状态。公共内容此后无改动。"
   },
   "timingNote": "ops为实际墙钟跨度；首次预检/阅读无独立计时不补造；界面确认时间为最终观察后的记录时刻。 自动化实际在15:00前进入；首次news record被未来截止守卫拒绝，未推进任何游标，完成必要准备后再按真实时钟记录，不修改时钟或绕过守卫。",
   "recordRecovery": {
