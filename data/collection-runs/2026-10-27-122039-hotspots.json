@@ -1,6 +1,20 @@
 {
   "id": "2026-10-27-122039-hotspots",
-  "publication": {"status":"pending","scope":"35 ticker hotspots and collection prompt/window rules; fact cards and other pages unchanged"},
+  "publication": {
+    "status":"verified",
+    "contentCommit":"fab409aef801dff073e939c7f168c1fbd84f332a",
+    "deploymentId":"27d65350-6e89-4aad-9da8-4a7c2ef33a86",
+    "cloudflareCheck":"success",
+    "verifiedAt":"2026-10-27T04:34:04Z",
+    "scope":"35 ticker hotspots and collection prompt/window rules; fact cards and other pages unchanged",
+    "resources":[
+      {"path":"data/ticker-intelligence.json","sha256":"a2e7e7bf3dc361e0b722b5c9ab11ee2bad610bc24269154ad0041e833535b371","matchesLocal":true},
+      {"path":"config/ticker-intelligence.json","sha256":"7f87dd9dbe92822d181b2533f51788a1073288e365372e1e03c0377d49b383e4","matchesLocal":true}
+    ],
+    "visiblePage":"Production NVDA page showed the 12:20 hotspot cutoff and 201854/198619/190496/186686/149133 views; fact cutoff remained 08:00.",
+    "localVerification":"No local tests, check, build or preview run. Publication readback and production checks only.",
+    "boundary":"Manual publication does not verify the next scheduled run or global X ranking coverage."
+  },
   "cutoff": "2026-10-27T04:20:39.383Z",
   "windowStart": "2026-10-26T04:20:39.383Z",
   "startedAt": "2026-10-27T04:20:39.383Z",
