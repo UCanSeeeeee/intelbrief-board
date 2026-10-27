@@ -1,0 +1,19 @@
+{
+  "runId": "2026-10-27-2030",
+  "cutoff": "2026-10-27T20:30:00+08:00",
+  "results": [
+    {
+      "unit": "tickers:vrt:hotspots",
+      "start": "2026-10-26T12:30:00.000Z",
+      "end": "2026-10-27T12:30:00.000Z",
+      "status": "searched",
+      "queries": [
+        "给我过去24小时内包含“$VRT”的浏览量最高五个X帖子。除关键词和24小时外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。截止时间：2026-10-27T20:30:00+08:00。",
+        "本次榜单新帖只给了分钟，发布需要真实精确UTC秒，不能补00。请仅用X定向读取以下三帖并补齐作者、精确到秒的发帖时间、当前views，保留原文/排名，不做宽搜：https://x.com/marco__reed/status/2114826835825676615 、https://x.com/wallstengine/status/2115031477469798729 、https://x.com/TrkHr/status/2114824297780838897 。无法取得就明确缺失，不猜。"
+      ],
+      "note": "3条新帖初答只有分钟，经定向读取取得UTC秒及当前views；Shay/Banana同URL精确秒复用已核缓存，views用本轮新值；仅样本前五，非全X保证，部分初答称约数。",
+      "evidenceFile": "data/collection-runs/2026-10-27-2030.json"
+    }
+  ],
+  "pending": []
+}

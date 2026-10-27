@@ -1,38 +1,96 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27T00:48:02.764Z",
-  "cutoff": "2026-10-27T08:00:00+08:00",
+  "updatedAt": "2026-10-27T13:35:44.875Z",
+  "cutoff": "2026-10-27T20:30:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-27T08:00:00+08:00"
+        "status": "complete",
+        "note": "对象既定发现查询完成；2条新进展入选；重大证明缺证据，FTC/Cohere旧源补充发现仅审计，旧周榜保留。",
+        "cutoff": "2026-10-27T20:30:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-27T08:00:00+08:00"
+        "status": "complete",
+        "note": "对象既定发现查询完成；2条新进展入选；重大证明缺证据，FTC/Cohere旧源补充发现仅审计，旧周榜保留。",
+        "cutoff": "2026-10-27T20:30:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-27T08:00:00+08:00"
+        "status": "complete",
+        "note": "对象既定发现查询完成；2条新进展入选；重大证明缺证据，FTC/Cohere旧源补充发现仅审计，旧周榜保留。",
+        "cutoff": "2026-10-27T20:30:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-27T08:00:00+08:00"
+        "status": "complete",
+        "note": "对象既定发现查询完成；2条新进展入选；重大证明缺证据，FTC/Cohere旧源补充发现仅审计，旧周榜保留。",
+        "cutoff": "2026-10-27T20:30:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "ai-others-atria-dawn-full-weights-20261027",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "ModelScope宣布Atria Dawn完整版权重上线",
+      "fact": "ModelScope宣布Atria Dawn完整版已在平台上线，标注512K上下文、MIT许可，并提供完整及FP8权重。该项目已有预览版，本次更新是完整版权重。",
+      "whyItMatters": "可获取权重与许可条件影响研究和工程团队的自部署、适配与评估空间；实际表现和部署成本仍需独立验证。",
+      "counterCase": "这些是托管平台的发布声明；未把团队自报基准当外部验证，不声称项目今日首次出现。",
+      "affected": [
+        "开源模型研究与工程团队"
+      ],
+      "author": "ModelScope2022",
+      "publishedAt": "2026-10-27T08:00:12Z",
+      "url": "https://x.com/ModelScope2022/status/2114990532992651756",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "ai-others": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+      "originalText": "Atria Dawn’s full release is now on ModelScope with 512K context and open weights for research and engineering agents. MIT License ... Full and FP8 weights are available.",
+      "firstIncludedAt": "2026-10-27T13:35:44.875Z",
+      "lastMaterialAt": "2026-10-27T13:35:44.875Z",
+      "people": []
+    },
+    {
+      "eventKey": "goog-ai-argon-antigravity-rollout-20261027",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "Gemini 4 Argon开始向Antigravity IDE用户渐进推出",
+      "fact": "Rody Davis称Gemini 4 Argon开始向Antigravity IDE用户缓慢推出，并提示未来24小时留意更新。这是产品渠道的逐步开放，不是所有用户已即时可用。",
+      "whyItMatters": "IDE渠道扩大可用范围，可能让更多开发者接触模型并提供反馈；付费、使用量及生产率收益尚无本帖数据。",
+      "counterCase": "24小时是发布者给出的观察更新预期，不是已完成部署或全部账号保证。",
+      "affected": [
+        "Google",
+        "Antigravity IDE用户"
+      ],
+      "author": "Rody Davis（@rodydavis）",
+      "publishedAt": "2026-10-27T00:36:42Z",
+      "url": "https://x.com/rodydavis/status/2114878923360342066",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "goog-ai": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+      "originalText": "We are starting to slowly roll out Gemini 4 Argon to Antigravity IDE users. Be on the lookout for the update in the next 24hr!",
+      "firstIncludedAt": "2026-10-27T13:35:44.875Z",
+      "lastMaterialAt": "2026-10-27T13:35:44.875Z",
+      "people": [
+        {
+          "name": "Rody Davis",
+          "intro": "Google开发者关系成员"
+        }
+      ]
+    },
     {
       "eventKey": "openai-gpt61-terra-20261026",
       "tabIds": [
@@ -54,11 +112,11 @@
       "weeklyRanks": {
         "openai": 1
       },
-      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-      "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/",
+      "people": [],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
       "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "people": []
+      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+      "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/"
     },
     {
       "eventKey": "claude-nonprofits-plugin-20261026",
@@ -81,11 +139,11 @@
       "weeklyRanks": {
         "anthropic": 1
       },
-      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-      "originalText": "More than 25,000 nonprofits now use Claude. Most are small, local teams.\n\nWe’re expanding Claude for Nonprofits with a plugin built with around 30 of them, adding skills for fundraising, marketing, and hiring grounded in each team’s context and AI policy: https://claude.com/resources/articles/expanding-claude-for-nonprofits",
+      "people": [],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
       "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "people": []
+      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+      "originalText": "More than 25,000 nonprofits now use Claude. Most are small, local teams.\n\nWe’re expanding Claude for Nonprofits with a plugin built with around 30 of them, adding skills for fundraising, marketing, and hiring grounded in each team’s context and AI policy: https://claude.com/resources/articles/expanding-claude-for-nonprofits"
     },
     {
       "eventKey": "anthropic-s1-20261026",
@@ -108,11 +166,11 @@
       "weeklyRanks": {
         "anthropic": 2
       },
-      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-      "originalText": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.\n\nRead more: https://www.anthropic.com/news/s1-sec\n\nLegal disclaimer: A registration statement relating to these securities has been filed with the SEC but has not yet become effective. These securities may not be sold, nor may offers to buy be accepted, prior to the time the registration statement becomes effective. This post does not constitute an offer to sell or the solicitation of an offer to buy these securities, nor shall there be any sale of these securities in any state or jurisdiction in which such offer, solicitation or sale would be unlawful prior to registration or qualification under the securities laws of any such state or jurisdiction.",
+      "people": [],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
       "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "people": []
+      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+      "originalText": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.\n\nRead more: https://www.anthropic.com/news/s1-sec\n\nLegal disclaimer: A registration statement relating to these securities has been filed with the SEC but has not yet become effective. These securities may not be sold, nor may offers to buy be accepted, prior to the time the registration statement becomes effective. This post does not constitute an offer to sell or the solicitation of an offer to buy these securities, nor shall there be any sale of these securities in any state or jurisdiction in which such offer, solicitation or sale would be unlawful prior to registration or qualification under the securities laws of any such state or jurisdiction."
     },
     {
       "eventKey": "kimi-k31-pro-quota-reset-20261025",
@@ -133,7 +191,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 1
+        "ai-others": 2
       },
       "people": [],
       "firstIncludedAt": "2026-10-26T00:49:40.898Z",
@@ -188,7 +246,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 2
+        "ai-others": 3
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -215,7 +273,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog-ai": 1
+        "goog-ai": 2
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -255,6 +313,78 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "ai-others-atria-dawn-full-weights-20261027",
+        "tabIds": [
+          "ai-others"
+        ],
+        "title": "ModelScope宣布Atria Dawn完整版权重上线",
+        "fact": "ModelScope宣布Atria Dawn完整版已在平台上线，标注512K上下文、MIT许可，并提供完整及FP8权重。该项目已有预览版，本次更新是完整版权重。",
+        "whyItMatters": "可获取权重与许可条件影响研究和工程团队的自部署、适配与评估空间；实际表现和部署成本仍需独立验证。",
+        "counterCase": "这些是托管平台的发布声明；未把团队自报基准当外部验证，不声称项目今日首次出现。",
+        "affected": [
+          "开源模型研究与工程团队"
+        ],
+        "author": "ModelScope2022",
+        "publishedAt": "2026-10-27T08:00:12Z",
+        "url": "https://x.com/ModelScope2022/status/2114990532992651756",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "ai-others": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+        "originalText": "Atria Dawn’s full release is now on ModelScope with 512K context and open weights for research and engineering agents. MIT License ... Full and FP8 weights are available.",
+        "firstIncludedAt": "2026-10-27T13:35:44.875Z",
+        "lastMaterialAt": "2026-10-27T13:35:44.875Z",
+        "people": []
+      },
+      "tabIds": [
+        "ai-others"
+      ],
+      "at": "2026-10-27T13:35:44.875Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "goog-ai-argon-antigravity-rollout-20261027",
+        "tabIds": [
+          "goog-ai"
+        ],
+        "title": "Gemini 4 Argon开始向Antigravity IDE用户渐进推出",
+        "fact": "Rody Davis称Gemini 4 Argon开始向Antigravity IDE用户缓慢推出，并提示未来24小时留意更新。这是产品渠道的逐步开放，不是所有用户已即时可用。",
+        "whyItMatters": "IDE渠道扩大可用范围，可能让更多开发者接触模型并提供反馈；付费、使用量及生产率收益尚无本帖数据。",
+        "counterCase": "24小时是发布者给出的观察更新预期，不是已完成部署或全部账号保证。",
+        "affected": [
+          "Google",
+          "Antigravity IDE用户"
+        ],
+        "author": "Rody Davis（@rodydavis）",
+        "publishedAt": "2026-10-27T00:36:42Z",
+        "url": "https://x.com/rodydavis/status/2114878923360342066",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "goog-ai": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+        "originalText": "We are starting to slowly roll out Gemini 4 Argon to Antigravity IDE users. Be on the lookout for the update in the next 24hr!",
+        "firstIncludedAt": "2026-10-27T13:35:44.875Z",
+        "lastMaterialAt": "2026-10-27T13:35:44.875Z",
+        "people": [
+          {
+            "name": "Rody Davis",
+            "intro": "Google开发者关系成员"
+          }
+        ]
+      },
+      "tabIds": [
+        "goog-ai"
+      ],
+      "at": "2026-10-27T13:35:44.875Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "openai-gpt61-terra-20261026",
         "tabIds": [
           "openai"
@@ -275,11 +405,11 @@
         "weeklyRanks": {
           "openai": 1
         },
-        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-        "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/",
+        "people": [],
         "firstIncludedAt": "2026-10-27T00:48:02.764Z",
         "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-        "people": []
+        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+        "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/"
       },
       "tabIds": [
         "openai"
@@ -309,11 +439,11 @@
         "weeklyRanks": {
           "anthropic": 1
         },
-        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-        "originalText": "More than 25,000 nonprofits now use Claude. Most are small, local teams.\n\nWe’re expanding Claude for Nonprofits with a plugin built with around 30 of them, adding skills for fundraising, marketing, and hiring grounded in each team’s context and AI policy: https://claude.com/resources/articles/expanding-claude-for-nonprofits",
+        "people": [],
         "firstIncludedAt": "2026-10-27T00:48:02.764Z",
         "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-        "people": []
+        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+        "originalText": "More than 25,000 nonprofits now use Claude. Most are small, local teams.\n\nWe’re expanding Claude for Nonprofits with a plugin built with around 30 of them, adding skills for fundraising, marketing, and hiring grounded in each team’s context and AI policy: https://claude.com/resources/articles/expanding-claude-for-nonprofits"
       },
       "tabIds": [
         "anthropic"
@@ -343,11 +473,11 @@
         "weeklyRanks": {
           "anthropic": 2
         },
-        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-        "originalText": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.\n\nRead more: https://www.anthropic.com/news/s1-sec\n\nLegal disclaimer: A registration statement relating to these securities has been filed with the SEC but has not yet become effective. These securities may not be sold, nor may offers to buy be accepted, prior to the time the registration statement becomes effective. This post does not constitute an offer to sell or the solicitation of an offer to buy these securities, nor shall there be any sale of these securities in any state or jurisdiction in which such offer, solicitation or sale would be unlawful prior to registration or qualification under the securities laws of any such state or jurisdiction.",
+        "people": [],
         "firstIncludedAt": "2026-10-27T00:48:02.764Z",
         "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-        "people": []
+        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+        "originalText": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.\n\nRead more: https://www.anthropic.com/news/s1-sec\n\nLegal disclaimer: A registration statement relating to these securities has been filed with the SEC but has not yet become effective. These securities may not be sold, nor may offers to buy be accepted, prior to the time the registration statement becomes effective. This post does not constitute an offer to sell or the solicitation of an offer to buy these securities, nor shall there be any sale of these securities in any state or jurisdiction in which such offer, solicitation or sale would be unlawful prior to registration or qualification under the securities laws of any such state or jurisdiction."
       },
       "tabIds": [
         "anthropic"
@@ -375,7 +505,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "ai-others": 1
+          "ai-others": 2
         },
         "people": [],
         "firstIncludedAt": "2026-10-26T00:49:40.898Z",
@@ -444,7 +574,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "ai-others": 2
+          "ai-others": 3
         },
         "people": [],
         "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -478,7 +608,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "goog-ai": 1
+          "goog-ai": 2
         },
         "people": [],
         "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -526,7 +656,5 @@
       "at": "2026-10-24T08:13:25.347Z",
       "legacy": false
     }
-  ],
-  "lastAttemptAt": "2026-10-27T07:01:22.458Z",
-  "attemptedCutoff": "2026-10-27T15:00:00+08:00"
+  ]
 }

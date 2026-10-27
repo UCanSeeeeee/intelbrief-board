@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T12:43:12.281Z",
+  "updatedAt": "2026-10-27T13:32:42.802Z",
   "editions": [
     {
       "date": "2026-10-19",
@@ -1343,6 +1343,159 @@
           "site.fda.gov \"Statistical Approaches to Establishing Bioequivalence\" correction May 2026"
         ],
         "checkedAt": "2026-10-26T12:41:15.821Z"
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "items": [
+        {
+          "id": "20261027-lifestyle-mutation",
+          "knowledgeKey": "mutation-dependent-lifestyle-response",
+          "topic": "健康",
+          "title": "同样的生活方式干预，也可能因突变类型而异",
+          "intuition": "一种干预对某类异常细胞有效，就该对同类问题都有效。",
+          "fact": "一项造血研究中，人体活动量仅与部分突变克隆较少相关；小鼠的睡眠和运动干预也未对所有突变产生同样作用。",
+          "explanation": "相似的表面现象可能由不同生物通路驱动，干预效果未必能跨类型复制。",
+          "boundary": "人体部分是观察数据，因果机制主要来自小鼠；不能据此给个人制定治疗方案。",
+          "people": [],
+          "sources": [
+            {
+              "label": "官方摘要与图注",
+              "publisher": "Nature",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42271062/",
+              "publishedDate": "2026-06-10",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-27T00:43:40.170Z",
+              "reviewScope": "独立核对PubMed官方摘要、作者/日期与公开扩展图注节选；Nature索引元数据。未取得完整方法及补充材料，不声称读过全文。",
+              "correctionCheck": {
+                "checkedAt": "2026-10-27T00:43:40.170Z",
+                "status": "no-notice-found",
+                "note": "PubMed XML无更正/撤稿关联，定向DOI查询未见明确通知；不是穷尽或独立复现证明。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "20261027-clicks-behavior",
+          "knowledgeKey": "online-click-is-not-verified-behavior",
+          "topic": "生活",
+          "title": "网上点击增加，不等于现实行动增加同样多",
+          "intuition": "更多人点了“已投票”，就说明多出同样多的人真的投票。",
+          "fact": "一次2010年随机实验中，朋友头像使按钮点击增加2.08个百分点；可核投票相对无提示组只增加0.39个百分点。",
+          "explanation": "自我表达与实际行动是不同测量，不能把一个指标的变化直接替换成另一个。",
+          "boundary": "真实投票只在可匹配公开记录的子样本中核对；单一平台和选举情境不能代表所有行为。",
+          "people": [],
+          "sources": [
+            {
+              "label": "合法作者稿",
+              "publisher": "Nature",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3834737/",
+              "publishedDate": "2012-09-12",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-27T00:43:40.170Z",
+              "reviewScope": "独立阅读PMC合法作者稿的对象、分组、方法、结果及局限正文主要段落；未读补充PDF。Crossref核对首次在线2012-09-12，印刷日期2012-09-13。",
+              "correctionCheck": {
+                "checkedAt": "2026-10-27T00:43:40.170Z",
+                "status": "comment-only",
+                "note": "PubMed关联为CommentIn，非更正或撤稿；定向查询未发现正式撤稿/更正。未宣称完成全部复现综述。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "20261027-evidence-dialogue",
+          "knowledgeKey": "beliefs-can-change-with-specific-dialogue",
+          "topic": "行为认知",
+          "title": "看似顽固的信念，也可能回应具体证据",
+          "intuition": "一旦相信某种阴谋说法，再提供证据也不会改变。",
+          "fact": "两个美国成人实验里，针对本人理由的三轮对话比无关主题对话更能降低信念评分；正式更正后主效应仍保留。",
+          "explanation": "具体回应一个人的证据与理由，可能比笼统反驳更有用；不等于任何对话都有效。",
+          "boundary": "更正削弱了一项次要比较，不能说只改变错误信念；量表变化也不证明现实行为随之改变。",
+          "people": [],
+          "sources": [
+            {
+              "label": "正式更正",
+              "publisher": "Science",
+              "url": "https://www.science.org/doi/10.1126/science.aem1178",
+              "publishedDate": "2024-09-13",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-27T00:43:40.170Z",
+              "reviewScope": "独立阅读Science公开结构化摘要、编辑摘要及正式免费更正全文；核对PubMed原始、关注和更正关联。未越过原文登录全文门槛、未下载或重跑更正代码包。",
+              "correctionCheck": [
+                {
+                  "doi": "10.1126/science.aej2383",
+                  "date": "2026-06-11",
+                  "type": "editorial-expression-of-concern",
+                  "status": "rescinded"
+                },
+                {
+                  "doi": "10.1126/science.aem1178",
+                  "date": "2026-10-22",
+                  "type": "erratum",
+                  "readScope": "full-text",
+                  "impact": "主效应保持，次要真实/虚假子组差异不显著，编辑关注撤销"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "20261027-or-not-rr",
+          "knowledgeKey": "odds-ratio-is-not-risk-ratio",
+          "topic": "统计",
+          "title": "比值比翻倍，不等于发生概率翻倍",
+          "intuition": "研究写“比值比为2”，就是发生概率变成两倍。",
+          "fact": "风险比比较概率，比值比比较“发生与不发生”的比值。教学计算中，概率从50%到70%，风险比为1.4，比值比却约为2.33。",
+          "explanation": "分母不同，结局越常见，两个数字越可能明显分离。",
+          "boundary": "两组结局都很少见时二者才常接近；抽样设计仍重要，病例对照样本不能直接当总体风险。",
+          "people": [],
+          "sources": [
+            {
+              "label": "STAT 504：相对风险与比值比",
+              "publisher": "Penn State Department of Statistics",
+              "url": "https://online.stat.psu.edu/stat504/Lesson03.html",
+              "publishedDate": null,
+              "dateNote": "现页未标明准确首次发表或修订日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-27T13:30:47.966601+00:00",
+              "reviewScope": "STAT504第3章3.5相对风险定义、3.6比值比定义/罕见结局近似性质节选；未阅读全章。"
+            }
+          ]
+        },
+        {
+          "id": "20261027-prediction-interval",
+          "knowledgeKey": "prediction-interval-versus-mean-interval",
+          "topic": "统计",
+          "title": "平均值估得很准，也可能猜不准下一个个体",
+          "intuition": "平均预测的区间很窄，下一次结果也该落在那条窄带里。",
+          "fact": "NIST区分平均响应的置信区间与单次新观察的预测区间。后者还包含新观察自身的随机波动，通常更宽。",
+          "explanation": "更多数据能压低均值估计误差，却未必消除个体差异。",
+          "boundary": "需比较同一模型、输入与置信水平；模型错误、外推或误差假设不合适时，区间覆盖会失真。",
+          "people": [],
+          "sources": [
+            {
+              "label": "NIST：单次新观察的预测不确定度",
+              "publisher": "NIST/SEMATECH e-Handbook",
+              "url": "https://www.itl.nist.gov/div898/handbook/pmd/section5/pmd512.htm",
+              "publishedDate": null,
+              "dateNote": "现页未标明准确首次发表或修订日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-27T13:30:47.966601+00:00",
+              "reviewScope": "NIST4.5.1.2定义、预测方差合成公式及与均值置信区间比较节选；未逐项核算工程实例。"
+            }
+          ]
+        }
+      ],
+      "coverage": {
+        "status": "complete",
+        "note": "5个不同知识点，3条复用已核论文真实时间与更正，2条Grok先发现后直读官方统计教育资料；课程旧路径跳转与web timeout如实记录。不凑同一研究的五条。",
+        "queries": [
+          "仅每日学习统计科普来源发现，不采X新闻、不找新论文：请各找一份原始官方教育资料并给可访问的准确HTTPS页面与关键段落。A大学统计课程（如Penn State STAT504）解释odds ratio不等于risk ratio，常见结局时可差很多；B NIST统计手册解释单个新观察的prediction interval与均值响应的confidence interval为何宽度不同。只用大学/NIST官方，不用转载博客。分别说明公式适用假设/反例边界、页面日期若未知明确未知；不要编阅读范围。另三条健康/生活小知识已复用本日核验论文，无须重新发现。",
+          "直接核对STAT504 Lesson03第3.5/3.6及3.7边界",
+          "直接核对NIST pmd512并以pmd511/pmd132交叉检查预测目标和误差假设",
+          "site:online.stat.psu.edu/stat504/Lesson03.html odds ratio relative risk correction"
+        ],
+        "checkedAt": "2026-10-27T13:32:29.775866+00:00"
       }
     }
   ]

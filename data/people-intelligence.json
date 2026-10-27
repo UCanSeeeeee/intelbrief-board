@@ -1,44 +1,155 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27T00:48:02.764Z",
-  "cutoff": "2026-10-27T08:00:00+08:00",
+  "updatedAt": "2026-10-27T13:35:44.847Z",
+  "cutoff": "2026-10-27T20:30:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-27T08:00:00+08:00"
+        "status": "complete",
+        "note": "逐对象价值与无主题热度查询已完成；Elon新增3热度，原2规则及有效周榜保留；Trump奖励摘要同事件合并；Jensen归因不足待核；合集无合格新增。",
+        "cutoff": "2026-10-27T20:30:00+08:00"
       },
       {
         "id": "jensen-huang",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-27T08:00:00+08:00"
+        "status": "partial",
+        "note": "逐对象价值与无主题热度查询已完成；Elon新增3热度，原2规则及有效周榜保留；Trump奖励摘要同事件合并；Jensen归因不足待核；合集无合格新增。",
+        "cutoff": "2026-10-27T20:30:00+08:00"
       },
       {
         "id": "donald-trump",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-27T08:00:00+08:00"
+        "status": "complete",
+        "note": "逐对象价值与无主题热度查询已完成；Elon新增3热度，原2规则及有效周榜保留；Trump奖励摘要同事件合并；Jensen归因不足待核；合集无合格新增。",
+        "cutoff": "2026-10-27T20:30:00+08:00"
       },
       {
         "id": "trillion-leaders",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-27T08:00:00+08:00"
+        "status": "complete",
+        "note": "逐对象价值与无主题热度查询已完成；Elon新增3热度，原2规则及有效周榜保留；Trump奖励摘要同事件合并；Jensen归因不足待核；合集无合格新增。",
+        "cutoff": "2026-10-27T20:30:00+08:00"
       },
       {
         "id": "research-reports",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-27T08:00:00+08:00"
+        "status": "complete",
+        "note": "逐对象价值与无主题热度查询已完成；Elon新增3热度，原2规则及有效周榜保留；Trump奖励摘要同事件合并；Jensen归因不足待核；合集无合格新增。",
+        "cutoff": "2026-10-27T20:30:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "elon-2114967042952687676",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk用简短回复表示赞同一段政治视频",
+      "fact": "Elon Musk转发一段政治视频并回复“He’s right”，表达个人赞同。",
+      "whyItMatters": "这是一条个人立场动态，未提供新的公司经营或政策执行事实。",
+      "counterCase": "热度仅反映本轮返回互动；上下文与主张不作为已核政策或产品能力。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-27T06:26:51Z",
+      "url": "https://x.com/elonmusk/status/2114967042952687676",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+      "originalText": "He’s right",
+      "firstIncludedAt": "2026-10-27T13:35:44.847Z",
+      "lastMaterialAt": "2026-10-27T13:35:44.847Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 10992,
+        "reposts": 1548,
+        "replies": 852,
+        "quotes": 62,
+        "views": 1452279,
+        "capturedAt": "2026-10-27T12:45:45.043203+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-2114945910648225841",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk提出机器人动作设想",
+      "fact": "Elon Musk设想机器人一手组装手表、一手接高速棒球，还提到在独轮车上抛接燃烧的电锯。",
+      "whyItMatters": "这些表述是能力设想，未构成已完成演示或商业交付的证据。",
+      "counterCase": "热度仅反映本轮返回互动；上下文与主张不作为已核政策或产品能力。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-27T05:02:53Z",
+      "url": "https://x.com/elonmusk/status/2114945910648225841",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+      "originalText": "How about the robot is looking down while assembling a Swiss watch with one hand and then, without looking up, catches an oblique 100mph baseball with the other hand?",
+      "firstIncludedAt": "2026-10-27T13:35:44.847Z",
+      "lastMaterialAt": "2026-10-27T13:35:44.847Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 8957,
+        "reposts": 376,
+        "replies": 747,
+        "quotes": 159,
+        "views": 555280,
+        "capturedAt": "2026-10-27T12:45:45.043218+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "elon-2114936152205697247",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk分享Cybercab视频",
+      "fact": "Elon Musk在引用Cybercab视频时写道“A Storm of Cybercabs”。",
+      "whyItMatters": "视频传播体现其产品宣传重点，不能据此认定量产、交付或无人驾驶许可已有新进展。",
+      "counterCase": "热度仅反映本轮返回互动；上下文与主张不作为已核政策或产品能力。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-27T04:24:06Z",
+      "url": "https://x.com/elonmusk/status/2114936152205697247",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+      "originalText": "A Storm of Cybercabs",
+      "firstIncludedAt": "2026-10-27T13:35:44.847Z",
+      "lastMaterialAt": "2026-10-27T13:35:44.847Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 10020,
+        "reposts": 1158,
+        "replies": 961,
+        "quotes": 136,
+        "views": 1491787,
+        "capturedAt": "2026-10-27T12:45:45.043214+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
     {
       "eventKey": "wh-cheesecake-accomplishments-20261026",
       "tabIds": [
@@ -57,10 +168,16 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
-      "originalText": "Since we're talking about The Cheesecake Factory... The only thing bigger than the menu is the list of President Trump's accomplishments. 🤫",
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
       "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+      "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
+      "originalText": "Since we're talking about The Cheesecake Factory... The only thing bigger than the menu is the list of President Trump's accomplishments. 🤫",
       "selection": "engagement",
       "engagement": {
         "likes": 20002,
@@ -69,13 +186,7 @@
         "quotes": 272,
         "capturedAt": "2026-10-27T00:15:42.890Z",
         "source": "Grok网页版Expert X工具实际返回；非执行器独立直读"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "wh-voter-fraud-1m-20261026",
@@ -95,10 +206,16 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
-      "originalText": "\"Anybody reporting Voter Fraud in the past Elections, or the upcoming 2026 Midterm Election, will be paid $1,000,000 upon the arrest and conviction of those that created the Fraud!\" - President Donald J. Trump 🇺🇸",
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
       "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+      "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
+      "originalText": "\"Anybody reporting Voter Fraud in the past Elections, or the upcoming 2026 Midterm Election, will be paid $1,000,000 upon the arrest and conviction of those that created the Fraud!\" - President Donald J. Trump 🇺🇸",
       "selection": "engagement",
       "engagement": {
         "likes": 16881,
@@ -107,51 +224,7 @@
         "quotes": 621,
         "capturedAt": "2026-10-27T00:15:42.890Z",
         "source": "Grok网页版Expert X工具实际返回；非执行器独立直读"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-im-trying-20261026",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk回应有关其政治行动的评论",
-      "fact": "Elon Musk对一则有关其政治影响的评论回复“我在努力”，没有在该条回复中给出新的具体行动安排。",
-      "whyItMatters": "回复延续其参与公共政治议题的立场；短句没有可用于衡量资金或行动规模的细节。",
-      "counterCase": "互动量仅代表注意力；具体主张和执行状态须有独立证据。",
-      "affected": [
-        "Elon Musk公开动态"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-26T17:41:40Z",
-      "url": "https://x.com/elonmusk/status/2114774477867192724",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
-      "originalText": "I’m trying",
-      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 67539,
-        "reposts": 3034,
-        "replies": 3418,
-        "quotes": 148,
-        "capturedAt": "2026-10-27T00:15:42.890Z",
-        "source": "Grok网页版Expert X工具实际返回；非执行器独立直读"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "elon-supervised-fsd-latvia-20261026",
@@ -186,82 +259,6 @@
         "quotes": 70,
         "capturedAt": "2026-10-27T00:17:24.060Z",
         "source": "Grok网页版Expert X工具实际返回"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-eyeroll-vdl-20261026",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk以表情回应巴西选举祝贺帖",
-      "fact": "Elon Musk回复一则祝贺巴西选举胜者的帖子，仅使用翻白眼表情，没有进一步文字说明。",
-      "whyItMatters": "表情回应呈现其对相关外交祝贺的态度，没有提出新的经济政策。",
-      "counterCase": "互动量仅代表注意力；具体主张和执行状态须有独立证据。",
-      "affected": [
-        "Elon Musk公开动态"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-26T13:59:23Z",
-      "url": "https://x.com/elonmusk/status/2114718538858725380",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
-      "originalText": "🙄",
-      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 58021,
-        "reposts": 2053,
-        "replies": 1093,
-        "quotes": 67,
-        "capturedAt": "2026-10-27T00:15:42.890Z",
-        "source": "Grok网页版Expert X工具实际返回；非执行器独立直读"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "elon-math-brazil-20261026",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk质疑一则巴西选举计票讨论",
-      "fact": "Elon Musk回复一则巴西选举计票讨论：“数字对不上”。这是对所引内容的质疑，所涉票数未经独立核验，不能据此认定计票存在问题。",
-      "whyItMatters": "这一回复反映Musk参与选举公信力争论的公开立场，未给出新的商业或政策安排。",
-      "counterCase": "互动量仅代表注意力；具体主张和执行状态须有独立证据。",
-      "affected": [
-        "Elon Musk公开动态"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-26T13:56:39Z",
-      "url": "https://x.com/elonmusk/status/2114717848518144177",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
-      "originalText": "Math doesn’t add up",
-      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 98273,
-        "reposts": 15134,
-        "replies": 6587,
-        "quotes": 806,
-        "capturedAt": "2026-10-27T00:15:42.890Z",
-        "source": "Grok网页版Expert X工具实际返回；非执行器独立直读"
       },
       "people": [
         {
@@ -309,44 +306,6 @@
         {
           "name": "Elon Musk",
           "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "wh-chiricahua-park-20261026",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse发布Donald Trump关于Chiricahua公园的宣布",
-      "fact": "WhiteHouse引述Donald Trump，宣布亚利桑那州Chiricahua为新国家公园。所核内容是官方账号发布的讲话，未核清相关法定程序及执行细节。",
-      "whyItMatters": "公告涉及公园地位及地方公共管理；本帖的发布时间不能代替法定成立或实施日期。",
-      "counterCase": "互动量仅代表注意力；具体主张和执行状态须有独立证据。",
-      "affected": [
-        "美国政府公开动态"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-26T00:04:49Z",
-      "url": "https://x.com/WhiteHouse/status/2114508511367540889",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
-      "originalText": "“I am proud to announce the NEWEST FLAGSHIP NATIONAL PARK in the Country, CHIRICAHUA NATIONAL PARK in ARIZONA!… We are MAKING OUR PARKS, AND ARIZONA, GREAT AGAIN!” - President DONALD J. TRUMP",
-      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 8501,
-        "reposts": 1416,
-        "replies": 560,
-        "quotes": 51,
-        "capturedAt": "2026-10-27T00:15:42.890Z",
-        "source": "Grok网页版Expert X工具实际返回；非执行器独立直读"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
         }
       ]
     },
@@ -693,40 +652,6 @@
       }
     },
     {
-      "eventKey": "trump-usda-harvest-relief-20261020",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "农业部公布80亿美元农户援助计划",
-      "fact": "美国农业部宣布，Donald Trump政府推出 Harvest Fuel Relief Program，提供80亿美元用于向农户一次性付款，帮助覆盖2026作物年部分估计损失。补助金额依据种植面积、生产成本、产量和价格等计算；行作物补助费率将在11月公布，申请尚待开放。",
-      "whyItMatters": "援助可能缓解农户成本和现金流压力，传导至农业机械、投入品及运输需求；实际影响取决于覆盖范围、申请条件和支付时间。",
-      "counterCase": "宣布资金可用不等于农户已收到款项；具体费率和执行时间仍未明确。",
-      "affected": [
-        "农业",
-        "农机与投入品",
-        "财政支出"
-      ],
-      "author": "@USDA（美国农业部）",
-      "publishedAt": "2026-10-20T01:21:43Z",
-      "url": "https://x.com/USDA/status/2112353534914019545",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "donald-trump": 2
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ],
-      "firstIncludedAt": "2026-10-24T09:25:42.400Z",
-      "lastMaterialAt": "2026-10-24T09:25:42.400Z",
-      "eventTimeNote": "官方帖于2026年10月20日称当日宣布；精确宣布时刻未知，实际支付尚未确认。",
-      "excerpt": "Today, @POTUS and @SecRollins announced the Harvest Fuel Relief Program — making $8 BILLION available for one-time payments to farmers facing higher costs and market disruptions. Payments to help cover a portion of estimated losses for the 2026 crop year. Row crop payment rates announced in November.",
-      "selection": "rule"
-    },
-    {
       "eventKey": "gs-pb-ai-deleveraging-research-2026-10-17",
       "tabIds": [
         "research-reports"
@@ -1053,6 +978,138 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "elon-2114967042952687676",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk用简短回复表示赞同一段政治视频",
+        "fact": "Elon Musk转发一段政治视频并回复“He’s right”，表达个人赞同。",
+        "whyItMatters": "这是一条个人立场动态，未提供新的公司经营或政策执行事实。",
+        "counterCase": "热度仅反映本轮返回互动；上下文与主张不作为已核政策或产品能力。",
+        "affected": [],
+        "author": "elonmusk",
+        "publishedAt": "2026-10-27T06:26:51Z",
+        "url": "https://x.com/elonmusk/status/2114967042952687676",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+        "originalText": "He’s right",
+        "firstIncludedAt": "2026-10-27T13:35:44.847Z",
+        "lastMaterialAt": "2026-10-27T13:35:44.847Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 10992,
+          "reposts": 1548,
+          "replies": 852,
+          "quotes": 62,
+          "views": 1452279,
+          "capturedAt": "2026-10-27T12:45:45.043203+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-27T13:35:44.847Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "elon-2114945910648225841",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk提出机器人动作设想",
+        "fact": "Elon Musk设想机器人一手组装手表、一手接高速棒球，还提到在独轮车上抛接燃烧的电锯。",
+        "whyItMatters": "这些表述是能力设想，未构成已完成演示或商业交付的证据。",
+        "counterCase": "热度仅反映本轮返回互动；上下文与主张不作为已核政策或产品能力。",
+        "affected": [],
+        "author": "elonmusk",
+        "publishedAt": "2026-10-27T05:02:53Z",
+        "url": "https://x.com/elonmusk/status/2114945910648225841",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+        "originalText": "How about the robot is looking down while assembling a Swiss watch with one hand and then, without looking up, catches an oblique 100mph baseball with the other hand?",
+        "firstIncludedAt": "2026-10-27T13:35:44.847Z",
+        "lastMaterialAt": "2026-10-27T13:35:44.847Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 8957,
+          "reposts": 376,
+          "replies": 747,
+          "quotes": 159,
+          "views": 555280,
+          "capturedAt": "2026-10-27T12:45:45.043218+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-27T13:35:44.847Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "elon-2114936152205697247",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk分享Cybercab视频",
+        "fact": "Elon Musk在引用Cybercab视频时写道“A Storm of Cybercabs”。",
+        "whyItMatters": "视频传播体现其产品宣传重点，不能据此认定量产、交付或无人驾驶许可已有新进展。",
+        "counterCase": "热度仅反映本轮返回互动；上下文与主张不作为已核政策或产品能力。",
+        "affected": [],
+        "author": "elonmusk",
+        "publishedAt": "2026-10-27T04:24:06Z",
+        "url": "https://x.com/elonmusk/status/2114936152205697247",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+        "originalText": "A Storm of Cybercabs",
+        "firstIncludedAt": "2026-10-27T13:35:44.847Z",
+        "lastMaterialAt": "2026-10-27T13:35:44.847Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 10020,
+          "reposts": 1158,
+          "replies": 961,
+          "quotes": 136,
+          "views": 1491787,
+          "capturedAt": "2026-10-27T12:45:45.043214+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-27T13:35:44.847Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "wh-cheesecake-accomplishments-20261026",
         "tabIds": [
           "donald-trump"
@@ -1070,10 +1127,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
-        "originalText": "Since we're talking about The Cheesecake Factory... The only thing bigger than the menu is the list of President Trump's accomplishments. 🤫",
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ],
         "firstIncludedAt": "2026-10-27T00:48:02.764Z",
         "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+        "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
+        "originalText": "Since we're talking about The Cheesecake Factory... The only thing bigger than the menu is the list of President Trump's accomplishments. 🤫",
         "selection": "engagement",
         "engagement": {
           "likes": 20002,
@@ -1082,13 +1145,7 @@
           "quotes": 272,
           "capturedAt": "2026-10-27T00:15:42.890Z",
           "source": "Grok网页版Expert X工具实际返回；非执行器独立直读"
-        },
-        "people": [
-          {
-            "name": "Donald Trump",
-            "intro": "美国总统"
-          }
-        ]
+        }
       },
       "tabIds": [
         "donald-trump"
@@ -1115,10 +1172,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
-        "originalText": "\"Anybody reporting Voter Fraud in the past Elections, or the upcoming 2026 Midterm Election, will be paid $1,000,000 upon the arrest and conviction of those that created the Fraud!\" - President Donald J. Trump 🇺🇸",
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ],
         "firstIncludedAt": "2026-10-27T00:48:02.764Z",
         "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+        "eventTimeNote": "事件实际时点未确认，保留发帖时间。",
+        "originalText": "\"Anybody reporting Voter Fraud in the past Elections, or the upcoming 2026 Midterm Election, will be paid $1,000,000 upon the arrest and conviction of those that created the Fraud!\" - President Donald J. Trump 🇺🇸",
         "selection": "engagement",
         "engagement": {
           "likes": 16881,
@@ -1127,13 +1190,7 @@
           "quotes": 621,
           "capturedAt": "2026-10-27T00:15:42.890Z",
           "source": "Grok网页版Expert X工具实际返回；非执行器独立直读"
-        },
-        "people": [
-          {
-            "name": "Donald Trump",
-            "intro": "美国总统"
-          }
-        ]
+        }
       },
       "tabIds": [
         "donald-trump"
@@ -2066,7 +2123,5 @@
       "at": "2026-10-25T00:48:21.507Z",
       "legacy": false
     }
-  ],
-  "lastAttemptAt": "2026-10-27T07:01:22.445Z",
-  "attemptedCutoff": "2026-10-27T15:00:00+08:00"
+  ]
 }
