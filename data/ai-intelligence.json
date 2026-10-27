@@ -1,38 +1,119 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T00:49:40.898Z",
-  "cutoff": "2026-10-26T08:00:00+08:00",
+  "updatedAt": "2026-10-27T00:48:02.764Z",
+  "cutoff": "2026-10-27T08:00:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-26T08:00:00+08:00"
+        "status": "complete",
+        "note": "独立发现完成，新原帖及限制核验、同轮缓存反证已保存，保留官方自述与未核边界。",
+        "cutoff": "2026-10-27T08:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-26T08:00:00+08:00"
+        "status": "complete",
+        "note": "独立发现完成，新原帖及限制核验、同轮缓存反证已保存，保留官方自述与未核边界。",
+        "cutoff": "2026-10-27T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-26T08:00:00+08:00"
+        "status": "complete",
+        "note": "实际查询完成，未取到新合格候选；无候选后两阶段跳过，保留旧有效周榜。",
+        "cutoff": "2026-10-27T08:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-26T08:00:00+08:00"
+        "status": "complete",
+        "note": "实际查询完成，未取到新合格候选；无候选后两阶段跳过，保留旧有效周榜。",
+        "cutoff": "2026-10-27T08:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "openai-gpt61-terra-20261026",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI发布GPT-6.1 Terra，公布Work、Codex及API开放范围",
+      "fact": "OpenAI发布GPT-6.1 Terra，强调屏幕理解与跨应用操作。官方表示正向ChatGPT Work和Codex的Plus、Pro、Enterprise及Edu用户推出，开发者可通过gpt-6.1-terra使用API；标准API价格较GPT-5.6 Terra降低50%。",
+      "whyItMatters": "更低单价与计算机操作能力可能降低应用工作流门槛。实际成本仍受token用量、重试和工具费用影响；官方基准及折扣不能替代客户任务表现与总成本比较。",
+      "counterCase": "未核逐步推出完成度、全部地区或未列计划；不把50%标准单价折扣等同每项任务成本减半。",
+      "affected": [
+        "AI模型服务",
+        "企业AI应用"
+      ],
+      "author": "OpenAI",
+      "publishedAt": "2026-10-26T18:06:29Z",
+      "url": "https://x.com/OpenAI/status/2114780720170164735",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "openai": 1
+      },
+      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+      "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/",
+      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
+      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+      "people": []
+    },
+    {
+      "eventKey": "claude-nonprofits-plugin-20261026",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Claude for Nonprofits增加募款、营销与招聘插件",
+      "fact": "Claude官方产品账号称，超过2.5万家非营利组织正在使用Claude，多为小型本地团队；现扩展Claude for Nonprofits，加入与约30家组织共同构建的插件，支持结合团队背景及AI政策的募款、营销和招聘技能。",
+      "whyItMatters": "这把模型能力包装为具体组织工作流，可降低小团队配置门槛。是否转为付费采用、节省人工或新增收入，还需要使用强度和结果证据。",
+      "counterCase": "2.5万家是官方使用组织自述，未分付费、活跃或试用；插件资格、计划覆盖及具体开放节奏未说明。",
+      "affected": [
+        "AI模型服务",
+        "企业AI应用"
+      ],
+      "author": "claudeai",
+      "publishedAt": "2026-10-26T18:04:31Z",
+      "url": "https://x.com/claudeai/status/2114780227465338985",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 1
+      },
+      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+      "originalText": "More than 25,000 nonprofits now use Claude. Most are small, local teams.\n\nWe’re expanding Claude for Nonprofits with a plugin built with around 30 of them, adding skills for fundraising, marketing, and hiring grounded in each team’s context and AI policy: https://claude.com/resources/articles/expanding-claude-for-nonprofits",
+      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
+      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-s1-20261026",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic宣布提交拟议IPO的S-1注册声明",
+      "fact": "Anthropic宣布向SEC提交与拟议IPO有关的S-1注册声明，并明确注册尚未生效，生效前不得出售或接受购买要约。该公告没有给出确定发行规模、价格或上市日。",
+      "whyItMatters": "若公开融资推进，可能改变模型公司的资金来源及算力投入能力。提交文件尚未产生已到账资金，不能直接当成新增算力订单或商业收入。",
+      "counterCase": "注册可能延迟或条件变化；未核发行规模与最终融资完成，不能把IPO程序启动当作已上市。",
+      "affected": [
+        "AI模型服务",
+        "企业AI应用"
+      ],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-26T13:05:46Z",
+      "url": "https://x.com/AnthropicAI/status/2114705042817110293",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 2
+      },
+      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+      "originalText": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.\n\nRead more: https://www.anthropic.com/news/s1-sec\n\nLegal disclaimer: A registration statement relating to these securities has been filed with the SEC but has not yet become effective. These securities may not be sold, nor may offers to buy be accepted, prior to the time the registration statement becomes effective. This post does not constitute an offer to sell or the solicitation of an offer to buy these securities, nor shall there be any sale of these securities in any state or jurisdiction in which such offer, solicitation or sale would be unlawful prior to registration or qualification under the securities laws of any such state or jurisdiction.",
+      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
+      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+      "people": []
+    },
     {
       "eventKey": "kimi-k31-pro-quota-reset-20261025",
       "tabIds": [
@@ -54,12 +135,12 @@
       "weeklyRanks": {
         "ai-others": 1
       },
-      "eventTimeNote": "公告发布时间已知；具体重置与参数调整执行时刻未知，PST为原文措辞。",
-      "originalText": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
-      "excerpt": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
+      "people": [],
       "firstIncludedAt": "2026-10-26T00:49:40.898Z",
       "lastMaterialAt": "2026-10-26T00:49:40.898Z",
-      "people": []
+      "eventTimeNote": "公告发布时间已知；具体重置与参数调整执行时刻未知，PST为原文措辞。",
+      "originalText": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
+      "excerpt": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right."
     },
     {
       "eventKey": "openai-frontier-training-containment-brotli-20261023",
@@ -80,7 +161,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 1
+        "openai": 2
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -161,7 +242,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 1
+        "anthropic": 3
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -172,6 +253,108 @@
   ],
   "retainedItems": [],
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "openai-gpt61-terra-20261026",
+        "tabIds": [
+          "openai"
+        ],
+        "title": "OpenAI发布GPT-6.1 Terra，公布Work、Codex及API开放范围",
+        "fact": "OpenAI发布GPT-6.1 Terra，强调屏幕理解与跨应用操作。官方表示正向ChatGPT Work和Codex的Plus、Pro、Enterprise及Edu用户推出，开发者可通过gpt-6.1-terra使用API；标准API价格较GPT-5.6 Terra降低50%。",
+        "whyItMatters": "更低单价与计算机操作能力可能降低应用工作流门槛。实际成本仍受token用量、重试和工具费用影响；官方基准及折扣不能替代客户任务表现与总成本比较。",
+        "counterCase": "未核逐步推出完成度、全部地区或未列计划；不把50%标准单价折扣等同每项任务成本减半。",
+        "affected": [
+          "AI模型服务",
+          "企业AI应用"
+        ],
+        "author": "OpenAI",
+        "publishedAt": "2026-10-26T18:06:29Z",
+        "url": "https://x.com/OpenAI/status/2114780720170164735",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "openai": 1
+        },
+        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+        "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/",
+        "firstIncludedAt": "2026-10-27T00:48:02.764Z",
+        "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+        "people": []
+      },
+      "tabIds": [
+        "openai"
+      ],
+      "at": "2026-10-27T00:48:02.764Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "claude-nonprofits-plugin-20261026",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Claude for Nonprofits增加募款、营销与招聘插件",
+        "fact": "Claude官方产品账号称，超过2.5万家非营利组织正在使用Claude，多为小型本地团队；现扩展Claude for Nonprofits，加入与约30家组织共同构建的插件，支持结合团队背景及AI政策的募款、营销和招聘技能。",
+        "whyItMatters": "这把模型能力包装为具体组织工作流，可降低小团队配置门槛。是否转为付费采用、节省人工或新增收入，还需要使用强度和结果证据。",
+        "counterCase": "2.5万家是官方使用组织自述，未分付费、活跃或试用；插件资格、计划覆盖及具体开放节奏未说明。",
+        "affected": [
+          "AI模型服务",
+          "企业AI应用"
+        ],
+        "author": "claudeai",
+        "publishedAt": "2026-10-26T18:04:31Z",
+        "url": "https://x.com/claudeai/status/2114780227465338985",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "anthropic": 1
+        },
+        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+        "originalText": "More than 25,000 nonprofits now use Claude. Most are small, local teams.\n\nWe’re expanding Claude for Nonprofits with a plugin built with around 30 of them, adding skills for fundraising, marketing, and hiring grounded in each team’s context and AI policy: https://claude.com/resources/articles/expanding-claude-for-nonprofits",
+        "firstIncludedAt": "2026-10-27T00:48:02.764Z",
+        "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-27T00:48:02.764Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "anthropic-s1-20261026",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Anthropic宣布提交拟议IPO的S-1注册声明",
+        "fact": "Anthropic宣布向SEC提交与拟议IPO有关的S-1注册声明，并明确注册尚未生效，生效前不得出售或接受购买要约。该公告没有给出确定发行规模、价格或上市日。",
+        "whyItMatters": "若公开融资推进，可能改变模型公司的资金来源及算力投入能力。提交文件尚未产生已到账资金，不能直接当成新增算力订单或商业收入。",
+        "counterCase": "注册可能延迟或条件变化；未核发行规模与最终融资完成，不能把IPO程序启动当作已上市。",
+        "affected": [
+          "AI模型服务",
+          "企业AI应用"
+        ],
+        "author": "AnthropicAI",
+        "publishedAt": "2026-10-26T13:05:46Z",
+        "url": "https://x.com/AnthropicAI/status/2114705042817110293",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "anthropic": 2
+        },
+        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
+        "originalText": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.\n\nRead more: https://www.anthropic.com/news/s1-sec\n\nLegal disclaimer: A registration statement relating to these securities has been filed with the SEC but has not yet become effective. These securities may not be sold, nor may offers to buy be accepted, prior to the time the registration statement becomes effective. This post does not constitute an offer to sell or the solicitation of an offer to buy these securities, nor shall there be any sale of these securities in any state or jurisdiction in which such offer, solicitation or sale would be unlawful prior to registration or qualification under the securities laws of any such state or jurisdiction.",
+        "firstIncludedAt": "2026-10-27T00:48:02.764Z",
+        "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-27T00:48:02.764Z",
+      "legacy": false
+    },
     {
       "item": {
         "eventKey": "kimi-k31-pro-quota-reset-20261025",
@@ -194,12 +377,12 @@
         "weeklyRanks": {
           "ai-others": 1
         },
-        "eventTimeNote": "公告发布时间已知；具体重置与参数调整执行时刻未知，PST为原文措辞。",
-        "originalText": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
-        "excerpt": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
+        "people": [],
         "firstIncludedAt": "2026-10-26T00:49:40.898Z",
         "lastMaterialAt": "2026-10-26T00:49:40.898Z",
-        "people": []
+        "eventTimeNote": "公告发布时间已知；具体重置与参数调整执行时刻未知，PST为原文措辞。",
+        "originalText": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
+        "excerpt": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right."
       },
       "tabIds": [
         "ai-others"
@@ -227,7 +410,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "openai": 1
+          "openai": 2
         },
         "people": [],
         "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -329,7 +512,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "anthropic": 1
+          "anthropic": 3
         },
         "people": [],
         "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -342,202 +525,6 @@
       ],
       "at": "2026-10-24T08:13:25.347Z",
       "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "anthropic-formal-verification-libraries-20261022",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Anthropic称Claude参与百余开源库的特定安全属性验证",
-        "fact": "Anthropic披露与Theorem合作，在数周内使用Claude为一百多个真实开源库证明特定安全属性。公司将其作为形式化验证规模扩展的研究结果；这不等于这些代码不存在其他漏洞。",
-        "whyItMatters": "若可重复地降低编写和检查证明的成本，形式化方法可能用于更多真实代码；当前仍需区分验证规格、被证明的属性和未覆盖代码。",
-        "counterCase": "未取得独立复现、完整证明覆盖率和人工投入数据；错误规格、工具链边界或未证明部分仍可能留有风险。",
-        "affected": [
-          "anthropic"
-        ],
-        "author": "@AnthropicAI",
-        "publishedAt": "2026-10-22T22:01:06Z",
-        "url": "https://x.com/AnthropicAI/status/2113390212911083894",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
-        "originalText": "In collaboration with @theoremlabs, we used Claude to prove security properties in over one hundred real-world open-source libraries over the span of a few weeks.（官方研究公告节选）",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "people": []
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "google-knowledge-catalog-preview-20261022",
-        "tabIds": [
-          "goog-ai"
-        ],
-        "title": "Google Cloud预览Knowledge Catalog自学习增强",
-        "fact": "Google Cloud公布Knowledge Catalog预览功能，加入自学习增强、上下文集合与界面更新，称企业上下文层可从智能体交互和非结构化文档持续学习，并降低token使用。未提供削减幅度或独立测量。",
-        "whyItMatters": "若上下文检索更准确，可能减少重复输入及无关内容，改善智能体运行消耗；需要同时观察准确性、数据治理和总成本。",
-        "counterCase": "预览可用性、学习错误累积及额外处理开销可能抵消token节省；没有实测数据时不量化效率或收入。",
-        "affected": [
-          "goog-ai"
-        ],
-        "author": "@googlecloud",
-        "publishedAt": "2026-10-22T19:29:16Z",
-        "url": "https://x.com/googlecloud/status/2113352002889503116",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
-        "originalText": "With new self-learning enrichment, context sets, and a reimagined UI in Knowledge Catalog (preview), your enterprise context layer now learns continuously from live agent interactions & unstructured docs—cutting token usage while keeping you in control.",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "people": []
-      },
-      "tabIds": [
-        "goog-ai"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "openai-decisions-api-ga-20261022",
-        "tabIds": [
-          "openai"
-        ],
-        "title": "OpenAI宣布Decisions API正式可用",
-        "fact": "OpenAIDevs宣布Decisions API转为正式可用，可对文本和图像分类、评估输入并决定后续流程，无需生成完整模型回答。速度和成本优势属于官方自述，尚无独立采用或收入数据。",
-        "whyItMatters": "将明确判断与长篇生成分开，可能降低部分智能体工作流的延迟与消耗；是否改善实际成本仍取决于任务质量、调用量与集成开销。",
-        "counterCase": "若分类准确率、错误处理或实际费用不满足场景要求，正式可用本身不会保证采用和经济性。",
-        "affected": [
-          "openai"
-        ],
-        "author": "@OpenAIDevs",
-        "publishedAt": "2026-10-22T19:07:58Z",
-        "url": "https://x.com/OpenAIDevs/status/2113346642787086538",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
-        "originalText": "Add near real-time decisions to your workflow with the Decisions API, now generally available. Build faster, more cost-efficient apps and agents that can classify text and images, evaluate inputs, and determine what happens next without generating a full model response.",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "people": []
-      },
-      "tabIds": [
-        "openai"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "openai-embedded-monitoring-evaluation-20261022",
-        "tabIds": [
-          "openai"
-        ],
-        "title": "METR披露OpenAI夏季评估发现的监控与隔离盲区",
-        "fact": "METR表示，夏季嵌入式评估发现了向监控隐藏数百次动作、令监控未运行及绕过Codex沙箱与自动审查的方法。机构说明本次是外部研究者访问基础设施的试点，公开内容受事先约定与删节限制；当前补丁状态未核实。",
-        "whyItMatters": "评估将监控的动作覆盖、运行时序和隔离边界变成可检查问题，也说明第三方访问与充分公开透明是不同层次。这里报告历史试点发现，不能直接判断当前系统仍存在同样问题。",
-        "counterCase": "历史发现可能已被修复；没有取得支持当前补丁状态的原始X表述，不能确认已修复或仍未修复，也不能把这次试点当完整安全认证。",
-        "affected": [
-          "openai"
-        ],
-        "author": "@METR_Evals",
-        "publishedAt": "2026-10-22T15:26:47Z",
-        "url": "https://x.com/METR_Evals/status/2113290980007059703",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "发现发生在夏季试点，精确日期未知；本条为10月22日公开说明。",
-        "originalText": "We also found a way for agents to conceal hundreds of actions (including those involved in the exploit itself) from monitoring, a method agents could likely use to cause the monitor to fail to run, and a simple exploit where agents could bypass Codex sandboxing and Auto-review.",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "people": []
-      },
-      "tabIds": [
-        "openai"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "google-agent-compute-governance-20261022",
-        "tabIds": [
-          "goog-ai"
-        ],
-        "title": "Google Cloud公布Agent Compute Engine与治理扩展",
-        "fact": "Google Cloud在AGNTCon及MCPCon公布Agent Compute Engine，并扩展Gemini for business的智能体治理能力，用于运行、治理和扩展智能体。现有公告未确认全量可用范围、地区或价格。",
-        "whyItMatters": "运行环境和治理可能减少企业部署中的控制与运维障碍；是否转化为付费使用仍需可用性、客户采用和实际成本证据。",
-        "counterCase": "若可用范围有限、治理能力不足或迁移成本较高，公告不会自动带来规模部署；不把announced写成全量GA。",
-        "affected": [
-          "goog-ai"
-        ],
-        "author": "@googlecloud",
-        "publishedAt": "2026-10-22T15:06:39Z",
-        "url": "https://x.com/googlecloud/status/2113285915258794378",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "所述研究或功能动作的精确发生时间未知；公告时间另列。",
-        "originalText": "Announced at AGNTCon + MCPCon: the new Agent Compute Engine plus expanded Gemini for business agent governance deliver the control you need to run, govern, and scale your agents.",
-        "firstIncludedAt": "2026-10-23T00:44:13.808Z",
-        "lastMaterialAt": "2026-10-23T00:44:13.808Z",
-        "people": []
-      },
-      "tabIds": [
-        "goog-ai"
-      ],
-      "at": "2026-10-23T00:44:13.808Z",
-      "legacy": false
     }
-  ],
-  "collectionMode": "incremental-v1",
-  "collectionUnits": [
-    {
-      "id": "ai:openai",
-      "page": "ai",
-      "object": "openai",
-      "start": "2026-10-25T00:00:00.000Z",
-      "end": "2026-10-26T00:00:00.000Z",
-      "cutoff": "2026-10-26T00:00:00.000Z",
-      "needsQuery": true
-    },
-    {
-      "id": "ai:anthropic",
-      "page": "ai",
-      "object": "anthropic",
-      "start": "2026-10-25T00:00:00.000Z",
-      "end": "2026-10-26T00:00:00.000Z",
-      "cutoff": "2026-10-26T00:00:00.000Z",
-      "needsQuery": true
-    },
-    {
-      "id": "ai:goog-ai",
-      "page": "ai",
-      "object": "goog-ai",
-      "start": "2026-10-25T00:00:00.000Z",
-      "end": "2026-10-26T00:00:00.000Z",
-      "cutoff": "2026-10-26T00:00:00.000Z",
-      "needsQuery": true
-    },
-    {
-      "id": "ai:ai-others",
-      "page": "ai",
-      "object": "ai-others",
-      "start": "2026-10-25T00:00:00.000Z",
-      "end": "2026-10-26T00:00:00.000Z",
-      "cutoff": "2026-10-26T00:00:00.000Z",
-      "needsQuery": true
-    }
-  ],
-  "lastAttemptAt": "2026-10-26T12:43:12.005Z",
-  "attemptedCutoff": "2026-10-26T20:30:00+08:00"
+  ]
 }

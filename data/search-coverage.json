@@ -887,6 +887,46 @@
       "status": "failed",
       "queries": [],
       "recordedAt": "2026-10-26T12:43:12.018Z"
+    },
+    {
+      "jobId": "2026-10-27-0800",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T08:00:00+08:00",
+      "status": "partial",
+      "queries": [
+        "(Fed OR interest rate OR FOMC OR payroll OR employment OR CPI OR inflation OR fiscal OR treasury OR yields) (market OR stocks OR equities) since:2026-10-26 until:2026-10-27",
+        "Anthropic OR ANT IPO OR S-1 OR prospectus (AI OR tech) since:2026-10-26 until:2026-10-27",
+        "Meta OR Facebook capital OR raise OR financing OR stock offering (AI OR data OR infrastructure) since:2026-10-26 until:2026-10-27",
+        "(tariff OR export control OR sanctions OR trade war) (US OR America OR China OR stocks) since:2026-10-26 until:2026-10-27",
+        "(oil OR energy OR crude OR Brent OR WTI) (market OR stocks OR Fed OR war OR Iran) since:2026-10-26 until:2026-10-27",
+        "(market structure OR liquidity OR volatility OR VIX OR bond market OR yields) (stocks OR equities OR Fed) since:2026-10-26 until:2026-10-27",
+        "(ADP OR payroll OR jobless OR unemployment OR employment OR jobs) (report OR data OR claims) since:2026-10-26 until:2026-10-27",
+        "(Microsoft OR MSFT) (buyout OR lay off OR job cuts OR efficiency OR AI) (employees OR staff) since:2026-10-26 until:2026-10-27",
+        "(Pimco OR SpaceX OR SPCX) (financing OR GPU OR AI OR package OR lease) since:2026-10-26 until:2026-10-27",
+        "(Brazil OR Lula OR CDS OR credit default) (fiscal OR bonds OR auctions OR yield) since:2026-10-26 until:2026-10-27",
+        "(hold OR delay OR hold off) (Iran OR attacks OR strikes) (Trump OR president) since:2026-10-26 until:2026-10-27",
+        "(HBM OR CoWoS OR advanced packaging OR GPU OR ASIC) (capacity OR order OR ASP OR pricing OR delivery OR leadtime) (TSMC OR Samsung OR SK OR Micron) since:2026-10-26 until:2026-10-27",
+        "(CoWoS OR HBM) (price OR hike OR 20%) (TSMC OR packaging) since:2026-10-26 until:2026-10-27",
+        "(data center OR hyperscaler) (PPA OR transformer OR gas turbine OR liquid cooling OR interconnection OR grid OR MW) since:2026-10-26 until:2026-10-27",
+        "(FERC OR PJM) (data center OR interconnection) (reject OR framework) since:2026-10-26 until:2026-10-27",
+        "AI (API OR token cost OR inference cost OR churn OR renewal OR unit economics) (OpenAI OR Anthropic) since:2026-10-26 until:2026-10-27",
+        "(Anthropic OR OpenAI) (S-1 OR Terra OR API price) since:2026-10-26 until:2026-10-27",
+        "(treasury OR bond supply OR term premium OR credit spread OR refinancing OR liquidity) (yield OR spreads OR auction) since:2026-10-26 until:2026-10-27",
+        "(term premium OR credit spread OR IG spread OR HY spread) (US OR treasury) since:2026-10-26 until:2026-10-27",
+        "(tariff OR export control OR sanctions OR chip ban OR entity list) (semiconductor OR AI OR energy) (US OR China) since:2026-10-26 until:2026-10-27",
+        "(export control OR entity list) (China OR AI OR semiconductor) since:2026-10-26 until:2026-10-27",
+        "(VIX OR gamma OR net gamma OR dealer gamma OR options flow OR market breadth OR concentration) (stocks OR SPX OR SPY) since:2026-10-26 until:2026-10-27",
+        "(Anthropic OR S-1 OR IPO) (correction OR withdraw OR not yet OR disclaimer) since:2026-10-26 until:2026-10-27",
+        "(GPT-6.1 OR Terra OR API price OR 50%) (correction OR limit OR baseline OR caveat) since:2026-10-26 until:2026-10-27",
+        "Meta (35 OR 95) (offering OR raise) since:2026-10-26 until:2026-10-27",
+        "(Microsoft OR MSFT) (buyout OR 60000) (correction OR not layoff OR executed) since:2026-10-26 until:2026-10-27",
+        "(FERC OR PJM) (reject OR data center) (deny OR false OR correction) since:2026-10-26 until:2026-10-27",
+        "(CoWoS OR advanced packaging) (20% OR hike) TSMC (deny OR unconfirmed) since:2026-10-26 until:2026-10-27",
+        "(export control OR 23 AI) China (deny OR false OR correction) since:2026-10-26 until:2026-10-27"
+      ],
+      "recordedAt": "2026-10-27T00:48:02.764Z"
     }
   ]
 }

@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-27-0800",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-27T08:03:19+08:00",
+  "updatedAt": "2026-10-27T08:49:22+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "737939bb54824e737009578539d70a6a472c036d",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-27T08:03:19+08:00",
+      "detail": null
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-27T08:49:22+08:00",
+      "detail": "按本批读取当前契约/知识及必要旧数据；未反复读取整个库"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-27T08:49:22+08:00",
+      "detail": "七批真实关闭，30X对象完成，论文3、财报3；完整证据见分批审计"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-27T08:49:22+08:00",
+      "detail": "专用论文发布器及既有X发布函数完成数据契约与持久合并，旧证据保留"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-27T08:49:22+08:00",
+      "detail": "按用户要求未运行test/check/build/本地预览及额外回归；来源及数据契约照常"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "完整结果及对象执行范围见data/collection-runs/2026-10-27-0800.json"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "完整结果及对象执行范围见data/collection-runs/2026-10-27-0800.json"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "完整结果及对象执行范围见data/collection-runs/2026-10-27-0800.json"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "完整结果及对象执行范围见data/collection-runs/2026-10-27-0800.json"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "完整结果及对象执行范围见data/collection-runs/2026-10-27-0800.json"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "完整结果及对象执行范围见data/collection-runs/2026-10-27-0800.json"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:03:19+08:00",
+      "endedAt": "2026-10-27T08:12:01+08:00",
+      "durationMs": 522000,
+      "detail": "21候选收2焦点+1洞察，完整输出先落盘后record，七对象接续截止"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:03:19+08:00",
+      "endedAt": "2026-10-27T08:08:52+08:00",
+      "durationMs": 333000,
+      "detail": "两轮独立发现完成：10+11候选；六主题包实际查询已保存"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:08:52+08:00",
+      "endedAt": "2026-10-27T08:10:16+08:00",
+      "durationMs": 84000,
+      "detail": "已核两公司官方帖并找到Reuters融资/微软及FT巴西线索，其余原始证据不足"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:10:16+08:00",
+      "endedAt": "2026-10-27T08:12:01+08:00",
+      "durationMs": 105000,
+      "detail": "独立反证完成；Meta金额冲突排除，微软保留BI归因及要约边界"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:12:18+08:00",
+      "endedAt": "2026-10-27T08:17:24+08:00",
+      "durationMs": 306000,
+      "detail": "五对象完成，8新卡；三个无候选对象无需追源反证，旧周榜保留"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:12:19+08:00",
+      "endedAt": "2026-10-27T08:14:00+08:00",
+      "durationMs": 101000,
+      "detail": "五对象查询完成，7原始候选；热度被科技优先过滤需纠正"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:14:00+08:00",
+      "endedAt": "2026-10-27T08:15:42+08:00",
+      "durationMs": 102000,
+      "detail": "原帖上下文读取及不限主题热度补正完成；三个空候选对象后两阶段跳过"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:15:43+08:00",
+      "endedAt": "2026-10-27T08:17:24+08:00",
+      "durationMs": 101000,
+      "detail": "仅新候选反证完成；2价值+6热度；第四Elon热度低于前三留审计"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:17:48+08:00",
+      "endedAt": "2026-10-27T08:23:31+08:00",
+      "durationMs": 343000,
+      "detail": "2事实、35原始热点剔5纯推广保留30，十四对象成功截止已保存"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:17:48+08:00",
+      "endedAt": "2026-10-27T08:20:52+08:00",
+      "durationMs": 184000,
+      "detail": "七股事实与35条热点实际返回；事实7候选，正在结构化榜单；INTC整体范围需补正"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:20:52+08:00",
+      "endedAt": "2026-10-27T08:22:12+08:00",
+      "durationMs": 80000,
+      "detail": "找到Intel收购协议官方帖与Reuters630亿美元融资；SpaceX新条款仍二传；旧同事件缓存复用"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:22:12+08:00",
+      "endedAt": "2026-10-27T08:23:31+08:00",
+      "durationMs": 79000,
+      "detail": "Intel协议/Reuters融资原帖读取与独立反证完成；融资不等于收入，协议非完成"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:23:50+08:00",
+      "endedAt": "2026-10-27T08:28:10+08:00",
+      "durationMs": 260000,
+      "detail": "3事件卡，四对象成功截止保存；Google及其他无新候选跳过后两阶段"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:23:50+08:00",
+      "endedAt": "2026-10-27T08:26:18+08:00",
+      "durationMs": 148000,
+      "detail": "四对象查询完成，4原帖候选/3事件；两空对象跳过后两阶段"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:26:18+08:00",
+      "endedAt": "2026-10-27T08:27:09+08:00",
+      "durationMs": 51000,
+      "detail": "两个新thread读取完成，产品账号身份/时间/开放及采用口径已保存"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:27:09+08:00",
+      "endedAt": "2026-10-27T08:28:10+08:00",
+      "durationMs": 61000,
+      "detail": "新细节独立反证无官方澄清；口径/地区/计划缺口保留，不把无更正当证实"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:28:23+08:00",
+      "endedAt": "2026-10-27T08:44:03+08:00",
+      "durationMs": 940000,
+      "detail": "Nature2+Science1已用专用发布器合并，原27篇保留；基础/小知识components=false；论文反证计时缺口如实保留"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:28:23+08:00",
+      "endedAt": "2026-10-27T08:37:21+08:00",
+      "durationMs": 538000,
+      "detail": "两轮有限发现：近期无合格非重复，往期Nature2/Science1，其余不足"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:32:00+08:00",
+      "endedAt": "2026-10-27T08:37:21+08:00",
+      "durationMs": 321000,
+      "detail": "三篇对象/样本/对照/测量/结果核清，Science更正全文正常浏览器独立直读"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:44:03+08:00",
+      "endedAt": "2026-10-27T08:44:27+08:00",
+      "durationMs": 24000,
+      "detail": "无到期/明确过时触发；未来FOMC10/28与PCE10/29，未外查"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-27T08:44:27+08:00",
+      "endedAt": "2026-10-27T08:47:44+08:00",
+      "durationMs": 197000,
+      "detail": "3家新披露完成评分，pending0；恢复T已核历史、旧理由及过去时段，新公司0/主营缺0"
+    }
+  ]
+}

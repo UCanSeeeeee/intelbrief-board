@@ -1,0 +1,60 @@
+{
+  "runId": "2026-10-27-0800",
+  "cutoff": "2026-10-27T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "ai:openai",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(OpenAI OR ChatGPT OR Codex OR GPT-6 OR GPT-5 OR o3 OR o series) (release OR launch OR available OR ships OR API OR pricing OR enterprise) since:2026-10-26 until:2026-10-27",
+        "from:OpenAI (Terra OR Codex OR GPT) since:2026-10-26 until:2026-10-27",
+        "semantic: OpenAI ChatGPT Codex GPT new release or availability October 26 2026"
+      ],
+      "note": "独立对象查询完成，候选与完整结果已保存；空候选不空跑后两阶段，非全X覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "ai:anthropic",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "(Anthropic OR Claude) (release OR launch OR available OR API OR plugin OR nonprofits OR deployment) since:2026-10-26 until:2026-10-27",
+        "from:AnthropicAI OR from:Anthropic (Claude OR nonprofits OR S-1 OR IPO OR plugin) since:2026-10-26 until:2026-10-27",
+        "from:AnthropicAI OR from:claudeai (Nonprofits OR nonprofit OR plugin OR Claude for) since:2026-10-26 until:2026-10-27",
+        "semantic: Anthropic Claude new product or API or deployment October 26 2026"
+      ],
+      "note": "独立对象查询完成，候选与完整结果已保存；空候选不空跑后两阶段，非全X覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "ai:goog-ai",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "no-result",
+      "queries": [
+        "(Google OR DeepMind OR Gemini OR Veo OR TPU) (release OR launch OR available OR Publish) since:2026-10-26 until:2026-10-27",
+        "from:Google OR from:GoogleDeepMind OR from:GeminiApp (Gemini OR Veo OR TPU OR Agent OR Publish) since:2026-10-26 until:2026-10-27",
+        "from:GoogleCloud (Gemini OR AI OR TPU OR LookML OR IAM) since:2026-10-26 until:2026-10-27",
+        "semantic: Google DeepMind Gemini new product release or TPU or Veo or agent availability October 26 2026"
+      ],
+      "note": "独立对象查询完成，候选与完整结果已保存；空候选不空跑后两阶段，非全X覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "ai:ai-others",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "no-result",
+      "queries": [
+        "(DeepSeek OR Qwen OR Kimi OR Moonshot OR open source OR policy OR export) (AI OR model OR release) since:2026-10-26 until:2026-10-27",
+        "from:deepseek_ai OR from:kimi_moonshot OR from:Alibaba_Qwen OR DeepSeek OR Kimi K (release OR launch OR open OR weights) since:2026-10-26 until:2026-10-27"
+      ],
+      "note": "独立对象查询完成，候选与完整结果已保存；空候选不空跑后两阶段，非全X覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    }
+  ],
+  "pending": []
+}

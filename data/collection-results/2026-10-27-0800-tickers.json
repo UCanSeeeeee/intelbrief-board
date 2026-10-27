@@ -1,0 +1,205 @@
+{
+  "runId": "2026-10-27-0800",
+  "cutoff": "2026-10-27T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "tickers:nvda",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "NVDA (GPU OR CUDA OR Blackwell OR Rubin) (order OR supply OR capacity OR capex OR customer OR adoption OR price) since:2026-10-26_00:00:00_UTC until:2026-10-27_00:00:00_UTC -filter:retweets"
+      ],
+      "note": "逐股事实查询完成，候选、原始核验/缓存复用、缺口及完整输出已保存。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:nvda:hotspots",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$NVDA since:2026-10-26_00:00:00_UTC until:2026-10-27_00:00:00_UTC -filter:retweets"
+      ],
+      "note": "直接Grok按cashtag返回浏览量前五已保存；剔除纯推广不追补条数，非全X排名。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:mu",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "no-result",
+      "queries": [
+        "MU (HBM OR high bandwidth OR DRAM) (order OR supply OR capacity OR price OR demand) since:2026-10-26 until:2026-10-27"
+      ],
+      "note": "逐股事实查询完成，候选、原始核验/缓存复用、缺口及完整输出已保存。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:mu:hotspots",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$MU since:2026-10-26_00:00:00_UTC until:2026-10-27_00:00:00_UTC -filter:retweets"
+      ],
+      "note": "直接Grok按cashtag返回浏览量前五已保存；剔除纯推广不追补条数，非全X排名。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:intc",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "INTC (18A OR external customer OR foundry) since:2026-10-26 until:2026-10-27",
+        "INTC Intel Classiq acquire since:2026-10-26 until:2026-10-27"
+      ],
+      "note": "逐股事实查询完成，候选、原始核验/缓存复用、缺口及完整输出已保存。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:intc:hotspots",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$INTC since:2026-10-26_00:00:00_UTC until:2026-10-27_00:00:00_UTC -filter:retweets"
+      ],
+      "note": "直接Grok按cashtag返回浏览量前五已保存；剔除纯推广不追补条数，非全X排名。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:goog",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "no-result",
+      "queries": [
+        "(GOOG OR GOOGL OR Google) (TPU OR tensor) (order OR supply OR capacity OR adoption) since:2026-10-26 until:2026-10-27"
+      ],
+      "note": "逐股事实查询完成，候选、原始核验/缓存复用、缺口及完整输出已保存。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:goog:hotspots",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "($GOOG OR $GOOGL) since:2026-10-26_00:00:00_UTC until:2026-10-27_00:00:00_UTC -filter:retweets"
+      ],
+      "note": "直接Grok按cashtag返回浏览量前五已保存；剔除纯推广不追补条数，非全X排名。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:avgo",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "AVGO (ASIC OR XPU OR network) (order OR supply OR capacity OR Anthropic) since:2026-10-26 until:2026-10-27"
+      ],
+      "note": "逐股事实查询完成，候选、原始核验/缓存复用、缺口及完整输出已保存。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:avgo:hotspots",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$AVGO since:2026-10-26_00:00:00_UTC until:2026-10-27_00:00:00_UTC -filter:retweets"
+      ],
+      "note": "直接Grok按cashtag返回浏览量前五已保存；剔除纯推广不追补条数，非全X排名。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:vrt",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "VRT (liquid cooling OR power OR cooling) (order OR supply OR capacity) since:2026-10-26 until:2026-10-27"
+      ],
+      "note": "逐股事实查询完成，候选、原始核验/缓存复用、缺口及完整输出已保存。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:vrt:hotspots",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$VRT since:2026-10-26_00:00:00_UTC until:2026-10-27_00:00:00_UTC -filter:retweets"
+      ],
+      "note": "直接Grok按cashtag返回浏览量前五已保存；剔除纯推广不追补条数，非全X排名。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:tsm",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "TSM (CoWoS OR advanced packaging) (price OR capacity OR order) since:2026-10-26 until:2026-10-27"
+      ],
+      "note": "逐股事实查询完成，候选、原始核验/缓存复用、缺口及完整输出已保存。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    },
+    {
+      "unit": "tickers:tsm:hotspots",
+      "start": "2026-10-26T00:00:00.000Z",
+      "end": "2026-10-27T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "$TSM since:2026-10-26_00:00:00_UTC until:2026-10-27_00:00:00_UTC -filter:retweets"
+      ],
+      "note": "直接Grok按cashtag返回浏览量前五已保存；剔除纯推广不追补条数，非全X排名。",
+      "evidenceFile": "data/collection-runs/2026-10-27-0800.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "tickers:nvda",
+      "key": "spacex-lease",
+      "status": "pending",
+      "reason": "原始关键事实不足或复用同轮缓存缺口，等待实质新证据",
+      "url": "https://x.com/StreetSignals/status/2114798231502639355"
+    },
+    {
+      "unit": "tickers:avgo",
+      "key": "63b-financing",
+      "status": "resolved",
+      "reason": "已合并到Reuters最小事实；SPV与残值条款仍不作为已核事实",
+      "url": "https://x.com/ElliottWaveSage/status/2114842736733876305"
+    },
+    {
+      "unit": "tickers:avgo",
+      "key": "avgo-residual",
+      "status": "resolved",
+      "reason": "已合并到Reuters最小事实；SPV与残值条款仍不作为已核事实",
+      "url": "https://x.com/ShitmanJin/status/2114845016392638576"
+    },
+    {
+      "unit": "tickers:vrt",
+      "key": "smartit-launch",
+      "status": "pending",
+      "reason": "原始关键事实不足或复用同轮缓存缺口，等待实质新证据",
+      "url": "https://x.com/StockSavvyShay/status/2114830782753874393"
+    },
+    {
+      "unit": "tickers:tsm",
+      "key": "cowos-price",
+      "status": "pending",
+      "reason": "原始关键事实不足或复用同轮缓存缺口，等待实质新证据",
+      "url": "https://x.com/LIWEI_TWCapital/status/2114869377078370342"
+    },
+    {
+      "unit": "tickers:tsm",
+      "key": "cowos-hike",
+      "status": "pending",
+      "reason": "原始关键事实不足或复用同轮缓存缺口，等待实质新证据",
+      "url": "https://x.com/MikeLongTerm/status/2114862712672882949"
+    }
+  ]
+}

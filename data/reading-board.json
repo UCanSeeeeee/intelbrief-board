@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T12:43:12.018Z",
-  "asOf": "2026-10-26T20:30:00+08:00",
+  "updatedAt": "2026-10-27T00:48:02.764Z",
+  "asOf": "2026-10-27T08:00:00+08:00",
   "events": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
@@ -20539,91 +20539,163 @@
       "eventKey": "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
       "firstSeenAt": "2026-10-16T07:13:34.816Z",
       "firstEdition": "2026-10-16-1500",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-10-16-1500",
+          "event": {
+            "eventKey": "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
+            "title": "Anthropic IPO 估值预期据报从约 2 万亿下调至约 1.5 万亿美元",
+            "fact": "DeItaone：部分投资者将 Anthropic 即将 IPO 的估值预期从约 2 万亿美元下调约 25% 至约 1.5 万亿美元；同条仍提及 Q3 营收约 168 亿美元、环比约 +45%。FirstSquawk 亦称有投资者在疲软业绩与市场抛售后下调估值预期。",
+            "impact": "事件→私人 AI 估值锚下修→公募 AI 软件与上游资本开支风险溢价；盈利叙事仍在，但 IPO 定价权与“AI 无限溢价”叙事同步松动。",
+            "direction": "利空",
+            "horizon": "数周至 IPO 窗口",
+            "affected": [
+              "AI 软件估值",
+              "成长风格",
+              "半导体需求预期"
+            ],
+            "counterCase": "若路演仍按近 2 万亿定价成功、或后续季度美元新增收入重新加速，下调预期可被证伪。",
+            "selectionReason": "相对前一日“盈利+巨型 IPO”焦点，本窗出现明确估值锚下修，是 AI 定价机制的关键进展。",
+            "credibilityReason": "DeItaone/FirstSquawk 来源交叉；具体投资者名单与条款未披露，属市场传闻级定价预期。",
+            "change": "进展",
+            "eventTime": null,
+            "eventTimeNote": "估值预期调整的准确时点未写明；快讯时间在 10/15 美东晚间。",
+            "attentionEvidence": "DeItaone 估值下调帖展示约 28 万、点赞逾 600；热度仅作注意力参考。",
+            "sources": [
+              {
+                "url": "https://x.com/DeItaone/status/2110837977928638529",
+                "postId": "2110837977928638529",
+                "username": "DeItaone",
+                "publishedAt": "2026-10-15T20:59:26.000Z",
+                "checkedAt": "2026-10-16T07:10:00.000Z",
+                "excerpt": "ANTHROPIC'S IPO VALUATION EXPECTATIONS DROP FROM $2 TRILLION TO $1.5 TRILLION Some investors are considering a $1.5 trillion valuation for Anthropic's upcoming IPO, down 25% from earlier expectations of $2 trillion. Anthropic reported $16.8 billion in Q3 revenue, up 45%",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 36,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 37,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 10,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [
+                    "主张包含较具体、可核验的对象或数字"
+                  ],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/FirstSquawk/status/2110838715375583320",
+                "postId": "2110838715375583320",
+                "username": "FirstSquawk",
+                "publishedAt": "2026-10-15T21:02:21.000Z",
+                "checkedAt": "2026-10-16T07:10:00.000Z",
+                "excerpt": "SOME INVESTORS DIAL BACK ANTHROPIC VALUATION EXPECTATIONS AMID DISAPPOINTING RESULTS, MARKET SELLOFF - SOURCES",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "people": [],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "DeItaone/FirstSquawk 来源交叉；具体投资者名单与条款未披露，属市场传闻级定价预期。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-10-27T00:48:02.764Z"
+        }
+      ],
       "group": "focus",
       "event": {
         "eventKey": "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
-        "title": "Anthropic IPO 估值预期据报从约 2 万亿下调至约 1.5 万亿美元",
-        "fact": "DeItaone：部分投资者将 Anthropic 即将 IPO 的估值预期从约 2 万亿美元下调约 25% 至约 1.5 万亿美元；同条仍提及 Q3 营收约 168 亿美元、环比约 +45%。FirstSquawk 亦称有投资者在疲软业绩与市场抛售后下调估值预期。",
-        "impact": "事件→私人 AI 估值锚下修→公募 AI 软件与上游资本开支风险溢价；盈利叙事仍在，但 IPO 定价权与“AI 无限溢价”叙事同步松动。",
-        "direction": "利空",
-        "horizon": "数周至 IPO 窗口",
+        "collectionUnit": "news:market-focus",
+        "title": "Anthropic宣布为拟议IPO提交S-1",
+        "fact": "Anthropic宣布已向SEC提交与拟议首次公开募股有关的S-1注册声明。该公告不等于SEC已批准或公司已经上市，发行价格、规模与交易时间尚未在所核X帖中确定。",
+        "impact": "公开资本市场融资若推进，可改变模型公司的资金来源和对算力供应商的支付能力；提交文件本身仍未带来已到账资金，也不能当作上游新增订单。",
+        "direction": "双向",
+        "horizon": "未来两周及后续正式披露",
         "affected": [
-          "AI 软件估值",
-          "成长风格",
-          "半导体需求预期"
+          "AI模型公司",
+          "云服务及算力供应链"
         ],
-        "counterCase": "若路演仍按近 2 万亿定价成功、或后续季度美元新增收入重新加速，下调预期可被证伪。",
-        "selectionReason": "相对前一日“盈利+巨型 IPO”焦点，本窗出现明确估值锚下修，是 AI 定价机制的关键进展。",
-        "credibilityReason": "DeItaone/FirstSquawk 来源交叉；具体投资者名单与条款未披露，属市场传闻级定价预期。",
+        "counterCase": "注册尚未生效、发行规模或时间变化，均会改变融资传导；算力投入仍需付费收入与现金流支撑。",
+        "selectionReason": "Anthropic拟议IPO的新实质程序进展，沿用既有IPO事件键；此前估值传闻留在时间线，不在本条继承为已核事实。",
+        "credibilityReason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
         "change": "进展",
         "eventTime": null,
-        "eventTimeNote": "估值预期调整的准确时点未写明；快讯时间在 10/15 美东晚间。",
-        "attentionEvidence": "DeItaone 估值下调帖展示约 28 万、点赞逾 600；热度仅作注意力参考。",
+        "eventTimeNote": "事件具体发生时刻未披露；所列时间为X发布时间。",
         "sources": [
           {
-            "url": "https://x.com/DeItaone/status/2110837977928638529",
-            "postId": "2110837977928638529",
-            "username": "DeItaone",
-            "publishedAt": "2026-10-15T20:59:26.000Z",
-            "checkedAt": "2026-10-16T07:10:00.000Z",
-            "excerpt": "ANTHROPIC'S IPO VALUATION EXPECTATIONS DROP FROM $2 TRILLION TO $1.5 TRILLION Some investors are considering a $1.5 trillion valuation for Anthropic's upcoming IPO, down 25% from earlier expectations of $2 trillion. Anthropic reported $16.8 billion in Q3 revenue, up 45%",
+            "url": "https://x.com/AnthropicAI/status/2114705042817110293",
+            "postId": "2114705042817110293",
+            "username": "AnthropicAI",
+            "publishedAt": "2026-10-26T13:05:46Z",
+            "checkedAt": "2026-10-27T00:10:16.579Z",
+            "excerpt": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "verificationNote": "Grok网页版Expert读取/返回X原帖；执行器未独立直读。仅采用该作者公开陈述支持的最小事实。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
-              "overall": 36,
+              "overall": 31,
               "band": "low",
               "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
               "sourceScore": 35,
-              "claimScore": 37,
+              "claimScore": 29,
               "breakdown": {
                 "directness": 10,
                 "traceableEvidence": 7,
                 "independentCorroboration": 0,
-                "specificity": 10,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [
-                "主张包含较具体、可核验的对象或数字"
-              ],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          },
-          {
-            "url": "https://x.com/FirstSquawk/status/2110838715375583320",
-            "postId": "2110838715375583320",
-            "username": "FirstSquawk",
-            "publishedAt": "2026-10-15T21:02:21.000Z",
-            "checkedAt": "2026-10-16T07:10:00.000Z",
-            "excerpt": "SOME INVESTORS DIAL BACK ANTHROPIC VALUATION EXPECTATIONS AMID DISAPPOINTING RESULTS, MARKET SELLOFF - SOURCES",
-            "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 30,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 27,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 0,
+                "specificity": 2,
                 "recordIntegrity": 10,
                 "penalties": 0
               },
@@ -20642,22 +20714,25 @@
             }
           }
         ],
+        "attentionEvidence": "模型公司首次公开融资程序可能影响AI资金链，属于市场共同关注的资本市场事件；不宣称全X热度排名。",
         "people": [],
         "credibility": {
-          "score": 30,
+          "score": 31,
           "label": "规则初评，未校准",
-          "reason": "DeItaone/FirstSquawk 来源交叉；具体投资者名单与条款未披露，属市场传闻级定价预期。",
+          "reason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
           "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
         }
       },
-      "rank": 3,
-      "lastEdition": "2026-10-16-1500",
-      "lastCheckedAt": "2026-10-16T07:13:34.816Z",
-      "state": "served",
-      "retentionAnchor": "2026-10-16T07:13:34.816Z",
-      "readingDate": "2026-10-16",
-      "retainUntil": "2026-10-19T00:00:00.000Z",
-      "lateDiscovery": false
+      "rank": 0,
+      "lastEdition": "2026-10-27-0800",
+      "lastCheckedAt": "2026-10-27T00:48:02.764Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-27T00:48:02.764Z",
+      "readingDate": "2026-10-27",
+      "retainUntil": "2026-10-28T00:00:00.000Z",
+      "lateDiscovery": false,
+      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+      "lastMaterialEdition": "2026-10-27-0800"
     },
     {
       "eventKey": "hormuz-gfs-pride-irgc-centcom-2026-10-15",
@@ -29621,7 +29696,7 @@
       "rank": 0,
       "lastEdition": "manual-9cf430ed-8df4-45ac-b242-b9c9d156e024",
       "lastCheckedAt": "2026-10-24T08:02:37.458Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-24T08:02:37.458Z",
       "readingDate": "2026-10-26",
       "retainUntil": "2026-10-27T00:00:00.000Z",
@@ -29719,7 +29794,7 @@
       "rank": 0,
       "lastEdition": "manual-9cf430ed-8df4-45ac-b242-b9c9d156e024",
       "lastCheckedAt": "2026-10-24T08:02:37.458Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-24T08:02:37.458Z",
       "readingDate": "2026-10-26",
       "retainUntil": "2026-10-27T00:00:00.000Z",
@@ -29852,12 +29927,194 @@
       "rank": 0,
       "lastEdition": "2026-10-26-0800",
       "lastCheckedAt": "2026-10-26T00:49:40.898Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-26T00:49:40.898Z",
       "readingDate": "2026-10-26",
       "retainUntil": "2026-10-27T00:00:00.000Z",
       "lastMaterialAt": "2026-10-26T00:49:40.898Z",
       "lastMaterialEdition": "2026-10-26-0800",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "msft-buyouts-20261026",
+      "firstSeenAt": "2026-10-27T00:48:02.764Z",
+      "firstEdition": "2026-10-27-0800",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "msft-buyouts-20261026",
+        "collectionUnit": "news:market-focus",
+        "title": "Reuters报道Microsoft向约6万名员工提供自愿离职买断方案",
+        "fact": "Reuters援引Business Insider报道，Microsoft为控制成本向约6万名员工提供自愿离职买断方案。这是报道中的方案覆盖人数，不能写成已有6万人离职或裁员完成；所核帖未给出实际接受人数、净节约金额及完整地区细则。",
+        "impact": "若方案被接受，可能降低未来人员成本，但短期买断支出及组织调整也影响现金流。是否足以抵销AI投入，需要后续费用、现金流与业务交付证据。",
+        "direction": "双向",
+        "horizon": "未来两周及后续正式披露",
+        "affected": [
+          "MSFT",
+          "企业软件",
+          "AI资本开支"
+        ],
+        "counterCase": "实际参与少、买断现金支出高或业务受影响，可能削弱节约效果；不能仅凭覆盖人数算利润增量。",
+        "selectionReason": "相对旧池有新披露，来源及事实边界可追溯，连接融资/成本与产业传导；不以互动量证明事实。",
+        "credibilityReason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件具体发生时刻未披露；所列时间为X发布时间。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2114857147779400151",
+            "postId": "2114857147779400151",
+            "username": "Reuters",
+            "publishedAt": "2026-10-26T23:10:10Z",
+            "checkedAt": "2026-10-27T00:12:01.346Z",
+            "excerpt": "Microsoft offers buyouts to around 60,000 employees to contain costs ... Business Insider reports",
+            "verification": "collector-report",
+            "verificationNote": "Grok网页版Expert读取/返回X原帖；执行器未独立直读。仅采用该作者公开陈述支持的最小事实。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 33,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 31,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "大型软件公司覆盖人数较大的自愿离职方案涉及费用和现金流，与AI投入持续性相关；实际执行未知。",
+        "people": [],
+        "credibility": {
+          "score": 33,
+          "label": "规则初评，未校准",
+          "reason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 1,
+      "lastEdition": "2026-10-27-0800",
+      "lastCheckedAt": "2026-10-27T00:48:02.764Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-27T00:48:02.764Z",
+      "readingDate": "2026-10-27",
+      "retainUntil": "2026-10-28T00:00:00.000Z",
+      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+      "lastMaterialEdition": "2026-10-27-0800",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "openai-gpt61-terra-price-cut",
+      "firstSeenAt": "2026-10-27T00:48:02.764Z",
+      "firstEdition": "2026-10-27-0800",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "openai-gpt61-terra-price-cut",
+        "collectionUnit": "news:ai-adoption",
+        "title": "OpenAI发布GPT-6.1 Terra并宣布标准API价格降低50%",
+        "fact": "OpenAI发布GPT-6.1 Terra，强调计算机操作能力及更低价格，并宣布标准API价格降低50%。本条仅记录官方定价陈述；没有把该比例扩展到所有输入输出类别、缓存、工具费用或每项任务总成本。",
+        "impact": "更低单价可能降低应用开发门槛，也可能压缩模型服务收入单价。任务成功率、重试次数、调用量和工具费用决定客户总成本；用量增长是否覆盖降价与算力投入仍待验证。",
+        "direction": "双向",
+        "horizon": "未来两周及后续正式披露",
+        "affected": [
+          "AI应用",
+          "模型API服务",
+          "云算力"
+        ],
+        "counterCase": "若任务需更多token或重试、工具费上升，实际工作流成本未必同比下降；采用增加也不自动证明利润或独立收入改善。",
+        "selectionReason": "相对旧池有新披露，来源及事实边界可追溯，连接融资/成本与产业传导；不以互动量证明事实。",
+        "credibilityReason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件具体发生时刻未披露；所列时间为X发布时间。",
+        "sources": [
+          {
+            "url": "https://x.com/OpenAI/status/2114780711664398349",
+            "postId": "2114780711664398349",
+            "username": "OpenAI",
+            "publishedAt": "2026-10-26T18:06:27Z",
+            "checkedAt": "2026-10-27T00:10:16.579Z",
+            "excerpt": "GPT-6.1 Terra: delivering fast and capable computer use at a lower price. ... 50% lower standard API prices.",
+            "verification": "collector-report",
+            "verificationNote": "Grok网页版Expert读取/返回X原帖；执行器未独立直读。仅采用该作者公开陈述支持的最小事实。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 49,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 92,
+              "claimScore": 51,
+              "breakdown": {
+                "directness": 30,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "账号在人工来源表中登记为机构一手来源"
+              ],
+              "warnings": [
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "I01",
+          "I02",
+          "R01"
+        ],
+        "disciplines": [
+          "产业经济",
+          "企业财务"
+        ],
+        "knowledgeApplication": "API单价下降经任务总成本和采用传到终端收入，再影响上游算力融资；价格、需求弹性与现金流的方向可能不同，不能从单一折扣推出盈利改善。",
+        "people": [],
+        "credibility": {
+          "score": 49,
+          "label": "规则初评，未校准",
+          "reason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-27-0800",
+      "lastCheckedAt": "2026-10-27T00:48:02.764Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-27T00:48:02.764Z",
+      "readingDate": "2026-10-27",
+      "retainUntil": "2026-10-28T00:00:00.000Z",
+      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
+      "lastMaterialEdition": "2026-10-27-0800",
       "lateDiscovery": false
     }
   ],
@@ -29904,19 +30161,18 @@
     "2026-10-25-0800:2026-10-25T00:48:21.743Z",
     "2026-10-26-0800:2026-10-26T00:49:40.898Z",
     "2026-10-26-1500:2026-10-26T07:04:49.615Z",
-    "2026-10-26-2030:2026-10-26T12:43:12.018Z"
+    "2026-10-26-2030:2026-10-26T12:43:12.018Z",
+    "2026-10-27-0800:2026-10-27T00:48:02.764Z"
   ],
-  "warnings": [
-    "本期采集失败，保留上次待阅内容；不是本期新增或已重新核验。"
-  ],
-  "lastStatus": "failed",
+  "warnings": [],
+  "lastStatus": "partial",
   "selected": {
     "focus": [
-      "spacex-musk-40bn-gpu-debt-20261025",
-      "oil-five-month-high-us-stocks-20261023"
+      "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
+      "msft-buyouts-20261026"
     ],
     "insights": [
-      "sentimentrader-equal-weight-divergence-20261023"
+      "openai-gpt61-terra-price-cut"
     ]
   },
   "migrationNote": "2026-10-12仅迁移现存真实归档，未重新采集或核验。更早已清理归档未恢复，待Grok按缺口补查。",
@@ -29924,16 +30180,361 @@
   "period": {
     "policy": "beijing-batches-v1",
     "timezone": "Asia/Shanghai",
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "weekendCarry": false,
-    "retainUntil": "2026-10-27T00:00:00.000Z"
+    "retainUntil": "2026-10-28T00:00:00.000Z"
   },
-  "latestEditionId": "2026-10-26-2030",
-  "lastUsableCutoff": "2026-10-26T08:00:00+08:00",
+  "latestEditionId": "2026-10-27-0800",
+  "lastUsableCutoff": "2026-10-27T08:00:00+08:00",
   "coverage": {
-    "status": "failed"
+    "status": "partial"
   },
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
+        "collectionUnit": "news:market-focus",
+        "title": "Anthropic宣布为拟议IPO提交S-1",
+        "fact": "Anthropic宣布已向SEC提交与拟议首次公开募股有关的S-1注册声明。该公告不等于SEC已批准或公司已经上市，发行价格、规模与交易时间尚未在所核X帖中确定。",
+        "impact": "公开资本市场融资若推进，可改变模型公司的资金来源和对算力供应商的支付能力；提交文件本身仍未带来已到账资金，也不能当作上游新增订单。",
+        "direction": "双向",
+        "horizon": "未来两周及后续正式披露",
+        "affected": [
+          "AI模型公司",
+          "云服务及算力供应链"
+        ],
+        "counterCase": "注册尚未生效、发行规模或时间变化，均会改变融资传导；算力投入仍需付费收入与现金流支撑。",
+        "selectionReason": "Anthropic拟议IPO的新实质程序进展，沿用既有IPO事件键；此前估值传闻留在时间线，不在本条继承为已核事实。",
+        "credibilityReason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+        "change": "进展",
+        "eventTime": null,
+        "eventTimeNote": "事件具体发生时刻未披露；所列时间为X发布时间。",
+        "sources": [
+          {
+            "url": "https://x.com/AnthropicAI/status/2114705042817110293",
+            "postId": "2114705042817110293",
+            "username": "AnthropicAI",
+            "publishedAt": "2026-10-26T13:05:46Z",
+            "checkedAt": "2026-10-27T00:10:16.579Z",
+            "excerpt": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.",
+            "verification": "collector-report",
+            "verificationNote": "Grok网页版Expert读取/返回X原帖；执行器未独立直读。仅采用该作者公开陈述支持的最小事实。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "模型公司首次公开融资程序可能影响AI资金链，属于市场共同关注的资本市场事件；不宣称全X热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-10-27T00:48:02.764Z",
+      "group": "focus",
+      "history": [
+        {
+          "edition": "2026-10-16-1500",
+          "event": {
+            "eventKey": "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
+            "title": "Anthropic IPO 估值预期据报从约 2 万亿下调至约 1.5 万亿美元",
+            "fact": "DeItaone：部分投资者将 Anthropic 即将 IPO 的估值预期从约 2 万亿美元下调约 25% 至约 1.5 万亿美元；同条仍提及 Q3 营收约 168 亿美元、环比约 +45%。FirstSquawk 亦称有投资者在疲软业绩与市场抛售后下调估值预期。",
+            "impact": "事件→私人 AI 估值锚下修→公募 AI 软件与上游资本开支风险溢价；盈利叙事仍在，但 IPO 定价权与“AI 无限溢价”叙事同步松动。",
+            "direction": "利空",
+            "horizon": "数周至 IPO 窗口",
+            "affected": [
+              "AI 软件估值",
+              "成长风格",
+              "半导体需求预期"
+            ],
+            "counterCase": "若路演仍按近 2 万亿定价成功、或后续季度美元新增收入重新加速，下调预期可被证伪。",
+            "selectionReason": "相对前一日“盈利+巨型 IPO”焦点，本窗出现明确估值锚下修，是 AI 定价机制的关键进展。",
+            "credibilityReason": "DeItaone/FirstSquawk 来源交叉；具体投资者名单与条款未披露，属市场传闻级定价预期。",
+            "change": "进展",
+            "eventTime": null,
+            "eventTimeNote": "估值预期调整的准确时点未写明；快讯时间在 10/15 美东晚间。",
+            "attentionEvidence": "DeItaone 估值下调帖展示约 28 万、点赞逾 600；热度仅作注意力参考。",
+            "sources": [
+              {
+                "url": "https://x.com/DeItaone/status/2110837977928638529",
+                "postId": "2110837977928638529",
+                "username": "DeItaone",
+                "publishedAt": "2026-10-15T20:59:26.000Z",
+                "checkedAt": "2026-10-16T07:10:00.000Z",
+                "excerpt": "ANTHROPIC'S IPO VALUATION EXPECTATIONS DROP FROM $2 TRILLION TO $1.5 TRILLION Some investors are considering a $1.5 trillion valuation for Anthropic's upcoming IPO, down 25% from earlier expectations of $2 trillion. Anthropic reported $16.8 billion in Q3 revenue, up 45%",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 36,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 37,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 10,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [
+                    "主张包含较具体、可核验的对象或数字"
+                  ],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/FirstSquawk/status/2110838715375583320",
+                "postId": "2110838715375583320",
+                "username": "FirstSquawk",
+                "publishedAt": "2026-10-15T21:02:21.000Z",
+                "checkedAt": "2026-10-16T07:10:00.000Z",
+                "excerpt": "SOME INVESTORS DIAL BACK ANTHROPIC VALUATION EXPECTATIONS AMID DISAPPOINTING RESULTS, MARKET SELLOFF - SOURCES",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "people": [],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "DeItaone/FirstSquawk 来源交叉；具体投资者名单与条款未披露，属市场传闻级定价预期。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-10-27T00:48:02.764Z"
+        }
+      ]
+    },
+    {
+      "item": {
+        "eventKey": "msft-buyouts-20261026",
+        "collectionUnit": "news:market-focus",
+        "title": "Reuters报道Microsoft向约6万名员工提供自愿离职买断方案",
+        "fact": "Reuters援引Business Insider报道，Microsoft为控制成本向约6万名员工提供自愿离职买断方案。这是报道中的方案覆盖人数，不能写成已有6万人离职或裁员完成；所核帖未给出实际接受人数、净节约金额及完整地区细则。",
+        "impact": "若方案被接受，可能降低未来人员成本，但短期买断支出及组织调整也影响现金流。是否足以抵销AI投入，需要后续费用、现金流与业务交付证据。",
+        "direction": "双向",
+        "horizon": "未来两周及后续正式披露",
+        "affected": [
+          "MSFT",
+          "企业软件",
+          "AI资本开支"
+        ],
+        "counterCase": "实际参与少、买断现金支出高或业务受影响，可能削弱节约效果；不能仅凭覆盖人数算利润增量。",
+        "selectionReason": "相对旧池有新披露，来源及事实边界可追溯，连接融资/成本与产业传导；不以互动量证明事实。",
+        "credibilityReason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件具体发生时刻未披露；所列时间为X发布时间。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2114857147779400151",
+            "postId": "2114857147779400151",
+            "username": "Reuters",
+            "publishedAt": "2026-10-26T23:10:10Z",
+            "checkedAt": "2026-10-27T00:12:01.346Z",
+            "excerpt": "Microsoft offers buyouts to around 60,000 employees to contain costs ... Business Insider reports",
+            "verification": "collector-report",
+            "verificationNote": "Grok网页版Expert读取/返回X原帖；执行器未独立直读。仅采用该作者公开陈述支持的最小事实。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 33,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 31,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "大型软件公司覆盖人数较大的自愿离职方案涉及费用和现金流，与AI投入持续性相关；实际执行未知。",
+        "people": [],
+        "credibility": {
+          "score": 33,
+          "label": "规则初评，未校准",
+          "reason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-10-27T00:48:02.764Z",
+      "group": "focus",
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "openai-gpt61-terra-price-cut",
+        "collectionUnit": "news:ai-adoption",
+        "title": "OpenAI发布GPT-6.1 Terra并宣布标准API价格降低50%",
+        "fact": "OpenAI发布GPT-6.1 Terra，强调计算机操作能力及更低价格，并宣布标准API价格降低50%。本条仅记录官方定价陈述；没有把该比例扩展到所有输入输出类别、缓存、工具费用或每项任务总成本。",
+        "impact": "更低单价可能降低应用开发门槛，也可能压缩模型服务收入单价。任务成功率、重试次数、调用量和工具费用决定客户总成本；用量增长是否覆盖降价与算力投入仍待验证。",
+        "direction": "双向",
+        "horizon": "未来两周及后续正式披露",
+        "affected": [
+          "AI应用",
+          "模型API服务",
+          "云算力"
+        ],
+        "counterCase": "若任务需更多token或重试、工具费上升，实际工作流成本未必同比下降；采用增加也不自动证明利润或独立收入改善。",
+        "selectionReason": "相对旧池有新披露，来源及事实边界可追溯，连接融资/成本与产业传导；不以互动量证明事实。",
+        "credibilityReason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件具体发生时刻未披露；所列时间为X发布时间。",
+        "sources": [
+          {
+            "url": "https://x.com/OpenAI/status/2114780711664398349",
+            "postId": "2114780711664398349",
+            "username": "OpenAI",
+            "publishedAt": "2026-10-26T18:06:27Z",
+            "checkedAt": "2026-10-27T00:10:16.579Z",
+            "excerpt": "GPT-6.1 Terra: delivering fast and capable computer use at a lower price. ... 50% lower standard API prices.",
+            "verification": "collector-report",
+            "verificationNote": "Grok网页版Expert读取/返回X原帖；执行器未独立直读。仅采用该作者公开陈述支持的最小事实。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 49,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 92,
+              "claimScore": 51,
+              "breakdown": {
+                "directness": 30,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "账号在人工来源表中登记为机构一手来源"
+              ],
+              "warnings": [
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "I01",
+          "I02",
+          "R01"
+        ],
+        "disciplines": [
+          "产业经济",
+          "企业财务"
+        ],
+        "knowledgeApplication": "API单价下降经任务总成本和采用传到终端收入，再影响上游算力融资；价格、需求弹性与现金流的方向可能不同，不能从单一折扣推出盈利改善。",
+        "people": [],
+        "credibility": {
+          "score": 49,
+          "label": "规则初评，未校准",
+          "reason": "官方或可识别媒体X原帖经Grok读取，仍为采集器转述；细节未独立确认。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-10-27T00:48:02.764Z",
+      "group": "insights",
+      "history": []
+    },
     {
       "item": {
         "eventKey": "spacex-musk-40bn-gpu-debt-20261025",
@@ -30213,164 +30814,6 @@
         }
       },
       "at": "2026-10-24T08:02:37.458Z",
-      "group": "insights",
-      "history": []
-    },
-    {
-      "item": {
-        "eventKey": "tsmc-rare-earth-equipment-20261022",
-        "title": "Reuters：TSMC寻求工厂设备替代方案以降低稀土依赖",
-        "fact": "据Reuters援引消息人士的独家报道，TSMC正寻求工厂设备替代方案，以降低对中国稀土的依赖。现有可见文字未说明替代已完成、工厂停产、采购金额或利润影响。",
-        "impact": "若替代方案获得验证，可能降低设备维护与扩产的供应中断风险，同时增加重新设计、认证和采购成本；对产能和利润的净影响取决于验证时间与经济性。",
-        "direction": "双向",
-        "horizon": "未来两周关注后续披露，产业替代与产能兑现可能更久",
-        "affected": [
-          "TSM",
-          "半导体设备供应链"
-        ],
-        "counterCase": "相关替代方案未获设备验证或不具成本可行性，原有供应链风险可能持续。",
-        "selectionReason": "新增且可回查的产业供应约束线索，范围和未确认处清楚。",
-        "credibilityReason": "仅采集器转述；权威媒体或公司原帖身份与主张支持范围分别记录。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "事件实际发生的精确时间未知；公开披露时间另存来源。",
-        "collectionUnit": "news:market-focus",
-        "sources": [
-          {
-            "url": "https://x.com/Reuters/status/2113250288681292217",
-            "postId": "2113250288681292217",
-            "username": "Reuters",
-            "publishedAt": "2026-10-22T12:45:05Z",
-            "checkedAt": "2026-10-23T00:06:22.810387+00:00",
-            "excerpt": "EXCLUSIVE: TSMC seeks factory-equipment alternatives to thwart China's rare earths grip, sources say",
-            "verification": "collector-report",
-            "verificationNote": "Grok网页X工具转述，执行器未独立直读。可见为标题及链接，未读取报道正文；保留sources归因。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 24,
-              "band": "very-low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 17,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 0,
-                "recordIntegrity": 10,
-                "penalties": 10
-              },
-              "reasons": [],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "文本含传闻或未确认措辞",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          }
-        ],
-        "attentionEvidence": "本次X采样Reuters帖可见24赞、9转发、9回复、3引用、35051浏览，仅作可观察注意力，不称全网排名。",
-        "people": [],
-        "credibility": {
-          "score": 24,
-          "label": "规则初评，未校准",
-          "reason": "仅采集器转述；权威媒体或公司原帖身份与主张支持范围分别记录。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        }
-      },
-      "at": "2026-10-23T00:44:27.389Z",
-      "group": "focus",
-      "history": []
-    },
-    {
-      "item": {
-        "eventKey": "bloom-q3-2026-revenue-guidance-20261022",
-        "title": "Bloom Energy公布第三季度收入增长并上调全年指引",
-        "fact": "Bloom Energy公布2026年第三季度收入12.358亿美元，同比增长138.1%；全年营收指引上调至44亿—46亿美元，中点同比增长122%。这些数字来自公司财报公告帖；全年数值是指引，未确认AEP的700MW是否已交付或投运。",
-        "impact": "现场供电设备的收入与指引上升，为电力设备需求转化为销售提供一项证据；若数据中心供电瓶颈持续，可能支持设备订单，但本帖没有分拆AI收入、毛利或现金回款，不能据此量化AI资本开支回报。",
-        "direction": "双向",
-        "horizon": "未来两周关注后续披露，产业替代与产能兑现可能更久",
-        "affected": [
-          "BE",
-          "数据中心电力链"
-        ],
-        "counterCase": "收入增长若伴随回款延后、利润压力或交付推迟，不能等同现金流和投资回报改善；指引仍有执行风险。",
-        "selectionReason": "新增且可回查的产业供应约束线索，范围和未确认处清楚。",
-        "credibilityReason": "仅采集器转述；权威媒体或公司原帖身份与主张支持范围分别记录。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "事件实际发生的精确时间未知；公开披露时间另存来源。",
-        "collectionUnit": "news:power",
-        "sources": [
-          {
-            "url": "https://x.com/Bloom_Energy/status/2113361900243472691",
-            "postId": "2113361900243472691",
-            "username": "Bloom_Energy",
-            "publishedAt": "2026-10-22T20:08:36Z",
-            "checkedAt": "2026-10-23T00:06:22.810387+00:00",
-            "excerpt": "Achieved record quarterly revenue of $1,235.8 million, delivering 138.1% year-over-year growth",
-            "verification": "collector-report",
-            "verificationNote": "Grok网页X工具转述，执行器未独立直读。全年指引为计划；未取得AEP700MW或Google已供电原帖。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 34,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 33,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 6,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [
-                "主张包含较具体、可核验的对象或数字"
-              ],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          }
-        ],
-        "knowledgeCards": [
-          "I03",
-          "I01",
-          "M02"
-        ],
-        "disciplines": [
-          "电力工程",
-          "企业财务"
-        ],
-        "knowledgeApplication": "供电瓶颈影响数据中心投运，设备商销售增长与采购方资本成本通过合同与交付相连；产品收入不能替代已并网MW或经营现金流。",
-        "people": [],
-        "credibility": {
-          "score": 34,
-          "label": "规则初评，未校准",
-          "reason": "仅采集器转述；权威媒体或公司原帖身份与主张支持范围分别记录。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        }
-      },
-      "at": "2026-10-23T00:44:27.389Z",
       "group": "insights",
       "history": []
     }
