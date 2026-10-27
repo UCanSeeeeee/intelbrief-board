@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-27T20:31:55+08:00",
-  "updatedAt": "2026-10-27T21:37:40+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-27T21:41:34+08:00",
+  "finishedAt": "2026-10-27T21:41:34+08:00",
   "gitHeadAtStart": "22700c1ac07a1025e4c904b7897c07645c4b25af",
   "stages": [
     {
@@ -40,47 +40,49 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-27T21:41:34+08:00",
+      "detail": "内容提交 3213b93e6e877910d85551b1cc3107dcb69f1454 已明确推送origin HEAD:master，远端SHA一致。"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-27T21:41:34+08:00",
+      "detail": "Cloudflare Pages success；14/14公共JSON字节一致；只读API均200有效JSON，VIX官方成功；CNN实时418时按契约保留已归档较新29.1快照。"
     }
   ],
   "pages": {
     "news": {
-      "status": "pending",
-      "detail": null
+      "status": "partial",
+      "detail": "两轮发现/追源/反证完成；无合格新增，7候选证据缺口保留；215持久池及重点保留。"
     },
     "people": {
-      "status": "pending",
-      "detail": null
+      "status": "partial",
+      "detail": "3条Elon热度；Jensen引语未达归因门槛留缺口；旧规则/周榜与累计重点保留。"
     },
     "tickers": {
-      "status": "pending",
-      "detail": null
+      "status": "ok",
+      "detail": "3条事实进展及7组35条热度；14对象保存后推进，旧线索/往期保留。"
     },
     "ai": {
-      "status": "pending",
-      "detail": null
+      "status": "ok",
+      "detail": "2条新进展；证明无官方来源及两条26日旧源单列，不混入本窗。"
     },
     "earnings": {
-      "status": "pending",
-      "detail": null
+      "status": "ok",
+      "detail": "Nasdaq2870原始/112精选，pendingReview0；T历史评分和9条自主理由保留。"
     },
     "macro": {
-      "status": "pending",
-      "detail": null
+      "status": "unchanged",
+      "detail": "无到期/过时触发，复用晨间官方核对。"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "3213b93e6e877910d85551b1cc3107dcb69f1454",
+  "notes": [
+    "发布完成；30对象0请求失败通过20:30。新闻无合格新增及Jensen归因缺口保留，不补造；学习1寓言/5小知识、论文未重采；未运行本地test/check/build/预览。"
+  ],
   "timings": [
     {
       "page": "news",
