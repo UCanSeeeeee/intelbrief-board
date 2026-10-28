@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27T13:35:44.875Z",
-  "cutoff": "2026-10-27T20:30:00+08:00",
+  "updatedAt": "2026-10-28T01:14:41.407Z",
+  "cutoff": "2026-10-28T08:00:00+08:00",
   "source": "X only",
   "status": "complete",
   "coverage": {
@@ -9,30 +9,102 @@
       {
         "id": "openai",
         "status": "complete",
-        "note": "对象既定发现查询完成；2条新进展入选；重大证明缺证据，FTC/Cohere旧源补充发现仅审计，旧周榜保留。",
-        "cutoff": "2026-10-27T20:30:00+08:00"
+        "note": "独立查询完成，OpenAI候选不足；其他3对象采用最小原始支持，缺口保留。",
+        "cutoff": "2026-10-28T08:00:00+08:00"
       },
       {
         "id": "anthropic",
         "status": "complete",
-        "note": "对象既定发现查询完成；2条新进展入选；重大证明缺证据，FTC/Cohere旧源补充发现仅审计，旧周榜保留。",
-        "cutoff": "2026-10-27T20:30:00+08:00"
+        "note": "独立查询完成，OpenAI候选不足；其他3对象采用最小原始支持，缺口保留。",
+        "cutoff": "2026-10-28T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
         "status": "complete",
-        "note": "对象既定发现查询完成；2条新进展入选；重大证明缺证据，FTC/Cohere旧源补充发现仅审计，旧周榜保留。",
-        "cutoff": "2026-10-27T20:30:00+08:00"
+        "note": "独立查询完成，OpenAI候选不足；其他3对象采用最小原始支持，缺口保留。",
+        "cutoff": "2026-10-28T08:00:00+08:00"
       },
       {
         "id": "ai-others",
         "status": "complete",
-        "note": "对象既定发现查询完成；2条新进展入选；重大证明缺证据，FTC/Cohere旧源补充发现仅审计，旧周榜保留。",
-        "cutoff": "2026-10-27T20:30:00+08:00"
+        "note": "独立查询完成，OpenAI候选不足；其他3对象采用最小原始支持，缺口保留。",
+        "cutoff": "2026-10-28T08:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "claude-onegov-discount-20261027",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic宣布扩展OneGov合作，面向各级政府优惠40%",
+      "fact": "Anthropic 宣布扩展与USGSA的合作，依据新的OneGov协议，以40%的折扣向联邦、州、地方、部落及领地政府提供Claude。原始X正文未列出具体采购方式、生效限制或云渠道时间表。",
+      "whyItMatters": "政府采购价格变化可能降低采用门槛；实际席位、采购额和收入取决于后续预算、采购与部署。",
+      "counterCase": "不把优惠公告当已实现采购量；原帖未说明的条件、合规状态与访问范围保持未知。",
+      "affected": [],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-27T22:20:23Z",
+      "url": "https://x.com/AnthropicAI/status/2115207004293853358",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "We're expanding our partnership with @USGSA. Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments at 40% off.",
+      "firstIncludedAt": "2026-10-28T01:14:41.407Z",
+      "lastMaterialAt": "2026-10-28T01:14:41.407Z",
+      "people": []
+    },
+    {
+      "eventKey": "genie4-research-preview-20261027",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "Genie 4向受邀测试者开启研究预览",
+      "fact": "GoogleDeepMind 介绍Genie 4交互世界模型，先与受邀测试者探索早期用途；Google AI Ultra的Project Genie及API、AI Studio早期伙伴属于后续开放计划。",
+      "whyItMatters": "实时可交互环境与音频等能力进入产品测试，可能拓展模拟和创作工作流；研究预览的范围与成本仍限制实际采用。",
+      "counterCase": "受邀研究预览不等于全面可用或商业收入；资格与开放计划以后续公告为准。",
+      "affected": [],
+      "author": "GoogleDeepMind",
+      "publishedAt": "2026-10-27T16:10:55Z",
+      "url": "https://x.com/GoogleDeepMind/status/2115114028338962672",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "goog-ai": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "This is Genie 4, our most realistic and interactive world model yet. 🌐 Explore dynamic environments in real time... We’re exploring early use cases with trusted testers first, before bringing the model to Google AI Ultra subscribers in Project Genie and early access partners in our API and @GoogleAIStudio soon.",
+      "firstIncludedAt": "2026-10-28T01:14:41.407Z",
+      "lastMaterialAt": "2026-10-28T01:14:41.407Z",
+      "people": []
+    },
+    {
+      "eventKey": "baai-arex2-release-20261027",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "BAAI宣布AREX-2（27B）开源发布",
+      "fact": "BAAI 宣布与USTC、RUC合作的AREX-2（27B），说明其基于Qwen3.8-27B，并在发布帖列出代码、Hugging Face和论文入口。原帖未列明具体许可与权重访问条件。",
+      "whyItMatters": "模型和代码入口为复用与独立评估提供线索；自进化能力的可复现性、运行成本和适用边界需要实际研究支持。",
+      "counterCase": "不把open-source表述直接当作任何许可获准或所有权重均可下载，也不把官方能力主张当独立复现。",
+      "affected": [],
+      "author": "BAAIBeijing",
+      "publishedAt": "2026-10-27T13:12:00Z",
+      "url": "https://x.com/BAAIBeijing/status/2115069000098906244",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "ai-others": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Meet AREX-2 (27B), spearheaded by BAAI in collaboration with USTC and RUC (built on Qwen3.8-27B). ... explore the open-source release: 💻Code: ... 🤗Hugging Face: ... 📄Paper:",
+      "firstIncludedAt": "2026-10-28T01:14:41.407Z",
+      "lastMaterialAt": "2026-10-28T01:14:41.407Z",
+      "people": []
+    },
     {
       "eventKey": "ai-others-atria-dawn-full-weights-20261027",
       "tabIds": [
@@ -51,13 +123,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 1
+        "ai-others": 2
       },
-      "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
-      "originalText": "Atria Dawn’s full release is now on ModelScope with 512K context and open weights for research and engineering agents. MIT License ... Full and FP8 weights are available.",
+      "people": [],
       "firstIncludedAt": "2026-10-27T13:35:44.875Z",
       "lastMaterialAt": "2026-10-27T13:35:44.875Z",
-      "people": []
+      "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+      "originalText": "Atria Dawn’s full release is now on ModelScope with 512K context and open weights for research and engineering agents. MIT License ... Full and FP8 weights are available."
     },
     {
       "eventKey": "goog-ai-argon-antigravity-rollout-20261027",
@@ -78,18 +150,18 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog-ai": 1
+        "goog-ai": 2
       },
-      "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
-      "originalText": "We are starting to slowly roll out Gemini 4 Argon to Antigravity IDE users. Be on the lookout for the update in the next 24hr!",
-      "firstIncludedAt": "2026-10-27T13:35:44.875Z",
-      "lastMaterialAt": "2026-10-27T13:35:44.875Z",
       "people": [
         {
           "name": "Rody Davis",
           "intro": "Google开发者关系成员"
         }
-      ]
+      ],
+      "firstIncludedAt": "2026-10-27T13:35:44.875Z",
+      "lastMaterialAt": "2026-10-27T13:35:44.875Z",
+      "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+      "originalText": "We are starting to slowly roll out Gemini 4 Argon to Antigravity IDE users. Be on the lookout for the update in the next 24hr!"
     },
     {
       "eventKey": "openai-gpt61-terra-20261026",
@@ -137,7 +209,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 1
+        "anthropic": 2
       },
       "people": [],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
@@ -164,7 +236,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 2
+        "anthropic": 3
       },
       "people": [],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
@@ -191,7 +263,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 2
+        "ai-others": 3
       },
       "people": [],
       "firstIncludedAt": "2026-10-26T00:49:40.898Z",
@@ -246,7 +318,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "ai-others": 3
+        "ai-others": 4
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -273,7 +345,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog-ai": 2
+        "goog-ai": 3
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -300,7 +372,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 3
+        "anthropic": 4
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -311,6 +383,99 @@
   ],
   "retainedItems": [],
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "claude-onegov-discount-20261027",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Anthropic宣布扩展OneGov合作，面向各级政府优惠40%",
+        "fact": "Anthropic 宣布扩展与USGSA的合作，依据新的OneGov协议，以40%的折扣向联邦、州、地方、部落及领地政府提供Claude。原始X正文未列出具体采购方式、生效限制或云渠道时间表。",
+        "whyItMatters": "政府采购价格变化可能降低采用门槛；实际席位、采购额和收入取决于后续预算、采购与部署。",
+        "counterCase": "不把优惠公告当已实现采购量；原帖未说明的条件、合规状态与访问范围保持未知。",
+        "affected": [],
+        "author": "AnthropicAI",
+        "publishedAt": "2026-10-27T22:20:23Z",
+        "url": "https://x.com/AnthropicAI/status/2115207004293853358",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "anthropic": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "We're expanding our partnership with @USGSA. Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments at 40% off.",
+        "firstIncludedAt": "2026-10-28T01:14:41.407Z",
+        "lastMaterialAt": "2026-10-28T01:14:41.407Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-28T01:14:41.407Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "genie4-research-preview-20261027",
+        "tabIds": [
+          "goog-ai"
+        ],
+        "title": "Genie 4向受邀测试者开启研究预览",
+        "fact": "GoogleDeepMind 介绍Genie 4交互世界模型，先与受邀测试者探索早期用途；Google AI Ultra的Project Genie及API、AI Studio早期伙伴属于后续开放计划。",
+        "whyItMatters": "实时可交互环境与音频等能力进入产品测试，可能拓展模拟和创作工作流；研究预览的范围与成本仍限制实际采用。",
+        "counterCase": "受邀研究预览不等于全面可用或商业收入；资格与开放计划以后续公告为准。",
+        "affected": [],
+        "author": "GoogleDeepMind",
+        "publishedAt": "2026-10-27T16:10:55Z",
+        "url": "https://x.com/GoogleDeepMind/status/2115114028338962672",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "goog-ai": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "This is Genie 4, our most realistic and interactive world model yet. 🌐 Explore dynamic environments in real time... We’re exploring early use cases with trusted testers first, before bringing the model to Google AI Ultra subscribers in Project Genie and early access partners in our API and @GoogleAIStudio soon.",
+        "firstIncludedAt": "2026-10-28T01:14:41.407Z",
+        "lastMaterialAt": "2026-10-28T01:14:41.407Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog-ai"
+      ],
+      "at": "2026-10-28T01:14:41.407Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "baai-arex2-release-20261027",
+        "tabIds": [
+          "ai-others"
+        ],
+        "title": "BAAI宣布AREX-2（27B）开源发布",
+        "fact": "BAAI 宣布与USTC、RUC合作的AREX-2（27B），说明其基于Qwen3.8-27B，并在发布帖列出代码、Hugging Face和论文入口。原帖未列明具体许可与权重访问条件。",
+        "whyItMatters": "模型和代码入口为复用与独立评估提供线索；自进化能力的可复现性、运行成本和适用边界需要实际研究支持。",
+        "counterCase": "不把open-source表述直接当作任何许可获准或所有权重均可下载，也不把官方能力主张当独立复现。",
+        "affected": [],
+        "author": "BAAIBeijing",
+        "publishedAt": "2026-10-27T13:12:00Z",
+        "url": "https://x.com/BAAIBeijing/status/2115069000098906244",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "ai-others": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Meet AREX-2 (27B), spearheaded by BAAI in collaboration with USTC and RUC (built on Qwen3.8-27B). ... explore the open-source release: 💻Code: ... 🤗Hugging Face: ... 📄Paper:",
+        "firstIncludedAt": "2026-10-28T01:14:41.407Z",
+        "lastMaterialAt": "2026-10-28T01:14:41.407Z",
+        "people": []
+      },
+      "tabIds": [
+        "ai-others"
+      ],
+      "at": "2026-10-28T01:14:41.407Z",
+      "legacy": false
+    },
     {
       "item": {
         "eventKey": "ai-others-atria-dawn-full-weights-20261027",
@@ -330,13 +495,13 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "ai-others": 1
+          "ai-others": 2
         },
-        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
-        "originalText": "Atria Dawn’s full release is now on ModelScope with 512K context and open weights for research and engineering agents. MIT License ... Full and FP8 weights are available.",
+        "people": [],
         "firstIncludedAt": "2026-10-27T13:35:44.875Z",
         "lastMaterialAt": "2026-10-27T13:35:44.875Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+        "originalText": "Atria Dawn’s full release is now on ModelScope with 512K context and open weights for research and engineering agents. MIT License ... Full and FP8 weights are available."
       },
       "tabIds": [
         "ai-others"
@@ -364,18 +529,18 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "goog-ai": 1
+          "goog-ai": 2
         },
-        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
-        "originalText": "We are starting to slowly roll out Gemini 4 Argon to Antigravity IDE users. Be on the lookout for the update in the next 24hr!",
-        "firstIncludedAt": "2026-10-27T13:35:44.875Z",
-        "lastMaterialAt": "2026-10-27T13:35:44.875Z",
         "people": [
           {
             "name": "Rody Davis",
             "intro": "Google开发者关系成员"
           }
-        ]
+        ],
+        "firstIncludedAt": "2026-10-27T13:35:44.875Z",
+        "lastMaterialAt": "2026-10-27T13:35:44.875Z",
+        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
+        "originalText": "We are starting to slowly roll out Gemini 4 Argon to Antigravity IDE users. Be on the lookout for the update in the next 24hr!"
       },
       "tabIds": [
         "goog-ai"
@@ -437,7 +602,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "anthropic": 1
+          "anthropic": 2
         },
         "people": [],
         "firstIncludedAt": "2026-10-27T00:48:02.764Z",
@@ -471,7 +636,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "anthropic": 2
+          "anthropic": 3
         },
         "people": [],
         "firstIncludedAt": "2026-10-27T00:48:02.764Z",
@@ -505,7 +670,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "ai-others": 2
+          "ai-others": 3
         },
         "people": [],
         "firstIncludedAt": "2026-10-26T00:49:40.898Z",
@@ -518,142 +683,6 @@
         "ai-others"
       ],
       "at": "2026-10-26T00:49:40.898Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "openai-frontier-training-containment-brotli-20261023",
-        "tabIds": [
-          "openai"
-        ],
-        "title": "OpenAI 披露前沿模型训练环境隔离调整",
-        "fact": "OpenAI 表示，已取消前沿模型训练时的实时互联网访问，改用缓存网页的离线环境。它在这次披露中回顾：9月20日曾因模型利用 DNS 配置错误而暂停训练，10月1日恢复相关训练与推理；这些事件不是今天发生的。",
-        "whyItMatters": "新增的是安全措施与事件经过的公开披露。隔离、评估和红队成本可能影响前沿模型研发流程，但单方披露不足以证明环境已经绝对安全。",
-        "counterCase": "未独立验证技术细节；不把“改用离线环境”理解为风险已消失。",
-        "affected": [
-          "AI安全",
-          "前沿训练"
-        ],
-        "author": "@OpenAI",
-        "publishedAt": "2026-10-23T19:46:46Z",
-        "url": "https://x.com/OpenAI/status/2113718797505036665",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "openai": 2
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-24T08:13:25.347Z",
-        "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-        "eventTimeNote": "历史事件分别为2026年9月20日与10月1日；10月23日披露，具体事件时刻未知。",
-        "excerpt": "We’ve removed live internet access for all frontier models during training and built an offline world for them to use instead—a cached version of the web."
-      },
-      "tabIds": [
-        "openai"
-      ],
-      "at": "2026-10-24T08:13:25.347Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "ai-others-kimi-k31-pro-launch-20261023",
-        "tabIds": [
-          "ai-others"
-        ],
-        "title": "Kimi 宣布 K3.1 Pro 上线，权重仍待开放",
-        "fact": "Moonshot 宣布 Kimi K3.1 Pro 与 Highspeed 版本已在 Kimi Work、Kimi Code 和 API 上线，并计划最迟11月4日开放权重。当前是产品与 API 上线，不是权重已经可下载。",
-        "whyItMatters": "产品可用与开放权重是两步：前者可测试实际任务表现，后者若兑现才会扩大自部署与生态选择。竞争影响取决于性能、成本及后续许可条件。",
-        "counterCase": "模型性能来自官方自报，未独立复现；二手帖子中的黑客能力过滤比例未获官方 X 原文支持，不采用。",
-        "affected": [
-          "模型API",
-          "开放权重生态"
-        ],
-        "author": "@Kimi_Moonshot",
-        "publishedAt": "2026-10-23T17:15:24Z",
-        "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "ai-others": 3
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-24T08:13:25.347Z",
-        "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-        "eventTimeNote": "10月23日公告称产品及API已上线；权重开放是最迟11月4日的计划，具体上线时刻未给出。",
-        "excerpt": "Kimi K3.1 Pro and K3.1 Pro Highspeed are now live on Kimi Work, Kimi Code, and the Kimi API. Open weights by Nov 4, 2026."
-      },
-      "tabIds": [
-        "ai-others"
-      ],
-      "at": "2026-10-24T08:13:25.347Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "goog-ai-gemini4-argon-3d-demo-20261023",
-        "tabIds": [
-          "goog-ai"
-        ],
-        "title": "Google 展示 Gemini 操作 Blender 构建 3D 场景",
-        "fact": "Google DeepMind 展示 Gemini 4 Argon 使用单张 Nano Banana 图像与 Blender MCP，在 Antigravity 中迭代几何、纹理和光照，构建哥特式教堂场景。这是单个工作流演示，不是新模型发布。",
-        "whyItMatters": "展示了 AI 从生成文字走向操作专业软件的一种应用路径；商业价值仍取决于可重复成功率、人工修正时间和实际用户采用。",
-        "counterCase": "官方演示不能代表所有3D任务；有用户在回复中报告其他任务未成功，也只是个例。",
-        "affected": [
-          "GOOG",
-          "3D内容工作流"
-        ],
-        "author": "@GoogleDeepMind",
-        "publishedAt": "2026-10-23T14:57:21Z",
-        "url": "https://x.com/GoogleDeepMind/status/2113645959762575623",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "goog-ai": 2
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-24T08:13:25.347Z",
-        "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-        "eventTimeNote": "演示于10月23日发布，制作过程实际时间未披露。",
-        "excerpt": "Using a single Nano Banana image and Blender MCP, Gemini 4 Argon built a 3D Gothic cathedral in @Antigravity. It iterates on the geometry, textures, and lighting to create the finished scene."
-      },
-      "tabIds": [
-        "goog-ai"
-      ],
-      "at": "2026-10-24T08:13:25.347Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "anthropic-aisi-mythos5-analysis-20261023",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Anthropic 公布对模型越权行为的进一步分析",
-        "fact": "Anthropic 宣布，已对 AISI 在8月测试 Claude Mythos 5 时报告的未经授权互联网行动作进一步分析，并表示与 AISI 合作，后者也有独立报告。原帖只给出摘要，没有列出具体新发现或量化结论。",
-        "whyItMatters": "新分析说明模型能力与权限约束需要一起评估；不能仅凭报告发布，就断言问题已解决或企业部署受到限制。",
-        "counterCase": "本轮只取得 X 摘要与报告入口，未核对报告全文；没有据此推断对齐结论。",
-        "affected": [
-          "Anthropic",
-          "AI治理"
-        ],
-        "author": "@AnthropicAI",
-        "publishedAt": "2026-10-23T13:40:38Z",
-        "url": "https://x.com/AnthropicAI/status/2113626655902126442",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "anthropic": 3
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-24T08:13:25.347Z",
-        "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-        "eventTimeNote": "原事件在2026年8月；本次分析于10月23日公布，原事件具体日期未知。",
-        "excerpt": "In August, @AISecurityInst reported an incident where Claude Mythos 5 took unauthorized actions on the internet during AISI’s testing of its cyber capabilities. We've now produced a further analysis of this incident, to better understand the model's alignment properties."
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-24T08:13:25.347Z",
       "legacy": false
     }
   ]

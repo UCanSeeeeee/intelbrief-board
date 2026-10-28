@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27T13:35:44.892Z",
-  "asOf": "2026-10-27T20:30:00+08:00",
+  "updatedAt": "2026-10-28T01:15:11.086Z",
+  "asOf": "2026-10-28T08:00:00+08:00",
   "events": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
@@ -20726,7 +20726,7 @@
       "rank": 0,
       "lastEdition": "2026-10-27-0800",
       "lastCheckedAt": "2026-10-27T00:48:02.764Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-27T00:48:02.764Z",
       "readingDate": "2026-10-27",
       "retainUntil": "2026-10-28T00:00:00.000Z",
@@ -30013,7 +30013,7 @@
       "rank": 1,
       "lastEdition": "2026-10-27-0800",
       "lastCheckedAt": "2026-10-27T00:48:02.764Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-27T00:48:02.764Z",
       "readingDate": "2026-10-27",
       "retainUntil": "2026-10-28T00:00:00.000Z",
@@ -30109,12 +30109,195 @@
       "rank": 0,
       "lastEdition": "2026-10-27-0800",
       "lastCheckedAt": "2026-10-27T00:48:02.764Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-27T00:48:02.764Z",
       "readingDate": "2026-10-27",
       "retainUntil": "2026-10-28T00:00:00.000Z",
       "lastMaterialAt": "2026-10-27T00:48:02.764Z",
       "lastMaterialEdition": "2026-10-27-0800",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "skhynix-q326-lta-20261027",
+      "firstSeenAt": "2026-10-28T01:15:11.086Z",
+      "firstEdition": "2026-10-28-0800",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "skhynix-q326-lta-20261027",
+        "title": "SK hynix 披露三季度营收首超100万亿韩元，长协覆盖未来两年过半产能",
+        "fact": "SK hynix 表示，2026年第三季度营收首次超过100万亿韩元，增长由服务器DDR5、数据中心SSD与HBM4出货带动；长协覆盖2027—2028年产能的50%以上。",
+        "impact": "存储需求与合约覆盖提高了产能收入的可见度，也提示新增供给需继续投入资金。对MU与HBM链的参考在于供需和产品组合；韩元营收不等于美元营收，覆盖产能也不等于锁定利润。",
+        "direction": "双向",
+        "horizon": "未来两周跟踪融资/供需披露；产能和债券计划跨年度兑现",
+        "counterCase": "未来披露若显示需求取消、合同约束较弱、融资条款恶化或未能发行，当前收入/融资能见度判断减弱。",
+        "selectionReason": "取得当事人或可识别原始媒体X证据，仅采用其支持的最小新事实。",
+        "change": "新增",
+        "credibilityReason": "原始发布者可识别，但证据仍为Grok转述，未经执行器独立直读；不把管理层展望当已实现。",
+        "eventTime": null,
+        "eventTimeNote": "披露涉及2026年第三季度与未来计划，实际事项发生时刻未知。",
+        "affected": [
+          "AI半导体",
+          "存储",
+          "数据中心融资"
+        ],
+        "sources": [
+          {
+            "username": "SKhynix",
+            "postId": "2115226515483017623",
+            "url": "https://x.com/SKhynix/status/2115226515483017623",
+            "publishedAt": "2026-10-27T23:37:54Z",
+            "checkedAt": "2026-10-28T00:11:07.906172+00:00",
+            "excerpt": "@SKhynix posted record results in 3Q26, with revenue surpassing KRW 100 trillion for the first time. Growth was driven by server DDR5 and data center SSDs, alongside HBM4 shipments. LTAs cover over 50% of 2027–2028 capacity.",
+            "verification": "collector-report",
+            "verificationNote": "已登录Grok Expert返回原帖关键句，执行器未独立直读X；定向追源及独立反证完成，未找到更正不构成确认。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 35,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 35,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 8,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "collectionUnit": "news:market-focus",
+        "attentionEvidence": "公司财报与多条存储链讨论同时出现；这里只是已检索样本的主观重要性比较，不声称全网热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 35,
+          "label": "规则初评，未校准",
+          "reason": "原始发布者可识别，但证据仍为Grok转述，未经执行器独立直读；不把管理层展望当已实现。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-28-0800",
+      "lastCheckedAt": "2026-10-28T01:15:11.086Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-28T01:15:11.086Z",
+      "readingDate": "2026-10-28",
+      "retainUntil": "2026-10-29T00:00:00.000Z",
+      "lastMaterialAt": "2026-10-28T01:15:11.086Z",
+      "lastMaterialEdition": "2026-10-28-0800",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "broadcom-anthropic-bonds-plan-20261027",
+      "firstSeenAt": "2026-10-28T01:15:11.086Z",
+      "firstEdition": "2026-10-28-0800",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "broadcom-anthropic-bonds-plan-20261027",
+        "title": "Bloomberg：Broadcom–Anthropic融资包拟含最多约210亿美元高评级债券",
+        "fact": "Bloomberg 报道，银行计划最早在明年初出售最多约210亿美元高评级债券，作为Broadcom为Anthropic芯片融资组织的630亿美元融资包的一部分。",
+        "impact": "芯片采购需要通过资本市场转化为设备融资，债券发行条件会影响资金到位和交付节奏。供应商融资扩大需求承接能力，同时把客户回款与信用条件连接起来；融资包规模不能直接视为已确认芯片收入。",
+        "direction": "双向",
+        "horizon": "未来两周跟踪融资/供需披露；产能和债券计划跨年度兑现",
+        "counterCase": "未来披露若显示需求取消、合同约束较弱、融资条款恶化或未能发行，当前收入/融资能见度判断减弱。",
+        "selectionReason": "取得当事人或可识别原始媒体X证据，仅采用其支持的最小新事实。",
+        "change": "进展",
+        "credibilityReason": "原始发布者可识别，但证据仍为Grok转述，未经执行器独立直读；不把管理层展望当已实现。",
+        "eventTime": null,
+        "eventTimeNote": "披露涉及2026年第三季度与未来计划，实际事项发生时刻未知。",
+        "affected": [
+          "AI半导体",
+          "存储",
+          "数据中心融资"
+        ],
+        "sources": [
+          {
+            "username": "business",
+            "postId": "2115225816262951030",
+            "url": "https://x.com/business/status/2115225816262951030",
+            "publishedAt": "2026-10-27T23:35:08Z",
+            "checkedAt": "2026-10-28T00:11:07.906172+00:00",
+            "excerpt": "Banks are planning to sell as much as about $21 billion of high-grade bonds as soon as early next year as part of a $63 billion funding package that Broadcom has pulled together to help finance chips for AI developer Anthropic.",
+            "verification": "collector-report",
+            "verificationNote": "已登录Grok Expert返回原帖关键句，执行器未独立直读X；定向追源及独立反证完成，未找到更正不构成确认。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 33,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 31,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "collectionUnit": "news:capital-cost",
+        "knowledgeCards": [
+          "I01",
+          "I02",
+          "M05"
+        ],
+        "disciplines": [
+          "公司金融",
+          "半导体产业"
+        ],
+        "knowledgeApplication": "将芯片采购、客户融资与信用市场连接：银行组织融资→债券计划与成本→设备采购能力→供应商交付和回款；不把计划当已发行。",
+        "people": [],
+        "credibility": {
+          "score": 33,
+          "label": "规则初评，未校准",
+          "reason": "原始发布者可识别，但证据仍为Grok转述，未经执行器独立直读；不把管理层展望当已实现。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-28-0800",
+      "lastCheckedAt": "2026-10-28T01:15:11.086Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-28T01:15:11.086Z",
+      "readingDate": "2026-10-28",
+      "retainUntil": "2026-10-29T00:00:00.000Z",
+      "lastMaterialAt": "2026-10-28T01:15:11.086Z",
+      "lastMaterialEdition": "2026-10-28-0800",
       "lateDiscovery": false
     }
   ],
@@ -30164,17 +30347,17 @@
     "2026-10-26-2030:2026-10-26T12:43:12.018Z",
     "2026-10-27-0800:2026-10-27T00:48:02.764Z",
     "2026-10-27-1500:2026-10-27T07:01:22.473Z",
-    "2026-10-27-2030:2026-10-27T13:35:44.892Z"
+    "2026-10-27-2030:2026-10-27T13:35:44.892Z",
+    "2026-10-28-0800:2026-10-28T01:15:11.086Z"
   ],
   "warnings": [],
   "lastStatus": "partial",
   "selected": {
     "focus": [
-      "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
-      "msft-buyouts-20261026"
+      "skhynix-q326-lta-20261027"
     ],
     "insights": [
-      "openai-gpt61-terra-price-cut"
+      "broadcom-anthropic-bonds-plan-20261027"
     ]
   },
   "migrationNote": "2026-10-12仅迁移现存真实归档，未重新采集或核验。更早已清理归档未恢复，待Grok按缺口补查。",
@@ -30182,16 +30365,175 @@
   "period": {
     "policy": "beijing-batches-v1",
     "timezone": "Asia/Shanghai",
-    "date": "2026-10-27",
+    "date": "2026-10-28",
     "weekendCarry": false,
-    "retainUntil": "2026-10-28T00:00:00.000Z"
+    "retainUntil": "2026-10-29T00:00:00.000Z"
   },
-  "latestEditionId": "2026-10-27-2030",
-  "lastUsableCutoff": "2026-10-27T20:30:00+08:00",
+  "latestEditionId": "2026-10-28-0800",
+  "lastUsableCutoff": "2026-10-28T08:00:00+08:00",
   "coverage": {
     "status": "partial"
   },
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "skhynix-q326-lta-20261027",
+        "title": "SK hynix 披露三季度营收首超100万亿韩元，长协覆盖未来两年过半产能",
+        "fact": "SK hynix 表示，2026年第三季度营收首次超过100万亿韩元，增长由服务器DDR5、数据中心SSD与HBM4出货带动；长协覆盖2027—2028年产能的50%以上。",
+        "impact": "存储需求与合约覆盖提高了产能收入的可见度，也提示新增供给需继续投入资金。对MU与HBM链的参考在于供需和产品组合；韩元营收不等于美元营收，覆盖产能也不等于锁定利润。",
+        "direction": "双向",
+        "horizon": "未来两周跟踪融资/供需披露；产能和债券计划跨年度兑现",
+        "counterCase": "未来披露若显示需求取消、合同约束较弱、融资条款恶化或未能发行，当前收入/融资能见度判断减弱。",
+        "selectionReason": "取得当事人或可识别原始媒体X证据，仅采用其支持的最小新事实。",
+        "change": "新增",
+        "credibilityReason": "原始发布者可识别，但证据仍为Grok转述，未经执行器独立直读；不把管理层展望当已实现。",
+        "eventTime": null,
+        "eventTimeNote": "披露涉及2026年第三季度与未来计划，实际事项发生时刻未知。",
+        "affected": [
+          "AI半导体",
+          "存储",
+          "数据中心融资"
+        ],
+        "sources": [
+          {
+            "username": "SKhynix",
+            "postId": "2115226515483017623",
+            "url": "https://x.com/SKhynix/status/2115226515483017623",
+            "publishedAt": "2026-10-27T23:37:54Z",
+            "checkedAt": "2026-10-28T00:11:07.906172+00:00",
+            "excerpt": "@SKhynix posted record results in 3Q26, with revenue surpassing KRW 100 trillion for the first time. Growth was driven by server DDR5 and data center SSDs, alongside HBM4 shipments. LTAs cover over 50% of 2027–2028 capacity.",
+            "verification": "collector-report",
+            "verificationNote": "已登录Grok Expert返回原帖关键句，执行器未独立直读X；定向追源及独立反证完成，未找到更正不构成确认。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 35,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 35,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 8,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "collectionUnit": "news:market-focus",
+        "attentionEvidence": "公司财报与多条存储链讨论同时出现；这里只是已检索样本的主观重要性比较，不声称全网热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 35,
+          "label": "规则初评，未校准",
+          "reason": "原始发布者可识别，但证据仍为Grok转述，未经执行器独立直读；不把管理层展望当已实现。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-10-28T01:15:11.086Z",
+      "group": "focus",
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "broadcom-anthropic-bonds-plan-20261027",
+        "title": "Bloomberg：Broadcom–Anthropic融资包拟含最多约210亿美元高评级债券",
+        "fact": "Bloomberg 报道，银行计划最早在明年初出售最多约210亿美元高评级债券，作为Broadcom为Anthropic芯片融资组织的630亿美元融资包的一部分。",
+        "impact": "芯片采购需要通过资本市场转化为设备融资，债券发行条件会影响资金到位和交付节奏。供应商融资扩大需求承接能力，同时把客户回款与信用条件连接起来；融资包规模不能直接视为已确认芯片收入。",
+        "direction": "双向",
+        "horizon": "未来两周跟踪融资/供需披露；产能和债券计划跨年度兑现",
+        "counterCase": "未来披露若显示需求取消、合同约束较弱、融资条款恶化或未能发行，当前收入/融资能见度判断减弱。",
+        "selectionReason": "取得当事人或可识别原始媒体X证据，仅采用其支持的最小新事实。",
+        "change": "进展",
+        "credibilityReason": "原始发布者可识别，但证据仍为Grok转述，未经执行器独立直读；不把管理层展望当已实现。",
+        "eventTime": null,
+        "eventTimeNote": "披露涉及2026年第三季度与未来计划，实际事项发生时刻未知。",
+        "affected": [
+          "AI半导体",
+          "存储",
+          "数据中心融资"
+        ],
+        "sources": [
+          {
+            "username": "business",
+            "postId": "2115225816262951030",
+            "url": "https://x.com/business/status/2115225816262951030",
+            "publishedAt": "2026-10-27T23:35:08Z",
+            "checkedAt": "2026-10-28T00:11:07.906172+00:00",
+            "excerpt": "Banks are planning to sell as much as about $21 billion of high-grade bonds as soon as early next year as part of a $63 billion funding package that Broadcom has pulled together to help finance chips for AI developer Anthropic.",
+            "verification": "collector-report",
+            "verificationNote": "已登录Grok Expert返回原帖关键句，执行器未独立直读X；定向追源及独立反证完成，未找到更正不构成确认。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 33,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 31,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 4,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "collectionUnit": "news:capital-cost",
+        "knowledgeCards": [
+          "I01",
+          "I02",
+          "M05"
+        ],
+        "disciplines": [
+          "公司金融",
+          "半导体产业"
+        ],
+        "knowledgeApplication": "将芯片采购、客户融资与信用市场连接：银行组织融资→债券计划与成本→设备采购能力→供应商交付和回款；不把计划当已发行。",
+        "people": [],
+        "credibility": {
+          "score": 33,
+          "label": "规则初评，未校准",
+          "reason": "原始发布者可识别，但证据仍为Grok转述，未经执行器独立直读；不把管理层展望当已实现。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-10-28T01:15:11.086Z",
+      "group": "insights",
+      "history": []
+    },
     {
       "item": {
         "eventKey": "anthropic-ipo-valuation-cut-1-5t-2026-10-15",
@@ -30656,167 +30998,6 @@
       },
       "at": "2026-10-26T00:49:40.898Z",
       "group": "focus",
-      "history": []
-    },
-    {
-      "item": {
-        "eventKey": "oil-five-month-high-us-stocks-20261023",
-        "collectionUnit": "news:market-focus",
-        "title": "油价升至五个月高点，美股收跌",
-        "fact": "《华尔街日报》市场报道：油价升至五个月高点之际，美股下跌。公开帖文未给出具体油价和各指数收盘跌幅。",
-        "impact": "能源成本上升可能同时挤压企业利润、推高通胀预期；若长端融资成本随之上升，AI重资本项目与高估值成长股会承受双重压力。但同日下跌不能证明由油价单独造成，仍需区分盈利预期和仓位调整。",
-        "direction": "双向",
-        "horizon": "未来一至两周；观察油价能否持续及利率反应",
-        "affected": [
-          "美股整体",
-          "半导体",
-          "AI基础设施",
-          "能源"
-        ],
-        "counterCase": "若油价回落且通胀预期、长端利率未跟随上行，成本—折现双重压力会减弱；能源生产商也可能与用能行业方向相反。",
-        "selectionReason": "比单家公司订单传闻覆盖更广，且有可识别媒体原帖；不采用未追到原始出处的精确行情数字。",
-        "credibilityReason": "可识别媒体原帖由Grok返回，未独立直读；标题支持共时变化，不足以确认单一因果。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "报道对应2026年10月23日；具体事件时刻未确认。",
-        "attentionEvidence": "影响企业成本、通胀和折现率多个共同因子；本轮检索范围内优先，不宣称全网排名。",
-        "sources": [
-          {
-            "username": "WSJmarkets",
-            "url": "https://x.com/WSJmarkets/status/2113729111638073763",
-            "postId": "2113729111638073763",
-            "publishedAt": "2026-10-23T20:27:46Z",
-            "checkedAt": "2026-10-24T07:50:43Z",
-            "excerpt": "U.S. Stocks Fall as Oil Prices Hit Five-Month High",
-            "verification": "collector-report",
-            "verificationNote": "Grok Expert网页检索与追源返回，当前模型未独立直读X；不将未见原帖正文的外链数字补入摘要。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 30,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 27,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 0,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          }
-        ],
-        "people": [],
-        "credibility": {
-          "score": 30,
-          "label": "规则初评，未校准",
-          "reason": "可识别媒体原帖由Grok返回，未独立直读；标题支持共时变化，不足以确认单一因果。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        }
-      },
-      "at": "2026-10-24T08:02:37.458Z",
-      "group": "focus",
-      "history": []
-    },
-    {
-      "item": {
-        "eventKey": "sentimentrader-equal-weight-divergence-20261023",
-        "collectionUnit": "news:market-structure",
-        "title": "指数下跌未必代表多数股票同跌：等权与市值权重出现分歧",
-        "fact": "SentimenTrader发布统计：10月22日标普500指数下跌1.21%，追踪同一成分股等权配置的RSP上涨0.73%。它统计自2008年以来，标普跌幅至少1%的601个交易日中，这种组合只出现3次。这是该机构的研究统计，未用交易所原始数据独立复算。",
-        "impact": "同一成分股在不同权重下方向相反，提示压力可能集中于大市值公司，不能把指数跌幅等同于全市场需求恶化。判断半导体和AI龙头时，应拆开权重集中、行业盈利和资金轮动；这既可能是风险扩散前的阶段，也可能是行情向其他股票扩散，单日分歧不足以判定趋势反转。",
-        "direction": "待定",
-        "horizon": "未来数个交易日至两周，观察分歧持续性和盈利修订",
-        "affected": [
-          "标普500",
-          "大型科技股",
-          "等权指数",
-          "半导体"
-        ],
-        "counterCase": "若后续等权也走弱、下跌范围扩散，不能继续解释为仅权重股调整；若源数据或复算口径更正，应撤回相应数字。",
-        "selectionReason": "源头是研究机构自身发布的统计而非匿名行情复述；连接指数构成与投资者对市场整体的判断偏差。",
-        "credibilityReason": "Grok返回研究机构原帖，未独立直读及复算；3/601只是历史样本描述，不是未来涨跌概率。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "统计对应2026年10月22日交易日；研究于次日发布，精确统计时刻未知。",
-        "sources": [
-          {
-            "username": "sentimentrader",
-            "url": "https://x.com/sentimentrader/status/2113649143986163934",
-            "postId": "2113649143986163934",
-            "publishedAt": "2026-10-23T15:10:00Z",
-            "checkedAt": "2026-10-24T07:50:43Z",
-            "excerpt": "$SPX fell 1.21% on Oct. 22, but equal weight $RSP gained 0.73%.",
-            "verification": "collector-report",
-            "verificationNote": "Grok Expert网页检索与追源返回，当前模型未独立直读X；不将未见原帖正文的外链数字补入摘要。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 36,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 37,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 10,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [
-                "主张包含较具体、可核验的对象或数字"
-              ],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          }
-        ],
-        "knowledgeCards": [
-          "I05",
-          "R05",
-          "R07"
-        ],
-        "disciplines": [
-          "市场结构",
-          "统计与认知"
-        ],
-        "knowledgeApplication": "权重集中会改变指数呈现的市场面貌，传播中的指数叙事可能放大投资者对共同风险的判断；须比较同成分权重并保留样本及数据边界，不从单日统计外推走势。",
-        "people": [],
-        "credibility": {
-          "score": 36,
-          "label": "规则初评，未校准",
-          "reason": "Grok返回研究机构原帖，未独立直读及复算；3/601只是历史样本描述，不是未来涨跌概率。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        }
-      },
-      "at": "2026-10-24T08:02:37.458Z",
-      "group": "insights",
       "history": []
     }
   ]
