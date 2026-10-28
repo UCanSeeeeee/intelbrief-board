@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-28T20:34:23+08:00",
-  "updatedAt": "2026-10-28T20:42:30+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-28T20:44:22+08:00",
+  "finishedAt": "2026-10-28T20:44:22+08:00",
   "gitHeadAtStart": "7e5852f9ce0c4a0504dd3047c892b9d6e743b06b",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-28T20:44:22+08:00",
+      "detail": "9ea5206140b8b94d71a9be8e5f1e17ba42fa65b2 已显式push origin HEAD:master，ls-remote一致；此项记录回执时刻"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-28T20:44:22+08:00",
+      "detail": "对应Cloudflare部署success；14/14相关JSON字节一致；VIX200官方正常，CNN200保留快照且上游418已记录"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "未到期无已知过时，保持日历真源"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "9ea5206140b8b94d71a9be8e5f1e17ba42fa65b2",
+  "notes": [
+    "学习1寓言+5小知识、财报和指标已发布；Grok入口空白导致30个X对象失败不推进，旧内容和断点保留；无本地测试构建预览"
+  ],
   "timings": [
     {
       "page": "news",
