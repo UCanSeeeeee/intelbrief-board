@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-28T01:10:24.703Z",
+  "updatedAt": "2026-10-28T12:40:16.021Z",
   "timezone": "Asia/Shanghai",
   "activeWeekId": "current",
   "source": {
@@ -50,7 +50,7 @@
   },
   "counts": {
     "weeks": 3,
-    "raw": 2870,
+    "raw": 2871,
     "important": 112
   },
   "weeks": [
@@ -297,12 +297,41 @@
           "rawCount": 105,
           "items": [
             {
+              "symbol": "TSLA",
+              "name": "Tesla, Inc. ",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$1,610,590,720,000",
+              "marketCapUsd": 1610590720000,
+              "epsForecast": "$0.22",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "新兴科技"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：新兴科技",
+              "source": "nasdaq",
+              "result": {
+                "status": "unknown",
+                "score": null,
+                "band": null,
+                "summary": "官方已确认发布Q3财报，但本次可读IR首页未呈现Q3股东更新下载正文，8-K可读节选仅说明附表。第三方EPS/收入与日历口径不一致，未用X二传或论坛数字补财报，不评分；等待可核官方结果与可比预期。",
+                "sources": [
+                  "https://ir.tesla.com/press-release/tesla-releases-third-quarter-2026-financial-results",
+                  "https://ir.tesla.com/",
+                  "https://ir.tesla.com/_flysystem/s3/sec/000162828026066738/tsla-20261021-gen.pdf"
+                ],
+                "facts": {},
+                "checkedAt": "2026-10-22T00:24:32.088419+00:00"
+              }
+            },
+            {
               "symbol": "META",
               "name": "Meta Platforms, Inc.",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$1,611,863,430,000",
-              "marketCapUsd": 1611863430000,
+              "marketCap": "$1,585,355,290,000",
+              "marketCapUsd": 1585355290000,
               "epsForecast": "$6.52",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -339,41 +368,12 @@
               }
             },
             {
-              "symbol": "TSLA",
-              "name": "Tesla, Inc. ",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$1,547,979,060,000",
-              "marketCapUsd": 1547979060000,
-              "epsForecast": "$0.22",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "新兴科技"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：新兴科技",
-              "source": "nasdaq",
-              "result": {
-                "status": "unknown",
-                "score": null,
-                "band": null,
-                "summary": "官方已确认发布Q3财报，但本次可读IR首页未呈现Q3股东更新下载正文，8-K可读节选仅说明附表。第三方EPS/收入与日历口径不一致，未用X二传或论坛数字补财报，不评分；等待可核官方结果与可比预期。",
-                "sources": [
-                  "https://ir.tesla.com/press-release/tesla-releases-third-quarter-2026-financial-results",
-                  "https://ir.tesla.com/",
-                  "https://ir.tesla.com/_flysystem/s3/sec/000162828026066738/tsla-20261021-gen.pdf"
-                ],
-                "facts": {},
-                "checkedAt": "2026-10-22T00:24:32.088419+00:00"
-              }
-            },
-            {
               "symbol": "LRCX",
               "name": "Lam Research Corporation",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$296,678,097,000",
-              "marketCapUsd": 296678097000,
+              "marketCap": "$300,862,833,000",
+              "marketCapUsd": 300862833000,
               "epsForecast": "$2.17",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -400,8 +400,8 @@
               "name": "Texas Instruments Incorporated",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$272,413,213,000",
-              "marketCapUsd": 272413213000,
+              "marketCap": "$282,272,793,000",
+              "marketCapUsd": 282272793000,
               "epsForecast": "$2.40",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -445,8 +445,8 @@
               "name": "NextEra Energy, Inc.",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$172,062,982,000",
-              "marketCapUsd": 172062982000,
+              "marketCap": "$172,859,965,000",
+              "marketCapUsd": 172859965000,
               "epsForecast": "$1.20",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -487,8 +487,8 @@
               "name": "Philip Morris International Inc",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$314,645,807,000",
-              "marketCapUsd": 314645807000,
+              "marketCap": "$315,814,806,000",
+              "marketCapUsd": 315814806000,
               "epsForecast": "$2.30",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -539,8 +539,8 @@
               "name": "SAP SE",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$293,059,690,000",
-              "marketCapUsd": 293059690000,
+              "marketCap": "$289,681,310,000",
+              "marketCapUsd": 289681310000,
               "epsForecast": "$2.03",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -564,8 +564,8 @@
               "name": "Thermo Fisher Scientific Inc",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$253,236,216,000",
-              "marketCapUsd": 253236216000,
+              "marketCap": "$256,242,270,000",
+              "marketCapUsd": 256242270000,
               "epsForecast": "$6.40",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -604,8 +604,8 @@
               "name": "International Business Machines Corporation",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$239,531,409,000",
-              "marketCapUsd": 239531409000,
+              "marketCap": "$236,516,475,000",
+              "marketCapUsd": 236516475000,
               "epsForecast": "$2.88",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -630,8 +630,8 @@
               "name": "Abbott Laboratories",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$181,482,602,000",
-              "marketCapUsd": 181482602000,
+              "marketCap": "$178,402,525,000",
+              "marketCapUsd": 178402525000,
               "epsForecast": "$1.43",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -671,12 +671,52 @@
               }
             },
             {
+              "symbol": "SCCO",
+              "name": "Southern Copper Corporation",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$164,157,243,000",
+              "marketCapUsd": 164157243000,
+              "epsForecast": "$2.04",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 78,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "第三季营收46.966亿美元，高于财报前Zacks预期44.9亿美元，约高4.6%；每股收益2.15美元。经营现金流22.243亿美元，资本投入5.158亿美元。超预期主要由金属价格支持，铜销量同比下降0.4%，不把价格驱动当作产量扩张，评78分。各平台EPS预期及调整口径有差异，未据此计算EPS惊喜；未将尚未召开的电话会当新增指引。",
+                "facts": {
+                  "revenueUsdBn": 4.6966,
+                  "consensusRevenueUsdBn": 4.49,
+                  "reportedEps": 2.15,
+                  "consensusEpsFromNasdaq": 2.04,
+                  "epsComparability": "Nasdaq2.04与财报前Zacks一致，但GAAP/调整口径未明确；不计算EPS惊喜",
+                  "operatingCashFlowUsdBn": 2.2243,
+                  "capitalInvestmentUsdBn": 0.5158,
+                  "copperSalesYoYPercent": -0.4,
+                  "officialReleaseDate": "2026-10-20",
+                  "secFiledDate": "2026-10-21",
+                  "guidanceBoundary": "只用正式稿，电话会在本轮截止后；El Pilar正文36,000/29,000吨口径不一致，不将其产量目标计分"
+                },
+                "sources": [
+                  "https://www.sec.gov/Archives/edgar/data/1001838/000110465926117588/scco-ex99d1.htm",
+                  "https://www.zacks.com/stock/news/3011199/southern-copper-scco-earnings-expected-to-grow-what-to-know-ahead-of-q3-release"
+                ],
+                "checkedAt": "2026-10-22T12:41:25.070Z",
+                "scoredAt": "2026-10-22T12:41:25.070Z"
+              }
+            },
+            {
               "symbol": "DHR",
               "name": "Danaher Corporation",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$163,901,571,000",
-              "marketCapUsd": 163901571000,
+              "marketCap": "$163,219,145,000",
+              "marketCapUsd": 163219145000,
               "epsForecast": "$1.92",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -713,46 +753,6 @@
                 "reportedDate": "2026-10-21",
                 "checkedAt": "2026-10-22T00:24:32.088419+00:00",
                 "scoredAt": "2026-10-22T00:24:32.088419+00:00"
-              }
-            },
-            {
-              "symbol": "SCCO",
-              "name": "Southern Copper Corporation",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$157,048,242,000",
-              "marketCapUsd": 157048242000,
-              "epsForecast": "$2.04",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 78,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "第三季营收46.966亿美元，高于财报前Zacks预期44.9亿美元，约高4.6%；每股收益2.15美元。经营现金流22.243亿美元，资本投入5.158亿美元。超预期主要由金属价格支持，铜销量同比下降0.4%，不把价格驱动当作产量扩张，评78分。各平台EPS预期及调整口径有差异，未据此计算EPS惊喜；未将尚未召开的电话会当新增指引。",
-                "facts": {
-                  "revenueUsdBn": 4.6966,
-                  "consensusRevenueUsdBn": 4.49,
-                  "reportedEps": 2.15,
-                  "consensusEpsFromNasdaq": 2.04,
-                  "epsComparability": "Nasdaq2.04与财报前Zacks一致，但GAAP/调整口径未明确；不计算EPS惊喜",
-                  "operatingCashFlowUsdBn": 2.2243,
-                  "capitalInvestmentUsdBn": 0.5158,
-                  "copperSalesYoYPercent": -0.4,
-                  "officialReleaseDate": "2026-10-20",
-                  "secFiledDate": "2026-10-21",
-                  "guidanceBoundary": "只用正式稿，电话会在本轮截止后；El Pilar正文36,000/29,000吨口径不一致，不将其产量目标计分"
-                },
-                "sources": [
-                  "https://www.sec.gov/Archives/edgar/data/1001838/000110465926117588/scco-ex99d1.htm",
-                  "https://www.zacks.com/stock/news/3011199/southern-copper-scco-earnings-expected-to-grow-what-to-know-ahead-of-q3-release"
-                ],
-                "checkedAt": "2026-10-22T12:41:25.070Z",
-                "scoredAt": "2026-10-22T12:41:25.070Z"
               }
             },
             {
@@ -1003,8 +1003,8 @@
               "name": "American Express Company",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$211,257,410,000",
-              "marketCapUsd": 211257410000,
+              "marketCap": "$209,822,433,000",
+              "marketCapUsd": 209822433000,
               "epsForecast": "$4.47",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -1059,7 +1059,7 @@
       "weekEnd": "2026-10-30",
       "counts": {
         "days": 5,
-        "raw": 861,
+        "raw": 867,
         "important": 46
       },
       "days": [
@@ -1068,7 +1068,7 @@
           "stale": false,
           "date": "2026-10-26",
           "weekday": "周一",
-          "rawCount": 78,
+          "rawCount": 75,
           "items": [
             {
               "symbol": "CDNS",
@@ -1215,13 +1215,13 @@
           "stale": false,
           "date": "2026-10-27",
           "weekday": "周二",
-          "rawCount": 170,
+          "rawCount": 184,
           "items": [
             {
               "symbol": "V",
               "name": "Visa Inc.",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
               "marketCap": "$722,135,020,000",
               "marketCapUsd": 722135020000,
               "epsForecast": "$3.43",
@@ -1254,8 +1254,8 @@
             {
               "symbol": "KO",
               "name": "Coca-Cola Company (The)",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
               "marketCap": "$398,846,329,000",
               "marketCapUsd": 398846329000,
               "epsForecast": "$0.87",
@@ -1295,8 +1295,8 @@
             {
               "symbol": "HOOD",
               "name": "Robinhood Markets, Inc.",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
               "marketCap": "$83,470,795,000",
               "marketCapUsd": 83470795000,
               "epsForecast": "$0.56",
@@ -1339,8 +1339,8 @@
             {
               "symbol": "HUBB",
               "name": "Hubbell Inc",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
               "marketCap": "$24,271,282,200",
               "marketCapUsd": 24271282200,
               "epsForecast": "$5.75",
@@ -1383,8 +1383,8 @@
             {
               "symbol": "ENPH",
               "name": "Enphase Energy, Inc.",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
               "marketCap": "$4,011,911,420",
               "marketCapUsd": 4011911420,
               "epsForecast": "$0.18",
@@ -1431,11 +1431,11 @@
             {
               "symbol": "BBAI",
               "name": "BigBear.ai, Inc.",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
               "marketCap": "$1,016,528,320",
               "marketCapUsd": 1016528320,
-              "epsForecast": "($0.05)",
+              "epsForecast": "($0.06)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "新兴科技"
@@ -1513,8 +1513,8 @@
             {
               "symbol": "NVS",
               "name": "Novartis AG",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
               "marketCap": "$293,492,818,000",
               "marketCapUsd": 293492818000,
               "epsForecast": "$2.25",
@@ -1557,7 +1557,7 @@
           "stale": false,
           "date": "2026-10-28",
           "weekday": "周三",
-          "rawCount": 227,
+          "rawCount": 228,
           "items": [
             {
               "symbol": "MSFT",
@@ -1863,15 +1863,15 @@
           "stale": false,
           "date": "2026-10-29",
           "weekday": "周四",
-          "rawCount": 324,
+          "rawCount": 317,
           "items": [
             {
               "symbol": "AMZN",
               "name": "Amazon.com, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$2,686,762,880,000",
-              "marketCapUsd": 2686762880000,
+              "marketCap": "$2,730,015,850,000",
+              "marketCapUsd": 2730015850000,
               "epsForecast": "$2.01",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1893,8 +1893,8 @@
               "name": "Mastercard Incorporated",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$537,432,097,000",
-              "marketCapUsd": 537432097000,
+              "marketCap": "$534,234,661,000",
+              "marketCapUsd": 534234661000,
               "epsForecast": "$5.14",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1916,8 +1916,8 @@
               "name": "Intel Corporation",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$478,140,236,000",
-              "marketCapUsd": 478140236000,
+              "marketCap": "$495,422,407,000",
+              "marketCapUsd": 495422407000,
               "epsForecast": "$0.28",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1939,8 +1939,8 @@
               "name": "Quanta Services, Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$83,083,682,000",
-              "marketCapUsd": 83083682000,
+              "marketCap": "$85,278,892,000",
+              "marketCapUsd": 85278892000,
               "epsForecast": "$4.68",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1962,8 +1962,8 @@
               "name": "Strategy Inc",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$59,000,951,000",
-              "marketCapUsd": 59000951000,
+              "marketCap": "$59,667,677,000",
+              "marketCapUsd": 59667677000,
               "epsForecast": "$21.50",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -1985,8 +1985,8 @@
               "name": "Monolithic Power Systems, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$57,363,149,000",
-              "marketCapUsd": 57363149000,
+              "marketCap": "$59,555,910,000",
+              "marketCapUsd": 59555910000,
               "epsForecast": "$6.80",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2008,8 +2008,8 @@
               "name": "Xcel Energy Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$48,634,028,000",
-              "marketCapUsd": 48634028000,
+              "marketCap": "$48,805,802,000",
+              "marketCapUsd": 48805802000,
               "epsForecast": "$1.39",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2031,9 +2031,9 @@
               "name": "Coinbase Global, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$42,108,371,000",
-              "marketCapUsd": 42108371000,
-              "epsForecast": "($0.15)",
+              "marketCap": "$42,501,489,000",
+              "marketCapUsd": 42501489000,
+              "epsForecast": "($0.16)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "新兴科技"
@@ -2054,8 +2054,8 @@
               "name": "First Solar, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$18,071,044,100",
-              "marketCapUsd": 18071044100,
+              "marketCap": "$18,898,563,100",
+              "marketCapUsd": 18898563100,
               "epsForecast": "$4.64",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2077,8 +2077,8 @@
               "name": "Eli Lilly and Company",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$1,204,127,530,000",
-              "marketCapUsd": 1204127530000,
+              "marketCap": "$1,206,735,080,000",
+              "marketCapUsd": 1206735080000,
               "epsForecast": "$5.38",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2098,8 +2098,8 @@
               "name": "Merck & Company, Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$346,909,016,000",
-              "marketCapUsd": 346909016000,
+              "marketCap": "$349,894,279,000",
+              "marketCapUsd": 349894279000,
               "epsForecast": "$2.12",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2119,8 +2119,8 @@
               "name": "Caterpillar, Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$318,154,768,000",
-              "marketCapUsd": 318154768000,
+              "marketCap": "$327,890,698,000",
+              "marketCapUsd": 327890698000,
               "epsForecast": "$7.12",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2140,8 +2140,8 @@
               "name": "Shell PLC",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$298,445,013,000",
-              "marketCapUsd": 298445013000,
+              "marketCap": "$295,255,736,000",
+              "marketCapUsd": 295255736000,
               "epsForecast": "$3.54",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2161,8 +2161,8 @@
               "name": "Linde plc",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$233,975,087,000",
-              "marketCapUsd": 233975087000,
+              "marketCap": "$234,477,568,000",
+              "marketCapUsd": 234477568000,
               "epsForecast": "$4.52",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2182,8 +2182,8 @@
               "name": "TotalEnergies SE",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$212,914,766,000",
-              "marketCapUsd": 212914766000,
+              "marketCap": "$204,169,839,000",
+              "marketCapUsd": 204169839000,
               "epsForecast": "$4.11",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -2205,7 +2205,7 @@
           "stale": false,
           "date": "2026-10-30",
           "weekday": "周五",
-          "rawCount": 62,
+          "rawCount": 63,
           "items": [
             {
               "symbol": "D",
@@ -2214,7 +2214,7 @@
               "timeLabel": "盘前",
               "marketCap": "$57,257,140,000",
               "marketCapUsd": 57257140000,
-              "epsForecast": "$1.19",
+              "epsForecast": "$1.20",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "电力"
@@ -2371,7 +2371,7 @@
       "weekEnd": "2026-11-06",
       "counts": {
         "days": 5,
-        "raw": 1668,
+        "raw": 1663,
         "important": 43
       },
       "days": [
@@ -2380,15 +2380,15 @@
           "stale": false,
           "date": "2026-11-02",
           "weekday": "周一",
-          "rawCount": 154,
+          "rawCount": 156,
           "items": [
             {
               "symbol": "AAPL",
               "name": "Apple Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$5,019,084,500,000",
-              "marketCapUsd": 5019084500000,
+              "marketCap": "$5,065,639,700,000",
+              "marketCapUsd": 5065639700000,
               "epsForecast": "$1.98",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2410,8 +2410,8 @@
               "name": "Palantir Technologies Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$477,624,304,000",
-              "marketCapUsd": 477624304000,
+              "marketCap": "$477,360,095,000",
+              "marketCapUsd": 477360095000,
               "epsForecast": "$0.33",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2433,8 +2433,8 @@
               "name": "Entergy Corporation",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$50,162,885,000",
-              "marketCapUsd": 50162885000,
+              "marketCap": "$50,596,852,000",
+              "marketCapUsd": 50596852000,
               "epsForecast": "$1.71",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2456,8 +2456,8 @@
               "name": "ON Semiconductor Corporation",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$28,832,935,900",
-              "marketCapUsd": 28832935900,
+              "marketCap": "$30,627,694,600",
+              "marketCapUsd": 30627694600,
               "epsForecast": "$0.88",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2479,8 +2479,8 @@
               "name": "Tempus AI, Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$12,193,311,700",
-              "marketCapUsd": 12193311700,
+              "marketCap": "$13,099,276,300",
+              "marketCapUsd": 13099276300,
               "epsForecast": "($0.31)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -2504,7 +2504,7 @@
           "stale": false,
           "date": "2026-11-03",
           "weekday": "周二",
-          "rawCount": 284,
+          "rawCount": 285,
           "items": [
             {
               "symbol": "AMD",
@@ -2762,7 +2762,7 @@
           "stale": false,
           "date": "2026-11-04",
           "weekday": "周三",
-          "rawCount": 491,
+          "rawCount": 484,
           "items": [
             {
               "symbol": "ARM",
@@ -3020,15 +3020,15 @@
           "stale": false,
           "date": "2026-11-05",
           "weekday": "周四",
-          "rawCount": 621,
+          "rawCount": 620,
           "items": [
             {
               "symbol": "NET",
               "name": "Cloudflare, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$118,168,617,000",
-              "marketCapUsd": 118168617000,
+              "marketCap": "$116,722,934,000",
+              "marketCapUsd": 116722934000,
               "epsForecast": "$0.02",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3050,8 +3050,8 @@
               "name": "Southern Company (The)",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$106,489,102,000",
-              "marketCapUsd": 106489102000,
+              "marketCap": "$106,581,131,000",
+              "marketCapUsd": 106581131000,
               "epsForecast": "$1.71",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3073,8 +3073,8 @@
               "name": "Airbnb, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$102,422,290,000",
-              "marketCapUsd": 102422290000,
+              "marketCap": "$101,087,003,000",
+              "marketCapUsd": 101087003000,
               "epsForecast": "$2.89",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3096,9 +3096,32 @@
               "name": "Duke Energy Corporation",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$97,026,138,000",
-              "marketCapUsd": 97026138000,
+              "marketCap": "$97,306,837,000",
+              "marketCapUsd": 97306837000,
               "epsForecast": "$1.87",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "SRE",
+              "name": "Sempra ",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$55,588,069,000",
+              "marketCapUsd": 55588069000,
+              "epsForecast": "$1.18",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "电力"
@@ -3119,8 +3142,8 @@
               "name": "Atlassian Corporation ",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$56,335,565,000",
-              "marketCapUsd": 56335565000,
+              "marketCap": "$55,325,676,000",
+              "marketCapUsd": 55325676000,
               "epsForecast": "$0.24",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3138,35 +3161,12 @@
               }
             },
             {
-              "symbol": "SRE",
-              "name": "Sempra ",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$55,084,564,000",
-              "marketCapUsd": 55084564000,
-              "epsForecast": "$1.18",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
               "symbol": "AFRM",
               "name": "Affirm Holdings, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$23,551,510,500",
-              "marketCapUsd": 23551510500,
+              "marketCap": "$24,632,664,100",
+              "marketCapUsd": 24632664100,
               "epsForecast": "$0.35",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3188,8 +3188,8 @@
               "name": "IonQ, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$12,577,999,900",
-              "marketCapUsd": 12577999900,
+              "marketCap": "$13,473,508,400",
+              "marketCapUsd": 13473508400,
               "epsForecast": "($0.79)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3211,8 +3211,8 @@
               "name": "NuScale Power Corporation",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$2,264,641,540",
-              "marketCapUsd": 2264641540,
+              "marketCap": "$2,449,422,590",
+              "marketCapUsd": 2449422590,
               "epsForecast": "($0.11)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3234,8 +3234,8 @@
               "name": "SoundHound AI, Inc.",
               "timeCode": "amc",
               "timeLabel": "盘后",
-              "marketCap": "$2,039,459,840",
-              "marketCapUsd": 2039459840,
+              "marketCap": "$2,101,990,530",
+              "marketCapUsd": 2101990530,
               "epsForecast": "($0.12)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3257,8 +3257,8 @@
               "name": "ConocoPhillips",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$181,846,458,000",
-              "marketCapUsd": 181846458000,
+              "marketCap": "$177,749,901,000",
+              "marketCapUsd": 177749901000,
               "epsForecast": "$2.95",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -3278,8 +3278,8 @@
               "name": "Sony Group Corporation",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$153,474,253,000",
-              "marketCapUsd": 153474253000,
+              "marketCap": "$151,174,791,000",
+              "marketCapUsd": 151174791000,
               "epsForecast": "$0.38",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
@@ -3308,8 +3308,8 @@
               "name": "Berkshire Hathaway Inc.",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$1,180,656,990,000",
-              "marketCapUsd": 1180656990000,
+              "marketCap": "$1,163,671,110,000",
+              "marketCapUsd": 1163671110000,
               "epsForecast": "$5.91",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3331,8 +3331,8 @@
               "name": "Vistra Corp.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$47,569,576,000",
-              "marketCapUsd": 47569576000,
+              "marketCap": "$49,224,258,000",
+              "marketCapUsd": 49224258000,
               "epsForecast": "$2.87",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3354,8 +3354,8 @@
               "name": "Oklo Inc.",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$4,825,297,900",
-              "marketCapUsd": 4825297900,
+              "marketCap": "$5,083,862,500",
+              "marketCapUsd": 5083862500,
               "epsForecast": "($0.28)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
@@ -3377,8 +3377,8 @@
               "name": "Berkshire Hathaway Inc.",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$1,180,656,990,000",
-              "marketCapUsd": 1180656990000,
+              "marketCap": "$1,163,671,110,000",
+              "marketCapUsd": 1163671110000,
               "epsForecast": null,
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
