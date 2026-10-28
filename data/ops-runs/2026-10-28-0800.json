@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-28T08:03:19+08:00",
-  "updatedAt": "2026-10-28T09:16:09+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-28T09:18:32+08:00",
+  "finishedAt": "2026-10-28T09:18:32+08:00",
   "gitHeadAtStart": "599671659983b1871590b46185eab142c34d929a",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-28T09:17:04+08:00",
+      "detail": "3ae408908b2481dcb67c295daae27b1fc268ba30 已推送，远端master SHA一致。"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-28T09:18:32+08:00",
+      "detail": "Cloudflare success，14/14线上JSON SHA256与内容提交一致；VIX18.39为10/26收盘；CNN归档33.6，API旧缓存29.1及418限制已留审计。"
     }
   ],
   "pages": {
@@ -77,11 +77,12 @@
       "detail": "截止时FOMC及PCE未到期，复用前轮日历证据。"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "3ae408908b2481dcb67c295daae27b1fc268ba30",
   "notes": [
-    "已核对origin/master，ff-only pull成功；计时从实际日志启动起算，前置读取及首次Grok导航未记录起点，耗时未知"
+    "已核对origin/master，ff-only pull成功；计时从实际日志启动起算，前置读取及首次Grok导航未记录起点，耗时未知",
+    "本次内容已推送并线上验证；30对象查询完成，论文6篇；条数缺额、4新线索与3财报unknown真实保留，API缓存差异单列。"
   ],
   "timings": [
     {
