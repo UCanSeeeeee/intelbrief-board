@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-29T15:04:30+08:00",
-  "updatedAt": "2026-10-29T15:07:59+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-29T15:10:19+08:00",
+  "finishedAt": "2026-10-29T15:10:19+08:00",
   "gitHeadAtStart": "bb7524c14c0fbe94a0b9ad08205f2a2b4a0347b3",
   "stages": [
     {
@@ -16,15 +16,15 @@
     },
     {
       "name": "read",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-29T15:09:34+08:00",
+      "detail": "已完成本批必要入口、KB/SOP、页面契约、学习及官方指标文档阅读；此处为补记里程碑，非实际阅读结束时间"
     },
     {
       "name": "search",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "failed",
+      "at": "2026-10-29T15:09:35+08:00",
+      "detail": "X入口失败30对象未查询；CNN、Cboe及Nasdaq独立官方例外已完成；逐批真实起止见timings"
     },
     {
       "name": "write",
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-29T15:08:59+08:00",
+      "detail": "dec4f9b3601778348fc3fc2784cadf04260b2c86已推送，ls-remote一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-29T15:10:19+08:00",
+      "detail": "Cloudflare成功，13项公开JSON与本地字节一致，VIX/CNN接口数值日期对应；内部审计不打包"
     }
   ],
   "pages": {
@@ -77,9 +77,9 @@
       "detail": null
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "dec4f9b3601778348fc3fc2784cadf04260b2c86",
   "notes": [],
   "timings": [
     {
