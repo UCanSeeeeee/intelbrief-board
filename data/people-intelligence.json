@@ -1,44 +1,256 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-29T04:21:29.221Z",
-  "cutoff": "2026-10-29T08:00:00+08:00",
+  "updatedAt": "2026-10-29T13:02:38.181Z",
+  "cutoff": "2026-10-29T20:30:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "elon-musk",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-29T08:00:00+08:00"
+        "status": "complete",
+        "note": "查询及热度来源核对完成，按可验证返回选择；缺额不凑。",
+        "cutoff": "2026-10-29T20:30:00+08:00"
       },
       {
         "id": "jensen-huang",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-29T08:00:00+08:00"
+        "status": "complete",
+        "note": "无可归因新帖；媒体别名与活动补查仅旧内容。",
+        "cutoff": "2026-10-29T20:30:00+08:00"
       },
       {
         "id": "donald-trump",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-29T08:00:00+08:00"
+        "status": "complete",
+        "note": "查询及热度来源核对完成，按可验证返回选择；缺额不凑。",
+        "cutoff": "2026-10-29T20:30:00+08:00"
       },
       {
         "id": "trillion-leaders",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-29T08:00:00+08:00"
+        "status": "complete",
+        "note": "已查询配置所涉公司核心高管本人，本窗无结果，窗前Satya帖不重复收录。",
+        "cutoff": "2026-10-29T20:30:00+08:00"
       },
       {
         "id": "research-reports",
-        "status": "failed",
-        "note": "Arc既有Grok页、新建https://grok.com/首页及一次刷新后均为空白；AX与截图无正文、输入框或Expert标签，无法确认登录/选模，未发送查询。Bot保持暂停；禁止第三路径。失败不等于无结果。",
-        "cutoff": "2026-10-29T08:00:00+08:00"
+        "status": "complete",
+        "note": "查询及热度来源核对完成，按可验证返回选择；缺额不凑。",
+        "cutoff": "2026-10-29T20:30:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "people-2115775702540726576",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "Nomura 分享自身半年度财报摘要",
+      "fact": "Nomura 官方账号介绍其 FY2026/27 第二季度及上半年财报要点和各业务部门表现，并链接 Nomura Plus。该帖没有披露可采用的半导体、AI 或电力研究假设变化。",
+      "whyItMatters": "本条仅是机构自身公开动态；低互动不影响其作为真实来源动态入选。",
+      "counterCase": "未打开外链，也未把自身财报摘要当作行业研报结论。",
+      "affected": [],
+      "author": "Nomura",
+      "publishedAt": "2026-10-29T12:00:11Z",
+      "url": "https://x.com/Nomura/status/2115775702540726576",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+      "originalText": "Today on Nomura Plus, we look at key points from our recently announced 2Q and 1H financial results for FY2026/27. We also give a quick summary of each division's performance.",
+      "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+      "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "views": 168,
+        "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "people-2115642019791896679",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 赞同一则关于 X 用户的观点",
+      "fact": "Elon Musk 以“True”回应一则称高 IQ 人群使用 X 的帖子。这是对平台用户的观点表达，未附可以核验的人群比较证据。",
+      "whyItMatters": "属于本人账号的高互动观点，不能由点赞或回应推断用户群体的实际认知水平。",
+      "counterCase": "引用内容没有给出代表性样本、测量方法或跨平台比较，不能作为统计结论。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-29T03:08:58Z",
+      "url": "https://x.com/elonmusk/status/2115642019791896679",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+      "originalText": "True",
+      "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+      "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 23364,
+        "reposts": 1892,
+        "replies": 1952,
+        "quotes": 331,
+        "views": 3101820,
+        "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "people-2115634093949911506",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 预计 Starship 42 将首次由塔架捕获",
+      "fact": "Elon Musk 转引 SpaceX 的静态点火内容，预计 Starship 42 将是首个由塔架捕获的飞船。这里表达的是未来目标，未表示捕获已经完成。",
+      "whyItMatters": "反映其对飞船回收路线的公开预期；原帖没有新的执行日期。",
+      "counterCase": "需以实际飞行及捕获结果验证，静态点火不等于完成塔架捕获。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-29T02:37:29Z",
+      "url": "https://x.com/elonmusk/status/2115634093949911506",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+      "originalText": "As the prophecy foretold, Starship 42 will be the first tower catch",
+      "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+      "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 30196,
+        "reposts": 2798,
+        "replies": 1574,
+        "quotes": 313,
+        "views": 1405787,
+        "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "people-2115632219712811226",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk 谈 Bot 更换购物网站",
+      "fact": "Elon Musk 表示自己也会让 Bot 到其他网站寻找更低价格。被引用者称其 Bot 在 Amazon 受阻后换站购买；这仍是用户经验与本人评论。",
+      "whyItMatters": "展示购物智能体使用场景和站点访问限制，原帖没有提供普遍成功率或独立交易验证。",
+      "counterCase": "个人案例不能证明所有网站都可访问、所有购买都成功或始终价格更低。",
+      "affected": [],
+      "author": "elonmusk",
+      "publishedAt": "2026-10-29T02:30:02Z",
+      "url": "https://x.com/elonmusk/status/2115632219712811226",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+      "originalText": "That’s what I do too. Just have @Bot buy it somewhere else at a lower price.",
+      "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+      "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 13735,
+        "reposts": 1026,
+        "replies": 890,
+        "quotes": 124,
+        "views": 1905877,
+        "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "people-2115618144991752431",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "White House 发布万圣节季节动态",
+      "fact": "White House 官方账号发布“Spooky szn is here.”，是一则万圣节季节动态。",
+      "whyItMatters": "该帖是官方账号的高互动日常动态，没有公布新的产业或贸易政策。",
+      "counterCase": "不由日常活动内容推断政策变化。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-29T01:34:06Z",
+      "url": "https://x.com/WhiteHouse/status/2115618144991752431",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+      "originalText": "Spooky szn is here.",
+      "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+      "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 5592,
+        "reposts": 857,
+        "replies": 1155,
+        "quotes": 307,
+        "views": 784297,
+        "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "people-2115602270775603617",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "White House 称部分乳制品价格下降",
+      "fact": "White House 官方账号称部分关键乳制品价格下降，并将其归于 Donald Trump 任内的成果。被引用内容涉及黄油、牛奶和美式奶酪，不能据此断言整体食品价格下降。",
+      "whyItMatters": "这是官方账号对生活成本的公开表述；原帖转述未取得可独立核对的时间基准和全体食品价格数据。",
+      "counterCase": "只作为署名表述记录，未证明政策造成降价，也不外推到全部乳制品或通胀趋势。",
+      "affected": [],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-10-29T00:31:01Z",
+      "url": "https://x.com/WhiteHouse/status/2115602270775603617",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+      "originalText": "Prices for key dairy products have decreased under President Trump. Tangible results for American families.",
+      "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+      "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 2908,
+        "reposts": 714,
+        "replies": 613,
+        "quotes": 31,
+        "views": 143331,
+        "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
     {
       "eventKey": "people-2115577764300693644",
       "tabIds": [
@@ -57,10 +269,16 @@
       "weeklyRanks": {
         "trillion-leaders": 1
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Microsoft Cloud revenue surpassed $63B, with growth accelerating to 30% YoY.",
+      "people": [
+        {
+          "name": "Satya Nadella",
+          "intro": "微软董事长兼CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-29T04:21:29.221Z",
       "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Microsoft Cloud revenue surpassed $63B, with growth accelerating to 30% YoY.",
       "selection": "rule",
       "engagement": {
         "likes": 1937,
@@ -70,13 +288,7 @@
         "views": 235155,
         "capturedAt": "2026-10-29T01:33:15.264905+00:00",
         "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "people-2115535455156642066",
@@ -96,10 +308,16 @@
       "weeklyRanks": {
         "trillion-leaders": 2
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Google Cloud revenue grew 103%, powered by extraordinary demand for our AI infrastructure and AI solutions. Our 1P model APIs now process nearly 32B tokens/min (up 40% QoQ).",
+      "people": [
+        {
+          "name": "Sundar Pichai",
+          "intro": "谷歌及Alphabet CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-29T04:21:29.221Z",
       "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Google Cloud revenue grew 103%, powered by extraordinary demand for our AI infrastructure and AI solutions. Our 1P model APIs now process nearly 32B tokens/min (up 40% QoQ).",
       "selection": "rule",
       "engagement": {
         "likes": 6588,
@@ -109,50 +327,7 @@
         "views": 444126,
         "capturedAt": "2026-10-29T01:33:15.264909+00:00",
         "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Sundar Pichai",
-          "intro": "谷歌及Alphabet CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "people-2115501119296463056",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "回应Houston Robotaxi话题",
-      "fact": "Elon Musk 引用10月27日Houston警察工会的帖子，写下“Robotaxi Houston”。引用源早于本轮起点，未将本次回应计为新开放或新增部署。",
-      "whyItMatters": "这是本来源窗口内的互动热度动态；没有据此新增政策执行或经营结论。",
-      "counterCase": "后续原始更正、口径解释或实际开放/交付与当前表述不同，会改变理解；热度不证明主张。",
-      "affected": [],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-28T17:49:05Z",
-      "url": "https://x.com/elonmusk/status/2115501119296463056",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "🇺🇸 Robotaxi Houston 🇺🇸",
-      "firstIncludedAt": "2026-10-29T04:21:29.221Z",
-      "lastMaterialAt": "2026-10-29T04:21:29.221Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 9238,
-        "reposts": 958,
-        "replies": 971,
-        "quotes": 93,
-        "views": 1127146,
-        "capturedAt": "2026-10-29T01:33:15.264893+00:00",
-        "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "people-2115494289488953462",
@@ -170,10 +345,11 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "We brought Touch to the Mac! ... MacBook Pro with PROLED XDR Display and Touch",
+      "people": [],
       "firstIncludedAt": "2026-10-29T04:21:29.221Z",
       "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "We brought Touch to the Mac! ... MacBook Pro with PROLED XDR Display and Touch",
       "selection": "engagement",
       "engagement": {
         "likes": 54390,
@@ -183,8 +359,7 @@
         "views": 5197923,
         "capturedAt": "2026-10-29T01:33:15.264915+00:00",
         "source": "grok-web-observed"
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "people-2115490856685990244",
@@ -202,10 +377,16 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "We're redefining the SDLC for the agentic era. Lots of GitHub updates this morning at Universe:",
+      "people": [
+        {
+          "name": "Satya Nadella",
+          "intro": "微软董事长兼CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-29T04:21:29.221Z",
       "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "We're redefining the SDLC for the agentic era. Lots of GitHub updates this morning at Universe:",
       "selection": "engagement",
       "engagement": {
         "likes": 1019,
@@ -215,13 +396,7 @@
         "views": 127269,
         "capturedAt": "2026-10-29T01:33:15.268695+00:00",
         "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Satya Nadella",
-          "intro": "微软董事长兼CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "people-2115489219804352921",
@@ -241,10 +416,16 @@
       "weeklyRanks": {
         "trillion-leaders": 3
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Some trusted cyber defenders will get access starting this week. We'll be expanding it to more partners through our Fairwind Program, ahead of wider availability soon.",
+      "people": [
+        {
+          "name": "Sundar Pichai",
+          "intro": "谷歌及Alphabet CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-29T04:21:29.221Z",
       "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Some trusted cyber defenders will get access starting this week. We'll be expanding it to more partners through our Fairwind Program, ahead of wider availability soon.",
       "selection": "rule",
       "engagement": {
         "likes": 25049,
@@ -254,87 +435,7 @@
         "views": 3405674,
         "capturedAt": "2026-10-29T01:33:15.264913+00:00",
         "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Sundar Pichai",
-          "intro": "谷歌及Alphabet CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "people-2115477997088276910",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "白宫转述纸吸管环境影响研究",
-      "fact": "WhiteHouse 以“Trump是对的”为标题，转述纸吸管比塑料吸管更伤环境的研究说法。卡片只记录该账号主张，未据此推定所有纸吸管或所有环境指标均更差。",
-      "whyItMatters": "该帖反映白宫当日的政治传播与议题选择。",
-      "counterCase": "视频语境、研究比较口径或后续更正会改变该主张的含义。",
-      "affected": [],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-28T16:17:12Z",
-      "url": "https://x.com/WhiteHouse/status/2115477997088276910",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "TRUMP WAS RIGHT: Study Finds Paper Straws More Harmful to the Environment than Plastic",
-      "firstIncludedAt": "2026-10-29T04:21:29.221Z",
-      "lastMaterialAt": "2026-10-29T04:21:29.221Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 9482,
-        "reposts": 2032,
-        "replies": 957,
-        "quotes": 190,
-        "views": 419247,
-        "capturedAt": "2026-10-29T01:33:15.299934+00:00",
-        "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
-    },
-    {
-      "eventKey": "people-2115471764960735355",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "简短回应选举相关讨论",
-      "fact": "Elon Musk 以“They do”回应引用帖。该简短回应没有提供核实选举争议的新证据。",
-      "whyItMatters": "这是本来源窗口内的互动热度动态；没有据此新增政策执行或经营结论。",
-      "counterCase": "后续原始更正、口径解释或实际开放/交付与当前表述不同，会改变理解；热度不证明主张。",
-      "affected": [],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-28T15:52:26Z",
-      "url": "https://x.com/elonmusk/status/2115471764960735355",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "They do",
-      "firstIncludedAt": "2026-10-29T04:21:29.221Z",
-      "lastMaterialAt": "2026-10-29T04:21:29.221Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 41652,
-        "reposts": 6739,
-        "replies": 3160,
-        "quotes": 188,
-        "views": 1888251,
-        "capturedAt": "2026-10-29T01:33:15.264881+00:00",
-        "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "people-2115469825673728165",
@@ -352,10 +453,11 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "France before and after is a warning.",
+      "people": [],
       "firstIncludedAt": "2026-10-29T04:21:29.221Z",
       "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "France before and after is a warning.",
       "selection": "engagement",
       "engagement": {
         "likes": 12964,
@@ -365,77 +467,7 @@
         "views": 583132,
         "capturedAt": "2026-10-29T01:33:15.299778+00:00",
         "source": "grok-web-observed"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "people-2115346075666325755",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "分享情绪表达视频",
-      "fact": "Elon Musk 分享带有“看过你最糟的一面，仍选择你”文字的视频；未据此补写视频未展示情节。",
-      "whyItMatters": "这是本来源窗口内的互动热度动态；没有据此新增政策执行或经营结论。",
-      "counterCase": "后续原始更正、口径解释或实际开放/交付与当前表述不同，会改变理解；热度不证明主张。",
-      "affected": [],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-28T07:33:00Z",
-      "url": "https://x.com/elonmusk/status/2115346075666325755",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "I saw the worst of you And I still chose you",
-      "firstIncludedAt": "2026-10-29T04:21:29.221Z",
-      "lastMaterialAt": "2026-10-29T04:21:29.221Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 30405,
-        "reposts": 4115,
-        "replies": 4656,
-        "quotes": 1191,
-        "views": 3849885,
-        "capturedAt": "2026-10-29T01:33:15.264889+00:00",
-        "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "people-2115245606520098839",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "白宫分享政治宣传视频",
-      "fact": "WhiteHouse 发布“MAKING. AMERICA. GREAT. AGAIN.”配文视频。帖面未列出可核对的新政策执行细节。",
-      "whyItMatters": "这是本来源窗口内的互动热度动态；没有据此新增政策执行或经营结论。",
-      "counterCase": "后续原始更正、口径解释或实际开放/交付与当前表述不同，会改变理解；热度不证明主张。",
-      "affected": [],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-10-28T00:53:46Z",
-      "url": "https://x.com/WhiteHouse/status/2115245606520098839",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "MAKING. AMERICA. GREAT. AGAIN.",
-      "firstIncludedAt": "2026-10-29T04:21:29.221Z",
-      "lastMaterialAt": "2026-10-29T04:21:29.221Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 24412,
-        "reposts": 5558,
-        "replies": 2458,
-        "quotes": 677,
-        "views": 1026209,
-        "capturedAt": "2026-10-29T01:33:15.264897+00:00",
-        "source": "grok-web-observed"
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "people-2115174666914631686",
@@ -532,38 +564,6 @@
         "quotes": 0,
         "views": 7494,
         "capturedAt": "2026-10-28T00:17:37.965358+00:00",
-        "source": "grok-web-observed"
-      }
-    },
-    {
-      "eventKey": "people-2115120697596932315",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "RBC客服回复网银与手机银行间歇问题",
-      "fact": "RBC 官方账号回复用户称，网上银行和手机银行出现间歇问题，正在尽快修复。",
-      "whyItMatters": "这是银行服务运行通告，未提供故障范围或恢复时刻，也不是评级或盈利研究更新。",
-      "counterCase": "原始完整语境、后续开放/执行或更正可能改变理解；热度与事实证明分开。",
-      "affected": [],
-      "author": "RBC",
-      "publishedAt": "2026-10-27T16:37:26Z",
-      "url": "https://x.com/RBC/status/2115120697596932315",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [],
-      "firstIncludedAt": "2026-10-28T01:14:41.359Z",
-      "lastMaterialAt": "2026-10-28T01:14:41.359Z",
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Thanks for your question. Yes, we are experiencing intermittent issues with online and our mobile banking. It is being worked on to be fixed as quickly as possible. ^S",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 5,
-        "reposts": 0,
-        "replies": 4,
-        "quotes": 0,
-        "views": 1438,
-        "capturedAt": "2026-10-28T00:17:37.965366+00:00",
         "source": "grok-web-observed"
       }
     },
@@ -1251,6 +1251,260 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "people-2115775702540726576",
+        "tabIds": [
+          "research-reports"
+        ],
+        "title": "Nomura 分享自身半年度财报摘要",
+        "fact": "Nomura 官方账号介绍其 FY2026/27 第二季度及上半年财报要点和各业务部门表现，并链接 Nomura Plus。该帖没有披露可采用的半导体、AI 或电力研究假设变化。",
+        "whyItMatters": "本条仅是机构自身公开动态；低互动不影响其作为真实来源动态入选。",
+        "counterCase": "未打开外链，也未把自身财报摘要当作行业研报结论。",
+        "affected": [],
+        "author": "Nomura",
+        "publishedAt": "2026-10-29T12:00:11Z",
+        "url": "https://x.com/Nomura/status/2115775702540726576",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+        "originalText": "Today on Nomura Plus, we look at key points from our recently announced 2Q and 1H financial results for FY2026/27. We also give a quick summary of each division's performance.",
+        "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+        "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 1,
+          "reposts": 0,
+          "replies": 0,
+          "quotes": 0,
+          "views": 168,
+          "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "research-reports"
+      ],
+      "at": "2026-10-29T13:02:38.181Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2115642019791896679",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk 赞同一则关于 X 用户的观点",
+        "fact": "Elon Musk 以“True”回应一则称高 IQ 人群使用 X 的帖子。这是对平台用户的观点表达，未附可以核验的人群比较证据。",
+        "whyItMatters": "属于本人账号的高互动观点，不能由点赞或回应推断用户群体的实际认知水平。",
+        "counterCase": "引用内容没有给出代表性样本、测量方法或跨平台比较，不能作为统计结论。",
+        "affected": [],
+        "author": "elonmusk",
+        "publishedAt": "2026-10-29T03:08:58Z",
+        "url": "https://x.com/elonmusk/status/2115642019791896679",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+        "originalText": "True",
+        "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+        "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 23364,
+          "reposts": 1892,
+          "replies": 1952,
+          "quotes": 331,
+          "views": 3101820,
+          "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-29T13:02:38.181Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2115634093949911506",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk 预计 Starship 42 将首次由塔架捕获",
+        "fact": "Elon Musk 转引 SpaceX 的静态点火内容，预计 Starship 42 将是首个由塔架捕获的飞船。这里表达的是未来目标，未表示捕获已经完成。",
+        "whyItMatters": "反映其对飞船回收路线的公开预期；原帖没有新的执行日期。",
+        "counterCase": "需以实际飞行及捕获结果验证，静态点火不等于完成塔架捕获。",
+        "affected": [],
+        "author": "elonmusk",
+        "publishedAt": "2026-10-29T02:37:29Z",
+        "url": "https://x.com/elonmusk/status/2115634093949911506",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+        "originalText": "As the prophecy foretold, Starship 42 will be the first tower catch",
+        "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+        "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 30196,
+          "reposts": 2798,
+          "replies": 1574,
+          "quotes": 313,
+          "views": 1405787,
+          "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-29T13:02:38.181Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2115632219712811226",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk 谈 Bot 更换购物网站",
+        "fact": "Elon Musk 表示自己也会让 Bot 到其他网站寻找更低价格。被引用者称其 Bot 在 Amazon 受阻后换站购买；这仍是用户经验与本人评论。",
+        "whyItMatters": "展示购物智能体使用场景和站点访问限制，原帖没有提供普遍成功率或独立交易验证。",
+        "counterCase": "个人案例不能证明所有网站都可访问、所有购买都成功或始终价格更低。",
+        "affected": [],
+        "author": "elonmusk",
+        "publishedAt": "2026-10-29T02:30:02Z",
+        "url": "https://x.com/elonmusk/status/2115632219712811226",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+        "originalText": "That’s what I do too. Just have @Bot buy it somewhere else at a lower price.",
+        "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+        "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 13735,
+          "reposts": 1026,
+          "replies": 890,
+          "quotes": 124,
+          "views": 1905877,
+          "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-10-29T13:02:38.181Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2115618144991752431",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "White House 发布万圣节季节动态",
+        "fact": "White House 官方账号发布“Spooky szn is here.”，是一则万圣节季节动态。",
+        "whyItMatters": "该帖是官方账号的高互动日常动态，没有公布新的产业或贸易政策。",
+        "counterCase": "不由日常活动内容推断政策变化。",
+        "affected": [],
+        "author": "WhiteHouse",
+        "publishedAt": "2026-10-29T01:34:06Z",
+        "url": "https://x.com/WhiteHouse/status/2115618144991752431",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+        "originalText": "Spooky szn is here.",
+        "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+        "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 5592,
+          "reposts": 857,
+          "replies": 1155,
+          "quotes": 307,
+          "views": 784297,
+          "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-10-29T13:02:38.181Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-2115602270775603617",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "White House 称部分乳制品价格下降",
+        "fact": "White House 官方账号称部分关键乳制品价格下降，并将其归于 Donald Trump 任内的成果。被引用内容涉及黄油、牛奶和美式奶酪，不能据此断言整体食品价格下降。",
+        "whyItMatters": "这是官方账号对生活成本的公开表述；原帖转述未取得可独立核对的时间基准和全体食品价格数据。",
+        "counterCase": "只作为署名表述记录，未证明政策造成降价，也不外推到全部乳制品或通胀趋势。",
+        "affected": [],
+        "author": "WhiteHouse",
+        "publishedAt": "2026-10-29T00:31:01Z",
+        "url": "https://x.com/WhiteHouse/status/2115602270775603617",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；观点只采用原帖发表时间。",
+        "originalText": "Prices for key dairy products have decreased under President Trump. Tangible results for American families.",
+        "firstIncludedAt": "2026-10-29T13:02:38.181Z",
+        "lastMaterialAt": "2026-10-29T13:02:38.181Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 2908,
+          "reposts": 714,
+          "replies": 613,
+          "quotes": 31,
+          "views": 143331,
+          "capturedAt": "2026-10-29T12:44:00.221276+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ]
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-10-29T13:02:38.181Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "people-2115577764300693644",
         "tabIds": [
           "trillion-leaders"
@@ -1268,10 +1522,16 @@
         "weeklyRanks": {
           "trillion-leaders": 1
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Microsoft Cloud revenue surpassed $63B, with growth accelerating to 30% YoY.",
+        "people": [
+          {
+            "name": "Satya Nadella",
+            "intro": "微软董事长兼CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-29T04:21:29.221Z",
         "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Microsoft Cloud revenue surpassed $63B, with growth accelerating to 30% YoY.",
         "selection": "rule",
         "engagement": {
           "likes": 1937,
@@ -1281,13 +1541,7 @@
           "views": 235155,
           "capturedAt": "2026-10-29T01:33:15.264905+00:00",
           "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Satya Nadella",
-            "intro": "微软董事长兼CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "trillion-leaders"
@@ -1314,10 +1568,16 @@
         "weeklyRanks": {
           "trillion-leaders": 2
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Google Cloud revenue grew 103%, powered by extraordinary demand for our AI infrastructure and AI solutions. Our 1P model APIs now process nearly 32B tokens/min (up 40% QoQ).",
+        "people": [
+          {
+            "name": "Sundar Pichai",
+            "intro": "谷歌及Alphabet CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-29T04:21:29.221Z",
         "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Google Cloud revenue grew 103%, powered by extraordinary demand for our AI infrastructure and AI solutions. Our 1P model APIs now process nearly 32B tokens/min (up 40% QoQ).",
         "selection": "rule",
         "engagement": {
           "likes": 6588,
@@ -1327,13 +1587,7 @@
           "views": 444126,
           "capturedAt": "2026-10-29T01:33:15.264909+00:00",
           "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Sundar Pichai",
-            "intro": "谷歌及Alphabet CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "trillion-leaders"
@@ -1402,10 +1656,11 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "We brought Touch to the Mac! ... MacBook Pro with PROLED XDR Display and Touch",
+        "people": [],
         "firstIncludedAt": "2026-10-29T04:21:29.221Z",
         "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "We brought Touch to the Mac! ... MacBook Pro with PROLED XDR Display and Touch",
         "selection": "engagement",
         "engagement": {
           "likes": 54390,
@@ -1415,8 +1670,7 @@
           "views": 5197923,
           "capturedAt": "2026-10-29T01:33:15.264915+00:00",
           "source": "grok-web-observed"
-        },
-        "people": []
+        }
       },
       "tabIds": [
         "trillion-leaders"
@@ -1441,10 +1695,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "We're redefining the SDLC for the agentic era. Lots of GitHub updates this morning at Universe:",
+        "people": [
+          {
+            "name": "Satya Nadella",
+            "intro": "微软董事长兼CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-29T04:21:29.221Z",
         "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "We're redefining the SDLC for the agentic era. Lots of GitHub updates this morning at Universe:",
         "selection": "engagement",
         "engagement": {
           "likes": 1019,
@@ -1454,13 +1714,7 @@
           "views": 127269,
           "capturedAt": "2026-10-29T01:33:15.268695+00:00",
           "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Satya Nadella",
-            "intro": "微软董事长兼CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "trillion-leaders"
@@ -1487,10 +1741,16 @@
         "weeklyRanks": {
           "trillion-leaders": 3
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Some trusted cyber defenders will get access starting this week. We'll be expanding it to more partners through our Fairwind Program, ahead of wider availability soon.",
+        "people": [
+          {
+            "name": "Sundar Pichai",
+            "intro": "谷歌及Alphabet CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-29T04:21:29.221Z",
         "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Some trusted cyber defenders will get access starting this week. We'll be expanding it to more partners through our Fairwind Program, ahead of wider availability soon.",
         "selection": "rule",
         "engagement": {
           "likes": 25049,
@@ -1500,13 +1760,7 @@
           "views": 3405674,
           "capturedAt": "2026-10-29T01:33:15.264913+00:00",
           "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Sundar Pichai",
-            "intro": "谷歌及Alphabet CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "trillion-leaders"
@@ -1619,10 +1873,11 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "France before and after is a warning.",
+        "people": [],
         "firstIncludedAt": "2026-10-29T04:21:29.221Z",
         "lastMaterialAt": "2026-10-29T04:21:29.221Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "France before and after is a warning.",
         "selection": "engagement",
         "engagement": {
           "likes": 12964,
@@ -1632,8 +1887,7 @@
           "views": 583132,
           "capturedAt": "2026-10-29T01:33:15.299778+00:00",
           "source": "grok-web-observed"
-        },
-        "people": []
+        }
       },
       "tabIds": [
         "donald-trump"
@@ -2852,7 +3106,5 @@
       "at": "2026-10-27T00:48:02.764Z",
       "legacy": false
     }
-  ],
-  "lastAttemptAt": "2026-10-29T07:07:33.049Z",
-  "attemptedCutoff": "2026-10-29T15:00:00+08:00"
+  ]
 }

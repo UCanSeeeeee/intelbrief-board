@@ -755,6 +755,22 @@
       "status": "failed",
       "queries": [],
       "recordedAt": "2026-10-29T07:07:33.076Z"
+    },
+    {
+      "jobId": "2026-10-29-2030",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-29T00:00:00.000Z",
+      "end": "2026-10-29T20:30:00+08:00",
+      "status": "partial",
+      "queries": [
+        "仅做美股讯息侧栏第一轮市场焦点发现，不做其他侧栏。仅X检索，不打开外链。精确发帖窗口[2026-10-29T00:00:00Z,2026-10-29T12:30:00Z)，窗口外旧闻不能冒充新增。独立宽扫宏观政策(利率/财政/信用/监管)、地缘能源物流与关税、大型公司AI资本开支/融资/指引、市场宽度及杠杆资金。找真正改变供需、成本、现金流或资本成本的新增事实或实质进展；半导体、电力、AI落地优先但不限制整体市场焦点。排除纯价格、喊单、旧闻重发；普通账号可作候选不自动当事实。最多10个独立候选，逐个给eventKey、作者handle、准确ISO发帖时间、单独真实status链接、关键可见原文(不要补写)、事件实际时间、事实/观点/传闻、关键数字原始依据与待核缺口。没有结果明确空，不能凭记忆补齐。此轮只发现，后续另行追源及独立反证。",
+        "仍仅美股讯息侧栏，现在独立第二轮发现，不得把第一轮剩余候选当本轮。冻结同一窗口[2026-10-29T00:00:00Z,2026-10-29T12:30:00Z)，仅X不开外链。请对六包逐一新搜索并保留实际query及返回数量/无结果/失败：1半导体：HBM/封装/良率/订单/产能/ASP变化，需求是否独立终端付费；2电力：并网/燃机/变压器/许可/投产/冷却，意向与可用产能分别；3AI落地：付费续费部署单位经济、资本开支及融资到现金流；4资本成本：财政国债/利率/美元/信用和再融资对重资本回报约束；5地缘能源物流：制裁/关税/战争/运输对实际供应成本；6市场结构行为：指数集中宽度、机械资金/杠杆/期权反馈，不能从涨跌归因。六包可空，不凑数。按事件去重，最多8候选，给unit/eventKey/准确发帖ISO/作者/status/可见原文/事件实际时间/机制及原证缺口。第一轮微软债券/GOOGL财报/MSFT财报/Samsung/CAT/Fed若再次命中只写重复不算独立新候选。后续另行追源反证。",
+        "现在仅对本新闻两轮新候选追源，仅X不开外链，冻结上限2026-10-29T12:30Z。微软旧财报已入库不重复研究、Fed旧决议讨论无新变化不入选。请实际定点查：A微软10part bonds(发行计划还是已定价、用途/首次时间)；B Alphabet搜索63.35B/预期64.96B、capex195–205B、FCF-9.1B的官方或Reuters/Bloomberg原帖；C Samsung利润、2027HBM售完、Q3capex29T；D Caterpillar EPS7.20/营收+17.6%/AI power+30%/460M成本与库存22.2B；E CXMT HBM3E两月内限产及低良率的Reuters原帖；F TSMC嘉义AP7/CoWoS月85k原始官方证据；G GE Vernova买Trench9B、backlog5B原公告X；H DOE核电贷款5B原始部门X；I10年债5%/数据中心利差量化原源；J Hormuz油轮触雷只查Reuters/Bloomberg/航运主管单位独立确认，@grok不是原证。逐项返回原始作者、准确时间、status链接、关键可见原文、首次新增时间、支持哪些最小事实/不支持什么；二传同源不能当独立确认。找不到明确缺失，不用候选自己复述自证。不要扩展新主题。",
+        "首次针对性补查，仅处理刚才仍缺原源的A-J，不扩大主题，仅X，冻结[2026-10-29T00:00Z,2026-10-29T12:30Z)。请限定来源真正查而非重贴二传： (from:Reuters OR from:business OR from:markets OR from:FT) 与 Microsoft bond/Alphabet search/CXMT HBM3E/Caterpillar/Samsung； (from:GEVernova OR from:TrenchGroup) Trench acquisition； (from:ENERGY OR from:ENERGYgov) nuclear loan； from:tsmc_news CoWoS AP7； (from:UK_MTO OR from:Reuters OR from:business) Hormuz tanker mine。每个主题列实际query、找到了/空/请求失败，找到才给真实status/作者/准确时间/原文；没有就留缺口。不能把同一二传当原源。找不到官方数值就舍去，不重复已合格CNBC定性标题。",
+        "新闻独立反证阶段，只针对拟入选2件，不再宽搜：1 @Reuters https://x.com/Reuters/status/2115750057203105923 2026-10-29T10:18:17Z，Alphabet搜索令人失望、AI建设现金消耗加速；2 @Reuters https://x.com/Reuters/status/2115624781789728982 2026-10-29T02:00:29Z，Samsung Q3 record profit on AI chip boom。仅X，冻结12:30Z。分别定点检索更正/撤回/相反数字/一次性与分部差异/旧闻首次披露时间；三星集团利润创新高和芯片部门低于预期是否矛盾，给@business原帖准确时间/链接/原文。如未取得不要编。Alphabet是否现金消耗=亏损、收入miss是否全业务不增长，找不同口径说明。返回实际queries、反证作者时间status原文、结论支持边界。其余候选无原源已排除，不追数字，不用同源复述当独立反证。"
+      ],
+      "recordedAt": "2026-10-29T13:02:38.240Z"
     }
   ]
 }
