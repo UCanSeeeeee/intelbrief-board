@@ -2,146 +2,6 @@
   "schemaVersion": 1,
   "records": [
     {
-      "jobId": "2026-10-13-1600",
-      "page": "news",
-      "trigger": "scheduled",
-      "start": "2026-10-12T08:00:00.000Z",
-      "end": "2026-10-13T16:00:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 宏观 Fed/CPI/yields/Hammack 2026-10-12T16:00+08→2026-10-13T16:00+08",
-        "R1 地缘 Houthi/Saudi/Iran mediation/Ukraine ceasefire/oil",
-        "R1 AI Meta Muse Wonder / MSFT Maia / NVDA OCP / OpenAI Anthropic",
-        "R1 市场结构 equal-weight/breadth/credit/memory liquidation",
-        "R2 半导体 HBM/CoWoS/FormFactor/Teradyne/TSMC/Nanya/ABF",
-        "R2 电力 Open Data Center Spec / grid ride-through / multi-GW",
-        "R2 AI落地 Muse Wonder API / Anthropic distillation / ARR",
-        "R2 资本成本/地缘能源/市场宽度包复核",
-        "追源 finkd Muse Wonder；satyanadella Maia；OpenComputePrj；TER-FORM 转述",
-        "反证 Muse 基准是否可复现；FORM 交易监管审批；停火/胡塞执行"
-      ],
-      "recordedAt": "2026-10-13T08:11:02.859Z"
-    },
-    {
-      "jobId": "2026-10-13-2100",
-      "page": "news",
-      "trigger": "scheduled",
-      "start": "2026-10-12T13:00:00.000Z",
-      "end": "2026-10-13T21:00:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 宏观 Fed/CPI/yields/Hammack/Hassett 2026-10-12T21:00+08→2026-10-13T21:00+08",
-        "R1 地缘 Houthi/Aramco/Saudi/Ukraine/oil/Hormuz",
-        "R1 AI/银行 JPM GS Citi earnings / Maia Muse / NVDA OCP",
-        "R1 市场结构 Asia chip selloff / AI bull cracks / breadth",
-        "R2 半导体 HBM/CoWoS/Micron/TSMC/Nanya/ASML",
-        "R2 电力 DOE PJM emergency / datacenter MW / OCP grid",
-        "R2 AI落地 Anthropic distillation / Dimon AI agents / IMF AI growth",
-        "R2 资本成本/地缘能源/ETF资金流包",
-        "追源 DeItaone Houthi Aramco；JPM/GS earnings；Hassett；theinformant_x DOE",
-        "反证 胡塞威胁是否兑现；银行营收质量；应急令是否等于限电；Maia 2027验证"
-      ],
-      "recordedAt": "2026-10-13T13:29:07.656Z"
-    },
-    {
-      "jobId": "2026-10-14-0900",
-      "page": "news",
-      "trigger": "scheduled",
-      "start": "2026-10-13T01:00:00.000Z",
-      "end": "2026-10-14T09:00:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 宏观 Fed Williams/Waller/Goolsbee/Collins/CPI/yields 2026-10-13T09:00+08→2026-10-14T09:00+08",
-        "R1 地缘 Houthi/Aramco/Saudi/Hormuz/Brent/SPR",
-        "R1 AI/大厂 Gemini 4/Anthropic/OpenAI/Nvidia Paris",
-        "R1 市场 KOSPI/memory selloff/SOX/BofA FMS/bank earnings",
-        "R2 半导体 AMAT investor day WFE/CXMT/HBM/Micron LTA/IDC China share",
-        "R2 电力 behind-the-meter gas/data center power/El Paso Electric/PJM",
-        "R2 AI落地 agents ARR/Scion/model usage/Copilot",
-        "R2 资本成本 data center credit spreads/CoreWeave/Oracle bonds/AirTrunk/convertible",
-        "R2 地缘能源 Aramco hit/Brent/OPEC",
-        "R2 市场结构 prime brokerage leverage/crowding/breadth",
-        "追源 FirstSquawk/Reuters Aramco；DeItaone Fed；AMAT 投资者日；zerohedge 信用；Reuters IDC",
-        "反证 Meritz DDR5 现货/JPM 长约；IG AI 信用；CPI nowcast；阿美火情有限"
-      ],
-      "recordedAt": "2026-10-14T01:19:25.262Z"
-    },
-    {
-      "jobId": "2026-10-14-1600",
-      "page": "news",
-      "trigger": "scheduled",
-      "start": "2026-10-13T08:00:00.000Z",
-      "end": "2026-10-14T16:00:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 macro: Fed OR CPI OR Treasury yield OR Powell (window)",
-        "R1 geo/energy: oil OR diesel OR Houthi OR energy ceasefire OR Ukraine OR Russia OR LNG",
-        "R1 AI/bigtech: OpenAI OR Anthropic OR NVIDIA OR Maia OR CAPEX OR HBM",
-        "R1 structure: breadth OR Mag7 OR equal-weight OR ETF OR credit",
-        "wire: from:FirstSquawk|LiveSquawk|business|Reuters|unusual_whales (CPI|ASML|diesel|Meloni|OpenAI|Houthi|Alaska)",
-        "R2 semi: ASML OR HBM OR Micron OR TSMC OR chip selloff OR DRAM",
-        "R2 AI landing: OpenAI OR Anthropic (arrest|engineer|API|ARR)",
-        "R2 power: data center OR gas turbine OR PPA OR DOE OR PJM",
-        "R2 crypto: Bitcoin ETF flows Wintermute WuBlockchain",
-        "people: elonmusk|TrumpDailyPosts|WhiteHouse|POTUS|JensenHuang posts",
-        "tickers: nvidia|MicronTech official posts",
-        "ai: OpenAI official; Gemini 4 Argon search",
-        "counter: Meloni diesel vs ceasefire; ASML rev miss vs guidance raise; PJM emergency vs blackout claims"
-      ],
-      "recordedAt": "2026-10-14T08:15:02.211Z"
-    },
-    {
-      "jobId": "2026-10-14-2100",
-      "page": "news",
-      "trigger": "scheduled",
-      "start": "2026-10-13T13:00:00.000Z",
-      "end": "2026-10-14T21:00:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 macro CPI Fed Treasury",
-        "R1 geopolitics energy ceasefire Houthi diesel LNG",
-        "R1 AI mega-cap NVIDIA OpenAI ASML",
-        "wires DeItaone FirstSquawk Reuters CPI ASML Starlink BAC",
-        "R2 semiconductor HBM CoWoS ASML capacity",
-        "R2 power data center PPA turbine grid",
-        "people elonmusk nvidia TrumpDailyPosts WhiteHouse",
-        "ai AnthropicAI OpenAI",
-        "crypto BTC ETF Brew 7d"
-      ],
-      "recordedAt": "2026-10-14T13:14:53.103Z"
-    },
-    {
-      "jobId": "2026-10-15-0900",
-      "page": "news",
-      "trigger": "scheduled",
-      "start": "2026-10-14T01:00:00.000Z",
-      "end": "2026-10-15T09:00:00+08:00",
-      "status": "partial",
-      "queries": [
-        "R1 macro CPI/Fed wires",
-        "R1 geo energy Ukraine oil",
-        "R1 AI megacap",
-        "R1 search_news",
-        "R2 semi HBM CoWoS",
-        "R2 power grid PPA",
-        "R2 Anthropic revenue",
-        "R2 capital cost T-bill",
-        "R2 counter Anthropic",
-        "people elon nvidia TrumpDailyPosts",
-        "ai OpenAI Anthropic DeepMind",
-        "crypto BTC ETF Standard Chartered",
-        "earnings ASML BAC MS BLK",
-        "GlobalFoundries Malta"
-      ],
-      "gaps": [
-        "电力并网/PPA官方原帖不足",
-        "先进封装一手订单不足",
-        "Brew无合格新增",
-        "trillion-leaders/research-reports近窗不足"
-      ],
-      "recordedAt": "2026-10-15T00:45:00.000Z"
-    },
-    {
       "jobId": "2026-10-15-1600",
       "page": "news",
       "trigger": "scheduled",
@@ -885,6 +745,16 @@
         "独立反证检索，仅X不开外链，截止2026-10-29T00:00Z：1 Microsoft官方2115535611801248094的92.3B、63.9B Cloud、48%Azure是否更正/口径非同比/恒汇或不代表独立AI回款？查Microsoft、Reuters等相反指引/现金流压力，返回真实status精确时间原文，找不到说未检得，不等于确认。2 Fed请定向读FederalReserve决议原帖线程或Reuters/Bloomberg原X，核对二传3.75-4/10:2/Cook-Hammack/strong是否有相反数字/更正；没有直接证据就留缺口，不能把多二传一致当原始确认。3 NERC采用/生效与Goldman5年说法是否旧闻或阶段错误；无原始不继续扩大。4 RDIF制裁审查、Qatar7日停火二传，有无主管机构/Reuters窗口内原X确认或否认；保留审查/提议与已落地差别。只报告实际查到的，别凑反方。"
       ],
       "recordedAt": "2026-10-29T04:21:29.275Z"
+    },
+    {
+      "jobId": "2026-10-29-1500",
+      "page": "news",
+      "trigger": "scheduled",
+      "start": "2026-10-29T00:00:00.000Z",
+      "end": "2026-10-29T15:00:00+08:00",
+      "status": "failed",
+      "queries": [],
+      "recordedAt": "2026-10-29T07:07:33.076Z"
     }
   ]
 }
