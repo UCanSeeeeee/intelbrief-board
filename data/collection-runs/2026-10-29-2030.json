@@ -6055,7 +6055,7 @@
     "sourcePolicy": "Bot0请求、第三路径0、无调度/UI/代码改动。"
   },
   "publication": {
-    "status": "local-artifacts-ready",
+    "status": "verified",
     "preparedAt": "2026-10-29T13:04:41.185994+00:00",
     "localChecks": "用户要求跳过test/check/build/预览及额外回归；仅执行发布器数据契约与来源/保留审查。",
     "preservation": {
@@ -6099,8 +6099,228 @@
       "config/company-blurbs.json"
     ],
     "reviewedAt": "2026-10-29T13:03:57.383402+00:00",
-    "note": "相关数据和来源已审查；219事件/早报当前重点、35旧热点、244热点留存、全部旧规则与学习往期保留。公众文件准备好，尚未push/Cloudflare核验。",
-    "stagedPathsNote": "仅本轮明确文件，未纳入旧10/23、10/28-1500未跟踪记录或work/。"
+    "note": "内容提交05950ca的Cloudflare Pages成功；15/15相关公开JSON逐字节一致。/api/vix官方ok；CNN接口HTTP200但上游418，保留本轮12:15:33Z较新官方快照，未声称接口实时CNN新抓取成功。",
+    "stagedPathsNote": "仅本轮明确文件，未纳入旧10/23、10/28-1500未跟踪记录或work/。",
+    "contentCommit": "05950ca405fdec6256fee853cb0025209e78696f",
+    "remoteCommitVerified": "05950ca405fdec6256fee853cb0025209e78696f",
+    "pushedAt": "2026-10-29T13:06:05.620660+00:00",
+    "verifiedAt": "2026-10-29T13:07:20.242379+00:00",
+    "verification": {
+      "commit": "05950ca405fdec6256fee853cb0025209e78696f",
+      "cloudflare": [
+        {
+          "name": "Cloudflare Pages",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "05950ca405fdec6256fee853cb0025209e78696f",
+          "started_at": "2026-10-29T13:06:02Z",
+          "completed_at": "2026-10-29T13:06:02Z",
+          "details_url": "https://dash.cloudflare.com/?to=/654fc092fc71c4dc81184933d5b808b9/pages/view/intelbrief-board/16151093-f885-4a77-b571-c8a161827d29",
+          "external_id": "16151093-f885-4a77-b571-c8a161827d29"
+        }
+      ],
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-29-2030.json",
+          "httpStatus": 200,
+          "localSha256": "d554f41f9662bbd01439a41453574fe156e3421dc73f0f40a26a87b9ba3b8683",
+          "remoteSha256": "d554f41f9662bbd01439a41453574fe156e3421dc73f0f40a26a87b9ba3b8683",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:11.958599+00:00"
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "httpStatus": 200,
+          "localSha256": "3a39c324f9222d8120b808346631dc4d3e976134b3e1339760ae7515253eb93a",
+          "remoteSha256": "3a39c324f9222d8120b808346631dc4d3e976134b3e1339760ae7515253eb93a",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:11.673987+00:00"
+        },
+        {
+          "path": "data/reading-board.json",
+          "httpStatus": 200,
+          "localSha256": "6109555b81e96c811c28fba5fc71da9a976408c1c3ca9599663ccdbeba754e4e",
+          "remoteSha256": "6109555b81e96c811c28fba5fc71da9a976408c1c3ca9599663ccdbeba754e4e",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:12.696429+00:00"
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "httpStatus": 200,
+          "localSha256": "cc8604580f8baf9f665a04a2e07604f53a2115c7017d4be85354c14d91a5142e",
+          "remoteSha256": "cc8604580f8baf9f665a04a2e07604f53a2115c7017d4be85354c14d91a5142e",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:12.024856+00:00"
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "httpStatus": 200,
+          "localSha256": "a9dd045de96d9cc0b83ebd846daa1e75e4c0941e6e4c007c50dfd0f9688741f3",
+          "remoteSha256": "a9dd045de96d9cc0b83ebd846daa1e75e4c0941e6e4c007c50dfd0f9688741f3",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:12.882802+00:00"
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "httpStatus": 200,
+          "localSha256": "3db706cd6c58df59207c73222d4fd1d922635ff7f52c84702689a7059171227e",
+          "remoteSha256": "3db706cd6c58df59207c73222d4fd1d922635ff7f52c84702689a7059171227e",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:13.095301+00:00"
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "httpStatus": 200,
+          "localSha256": "84ecbf514ed8e52f1b3f5eb35ef66c112ecaf5dbcaf47fbb0b5a6b69ed742d94",
+          "remoteSha256": "84ecbf514ed8e52f1b3f5eb35ef66c112ecaf5dbcaf47fbb0b5a6b69ed742d94",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:13.198319+00:00"
+        },
+        {
+          "path": "data/market-volatility.json",
+          "httpStatus": 200,
+          "localSha256": "2aa087a0c4247317ab325a24afbe5dea6bff17543d22af0e189fa570f20589cd",
+          "remoteSha256": "2aa087a0c4247317ab325a24afbe5dea6bff17543d22af0e189fa570f20589cd",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:13.524237+00:00"
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "httpStatus": 200,
+          "localSha256": "132d7637505f4dccbd982cf3b83484493b4b463143aa40fe3fc98869210ed5a2",
+          "remoteSha256": "132d7637505f4dccbd982cf3b83484493b4b463143aa40fe3fc98869210ed5a2",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:15.545914+00:00"
+        },
+        {
+          "path": "data/macro-events.json",
+          "httpStatus": 200,
+          "localSha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044",
+          "remoteSha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:13.607700+00:00"
+        },
+        {
+          "path": "data/learning.json",
+          "httpStatus": 200,
+          "localSha256": "924c2a807f1ca2b62e95639937c37f41488c0dfd450d51802cfa8add89281dc2",
+          "remoteSha256": "924c2a807f1ca2b62e95639937c37f41488c0dfd450d51802cfa8add89281dc2",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:17.600246+00:00"
+        },
+        {
+          "path": "data/journal-learning.json",
+          "httpStatus": 200,
+          "localSha256": "8859d6ad8573b35f890f57fb608d9101b7fa261c43a4b724aae7c337738f25ca",
+          "remoteSha256": "8859d6ad8573b35f890f57fb608d9101b7fa261c43a4b724aae7c337738f25ca",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:14.128073+00:00"
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "httpStatus": 200,
+          "localSha256": "7da819a3b5bc3332917e0c0ff252b7b99c0f02216e9fdfe6181ccf6143ea546d",
+          "remoteSha256": "7da819a3b5bc3332917e0c0ff252b7b99c0f02216e9fdfe6181ccf6143ea546d",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:14.881403+00:00"
+        },
+        {
+          "path": "config/learning.json",
+          "httpStatus": 200,
+          "localSha256": "72116e97149d702477305aa3c639f9313903016e4fcce29145f5bc88beeec9b6",
+          "remoteSha256": "72116e97149d702477305aa3c639f9313903016e4fcce29145f5bc88beeec9b6",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:15.156671+00:00"
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "httpStatus": 200,
+          "localSha256": "b8e818985471f5ead45772b60986501ca8b8189db5a7455a3d16fb485e229f11",
+          "remoteSha256": "b8e818985471f5ead45772b60986501ca8b8189db5a7455a3d16fb485e229f11",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-29T13:07:15.695815+00:00"
+        }
+      ],
+      "apis": [
+        {
+          "path": "api/vix",
+          "httpStatus": 200,
+          "jsonValid": true,
+          "response": {
+            "schemaVersion": 1,
+            "id": "cboe-vix",
+            "value": 16.91,
+            "asOfDate": "2026-10-28",
+            "quoteKind": "close",
+            "previousClose": 17.52,
+            "fetchedAt": "2026-10-29T13:07:20.233Z",
+            "source": {
+              "name": "Cboe",
+              "url": "https://www.cboe.com/tradable-products/vix",
+              "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+            },
+            "retrieval": {
+              "status": "ok"
+            }
+          },
+          "checkedAt": "2026-10-29T13:07:18.279524+00:00"
+        },
+        {
+          "path": "api/market-sentiment",
+          "httpStatus": 200,
+          "jsonValid": true,
+          "response": {
+            "schemaVersion": 1,
+            "id": "cnn-fear-greed",
+            "market": "us-equities",
+            "score": 35.2571428571429,
+            "rating": "fear",
+            "timestamp": "2026-10-29T12:15:33+00:00",
+            "fetchedAt": "2026-10-29T13:07:22.268Z",
+            "previous": {
+              "close": 35.8571428571429,
+              "week": 19.985714285714288,
+              "month": 31.057142857142857,
+              "year": 42.114285714285714
+            },
+            "source": {
+              "name": "CNN Fear & Greed Index",
+              "url": "https://www.cnn.com/markets/fear-and-greed",
+              "method": "cnn",
+              "dataUrl": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+              "mirrorUrl": null
+            },
+            "retrieval": {
+              "status": "retained",
+              "message": "来源时间早于已存档数据，保留较新值",
+              "errors": [
+                {
+                  "source": "cnn",
+                  "message": "HTTP 418"
+                }
+              ]
+            }
+          },
+          "checkedAt": "2026-10-29T13:07:20.242347+00:00"
+        }
+      ],
+      "checkedAt": "2026-10-29T13:07:20.242379+00:00"
+    }
   },
   "executionIssues": [
     {
@@ -6115,5 +6335,6 @@
       "action": "保留已有真实起止，不补造第二段；search按实际外部失败记failed，总run将在发布回执中记partial。",
       "resolved": true
     }
-  ]
+  ],
+  "completedAt": "2026-10-29T13:08:13.317648+00:00"
 }

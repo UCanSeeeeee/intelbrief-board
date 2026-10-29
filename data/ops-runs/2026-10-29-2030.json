@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-29T20:30:34+08:00",
-  "updatedAt": "2026-10-29T21:04:41+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-29T21:08:14+08:00",
+  "finishedAt": "2026-10-29T21:08:14+08:00",
   "gitHeadAtStart": "5330f05f876a074f6724631ee4fa4e83c75f9f4e",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-29T21:06:06+08:00",
+      "detail": "05950ca explicitly pushed origin HEAD:master; ls-remote exact"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-29T21:08:13+08:00",
+      "detail": "Cloudflare成功，15/15公开JSON逐字节一致；VIX官方ok，CNN上游418保留较新官方快照"
     }
   ],
   "pages": {
@@ -77,14 +77,12 @@
       "detail": "complete"
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "Grok Expert周额度耗尽；19对象查询完成，11失败对象不推进。Bot暂停。",
-    "stackSnippet": null
-  },
-  "commitHash": null,
-  "notes": [],
+  "status": "partial",
+  "error": null,
+  "commitHash": "05950ca405fdec6256fee853cb0025209e78696f",
+  "notes": [
+    "已完成内容上线；Expert周额度阻塞7热点和4AI对象，失败断点保留，Bot仍暂停"
+  ],
   "timings": [
     {
       "page": "news",
