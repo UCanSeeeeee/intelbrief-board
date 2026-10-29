@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-29T09:20:38+08:00",
-  "updatedAt": "2026-10-29T12:22:50+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-29T12:26:15+08:00",
+  "finishedAt": "2026-10-29T12:26:15+08:00",
   "gitHeadAtStart": "36ea3d56942badd21ef3f802f9b3aefb403c949a",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-29T12:26:15+08:00",
+      "detail": "20904fb内容与7d57fc6 VIX快照均已push origin HEAD:master，远端SHA核对一致。"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-29T12:26:15+08:00",
+      "detail": "Cloudflare两次成功；最终14/14公开JSON字节及SHA256匹配；只读VIX16.91/CNN35.9同对应日期，运行时CNN418备用镜像如实记录。"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "到期FOMC官方日期未变，未到期PCE不查；开始未即时落盘，不计算精确耗时。"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "7d57fc6e75a10a04c78ba811fec1d87ea7ce0261",
+  "notes": [
+    "已发布核对；新闻1重点0洞见、论文Nature缺1不凑数、KOF/SAN未知；30查询完成并推进；未运行用户禁用的本地验证。"
+  ],
   "timings": [
     {
       "page": "news",
