@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28T01:06:22.380Z",
+  "updatedAt": "2026-10-29T04:21:24.243Z",
   "reviews": [
     {
       "id": "nature-2026-10-19-walkability",
@@ -1880,50 +1880,314 @@
         "note": "已查逐DOI更正/撤稿及相关复现；没有检得不等于穷尽文献或证明无争议，未重跑原始数据。"
       },
       "corrections": []
+    },
+    {
+      "id": "nature-activity-inequality-20261029",
+      "journal": "nature",
+      "journalName": "Nature",
+      "doi": "10.1038/nature23018",
+      "authors": [
+        "Tim Althoff"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Tim Althoff",
+          "intro": "行为与健康数据研究者"
+        }
+      ],
+      "publishedDate": "2017-07-10",
+      "selectedDate": "2026-10-29",
+      "selectionKind": "classic",
+      "title": "平均步数，可能掩盖了谁没动起来",
+      "originalTitle": "Large-scale physical activity data reveal worldwide activity inequality",
+      "category": "健康、生活与统计",
+      "stage": "多国观察研究：活动分布与肥胖关联",
+      "takeaway": "国家的平均步数之外，活动在人群中的分布不均衡程度，与肥胖比例的关联更强。这是观察结果，不证明不平等本身导致肥胖。",
+      "summary": {
+        "problem": "平均步数，可能掩盖了谁没动起来",
+        "method": "研究分析717,527名手机应用用户约6,800万人日的步数，覆盖111个国家；主要比较限于至少1,000名用户的46国。研究用步数分布的基尼系数表示活动不平等，并与平均步数分别拟合肥胖比例。",
+        "findings": "活动不平等模型的拟合解释度R²为0.64，平均步数模型为0.47；相近平均步数的人群仍可能有不同活动分布。",
+        "statistics": "R²是样本内拟合指标，不是“64%的肥胖由不平等造成”，也不是个体减重概率。",
+        "limitations": "使用手机应用是自选样本，携带习惯、计步准确性和自报身高体重均可能带来误差；不能把相关或文中模拟当成真实城市改造的减重效果。",
+        "meaning": "按样本、比较口径和测量层级理解研究，不把关联、模拟或自报直接当因果和个人保证。"
+      },
+      "accessLevel": "partial",
+      "accessNote": "核对PubMed日期、作者合法公开PDF的摘要/主要结果/方法节选与Stanford项目页；未通读补充表或重跑数据。往期精选。",
+      "paperUrl": "https://www.nature.com/articles/nature23018",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+      "sources": [
+        {
+          "label": "正刊原文",
+          "url": "https://www.nature.com/articles/nature23018"
+        },
+        {
+          "label": "作者公开版本",
+          "url": "https://cs.stanford.edu/~jure/pubs/activity-inequality-nature17.pdf"
+        },
+        {
+          "label": "研究项目",
+          "url": "https://snap.stanford.edu/activity-inequality/"
+        },
+        {
+          "label": "元数据",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28693034/"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+        "status": "bounded-search-completed",
+        "note": "已对本DOI查询正式更正/撤稿与复现；未检得不等于穷尽。Crossref两篇新Science返回429，其日期/作者改由PubMed及期刊页面交叉核对。实质边界见正文。"
+      }
+    },
+    {
+      "id": "nature-vaccination-reminders-20261029",
+      "journal": "nature",
+      "journalName": "Nature",
+      "doi": "10.1038/s41586-021-03843-2",
+      "authors": [
+        "Hengchen Dai"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Hengchen Dai",
+          "intro": "行为决策研究者"
+        }
+      ],
+      "publishedDate": "2021-08-02",
+      "selectedDate": "2026-10-29",
+      "selectionKind": "classic",
+      "title": "短信提醒有用，但不是每种犹豫都能靠提醒解决",
+      "originalTitle": "Behavioural nudges increase COVID-19 vaccinations",
+      "category": "健康、生活与统计",
+      "stage": "两项序贯随机试验；附不同情境的反向结果",
+      "takeaway": "在刚收到接种资格通知的医疗系统人群中，短信提醒提高了预约和实际接种；效果不能直接推广到资格开放已久仍未接种的人。",
+      "summary": {
+        "problem": "短信提醒有用，但不是每种犹豫都能靠提醒解决",
+        "method": "UCLA Health两项序贯随机试验分别涉及93,354人和67,092人，在资格通知后第1天、第8天测试提醒，与未获相应提醒的对照比较预约及接种记录。也测试了“领取你的剂量”措辞和信息视频。",
+        "findings": "第一项提醒使预约率增加6.07个百分点、实际接种率增加3.57个百分点；加入视频未显示额外增益。第二项的相应增量为1.65和1.06个百分点。",
+        "statistics": "这些是绝对百分点差，不能与相对增幅混用；两项为序贯试验，人数不相加当作独立受试者总数。",
+        "limitations": "另一州级试验在全体成人已获资格5—8周后，对142,428名未接种者测试8种短信，未检出效果。两种情境与人群不同；结果反映提醒效果有边界，不是疫苗疗效试验。",
+        "meaning": "按样本、比较口径和测量层级理解研究，不把关联、模拟或自报直接当因果和个人保证。"
+      },
+      "accessLevel": "partial",
+      "accessNote": "核对PMC公开摘要与正文节选；独立直读2022 Matters Arising公开摘要。未读取受限个体健康数据。往期精选。",
+      "paperUrl": "https://www.nature.com/articles/s41586-021-03843-2",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+      "sources": [
+        {
+          "label": "原文公开版本",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8443442/"
+        },
+        {
+          "label": "情境边界原研究",
+          "url": "https://www.nature.com/articles/s41586-022-04526-2"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+        "status": "bounded-search-completed",
+        "note": "已对本DOI查询正式更正/撤稿与复现；未检得不等于穷尽。Crossref两篇新Science返回429，其日期/作者改由PubMed及期刊页面交叉核对。实质边界见正文。"
+      }
+    },
+    {
+      "id": "science-phone-free-classrooms-20261029",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.aef7249",
+      "authors": [
+        "Alp Sungu"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Alp Sungu",
+          "intro": "技术与教育研究者"
+        }
+      ],
+      "publishedDate": "2026-10-08",
+      "selectedDate": "2026-10-29",
+      "selectionKind": "recent",
+      "title": "课堂暂收手机，学习成绩会改变吗",
+      "originalTitle": "Phones impede learning: Evidence from a massive phone-free classroom experiment",
+      "category": "健康、生活与统计",
+      "stage": "教育场景随机实验",
+      "takeaway": "在受试高校课堂里，暂时收起手机改善了学习成绩，原先成绩较低的学生获益更明显；这不等于已证明所有学生、所有场景都受益。",
+      "summary": {
+        "problem": "课堂暂收手机，学习成绩会改变吗",
+        "method": "印度Odisha的10所高等教育机构、16,683名学生参加随机试验。部分教学组在每堂课开始时把手机放入盒中，其他组维持原样；研究比较成绩，并调查学生对课堂手机限制的态度。",
+        "findings": "收手机组平均成绩更高，低成绩学生改善更明显；经历该安排后，学生对限制的支持增加。研究没有发现出勤增加能够解释成绩改善的证据。",
+        "statistics": "16,683是学生数、10是高校数；学生总数不等于独立随机化单元数；结论需按实际比较层级理解。",
+        "limitations": "研究环境是印度高校，不能直接外推到中小学或全天禁用手机；课堂安排对心理健康、同伴关系的影响，也不能由成绩变化代替验证。",
+        "meaning": "按样本、比较口径和测量层级理解研究，不把关联、模拟或自报直接当因果和个人保证。"
+      },
+      "accessLevel": "abstract",
+      "accessNote": "正常IAB自动安全检查后直读期刊公开摘要；付费正文未取得。设计/结果补充来自作者机构公开说明的可读检索片段。未采用Grok0.073SD/CI/420单元等未独立核字段。",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.aef7249",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+      "sources": [
+        {
+          "label": "正刊公开摘要",
+          "url": "https://www.science.org/doi/10.1126/science.aef7249"
+        },
+        {
+          "label": "PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42848881/"
+        },
+        {
+          "label": "作者机构说明",
+          "url": "https://www.economics.ku.dk/news/news/2026/phone-free-lessons-boost-marks-major-experiment-shows/"
+        },
+        {
+          "label": "第一作者身份",
+          "url": "https://www.alpsungu.com/home"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+        "status": "bounded-search-completed",
+        "note": "已对本DOI查询正式更正/撤稿与复现；未检得不等于穷尽。Crossref两篇新Science返回429，其日期/作者改由PubMed及期刊页面交叉核对。实质边界见正文。"
+      },
+      "articleType": "Policy Article（报告原始随机实验，不冒称Research Article）"
+    },
+    {
+      "id": "science-brain-socioeconomics-20261029",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.aee6213",
+      "authors": [
+        "Scott Marek"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Scott Marek",
+          "intro": "脑影像研究者"
+        }
+      ],
+      "publishedDate": "2026-06-11",
+      "selectedDate": "2026-10-29",
+      "selectionKind": "classic",
+      "title": "脑图里的“智力关联”，可能混着生活环境",
+      "originalTitle": "Patterns of brain-wide associations reflect socioeconomics",
+      "category": "健康、生活与统计",
+      "stage": "儿童队列观察研究：混杂与泛化",
+      "takeaway": "该研究中，社会经济条件与儿童脑成像指标的关联最强；控制这些条件后，部分脑与IQ的关联减弱。关联地图不能直接当作智力本质或家庭收入的因果效应。",
+      "summary": {
+        "problem": "脑图里的“智力关联”，可能混着生活环境",
+        "method": "研究使用ABCD儿童队列，机构说明涉及11,878名9—10岁儿童；将649项环境、行为及认知变量与MRI皮层厚度和功能连接比较，再控制社会经济条件，并在较高社会经济背景的子样本检查结果能否泛化。",
+        "findings": "最强关联集中于感觉和运动区域；控制社会经济因素后，脑—IQ关联减弱，原脑—IQ映射在高社会经济背景子样本中不再泛化。",
+        "statistics": "649是变量数，不是人数；11,878是机构描述的数据规模，不当作每个MRI终点的有效样本数。",
+        "limitations": "这是观察分析，无法单独证明收入、睡眠或压力导致脑差异。睡眠与压力路径仍需因果研究；也不能据一张脑图判断某个孩子的IQ。",
+        "meaning": "按样本、比较口径和测量层级理解研究，不把关联、模拟或自报直接当因果和个人保证。"
+      },
+      "accessLevel": "abstract",
+      "accessNote": "核对正式PubMed摘要、作者单位及研究机构方法说明；未越过Science付费正文。PMC预印本遭检查，未采用其34%/40%为已核正式结果。往期精选。",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.aee6213",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+      "sources": [
+        {
+          "label": "正刊原文",
+          "url": "https://www.science.org/doi/10.1126/science.aee6213"
+        },
+        {
+          "label": "正式摘要",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42275495/"
+        },
+        {
+          "label": "研究机构说明",
+          "url": "https://medicine.washu.edu/news/socioeconomic-factors-linked-to-lasting-imprint-in-kids-brains/"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+        "status": "bounded-search-completed",
+        "note": "已对本DOI查询正式更正/撤稿与复现；未检得不等于穷尽。Crossref两篇新Science返回429，其日期/作者改由PubMed及期刊页面交叉核对。实质边界见正文。"
+      }
+    },
+    {
+      "id": "science-day-reconstruction-20261029",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.1103572",
+      "authors": [
+        "Daniel Kahneman"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Daniel Kahneman",
+          "intro": "行为决策研究者"
+        }
+      ],
+      "publishedDate": "2004-12-03",
+      "selectedDate": "2026-10-29",
+      "selectionKind": "classic",
+      "title": "“昨天过得怎样”，拆开来问会得到什么",
+      "originalTitle": "A Survey Method for Characterizing Daily Life Experience: The Day Reconstruction Method",
+      "category": "健康、生活与统计",
+      "stage": "测量方法研究；附后续直接比较边界",
+      "takeaway": "把昨天拆成一段段活动，再回忆各段感受，可以描绘群体的日常体验；这不等于精确重现每个人每个时刻的情绪。",
+      "summary": {
+        "problem": "“昨天过得怎样”，拆开来问会得到什么",
+        "method": "研究让909名受雇女性系统重建前一天的活动、时间和感受，结合时间使用调查与体验抽样的特点，再把得到的活动与情绪模式同既有体验抽样结果比较。不是对同一909人同时实施两种方法的配对实验。",
+        "findings": "原研究报告群体层面的活动和体验模式与既有体验抽样结果接近，展示了日重建法用于幸福感研究的用途。",
+        "statistics": "909是原研究的受试女性数；群体平均模式相近，不意味着个人一天内的变化也一致。",
+        "limitations": "后续两项直接比较发现，群体平均可较接近，但同一个人不同时刻的情境和情绪一致性较低；回忆可能受预期影响。两方法不能在所有研究目的下互换。",
+        "meaning": "按样本、比较口径和测量层级理解研究，不把关联、模拟或自报直接当因果和个人保证。"
+      },
+      "accessLevel": "abstract",
+      "accessNote": "核对原论文PubMed摘要、合作者USC页面；另核对后续直接比较的公开摘要/方法与结果节选。原2004正文未通读，后续方法比较不当作原文正式更正。往期精选。",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.1103572",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+      "sources": [
+        {
+          "label": "原研究摘要",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15576620/"
+        },
+        {
+          "label": "作者方法说明",
+          "url": "https://dornsife.usc.edu/norbert-schwarz/day-reconstruction-method-time-use-and-well-being/"
+        },
+        {
+          "label": "后续直接比较",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7508776/"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+        "status": "bounded-search-completed",
+        "note": "已对本DOI查询正式更正/撤稿与复现；未检得不等于穷尽。Crossref两篇新Science返回429，其日期/作者改由PubMed及期刊页面交叉核对。实质边界见正文。"
+      }
     }
   ],
   "coverage": {
     "nature": {
-      "date": "2026-10-28",
-      "status": "complete",
-      "note": "本轮3篇均往期精选；近期发现未返回可用候选，逐篇原始资料与更正/复现边界另存，不把发现无结果当全库无研究。",
+      "date": "2026-10-29",
+      "status": "partial",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
       "queries": [
-        "仅每日学习论文候选发现，截止2026-10-28T00:00Z（北京时间08:00），Nature与Science正刊分别处理，优先近30天已发表的健康、睡眠、运动、饮食、日常生活、幸福感或统计研究，人体研究优先。不继承AI/半导体选题，不用Nature Medicine/Communications或Science Advances子刊，不用新闻/评论/综述充原始研究。每刊最多3篇真正有明确结论且对象/样本、分组/对照、干预或比较、测量、结果能在原始资料核对的候选；无近期适合则可给有价值往期原始研究并标往期，不凑数。给DOI、原题、第一作者、首次发表日、正刊URL、合法公开全文/摘要入口、已能核对的N/比较/结果、已知更正/撤稿/复现疑点；缺失直说，别以模型记忆补造。今天稍后才发表的论文不纳入08:00。以下DOI已收录，勿重复：10.1038/s41586-025-09321-3, 10.1126/science.1150952, 10.1038/s41586-026-11162-7, 10.1038/s41586-026-10524-5, 10.1038/s41586-021-03380-y, 10.1126/science.aac4716, 10.1126/science.abl4476, 10.1126/science.aap9559, 10.1038/s41586-026-11154-7, 10.1126/science.aed8630, 10.1126/science.aee7240, 10.1038/s41586-021-04128-4, 10.1126/science.1238041, 10.1126/science.1192439, 10.1038/s41586-026-11077-3, 10.1038/s41586-026-10928-3, 10.1038/nature02223, 10.1126/science.7455683, 10.1126/science.1152408, 10.1038/s41586-026-11152-9, 10.1038/s41586-026-10380-3, 10.1038/s41586-024-07591-x, 10.1126/science.1250830, 10.1038/s41586-025-09797-z, 10.1038/s41586-024-07500-2, 10.1038/s41586-025-08800-x, 10.1126/science.1260799, 10.1038/s41586-026-10634-0, 10.1038/nature11421, 10.1126/science.adq1814",
-        "限定往期原始论文逐DOI：10.1038/nature09042；脑训练练习提升能否迁移到一般认知？样本、随机对照与六周测量？",
-        "限定往期原始论文逐DOI：10.1038/s41586-021-03344-2；提醒注意准确性能否改变信息分享？调查实验与真实平台干预是否区分？",
-        "限定往期原始论文逐DOI：10.1038/s41586-023-06137-x；人们认为道德衰退的判断与同期/跨期调查数据是否一致？样本比较与测量边界？",
-        "限定往期原始论文逐DOI：10.1126/science.1255484；研究显著性与发表率是否关联？完整研究样本和未发表结果如何取得？",
-        "限定往期原始论文逐DOI：10.1126/science.aau8712；钱包含钱是否影响实际联系失主？真实田野样本、随机分组与跨国边界？",
-        "限定往期原始论文逐DOI：10.1126/science.1240466；随机初始正负票是否影响后续真实评价？样本、随机对照和效应？",
-        "逐DOI correction erratum retraction replication：10.1038/nature09042",
-        "逐DOI correction erratum retraction replication：10.1038/s41586-021-03344-2",
-        "逐DOI correction erratum retraction replication：10.1038/s41586-023-06137-x",
-        "逐DOI correction erratum retraction replication：10.1126/science.1255484",
-        "逐DOI correction erratum retraction replication：10.1126/science.aau8712",
-        "逐DOI correction erratum retraction replication：10.1126/science.1240466"
+        "Nature正刊近30天人体健康生活统计原始研究：明确样本/比较/测量/结果；不足才标往期精选",
+        "Science正刊同范围；逐DOI核对作者/日期/摘要或公开方法与实际样本/效应",
+        "逐入选DOI正式更正/撤稿及相关独立复现，未读不补造",
+        "每日论文独立发现，仅用于Nature与Science正刊选读（允许期刊/PubMed/Crossref/合法作者版本，不扩展X新闻）。信息冻结2026-10-29T00:00Z。请实际检索健康、睡眠、运动饮食、日常生活幸福工作、人际与统计因果/风险/复现，优先近30天，有价值往期如实标记，不用子刊/新闻/综述充正刊原始研究。两刊各推荐最多4个未重复候选，目标各选3但不凑数。每篇DOI/原题/第一作者/首次正式发表日/正刊规范URL/公开可读版本，给明确结论、对象样本N、比较或随机干预、测量和关键结果，哪些只读摘要明说，并指出正式更正/撤稿/复现已知线索；无法验证不编。不要主推技术/芯片/AI基准或联系股价。仅候选发现，由我再核验原文。已收录DOI排除：10.1038/s41586-025-09321-3, 10.1126/science.1150952, 10.1038/s41586-026-11162-7, 10.1038/s41586-026-10524-5, 10.1038/s41586-021-03380-y, 10.1126/science.aac4716, 10.1126/science.abl4476, 10.1126/science.aap9559, 10.1038/s41586-026-11154-7, 10.1126/science.aed8630, 10.1126/science.aee7240, 10.1038/s41586-021-04128-4, 10.1126/science.1238041, 10.1126/science.1192439, 10.1038/s41586-026-11077-3, 10.1038/s41586-026-10928-3, 10.1038/nature02223, 10.1126/science.7455683, 10.1126/science.1152408, 10.1038/s41586-026-11152-9, 10.1038/s41586-026-10380-3, 10.1038/s41586-024-07591-x, 10.1126/science.1250830, 10.1038/s41586-025-09797-z, 10.1038/s41586-024-07500-2, 10.1038/s41586-025-08800-x, 10.1126/science.1260799, 10.1038/s41586-026-10634-0, 10.1038/nature11421, 10.1126/science.adq1814, 10.1038/nature09042, 10.1038/s41586-021-03344-2, 10.1038/s41586-023-06137-x, 10.1126/science.1255484, 10.1126/science.aau8712, 10.1126/science.1240466",
+        "近30天不足，可继续实际检索有价值往期正刊原始研究，仍排除先前36DOI且每刊最终最多3篇。Nature请定向核对两个待核线索：10.1038/nature23018（大规模身体活动不平等）及10.1038/s41586-021-03843-2（疫苗短信提醒随机实验），并另找至多1个不同生活/统计问题的Nature正刊原始研究；Science可核对10.1126/science.1103572（日重建法测量日常体验）作第3候选。DOI只是待核线索，不按记忆当事实。给真实原题/第一作者/首次正式发表日/正刊链接/公开可读版、样本与对照/干预/测量/主要结果、重大更正或复现线索。全部标往期，不把子刊/评论冒充研究，不要求补满。"
       ],
-      "checkedAt": "2026-10-28T01:06:21.977047+00:00"
+      "note": "2篇已核往期，缺1；Grok第三候选DOI重复已排除，不凑数。"
     },
     "science": {
-      "date": "2026-10-28",
+      "date": "2026-10-29",
       "status": "complete",
-      "note": "本轮3篇均往期精选；近期发现未返回可用候选，逐篇原始资料与更正/复现边界另存，不把发现无结果当全库无研究。",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
       "queries": [
-        "仅每日学习论文候选发现，截止2026-10-28T00:00Z（北京时间08:00），Nature与Science正刊分别处理，优先近30天已发表的健康、睡眠、运动、饮食、日常生活、幸福感或统计研究，人体研究优先。不继承AI/半导体选题，不用Nature Medicine/Communications或Science Advances子刊，不用新闻/评论/综述充原始研究。每刊最多3篇真正有明确结论且对象/样本、分组/对照、干预或比较、测量、结果能在原始资料核对的候选；无近期适合则可给有价值往期原始研究并标往期，不凑数。给DOI、原题、第一作者、首次发表日、正刊URL、合法公开全文/摘要入口、已能核对的N/比较/结果、已知更正/撤稿/复现疑点；缺失直说，别以模型记忆补造。今天稍后才发表的论文不纳入08:00。以下DOI已收录，勿重复：10.1038/s41586-025-09321-3, 10.1126/science.1150952, 10.1038/s41586-026-11162-7, 10.1038/s41586-026-10524-5, 10.1038/s41586-021-03380-y, 10.1126/science.aac4716, 10.1126/science.abl4476, 10.1126/science.aap9559, 10.1038/s41586-026-11154-7, 10.1126/science.aed8630, 10.1126/science.aee7240, 10.1038/s41586-021-04128-4, 10.1126/science.1238041, 10.1126/science.1192439, 10.1038/s41586-026-11077-3, 10.1038/s41586-026-10928-3, 10.1038/nature02223, 10.1126/science.7455683, 10.1126/science.1152408, 10.1038/s41586-026-11152-9, 10.1038/s41586-026-10380-3, 10.1038/s41586-024-07591-x, 10.1126/science.1250830, 10.1038/s41586-025-09797-z, 10.1038/s41586-024-07500-2, 10.1038/s41586-025-08800-x, 10.1126/science.1260799, 10.1038/s41586-026-10634-0, 10.1038/nature11421, 10.1126/science.adq1814",
-        "限定往期原始论文逐DOI：10.1038/nature09042；脑训练练习提升能否迁移到一般认知？样本、随机对照与六周测量？",
-        "限定往期原始论文逐DOI：10.1038/s41586-021-03344-2；提醒注意准确性能否改变信息分享？调查实验与真实平台干预是否区分？",
-        "限定往期原始论文逐DOI：10.1038/s41586-023-06137-x；人们认为道德衰退的判断与同期/跨期调查数据是否一致？样本比较与测量边界？",
-        "限定往期原始论文逐DOI：10.1126/science.1255484；研究显著性与发表率是否关联？完整研究样本和未发表结果如何取得？",
-        "限定往期原始论文逐DOI：10.1126/science.aau8712；钱包含钱是否影响实际联系失主？真实田野样本、随机分组与跨国边界？",
-        "限定往期原始论文逐DOI：10.1126/science.1240466；随机初始正负票是否影响后续真实评价？样本、随机对照和效应？",
-        "逐DOI correction erratum retraction replication：10.1038/nature09042",
-        "逐DOI correction erratum retraction replication：10.1038/s41586-021-03344-2",
-        "逐DOI correction erratum retraction replication：10.1038/s41586-023-06137-x",
-        "逐DOI correction erratum retraction replication：10.1126/science.1255484",
-        "逐DOI correction erratum retraction replication：10.1126/science.aau8712",
-        "逐DOI correction erratum retraction replication：10.1126/science.1240466"
+        "Nature正刊近30天人体健康生活统计原始研究：明确样本/比较/测量/结果；不足才标往期精选",
+        "Science正刊同范围；逐DOI核对作者/日期/摘要或公开方法与实际样本/效应",
+        "逐入选DOI正式更正/撤稿及相关独立复现，未读不补造",
+        "每日论文独立发现，仅用于Nature与Science正刊选读（允许期刊/PubMed/Crossref/合法作者版本，不扩展X新闻）。信息冻结2026-10-29T00:00Z。请实际检索健康、睡眠、运动饮食、日常生活幸福工作、人际与统计因果/风险/复现，优先近30天，有价值往期如实标记，不用子刊/新闻/综述充正刊原始研究。两刊各推荐最多4个未重复候选，目标各选3但不凑数。每篇DOI/原题/第一作者/首次正式发表日/正刊规范URL/公开可读版本，给明确结论、对象样本N、比较或随机干预、测量和关键结果，哪些只读摘要明说，并指出正式更正/撤稿/复现已知线索；无法验证不编。不要主推技术/芯片/AI基准或联系股价。仅候选发现，由我再核验原文。已收录DOI排除：10.1038/s41586-025-09321-3, 10.1126/science.1150952, 10.1038/s41586-026-11162-7, 10.1038/s41586-026-10524-5, 10.1038/s41586-021-03380-y, 10.1126/science.aac4716, 10.1126/science.abl4476, 10.1126/science.aap9559, 10.1038/s41586-026-11154-7, 10.1126/science.aed8630, 10.1126/science.aee7240, 10.1038/s41586-021-04128-4, 10.1126/science.1238041, 10.1126/science.1192439, 10.1038/s41586-026-11077-3, 10.1038/s41586-026-10928-3, 10.1038/nature02223, 10.1126/science.7455683, 10.1126/science.1152408, 10.1038/s41586-026-11152-9, 10.1038/s41586-026-10380-3, 10.1038/s41586-024-07591-x, 10.1126/science.1250830, 10.1038/s41586-025-09797-z, 10.1038/s41586-024-07500-2, 10.1038/s41586-025-08800-x, 10.1126/science.1260799, 10.1038/s41586-026-10634-0, 10.1038/nature11421, 10.1126/science.adq1814, 10.1038/nature09042, 10.1038/s41586-021-03344-2, 10.1038/s41586-023-06137-x, 10.1126/science.1255484, 10.1126/science.aau8712, 10.1126/science.1240466",
+        "近30天不足，可继续实际检索有价值往期正刊原始研究，仍排除先前36DOI且每刊最终最多3篇。Nature请定向核对两个待核线索：10.1038/nature23018（大规模身体活动不平等）及10.1038/s41586-021-03843-2（疫苗短信提醒随机实验），并另找至多1个不同生活/统计问题的Nature正刊原始研究；Science可核对10.1126/science.1103572（日重建法测量日常体验）作第3候选。DOI只是待核线索，不按记忆当事实。给真实原题/第一作者/首次正式发表日/正刊链接/公开可读版、样本与对照/干预/测量/主要结果、重大更正或复现线索。全部标往期，不把子刊/评论冒充研究，不要求补满。"
       ],
-      "checkedAt": "2026-10-28T01:06:21.977047+00:00"
+      "note": "3篇原始研究已核，1篇近期、2篇往期；正文未读范围/复现与统计边界独立保留。"
     }
   }
 }

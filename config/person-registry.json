@@ -3,24 +3,212 @@
   "rule": "卡片中的人名保留原文写法（英文名用原拼写），不使用中文音译；每张卡片在 people 字段列出提到的人物及 ≤15 字简介。新人物先在此登记经核实的简介。用户2026-10-13指定。",
   "introMaxChars": 15,
   "people": [
-    {"name":"Adrian M. Owen","intro":"认知神经科学研究者","aliases":[],"matchTerms":["Adrian M. Owen"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/20407435/","checkedAt":"2026-10-28T01:06:21.977047+00:00","verificationNote":"身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"},
-    {"name":"Gordon Pennycook","intro":"行为与信息判断研究者","aliases":[],"matchTerms":["Gordon Pennycook"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/33731933/","checkedAt":"2026-10-28T01:06:21.977047+00:00","verificationNote":"身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"},
-    {"name":"Adam M. Mastroianni","intro":"心理学研究者","aliases":[],"matchTerms":["Adam M. Mastroianni"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/37286595/","checkedAt":"2026-10-28T01:06:21.977047+00:00","verificationNote":"身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"},
-    {"name":"Annie Franco","intro":"社会科学研究者","aliases":[],"matchTerms":["Annie Franco"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/25170047/","checkedAt":"2026-10-28T01:06:21.977047+00:00","verificationNote":"身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"},
-    {"name":"Alain Cohn","intro":"行为经济学研究者","aliases":[],"matchTerms":["Alain Cohn"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/31221770/","checkedAt":"2026-10-28T01:06:21.977047+00:00","verificationNote":"身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"},
-    {"name":"Lev Muchnik","intro":"社会网络行为研究者","aliases":[],"matchTerms":["Lev Muchnik"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/23929980/","checkedAt":"2026-10-28T01:06:21.977047+00:00","verificationNote":"身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"},
-    {"name":"Rody Davis","intro":"Google开发者关系成员","aliases":["罗迪·戴维斯"],"matchTerms":["Rody Davis"],"handles":["rodydavis"],"source":"https://x.com/rodydavis","checkedAt":"2026-10-27T13:23:43.989514+00:00","verificationNote":"Grok X用户搜索返回公开简介：Staff DevRel @Google @antigravity @GoogleDeepMind；未独立直访X。"},
-    {"name":"Teresa Gerhardt","intro":"心血管与免疫研究者","aliases":["特蕾莎·格哈特"],"matchTerms":["Teresa Gerhardt"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/42271062/"},
-    {"name":"Robert M. Bond","intro":"政治行为研究者","aliases":["罗伯特·邦德"],"matchTerms":["Robert M. Bond","Robert M Bond"],"handles":[],"source":"https://pmc.ncbi.nlm.nih.gov/articles/PMC3834737/"},
-    {"name":"Thomas H. Costello","intro":"心理学研究者","aliases":["托马斯·科斯特洛"],"matchTerms":["Thomas H. Costello","Thomas H Costello"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/39264999/"},
-    {"name":"Nicolás Gómez-Banoy","intro":"代谢与棕色脂肪研究者","aliases":[],"matchTerms":["Nicolás Gómez-Banoy"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/42875491/"},
-    {"name":"Cliodhna Kate O’Toole","intro":"睡眠与生物年龄研究者","aliases":[],"matchTerms":["Cliodhna Kate O’Toole"],"handles":[],"source":"https://www.nature.com/articles/s41586-026-10524-5"},
-    {"name":"Gabrielle S. Adams","intro":"行为决策研究者","aliases":[],"matchTerms":["Gabrielle S. Adams"],"handles":[],"source":"https://www.nature.com/articles/s41586-021-03380-y"},
-    {"name":"Open Science Collaboration","intro":"心理学复现研究协作组","aliases":[],"matchTerms":["Open Science Collaboration"],"handles":[],"source":"https://www.research.ed.ac.uk/en/publications/estimating-the-reproducibility-of-psychological-science/"},
-    {"name":"Karthik Rajkumar","intro":"社会网络与就业研究者","aliases":[],"matchTerms":["Karthik Rajkumar"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/36107999/"},
-    {"name":"Soroush Vosoughi","intro":"信息扩散研究者","aliases":[],"matchTerms":["Soroush Vosoughi"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/29590045/"},
-    {"name":"Tim Althoff","intro":"行为与健康数据研究者","aliases":[],"matchTerms":["Tim Althoff"],"handles":[],"source":"https://www.nature.com/articles/s41586-025-09321-3"},
-    {"name":"Elizabeth W. Dunn","intro":"幸福感与消费心理研究者","aliases":[],"matchTerms":["Elizabeth W. Dunn"],"handles":[],"source":"https://dunn.psych.ubc.ca/publications/"},
+    {
+      "name": "Adrian M. Owen",
+      "intro": "认知神经科学研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Adrian M. Owen"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/20407435/",
+      "checkedAt": "2026-10-28T01:06:21.977047+00:00",
+      "verificationNote": "身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"
+    },
+    {
+      "name": "Gordon Pennycook",
+      "intro": "行为与信息判断研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Gordon Pennycook"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/33731933/",
+      "checkedAt": "2026-10-28T01:06:21.977047+00:00",
+      "verificationNote": "身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"
+    },
+    {
+      "name": "Adam M. Mastroianni",
+      "intro": "心理学研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Adam M. Mastroianni"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/37286595/",
+      "checkedAt": "2026-10-28T01:06:21.977047+00:00",
+      "verificationNote": "身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"
+    },
+    {
+      "name": "Annie Franco",
+      "intro": "社会科学研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Annie Franco"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/25170047/",
+      "checkedAt": "2026-10-28T01:06:21.977047+00:00",
+      "verificationNote": "身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"
+    },
+    {
+      "name": "Alain Cohn",
+      "intro": "行为经济学研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Alain Cohn"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/31221770/",
+      "checkedAt": "2026-10-28T01:06:21.977047+00:00",
+      "verificationNote": "身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"
+    },
+    {
+      "name": "Lev Muchnik",
+      "intro": "社会网络行为研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Lev Muchnik"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/23929980/",
+      "checkedAt": "2026-10-28T01:06:21.977047+00:00",
+      "verificationNote": "身份简介依原始论文作者署名与学科/单位，非未经核实的现职。"
+    },
+    {
+      "name": "Rody Davis",
+      "intro": "Google开发者关系成员",
+      "aliases": [
+        "罗迪·戴维斯"
+      ],
+      "matchTerms": [
+        "Rody Davis"
+      ],
+      "handles": [
+        "rodydavis"
+      ],
+      "source": "https://x.com/rodydavis",
+      "checkedAt": "2026-10-27T13:23:43.989514+00:00",
+      "verificationNote": "Grok X用户搜索返回公开简介：Staff DevRel @Google @antigravity @GoogleDeepMind；未独立直访X。"
+    },
+    {
+      "name": "Teresa Gerhardt",
+      "intro": "心血管与免疫研究者",
+      "aliases": [
+        "特蕾莎·格哈特"
+      ],
+      "matchTerms": [
+        "Teresa Gerhardt"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42271062/"
+    },
+    {
+      "name": "Robert M. Bond",
+      "intro": "政治行为研究者",
+      "aliases": [
+        "罗伯特·邦德"
+      ],
+      "matchTerms": [
+        "Robert M. Bond",
+        "Robert M Bond"
+      ],
+      "handles": [],
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3834737/"
+    },
+    {
+      "name": "Thomas H. Costello",
+      "intro": "心理学研究者",
+      "aliases": [
+        "托马斯·科斯特洛"
+      ],
+      "matchTerms": [
+        "Thomas H. Costello",
+        "Thomas H Costello"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/39264999/"
+    },
+    {
+      "name": "Nicolás Gómez-Banoy",
+      "intro": "代谢与棕色脂肪研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Nicolás Gómez-Banoy"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42875491/"
+    },
+    {
+      "name": "Cliodhna Kate O’Toole",
+      "intro": "睡眠与生物年龄研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Cliodhna Kate O’Toole"
+      ],
+      "handles": [],
+      "source": "https://www.nature.com/articles/s41586-026-10524-5"
+    },
+    {
+      "name": "Gabrielle S. Adams",
+      "intro": "行为决策研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Gabrielle S. Adams"
+      ],
+      "handles": [],
+      "source": "https://www.nature.com/articles/s41586-021-03380-y"
+    },
+    {
+      "name": "Open Science Collaboration",
+      "intro": "心理学复现研究协作组",
+      "aliases": [],
+      "matchTerms": [
+        "Open Science Collaboration"
+      ],
+      "handles": [],
+      "source": "https://www.research.ed.ac.uk/en/publications/estimating-the-reproducibility-of-psychological-science/"
+    },
+    {
+      "name": "Karthik Rajkumar",
+      "intro": "社会网络与就业研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Karthik Rajkumar"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/36107999/"
+    },
+    {
+      "name": "Soroush Vosoughi",
+      "intro": "信息扩散研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Soroush Vosoughi"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/29590045/"
+    },
+    {
+      "name": "Tim Althoff",
+      "intro": "行为与健康数据研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Tim Althoff"
+      ],
+      "handles": [],
+      "source": "https://www.nature.com/articles/s41586-025-09321-3"
+    },
+    {
+      "name": "Elizabeth W. Dunn",
+      "intro": "幸福感与消费心理研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Elizabeth W. Dunn"
+      ],
+      "handles": [],
+      "source": "https://dunn.psych.ubc.ca/publications/"
+    },
     {
       "name": "Satya Nadella",
       "intro": "微软董事长兼CEO",
@@ -479,14 +667,95 @@
         "https://nyulangone.org/news/human-milk-offers-window-mammary-gland-function-and-its-links-infant-growth"
       ]
     },
-    {"name":"Katherine L. Milkman","intro":"行为科学研究者","aliases":[],"matchTerms":["Katherine L. Milkman"],"handles":[],"sources":["https://pubmed.ncbi.nlm.nih.gov/34880497/"]},
-    {"name":"Anandi Mani","intro":"行为经济学研究者","aliases":[],"matchTerms":["Anandi Mani"],"handles":[],"sources":["https://pubmed.ncbi.nlm.nih.gov/23990553/","https://pubmed.ncbi.nlm.nih.gov/24311665/","https://pubmed.ncbi.nlm.nih.gov/24311666/"]},
-    {"name":"Matthew A. Killingsworth","intro":"幸福感研究者","aliases":[],"matchTerms":["Matthew A. Killingsworth"],"handles":[],"sources":["https://pubmed.ncbi.nlm.nih.gov/21071660/","https://pubmed.ncbi.nlm.nih.gov/24194889/"]},
-    {"name":"Anqi Dai","intro":"营养与肠道菌群研究者","aliases":[],"matchTerms":["Anqi Dai"],"handles":[],"source":"https://www.nature.com/articles/s41586-026-11077-3"},
-    {"name":"William Joo","intro":"睡眠神经环路研究者","aliases":[],"matchTerms":["William Joo"],"handles":[],"source":"https://pubmed.ncbi.nlm.nih.gov/42618797/"},
-    {"name":"Ullrich Wagner","intro":"睡眠与记忆研究者","aliases":[],"matchTerms":["Ullrich Wagner"],"handles":[],"source":"https://www.nature.com/articles/nature02223"},
-    {"name":"Amos Tversky","intro":"认知与决策心理学家","aliases":[],"matchTerms":["Amos Tversky"],"handles":[],"source":"https://stanford.edu/class/psych205/papers/Tversky-Kahneman-1981.pdf"},
-    {"name":"Jeffrey D. Karpicke","intro":"学习与记忆研究者","aliases":[],"matchTerms":["Jeffrey D. Karpicke"],"handles":[],"source":"https://learninglab.psych.purdue.edu/projects/"},
+    {
+      "name": "Katherine L. Milkman",
+      "intro": "行为科学研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Katherine L. Milkman"
+      ],
+      "handles": [],
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/34880497/"
+      ]
+    },
+    {
+      "name": "Anandi Mani",
+      "intro": "行为经济学研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Anandi Mani"
+      ],
+      "handles": [],
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/23990553/",
+        "https://pubmed.ncbi.nlm.nih.gov/24311665/",
+        "https://pubmed.ncbi.nlm.nih.gov/24311666/"
+      ]
+    },
+    {
+      "name": "Matthew A. Killingsworth",
+      "intro": "幸福感研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Matthew A. Killingsworth"
+      ],
+      "handles": [],
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/21071660/",
+        "https://pubmed.ncbi.nlm.nih.gov/24194889/"
+      ]
+    },
+    {
+      "name": "Anqi Dai",
+      "intro": "营养与肠道菌群研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Anqi Dai"
+      ],
+      "handles": [],
+      "source": "https://www.nature.com/articles/s41586-026-11077-3"
+    },
+    {
+      "name": "William Joo",
+      "intro": "睡眠神经环路研究者",
+      "aliases": [],
+      "matchTerms": [
+        "William Joo"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42618797/"
+    },
+    {
+      "name": "Ullrich Wagner",
+      "intro": "睡眠与记忆研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Ullrich Wagner"
+      ],
+      "handles": [],
+      "source": "https://www.nature.com/articles/nature02223"
+    },
+    {
+      "name": "Amos Tversky",
+      "intro": "认知与决策心理学家",
+      "aliases": [],
+      "matchTerms": [
+        "Amos Tversky"
+      ],
+      "handles": [],
+      "source": "https://stanford.edu/class/psych205/papers/Tversky-Kahneman-1981.pdf"
+    },
+    {
+      "name": "Jeffrey D. Karpicke",
+      "intro": "学习与记忆研究者",
+      "aliases": [],
+      "matchTerms": [
+        "Jeffrey D. Karpicke"
+      ],
+      "handles": [],
+      "source": "https://learninglab.psych.purdue.edu/projects/"
+    },
     {
       "name": "Rich Privorotsky",
       "intro": "高盛欧洲股票交易主管",
@@ -594,6 +863,63 @@
         "https://pubmed.ncbi.nlm.nih.gov/25977558/"
       ],
       "checkedAt": "2026-10-26T00:46:31.469433+00:00"
+    },
+    {
+      "name": "Alp Sungu",
+      "intro": "技术与教育研究者",
+      "aliases": [
+        "阿尔普·桑古"
+      ],
+      "matchTerms": [
+        "Alp Sungu"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42848881/",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+      "verificationNote": "简介依原始论文署名、研究内容及单位，未声称现职；音译别名用于匹配，不在前台替代原文姓名。"
+    },
+    {
+      "name": "Scott Marek",
+      "intro": "脑影像研究者",
+      "aliases": [
+        "斯科特·马雷克"
+      ],
+      "matchTerms": [
+        "Scott Marek"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/42275495/",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+      "verificationNote": "简介依原始论文署名、研究内容及单位，未声称现职；音译别名用于匹配，不在前台替代原文姓名。"
+    },
+    {
+      "name": "Hengchen Dai",
+      "intro": "行为决策研究者",
+      "aliases": [
+        "戴恒辰"
+      ],
+      "matchTerms": [
+        "Hengchen Dai"
+      ],
+      "handles": [],
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8443442/",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+      "verificationNote": "简介依原始论文署名、研究内容及单位，未声称现职；音译别名用于匹配，不在前台替代原文姓名。"
+    },
+    {
+      "name": "Daniel Kahneman",
+      "intro": "行为决策研究者",
+      "aliases": [
+        "丹尼尔·卡尼曼",
+        "卡尼曼"
+      ],
+      "matchTerms": [
+        "Daniel Kahneman"
+      ],
+      "handles": [],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/15576620/",
+      "checkedAt": "2026-10-29T04:11:37.583647+00:00",
+      "verificationNote": "简介依原始论文署名、研究内容及单位，未声称现职；音译别名用于匹配，不在前台替代原文姓名。"
     }
   ]
 }

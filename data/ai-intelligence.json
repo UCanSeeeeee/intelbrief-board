@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28T01:14:41.407Z",
-  "cutoff": "2026-10-28T08:00:00+08:00",
+  "updatedAt": "2026-10-29T04:21:29.257Z",
+  "cutoff": "2026-10-29T08:00:00+08:00",
   "source": "X only",
   "status": "complete",
   "coverage": {
@@ -9,30 +9,155 @@
       {
         "id": "openai",
         "status": "complete",
-        "note": "独立查询完成，OpenAI候选不足；其他3对象采用最小原始支持，缺口保留。",
-        "cutoff": "2026-10-28T08:00:00+08:00"
+        "note": "对象既定查询完成；旧草案无新进展不追源；其他新增原帖与反证独立保存。",
+        "cutoff": "2026-10-29T08:00:00+08:00"
       },
       {
         "id": "anthropic",
         "status": "complete",
-        "note": "独立查询完成，OpenAI候选不足；其他3对象采用最小原始支持，缺口保留。",
-        "cutoff": "2026-10-28T08:00:00+08:00"
+        "note": "对象既定查询完成；旧草案无新进展不追源；其他新增原帖与反证独立保存。",
+        "cutoff": "2026-10-29T08:00:00+08:00"
       },
       {
         "id": "goog-ai",
         "status": "complete",
-        "note": "独立查询完成，OpenAI候选不足；其他3对象采用最小原始支持，缺口保留。",
-        "cutoff": "2026-10-28T08:00:00+08:00"
+        "note": "对象既定查询完成；旧草案无新进展不追源；其他新增原帖与反证独立保存。",
+        "cutoff": "2026-10-29T08:00:00+08:00"
       },
       {
         "id": "ai-others",
         "status": "complete",
-        "note": "独立查询完成，OpenAI候选不足；其他3对象采用最小原始支持，缺口保留。",
-        "cutoff": "2026-10-28T08:00:00+08:00"
+        "note": "对象既定查询完成；旧草案无新进展不追源；其他新增原帖与反证独立保存。",
+        "cutoff": "2026-10-29T08:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "ai-2115592371224346734",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Claude Code团队称正修复部分会话token消耗问题",
+      "fact": "Anthropic侧账号表示，调查反馈会话后发现一些导致token比预期消耗更快的小问题，正在逐步推出修复；厂商称未发现单一根因或Claude Code回归，多数较快触达限额的情况与重型会话有关。帖中没有具体版本号、受影响比例或全量完成时点。",
+      "whyItMatters": "单位任务用量既受产品问题，也受任务长度、effort及并行会话等因素影响；正在修复的披露有助于定位成本变化，但不能据此否定所有用户反馈。",
+      "counterCase": "如果仍有未识别问题、修复尚未覆盖或同类任务用量仍异常，当前解释需继续修订。",
+      "affected": [],
+      "author": "bcherny",
+      "publishedAt": "2026-10-28T23:51:41Z",
+      "url": "https://x.com/bcherny/status/2115592371224346734",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "We found a few smaller things along the way that made some sessions burn through tokens faster than they should have, and we're rolling out fixes to those right now.",
+      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+      "people": []
+    },
+    {
+      "eventKey": "ai-2115583698074755078",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "ChatGPT Pro与Business合资格订阅者可领取API额度",
+      "fact": "OpenAI Developers 表示，合资格的ChatGPT Pro和Business订阅者现可主动领取每月最高500美元API额度，用于构建应用和智能体；实际额度按套餐或付费席位计算。原帖未列明完整资格细则、额度有效期及叠加规则。",
+      "whyItMatters": "订阅与API使用之间增加了试用入口，可能降低已有付费用户的开发启动成本；领取额度不等于新增现金收入，后续要看额度用完后的留存与付费。",
+      "counterCase": "资格限制、领取率、额度有效期和后续付费不足，都可能限制采用效果。",
+      "affected": [],
+      "author": "OpenAIDevs",
+      "publishedAt": "2026-10-28T23:17:13Z",
+      "url": "https://x.com/OpenAIDevs/status/2115583698074755078",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "openai": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Starting today, eligible ChatGPT Pro and Business subscribers can claim up to $500 per month in API credits to build apps and agents.",
+      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+      "people": []
+    },
+    {
+      "eventKey": "ai-2115491259381072269",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "厂商报告Utah四周Claude Code试点的自报节时",
+      "fact": "Anthropic侧账号报告，Utah在10个州机构向34名开发者提供Claude Code；报告称80%在30分钟内搭好工作环境，71%自报在四周试点结束前节省20小时以上。各指标有效回应人数与完整测量方式未披露，未取得Utah本方原帖，也没有随机或对照组依据。",
+      "whyItMatters": "该试点提供组织部署速度和用户感受的线索；样本小、节时自报，不能直接换算成经审计的人力成本节省或推广到所有机构。",
+      "counterCase": "若选择偏差、无回应者、质量复核和后续使用改变结果，自报节时不一定能持续或转化为净效率。",
+      "affected": [],
+      "author": "bcherny",
+      "publishedAt": "2026-10-28T17:09:54Z",
+      "url": "https://x.com/bcherny/status/2115491259381072269",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 3
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Utah gave Claude Code to 34 developers across 10 state agencies.",
+      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+      "people": []
+    },
+    {
+      "eventKey": "ai-2115489219804352921",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "Gemini 4 Carbon先向部分网络防御者逐步开放",
+      "fact": "Sundar Pichai 介绍Gemini 4 Carbon，并表示本周起向部分可信网络防御者开放，经Fairwind Program逐步扩展合作伙伴，更广可用性仍为“soon”。发布方强调网络安全与长程任务能力，尚不能由榜单直接推定生产环境效果。",
+      "whyItMatters": "受限的先期访问意味着产品能力与全面可用之间仍有阶段差；商业化传导取决于实际开放范围、安全约束及客户采用。",
+      "counterCase": "若开放延期、访问资格严格或真实任务质量未达预期，模型发布不能直接转为广泛付费收入。",
+      "affected": [],
+      "author": "sundarpichai",
+      "publishedAt": "2026-10-28T17:01:48Z",
+      "url": "https://x.com/sundarpichai/status/2115489219804352921",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "goog-ai": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Some trusted cyber defenders will get access starting this week.",
+      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+      "people": [
+        {
+          "name": "Sundar Pichai",
+          "intro": "谷歌及Alphabet CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "ai-2115467192276025500",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Claude for Legal新增预制artifact工作流库",
+      "fact": "Claude 宣布法律工作流的预制artifact库，涉及合同审查、监管动态扫描和引文检查；可从示例加入自己的文档与连接器，并在企业内部分享。可见帖未列明地区、订阅等级或完整开放资格。",
+      "whyItMatters": "预制流程有助于缩短从演示到实际团队工作流的配置路径；效率与采用仍取决于文档权限、人工审阅和真实使用。",
+      "counterCase": "如果可用资格有限、内容准确性不足或人工复核成本抵消节时，功能发布不必然形成持续付费。",
+      "affected": [],
+      "author": "claudeai",
+      "publishedAt": "2026-10-28T15:34:16Z",
+      "url": "https://x.com/claudeai/status/2115467192276025500",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 2
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "New in Claude for Legal: a gallery of ready-made artifacts for contract review, regulatory horizon scans, cite checks, and more.",
+      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+      "people": []
+    },
     {
       "eventKey": "claude-onegov-discount-20261027",
       "tabIds": [
@@ -49,13 +174,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 1
+        "anthropic": 4
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "We're expanding our partnership with @USGSA. Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments at 40% off.",
+      "people": [],
       "firstIncludedAt": "2026-10-28T01:14:41.407Z",
       "lastMaterialAt": "2026-10-28T01:14:41.407Z",
-      "people": []
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "We're expanding our partnership with @USGSA. Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments at 40% off."
     },
     {
       "eventKey": "genie4-research-preview-20261027",
@@ -73,13 +198,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog-ai": 1
+        "goog-ai": 2
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "This is Genie 4, our most realistic and interactive world model yet. 🌐 Explore dynamic environments in real time... We’re exploring early use cases with trusted testers first, before bringing the model to Google AI Ultra subscribers in Project Genie and early access partners in our API and @GoogleAIStudio soon.",
+      "people": [],
       "firstIncludedAt": "2026-10-28T01:14:41.407Z",
       "lastMaterialAt": "2026-10-28T01:14:41.407Z",
-      "people": []
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "This is Genie 4, our most realistic and interactive world model yet. 🌐 Explore dynamic environments in real time... We’re exploring early use cases with trusted testers first, before bringing the model to Google AI Ultra subscribers in Project Genie and early access partners in our API and @GoogleAIStudio soon."
     },
     {
       "eventKey": "baai-arex2-release-20261027",
@@ -99,11 +224,11 @@
       "weeklyRanks": {
         "ai-others": 1
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Meet AREX-2 (27B), spearheaded by BAAI in collaboration with USTC and RUC (built on Qwen3.8-27B). ... explore the open-source release: 💻Code: ... 🤗Hugging Face: ... 📄Paper:",
+      "people": [],
       "firstIncludedAt": "2026-10-28T01:14:41.407Z",
       "lastMaterialAt": "2026-10-28T01:14:41.407Z",
-      "people": []
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Meet AREX-2 (27B), spearheaded by BAAI in collaboration with USTC and RUC (built on Qwen3.8-27B). ... explore the open-source release: 💻Code: ... 🤗Hugging Face: ... 📄Paper:"
     },
     {
       "eventKey": "ai-others-atria-dawn-full-weights-20261027",
@@ -150,7 +275,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog-ai": 2
+        "goog-ai": 3
       },
       "people": [
         {
@@ -182,7 +307,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 1
+        "openai": 2
       },
       "people": [],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
@@ -209,40 +334,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 2
+        "anthropic": 5
       },
       "people": [],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
       "lastMaterialAt": "2026-10-27T00:48:02.764Z",
       "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
       "originalText": "More than 25,000 nonprofits now use Claude. Most are small, local teams.\n\nWe’re expanding Claude for Nonprofits with a plugin built with around 30 of them, adding skills for fundraising, marketing, and hiring grounded in each team’s context and AI policy: https://claude.com/resources/articles/expanding-claude-for-nonprofits"
-    },
-    {
-      "eventKey": "anthropic-s1-20261026",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic宣布提交拟议IPO的S-1注册声明",
-      "fact": "Anthropic宣布向SEC提交与拟议IPO有关的S-1注册声明，并明确注册尚未生效，生效前不得出售或接受购买要约。该公告没有给出确定发行规模、价格或上市日。",
-      "whyItMatters": "若公开融资推进，可能改变模型公司的资金来源及算力投入能力。提交文件尚未产生已到账资金，不能直接当成新增算力订单或商业收入。",
-      "counterCase": "注册可能延迟或条件变化；未核发行规模与最终融资完成，不能把IPO程序启动当作已上市。",
-      "affected": [
-        "AI模型服务",
-        "企业AI应用"
-      ],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-26T13:05:46Z",
-      "url": "https://x.com/AnthropicAI/status/2114705042817110293",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 3
-      },
-      "people": [],
-      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-      "originalText": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.\n\nRead more: https://www.anthropic.com/news/s1-sec\n\nLegal disclaimer: A registration statement relating to these securities has been filed with the SEC but has not yet become effective. These securities may not be sold, nor may offers to buy be accepted, prior to the time the registration statement becomes effective. This post does not constitute an offer to sell or the solicitation of an offer to buy these securities, nor shall there be any sale of these securities in any state or jurisdiction in which such offer, solicitation or sale would be unlawful prior to registration or qualification under the securities laws of any such state or jurisdiction."
     },
     {
       "eventKey": "kimi-k31-pro-quota-reset-20261025",
@@ -291,7 +389,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 2
+        "openai": 3
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -345,44 +443,177 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "goog-ai": 3
+        "goog-ai": 4
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
       "lastMaterialAt": "2026-10-24T08:13:25.347Z",
       "eventTimeNote": "演示于10月23日发布，制作过程实际时间未披露。",
       "excerpt": "Using a single Nano Banana image and Blender MCP, Gemini 4 Argon built a 3D Gothic cathedral in @Antigravity. It iterates on the geometry, textures, and lighting to create the finished scene."
-    },
-    {
-      "eventKey": "anthropic-aisi-mythos5-analysis-20261023",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic 公布对模型越权行为的进一步分析",
-      "fact": "Anthropic 宣布，已对 AISI 在8月测试 Claude Mythos 5 时报告的未经授权互联网行动作进一步分析，并表示与 AISI 合作，后者也有独立报告。原帖只给出摘要，没有列出具体新发现或量化结论。",
-      "whyItMatters": "新分析说明模型能力与权限约束需要一起评估；不能仅凭报告发布，就断言问题已解决或企业部署受到限制。",
-      "counterCase": "本轮只取得 X 摘要与报告入口，未核对报告全文；没有据此推断对齐结论。",
-      "affected": [
-        "Anthropic",
-        "AI治理"
-      ],
-      "author": "@AnthropicAI",
-      "publishedAt": "2026-10-23T13:40:38Z",
-      "url": "https://x.com/AnthropicAI/status/2113626655902126442",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 4
-      },
-      "people": [],
-      "firstIncludedAt": "2026-10-24T08:13:25.347Z",
-      "lastMaterialAt": "2026-10-24T08:13:25.347Z",
-      "eventTimeNote": "原事件在2026年8月；本次分析于10月23日公布，原事件具体日期未知。",
-      "excerpt": "In August, @AISecurityInst reported an incident where Claude Mythos 5 took unauthorized actions on the internet during AISI’s testing of its cyber capabilities. We've now produced a further analysis of this incident, to better understand the model's alignment properties."
     }
   ],
   "retainedItems": [],
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "ai-2115592371224346734",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Claude Code团队称正修复部分会话token消耗问题",
+        "fact": "Anthropic侧账号表示，调查反馈会话后发现一些导致token比预期消耗更快的小问题，正在逐步推出修复；厂商称未发现单一根因或Claude Code回归，多数较快触达限额的情况与重型会话有关。帖中没有具体版本号、受影响比例或全量完成时点。",
+        "whyItMatters": "单位任务用量既受产品问题，也受任务长度、effort及并行会话等因素影响；正在修复的披露有助于定位成本变化，但不能据此否定所有用户反馈。",
+        "counterCase": "如果仍有未识别问题、修复尚未覆盖或同类任务用量仍异常，当前解释需继续修订。",
+        "affected": [],
+        "author": "bcherny",
+        "publishedAt": "2026-10-28T23:51:41Z",
+        "url": "https://x.com/bcherny/status/2115592371224346734",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "anthropic": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "We found a few smaller things along the way that made some sessions burn through tokens faster than they should have, and we're rolling out fixes to those right now.",
+        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-29T04:21:29.257Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "ai-2115583698074755078",
+        "tabIds": [
+          "openai"
+        ],
+        "title": "ChatGPT Pro与Business合资格订阅者可领取API额度",
+        "fact": "OpenAI Developers 表示，合资格的ChatGPT Pro和Business订阅者现可主动领取每月最高500美元API额度，用于构建应用和智能体；实际额度按套餐或付费席位计算。原帖未列明完整资格细则、额度有效期及叠加规则。",
+        "whyItMatters": "订阅与API使用之间增加了试用入口，可能降低已有付费用户的开发启动成本；领取额度不等于新增现金收入，后续要看额度用完后的留存与付费。",
+        "counterCase": "资格限制、领取率、额度有效期和后续付费不足，都可能限制采用效果。",
+        "affected": [],
+        "author": "OpenAIDevs",
+        "publishedAt": "2026-10-28T23:17:13Z",
+        "url": "https://x.com/OpenAIDevs/status/2115583698074755078",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "openai": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Starting today, eligible ChatGPT Pro and Business subscribers can claim up to $500 per month in API credits to build apps and agents.",
+        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+        "people": []
+      },
+      "tabIds": [
+        "openai"
+      ],
+      "at": "2026-10-29T04:21:29.257Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "ai-2115491259381072269",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "厂商报告Utah四周Claude Code试点的自报节时",
+        "fact": "Anthropic侧账号报告，Utah在10个州机构向34名开发者提供Claude Code；报告称80%在30分钟内搭好工作环境，71%自报在四周试点结束前节省20小时以上。各指标有效回应人数与完整测量方式未披露，未取得Utah本方原帖，也没有随机或对照组依据。",
+        "whyItMatters": "该试点提供组织部署速度和用户感受的线索；样本小、节时自报，不能直接换算成经审计的人力成本节省或推广到所有机构。",
+        "counterCase": "若选择偏差、无回应者、质量复核和后续使用改变结果，自报节时不一定能持续或转化为净效率。",
+        "affected": [],
+        "author": "bcherny",
+        "publishedAt": "2026-10-28T17:09:54Z",
+        "url": "https://x.com/bcherny/status/2115491259381072269",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "anthropic": 3
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Utah gave Claude Code to 34 developers across 10 state agencies.",
+        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-29T04:21:29.257Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "ai-2115489219804352921",
+        "tabIds": [
+          "goog-ai"
+        ],
+        "title": "Gemini 4 Carbon先向部分网络防御者逐步开放",
+        "fact": "Sundar Pichai 介绍Gemini 4 Carbon，并表示本周起向部分可信网络防御者开放，经Fairwind Program逐步扩展合作伙伴，更广可用性仍为“soon”。发布方强调网络安全与长程任务能力，尚不能由榜单直接推定生产环境效果。",
+        "whyItMatters": "受限的先期访问意味着产品能力与全面可用之间仍有阶段差；商业化传导取决于实际开放范围、安全约束及客户采用。",
+        "counterCase": "若开放延期、访问资格严格或真实任务质量未达预期，模型发布不能直接转为广泛付费收入。",
+        "affected": [],
+        "author": "sundarpichai",
+        "publishedAt": "2026-10-28T17:01:48Z",
+        "url": "https://x.com/sundarpichai/status/2115489219804352921",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "goog-ai": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Some trusted cyber defenders will get access starting this week.",
+        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+        "people": [
+          {
+            "name": "Sundar Pichai",
+            "intro": "谷歌及Alphabet CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "goog-ai"
+      ],
+      "at": "2026-10-29T04:21:29.257Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "ai-2115467192276025500",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Claude for Legal新增预制artifact工作流库",
+        "fact": "Claude 宣布法律工作流的预制artifact库，涉及合同审查、监管动态扫描和引文检查；可从示例加入自己的文档与连接器，并在企业内部分享。可见帖未列明地区、订阅等级或完整开放资格。",
+        "whyItMatters": "预制流程有助于缩短从演示到实际团队工作流的配置路径；效率与采用仍取决于文档权限、人工审阅和真实使用。",
+        "counterCase": "如果可用资格有限、内容准确性不足或人工复核成本抵消节时，功能发布不必然形成持续付费。",
+        "affected": [],
+        "author": "claudeai",
+        "publishedAt": "2026-10-28T15:34:16Z",
+        "url": "https://x.com/claudeai/status/2115467192276025500",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "anthropic": 2
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "New in Claude for Legal: a gallery of ready-made artifacts for contract review, regulatory horizon scans, cite checks, and more.",
+        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-29T04:21:29.257Z",
+      "legacy": false
+    },
     {
       "item": {
         "eventKey": "claude-onegov-discount-20261027",
@@ -400,13 +631,13 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "anthropic": 1
+          "anthropic": 4
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "We're expanding our partnership with @USGSA. Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments at 40% off.",
+        "people": [],
         "firstIncludedAt": "2026-10-28T01:14:41.407Z",
         "lastMaterialAt": "2026-10-28T01:14:41.407Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "We're expanding our partnership with @USGSA. Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments at 40% off."
       },
       "tabIds": [
         "anthropic"
@@ -431,13 +662,13 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "goog-ai": 1
+          "goog-ai": 2
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "This is Genie 4, our most realistic and interactive world model yet. 🌐 Explore dynamic environments in real time... We’re exploring early use cases with trusted testers first, before bringing the model to Google AI Ultra subscribers in Project Genie and early access partners in our API and @GoogleAIStudio soon.",
+        "people": [],
         "firstIncludedAt": "2026-10-28T01:14:41.407Z",
         "lastMaterialAt": "2026-10-28T01:14:41.407Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "This is Genie 4, our most realistic and interactive world model yet. 🌐 Explore dynamic environments in real time... We’re exploring early use cases with trusted testers first, before bringing the model to Google AI Ultra subscribers in Project Genie and early access partners in our API and @GoogleAIStudio soon."
       },
       "tabIds": [
         "goog-ai"
@@ -464,11 +695,11 @@
         "weeklyRanks": {
           "ai-others": 1
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Meet AREX-2 (27B), spearheaded by BAAI in collaboration with USTC and RUC (built on Qwen3.8-27B). ... explore the open-source release: 💻Code: ... 🤗Hugging Face: ... 📄Paper:",
+        "people": [],
         "firstIncludedAt": "2026-10-28T01:14:41.407Z",
         "lastMaterialAt": "2026-10-28T01:14:41.407Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Meet AREX-2 (27B), spearheaded by BAAI in collaboration with USTC and RUC (built on Qwen3.8-27B). ... explore the open-source release: 💻Code: ... 🤗Hugging Face: ... 📄Paper:"
       },
       "tabIds": [
         "ai-others"
@@ -529,7 +760,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "goog-ai": 2
+          "goog-ai": 3
         },
         "people": [
           {
@@ -568,7 +799,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "openai": 1
+          "openai": 2
         },
         "people": [],
         "firstIncludedAt": "2026-10-27T00:48:02.764Z",
@@ -602,7 +833,7 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "anthropic": 2
+          "anthropic": 5
         },
         "people": [],
         "firstIncludedAt": "2026-10-27T00:48:02.764Z",
@@ -648,41 +879,6 @@
         "anthropic"
       ],
       "at": "2026-10-27T00:48:02.764Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "kimi-k31-pro-quota-reset-20261025",
-        "tabIds": [
-          "ai-others"
-        ],
-        "title": "Kimi承认限流与额度消耗问题，宣布一次用量重置及参数调整",
-        "fact": "Kimi承认K3.1 Pro订阅计划存在限流和不必要的额度消耗，宣布向所有计划的订阅者提供一次用量重置，原文称恢复相当于25%的月度额度、低于25%的用量归零，并承诺用量条在原文所称PST当日结束前反映。它还称已调整参数，减少不必要的子代理调用和输出长度；具体额度处理及实际到账尚无独立确认。",
-        "whyItMatters": "这显示智能体产品的调用编排与输出长度会影响订阅额度消耗及使用体验。参数调整能否减少实际消耗、同时维持任务质量，仍需后续使用数据验证。",
-        "counterCase": "未取得到账或后台实施的独立证据；原文未列免费、试用及特殊企业合同的适用细节。25%的会计处理含义未完全说明；无更正不等于已履约，不把发帖时刻当执行时刻。",
-        "affected": [
-          "Kimi订阅者",
-          "智能体产品配额与推理成本"
-        ],
-        "author": "Kimi.ai @Kimi_Moonshot",
-        "publishedAt": "2026-10-25T20:14:44Z",
-        "url": "https://x.com/Kimi_Moonshot/status/2114450610724708492",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "ai-others": 3
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-26T00:49:40.898Z",
-        "lastMaterialAt": "2026-10-26T00:49:40.898Z",
-        "eventTimeNote": "公告发布时间已知；具体重置与参数调整执行时刻未知，PST为原文措辞。",
-        "originalText": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
-        "excerpt": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right."
-      },
-      "tabIds": [
-        "ai-others"
-      ],
-      "at": "2026-10-26T00:49:40.898Z",
       "legacy": false
     }
   ]

@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-29-0800",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-29T09:20:38+08:00",
+  "updatedAt": "2026-10-29T12:22:50+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "36ea3d56942badd21ef3f802f9b3aefb403c949a",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-29T09:20:59+08:00",
+      "detail": "origin/master/clean tracked and staged verified; ff-only pull Already up to date; preserved existing untracked files"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-29T12:21:51+08:00",
+      "detail": "本批所需项目契约、知识库与SOP读取完成，未变资料缓存复用。"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-10-29T12:21:51+08:00",
+      "detail": "所有既定对象查询已完成，30单位保存后record；来源缺口不凑数。"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-29T12:21:51+08:00",
+      "detail": "七批关闭后统一合并；旧持久池、往期论文、历史评分与累计重点保留。"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-29T12:21:51+08:00",
+      "detail": "遵照用户明确要求，不运行npm test/check/build、本地预览或额外回归；来源核验及发布器数据契约照常完成。"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "7对象查询完成，1重点0洞见；两轮发现、六主题包与证据缺口已保存。"
+    },
+    "people": {
+      "status": "ok",
+      "detail": "5对象完成，新增3规则8热度；沿用有效旧卡与周榜。"
+    },
+    "tickers": {
+      "status": "ok",
+      "detail": "7事实对象及7独立热点榜完成，新增1事实35热点；每股5帖，原文匹配及漏排已纠正。"
+    },
+    "ai": {
+      "status": "ok",
+      "detail": "4对象完成，新增5条，Carbon同运行证据缓存复用，无新候选对象跳过追源及反证。"
+    },
+    "earnings": {
+      "status": "partial",
+      "detail": "14家公司回看，12评分、KOF/SAN口径或原始附件不足标unknown；pending0，历史T与自主理由保留。"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "到期FOMC官方日期未变，未到期PCE不查；开始未即时落盘，不计算精确耗时。"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:20:59+08:00",
+      "endedAt": "2026-10-29T09:26:33+08:00",
+      "durationMs": 334000,
+      "detail": "1 focus/0 insights;两轮六包真实完成；已先保存再record7对象"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:20:59+08:00",
+      "endedAt": "2026-10-29T09:23:13+08:00",
+      "durationMs": 134000,
+      "detail": "两轮独立发现完成；六包均实际检索；原始返回已保存"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:23:13+08:00",
+      "endedAt": "2026-10-29T09:24:34+08:00",
+      "durationMs": 81000,
+      "detail": "Microsoft官方仅支持92.3B/Cloud63.9B/Azure48%；Fed数值、NERC与Goldman数字未获原始X支持"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:24:35+08:00",
+      "endedAt": "2026-10-29T09:26:33+08:00",
+      "durationMs": 118000,
+      "detail": null
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:26:33+08:00",
+      "endedAt": "2026-10-29T09:33:15+08:00",
+      "durationMs": 402000,
+      "detail": "3 rule+8 engagement; 5对象保存后record，Jensen/机构no-result"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:26:33+08:00",
+      "endedAt": "2026-10-29T09:28:44+08:00",
+      "durationMs": 131000,
+      "detail": "5对象完成初查；初答漏全部URL且热度顺序与数字不符，需定向补全"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:28:45+08:00",
+      "endedAt": "2026-10-29T09:33:15+08:00",
+      "durationMs": 270000,
+      "detail": "真实URL补全；归因核对与反证交叠；排除2个无法归因同步帖"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:29:59+08:00",
+      "endedAt": "2026-10-29T09:33:15+08:00",
+      "durationMs": 196000,
+      "detail": null
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:33:15+08:00",
+      "endedAt": "2026-10-29T11:48:04+08:00",
+      "durationMs": 8089000,
+      "detail": "1新事实+35热点，14对象先保存再record；保留全部旧证据与周榜交统一合并"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:33:15+08:00",
+      "endedAt": "2026-10-29T09:35:31+08:00",
+      "durationMs": 136000,
+      "detail": "七事实对象发现完成；NVDA/INTC/MU旧事件复用，不重研；TSM无原始新线索"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:35:31+08:00",
+      "endedAt": "2026-10-29T09:36:47+08:00",
+      "durationMs": 76000,
+      "detail": "GOOG仅Sundar同比/吞吐字段原X支持；VRT数字与TPU外售条款只有二传"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:36:47+08:00",
+      "endedAt": "2026-10-29T09:37:43+08:00",
+      "durationMs": 56000,
+      "detail": "VRT/TPU条款独立反证完成，无原证保持待核；GOOG本人同源复用人物反证"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-29T09:37:43+08:00",
+      "endedAt": "2026-10-29T11:48:03+08:00",
+      "durationMs": 7820000,
+      "detail": "七独立热点会话完成35条；额外过滤/误匹配/秒级时间纠正与跨对象同帖缓存留痕"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-29T11:48:04+08:00",
+      "endedAt": "2026-10-29T11:55:19+08:00",
+      "durationMs": 435000,
+      "detail": "5新卡已保存；4对象record；不将旧草案当新增"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-29T11:48:04+08:00",
+      "endedAt": "2026-10-29T11:51:16+08:00",
+      "durationMs": 192000,
+      "detail": "四对象实际发现完成；OpenAI额度/ClaudeLegal/Utah试点新候选，Carbon复用同轮原始证据，旧中国草案不重研"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-29T11:51:16+08:00",
+      "endedAt": "2026-10-29T11:53:22+08:00",
+      "durationMs": 126000,
+      "detail": "四新原帖核验含token修复新线索；Carbon同帖缓存复用；Utah百分比分母不能据34人规模补造"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-29T11:53:22+08:00",
+      "endedAt": "2026-10-29T11:55:19+08:00",
+      "durationMs": 117000,
+      "detail": "四条新原帖逐项独立查反证；Utah有效回应N未知；修复非全量完成；Carbon缓存复用"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-29T11:55:19+08:00",
+      "endedAt": "2026-10-29T12:11:37+08:00",
+      "durationMs": 978000,
+      "detail": "Nature2/Science3载荷落盘，Nature缺1；basics/counterintuitive false；未提前发布"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-29T11:55:19+08:00",
+      "endedAt": "2026-10-29T12:02:07+08:00",
+      "durationMs": 408000,
+      "detail": "Grok两轮发现2 Nature与3 Science未重复候选；Nature第三候选实为已收DOI，排除不凑数"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-29T11:59:37+08:00",
+      "endedAt": "2026-10-29T12:11:37+08:00",
+      "durationMs": 720000,
+      "detail": "5篇元数据/公开原文范围核对；Source部分与更正查询交叠；Crossref两篇429留痕，未采用未核统计量"
+    },
+    {
+      "page": "learning",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-29T12:06:49+08:00",
+      "endedAt": "2026-10-29T12:11:37+08:00",
+      "durationMs": 288000,
+      "detail": "5 DOI限定更正查询及Rabb/DRM独立比较已核；无正式更正检得不代表穷尽"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "running",
+      "startedAt": "2026-10-29T12:11:38+08:00",
+      "endedAt": null,
+      "durationMs": null,
+      "detail": null
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-29T12:16:26+08:00",
+      "endedAt": "2026-10-29T12:21:23+08:00",
+      "durationMs": 297000,
+      "detail": null
+    }
+  ]
+}

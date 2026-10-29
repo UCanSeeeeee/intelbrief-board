@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28T12:41:27.531Z",
-  "asOf": "2026-10-28T20:30:00+08:00",
+  "updatedAt": "2026-10-29T04:21:29.275Z",
+  "asOf": "2026-10-29T08:00:00+08:00",
   "events": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
@@ -30197,7 +30197,7 @@
       "rank": 0,
       "lastEdition": "2026-10-28-0800",
       "lastCheckedAt": "2026-10-28T01:15:11.086Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-28T01:15:11.086Z",
       "readingDate": "2026-10-28",
       "retainUntil": "2026-10-29T00:00:00.000Z",
@@ -30292,12 +30292,100 @@
       "rank": 0,
       "lastEdition": "2026-10-28-0800",
       "lastCheckedAt": "2026-10-28T01:15:11.086Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-28T01:15:11.086Z",
       "readingDate": "2026-10-28",
       "retainUntil": "2026-10-29T00:00:00.000Z",
       "lastMaterialAt": "2026-10-28T01:15:11.086Z",
       "lastMaterialEdition": "2026-10-28-0800",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "microsoft-fy27q1-cloud-20261028",
+      "firstSeenAt": "2026-10-29T04:21:29.275Z",
+      "firstEdition": "2026-10-29-0800",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "microsoft-fy27q1-cloud-20261028",
+        "title": "Microsoft 季度营收923亿美元，Azure收入增长48%",
+        "fact": "Microsoft 公布季度营收923亿美元，Microsoft Cloud营收639亿美元，Azure收入增长48%。官方帖未列出汇率口径，也没有拆出独立AI收入或现金回款。",
+        "impact": "云业务扩张为算力需求提供了经营层面的支持，但总云收入不等于AI单项收入，更不能直接证明资本开支已由终端客户现金流覆盖。接下来需比较云增长、折旧、采购投入与回款，判断上游订单能持续多久。",
+        "counterCase": "若后续披露显示增长主要来自汇率或非AI业务，或资本投入与折旧增幅高于经营回款，本轮数字对AI需求与投资回报的支持会减弱。",
+        "selectionReason": "取得公司原始X支持的最小数字；剔除EPS/capex/FCF二传数字。",
+        "attentionEvidence": "公司季度结果与Reuters云收入报道及多条财报讨论；仅为样本内主观重要性比较。",
+        "credibilityReason": "公司自披露且有原帖，但执行器仅取得Grok转述，不是独立审计或原帖直读。",
+        "change": "新增",
+        "direction": "双向",
+        "horizon": "未来两周跟踪财报解释与云业务回款；资本回报需更长观察",
+        "affected": [
+          "MSFT",
+          "AI算力",
+          "云服务"
+        ],
+        "eventTime": null,
+        "eventTimeNote": "季度结果于窗口内公布，经营数据为季度汇总，未以发帖时间冒充业务发生时刻。",
+        "sources": [
+          {
+            "username": "Microsoft",
+            "postId": "2115535611801248094",
+            "url": "https://x.com/Microsoft/status/2115535611801248094",
+            "publishedAt": "2026-10-28T20:06:09Z",
+            "checkedAt": "2026-10-29T01:26:32.988255+00:00",
+            "excerpt": "$92.3 billion in revenue. $63.9 billion in Microsoft Cloud revenue. 48% Azure revenue growth.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Expert读取原帖后返回，执行器未独立直读X；独立更正/口径反证未检得，不代表穷尽或独立AI回款确认。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 49,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 92,
+              "claimScore": 53,
+              "breakdown": {
+                "directness": 30,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 6,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "账号在人工来源表中登记为机构一手来源",
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "collectionUnit": "news:market-focus",
+        "people": [],
+        "credibility": {
+          "score": 49,
+          "label": "规则初评，未校准",
+          "reason": "公司自披露且有原帖，但执行器仅取得Grok转述，不是独立审计或原帖直读。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-10-29-0800",
+      "lastCheckedAt": "2026-10-29T04:21:29.275Z",
+      "state": "active",
+      "retentionAnchor": "2026-10-29T04:21:29.275Z",
+      "readingDate": "2026-10-29",
+      "retainUntil": "2026-10-30T00:00:00.000Z",
+      "lastMaterialAt": "2026-10-29T04:21:29.275Z",
+      "lastMaterialEdition": "2026-10-29-0800",
       "lateDiscovery": false
     }
   ],
@@ -30349,35 +30437,108 @@
     "2026-10-27-1500:2026-10-27T07:01:22.473Z",
     "2026-10-27-2030:2026-10-27T13:35:44.892Z",
     "2026-10-28-0800:2026-10-28T01:15:11.086Z",
-    "2026-10-28-2030:2026-10-28T12:41:27.531Z"
+    "2026-10-28-2030:2026-10-28T12:41:27.531Z",
+    "2026-10-29-0800:2026-10-29T04:21:29.275Z"
   ],
-  "warnings": [
-    "本期采集失败，保留上次待阅内容；不是本期新增或已重新核验。"
-  ],
-  "lastStatus": "failed",
+  "warnings": [],
+  "lastStatus": "partial",
   "selected": {
     "focus": [
-      "skhynix-q326-lta-20261027"
+      "microsoft-fy27q1-cloud-20261028"
     ],
-    "insights": [
-      "broadcom-anthropic-bonds-plan-20261027"
-    ]
+    "insights": []
   },
   "migrationNote": "2026-10-12仅迁移现存真实归档，未重新采集或核验。更早已清理归档未恢复，待Grok按缺口补查。",
   "policy": "beijing-batches-v1",
   "period": {
     "policy": "beijing-batches-v1",
     "timezone": "Asia/Shanghai",
-    "date": "2026-10-28",
+    "date": "2026-10-29",
     "weekendCarry": false,
-    "retainUntil": "2026-10-29T00:00:00.000Z"
+    "retainUntil": "2026-10-30T00:00:00.000Z"
   },
-  "latestEditionId": "2026-10-28-2030",
-  "lastUsableCutoff": "2026-10-28T08:00:00+08:00",
+  "latestEditionId": "2026-10-29-0800",
+  "lastUsableCutoff": "2026-10-29T08:00:00+08:00",
   "coverage": {
-    "status": "failed"
+    "status": "partial"
   },
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "microsoft-fy27q1-cloud-20261028",
+        "title": "Microsoft 季度营收923亿美元，Azure收入增长48%",
+        "fact": "Microsoft 公布季度营收923亿美元，Microsoft Cloud营收639亿美元，Azure收入增长48%。官方帖未列出汇率口径，也没有拆出独立AI收入或现金回款。",
+        "impact": "云业务扩张为算力需求提供了经营层面的支持，但总云收入不等于AI单项收入，更不能直接证明资本开支已由终端客户现金流覆盖。接下来需比较云增长、折旧、采购投入与回款，判断上游订单能持续多久。",
+        "counterCase": "若后续披露显示增长主要来自汇率或非AI业务，或资本投入与折旧增幅高于经营回款，本轮数字对AI需求与投资回报的支持会减弱。",
+        "selectionReason": "取得公司原始X支持的最小数字；剔除EPS/capex/FCF二传数字。",
+        "attentionEvidence": "公司季度结果与Reuters云收入报道及多条财报讨论；仅为样本内主观重要性比较。",
+        "credibilityReason": "公司自披露且有原帖，但执行器仅取得Grok转述，不是独立审计或原帖直读。",
+        "change": "新增",
+        "direction": "双向",
+        "horizon": "未来两周跟踪财报解释与云业务回款；资本回报需更长观察",
+        "affected": [
+          "MSFT",
+          "AI算力",
+          "云服务"
+        ],
+        "eventTime": null,
+        "eventTimeNote": "季度结果于窗口内公布，经营数据为季度汇总，未以发帖时间冒充业务发生时刻。",
+        "sources": [
+          {
+            "username": "Microsoft",
+            "postId": "2115535611801248094",
+            "url": "https://x.com/Microsoft/status/2115535611801248094",
+            "publishedAt": "2026-10-28T20:06:09Z",
+            "checkedAt": "2026-10-29T01:26:32.988255+00:00",
+            "excerpt": "$92.3 billion in revenue. $63.9 billion in Microsoft Cloud revenue. 48% Azure revenue growth.",
+            "verification": "collector-report",
+            "verificationNote": "Grok Expert读取原帖后返回，执行器未独立直读X；独立更正/口径反证未检得，不代表穷尽或独立AI回款确认。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 49,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 92,
+              "claimScore": 53,
+              "breakdown": {
+                "directness": 30,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 6,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "账号在人工来源表中登记为机构一手来源",
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "collectionUnit": "news:market-focus",
+        "people": [],
+        "credibility": {
+          "score": 49,
+          "label": "规则初评，未校准",
+          "reason": "公司自披露且有原帖，但执行器仅取得Grok转述，不是独立审计或原帖直读。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-10-29T04:21:29.275Z",
+      "group": "focus",
+      "history": []
+    },
     {
       "item": {
         "eventKey": "skhynix-q326-lta-20261027",
@@ -30880,127 +31041,6 @@
       },
       "at": "2026-10-27T00:48:02.764Z",
       "group": "insights",
-      "history": []
-    },
-    {
-      "item": {
-        "eventKey": "spacex-musk-40bn-gpu-debt-20261025",
-        "collectionUnit": "news:capital-cost",
-        "title": "Elon Musk称SpaceX完成400亿美元GPU债务融资，并补充到货与债务性质",
-        "fact": "Elon Musk称SpaceX已完成400亿美元用于GPU的债务融资，并将融资能力归因于投资级信用及Starlink、发射业务收入。他随后补充，这主要是callable debt，GPU将在Q1与Q2到达，对本季度不是重大因素；原帖未注明这两个季度的年份，也未披露已支用比例、GPU数量或完整条款。",
-        "impact": "这为算力采购提供一项当事人披露的融资线索，也提示债权人可能区分独立经营收入与依赖AI项目的现金流。对GPU供应商的实际收入仍要经过额度支用、订单与交付；不能把400亿美元融资规模直接计成当期芯片销售。",
-        "direction": "双向",
-        "horizon": "后续贷款条款、订单与交付披露",
-        "affected": [
-          "AI算力供应链",
-          "GPU供应商",
-          "新云服务商融资"
-        ],
-        "counterCase": "交易金额与完整条款尚无银行或正式文件独立确认；callable的具体法律与支用含义不作推定。Musk关于200多家新云公司将大量退出的说法是预测；反向检索返回其他公司融资的二手线索，亦未独立核实，不能推断全行业融资关闭。",
-        "selectionReason": "新候选追到当事人原帖及后续限定；相比预告、周报和缺原始数字的二传，更直接连接GPU需求与融资约束。",
-        "credibilityReason": "当事人原帖经Grok读取；仅证明Musk作出该陈述，交易与行业预测仍有独立核验缺口。",
-        "attentionEvidence": "涉及400亿美元算力融资与新云公司信用分化，可能传导到GPU采购及资本成本；不宣称全X热度排名。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "债务完成的具体时刻未披露；2026-10-25 19:11:18 UTC为陈述发布时间。",
-        "futureEventNote": "Q1/Q2为原帖表述，年份未知；不是已交付或收入确认时间。",
-        "sources": [
-          {
-            "url": "https://x.com/elonmusk/status/2114434646914068862",
-            "postId": "2114434646914068862",
-            "username": "elonmusk",
-            "publishedAt": "2026-10-25T19:11:18Z",
-            "checkedAt": "2026-10-26T00:12:29.687653+00:00",
-            "excerpt": "SpaceX closed $40B of debt for GPUs, but we’re investment grade and have Starlink & launch revenue.",
-            "verification": "collector-report",
-            "verificationNote": "Grok网页版Expert实际读取当事人X原帖；执行器未独立直读X，未取得贷款文件或银行确认。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 49,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 82,
-              "claimScore": 42,
-              "breakdown": {
-                "directness": 25,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 0,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [
-                "账号在人工来源表中登记为具名当事人"
-              ],
-              "warnings": [
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          },
-          {
-            "url": "https://x.com/elonmusk/status/2114444535036321840",
-            "postId": "2114444535036321840",
-            "username": "elonmusk",
-            "publishedAt": "2026-10-25T19:50:36Z",
-            "checkedAt": "2026-10-26T00:12:29.687653+00:00",
-            "excerpt": "This is primarily callable debt for GPU purchases that will arrive in Q1 and Q2. Not a major factor this quarter.",
-            "verification": "collector-report",
-            "verificationNote": "Grok网页版Expert实际读取当事人X原帖；执行器未独立直读X，未取得贷款文件或银行确认。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 49,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 82,
-              "claimScore": 42,
-              "breakdown": {
-                "directness": 25,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 0,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [
-                "账号在人工来源表中登记为具名当事人"
-              ],
-              "warnings": [
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          }
-        ],
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ],
-        "credibility": {
-          "score": 49,
-          "label": "规则初评，未校准",
-          "reason": "当事人原帖经Grok读取；仅证明Musk作出该陈述，交易与行业预测仍有独立核验缺口。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        }
-      },
-      "at": "2026-10-26T00:49:40.898Z",
-      "group": "focus",
       "history": []
     }
   ]
