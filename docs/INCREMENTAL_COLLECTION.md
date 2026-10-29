@@ -31,7 +31,7 @@
 1. 检查分支、远端和改动，首次写入前`git pull --ff-only origin master`。只读必要且发生变化的规范，不每轮把整库重新读一遍。
 2. 冻结本轮北京时间截止，运行`npm run collection:plan -- <CUTOFF>`。`scheduled=false`立即结束，不造期次。手动任务用`npm run collection:progress -- plan <CUTOFF>`取得同一套进度；不绕开周末降频自动多跑。
 3. 逐侧边栏执行，按`collectionUnits`的每个对象精确时间窗形成公开查询。`needsQuery=false`不搜。新闻保留市场焦点与多学科两个独立发现阶段，六包按各自进度，不把首轮剩余候选冒充第二轮。
-4. 复用已有原帖与事件证据；只有新候选、有实质进展或明确更正线索才追源、独立查反证。无新候选时后两阶段写“无需执行”及原因，不启动空查询。不得为提速降低来源门槛，仍只走Grok网页、额度可用时的Grok Bot备用。
+4. 复用已有原帖与事件证据；只有新候选、有实质进展或明确更正线索才追源、独立查反证。无新候选时后两阶段写“无需执行”及原因，不启动空查询。不得为提速降低来源门槛：常规查询和首次纠错只走Grok网页Expert；网页一次针对性补查后仍有明确缺口，才可在额度可用时用Grok Bot定点补查。Bot不得接管整批或重复合格结果，每次运行最多3个独立问题，剩余缺口留待后续。
 5. 每批结束先保存`data/collection-runs/<RUN>.json`：顶层`id/cutoff`，`batches`内该页的`output`保存完整待发布结果（新闻含focus/insights，人物/个股/AI含items，确实无新增时可为空数组）；顶层`collectionResults`逐对象保存下列报告。该审计不是私有聊天、凭证或整段浏览器历史。
 
 ```json
