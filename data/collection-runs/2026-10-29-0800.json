@@ -8604,12 +8604,35 @@
       "retrieval": {
         "status": "ok"
       }
+    },
+    "vixFinalRefresh": {
+      "at": "2026-10-29T04:24:34.234945+00:00",
+      "trigger": "首轮线上只读/api/vix已给10/28收盘16.91，而初始静态快照17.52为10/27，按新官方证据仅重取VIX，不重采X、不推进新闻窗口。",
+      "status": "ok",
+      "snapshot": {
+        "schemaVersion": 1,
+        "id": "cboe-vix",
+        "value": 16.91,
+        "asOfDate": "2026-10-28",
+        "quoteKind": "close",
+        "previousClose": 17.52,
+        "fetchedAt": "2026-10-29T04:24:11.018Z",
+        "source": {
+          "name": "Cboe",
+          "url": "https://www.cboe.com/tradable-products/vix",
+          "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+        },
+        "retrieval": {
+          "status": "ok"
+        }
+      },
+      "timing": "命令实际执行且成功；未即时落盘开始秒，不声称精确耗时。"
     }
   },
   "snapshotNote": "新闻批独立非X固定来源抓取；CNN35.9(2026-10-28T23:59:59Z)，VIX17.52(10/27美东收盘)，不冒称10/28收盘，不推进新闻窗口。",
   "completedAt": "2026-10-29T04:21:23.344622+00:00",
   "publication": {
-    "status": "local-artifacts-ready",
+    "status": "initial-deployment-verified-snapshot-refresh-ready",
     "preparedAt": "2026-10-29T04:21:29.324Z",
     "localChecks": "未运行test/check/build/本地预览/额外回归；仅发布器数据契约核对",
     "publicFiles": [
@@ -8644,6 +8667,203 @@
       "dataOnlyContract": "调用既有发布器完成数据契约；未运行本地验证命令。",
       "earningsReviewedBeforePublish": true,
       "opsCliCorrection": "一次macro page日志调用误用--id返回undefined；后以--period正确记录unchanged，未影响数据。"
-    }
+    },
+    "contentCommit": "20904fbdd58f60b2a4ebf8dc01de0a549f1c30d0",
+    "initialDeployment": {
+      "status": "success",
+      "id": "130af14b-cfff-4eff-83a7-160c02f4dc2e",
+      "completedAt": "2026-10-29T04:23:18Z"
+    },
+    "initialVerification": {
+      "checkedAt": "2026-10-29T04:23:33.764322+00:00",
+      "commit": "20904fbdd58f60b2a4ebf8dc01de0a549f1c30d0",
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-29-0800.json",
+          "checkedAt": "2026-10-29T04:23:30.007826+00:00",
+          "httpStatus": 200,
+          "bytes": 45626,
+          "sha256": "0b4bfc762acd60f2b92d7ef64937c382c7f02443a218af09f0f79dccbb7341d3",
+          "localSha256": "0b4bfc762acd60f2b92d7ef64937c382c7f02443a218af09f0f79dccbb7341d3",
+          "match": true
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "checkedAt": "2026-10-29T04:23:30.009370+00:00",
+          "httpStatus": 200,
+          "bytes": 1025,
+          "sha256": "3c8086114cc8c5f71fffcd1d159546bd638c5ebba46b340e188060c858dd5ac3",
+          "localSha256": "3c8086114cc8c5f71fffcd1d159546bd638c5ebba46b340e188060c858dd5ac3",
+          "match": true
+        },
+        {
+          "path": "data/reading-board.json",
+          "checkedAt": "2026-10-29T04:23:30.009717+00:00",
+          "httpStatus": 200,
+          "bytes": 1571363,
+          "sha256": "7e3307cfc7a135999939d2af33040177ffb37c975975aacaf5dfc780d6ff15e6",
+          "localSha256": "7e3307cfc7a135999939d2af33040177ffb37c975975aacaf5dfc780d6ff15e6",
+          "match": true
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "checkedAt": "2026-10-29T04:23:30.012486+00:00",
+          "httpStatus": 200,
+          "bytes": 121557,
+          "sha256": "dcf0ebc415e2506c2a01f52da9a271c9922319f7a5e62a6eb0fb082e2ff2ced3",
+          "localSha256": "dcf0ebc415e2506c2a01f52da9a271c9922319f7a5e62a6eb0fb082e2ff2ced3",
+          "match": true
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "checkedAt": "2026-10-29T04:23:31.339597+00:00",
+          "httpStatus": 200,
+          "bytes": 567698,
+          "sha256": "d2a748298a0c1ff1f076dbd16e9ee3da3e1cde412c7e690841c90ce4fbbbb5fb",
+          "localSha256": "d2a748298a0c1ff1f076dbd16e9ee3da3e1cde412c7e690841c90ce4fbbbb5fb",
+          "match": true
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "checkedAt": "2026-10-29T04:23:31.411542+00:00",
+          "httpStatus": 200,
+          "bytes": 49245,
+          "sha256": "6f67fdba5c0212e624771ef82fca4a230bf979eeae14bcf8fc07aede2d99e3d6",
+          "localSha256": "6f67fdba5c0212e624771ef82fca4a230bf979eeae14bcf8fc07aede2d99e3d6",
+          "match": true
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "checkedAt": "2026-10-29T04:23:31.576012+00:00",
+          "httpStatus": 200,
+          "bytes": 159772,
+          "sha256": "8db6fdad447ab55db14d9caa57b3dea1b8a06419934cddee371872cefc89b524",
+          "localSha256": "8db6fdad447ab55db14d9caa57b3dea1b8a06419934cddee371872cefc89b524",
+          "match": true
+        },
+        {
+          "path": "data/macro-events.json",
+          "checkedAt": "2026-10-29T04:23:31.893789+00:00",
+          "httpStatus": 200,
+          "bytes": 57019,
+          "sha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044",
+          "localSha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044",
+          "match": true
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "checkedAt": "2026-10-29T04:23:32.307517+00:00",
+          "httpStatus": 200,
+          "bytes": 631,
+          "sha256": "9862aa2bdfe304d817dae0cf91873e64e31b8dd780f1f4dc16efc8ecbd8f21e6",
+          "localSha256": "9862aa2bdfe304d817dae0cf91873e64e31b8dd780f1f4dc16efc8ecbd8f21e6",
+          "match": true
+        },
+        {
+          "path": "data/market-volatility.json",
+          "checkedAt": "2026-10-29T04:23:32.429895+00:00",
+          "httpStatus": 200,
+          "bytes": 414,
+          "sha256": "ba41592423bf95363efb95f81221823ca6f7138c7364ba067326cae8a9628a90",
+          "localSha256": "ba41592423bf95363efb95f81221823ca6f7138c7364ba067326cae8a9628a90",
+          "match": true
+        },
+        {
+          "path": "data/learning.json",
+          "checkedAt": "2026-10-29T04:23:32.512945+00:00",
+          "httpStatus": 200,
+          "bytes": 52331,
+          "sha256": "51a93e73cf26919deea8b731fff414a7ae2ce76005a5f7b332e09c8a62705038",
+          "localSha256": "51a93e73cf26919deea8b731fff414a7ae2ce76005a5f7b332e09c8a62705038",
+          "match": true
+        },
+        {
+          "path": "data/journal-learning.json",
+          "checkedAt": "2026-10-29T04:23:32.667996+00:00",
+          "httpStatus": 200,
+          "bytes": 131120,
+          "sha256": "8859d6ad8573b35f890f57fb608d9101b7fa261c43a4b724aae7c337738f25ca",
+          "localSha256": "8859d6ad8573b35f890f57fb608d9101b7fa261c43a4b724aae7c337738f25ca",
+          "match": true
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "checkedAt": "2026-10-29T04:23:33.060873+00:00",
+          "httpStatus": 200,
+          "bytes": 98057,
+          "sha256": "31b2a3c971c5e4fdccaf58e4abcf65cea1e0b48a9c7a222885b0b7ac25b54611",
+          "localSha256": "31b2a3c971c5e4fdccaf58e4abcf65cea1e0b48a9c7a222885b0b7ac25b54611",
+          "match": true
+        },
+        {
+          "path": "config/learning.json",
+          "checkedAt": "2026-10-29T04:23:33.222661+00:00",
+          "httpStatus": 200,
+          "bytes": 4197,
+          "sha256": "9d6c811370c7474f30dc47de330eea099ed8b703e61e2ee0a06e7781253d15a2",
+          "localSha256": "9d6c811370c7474f30dc47de330eea099ed8b703e61e2ee0a06e7781253d15a2",
+          "match": true
+        }
+      ],
+      "apiVix": {
+        "path": "api/vix",
+        "checkedAt": "2026-10-29T04:23:33.764333+00:00",
+        "httpStatus": 200,
+        "body": {
+          "schemaVersion": 1,
+          "id": "cboe-vix",
+          "value": 16.91,
+          "asOfDate": "2026-10-28",
+          "quoteKind": "close",
+          "previousClose": 17.52,
+          "fetchedAt": "2026-10-29T04:23:34.359Z",
+          "source": {
+            "name": "Cboe",
+            "url": "https://www.cboe.com/tradable-products/vix",
+            "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          },
+          "retrieval": {
+            "status": "ok"
+          }
+        }
+      },
+      "apiSentiment": {
+        "path": "api/market-sentiment",
+        "checkedAt": "2026-10-29T04:23:34.440649+00:00",
+        "httpStatus": 200,
+        "body": {
+          "schemaVersion": 1,
+          "id": "cnn-fear-greed",
+          "market": "us-equities",
+          "score": 35.8571428571429,
+          "rating": "fear",
+          "timestamp": "2026-10-28T23:59:59+00:00",
+          "fetchedAt": "2026-10-29T04:23:36.090Z",
+          "previous": {
+            "close": 33.6,
+            "week": 30.25714285714286,
+            "month": 32.4,
+            "year": 39.34285714285714
+          },
+          "source": {
+            "name": "CNN Fear & Greed Index",
+            "url": "https://www.cnn.com/markets/fear-and-greed",
+            "method": "mirror",
+            "dataUrl": "https://raw.githubusercontent.com/whit3rabbit/fear-greed-data/main/json/cnn_output.json",
+            "mirrorUrl": "https://github.com/whit3rabbit/fear-greed-data"
+          },
+          "retrieval": {
+            "status": "ok",
+            "errors": [
+              {
+                "source": "cnn",
+                "message": "HTTP 418"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "remoteMasterVerified": true
   }
 }
