@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-29T12:56:17.891Z",
+  "updatedAt": "2026-10-30T13:25:12.778Z",
   "editions": [
     {
       "date": "2026-10-19",
@@ -1963,6 +1963,279 @@
           "基础概念用自拟离散联合分布推导，原研究仅支持群体均值不能代替个体内测量一致；不声称新读全文。"
         ],
         "checkedAt": "2026-10-29T12:56:17.418413+00:00"
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "items": [
+        {
+          "id": "knowledge-task-brain-activation-not-individual-capacity-20261030",
+          "knowledgeKey": "task-brain-activation-not-individual-capacity",
+          "topic": "统计",
+          "title": "脑区活跃，不一定能辨谁更会调节情绪",
+          "intuition": "一种任务让某脑区更活跃，就能用它判断谁更擅长该能力。",
+          "fact": "40组健康成人fMRI数据的预注册分析中，三种情绪重评指标未形成共同能力核心，前额叶激活也未按预期反映个人能力。",
+          "explanation": "任务是否引发活动，与人与人之间能否准确排序，是不同问题。",
+          "boundary": "各检验样本不同；研究未否定情绪调节有效，也不等于临床人群结果。",
+          "people": [],
+          "sources": [
+            {
+              "label": "原刊正文、方法与图注",
+              "publisher": "Nature / 原始或公开辅助研究",
+              "url": "https://www.nature.com/articles/s41586-026-11203-1",
+              "publishedDate": "2026-10-28",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            }
+          ],
+          "evidenceReuse": {
+            "reviewId": "nature-emotion-regulation-20261030",
+            "doi": "10.1038/s41586-026-11203-1",
+            "originalCheckedAt": "2026-10-30T00:18:19.837380+00:00",
+            "accessNote": "正常浏览器可读开放正文；核对摘要、主要结果、讨论、样本纳入与扩展图注。补充代码/数据未下载重算；不是临床治疗试验。",
+            "correctionCheck": {
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00",
+              "status": "bounded-search-completed",
+              "note": "已查DOI正式更正/撤稿及相关复现线索；Crossref作者日期核对成功，update-to为空不等于穷尽更正。主要争议进入边界；未重跑原始数据。"
+            },
+            "note": "复用已核验记录及更正/复现边界，未重新检索或声称新读全文。"
+          }
+        },
+        {
+          "id": "knowledge-inflammation-memory-can-precede-obesity-in-mice-20261030",
+          "knowledgeKey": "inflammation-memory-can-precede-obesity-in-mice",
+          "topic": "健康",
+          "title": "局部炎症记忆，不一定要先形成肥胖",
+          "intuition": "饮食只有先让身体变胖，才会改变之后的炎症反应。",
+          "fact": "小鼠诱导性皮肤炎症研究中，发病前后短暂高脂饮食就可增强同处组织之后的复发反应；不需要先形成肥胖。",
+          "explanation": "实验提示饮食与发病时点可能共同改变局部免疫状态；单独高脂未产生同样持久效应。",
+          "boundary": "这是特定小鼠模型和配方，不能推成人类吃油即复发，也不据此改变治疗。",
+          "people": [],
+          "sources": [
+            {
+              "label": "原刊正文、方法与图1/4及扩展图9",
+              "publisher": "Nature / 原始或公开辅助研究",
+              "url": "https://www.nature.com/articles/s41586-026-11181-4",
+              "publishedDate": "2026-10-28",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            }
+          ],
+          "evidenceReuse": {
+            "reviewId": "nature-diet-memory-20261030",
+            "doi": "10.1038/s41586-026-11181-4",
+            "originalCheckedAt": "2026-10-30T00:18:19.837380+00:00",
+            "accessNote": "正常浏览器可读开放正文；核对主要实验、讨论与样本图注。未重算细胞组学或补充原数据。",
+            "correctionCheck": {
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00",
+              "status": "bounded-search-completed",
+              "note": "已查DOI正式更正/撤稿及相关复现线索；Crossref作者日期核对成功，update-to为空不等于穷尽更正。主要争议进入边界；未重跑原始数据。"
+            },
+            "note": "复用已核验记录及更正/复现边界，未重新检索或声称新读全文。"
+          }
+        },
+        {
+          "id": "knowledge-nonmedical-cash-policy-can-link-to-mortality-20261030",
+          "knowledgeKey": "nonmedical-cash-policy-can-link-to-mortality",
+          "topic": "生活",
+          "title": "非医疗政策，也可能与健康结果相连",
+          "intuition": "减少死亡风险，只能从医院和药物里寻找解释。",
+          "fact": "37个中低收入国家的政策比较中，大规模现金转移与成年女性较低死亡风险相关；主模型的儿童关联对估计方式更敏感。",
+          "explanation": "生活资源可能改变健康处境，但研究并未随机分配国家政策，也未单独识别每条机制。",
+          "boundary": "同期改革和残余混杂仍可能存在；关联不能保证每个国家或受助者获益。",
+          "people": [],
+          "sources": [
+            {
+              "label": "正刊摘要与发表信息",
+              "publisher": "Nature / 原始或公开辅助研究",
+              "url": "https://www.nature.com/articles/s41586-023-06116-2",
+              "publishedDate": "2023-05-31",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "合法公开作者稿、方法与敏感性分析",
+              "publisher": "Nature / 原始或公开辅助研究",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10231298/",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "Crossmark当前记录",
+              "publisher": "Nature / 原始或公开辅助研究",
+              "url": "https://crossmark.crossref.org/dialog/?doi=10.1038%2Fs41586-023-06116-2",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            }
+          ],
+          "evidenceReuse": {
+            "reviewId": "nature-cash-mortality-20261030",
+            "doi": "10.1038/s41586-023-06116-2",
+            "originalCheckedAt": "2026-10-30T00:18:19.837380+00:00",
+            "accessNote": "正刊正文付费未越过；核对公开摘要、作者稿主要结果/方法/敏感性段落及公开图注。跨国公开数据未重算。往期精选。",
+            "correctionCheck": {
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00",
+              "status": "bounded-search-completed",
+              "note": "已查DOI正式更正/撤稿及相关复现线索；Crossref作者日期核对成功，update-to为空不等于穷尽更正。主要争议进入边界；未重跑原始数据。"
+            },
+            "note": "复用已核验记录及更正/复现边界，未重新检索或声称新读全文。"
+          }
+        },
+        {
+          "id": "knowledge-future-self-stability-is-not-universal-law-20261030",
+          "knowledgeKey": "future-self-stability-is-not-universal-law",
+          "topic": "行为认知",
+          "title": "觉得未来变化小，并非人人如此",
+          "intuition": "人总会低估未来的自己会改变多少，这是已经确定的普遍规律。",
+          "fact": "原研究发现回顾十年变化大于年轻十岁人群的未来预测；后续生活满意度纵向研究却发现多数人未必低估，重析解释也有争论。",
+          "explanation": "回忆、预测与同人追踪测到的内容不同，绝对变化和带方向变化也不是同一指标。",
+          "boundary": "人格、偏好与生活满意度不能混为一个构念，更不能从群体差异断言每个人。",
+          "people": [],
+          "sources": [
+            {
+              "label": "原刊摘要和期刊日期",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://www.science.org/doi/10.1126/science.1229294",
+              "publishedDate": "2013-01-04",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "作者在Harvard公开原稿",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://dtg.sites.fas.harvard.edu/Quoidbach%20et%20al%202013.pdf",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "独立纵向扩展",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://midus.wisc.edu/findings/pdfs/1997.pdf",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "原作者对扩展的回应",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://www.sciencedirect.com/science/article/pii/S009265662030026X",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            }
+          ],
+          "evidenceReuse": {
+            "reviewId": "science-end-history-20261030",
+            "doi": "10.1126/science.1229294",
+            "originalCheckedAt": "2026-10-30T00:18:19.837380+00:00",
+            "accessNote": "原刊需登录的正文未越过；核对作者公开PDF前三页、原刊与PubMed摘要，及后续纵向研究与作者回应的公开摘要。2013-01-04为原刊/Crossref/PubMed标示正式发表日，PDF下载字样不替代发表日。往期精选。",
+            "correctionCheck": {
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00",
+              "status": "bounded-search-completed",
+              "note": "已查DOI正式更正/撤稿及相关复现线索；Crossref作者日期核对成功，update-to为空不等于穷尽更正。主要争议进入边界；未重跑原始数据。"
+            },
+            "note": "复用已核验记录及更正/复现边界，未重新检索或声称新读全文。"
+          }
+        },
+        {
+          "id": "knowledge-brain-fluid-inflow-is-not-solute-clearance-20261030",
+          "knowledgeKey": "brain-fluid-inflow-is-not-solute-clearance",
+          "topic": "健康",
+          "title": "液体进入更多，不等于清除一定更快",
+          "intuition": "看到睡眠时更多液体进入脑部，就能断言代谢物排得更快。",
+          "fact": "原小鼠研究报告睡眠相关液体交换和部分示踪物清除增加；后续不同染料方法得到相反清除结果，双方仍争论测量。",
+          "explanation": "进入、混合与溶质离开是不同终点，方法差异会改变解释。",
+          "boundary": "反向研究的数据更正并非撤稿，也未终结争论；不能推为人类“排毒”或预防痴呆的保证。",
+          "people": [],
+          "sources": [
+            {
+              "label": "原刊规范链接",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://www.science.org/doi/10.1126/science.1241224",
+              "publishedDate": "2013-10-18",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "合法公开作者稿及图注",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3880190/",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "后续独立反向实验",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://www.nature.com/articles/s41593-024-01638-y",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "反向研究正式数据更正",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://www.nature.com/articles/s41593-024-01698-0",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "方法质疑",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://www.nature.com/articles/s41593-025-01897-3",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            },
+            {
+              "label": "原作者回复及更正记录",
+              "publisher": "Science / 原始或公开辅助研究",
+              "url": "https://www.nature.com/articles/s41593-025-01898-2",
+              "publishedDate": null,
+              "dateNote": "缓存未为该辅助页面独立登记精确首次发表日，不借用主论文日期。",
+              "accessLevel": "partial",
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00"
+            }
+          ],
+          "evidenceReuse": {
+            "reviewId": "science-sleep-clearance-20261030",
+            "doi": "10.1126/science.1241224",
+            "originalCheckedAt": "2026-10-30T00:18:19.837380+00:00",
+            "accessNote": "核对合法PMC作者稿主要实验/图注、独立反向研究公开正文；2025年质疑与回复只读公开预览和更正记录，未越过付费全文，未裁决争论。往期精选。",
+            "correctionCheck": {
+              "checkedAt": "2026-10-30T00:18:19.837380+00:00",
+              "status": "bounded-search-completed",
+              "note": "已查DOI正式更正/撤稿及相关复现线索；Crossref作者日期核对成功，update-to为空不等于穷尽更正。主要争议进入边界；未重跑原始数据。"
+            },
+            "note": "复用已核验记录及更正/复现边界，未重新检索或声称新读全文。"
+          }
+        }
+      ],
+      "coverage": {
+        "status": "complete",
+        "note": "五个新知识点来自五个不同DOI的早报核验记录；保留原始核对时间/范围及争议，不新增论文或凑数。",
+        "queries": [
+          "复用nature-cash-mortality-20261030的双重差分设计与敏感性边界，讲清平行趋势/反事实；数字另设教学构造，不冒充实验结果。",
+          "复用nature-emotion-regulation-20261030：任务中脑区活跃能否排序个人情绪调节能力？",
+          "复用nature-diet-memory-20261030：小鼠局部炎症记忆是否必须先肥胖，时间窗口/动物边界？",
+          "复用nature-cash-mortality-20261030：非医疗现金政策与死亡风险的关联支持什么，不支持什么？",
+          "复用science-end-history-20261030：回顾变化大于预测是否人人如此，后续纵向争议？",
+          "复用science-sleep-clearance-20261030：液体进入与溶质清除是否同一终点，方法争议与更正？"
+        ],
+        "checkedAt": "2026-10-30T13:25:11.660430+00:00"
       }
     }
   ]

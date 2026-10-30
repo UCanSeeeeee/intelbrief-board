@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-30T07:48:54.910Z",
-  "cutoff": "2026-10-30T15:00:00+08:00",
+  "updatedAt": "2026-10-30T13:34:35.139Z",
+  "cutoff": "2026-10-30T20:30:00+08:00",
   "source": "X only",
   "status": "complete",
   "coverage": {
@@ -9,36 +9,105 @@
       {
         "id": "elon-musk",
         "status": "complete",
-        "note": "价值和独立无主题热度查询完成；7条热度分配3/3/1，不进周榜。无本人归因的候选排除。",
-        "cutoff": "2026-10-30T15:00:00+08:00"
+        "note": "实际价值与无主题热度查询完成，边界已修正；只有两条合格热度，不进周榜。",
+        "cutoff": "2026-10-30T20:30:00+08:00"
       },
       {
         "id": "jensen-huang",
         "status": "complete",
-        "note": "价值和独立无主题热度查询完成；7条热度分配3/3/1，不进周榜。无本人归因的候选排除。",
-        "cutoff": "2026-10-30T15:00:00+08:00"
+        "note": "实际价值与无主题热度查询完成，边界已修正；只有两条合格热度，不进周榜。",
+        "cutoff": "2026-10-30T20:30:00+08:00"
       },
       {
         "id": "donald-trump",
         "status": "complete",
-        "note": "价值和独立无主题热度查询完成；7条热度分配3/3/1，不进周榜。无本人归因的候选排除。",
-        "cutoff": "2026-10-30T15:00:00+08:00"
+        "note": "实际价值与无主题热度查询完成，边界已修正；只有两条合格热度，不进周榜。",
+        "cutoff": "2026-10-30T20:30:00+08:00"
       },
       {
         "id": "trillion-leaders",
         "status": "complete",
-        "note": "价值和独立无主题热度查询完成；7条热度分配3/3/1，不进周榜。无本人归因的候选排除。",
-        "cutoff": "2026-10-30T15:00:00+08:00"
+        "note": "实际价值与无主题热度查询完成，边界已修正；只有两条合格热度，不进周榜。",
+        "cutoff": "2026-10-30T20:30:00+08:00"
       },
       {
         "id": "research-reports",
         "status": "complete",
-        "note": "价值和独立无主题热度查询完成；7条热度分配3/3/1，不进周榜。无本人归因的候选排除。",
-        "cutoff": "2026-10-30T15:00:00+08:00"
+        "note": "实际价值与无主题热度查询完成，边界已修正；只有两条合格热度，不进周榜。",
+        "cutoff": "2026-10-30T20:30:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "people-jensen-megaspeed-response-20261030",
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "title": "Jensen Huang称与Megaspeed的互动正常",
+      "fact": "annmarie账号直接引述Jensen Huang称，与Megaspeed的关系及互动“完全正常、并无异常”。这是对既有报道的回应，不证明相关调查或风险已经排除，也没有提供新增订单或供应数字。",
+      "whyItMatters": "保留可归因的本人回应；其业务影响仍缺新增事实，按热度动态阅读。",
+      "counterCase": "如果完整语境或当事人更正改变引文，应更正；没有找到撤回不等于主张已被独立证实。",
+      "affected": [],
+      "author": "annmarie",
+      "publishedAt": "2026-10-30T09:32:45Z",
+      "url": "https://x.com/annmarie/status/2116100989992231017",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Our relationship, our interactions, have been related to Megaspeed, and it was all completely normal and not unusual.",
+      "firstIncludedAt": "2026-10-30T13:34:35.139Z",
+      "lastMaterialAt": "2026-10-30T13:34:35.139Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 26,
+        "reposts": 4,
+        "quotes": 0,
+        "replies": 6,
+        "views": 2753,
+        "capturedAt": "2026-10-30T12:48:19.793979+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": [
+        {
+          "name": "Jensen Huang",
+          "intro": "英伟达创始人兼CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "people-nomura-brazil-article-20261030",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "Nomura发布巴西选举经济影响文章",
+      "fact": "Nomura官方账号发布文章，讨论巴西总统选举后的雷亚尔、股市和债券表现。这里记录机构研究公告；帖中的选举与市场判断是该机构表述，不能据此认定因果或独立核实选举结果。",
+      "whyItMatters": "机构公开内容动态，没有可采用的半导体、电力或AI盈利预测变化。",
+      "counterCase": "文章背景、行情与选举事实需各自核验；公告本身不证明其中所有解释。",
+      "affected": [],
+      "author": "nomura_jp",
+      "publishedAt": "2026-10-30T09:00:12Z",
+      "url": "https://x.com/nomura_jp/status/2116092795488510071",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "ブラジル大統領選の経済への影響　レアル下落・株安・債券安となった背景とは？",
+      "firstIncludedAt": "2026-10-30T13:34:35.139Z",
+      "lastMaterialAt": "2026-10-30T13:34:35.139Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 5,
+        "reposts": 0,
+        "quotes": 0,
+        "replies": 0,
+        "views": 1041,
+        "capturedAt": "2026-10-30T12:48:19.793979+00:00",
+        "source": "grok-web-observed"
+      },
+      "people": []
+    },
     {
       "eventKey": "people-2115935053347786773",
       "tabIds": [
@@ -55,10 +124,16 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Everyday is Zeroday",
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-30T07:48:54.910Z",
       "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Everyday is Zeroday",
       "selection": "engagement",
       "engagement": {
         "likes": 47033,
@@ -68,13 +143,7 @@
         "views": 4193542,
         "capturedAt": "2026-10-30T07:14:13.298984+00:00",
         "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "people-2115926358299652319",
@@ -92,10 +161,11 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "JUST NOW: Air Force One makes a special Halloween flyover at the White House! 🎃✈️",
+      "people": [],
       "firstIncludedAt": "2026-10-30T07:48:54.910Z",
       "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "JUST NOW: Air Force One makes a special Halloween flyover at the White House! 🎃✈️",
       "selection": "engagement",
       "engagement": {
         "likes": 6588,
@@ -105,8 +175,7 @@
         "views": 226374,
         "capturedAt": "2026-10-30T07:14:13.299003+00:00",
         "source": "grok-web-observed"
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "people-2115921600658735169",
@@ -124,10 +193,16 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Worth noting that Grok @Bot has no free tier",
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-30T07:48:54.910Z",
       "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Worth noting that Grok @Bot has no free tier",
       "selection": "engagement",
       "engagement": {
         "likes": 11378,
@@ -137,13 +212,7 @@
         "views": 1413404,
         "capturedAt": "2026-10-30T07:14:13.298999+00:00",
         "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "people-2115914726358352340",
@@ -161,10 +230,16 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "President Trump and the First Lady Host Halloween at the White House",
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ],
       "firstIncludedAt": "2026-10-30T07:48:54.910Z",
       "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "President Trump and the First Lady Host Halloween at the White House",
       "selection": "engagement",
       "engagement": {
         "likes": 3575,
@@ -174,13 +249,7 @@
         "views": 224249,
         "capturedAt": "2026-10-30T07:14:13.299006+00:00",
         "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Donald Trump",
-          "intro": "美国总统"
-        }
-      ]
+      }
     },
     {
       "eventKey": "people-2115909823787340087",
@@ -198,10 +267,11 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Lone Star Mission leads to THOUSANDS of illegal aliens arrested in Texas just 10 days.",
+      "people": [],
       "firstIncludedAt": "2026-10-30T07:48:54.910Z",
       "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Lone Star Mission leads to THOUSANDS of illegal aliens arrested in Texas just 10 days.",
       "selection": "engagement",
       "engagement": {
         "likes": 1715,
@@ -211,8 +281,7 @@
         "views": 100995,
         "capturedAt": "2026-10-30T07:14:13.299009+00:00",
         "source": "grok-web-observed"
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "people-2115825787647496203",
@@ -230,10 +299,16 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Our civilization would be winning wondrously if we are exploring the galaxy with Von Neumann probes by 2100! Larry Page might be right. He has correctly predicted many things.",
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ],
       "firstIncludedAt": "2026-10-30T07:48:54.910Z",
       "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Our civilization would be winning wondrously if we are exploring the galaxy with Von Neumann probes by 2100! Larry Page might be right. He has correctly predicted many things.",
       "selection": "engagement",
       "engagement": {
         "likes": 15227,
@@ -243,13 +318,7 @@
         "views": 2638917,
         "capturedAt": "2026-10-30T07:14:13.298994+00:00",
         "source": "grok-web-observed"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
+      }
     },
     {
       "eventKey": "people-2115805371961131305",
@@ -267,10 +336,11 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Our new report “The AI Boom Has a Power Problem” is live! Power has become a harder constraint on AI than chips because it takes years to build, leaving pricing power with anyone who can deliver electricity faster than the grid.",
+      "people": [],
       "firstIncludedAt": "2026-10-30T07:48:54.910Z",
       "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Our new report “The AI Boom Has a Power Problem” is live! Power has become a harder constraint on AI than chips because it takes years to build, leaving pricing power with anyone who can deliver electricity faster than the grid.",
       "selection": "engagement",
       "engagement": {
         "likes": 35,
@@ -280,8 +350,7 @@
         "views": 10961,
         "capturedAt": "2026-10-30T07:14:13.299014+00:00",
         "source": "grok-web-observed"
-      },
-      "people": []
+      }
     },
     {
       "eventKey": "people-2115577764300693644",
@@ -500,38 +569,6 @@
         "quotes": 145,
         "views": 276890,
         "capturedAt": "2026-10-28T00:17:37.965338+00:00",
-        "source": "grok-web-observed"
-      }
-    },
-    {
-      "eventKey": "people-2115151722045706324",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "Morgan Stanley播客讨论信用利差",
-      "fact": "Morgan Stanley 推介固定收益播客，讨论利差走阔是否指向信用市场裂缝及背后因素。",
-      "whyItMatters": "帖子提出研究问题，未给出具体利差序列、违约数据或已确认的信用危机结论。",
-      "counterCase": "原始完整语境、后续开放/执行或更正可能改变理解；热度与事实证明分开。",
-      "affected": [],
-      "author": "MorganStanley",
-      "publishedAt": "2026-10-27T18:40:42Z",
-      "url": "https://x.com/MorganStanley/status/2115151722045706324",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [],
-      "firstIncludedAt": "2026-10-28T01:14:41.359Z",
-      "lastMaterialAt": "2026-10-28T01:14:41.359Z",
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Could widening spreads point to cracks in credit markets? Andrew Sheets, Global Head of Fixed Income Research, breaks down the forces shaping the debate. Listen to Thoughts on the Market: https://www.morganstanley.com/insights/podcasts/thoughts-on-the-market/bond-issuance-historical-levels-andrew-sheets-anish-shah-rehan-latif-samer-oweida?cid=SM_CORP_TWITTER_MorganStanley_20261027&linkId=1028049205",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 7,
-        "reposts": 0,
-        "replies": 2,
-        "quotes": 0,
-        "views": 3704,
-        "capturedAt": "2026-10-28T00:17:37.965363+00:00",
         "source": "grok-web-observed"
       }
     },
@@ -1217,6 +1254,89 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "people-jensen-megaspeed-response-20261030",
+        "tabIds": [
+          "jensen-huang"
+        ],
+        "title": "Jensen Huang称与Megaspeed的互动正常",
+        "fact": "annmarie账号直接引述Jensen Huang称，与Megaspeed的关系及互动“完全正常、并无异常”。这是对既有报道的回应，不证明相关调查或风险已经排除，也没有提供新增订单或供应数字。",
+        "whyItMatters": "保留可归因的本人回应；其业务影响仍缺新增事实，按热度动态阅读。",
+        "counterCase": "如果完整语境或当事人更正改变引文，应更正；没有找到撤回不等于主张已被独立证实。",
+        "affected": [],
+        "author": "annmarie",
+        "publishedAt": "2026-10-30T09:32:45Z",
+        "url": "https://x.com/annmarie/status/2116100989992231017",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Our relationship, our interactions, have been related to Megaspeed, and it was all completely normal and not unusual.",
+        "firstIncludedAt": "2026-10-30T13:34:35.139Z",
+        "lastMaterialAt": "2026-10-30T13:34:35.139Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 26,
+          "reposts": 4,
+          "quotes": 0,
+          "replies": 6,
+          "views": 2753,
+          "capturedAt": "2026-10-30T12:48:19.793979+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": [
+          {
+            "name": "Jensen Huang",
+            "intro": "英伟达创始人兼CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "jensen-huang"
+      ],
+      "at": "2026-10-30T13:34:35.139Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "people-nomura-brazil-article-20261030",
+        "tabIds": [
+          "research-reports"
+        ],
+        "title": "Nomura发布巴西选举经济影响文章",
+        "fact": "Nomura官方账号发布文章，讨论巴西总统选举后的雷亚尔、股市和债券表现。这里记录机构研究公告；帖中的选举与市场判断是该机构表述，不能据此认定因果或独立核实选举结果。",
+        "whyItMatters": "机构公开内容动态，没有可采用的半导体、电力或AI盈利预测变化。",
+        "counterCase": "文章背景、行情与选举事实需各自核验；公告本身不证明其中所有解释。",
+        "affected": [],
+        "author": "nomura_jp",
+        "publishedAt": "2026-10-30T09:00:12Z",
+        "url": "https://x.com/nomura_jp/status/2116092795488510071",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "ブラジル大統領選の経済への影響　レアル下落・株安・債券安となった背景とは？",
+        "firstIncludedAt": "2026-10-30T13:34:35.139Z",
+        "lastMaterialAt": "2026-10-30T13:34:35.139Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 5,
+          "reposts": 0,
+          "quotes": 0,
+          "replies": 0,
+          "views": 1041,
+          "capturedAt": "2026-10-30T12:48:19.793979+00:00",
+          "source": "grok-web-observed"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "research-reports"
+      ],
+      "at": "2026-10-30T13:34:35.139Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "people-2115935053347786773",
         "tabIds": [
           "elon-musk"
@@ -1232,10 +1352,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Everyday is Zeroday",
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-30T07:48:54.910Z",
         "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Everyday is Zeroday",
         "selection": "engagement",
         "engagement": {
           "likes": 47033,
@@ -1245,13 +1371,7 @@
           "views": 4193542,
           "capturedAt": "2026-10-30T07:14:13.298984+00:00",
           "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "elon-musk"
@@ -1276,10 +1396,11 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "JUST NOW: Air Force One makes a special Halloween flyover at the White House! 🎃✈️",
+        "people": [],
         "firstIncludedAt": "2026-10-30T07:48:54.910Z",
         "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "JUST NOW: Air Force One makes a special Halloween flyover at the White House! 🎃✈️",
         "selection": "engagement",
         "engagement": {
           "likes": 6588,
@@ -1289,8 +1410,7 @@
           "views": 226374,
           "capturedAt": "2026-10-30T07:14:13.299003+00:00",
           "source": "grok-web-observed"
-        },
-        "people": []
+        }
       },
       "tabIds": [
         "donald-trump"
@@ -1315,10 +1435,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Worth noting that Grok @Bot has no free tier",
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-30T07:48:54.910Z",
         "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Worth noting that Grok @Bot has no free tier",
         "selection": "engagement",
         "engagement": {
           "likes": 11378,
@@ -1328,13 +1454,7 @@
           "views": 1413404,
           "capturedAt": "2026-10-30T07:14:13.298999+00:00",
           "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "elon-musk"
@@ -1359,10 +1479,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "President Trump and the First Lady Host Halloween at the White House",
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ],
         "firstIncludedAt": "2026-10-30T07:48:54.910Z",
         "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "President Trump and the First Lady Host Halloween at the White House",
         "selection": "engagement",
         "engagement": {
           "likes": 3575,
@@ -1372,13 +1498,7 @@
           "views": 224249,
           "capturedAt": "2026-10-30T07:14:13.299006+00:00",
           "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Donald Trump",
-            "intro": "美国总统"
-          }
-        ]
+        }
       },
       "tabIds": [
         "donald-trump"
@@ -1403,10 +1523,11 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Lone Star Mission leads to THOUSANDS of illegal aliens arrested in Texas just 10 days.",
+        "people": [],
         "firstIncludedAt": "2026-10-30T07:48:54.910Z",
         "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Lone Star Mission leads to THOUSANDS of illegal aliens arrested in Texas just 10 days.",
         "selection": "engagement",
         "engagement": {
           "likes": 1715,
@@ -1416,8 +1537,7 @@
           "views": 100995,
           "capturedAt": "2026-10-30T07:14:13.299009+00:00",
           "source": "grok-web-observed"
-        },
-        "people": []
+        }
       },
       "tabIds": [
         "donald-trump"
@@ -1442,10 +1562,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Our civilization would be winning wondrously if we are exploring the galaxy with Von Neumann probes by 2100! Larry Page might be right. He has correctly predicted many things.",
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ],
         "firstIncludedAt": "2026-10-30T07:48:54.910Z",
         "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Our civilization would be winning wondrously if we are exploring the galaxy with Von Neumann probes by 2100! Larry Page might be right. He has correctly predicted many things.",
         "selection": "engagement",
         "engagement": {
           "likes": 15227,
@@ -1455,13 +1581,7 @@
           "views": 2638917,
           "capturedAt": "2026-10-30T07:14:13.298994+00:00",
           "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "elon-musk"
@@ -1486,10 +1606,11 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Our new report “The AI Boom Has a Power Problem” is live! Power has become a harder constraint on AI than chips because it takes years to build, leaving pricing power with anyone who can deliver electricity faster than the grid.",
+        "people": [],
         "firstIncludedAt": "2026-10-30T07:48:54.910Z",
         "lastMaterialAt": "2026-10-30T07:48:54.910Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Our new report “The AI Boom Has a Power Problem” is live! Power has become a harder constraint on AI than chips because it takes years to build, leaving pricing power with anyone who can deliver electricity faster than the grid.",
         "selection": "engagement",
         "engagement": {
           "likes": 35,
@@ -1499,8 +1620,7 @@
           "views": 10961,
           "capturedAt": "2026-10-30T07:14:13.299014+00:00",
           "source": "grok-web-observed"
-        },
-        "people": []
+        }
       },
       "tabIds": [
         "research-reports"
