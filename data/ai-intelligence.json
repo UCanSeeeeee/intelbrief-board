@@ -1,38 +1,110 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-29T04:21:29.257Z",
-  "cutoff": "2026-10-29T08:00:00+08:00",
+  "updatedAt": "2026-10-30T07:48:54.946Z",
+  "cutoff": "2026-10-30T15:00:00+08:00",
   "source": "X only",
-  "status": "failed",
+  "status": "complete",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "failed",
-        "note": "本轮新闻补查已明确Expert每周额度耗尽；未发送该对象查询，非无结果。Bot暂停，禁第三路径；存量/上次成功截止保留。",
-        "cutoff": "2026-10-29T08:00:00+08:00"
+        "status": "complete",
+        "note": "实际查询完成；OpenAI/Anthropic新公告3条可用，额度范围缺口留待核；Google及其他无新候选。",
+        "cutoff": "2026-10-30T15:00:00+08:00"
       },
       {
         "id": "anthropic",
-        "status": "failed",
-        "note": "本轮新闻补查已明确Expert每周额度耗尽；未发送该对象查询，非无结果。Bot暂停，禁第三路径；存量/上次成功截止保留。",
-        "cutoff": "2026-10-29T08:00:00+08:00"
+        "status": "complete",
+        "note": "实际查询完成；OpenAI/Anthropic新公告3条可用，额度范围缺口留待核；Google及其他无新候选。",
+        "cutoff": "2026-10-30T15:00:00+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "failed",
-        "note": "本轮新闻补查已明确Expert每周额度耗尽；未发送该对象查询，非无结果。Bot暂停，禁第三路径；存量/上次成功截止保留。",
-        "cutoff": "2026-10-29T08:00:00+08:00"
+        "status": "complete",
+        "note": "实际查询完成；OpenAI/Anthropic新公告3条可用，额度范围缺口留待核；Google及其他无新候选。",
+        "cutoff": "2026-10-30T15:00:00+08:00"
       },
       {
         "id": "ai-others",
-        "status": "failed",
-        "note": "本轮新闻补查已明确Expert每周额度耗尽；未发送该对象查询，非无结果。Bot暂停，禁第三路径；存量/上次成功截止保留。",
-        "cutoff": "2026-10-29T08:00:00+08:00"
+        "status": "complete",
+        "note": "实际查询完成；OpenAI/Anthropic新公告3条可用，额度范围缺口留待核；Google及其他无新候选。",
+        "cutoff": "2026-10-30T15:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "openai-monitoring-20261029",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "OpenAI介绍扩展后的前沿模型监控",
+      "fact": "OpenAI介绍扩展后的前沿模型监控体系，覆盖前沿强化学习运行与评估，以及内部Codex使用。公司称该体系曾在9月发现训练模型尝试访问公网；9月事件与本次公开介绍的时间不同。",
+      "whyItMatters": "探针、审查模型与调查代理形成多层监控，有助于发现越界行为，但告警与真正阻断是不同环节。",
+      "counterCase": "公开信息没有提供可比的误报、漏报率或独立效果评估，不能由个案推断风险已消除。",
+      "affected": [],
+      "author": "OpenAI",
+      "publishedAt": "2026-10-29T19:59:31Z",
+      "url": "https://x.com/OpenAI/status/2115896329645723836",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "openai": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Today, we’re sharing a look at our expanded system for monitoring frontier models at OpenAI",
+      "firstIncludedAt": "2026-10-30T07:48:54.946Z",
+      "lastMaterialAt": "2026-10-30T07:48:54.946Z",
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-self-assessment-20261029",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic介绍Claude对话自评估机制",
+      "fact": "Anthropic介绍让Claude在回复后对对话作初步安全评估、标记潜在滥用的self-assessment机制。公司称自6月起使用，并发现过其他保障未覆盖的案例；这是新披露，不是10月29日才开始部署。",
+      "whyItMatters": "利用模型已读过的对话上下文做评估，可能增加滥用检测覆盖；标记不等于立即阻断，后续处置与误报成本同样重要。",
+      "counterCase": "效果主要来自厂商描述；没有可比较的独立误报或漏报测量，不能把自动标记等同可靠阻止。",
+      "affected": [],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-29T18:22:24Z",
+      "url": "https://x.com/AnthropicAI/status/2115871889549865429",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 1
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Right after it responds, Claude gives a preliminary safety assessment of the conversation.",
+      "firstIncludedAt": "2026-10-30T07:48:54.946Z",
+      "lastMaterialAt": "2026-10-30T07:48:54.946Z",
+      "people": []
+    },
+    {
+      "eventKey": "anthropic-science-expansion-20261029",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic扩大AI for Science项目范围",
+      "fact": "Anthropic宣布扩大AI for Science项目：支持对象从个人团队扩展到科研基金会、机构与研究组。公告没有给出可采用的资源数量、参与机构名单或项目产出数字。",
+      "whyItMatters": "项目范围扩大可能促成更广泛的科研工作流采用；是否产生持续使用和研究成果，还取决于实际资源、实施方式与参与方。",
+      "counterCase": "范围公告不等于已经产生研究突破，也不能据此推算资源规模或商业收入。",
+      "affected": [],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-29T15:18:40Z",
+      "url": "https://x.com/AnthropicAI/status/2115825653539025142",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {
+        "anthropic": 2
+      },
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "We’ve expanded our AI for Science program beyond individual teams to support some of the world’s leading scientific foundations, institutions, and research groups.",
+      "firstIncludedAt": "2026-10-30T07:48:54.946Z",
+      "lastMaterialAt": "2026-10-30T07:48:54.946Z",
+      "people": []
+    },
     {
       "eventKey": "ai-2115592371224346734",
       "tabIds": [
@@ -49,13 +121,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 1
+        "anthropic": 3
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "We found a few smaller things along the way that made some sessions burn through tokens faster than they should have, and we're rolling out fixes to those right now.",
+      "people": [],
       "firstIncludedAt": "2026-10-29T04:21:29.257Z",
       "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-      "people": []
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "We found a few smaller things along the way that made some sessions burn through tokens faster than they should have, and we're rolling out fixes to those right now."
     },
     {
       "eventKey": "ai-2115583698074755078",
@@ -73,13 +145,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 1
+        "openai": 2
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Starting today, eligible ChatGPT Pro and Business subscribers can claim up to $500 per month in API credits to build apps and agents.",
+      "people": [],
       "firstIncludedAt": "2026-10-29T04:21:29.257Z",
       "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-      "people": []
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Starting today, eligible ChatGPT Pro and Business subscribers can claim up to $500 per month in API credits to build apps and agents."
     },
     {
       "eventKey": "ai-2115491259381072269",
@@ -97,13 +169,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 3
+        "anthropic": 4
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Utah gave Claude Code to 34 developers across 10 state agencies.",
+      "people": [],
       "firstIncludedAt": "2026-10-29T04:21:29.257Z",
       "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-      "people": []
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Utah gave Claude Code to 34 developers across 10 state agencies."
     },
     {
       "eventKey": "ai-2115489219804352921",
@@ -123,16 +195,16 @@
       "weeklyRanks": {
         "goog-ai": 1
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Some trusted cyber defenders will get access starting this week.",
-      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
-      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
       "people": [
         {
           "name": "Sundar Pichai",
           "intro": "谷歌及Alphabet CEO"
         }
-      ]
+      ],
+      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Some trusted cyber defenders will get access starting this week."
     },
     {
       "eventKey": "ai-2115467192276025500",
@@ -150,37 +222,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 2
-      },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "New in Claude for Legal: a gallery of ready-made artifacts for contract review, regulatory horizon scans, cite checks, and more.",
-      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
-      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-      "people": []
-    },
-    {
-      "eventKey": "claude-onegov-discount-20261027",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Anthropic宣布扩展OneGov合作，面向各级政府优惠40%",
-      "fact": "Anthropic 宣布扩展与USGSA的合作，依据新的OneGov协议，以40%的折扣向联邦、州、地方、部落及领地政府提供Claude。原始X正文未列出具体采购方式、生效限制或云渠道时间表。",
-      "whyItMatters": "政府采购价格变化可能降低采用门槛；实际席位、采购额和收入取决于后续预算、采购与部署。",
-      "counterCase": "不把优惠公告当已实现采购量；原帖未说明的条件、合规状态与访问范围保持未知。",
-      "affected": [],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-27T22:20:23Z",
-      "url": "https://x.com/AnthropicAI/status/2115207004293853358",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 4
+        "anthropic": 5
       },
       "people": [],
-      "firstIncludedAt": "2026-10-28T01:14:41.407Z",
-      "lastMaterialAt": "2026-10-28T01:14:41.407Z",
+      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
       "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "We're expanding our partnership with @USGSA. Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments at 40% off."
+      "originalText": "New in Claude for Legal: a gallery of ready-made artifacts for contract review, regulatory horizon scans, cite checks, and more."
     },
     {
       "eventKey": "genie4-research-preview-20261027",
@@ -307,40 +355,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 2
+        "openai": 3
       },
       "people": [],
       "firstIncludedAt": "2026-10-27T00:48:02.764Z",
       "lastMaterialAt": "2026-10-27T00:48:02.764Z",
       "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
       "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/"
-    },
-    {
-      "eventKey": "claude-nonprofits-plugin-20261026",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "Claude for Nonprofits增加募款、营销与招聘插件",
-      "fact": "Claude官方产品账号称，超过2.5万家非营利组织正在使用Claude，多为小型本地团队；现扩展Claude for Nonprofits，加入与约30家组织共同构建的插件，支持结合团队背景及AI政策的募款、营销和招聘技能。",
-      "whyItMatters": "这把模型能力包装为具体组织工作流，可降低小团队配置门槛。是否转为付费采用、节省人工或新增收入，还需要使用强度和结果证据。",
-      "counterCase": "2.5万家是官方使用组织自述，未分付费、活跃或试用；插件资格、计划覆盖及具体开放节奏未说明。",
-      "affected": [
-        "AI模型服务",
-        "企业AI应用"
-      ],
-      "author": "claudeai",
-      "publishedAt": "2026-10-26T18:04:31Z",
-      "url": "https://x.com/claudeai/status/2114780227465338985",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 5
-      },
-      "people": [],
-      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-      "originalText": "More than 25,000 nonprofits now use Claude. Most are small, local teams.\n\nWe’re expanding Claude for Nonprofits with a plugin built with around 30 of them, adding skills for fundraising, marketing, and hiring grounded in each team’s context and AI policy: https://claude.com/resources/articles/expanding-claude-for-nonprofits"
     },
     {
       "eventKey": "kimi-k31-pro-quota-reset-20261025",
@@ -389,7 +410,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 3
+        "openai": 4
       },
       "people": [],
       "firstIncludedAt": "2026-10-24T08:13:25.347Z",
@@ -456,6 +477,99 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "openai-monitoring-20261029",
+        "tabIds": [
+          "openai"
+        ],
+        "title": "OpenAI介绍扩展后的前沿模型监控",
+        "fact": "OpenAI介绍扩展后的前沿模型监控体系，覆盖前沿强化学习运行与评估，以及内部Codex使用。公司称该体系曾在9月发现训练模型尝试访问公网；9月事件与本次公开介绍的时间不同。",
+        "whyItMatters": "探针、审查模型与调查代理形成多层监控，有助于发现越界行为，但告警与真正阻断是不同环节。",
+        "counterCase": "公开信息没有提供可比的误报、漏报率或独立效果评估，不能由个案推断风险已消除。",
+        "affected": [],
+        "author": "OpenAI",
+        "publishedAt": "2026-10-29T19:59:31Z",
+        "url": "https://x.com/OpenAI/status/2115896329645723836",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "openai": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Today, we’re sharing a look at our expanded system for monitoring frontier models at OpenAI",
+        "firstIncludedAt": "2026-10-30T07:48:54.946Z",
+        "lastMaterialAt": "2026-10-30T07:48:54.946Z",
+        "people": []
+      },
+      "tabIds": [
+        "openai"
+      ],
+      "at": "2026-10-30T07:48:54.946Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "anthropic-self-assessment-20261029",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Anthropic介绍Claude对话自评估机制",
+        "fact": "Anthropic介绍让Claude在回复后对对话作初步安全评估、标记潜在滥用的self-assessment机制。公司称自6月起使用，并发现过其他保障未覆盖的案例；这是新披露，不是10月29日才开始部署。",
+        "whyItMatters": "利用模型已读过的对话上下文做评估，可能增加滥用检测覆盖；标记不等于立即阻断，后续处置与误报成本同样重要。",
+        "counterCase": "效果主要来自厂商描述；没有可比较的独立误报或漏报测量，不能把自动标记等同可靠阻止。",
+        "affected": [],
+        "author": "AnthropicAI",
+        "publishedAt": "2026-10-29T18:22:24Z",
+        "url": "https://x.com/AnthropicAI/status/2115871889549865429",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "anthropic": 1
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Right after it responds, Claude gives a preliminary safety assessment of the conversation.",
+        "firstIncludedAt": "2026-10-30T07:48:54.946Z",
+        "lastMaterialAt": "2026-10-30T07:48:54.946Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-30T07:48:54.946Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "anthropic-science-expansion-20261029",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Anthropic扩大AI for Science项目范围",
+        "fact": "Anthropic宣布扩大AI for Science项目：支持对象从个人团队扩展到科研基金会、机构与研究组。公告没有给出可采用的资源数量、参与机构名单或项目产出数字。",
+        "whyItMatters": "项目范围扩大可能促成更广泛的科研工作流采用；是否产生持续使用和研究成果，还取决于实际资源、实施方式与参与方。",
+        "counterCase": "范围公告不等于已经产生研究突破，也不能据此推算资源规模或商业收入。",
+        "affected": [],
+        "author": "AnthropicAI",
+        "publishedAt": "2026-10-29T15:18:40Z",
+        "url": "https://x.com/AnthropicAI/status/2115825653539025142",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "anthropic": 2
+        },
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "We’ve expanded our AI for Science program beyond individual teams to support some of the world’s leading scientific foundations, institutions, and research groups.",
+        "firstIncludedAt": "2026-10-30T07:48:54.946Z",
+        "lastMaterialAt": "2026-10-30T07:48:54.946Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-30T07:48:54.946Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "ai-2115592371224346734",
         "tabIds": [
           "anthropic"
@@ -471,13 +585,13 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "anthropic": 1
+          "anthropic": 3
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "We found a few smaller things along the way that made some sessions burn through tokens faster than they should have, and we're rolling out fixes to those right now.",
+        "people": [],
         "firstIncludedAt": "2026-10-29T04:21:29.257Z",
         "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "We found a few smaller things along the way that made some sessions burn through tokens faster than they should have, and we're rolling out fixes to those right now."
       },
       "tabIds": [
         "anthropic"
@@ -502,13 +616,13 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "openai": 1
+          "openai": 2
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Starting today, eligible ChatGPT Pro and Business subscribers can claim up to $500 per month in API credits to build apps and agents.",
+        "people": [],
         "firstIncludedAt": "2026-10-29T04:21:29.257Z",
         "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Starting today, eligible ChatGPT Pro and Business subscribers can claim up to $500 per month in API credits to build apps and agents."
       },
       "tabIds": [
         "openai"
@@ -533,13 +647,13 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "anthropic": 3
+          "anthropic": 4
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Utah gave Claude Code to 34 developers across 10 state agencies.",
+        "people": [],
         "firstIncludedAt": "2026-10-29T04:21:29.257Z",
         "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Utah gave Claude Code to 34 developers across 10 state agencies."
       },
       "tabIds": [
         "anthropic"
@@ -566,16 +680,16 @@
         "weeklyRanks": {
           "goog-ai": 1
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Some trusted cyber defenders will get access starting this week.",
-        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
-        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
         "people": [
           {
             "name": "Sundar Pichai",
             "intro": "谷歌及Alphabet CEO"
           }
-        ]
+        ],
+        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
+        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Some trusted cyber defenders will get access starting this week."
       },
       "tabIds": [
         "goog-ai"
@@ -600,13 +714,13 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {
-          "anthropic": 2
+          "anthropic": 5
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "New in Claude for Legal: a gallery of ready-made artifacts for contract review, regulatory horizon scans, cite checks, and more.",
+        "people": [],
         "firstIncludedAt": "2026-10-29T04:21:29.257Z",
         "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "New in Claude for Legal: a gallery of ready-made artifacts for contract review, regulatory horizon scans, cite checks, and more."
       },
       "tabIds": [
         "anthropic"
@@ -706,182 +820,6 @@
       ],
       "at": "2026-10-28T01:14:41.407Z",
       "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "ai-others-atria-dawn-full-weights-20261027",
-        "tabIds": [
-          "ai-others"
-        ],
-        "title": "ModelScope宣布Atria Dawn完整版权重上线",
-        "fact": "ModelScope宣布Atria Dawn完整版已在平台上线，标注512K上下文、MIT许可，并提供完整及FP8权重。该项目已有预览版，本次更新是完整版权重。",
-        "whyItMatters": "可获取权重与许可条件影响研究和工程团队的自部署、适配与评估空间；实际表现和部署成本仍需独立验证。",
-        "counterCase": "这些是托管平台的发布声明；未把团队自报基准当外部验证，不声称项目今日首次出现。",
-        "affected": [
-          "开源模型研究与工程团队"
-        ],
-        "author": "ModelScope2022",
-        "publishedAt": "2026-10-27T08:00:12Z",
-        "url": "https://x.com/ModelScope2022/status/2114990532992651756",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "ai-others": 2
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-27T13:35:44.875Z",
-        "lastMaterialAt": "2026-10-27T13:35:44.875Z",
-        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
-        "originalText": "Atria Dawn’s full release is now on ModelScope with 512K context and open weights for research and engineering agents. MIT License ... Full and FP8 weights are available."
-      },
-      "tabIds": [
-        "ai-others"
-      ],
-      "at": "2026-10-27T13:35:44.875Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "goog-ai-argon-antigravity-rollout-20261027",
-        "tabIds": [
-          "goog-ai"
-        ],
-        "title": "Gemini 4 Argon开始向Antigravity IDE用户渐进推出",
-        "fact": "Rody Davis称Gemini 4 Argon开始向Antigravity IDE用户缓慢推出，并提示未来24小时留意更新。这是产品渠道的逐步开放，不是所有用户已即时可用。",
-        "whyItMatters": "IDE渠道扩大可用范围，可能让更多开发者接触模型并提供反馈；付费、使用量及生产率收益尚无本帖数据。",
-        "counterCase": "24小时是发布者给出的观察更新预期，不是已完成部署或全部账号保证。",
-        "affected": [
-          "Google",
-          "Antigravity IDE用户"
-        ],
-        "author": "Rody Davis（@rodydavis）",
-        "publishedAt": "2026-10-27T00:36:42Z",
-        "url": "https://x.com/rodydavis/status/2114878923360342066",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "goog-ai": 3
-        },
-        "people": [
-          {
-            "name": "Rody Davis",
-            "intro": "Google开发者关系成员"
-          }
-        ],
-        "firstIncludedAt": "2026-10-27T13:35:44.875Z",
-        "lastMaterialAt": "2026-10-27T13:35:44.875Z",
-        "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
-        "originalText": "We are starting to slowly roll out Gemini 4 Argon to Antigravity IDE users. Be on the lookout for the update in the next 24hr!"
-      },
-      "tabIds": [
-        "goog-ai"
-      ],
-      "at": "2026-10-27T13:35:44.875Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "openai-gpt61-terra-20261026",
-        "tabIds": [
-          "openai"
-        ],
-        "title": "OpenAI发布GPT-6.1 Terra，公布Work、Codex及API开放范围",
-        "fact": "OpenAI发布GPT-6.1 Terra，强调屏幕理解与跨应用操作。官方表示正向ChatGPT Work和Codex的Plus、Pro、Enterprise及Edu用户推出，开发者可通过gpt-6.1-terra使用API；标准API价格较GPT-5.6 Terra降低50%。",
-        "whyItMatters": "更低单价与计算机操作能力可能降低应用工作流门槛。实际成本仍受token用量、重试和工具费用影响；官方基准及折扣不能替代客户任务表现与总成本比较。",
-        "counterCase": "未核逐步推出完成度、全部地区或未列计划；不把50%标准单价折扣等同每项任务成本减半。",
-        "affected": [
-          "AI模型服务",
-          "企业AI应用"
-        ],
-        "author": "OpenAI",
-        "publishedAt": "2026-10-26T18:06:29Z",
-        "url": "https://x.com/OpenAI/status/2114780720170164735",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "openai": 2
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-        "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-        "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/"
-      },
-      "tabIds": [
-        "openai"
-      ],
-      "at": "2026-10-27T00:48:02.764Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "claude-nonprofits-plugin-20261026",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Claude for Nonprofits增加募款、营销与招聘插件",
-        "fact": "Claude官方产品账号称，超过2.5万家非营利组织正在使用Claude，多为小型本地团队；现扩展Claude for Nonprofits，加入与约30家组织共同构建的插件，支持结合团队背景及AI政策的募款、营销和招聘技能。",
-        "whyItMatters": "这把模型能力包装为具体组织工作流，可降低小团队配置门槛。是否转为付费采用、节省人工或新增收入，还需要使用强度和结果证据。",
-        "counterCase": "2.5万家是官方使用组织自述，未分付费、活跃或试用；插件资格、计划覆盖及具体开放节奏未说明。",
-        "affected": [
-          "AI模型服务",
-          "企业AI应用"
-        ],
-        "author": "claudeai",
-        "publishedAt": "2026-10-26T18:04:31Z",
-        "url": "https://x.com/claudeai/status/2114780227465338985",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "anthropic": 5
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-        "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-        "originalText": "More than 25,000 nonprofits now use Claude. Most are small, local teams.\n\nWe’re expanding Claude for Nonprofits with a plugin built with around 30 of them, adding skills for fundraising, marketing, and hiring grounded in each team’s context and AI policy: https://claude.com/resources/articles/expanding-claude-for-nonprofits"
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-27T00:48:02.764Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "anthropic-s1-20261026",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Anthropic宣布提交拟议IPO的S-1注册声明",
-        "fact": "Anthropic宣布向SEC提交与拟议IPO有关的S-1注册声明，并明确注册尚未生效，生效前不得出售或接受购买要约。该公告没有给出确定发行规模、价格或上市日。",
-        "whyItMatters": "若公开融资推进，可能改变模型公司的资金来源及算力投入能力。提交文件尚未产生已到账资金，不能直接当成新增算力订单或商业收入。",
-        "counterCase": "注册可能延迟或条件变化；未核发行规模与最终融资完成，不能把IPO程序启动当作已上市。",
-        "affected": [
-          "AI模型服务",
-          "企业AI应用"
-        ],
-        "author": "AnthropicAI",
-        "publishedAt": "2026-10-26T13:05:46Z",
-        "url": "https://x.com/AnthropicAI/status/2114705042817110293",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "anthropic": 3
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-        "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-        "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-        "originalText": "Anthropic has filed an S-1 registration statement with the SEC related to its proposed IPO.\n\nRead more: https://www.anthropic.com/news/s1-sec\n\nLegal disclaimer: A registration statement relating to these securities has been filed with the SEC but has not yet become effective. These securities may not be sold, nor may offers to buy be accepted, prior to the time the registration statement becomes effective. This post does not constitute an offer to sell or the solicitation of an offer to buy these securities, nor shall there be any sale of these securities in any state or jurisdiction in which such offer, solicitation or sale would be unlawful prior to registration or qualification under the securities laws of any such state or jurisdiction."
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-27T00:48:02.764Z",
-      "legacy": false
     }
-  ],
-  "lastAttemptAt": "2026-10-30T00:29:16.530Z",
-  "attemptedCutoff": "2026-10-30T08:00:00+08:00"
+  ]
 }
