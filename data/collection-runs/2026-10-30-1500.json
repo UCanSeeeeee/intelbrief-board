@@ -7735,7 +7735,7 @@
   ],
   "pending": [],
   "publication": {
-    "status": "local-artifacts-ready",
+    "status": "verified",
     "preparedAt": "2026-10-30T07:48:55.038Z",
     "localChecks": "用户要求跳过test/check/build/预览及额外回归；仅执行发布器数据契约与来源/保留审查。",
     "preservation": {
@@ -7801,7 +7801,233 @@
     "sourceBoundaries": {
       "botQuestions": 0,
       "localTestCheckBuildPreview": false
-    }
+    },
+    "commit": "eed18f2880f52a30c7354e089ed010789048d254",
+    "pushedAt": "2026-10-30T07:52:23.296483+00:00",
+    "remoteVerified": true,
+    "cloudflareFirstObservation": {
+      "checkRuns": [],
+      "note": "GitHub尚未注册该提交的Cloudflare检查；不是部署失败，也不是已上线。"
+    },
+    "verifiedAt": "2026-10-30T07:53:49.205176+00:00",
+    "verification": {
+      "commit": "eed18f2880f52a30c7354e089ed010789048d254",
+      "cloudflare": [
+        {
+          "name": "Cloudflare Pages",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "eed18f2880f52a30c7354e089ed010789048d254",
+          "started_at": "2026-10-30T07:51:39Z",
+          "completed_at": "2026-10-30T07:51:39Z",
+          "details_url": "https://dash.cloudflare.com/?to=/654fc092fc71c4dc81184933d5b808b9/pages/view/intelbrief-board/7dde85cb-8655-468d-8277-2e28ae757ce1",
+          "external_id": "7dde85cb-8655-468d-8277-2e28ae757ce1"
+        }
+      ],
+      "resources": [
+        {
+          "path": "data/stock-briefs/2026-10-30-1500.json",
+          "httpStatus": 200,
+          "localSha256": "add19e22dfa6234c6acb64b9f4573ec5136ae5422172b64cc434cf7a960817cb",
+          "remoteSha256": "add19e22dfa6234c6acb64b9f4573ec5136ae5422172b64cc434cf7a960817cb",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:41.204579+00:00"
+        },
+        {
+          "path": "data/stock-briefs/index.json",
+          "httpStatus": 200,
+          "localSha256": "388802d01880b1ba6a052f9d5ee5df918f98545bfb597222e1379b2fd8978a39",
+          "remoteSha256": "388802d01880b1ba6a052f9d5ee5df918f98545bfb597222e1379b2fd8978a39",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:40.913018+00:00"
+        },
+        {
+          "path": "data/reading-board.json",
+          "httpStatus": 200,
+          "localSha256": "3067dfa9be68fe59197a5ba3abb8110d6dcdd281eb620ebc23a69bcc92fe9af3",
+          "remoteSha256": "3067dfa9be68fe59197a5ba3abb8110d6dcdd281eb620ebc23a69bcc92fe9af3",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:41.360300+00:00"
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "httpStatus": 200,
+          "localSha256": "971241878c0b87bf5c7b8fe5e0c95ff994503e9e0f2be8b9ced89978019f7521",
+          "remoteSha256": "971241878c0b87bf5c7b8fe5e0c95ff994503e9e0f2be8b9ced89978019f7521",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:41.125346+00:00"
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "httpStatus": 200,
+          "localSha256": "8ffa658bc6913e07194ab3a6401003b74953503763791ec14c3c77867ca590e7",
+          "remoteSha256": "8ffa658bc6913e07194ab3a6401003b74953503763791ec14c3c77867ca590e7",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:42.408050+00:00"
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "httpStatus": 200,
+          "localSha256": "9d3a6e39139500a03167d7dbdf70c3bad7d2a13981938349f532e35d68929338",
+          "remoteSha256": "9d3a6e39139500a03167d7dbdf70c3bad7d2a13981938349f532e35d68929338",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:41.973126+00:00"
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "httpStatus": 200,
+          "localSha256": "b036e92530f9f63200f08e6af895f382ad83b103a16e37d639e6367c028ff52f",
+          "remoteSha256": "b036e92530f9f63200f08e6af895f382ad83b103a16e37d639e6367c028ff52f",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:41.987554+00:00"
+        },
+        {
+          "path": "data/market-volatility.json",
+          "httpStatus": 200,
+          "localSha256": "d2e81eddd521d6d581b8b1a0c3032b455af06b1fcd989d14916c9268cc094f16",
+          "remoteSha256": "d2e81eddd521d6d581b8b1a0c3032b455af06b1fcd989d14916c9268cc094f16",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:42.504455+00:00"
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "httpStatus": 200,
+          "localSha256": "88f26c55a51c5984f1aac6c09db39dc123678320f58ae26809272c3faba1fa57",
+          "remoteSha256": "88f26c55a51c5984f1aac6c09db39dc123678320f58ae26809272c3faba1fa57",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:43.145585+00:00"
+        },
+        {
+          "path": "data/macro-events.json",
+          "httpStatus": 200,
+          "localSha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044",
+          "remoteSha256": "f63e5f589b08478022008f0ed2e8eda8a0165bd4ab6bcf8e83d4ee4acedff044",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:42.468258+00:00"
+        },
+        {
+          "path": "data/learning.json",
+          "httpStatus": 200,
+          "localSha256": "924c2a807f1ca2b62e95639937c37f41488c0dfd450d51802cfa8add89281dc2",
+          "remoteSha256": "924c2a807f1ca2b62e95639937c37f41488c0dfd450d51802cfa8add89281dc2",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:42.998030+00:00"
+        },
+        {
+          "path": "data/journal-learning.json",
+          "httpStatus": 200,
+          "localSha256": "a76c2f61f75d37cb8d924753d0302f59a1f25ef9f39186251298f1756332b26f",
+          "remoteSha256": "a76c2f61f75d37cb8d924753d0302f59a1f25ef9f39186251298f1756332b26f",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:43.117811+00:00"
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "httpStatus": 200,
+          "localSha256": "7da819a3b5bc3332917e0c0ff252b7b99c0f02216e9fdfe6181ccf6143ea546d",
+          "remoteSha256": "7da819a3b5bc3332917e0c0ff252b7b99c0f02216e9fdfe6181ccf6143ea546d",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:43.117419+00:00"
+        },
+        {
+          "path": "config/learning.json",
+          "httpStatus": 200,
+          "localSha256": "72116e97149d702477305aa3c639f9313903016e4fcce29145f5bc88beeec9b6",
+          "remoteSha256": "72116e97149d702477305aa3c639f9313903016e4fcce29145f5bc88beeec9b6",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:43.455245+00:00"
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "httpStatus": 200,
+          "localSha256": "037b4efbb04a28dc3bee47e11be0f127f122c3f02b9a56dafd833abd0a730c30",
+          "remoteSha256": "037b4efbb04a28dc3bee47e11be0f127f122c3f02b9a56dafd833abd0a730c30",
+          "bytesIdentical": true,
+          "jsonValid": true,
+          "checkedAt": "2026-10-30T07:52:43.613167+00:00"
+        }
+      ],
+      "apis": [
+        {
+          "path": "api/vix",
+          "httpStatus": 200,
+          "jsonValid": true,
+          "response": {
+            "schemaVersion": 1,
+            "id": "cboe-vix",
+            "value": 17.2,
+            "asOfDate": "2026-10-29",
+            "quoteKind": "close",
+            "previousClose": 16.91,
+            "fetchedAt": "2026-10-30T07:52:44.203Z",
+            "source": {
+              "name": "Cboe",
+              "url": "https://www.cboe.com/tradable-products/vix",
+              "dataUrl": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+            },
+            "retrieval": {
+              "status": "ok"
+            }
+          },
+          "checkedAt": "2026-10-30T07:52:44.181994+00:00"
+        },
+        {
+          "path": "api/market-sentiment",
+          "httpStatus": 200,
+          "jsonValid": true,
+          "response": {
+            "schemaVersion": 1,
+            "id": "cnn-fear-greed",
+            "market": "us-equities",
+            "score": 34.6,
+            "rating": "fear",
+            "timestamp": "2026-10-30T00:00:00+00:00",
+            "fetchedAt": "2026-10-30T07:52:45.541Z",
+            "previous": {
+              "close": 34.6,
+              "week": 16.685714285714287,
+              "month": 30.314285714285717,
+              "year": 37.05714285714286
+            },
+            "source": {
+              "name": "CNN Fear & Greed Index",
+              "url": "https://www.cnn.com/markets/fear-and-greed",
+              "method": "cnn",
+              "dataUrl": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+              "mirrorUrl": null
+            },
+            "retrieval": {
+              "status": "retained",
+              "message": "来源时间早于已存档数据，保留较新值",
+              "errors": [
+                {
+                  "source": "cnn",
+                  "message": "HTTP 418"
+                }
+              ]
+            }
+          },
+          "checkedAt": "2026-10-30T07:52:45.502042+00:00"
+        }
+      ],
+      "checkedAt": "2026-10-30T07:52:45.502265+00:00"
+    },
+    "remoteCommit": "eed18f2880f52a30c7354e089ed010789048d254",
+    "note": "内容提交与远端一致，Cloudflare completed success，15个允许公开JSON逐字节一致；只读VIX/CNN响应已保存。后续仅补非公开审计回执，不重新采集。"
   },
   "preflight": {
     "remote": "https://github.com/UCanSeeeeee/intelbrief-board.git",
@@ -7819,5 +8045,7 @@
     "bot": "paused",
     "thirdPath": false
   },
-  "timingNote": "实际ops墙钟；未分别记录的前置阅读/导航起点未知，不补造。"
+  "timingNote": "ops为实际墙钟；热点每股确认/提交时间与读取上界见hotspotSessions，未单独测到的模型完成时刻、前置阅读时间或重叠阶段不补造。",
+  "finishedAt": "2026-10-30T07:53:49.205376+00:00",
+  "overallStatus": "partial"
 }

@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-30T15:00:16+08:00",
-  "updatedAt": "2026-10-30T15:49:49+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-30T15:53:49+08:00",
+  "finishedAt": "2026-10-30T15:53:49+08:00",
   "gitHeadAtStart": "5500456dbbfbfc8ae9b012f9124e451edc051836",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": "2026-10-30T15:49:49+08:00",
-      "detail": "准备明确暂存本次路径"
+      "status": "ok",
+      "at": "2026-10-30T15:52:23+08:00",
+      "detail": "内容提交eed18f2已推送，ls-remote与本地HEAD一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": "2026-10-30T15:49:49+08:00",
-      "detail": "待远端及Cloudflare相关JSON"
+      "status": "ok",
+      "at": "2026-10-30T15:53:49+08:00",
+      "detail": "Cloudflare成功；15/15公开JSON字节一致；VIX官方17.20；CNN34.6快照与只读API保留降级已记录"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": null
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "eed18f2880f52a30c7354e089ed010789048d254",
+  "notes": [
+    "采集查询30对象完成；证据缺口如实保留，内容已推送且Cloudflare15公开JSON一致。"
+  ],
   "timings": [
     {
       "page": "news",
