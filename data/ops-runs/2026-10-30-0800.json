@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-30T08:03:36+08:00",
-  "updatedAt": "2026-10-30T08:30:04+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-30T08:31:39+08:00",
+  "finishedAt": "2026-10-30T08:31:39+08:00",
   "gitHeadAtStart": "966d6114af59fdec8c78ab888559a4e3f57f67a8",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-30T08:30:44+08:00",
+      "detail": "内容提交8bed476已push origin HEAD:master；Cloudflare已开始部署"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-30T08:31:39+08:00",
+      "detail": "Cloudflare内容提交success；15/15公开JSON字节与SHA256一致；VIX16.91为10/28收盘、CNN34.6与静态值一致"
     }
   ],
   "pages": {
@@ -77,15 +77,12 @@
       "detail": "详见同运行分批审计；失败与证据缺口保留"
     }
   },
-  "status": "failed",
-  "error": {
-    "stage": "search",
-    "message": "新闻发现完成但追源被Expert额度拦截，23其他对象未发送；论文/财报独立例外已完成",
-    "stackSnippet": null
-  },
-  "commitHash": null,
+  "status": "partial",
+  "error": null,
+  "commitHash": "8bed476580f28cd97fccbbcf4b466c09dfdd7c56",
   "notes": [
-    "冻结北京时间08:00；首次写前ff-only pull成功，保留原未跟踪文件；不运行本地验证"
+    "冻结北京时间08:00；首次写前ff-only pull成功，保留原未跟踪文件；不运行本地验证",
+    "发布成功；X额度导致未完成，Science缺1及4财报可比预期缺口保留。未运行本地验证。"
   ],
   "timings": [
     {
