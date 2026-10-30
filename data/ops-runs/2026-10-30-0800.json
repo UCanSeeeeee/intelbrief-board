@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-10-30-0800",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-10-30T08:03:36+08:00",
+  "updatedAt": "2026-10-30T08:30:04+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "966d6114af59fdec8c78ab888559a4e3f57f67a8",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-10-30T08:30:03+08:00",
+      "detail": "首次写入前ff-only成功；发布前fetch确认未分叉"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-10-30T08:30:03+08:00",
+      "detail": "按本批加载项目契约和知识库"
+    },
+    {
+      "name": "search",
+      "status": "failed",
+      "at": "2026-10-30T08:30:03+08:00",
+      "detail": "新闻发现完成但追源被Expert额度拦截，23其他对象未发送；论文/财报独立例外已完成"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-10-30T08:30:03+08:00",
+      "detail": "各批先落审计再record；存量和旧成功截止保留；合并5论文/16财报"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-10-30T08:30:03+08:00",
+      "detail": "用户明确不需要本地test/check/build/预览/额外回归；仅发布器数据契约及来源/差异审查"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "详见同运行分批审计；失败与证据缺口保留"
+    },
+    "people": {
+      "status": "failed",
+      "detail": "详见同运行分批审计；失败与证据缺口保留"
+    },
+    "tickers": {
+      "status": "failed",
+      "detail": "详见同运行分批审计；失败与证据缺口保留"
+    },
+    "ai": {
+      "status": "failed",
+      "detail": "详见同运行分批审计；失败与证据缺口保留"
+    },
+    "earnings": {
+      "status": "partial",
+      "detail": "详见同运行分批审计；失败与证据缺口保留"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "详见同运行分批审计；失败与证据缺口保留"
+    }
+  },
+  "status": "failed",
+  "error": {
+    "stage": "search",
+    "message": "新闻发现完成但追源被Expert额度拦截，23其他对象未发送；论文/财报独立例外已完成",
+    "stackSnippet": null
+  },
+  "commitHash": null,
+  "notes": [
+    "冻结北京时间08:00；首次写前ff-only pull成功，保留原未跟踪文件；不运行本地验证"
+  ],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-30T08:03:36+08:00",
+      "endedAt": "2026-10-30T08:09:59+08:00",
+      "durationMs": 383000,
+      "detail": "两轮新闻发现与六包均完成；初轮追源后Expert网页周额度耗尽，定向补查失败，独立反证未执行。新候选不发布；既有池/重点保留。Bot暂停，无第三X路径。"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-30T08:03:36+08:00",
+      "endedAt": "2026-10-30T08:06:51+08:00",
+      "durationMs": 195000,
+      "detail": "两轮独立发现及六包已完成，8+11候选；无候选资本成本包后两阶段跳过"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "failed",
+      "startedAt": "2026-10-30T08:06:51+08:00",
+      "endedAt": "2026-10-30T08:09:58+08:00",
+      "durationMs": 187000,
+      "detail": "初轮追源完成，定向补查遭Expert每周额度上限；不采用二传数字"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-30T08:10:18+08:00",
+      "endedAt": "2026-10-30T08:10:19+08:00",
+      "durationMs": 1000,
+      "detail": "本轮新闻补查已明确Expert每周额度耗尽；未发送该对象查询，非无结果。Bot暂停，禁第三路径；存量/上次成功截止保留。"
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-30T08:10:18+08:00",
+      "durationMs": 0,
+      "detail": "未执行发现，无新候选；旧证据不重复研究"
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-30T08:10:18+08:00",
+      "durationMs": 0,
+      "detail": "未执行发现，无新候选"
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-30T08:10:19+08:00",
+      "endedAt": "2026-10-30T08:10:39+08:00",
+      "durationMs": 20000,
+      "detail": "本轮新闻补查已明确Expert每周额度耗尽；未发送该对象查询，非无结果。Bot暂停，禁第三路径；存量/上次成功截止保留。"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-30T08:10:29+08:00",
+      "endedAt": "2026-10-30T08:18:45+08:00",
+      "durationMs": 496000,
+      "detail": "已合并5论文，Nature3 Science2缺1；其余components按计划跳过"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-10-30T08:10:29+08:00",
+      "endedAt": "2026-10-30T08:12:26+08:00",
+      "durationMs": 117000,
+      "detail": "论文限定非X例外发现；子刊/评论/已收DOI排除，近期Emotion/Diet/Hypertension与往期cash候选"
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-30T08:10:39+08:00",
+      "durationMs": 0,
+      "detail": "未执行发现，无新候选；旧证据不重复研究"
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-30T08:10:39+08:00",
+      "durationMs": 0,
+      "detail": "未执行发现，无新候选"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "failed",
+      "startedAt": "2026-10-30T08:10:39+08:00",
+      "endedAt": "2026-10-30T08:10:39+08:00",
+      "durationMs": 0,
+      "detail": "本轮新闻补查已明确Expert每周额度耗尽；未发送该对象查询，非无结果。Bot暂停，禁第三路径；存量/上次成功截止保留。"
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-30T08:10:39+08:00",
+      "durationMs": 0,
+      "detail": "未执行发现，无新候选；旧证据不重复研究"
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-10-30T08:10:39+08:00",
+      "durationMs": 0,
+      "detail": "未执行发现，无新候选"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-10-30T08:12:26+08:00",
+      "endedAt": "2026-10-30T08:18:44+08:00",
+      "durationMs": 378000,
+      "detail": "Nature3/Science2逐DOI及主要实验/结果核对，41往期原样合并保留；Science1候选留待核"
+    },
+    {
+      "page": "learning",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-10-30T08:14:05+08:00",
+      "endedAt": "2026-10-30T08:18:44+08:00",
+      "durationMs": 279000,
+      "detail": "正式更正/复现检索完成，现金模型敏感性与历史错觉/睡眠测量争论已写边界；部分付费预览范围如实标注"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-30T08:18:45+08:00",
+      "endedAt": "2026-10-30T08:18:55+08:00",
+      "durationMs": 10000,
+      "detail": "无新到期/过时信号，复用昨晚PCE及Fed日历证据，不广查"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-10-30T08:18:55+08:00",
+      "endedAt": "2026-10-30T08:29:04+08:00",
+      "durationMs": 609000,
+      "detail": "16家逐项完成：12评分、4unknown；保留旧T/TTE/SONY及自主理由，pending0；未伪造子阶段耗时"
+    }
+  ]
+}
