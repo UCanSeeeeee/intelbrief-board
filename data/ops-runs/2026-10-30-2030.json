@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-30T20:35:52+08:00",
-  "updatedAt": "2026-10-30T21:35:35+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-30T21:38:04+08:00",
+  "finishedAt": "2026-10-30T21:38:04+08:00",
   "gitHeadAtStart": "8d959bdd82f84d659a5c806521d09b872d88dd28",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-30T21:36:05+08:00",
+      "detail": "内容提交0217cc0d9dc6b1ba806c5f12904d9b5e7d88e281明确push origin HEAD:master；ls-remote逐字一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-30T21:38:03+08:00",
+      "detail": "Cloudflare exact content HEAD成功；15公共JSON最终逐字一致；VIX200，CNN418保留本轮快照，非刷新成功"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "无新增到期/过时信号，官方既有证据复用"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "0217cc0d9dc6b1ba806c5f12904d9b5e7d88e281",
+  "notes": [
+    "30对象查询完成；证据不足/三股热点partial及2财报unknown留档。已发布并核对15JSON，Bot0，本地验证按用户要求跳过。"
+  ],
   "timings": [
     {
       "page": "news",
