@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-31T00:54:13.767Z",
-  "cutoff": "2026-10-31T08:00:00+08:00",
+  "updatedAt": "2026-10-31T12:49:09.564Z",
+  "cutoff": "2026-10-31T20:00:00+08:00",
   "source": "X only",
   "status": "complete",
   "coverage": {
@@ -9,30 +9,52 @@
       {
         "id": "openai",
         "status": "complete",
-        "note": "查询完成；3对象有最小新事实，其他对象无新合格候选。",
-        "cutoff": "2026-10-31T08:00:00+08:00"
+        "note": "实际精确增量查询完成；新卡/证据不足/旧闻分列，不表示全X覆盖。",
+        "cutoff": "2026-10-31T20:00:00+08:00"
       },
       {
         "id": "anthropic",
         "status": "complete",
-        "note": "查询完成；3对象有最小新事实，其他对象无新合格候选。",
-        "cutoff": "2026-10-31T08:00:00+08:00"
+        "note": "实际精确增量查询完成；新卡/证据不足/旧闻分列，不表示全X覆盖。",
+        "cutoff": "2026-10-31T20:00:00+08:00"
       },
       {
         "id": "goog-ai",
         "status": "complete",
-        "note": "查询完成；3对象有最小新事实，其他对象无新合格候选。",
-        "cutoff": "2026-10-31T08:00:00+08:00"
+        "note": "实际精确增量查询完成；新卡/证据不足/旧闻分列，不表示全X覆盖。",
+        "cutoff": "2026-10-31T20:00:00+08:00"
       },
       {
         "id": "ai-others",
         "status": "complete",
-        "note": "查询完成；3对象有最小新事实，其他对象无新合格候选。",
-        "cutoff": "2026-10-31T08:00:00+08:00"
+        "note": "实际精确增量查询完成；新卡/证据不足/旧闻分列，不表示全X覆盖。",
+        "cutoff": "2026-10-31T20:00:00+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "anthropic-automated-subtle-emergent-misalignment-20261031",
+      "tabIds": [
+        "anthropic"
+      ],
+      "title": "Anthropic公布自动化红队安全研究",
+      "fact": "Anthropic公布自动化研究：让数千个Claude智能体尝试绕过训练数据监测器，生成表面无害、却能教出失配行为的数据。团队认为这些例子可用于改进未来监测器，并明确表示这仍是第一步，未来或可用更强模型和更多算力继续推进。这里是研究公告，未披露产品防护已上线或实际部署事故。",
+      "whyItMatters": "自动化红队若能扩大测试覆盖，可能缓解人工安全研究的时间瓶颈；但研究样本能否推广到其他模型与真实工作流，仍需复现和部署验证，不能据此推导已消除风险。",
+      "counterCase": "若其他模型或监测器无法复现该效应，或加强监测已能阻断同类样本，研究的可推广性会改变；当前原帖没有量化实际部署防护效果。",
+      "affected": [],
+      "author": "AnthropicAI",
+      "publishedAt": "2026-10-31T01:59:06Z",
+      "url": "https://x.com/AnthropicAI/status/2116349211549843666",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "New Anthropic research: Automating subtle emergent misalignment research. Red-teaming is a vital part of model safety testing, but it’s also limited by researchers’ time. To see if we could automate it, we set thousands of Claude agents the task of evading a training data monitor. These agents developed training data that looked harmless to monitors (like a veteran wrestler mentoring a newcomer, or a Q&A about professional beekeeping), but that in fact taught misaligned behavior. Examples like these can be used to directly improve future training data monitors. This research is only a first step, but it suggests that future red-teaming efforts could improve much further, using better models and more compute. Read the full post on the Alignment Science Blog:",
+      "firstIncludedAt": "2026-10-31T12:49:09.564Z",
+      "lastMaterialAt": "2026-10-31T12:49:09.564Z",
+      "people": []
+    },
     {
       "eventKey": "claude-max-ultra-limits-20261030",
       "tabIds": [
@@ -51,11 +73,11 @@
       "weeklyRanks": {
         "anthropic": 1
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Weekly limits remain unchanged.",
+      "people": [],
       "firstIncludedAt": "2026-10-31T00:54:13.767Z",
       "lastMaterialAt": "2026-10-31T00:54:13.767Z",
-      "people": []
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Weekly limits remain unchanged."
     },
     {
       "eventKey": "ai-suncatcher-first-response-20261030",
@@ -75,16 +97,16 @@
       "weeklyRanks": {
         "goog-ai": 1
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Suncatcher hello world; orbital TPU received first complete haiku response",
-      "firstIncludedAt": "2026-10-31T00:54:13.767Z",
-      "lastMaterialAt": "2026-10-31T00:54:13.767Z",
       "people": [
         {
           "name": "Sundar Pichai",
           "intro": "谷歌及Alphabet CEO"
         }
-      ]
+      ],
+      "firstIncludedAt": "2026-10-31T00:54:13.767Z",
+      "lastMaterialAt": "2026-10-31T00:54:13.767Z",
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "Suncatcher hello world; orbital TPU received first complete haiku response"
     },
     {
       "eventKey": "openai-private-intelligence-20261030",
@@ -104,11 +126,11 @@
       "weeklyRanks": {
         "openai": 1
       },
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "We’re building these protections in close collaboration with some of our largest customers.",
+      "people": [],
       "firstIncludedAt": "2026-10-31T00:54:13.767Z",
       "lastMaterialAt": "2026-10-31T00:54:13.767Z",
-      "people": []
+      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+      "originalText": "We’re building these protections in close collaboration with some of our largest customers."
     },
     {
       "eventKey": "openai-monitoring-20261029",
@@ -449,6 +471,35 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "anthropic-automated-subtle-emergent-misalignment-20261031",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Anthropic公布自动化红队安全研究",
+        "fact": "Anthropic公布自动化研究：让数千个Claude智能体尝试绕过训练数据监测器，生成表面无害、却能教出失配行为的数据。团队认为这些例子可用于改进未来监测器，并明确表示这仍是第一步，未来或可用更强模型和更多算力继续推进。这里是研究公告，未披露产品防护已上线或实际部署事故。",
+        "whyItMatters": "自动化红队若能扩大测试覆盖，可能缓解人工安全研究的时间瓶颈；但研究样本能否推广到其他模型与真实工作流，仍需复现和部署验证，不能据此推导已消除风险。",
+        "counterCase": "若其他模型或监测器无法复现该效应，或加强监测已能阻断同类样本，研究的可推广性会改变；当前原帖没有量化实际部署防护效果。",
+        "affected": [],
+        "author": "AnthropicAI",
+        "publishedAt": "2026-10-31T01:59:06Z",
+        "url": "https://x.com/AnthropicAI/status/2116349211549843666",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "New Anthropic research: Automating subtle emergent misalignment research. Red-teaming is a vital part of model safety testing, but it’s also limited by researchers’ time. To see if we could automate it, we set thousands of Claude agents the task of evading a training data monitor. These agents developed training data that looked harmless to monitors (like a veteran wrestler mentoring a newcomer, or a Q&A about professional beekeeping), but that in fact taught misaligned behavior. Examples like these can be used to directly improve future training data monitors. This research is only a first step, but it suggests that future red-teaming efforts could improve much further, using better models and more compute. Read the full post on the Alignment Science Blog:",
+        "firstIncludedAt": "2026-10-31T12:49:09.564Z",
+        "lastMaterialAt": "2026-10-31T12:49:09.564Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-10-31T12:49:09.564Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "claude-max-ultra-limits-20261030",
         "tabIds": [
           "anthropic"
@@ -466,11 +517,11 @@
         "weeklyRanks": {
           "anthropic": 1
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Weekly limits remain unchanged.",
+        "people": [],
         "firstIncludedAt": "2026-10-31T00:54:13.767Z",
         "lastMaterialAt": "2026-10-31T00:54:13.767Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Weekly limits remain unchanged."
       },
       "tabIds": [
         "anthropic"
@@ -497,16 +548,16 @@
         "weeklyRanks": {
           "goog-ai": 1
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Suncatcher hello world; orbital TPU received first complete haiku response",
-        "firstIncludedAt": "2026-10-31T00:54:13.767Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.767Z",
         "people": [
           {
             "name": "Sundar Pichai",
             "intro": "谷歌及Alphabet CEO"
           }
-        ]
+        ],
+        "firstIncludedAt": "2026-10-31T00:54:13.767Z",
+        "lastMaterialAt": "2026-10-31T00:54:13.767Z",
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "Suncatcher hello world; orbital TPU received first complete haiku response"
       },
       "tabIds": [
         "goog-ai"
@@ -533,11 +584,11 @@
         "weeklyRanks": {
           "openai": 1
         },
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "We’re building these protections in close collaboration with some of our largest customers.",
+        "people": [],
         "firstIncludedAt": "2026-10-31T00:54:13.767Z",
         "lastMaterialAt": "2026-10-31T00:54:13.767Z",
-        "people": []
+        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
+        "originalText": "We’re building these protections in close collaboration with some of our largest customers."
       },
       "tabIds": [
         "openai"
