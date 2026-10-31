@@ -37,7 +37,7 @@ function carriedOver(root,editions,job,start,input) {
   const {displayWindowStart}=displayWindow(job.cutoff);
   const fresh=new Set([...(input.focus||[]),...(input.insights||[])].map(e=>String(e.eventKey).trim().toLowerCase()));
   const out=[];
-  for(const entry of editions.filter(e=>e.status!=='failed'&&Date.parse(e.scheduledFor)<Date.parse(job.cutoff)&&Date.parse(e.scheduledFor)>Date.parse(displayWindowStart))) {
+  for(const entry of editions.filter(e=>e.status!=='failed'&&Date.parse(e.informationCutoff||e.scheduledFor)<Date.parse(job.cutoff)&&Date.parse(e.informationCutoff||e.scheduledFor)>Date.parse(displayWindowStart))) {
     const file=path.join(root,'data/stock-briefs',entry.file);
     if(!fs.existsSync(file)) continue;
     const old=JSON.parse(fs.readFileSync(file,'utf8'));

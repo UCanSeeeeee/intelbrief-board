@@ -4,11 +4,11 @@
     "enabled": true,
     "appliesTo": "all-configured-tabs",
     "limit": 5,
-    "windowDays": 1,
+    "windowMode": "since-last-success",
     "sourceNature": "non-official",
     "ranking": "grok-observed-views-desc",
-    "discovery": "isolated-keyword-24h-top-five",
-    "collectionMode": "rolling-24h-snapshot",
+    "discovery": "isolated-keyword-incremental-top-five",
+    "collectionMode": "incremental-ranking",
     "contentFilters": [],
     "missingViews": "unranked-audit-only",
     "independentOfValueSelection": true
@@ -161,5 +161,5 @@
     }
   ],
   "updatedAt": "2026-10-12T11:00:00+08:00",
-  "notes": "美股个股 Tab，规则对齐具体人物个人 Tab：latest 最多 5 条（滚动 24h），重点榜最多 5 条（滚动 7 天）。仅股权标的（NVDA/MU/INTC/GOOG/AVGO/VRT/TSM）。加密栏目已于2026-10-15暂时停用。信息来源：已登录 Grok 网页 → 网页不可用或覆盖不足且额度可用时才尝试 Grok Bot「X+github」。本窗零新增的 Tab 由执行器保留窗口内旧重点榜条目。"
+  "notes": "美股个股 Tab，规则对齐具体人物个人 Tab：latest 最多 5 条（滚动 24h），重点榜最多 5 条（滚动 7 天）。仅股权标的（NVDA/MU/INTC/GOOG/AVGO/VRT/TSM）。加密栏目已于2026-10-15暂时停用。信息来源：Grok Bot「X+github」优先 → Bot 不可用或覆盖不足时使用已登录 Grok 网页 Expert。本窗零新增的 Tab 由执行器保留窗口内旧重点榜条目。"
 }

@@ -36,14 +36,18 @@ function migrateBoard(previous) {
 function readBoard(root){
   const board=migrateBoard(validateBoard(fs.existsSync(fileAt(root))?JSON.parse(fs.readFileSync(fileAt(root),'utf8')):emptyBoard()));
   const indexFile=path.join(root,'data/stock-briefs/index.json');
-  if(!board.lastUsableCutoff&&fs.existsSync(indexFile))board.lastUsableCutoff=JSON.parse(fs.readFileSync(indexFile,'utf8')).editions.filter(e=>e.status!=='failed'&&(!board.asOf||Date.parse(e.scheduledFor)<=Date.parse(board.asOf))).sort((a,b)=>Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor))[0]?.scheduledFor||null;
+  if(!board.lastUsableCutoff&&fs.existsSync(indexFile)){
+    const latest=JSON.parse(fs.readFileSync(indexFile,'utf8')).editions.filter(e=>e.status!=='failed'&&(!board.asOf||Date.parse(e.informationCutoff||e.scheduledFor)<=Date.parse(board.asOf))).sort((a,b)=>Date.parse(b.informationCutoff||b.scheduledFor)-Date.parse(a.informationCutoff||a.scheduledFor))[0];
+    board.lastUsableCutoff=latest?.informationCutoff||latest?.scheduledFor||null;
+  }
   return board;
 }
 function advance(previous,brief) {
   const out=migrateBoard(previous),signature=`${brief.id}:${brief.generatedAt}`;
   if(out.applied.includes(signature))return out;
-  if(out.asOf&&Date.parse(brief.scheduledFor)<Date.parse(out.asOf))return out; // archive backfill never rewinds live state
-  const ctx=context(brief.generatedAt),cutoff=Date.parse(brief.scheduledFor);
+  const informationCutoff=brief.informationCutoff||brief.scheduledFor;
+  if(out.asOf&&Date.parse(informationCutoff)<Date.parse(out.asOf))return out; // archive backfill never rewinds live state
+  const ctx=context(brief.generatedAt),cutoff=Date.parse(informationCutoff);
   const items=new Map(out.events.map(e=>[key(e.eventKey),e]));
   out.warnings=[];
   // Expiry only occurs on a usable new batch, never just because the clock advanced.
@@ -78,8 +82,8 @@ function advance(previous,brief) {
     }
   } else out.warnings.push('本期采集失败，保留上次待阅内容；不是本期新增或已重新核验。');
   out.events=[...items.values()];
-  out.applied.push(signature);out.asOf=brief.scheduledFor;out.updatedAt=brief.generatedAt;out.period=context(brief.scheduledFor);out.lastStatus=brief.status;out.latestEditionId=brief.id;
-  if(brief.status!=='failed')out.lastUsableCutoff=brief.scheduledFor;
+  out.applied.push(signature);out.asOf=informationCutoff;out.updatedAt=brief.generatedAt;out.period=context(informationCutoff);out.lastStatus=brief.status;out.latestEditionId=brief.id;
+  if(brief.status!=='failed')out.lastUsableCutoff=informationCutoff;
   out.coverage={status:brief.status==='failed'?'failed':brief.coverage?.status|| (brief.coverage?.gaps?.length?'partial':'complete')};
   out.selected={};
   for(const [group,limit]of [['focus',5],['insights',10]]) {

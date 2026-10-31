@@ -8,6 +8,7 @@ if(!sourcePath||!auditFile||!outputPath)throw new Error('用法：import-ticker-
 const source=JSON.parse(fs.readFileSync(sourcePath,'utf8'));
 const audit=JSON.parse(fs.readFileSync(auditFile,'utf8'));
 const cfg=JSON.parse(fs.readFileSync(path.join(root,'config/ticker-intelligence.json'),'utf8'));
+const units=require('./lib/collection-progress').plan(root,source.cutoff,'tickers').filter(u=>u.kind==='hotspots');
 const {replaceAliases}=require('./lib/person-names');
 if(source.pendingTabs?.length)throw new Error('仍有未处理对象，保留断点不得发布');
 if(Date.parse(source.cutoff)!==Date.parse(audit.cutoff))throw new Error('来源与审计截止不一致');
@@ -15,6 +16,8 @@ const allowed=new Set(cfg.tabs.map(t=>t.id)),seen=new Set(),hotspots=[],hotspotT
 for(const tab of source.tabs){
   if(!allowed.has(tab.id)||seen.has(tab.id))throw new Error('未知或重复股票');seen.add(tab.id);
   if(!Array.isArray(tab.rows)||!tab.query||!['complete','partial','failed'].includes(tab.status))throw new Error('缺少查询或执行状态');
+  const unit=units.find(u=>u.tabId===tab.id);
+  if(!unit||Date.parse(tab.windowStart)!==Date.parse(unit.start)||Date.parse(tab.windowEnd)!==Date.parse(unit.end))throw new Error('该股实际检索窗口与成功进度不一致：'+tab.id);
   const collectionPath=tab.collectionPath||source.collectionPath;
   if(!['grok-app','grok-web'].includes(collectionPath))throw new Error('每只股票须标明实际采集路径 grok-app 或 grok-web');
   const unranked=[];
@@ -30,14 +33,14 @@ for(const tab of source.tabs){
       engagement:{views:p.views,likes:p.likes,reposts:p.reposts,replies:p.replies,capturedAt:tab.capturedAt||source.capturedAt,source:collectionPath==='grok-app'?'grok-app-observed':'grok-web-observed'}});
   }
   if(unranked.length)tab.unranked=unranked;
-  hotspotTabs.push({id:tab.id,status:tab.status==='failed'?'failed':unranked.length?'partial':tab.status,queries:[tab.query,...(tab.followups||[])],note:tab.note||'Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。'});
+  hotspotTabs.push({id:tab.id,status:tab.status==='failed'?'failed':unranked.length?'partial':tab.status,windowComplete:tab.windowComplete===true,queries:[tab.query,...(tab.followups||[])],note:tab.note||'Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。'});
 }
 if(seen.size!==allowed.size)throw new Error('未覆盖全部配置股票');
 const relative=path.relative(root,path.resolve(auditFile)).split(path.sep).join('/');
 const output={cutoff:source.cutoff,auditFile:relative,conversationUrl:source.conversationUrl,
-  hotspotSnapshot:cfg.hotspotPolicy.collectionMode==='rolling-24h-snapshot'||!!audit.backfill&&audit.backfill.start===source.windowStart&&audit.backfill.end===source.cutoff,
+  hotspotSnapshot:true,
   observationNote:source.provenance,toolEvidence:source.toolEvidence,excludedCandidates:source.excludedCandidates||[],hotspotTabs,hotspots,
-  hotspotCollectionUnits:cfg.tabs.map(t=>({id:`tickers:${t.id}:hotspots`,object:`${t.id}:hotspots`,start:source.windowStart,end:source.cutoff,needsQuery:true}))};
+  hotspotCollectionUnits:units};
 audit.batches[0].sourceFile=path.relative(root,path.resolve(sourcePath)).split(path.sep).join('/');
 audit.batches[0].output={hotspots,hotspotTabs};
 audit.batches[0].unrankedCandidates=source.tabs.flatMap(t=>(t.unranked||[]).map(p=>({tabId:t.id,...p})));

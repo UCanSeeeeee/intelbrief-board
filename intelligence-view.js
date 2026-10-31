@@ -25,9 +25,7 @@
     return parse(b.publishedAt)-parse(a.publishedAt)||String(a.url).localeCompare(String(b.url));
   }
   function hotspotItems(data, tab, policy) {
-    const report=data.hotspotCoverage?.tabs?.find(r=>r.id===tab.id);
-    const cutoff=parse(report?.cutoff || data.hotspotCutoff);
-    return (data.hotspots||[]).filter(i=>i.tabId===tab.id && (!cutoff || parse(i.publishedAt)>=cutoff-(policy?.windowDays||1)*86400000))
+    return (data.hotspots||[]).filter(i=>i.tabId===tab.id)
       .sort(heatCompare).slice(0,policy?.limit||5);
   }
   function card(item, {hotspot=false, label='', heading='h4'}={}) {

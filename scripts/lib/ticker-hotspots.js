@@ -9,6 +9,7 @@ function stamps(item,old,now){
     ...(changed?{lastMaterialAt:now.toISOString()}:old?.lastMaterialAt?{lastMaterialAt:old.lastMaterialAt}:{})};
 }
 function heatCompare(a,b){const d=(Number.isInteger(b.engagement?.views)?b.engagement.views:-1)-(Number.isInteger(a.engagement?.views)?a.engagement.views:-1);return d||Date.parse(b.publishedAt)-Date.parse(a.publishedAt)||String(a.url).localeCompare(String(b.url));}
+const windowCompleted=report=>report.status==='complete'||report.status==='partial'&&report.windowComplete===true;
 function mergeHotspots(input,config,existing,cutoff,now=new Date()){
   assert(config.hotspotPolicy?.enabled,'个股热点尚未启用');
   assert(date(cutoff)&&Date.parse(cutoff)<=+now,'热点截止时间无效');
@@ -17,7 +18,10 @@ function mergeHotspots(input,config,existing,cutoff,now=new Date()){
   for(const r of input.hotspotTabs){
     assert(allowed.has(r.id)&&!reports.has(r.id)&&['complete','partial','failed'].includes(r.status)&&r.note?.trim(),'热点对象检查结果无效');
     assert(Array.isArray(r.queries)&&(r.status==='failed'||r.queries.length>0),'热点成功检查须保存实际查询');
-    reports.set(r.id,{...r,cutoff:r.status==='failed'?oldReports.get(r.id)?.cutoff||null:cutoff,lastAttemptAt:now.toISOString()});
+    assert(!oldReports.get(r.id)?.cutoff||Date.parse(oldReports.get(r.id).cutoff)<=Date.parse(cutoff),'禁止旧采集结果覆盖较新的热点榜单');
+    const unit=(input.hotspotCollectionUnits||input.collectionUnits||[]).find(u=>u.object===r.id+':hotspots');
+    if(windowCompleted(r))assert(unit&&unit.needsQuery&&date(unit.start)&&date(unit.end)&&Date.parse(unit.start)<Date.parse(unit.end)&&Date.parse(unit.end)===Date.parse(cutoff),'热点结果须覆盖本股实际采集窗口');
+    reports.set(r.id,{...r,cutoff:windowCompleted(r)?cutoff:oldReports.get(r.id)?.cutoff||null,lastAttemptAt:now.toISOString()});
   }
   assert(reports.size===allowed.size,'必须逐一报告所有配置股票的热点检查结果');
   const prior=[...(existing.hotspots||[]),...(existing.hotspotRetained||[])],seen=new Set(),urls=new Set();
@@ -30,8 +34,7 @@ function mergeHotspots(input,config,existing,cutoff,now=new Date()){
     assert(date(item.publishedAt)&&Date.parse(item.publishedAt)<=Date.parse(cutoff),'热点缺少准确发帖时间或晚于截止');
     const unit=(input.hotspotCollectionUnits||input.collectionUnits||[]).find(u=>u.object===item.tabId+':hotspots');
     const old=prior.find(p=>p.tabId===item.tabId&&(p.url===item.url||p.eventKey===item.eventKey));
-    if(unit&&!old)assert(unit.needsQuery&&Date.parse(item.publishedAt)>=Date.parse(unit.start)&&Date.parse(item.publishedAt)<Date.parse(unit.end),'热点新增超出本对象采集窗口');
-    assert(Date.parse(item.publishedAt)>=Date.parse(cutoff)-(config.hotspotPolicy.windowDays||1)*86400000,'热点超出展示窗口');
+    assert(unit&&unit.needsQuery&&Date.parse(item.publishedAt)>=Date.parse(unit.start)&&Date.parse(item.publishedAt)<Date.parse(unit.end),'热点超出本对象采集窗口');
     for(const field of ['title','fact','originalText'])assert(typeof item[field]==='string'&&item[field].trim(),'热点缺少'+field);
     assert(item.verification==='collector-report'&&item.sourceNature==='non-official','热点须标明非官方、采集器转述');
     assert(item.eventTime?date(item.eventTime):!!item.eventTimeNote?.trim(),'热点实际事件时间未知须注明，不能以发帖时间冒充');
@@ -45,19 +48,14 @@ function mergeHotspots(input,config,existing,cutoff,now=new Date()){
   });
   const hotspots=[];
   for(const tab of config.tabs){
-    const report=reports.get(tab.id),anchor=Date.parse(report.cutoff||cutoff);
-    if(report.status==='failed'){hotspots.push(...(existing.hotspots||[]).filter(i=>i.tabId===tab.id));continue;}
-    const snapshot=(config.hotspotPolicy.collectionMode==='rolling-24h-snapshot'||input.hotspotSnapshot===true)&&report.status==='complete';
-    if(snapshot){
-      const unit=(input.hotspotCollectionUnits||input.collectionUnits||[]).find(u=>u.object===tab.id+':hotspots');
-      assert(unit&&Date.parse(unit.start)===anchor-(config.hotspotPolicy.windowDays||1)*86400000&&Date.parse(unit.end)===anchor,'完整榜单替换须覆盖恰好24小时窗口');
-    }
-    const pool=new Map((snapshot?[]:prior).filter(i=>i.tabId===tab.id&&Date.parse(i.publishedAt)>=anchor-(config.hotspotPolicy.windowDays||1)*86400000).map(i=>[i.url,i]));
+    const report=reports.get(tab.id);
+    if(!windowCompleted(report)){hotspots.push(...(existing.hotspots||[]).filter(i=>i.tabId===tab.id));continue;}
+    const pool=new Map();
     for(const item of incoming.filter(i=>i.tabId===tab.id))pool.set(item.url,item);
     hotspots.push(...[...pool.values()].filter(i=>Number.isInteger(i.engagement?.views)&&i.engagement.views>=0).sort(heatCompare).slice(0,config.hotspotPolicy.limit||5));
   }
   const chosen=new Set(hotspots.map(i=>i.tabId+':'+i.eventKey));
   const hotspotRetained=[...new Map(prior.filter(i=>!chosen.has(i.tabId+':'+i.eventKey)&&Date.parse(i.lastMaterialAt||i.firstIncludedAt||i.publishedAt)>=Date.parse(cutoff)-7*86400000).map(i=>[i.tabId+':'+i.eventKey,i])).values()];
-  return require('../../daily-records').capture(existing,{...existing,hotspots,hotspotRetained,hotspotCoverage:{tabs:[...reports.values()]},hotspotCutoff:[...reports.values()].some(r=>r.status!=='failed')?cutoff:existing.hotspotCutoff||null});
+  return require('../../daily-records').capture(existing,{...existing,hotspots,hotspotRetained,hotspotCoverage:{tabs:[...reports.values()]},hotspotCutoff:[...reports.values()].some(windowCompleted)?cutoff:existing.hotspotCutoff||null});
 }
-module.exports={mergeHotspots,heatCompare,stamps};
+module.exports={mergeHotspots,heatCompare,stamps,windowCompleted};

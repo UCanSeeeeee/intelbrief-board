@@ -3,7 +3,7 @@
   "timezone": "Asia/Shanghai",
   "slots": ["08:00", "20:00"],
   "days": "daily",
-  "weekendSlots": ["08:00", "20:00"],
+  "weekendSlotsByDay": {"6": ["08:00"], "0": ["20:00"]},
   "targetCounts": { "focus": 5, "insights": 10 },
   "historyLimit": 3,
   "sourcePolicy": "X-only",

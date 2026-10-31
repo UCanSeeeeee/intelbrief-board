@@ -9,8 +9,8 @@ try {
     const {readBoard}=require('./lib/reading-board');
     const {ROOT}=require('./lib/x-data');
     const path=require('node:path');
-    const {windowStart,readCoverage,uncoveredRanges}=require('./lib/windows');
-    const cutoff=inputFile||slotAt().previous.scheduledFor;
+    const {beijingIso,windowStart,readCoverage,uncoveredRanges}=require('./lib/windows');
+    const cutoff=inputFile||beijingIso(Date.now());
     const editions=readJson(path.join(ROOT,'data/stock-briefs/index.json')).editions;
     const collectionUnits=require('./lib/collection-progress').plan(ROOT,cutoff,'news');
     const searchWindowStart=windowStart(editions,{cutoff,collectionUnits});

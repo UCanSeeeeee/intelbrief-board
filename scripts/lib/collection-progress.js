@@ -18,7 +18,7 @@ function plan(root,cutoff,page=null,state=read(root)){
   const end=iso(cutoff),limit=Date.parse(end);
   return units(root).filter(u=>!page||u.page===page).map(unit=>{
     const previous=state.units[unit.id],anchor=previous?.through||previous?.pendingFrom,start=anchor?iso(anchor):new Date(limit-DAY).toISOString();
-    if(unit.collectionMode==='rolling-24h-snapshot')return {...unit,start:new Date(limit-DAY).toISOString(),end,cutoff:end,needsQuery:!previous?.through||Date.parse(previous.through)<limit,bootstrap:!previous?.through,catchingUp:false,pending:[]};
+    if(unit.collectionMode==='incremental-ranking')return {...unit,start,end,cutoff:end,needsQuery:Date.parse(start)<limit,bootstrap:!previous?.through,catchingUp:false,pending:[]};
     const stop=new Date(Math.min(limit,Date.parse(start)+14*DAY)).toISOString();
     return {...unit,start,end:stop,cutoff:end,needsQuery:Date.parse(start)<limit,bootstrap:!previous?.through,catchingUp:Date.parse(stop)<limit,pending:(state.pending||[]).filter(p=>p.unit===unit.id&&p.status==='pending')};
   });
@@ -48,14 +48,12 @@ function apply(root,input,now=new Date()){
     const old=state.units[result.unit];
     if(old?.through&&Date.parse(old.through)>Date.parse(end))throw new Error('禁止回退采集进度');
     const anchor=old?.through||old?.pendingFrom;
-    const snapshot=configured.get(result.unit).collectionMode==='rolling-24h-snapshot';
-    if(snapshot){
-      if(Date.parse(start)!==Date.parse(end)-DAY||Date.parse(end)!==Date.parse(cutoff))throw new Error('热点必须是本次截止往前完整24小时榜单');
-    }else if(anchor&&Date.parse(start)!==Date.parse(anchor))throw new Error('必须严格接续该对象上次成功截止，不能跨过缺口或重复宽搜');
+    if(anchor&&Date.parse(start)!==Date.parse(anchor))throw new Error('必须严格接续该对象上次成功截止，不能跨过缺口或重复宽搜');
+    if(configured.get(result.unit).kind==='hotspots'&&result.status!=='failed'&&Date.parse(end)!==Date.parse(cutoff))throw new Error('热点成功榜必须覆盖本次实际截止');
     const page=result.unit.split(':')[0],batch=proof.batches?.find(b=>b.page===page);
     const completeOutput=result.unit.endsWith(':hotspots')?Array.isArray(batch?.output?.hotspots):page==='news'?Array.isArray(batch?.output?.focus)&&Array.isArray(batch?.output?.insights):Array.isArray(batch?.output?.items);
     if(result.status!=='failed'&&!completeOutput)throw new Error('成功进度必须先保存该批完整待发布结果；只有计划或条数不够');
-    if(snapshot&&result.status!=='failed'&&!batch.output.hotspotTabs?.some(t=>t.id===configured.get(result.unit).tabId&&t.status!=='failed'))throw new Error('热点成功记录缺少对应股票的榜单结果');
+    if(configured.get(result.unit).kind==='hotspots'&&result.status!=='failed'&&!batch.output.hotspotTabs?.some(t=>t.id===configured.get(result.unit).tabId&&(t.status==='complete'||t.status==='partial'&&t.windowComplete===true)))throw new Error('热点成功记录必须证明该股整个时间窗已查询');
     state.units[result.unit]={...old,lastAttemptAt:now.toISOString(),lastAttemptEnd:end,lastAttemptStatus:result.status,note:result.note};
     if(result.status!=='failed')Object.assign(state.units[result.unit],{through:end,lastSuccessAt:now.toISOString(),runId:input.runId,evidenceFile:result.evidenceFile});
     else state.units[result.unit].pendingFrom=anchor||start;

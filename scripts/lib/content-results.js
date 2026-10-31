@@ -8,8 +8,8 @@ function date(value) { return typeof value==='string' && /(?:Z|[+-]\d\d:\d\d)$/.
 function prepareNews(input,job,start,sources,now=new Date(),carried=[]) {
   requireValue(input && typeof input==='object','采集器未返回简报');
   for(const event of [...(input.focus||[]),...(input.insights||[])]) for(const source of event.sources||[]) requireValue(source.verification==='collector-report','Grok来源必须标为采集器转述，不能声称独立直读');
-  const scheduledFor=job.trigger_type==='scheduled' ? beijingIso(job.cutoff) : job.cutoff;
-  return prepareBrief({...input,trigger:job.trigger_type,requestId:job.id,scheduledFor,windowStart:start,...displayWindow(job.cutoff),carriedOver:carried||[]},{now,sources});
+  const scheduledFor=beijingIso(job.trigger_type==='scheduled' ? job.scheduledFor||job.cutoff : job.cutoff);
+  return prepareBrief({...input,trigger:job.trigger_type,requestId:job.id,scheduledFor,informationCutoff:beijingIso(job.cutoff),windowStart:start,...displayWindow(job.cutoff),carriedOver:carried||[]},{now,sources});
 }
 function preparePeople(input,registry,raw,previous,cutoff,now=new Date()) {
   const people=registry.accounts.filter(a=>a.enabled&&a.category==='people');

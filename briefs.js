@@ -51,7 +51,8 @@
     const board=readingBoard;
     const ctx=board.period||{};
     const stale=ctx.retainUntil&&Date.now()>=Date.parse(ctx.retainUntil);
-    const usable=board.lastUsableCutoff||(board.lastStatus==='failed'?manifest.editions.find(e=>e.status!=='failed')?.scheduledFor:board.asOf);
+    const lastUsable=manifest.editions.find(e=>e.status!=='failed');
+    const usable=board.lastUsableCutoff||(board.lastStatus==='failed'?(lastUsable?.informationCutoff||lastUsable?.scheduledFor):board.asOf);
     const notice=window.IntelligenceView.collectionNotice(board);
     if($('reading-context'))$('reading-context').textContent=[usable?`已收录内容截至 ${time(usable)}（北京时间）`:'上次可用内容截止未查明',notice|| (stale?'等待更新':'' )].filter(Boolean).join(' · ');
     for(const group of ['focus','insights']) {
@@ -77,7 +78,8 @@
       if (!/^(?:\d{4}-\d{2}-\d{2}-(?:0800|2000|1500|2030|0900|1600|2100)|manual-[a-f0-9-]{36})\.json$/.test(entry.file)) throw new Error('无效期次');
       const brief = await json('data/stock-briefs/'+entry.file);
       if (current!==generation) return;
-      if($('reading-context'))$('reading-context').textContent=brief.status==='failed'?`${time(brief.scheduledFor)}（北京时间） · 本期采集失败`:`截至 ${time(brief.scheduledFor)}（北京时间）`;
+      const cutoff=brief.informationCutoff||brief.scheduledFor;
+      if($('reading-context'))$('reading-context').textContent=brief.status==='failed'?`${time(cutoff)}（北京时间） · 本期采集失败`:`截至 ${time(cutoff)}（北京时间）`;
       for (const group of ['focus','insights']) {
         const carried = (brief.carriedOver||[]).filter(c=>c.group===group);
         const carriedHtml = carried.length ? `<div class="brief-carried"><h3>展示窗口内的前序期次条目（本期未重复检索）</h3>${carried.map(c=>`<article class="x-card brief-card"><div class="brief-card-top"><h3>${escape(c.title)}</h3><span class="badge">来自 ${escape(c.fromEdition)}</span></div>${c.fact?`<p>${escape(c.fact)}</p>`:''}${originalUrl(c)?`<a href="${escape(c.url)}" target="_blank" rel="noopener noreferrer">原文链接 ↗</a>`:''}<p class="brief-small">发布 ${escape(time(c.publishedAt))}（北京时间）</p></article>`).join('')}</div>` : '';

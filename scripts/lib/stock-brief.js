@@ -21,8 +21,9 @@ function slotAt(now = new Date()) {
   const day = beijingDay(now);
   const times = [-1, 0, 1].flatMap(offset => {
     const date = new Date(Date.parse(day + 'T00:00:00Z') + offset * 86400000).toISOString().slice(0, 10);
-    const weekend=[0,6].includes(new Date(date+'T12:00:00Z').getUTCDay());
-    return (weekend?(config.weekendSlots||['08:00']):config.slots).map(slot => ({ id: `${date}-${slot.replace(':', '')}`, scheduledFor: `${date}T${slot}:00+08:00` }));
+    const weekday=new Date(date+'T12:00:00Z').getUTCDay(),weekend=[0,6].includes(weekday);
+    const slots=weekend?(config.weekendSlotsByDay?.[String(weekday)]||config.weekendSlots||['08:00']):config.slots;
+    return slots.map(slot => ({ id: `${date}-${slot.replace(':', '')}`, scheduledFor: `${date}T${slot}:00+08:00` }));
   }).sort((a, b) => Date.parse(a.scheduledFor) - Date.parse(b.scheduledFor));
   return {
     previous: times.filter(t => Date.parse(t.scheduledFor) <= new Date(now).getTime()).at(-1),
@@ -38,8 +39,9 @@ function prepareBrief(input, { now = new Date(), sources = new Map() } = {}) {
   // Current slots are 08:00/20:00; legacy times remain readable for historical archives.
   if (brief.trigger === 'scheduled') requireValue(/^\d{4}-\d{2}-\d{2}T(?:08:00:00|20:00:00|15:00:00|20:30:00|09:00:00|16:00:00|21:00:00)\+08:00$/.test(brief.scheduledFor), '期次只能是北京时间 08:00、20:00，或历史归档时段');
   else requireValue(/^[a-f0-9-]{36}$/.test(brief.requestId), '手动期次需要任务编号');
-  const cutoff = timestamp(brief.scheduledFor, 'scheduledFor');
-  requireValue(cutoff <= new Date(now).getTime(), '不能提前发布未来期次');
+  const scheduledAt = timestamp(brief.scheduledFor, 'scheduledFor');
+  const cutoff = timestamp(brief.informationCutoff || brief.scheduledFor, 'informationCutoff');
+  requireValue(scheduledAt <= cutoff && cutoff <= new Date(now).getTime(), '信息截止不能早于计划期次或晚于当前时间');
   brief.id = brief.trigger === 'manual' ? `manual-${brief.requestId}` : brief.scheduledFor.slice(0, 10) + '-' + brief.scheduledFor.slice(11, 16).replace(':', '');
   brief.timezone = config.timezone;
   // v2 = separated display/search windows, pre-search checklist and candidate mapping are mandatory.
@@ -169,12 +171,12 @@ function saveBrief(brief, root = ROOT) {
   board=reading.advance(board,brief); // reject invalid lifecycle changes before writing the immutable archive
   const windows=require('./windows');
   const complete=brief.status!=='failed'&&brief.coverage.status==='complete'&&brief.coverage.queries.length>0&&brief.coverage.gaps.length===0&&brief.checklist?.length>0&&brief.checklist.every(c=>['covered','no-result'].includes(c.status));
-  const coverage=windows.recordCoverage(windows.readCoverage(root),{jobId:brief.id,page:'news',trigger:brief.trigger||'scheduled',start:brief.windowStart,end:brief.scheduledFor,status:brief.status==='failed'?'failed':complete?'complete':'partial',queries:brief.coverage.queries,recordedAt:brief.generatedAt},14,Date.parse(brief.generatedAt));
+  const coverage=windows.recordCoverage(windows.readCoverage(root),{jobId:brief.id,page:'news',trigger:brief.trigger||'scheduled',start:brief.windowStart,end:brief.informationCutoff||brief.scheduledFor,status:brief.status==='failed'?'failed':complete?'complete':'partial',queries:brief.coverage.queries,recordedAt:brief.generatedAt},14,Date.parse(brief.generatedAt));
   if(!fs.existsSync(archive))fs.writeFileSync(archive, serialized, { flag: 'wx' });
   reading.writeBoard(root,board);
   const coverageFile=windows.coveragePath(root);
   fs.writeFileSync(coverageFile+'.tmp',JSON.stringify(coverage,null,2)+'\n');fs.renameSync(coverageFile+'.tmp',coverageFile);
-  const entry = { id: brief.id, trigger: brief.trigger || 'scheduled', scheduledFor: brief.scheduledFor, generatedAt: brief.generatedAt, status: brief.status, counts: brief.counts, file: `${brief.id}.json` };
+  const entry = { id: brief.id, trigger: brief.trigger || 'scheduled', scheduledFor: brief.scheduledFor, ...(brief.informationCutoff?{informationCutoff:brief.informationCutoff}:{}), generatedAt: brief.generatedAt, status: brief.status, counts: brief.counts, file: `${brief.id}.json` };
   const sorted = [entry, ...index.editions.filter(e => e.id !== brief.id)].sort((a,b) => Date.parse(b.scheduledFor)-Date.parse(a.scheduledFor));
   // One combined display limit. Frozen evidence files are never deleted by rotation.
   index.editions = sorted.slice(0,Number.isInteger(config.historyLimit)?config.historyLimit:3);
