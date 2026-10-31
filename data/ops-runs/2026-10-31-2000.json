@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-31T20:01:16+08:00",
-  "updatedAt": "2026-10-31T20:48:12+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-31T20:52:19+08:00",
+  "finishedAt": "2026-10-31T20:52:19+08:00",
   "gitHeadAtStart": "971e878530a040ad5f309648299f2926f42b7bbd",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-31T20:50:57+08:00",
+      "detail": "内容55ebc488已推送，远端master精确一致；Cloudflare部署中"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-31T20:52:19+08:00",
+      "detail": "Cloudflare9c2099d1成功，内容55ebc488，15/15公开JSON字节一致；VIX官方ok，CNN接口镜像成功/直连418"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "无新到期，复用缓存"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "55ebc488ca4b45e5568d7884220fe2e14fc8b516",
+  "notes": [
+    "采集覆盖仍partial；发布成功，15公开JSON精确一致；无测试/check/build/预览；用户验收未声称"
+  ],
   "timings": [
     {
       "page": "news",
