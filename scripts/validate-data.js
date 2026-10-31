@@ -35,7 +35,7 @@ const editions = readJson(path.join(ROOT, 'data/stock-briefs/index.json')).editi
 const editionIds = new Set();
 for (const entry of editions) {
   try {
-    if (!/^(?:\d{4}-\d{2}-\d{2}-(?:0800|1500|2030|0900|1600|2100)|manual-[a-f0-9-]{36})$/.test(entry.id) || entry.file !== `${entry.id}.json`) throw new Error('invalid archive path');
+    if (!/^(?:\d{4}-\d{2}-\d{2}-(?:0800|2000|1500|2030|0900|1600|2100)|manual-[a-f0-9-]{36})$/.test(entry.id) || entry.file !== `${entry.id}.json`) throw new Error('invalid archive path');
     if (editionIds.has(entry.id)) throw new Error('duplicate edition');
     editionIds.add(entry.id);
     const brief = readJson(path.join(ROOT, 'data/stock-briefs', entry.file));

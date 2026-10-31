@@ -74,7 +74,7 @@
     $('brief-audit').innerHTML = '';
     }
     try {
-      if (!/^(?:\d{4}-\d{2}-\d{2}-(?:0800|1500|2030|0900|1600|2100)|manual-[a-f0-9-]{36})\.json$/.test(entry.file)) throw new Error('无效期次');
+      if (!/^(?:\d{4}-\d{2}-\d{2}-(?:0800|2000|1500|2030|0900|1600|2100)|manual-[a-f0-9-]{36})\.json$/.test(entry.file)) throw new Error('无效期次');
       const brief = await json('data/stock-briefs/'+entry.file);
       if (current!==generation) return;
       if($('reading-context'))$('reading-context').textContent=brief.status==='failed'?`${time(brief.scheduledFor)}（北京时间） · 本期采集失败`:`截至 ${time(brief.scheduledFor)}（北京时间）`;

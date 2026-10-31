@@ -70,7 +70,7 @@ git remote -v
 
 - 使用维护者自己的 Grok Bot、GitHub 身份和 Cloudflare 项目；不得调用原项目的 Bot、任务或凭据。
 - 先完整读取根 `AGENTS.md`、`CONTEXT.md`、`docs/STOCK_BRIEF.md`、`docs/GROK_BOT_OPERATIONS.md`、`config/research-guidance.json` 及其指向的知识库和 SOP。
-- 是否沿用北京时间 08:00 / 15:00 / 20:30、研究范围和内容规则，由 Fork 所有者明确决定；未决定时不得擅自启动自动任务。
+- 是否沿用北京时间 08:00 / 20:00、研究范围和内容规则，由 Fork 所有者明确决定；未决定时不得擅自启动自动任务。
 - 内容不足不凑数，失败保留旧内容并说明；不发帖、不交易、不把凭证写入仓库。
 - Fork 自己的定时任务只允许推送自己的 `origin/master`。每次发布仍须运行 `npm test`、`npm run check`、`npm run build` 并核对自己的线上网址。
 

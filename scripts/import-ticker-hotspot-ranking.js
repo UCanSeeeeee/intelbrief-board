@@ -15,6 +15,8 @@ const allowed=new Set(cfg.tabs.map(t=>t.id)),seen=new Set(),hotspots=[],hotspotT
 for(const tab of source.tabs){
   if(!allowed.has(tab.id)||seen.has(tab.id))throw new Error('未知或重复股票');seen.add(tab.id);
   if(!Array.isArray(tab.rows)||!tab.query||!['complete','partial','failed'].includes(tab.status))throw new Error('缺少查询或执行状态');
+  const collectionPath=tab.collectionPath||source.collectionPath;
+  if(!['grok-app','grok-web'].includes(collectionPath))throw new Error('每只股票须标明实际采集路径 grok-app 或 grok-web');
   const unranked=[];
   for(const row of tab.rows){
     if(row.length!==source.columns.length)throw new Error('来源列数不一致');
@@ -25,7 +27,7 @@ for(const tab of source.tabs){
       title:replaceAliases(p.title),fact:replaceAliases(p.summary),originalText:p.originalText,
       originalTextIsExcerpt:true,excerptNote:'Grok返回的原文摘录；未展示部分不补写。',
       sourceNature:'non-official',verification:'collector-report',eventTime:null,eventTimeNote:'实际事件时间未知',
-      engagement:{views:p.views,likes:p.likes,reposts:p.reposts,replies:p.replies,capturedAt:tab.capturedAt||source.capturedAt,source:'grok-web-observed'}});
+      engagement:{views:p.views,likes:p.likes,reposts:p.reposts,replies:p.replies,capturedAt:tab.capturedAt||source.capturedAt,source:collectionPath==='grok-app'?'grok-app-observed':'grok-web-observed'}});
   }
   if(unranked.length)tab.unranked=unranked;
   hotspotTabs.push({id:tab.id,status:tab.status==='failed'?'failed':unranked.length?'partial':tab.status,queries:[tab.query,...(tab.followups||[])],note:tab.note||'Grok直接返回浏览量前五；仅已检索样本，普通观点未升格为事实。'});

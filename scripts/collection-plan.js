@@ -11,7 +11,7 @@ function loadConfig(root = ROOT) {
 }
 
 function normalizeCutoff(value) {
-  if (!value) throw new Error('必须传入北京时间截止时间，例如 2026-10-18T20:30:00+08:00');
+  if (!value) throw new Error('必须传入北京时间截止时间，例如 2026-10-31T20:00:00+08:00');
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) throw new Error('截止时间无法解析：' + value);
   const match = String(value).match(/T(\d{2}):(\d{2})/);
@@ -28,20 +28,20 @@ function createPlan(cutoff, config = loadConfig(), root = ROOT) {
   const collectionUnits = progress.plan(root,cutoff);
   const batches = config.batches.map((batch, index) => {
     let action = 'run';
-    if (batch.schedule === '20:30-only' && normalized.slot !== '20:30') action = 'skip';
-    if (batch.schedule === 'daily-final' && normalized.slot !== (weekend?'08:00':'20:30')) action = 'skip';
-    if (batch.schedule === 'learning-slots' && !['08:00', weekend?'08:00':'20:30'].includes(normalized.slot)) action = 'skip';
+    if (batch.schedule === '20:00-only' && normalized.slot !== '20:00') action = 'skip';
+    if (batch.schedule === 'daily-final' && normalized.slot !== '20:00') action = 'skip';
+    if (batch.schedule === 'learning-slots' && !['08:00', '20:00'].includes(normalized.slot)) action = 'skip';
     if (batch.schedule === 'due-or-stale') action = 'check-due';
     if (!scheduled) action = 'skip';
     return {
       sequence: index + 1,
       ...batch,
       action,
-      ...(batch.id==='learning'?{components:{papers:action==='run'&&normalized.slot==='08:00',basics:action==='run'&&normalized.slot===(weekend?'08:00':'20:30'),counterintuitive:action==='run'&&normalized.slot===(weekend?'08:00':'20:30')}}:{}),
+      ...(batch.id==='learning'?{components:{papers:action==='run'&&normalized.slot==='08:00',basics:action==='run'&&normalized.slot==='20:00',counterintuitive:action==='run'&&normalized.slot==='20:00'}}:{}),
       ...(batch.id==='learning'?{lessonInstruction:'basics到期时按docs/DAILY_LEARNING.md的原始提示词写1篇fable-reveal：一个研究生水平概念，寓言在前、概念解释在后，标题和开场不剧透，机制在结尾显现，保留类比边界和可核对来源；不新增名额、不改旧卡。'}:{}),
       isolated: true,
       ...(batch.id==='tickers'?{
-        hotspotInstruction:'热点与事实分开，每股独立Expert会话，只发送hotspotPrompts的简短prompt。关键词只有股票代码，发帖时间必须在截止前24小时，按浏览量前五；不加主题、账号、官方或广告等内容过滤。读取结果后本机再整理字段，不把知识库、事实门槛、JSON契约塞进检索请求。存在已知遗漏或字段错误时针对性核对，不静默接受明显缺口。',
+        hotspotInstruction:'热点与事实分开，每股用独立会话优先询问Grok Bot；Bot不可用或结果有明确缺口时由Grok网页Expert补查，只发送hotspotPrompts的简短prompt。关键词只有股票代码，发帖时间必须在截止前24小时，按浏览量前五；不加主题、账号、官方或广告等内容过滤。读取结果后本机再整理字段，不把知识库、事实门槛、JSON契约塞进检索请求。存在已知遗漏或字段错误时针对性核对，不静默接受明显缺口。',
         hotspotPrompts:hotspotPrompts(JSON.parse(fs.readFileSync(path.join(root,'config/ticker-intelligence.json'),'utf8')),cutoff)
       }:{}),
       collectionUnits: collectionUnits.filter(unit=>unit.page===batch.id),
@@ -55,7 +55,7 @@ function createPlan(cutoff, config = loadConfig(), root = ROOT) {
     cutoff: normalized.iso,
     slot: normalized.slot,
     scheduled,
-    skipReason: scheduled ? null : '北京时间周末只在08:00整理一次；本时点不采集、不发布新期次。',
+    skipReason: scheduled ? null : '本时点不在北京时间的计划批次内，不采集、不发布新期次。',
     sourcePriority: config.sourcePriority,
     rule: '事实对象从上次成功截止严格增量；个股热点例外，每股独立查询完整24h浏览量榜。手动与定时共用记录，失败保留存量；无新事实候选不空跑追源/反证。',
     batches

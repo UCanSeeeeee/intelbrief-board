@@ -43,10 +43,10 @@ function shanghaiIso(date = new Date()) {
   return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}:${p.second}+08:00`;
 }
 
-// Current scheduled suffixes: 0800/1500/2030. Legacy 0900/1600/2100 kept for historical ops-runs only.
+// Current scheduled suffixes: 0800/2000. Older suffixes remain readable for historical ops-runs.
 function assertPeriod(period) {
-  if (!/^\d{4}-\d{2}-\d{2}-(?:0800|1500|2030|0900|1600|2100)$/.test(period) && !/^manual-[a-f0-9-]{8,}$/.test(period) && !/^catchup-\d{4}-\d{2}-\d{2}-\d{4}$/.test(period)) {
-    throw new Error('period 无效：定时用 YYYY-MM-DD-0800|1500|2030（历史日志可含 0900|1600|2100）；手动用 manual-<id>；补跑可用 catchup-YYYY-MM-DD-HHMM');
+  if (!/^\d{4}-\d{2}-\d{2}-(?:0800|2000|1500|2030|0900|1600|2100)$/.test(period) && !/^manual-[a-f0-9-]{8,}$/.test(period) && !/^catchup-\d{4}-\d{2}-\d{2}-\d{4}$/.test(period)) {
+    throw new Error('period 无效：定时用 YYYY-MM-DD-0800|2000（历史日志保留旧时段）；手动用 manual-<id>；补跑可用 catchup-YYYY-MM-DD-HHMM');
   }
 }
 

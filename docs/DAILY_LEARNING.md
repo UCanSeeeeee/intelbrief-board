@@ -7,8 +7,8 @@
 ## 执行时间
 
 - 每天北京时间08:00：Nature、Science各目标3篇、上限3篇，两刊独立，不凑数。按[论文SOP](JOURNAL_PAPERS.md)执行。
-- 工作日20:30、周末08:00：基础知识复用合格证据，每天最多新增1个；[反直觉小知识](COUNTERINTUITIVE_KNOWLEDGE.md)目标5条。用户单独要求补充时按指定数量执行。
-- 只执行learning.components中为真的papers、basics、counterintuitive部分。15:00不处理学习，20:30不重复论文。不新增任务，不因新闻无新增跳过到期学习。
+- 每天北京时间20:00：基础知识复用合格证据，每天最多新增1个；[反直觉小知识](COUNTERINTUITIVE_KNOWLEDGE.md)目标5条。当日已经完成的内容不重复生成；用户单独要求补充时按指定数量执行。
+- 只执行learning.components中为真的papers、basics、counterintuitive部分。20:00不重复论文。不新增任务，不因新闻无新增跳过到期学习。
 - 单项失败保留旧内容，实际状态写审计；网页不铺阅读/检索/数量说明。
 
 ## 基础知识

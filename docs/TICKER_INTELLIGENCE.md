@@ -4,7 +4,7 @@
 
 ## 信息来源
 
-先走已登录Grok网页版；网页不可用或覆盖不足且额度可用时才尝试Grok Bot。禁止 X API / 普通网页搜讯；本页必须作为独立侧边栏批次采集。
+先走Grok Bot「X+github」；Bot不可用、额度不足或覆盖不足时使用已登录Grok网页版Expert。禁止 X API / 普通网页搜讯；本页必须作为独立侧边栏批次采集。
 
 ## 当前顶部 Tab（仅美股股权）
 
@@ -24,7 +24,7 @@ NVDA、MU、INTC、GOOG、AVGO、VRT、TSM。
 
 可见浏览量大于0的帖子标“非官方 · 讨论热点”；真实零浏览或旧缺浏览量卡保留为讨论线索，不补造热度。跨板块原帖重复按AGENTS保留，不作为缺陷。
 
-仍是一个tickers侧边栏批次，但**热点与事实分开发送，每股一个独立Expert会话**。唯一提示词真源为`scripts/lib/ticker-hotspot-prompt.js`，`collection:plan`直接列出`hotspotPrompts`：
+仍是一个tickers侧边栏批次，但**热点与事实分开发送，每股一个独立会话**；优先Bot，网页备用时用Expert。唯一提示词真源为`scripts/lib/ticker-hotspot-prompt.js`，`collection:plan`直接列出`hotspotPrompts`：
 
 > 给我过去24小时内包含“NVDA”的浏览量最高五个X帖子。除关键词和24小时外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。截止时间：【本次冻结截止，含时区】。
 
@@ -33,7 +33,7 @@ NVDA、MU、INTC、GOOG、AVGO、VRT、TSM。
 事实对象`tickers:<id>`继续严格增量；热点对象`tickers:<id>:hotspots`为`rolling-24h-snapshot`，每次重查截止前24小时，不接续旧发帖增量，不混用旧帖过时浏览量。查询完成、榜单可用、发布成功分别记录；热点记录表示本次榜单检查截止，不证明此前时段已全量覆盖。审计`output.hotspots`和每股实际查询保存后才更新热点记录，事实进度不动。失败保留旧榜、旧截止与真实异常。
 
 - 标准返回`tabs/items`及独立`hotspotTabs/hotspots`，`prepareTickerIntelligence`合并两流。缺少热点载荷记失败缺口并保留旧热点，不写成无新增。
-- 直接热帖保留作者、中文摘要、真实浏览量与原帖；没有额外分析不填通用“影响判断”或免责声明占位，已写的有意义分析仍可保留。保存的紧凑排名可用`node scripts/import-ticker-hotspot-ranking.js SOURCE.json AUDIT.json OUTPUT.json`转换为发布载荷；只转换已保存证据，不搜索或发布。
+- 直接热帖保留作者、中文摘要、真实浏览量与原帖；没有额外分析不填通用“影响判断”或免责声明占位，已写的有意义分析仍可保留。保存的紧凑排名可用`node scripts/import-ticker-hotspot-ranking.js SOURCE.json AUDIT.json OUTPUT.json`转换为发布载荷；`collectionPath`须在来源或各股标明实际`grok-app`或`grok-web`，只转换已保存证据，不搜索或发布。
 - 仅补采热点可运行`node scripts/publish-ticker-hotspots.js <已保存的结果JSON>`；不触碰事实区或其截止，随后按增量SOP记录热点进度并统一提交。
 - 完整24h成功榜单默认采用本次结果，不混入旧候选；`hotspotSnapshot:true`及完整`hotspotCollectionUnits`保留审计。失败/部分完成保留旧证据和缺口，换出帖子继续留存；不拿缺失浏览量、作者、原文或时间的结果补造完整榜。
 - 数据`hotspots`存当前精选，`hotspotRetained`保留7天内被换出的已展示卡供每日流；原始审计不删。`hotspotCoverage.tabs`区分complete/partial/failed；失败保留上次成功截止和内容。

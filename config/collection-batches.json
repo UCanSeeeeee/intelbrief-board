@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "timezone": "Asia/Shanghai",
-  "slots": ["08:00", "15:00", "20:30"],
-  "weekendSlots": ["08:00"],
-  "sourcePriority": ["grok-web", "grok-bot"],
+  "slots": ["08:00", "20:00"],
+  "weekendSlots": ["08:00", "20:00"],
+  "sourcePriority": ["grok-bot", "grok-web"],
   "batches": [
     {"id":"news","sidebarTab":"美股讯息","task":"news","schedule":"every-slot","mode":"x-research","subtasks":["discovery","source-verification","counter-evidence"],"contract":"docs/STOCK_BRIEF.md"},
     {"id":"people","sidebarTab":"具体人物","task":"people","schedule":"every-slot","mode":"x-research","subtasks":["discovery","source-verification","counter-evidence"],"contract":"docs/PEOPLE_INTELLIGENCE_ROADMAP.md"},
