@@ -1,0 +1,80 @@
+{
+  "runId": "2026-10-31-0800",
+  "cutoff": "2026-10-31T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "people:elon-musk",
+      "start": "2026-10-30T12:30:00.000Z",
+      "end": "2026-10-31T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "仅具体人物侧栏，精确增量窗口[2026-10-30T12:30:00Z,2026-10-31T00:00:00Z)，仅X，五对象分别查询：1 Elon Musk本人/可归因参与，xAI算力、Tesla AI/机器人、SpaceX基础设施资本；2 Jensen Huang本人或可追溯采访/媒体实录，架构/供需/网络/产品；3 Donald Trump：TrumpDailyPosts（非官方Truth同步，排除运营者回复）及POTUS/WhiteHouse，可执行AI/贸易/能源/财政监管政策；4 万亿公司高层（Satya Nadella/Scott Guthrie/Amy Hood, Sundar Pichai/Demis Hassabis/Ruth Porat, Andy Jassy, Mark Zuckerberg, Tim Cook等）本人或可明确归因；5 公开机构/具名分析师（Nomura等）盈利/供需/资本开支假设变化，不绕付费。先价值信息，无变化不拿旧闻补。每对象再独立按其来源查询不带产业词的互动最高动态：规则1–4条补到5、规则0条只3；高层每公司近30天最多2条，保留旧席位约束。不要附加min_faves/links/官方过滤（来源约束按本对象），只记真实likes/reposts/replies/quotes/views，分数likes+2reposts+replies+quotes。逐候选返回紧凑记录：对象、作者、完整statusURL、精确UTC时间、关键原句/中文摘要、归因/事件时间或未知、真实metrics及缺口；无帖子与请求失败分开。不要将观点或热度升级事实；不访问非X。",
+        "仅X，同原精确窗口。先定点纠正覆盖：Elon与Trump热度查询不能加任何正负产业词，你用了-Grok/-AI等，请去除后按真实互动分返回各自最高3（若规则通过再补到5），TrumpDailyPosts要查本人可归因同步，非政策也可热度。WhiteHouse月亮帖2116269048811983234补完整UTC秒/原句/metrics。Huang补Jensen Huang可归因媒体采访/实录，不限本人账号，nvidia纯公司演示不自动算本人；高管补Scott Guthrie/Amy Hood/Demis Hassabis/Ruth Porat，研究机构另独立无产业词热度查询（仅公开机构或可归因具名分析师原帖，不把匿名转述当合格原报告）。然后追源Sundar的Suncatcher2116214866444943853：重新读原帖及Google相关原X，只确认轨道TPU实验阶段与时间，未证规模商业化。Waymo2116233367020859888引用内容原帖、是否新公告，缺则明示。财政退税/投资宣传若无新政策条款只作为热度，不标高价值。返回紧凑逐对象记录/缺口及实际查询。",
+        "仅X独立反证，同截止2026-10-31T00:00Z。针对Sundar Suncatcher原型轨道TPU首次响应，独立搜索更正/质疑/早已同样演示/地面代跑或模拟/尚未商业化/辐射能耗散热通信边界的原X。实际查询与找到/没找到分列；无正式否认不等于已独立证明。另定点两缺口：Demis2116194488464839156回复的确切上文主体是什么，返回parent原X与时间（未知不猜）；Elon已返回2116291813732495578 Cool ❤️ 实测分13054高于8492但第二答漏排，请只核该帖归因/metrics及样本内排序，不再宽搜。Trump白宫3帖与TrumpDailyPosts账号评论需保留归因界限，不将宣传数字当独立核实政策。"
+      ],
+      "note": "实际查询完成，候选/证据/缺口见本批；非全X覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-31-0800.json"
+    },
+    {
+      "unit": "people:jensen-huang",
+      "start": "2026-10-30T12:30:00.000Z",
+      "end": "2026-10-31T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "仅具体人物侧栏，精确增量窗口[2026-10-30T12:30:00Z,2026-10-31T00:00:00Z)，仅X，五对象分别查询：1 Elon Musk本人/可归因参与，xAI算力、Tesla AI/机器人、SpaceX基础设施资本；2 Jensen Huang本人或可追溯采访/媒体实录，架构/供需/网络/产品；3 Donald Trump：TrumpDailyPosts（非官方Truth同步，排除运营者回复）及POTUS/WhiteHouse，可执行AI/贸易/能源/财政监管政策；4 万亿公司高层（Satya Nadella/Scott Guthrie/Amy Hood, Sundar Pichai/Demis Hassabis/Ruth Porat, Andy Jassy, Mark Zuckerberg, Tim Cook等）本人或可明确归因；5 公开机构/具名分析师（Nomura等）盈利/供需/资本开支假设变化，不绕付费。先价值信息，无变化不拿旧闻补。每对象再独立按其来源查询不带产业词的互动最高动态：规则1–4条补到5、规则0条只3；高层每公司近30天最多2条，保留旧席位约束。不要附加min_faves/links/官方过滤（来源约束按本对象），只记真实likes/reposts/replies/quotes/views，分数likes+2reposts+replies+quotes。逐候选返回紧凑记录：对象、作者、完整statusURL、精确UTC时间、关键原句/中文摘要、归因/事件时间或未知、真实metrics及缺口；无帖子与请求失败分开。不要将观点或热度升级事实；不访问非X。",
+        "仅X，同原精确窗口。先定点纠正覆盖：Elon与Trump热度查询不能加任何正负产业词，你用了-Grok/-AI等，请去除后按真实互动分返回各自最高3（若规则通过再补到5），TrumpDailyPosts要查本人可归因同步，非政策也可热度。WhiteHouse月亮帖2116269048811983234补完整UTC秒/原句/metrics。Huang补Jensen Huang可归因媒体采访/实录，不限本人账号，nvidia纯公司演示不自动算本人；高管补Scott Guthrie/Amy Hood/Demis Hassabis/Ruth Porat，研究机构另独立无产业词热度查询（仅公开机构或可归因具名分析师原帖，不把匿名转述当合格原报告）。然后追源Sundar的Suncatcher2116214866444943853：重新读原帖及Google相关原X，只确认轨道TPU实验阶段与时间，未证规模商业化。Waymo2116233367020859888引用内容原帖、是否新公告，缺则明示。财政退税/投资宣传若无新政策条款只作为热度，不标高价值。返回紧凑逐对象记录/缺口及实际查询。",
+        "仅X独立反证，同截止2026-10-31T00:00Z。针对Sundar Suncatcher原型轨道TPU首次响应，独立搜索更正/质疑/早已同样演示/地面代跑或模拟/尚未商业化/辐射能耗散热通信边界的原X。实际查询与找到/没找到分列；无正式否认不等于已独立证明。另定点两缺口：Demis2116194488464839156回复的确切上文主体是什么，返回parent原X与时间（未知不猜）；Elon已返回2116291813732495578 Cool ❤️ 实测分13054高于8492但第二答漏排，请只核该帖归因/metrics及样本内排序，不再宽搜。Trump白宫3帖与TrumpDailyPosts账号评论需保留归因界限，不将宣传数字当独立核实政策。"
+      ],
+      "note": "实际查询完成，候选/证据/缺口见本批；非全X覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-31-0800.json"
+    },
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-30T12:30:00.000Z",
+      "end": "2026-10-31T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "仅具体人物侧栏，精确增量窗口[2026-10-30T12:30:00Z,2026-10-31T00:00:00Z)，仅X，五对象分别查询：1 Elon Musk本人/可归因参与，xAI算力、Tesla AI/机器人、SpaceX基础设施资本；2 Jensen Huang本人或可追溯采访/媒体实录，架构/供需/网络/产品；3 Donald Trump：TrumpDailyPosts（非官方Truth同步，排除运营者回复）及POTUS/WhiteHouse，可执行AI/贸易/能源/财政监管政策；4 万亿公司高层（Satya Nadella/Scott Guthrie/Amy Hood, Sundar Pichai/Demis Hassabis/Ruth Porat, Andy Jassy, Mark Zuckerberg, Tim Cook等）本人或可明确归因；5 公开机构/具名分析师（Nomura等）盈利/供需/资本开支假设变化，不绕付费。先价值信息，无变化不拿旧闻补。每对象再独立按其来源查询不带产业词的互动最高动态：规则1–4条补到5、规则0条只3；高层每公司近30天最多2条，保留旧席位约束。不要附加min_faves/links/官方过滤（来源约束按本对象），只记真实likes/reposts/replies/quotes/views，分数likes+2reposts+replies+quotes。逐候选返回紧凑记录：对象、作者、完整statusURL、精确UTC时间、关键原句/中文摘要、归因/事件时间或未知、真实metrics及缺口；无帖子与请求失败分开。不要将观点或热度升级事实；不访问非X。",
+        "仅X，同原精确窗口。先定点纠正覆盖：Elon与Trump热度查询不能加任何正负产业词，你用了-Grok/-AI等，请去除后按真实互动分返回各自最高3（若规则通过再补到5），TrumpDailyPosts要查本人可归因同步，非政策也可热度。WhiteHouse月亮帖2116269048811983234补完整UTC秒/原句/metrics。Huang补Jensen Huang可归因媒体采访/实录，不限本人账号，nvidia纯公司演示不自动算本人；高管补Scott Guthrie/Amy Hood/Demis Hassabis/Ruth Porat，研究机构另独立无产业词热度查询（仅公开机构或可归因具名分析师原帖，不把匿名转述当合格原报告）。然后追源Sundar的Suncatcher2116214866444943853：重新读原帖及Google相关原X，只确认轨道TPU实验阶段与时间，未证规模商业化。Waymo2116233367020859888引用内容原帖、是否新公告，缺则明示。财政退税/投资宣传若无新政策条款只作为热度，不标高价值。返回紧凑逐对象记录/缺口及实际查询。",
+        "仅X独立反证，同截止2026-10-31T00:00Z。针对Sundar Suncatcher原型轨道TPU首次响应，独立搜索更正/质疑/早已同样演示/地面代跑或模拟/尚未商业化/辐射能耗散热通信边界的原X。实际查询与找到/没找到分列；无正式否认不等于已独立证明。另定点两缺口：Demis2116194488464839156回复的确切上文主体是什么，返回parent原X与时间（未知不猜）；Elon已返回2116291813732495578 Cool ❤️ 实测分13054高于8492但第二答漏排，请只核该帖归因/metrics及样本内排序，不再宽搜。Trump白宫3帖与TrumpDailyPosts账号评论需保留归因界限，不将宣传数字当独立核实政策。"
+      ],
+      "note": "实际查询完成，候选/证据/缺口见本批；非全X覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-31-0800.json"
+    },
+    {
+      "unit": "people:trillion-leaders",
+      "start": "2026-10-30T12:30:00.000Z",
+      "end": "2026-10-31T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "仅具体人物侧栏，精确增量窗口[2026-10-30T12:30:00Z,2026-10-31T00:00:00Z)，仅X，五对象分别查询：1 Elon Musk本人/可归因参与，xAI算力、Tesla AI/机器人、SpaceX基础设施资本；2 Jensen Huang本人或可追溯采访/媒体实录，架构/供需/网络/产品；3 Donald Trump：TrumpDailyPosts（非官方Truth同步，排除运营者回复）及POTUS/WhiteHouse，可执行AI/贸易/能源/财政监管政策；4 万亿公司高层（Satya Nadella/Scott Guthrie/Amy Hood, Sundar Pichai/Demis Hassabis/Ruth Porat, Andy Jassy, Mark Zuckerberg, Tim Cook等）本人或可明确归因；5 公开机构/具名分析师（Nomura等）盈利/供需/资本开支假设变化，不绕付费。先价值信息，无变化不拿旧闻补。每对象再独立按其来源查询不带产业词的互动最高动态：规则1–4条补到5、规则0条只3；高层每公司近30天最多2条，保留旧席位约束。不要附加min_faves/links/官方过滤（来源约束按本对象），只记真实likes/reposts/replies/quotes/views，分数likes+2reposts+replies+quotes。逐候选返回紧凑记录：对象、作者、完整statusURL、精确UTC时间、关键原句/中文摘要、归因/事件时间或未知、真实metrics及缺口；无帖子与请求失败分开。不要将观点或热度升级事实；不访问非X。",
+        "仅X，同原精确窗口。先定点纠正覆盖：Elon与Trump热度查询不能加任何正负产业词，你用了-Grok/-AI等，请去除后按真实互动分返回各自最高3（若规则通过再补到5），TrumpDailyPosts要查本人可归因同步，非政策也可热度。WhiteHouse月亮帖2116269048811983234补完整UTC秒/原句/metrics。Huang补Jensen Huang可归因媒体采访/实录，不限本人账号，nvidia纯公司演示不自动算本人；高管补Scott Guthrie/Amy Hood/Demis Hassabis/Ruth Porat，研究机构另独立无产业词热度查询（仅公开机构或可归因具名分析师原帖，不把匿名转述当合格原报告）。然后追源Sundar的Suncatcher2116214866444943853：重新读原帖及Google相关原X，只确认轨道TPU实验阶段与时间，未证规模商业化。Waymo2116233367020859888引用内容原帖、是否新公告，缺则明示。财政退税/投资宣传若无新政策条款只作为热度，不标高价值。返回紧凑逐对象记录/缺口及实际查询。",
+        "仅X独立反证，同截止2026-10-31T00:00Z。针对Sundar Suncatcher原型轨道TPU首次响应，独立搜索更正/质疑/早已同样演示/地面代跑或模拟/尚未商业化/辐射能耗散热通信边界的原X。实际查询与找到/没找到分列；无正式否认不等于已独立证明。另定点两缺口：Demis2116194488464839156回复的确切上文主体是什么，返回parent原X与时间（未知不猜）；Elon已返回2116291813732495578 Cool ❤️ 实测分13054高于8492但第二答漏排，请只核该帖归因/metrics及样本内排序，不再宽搜。Trump白宫3帖与TrumpDailyPosts账号评论需保留归因界限，不将宣传数字当独立核实政策。"
+      ],
+      "note": "实际查询完成，候选/证据/缺口见本批；非全X覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-31-0800.json"
+    },
+    {
+      "unit": "people:research-reports",
+      "start": "2026-10-30T12:30:00.000Z",
+      "end": "2026-10-31T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "仅具体人物侧栏，精确增量窗口[2026-10-30T12:30:00Z,2026-10-31T00:00:00Z)，仅X，五对象分别查询：1 Elon Musk本人/可归因参与，xAI算力、Tesla AI/机器人、SpaceX基础设施资本；2 Jensen Huang本人或可追溯采访/媒体实录，架构/供需/网络/产品；3 Donald Trump：TrumpDailyPosts（非官方Truth同步，排除运营者回复）及POTUS/WhiteHouse，可执行AI/贸易/能源/财政监管政策；4 万亿公司高层（Satya Nadella/Scott Guthrie/Amy Hood, Sundar Pichai/Demis Hassabis/Ruth Porat, Andy Jassy, Mark Zuckerberg, Tim Cook等）本人或可明确归因；5 公开机构/具名分析师（Nomura等）盈利/供需/资本开支假设变化，不绕付费。先价值信息，无变化不拿旧闻补。每对象再独立按其来源查询不带产业词的互动最高动态：规则1–4条补到5、规则0条只3；高层每公司近30天最多2条，保留旧席位约束。不要附加min_faves/links/官方过滤（来源约束按本对象），只记真实likes/reposts/replies/quotes/views，分数likes+2reposts+replies+quotes。逐候选返回紧凑记录：对象、作者、完整statusURL、精确UTC时间、关键原句/中文摘要、归因/事件时间或未知、真实metrics及缺口；无帖子与请求失败分开。不要将观点或热度升级事实；不访问非X。",
+        "仅X，同原精确窗口。先定点纠正覆盖：Elon与Trump热度查询不能加任何正负产业词，你用了-Grok/-AI等，请去除后按真实互动分返回各自最高3（若规则通过再补到5），TrumpDailyPosts要查本人可归因同步，非政策也可热度。WhiteHouse月亮帖2116269048811983234补完整UTC秒/原句/metrics。Huang补Jensen Huang可归因媒体采访/实录，不限本人账号，nvidia纯公司演示不自动算本人；高管补Scott Guthrie/Amy Hood/Demis Hassabis/Ruth Porat，研究机构另独立无产业词热度查询（仅公开机构或可归因具名分析师原帖，不把匿名转述当合格原报告）。然后追源Sundar的Suncatcher2116214866444943853：重新读原帖及Google相关原X，只确认轨道TPU实验阶段与时间，未证规模商业化。Waymo2116233367020859888引用内容原帖、是否新公告，缺则明示。财政退税/投资宣传若无新政策条款只作为热度，不标高价值。返回紧凑逐对象记录/缺口及实际查询。",
+        "仅X独立反证，同截止2026-10-31T00:00Z。针对Sundar Suncatcher原型轨道TPU首次响应，独立搜索更正/质疑/早已同样演示/地面代跑或模拟/尚未商业化/辐射能耗散热通信边界的原X。实际查询与找到/没找到分列；无正式否认不等于已独立证明。另定点两缺口：Demis2116194488464839156回复的确切上文主体是什么，返回parent原X与时间（未知不猜）；Elon已返回2116291813732495578 Cool ❤️ 实测分13054高于8492但第二答漏排，请只核该帖归因/metrics及样本内排序，不再宽搜。Trump白宫3帖与TrumpDailyPosts账号评论需保留归因界限，不将宣传数字当独立核实政策。"
+      ],
+      "note": "实际查询完成，候选/证据/缺口见本批；非全X覆盖。",
+      "evidenceFile": "data/collection-runs/2026-10-31-0800.json"
+    }
+  ],
+  "pending": [
+    {
+      "unit": "people:trillion-leaders",
+      "key": "demis-testing-subject-20261030",
+      "status": "pending",
+      "reason": "父帖也未明确产品主体，未发布可用性。",
+      "url": "https://x.com/demishassabis/status/2116194488464839156"
+    }
+  ]
+}

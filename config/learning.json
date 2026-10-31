@@ -7,9 +7,24 @@
       "eyebrow": "同一知识点 · 两种表达",
       "description": "专业版保留术语、机制与观察指标；故事版让普通成年人不依赖行业背景也能理解同一条因果链。"
     },
-    {"id":"nature","label":"Nature","eyebrow":"每日三篇 · 08:00","description":"结论在前，说明实验过程、结果和结论边界。"},
-    {"id":"science","label":"Science","eyebrow":"每日三篇 · 08:00","description":"结论在前，说明实验过程、结果和结论边界。"},
-    {"id":"counterintuitive","label":"反直觉小知识","eyebrow":"每天目标 5 条 · 有证据，不猎奇","description":"围绕健康、生活与统计，讲清常见直觉哪里不完整、证据说明什么，以及不能推广到哪里。"}
+    {
+      "id": "nature",
+      "label": "Nature",
+      "eyebrow": "每日三篇 · 08:00",
+      "description": "结论在前，说明实验过程、结果和结论边界。"
+    },
+    {
+      "id": "science",
+      "label": "Science",
+      "eyebrow": "每日三篇 · 08:00",
+      "description": "结论在前，说明实验过程、结果和结论边界。"
+    },
+    {
+      "id": "counterintuitive",
+      "label": "反直觉小知识",
+      "eyebrow": "每天目标 5 条 · 有证据，不猎奇",
+      "description": "围绕健康、生活与统计，讲清常见直觉哪里不完整、证据说明什么，以及不能推广到哪里。"
+    }
   ],
   "dailyNewLessonLimit": 1,
   "storyAudienceMinimumAge": 18,
@@ -17,14 +32,37 @@
     "format": "fable-reveal",
     "promptSource": "docs/DAILY_LEARNING.md#寓言讲概念",
     "rule": "选择一个研究生水平概念，原创寓言间接讲清；标题和开场不剧透，临近结尾让机制显现，故事结束后解释概念、对应关系和边界。新基础知识采用此格式，旧卡保留；沿用basics时段与每日1篇名额。",
-    "academicReferenceUrls": ["https://arxiv.org/abs/1609.00606", "https://arxiv.org/abs/1707.02038", "https://www.nature.com/articles/s41586-025-08800-x", "https://pmc.ncbi.nlm.nih.gov/articles/PMC3834737/", "https://pubmed.ncbi.nlm.nih.gov/25170047/", "https://pubmed.ncbi.nlm.nih.gov/15576620/", "https://www.nature.com/articles/s41586-023-06116-2", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10231298/"]
+    "academicReferenceUrls": [
+      "https://arxiv.org/abs/1609.00606",
+      "https://arxiv.org/abs/1707.02038",
+      "https://www.nature.com/articles/s41586-025-08800-x",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3834737/",
+      "https://pubmed.ncbi.nlm.nih.gov/25170047/",
+      "https://pubmed.ncbi.nlm.nih.gov/15576620/",
+      "https://www.nature.com/articles/s41586-023-06116-2",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10231298/",
+      "https://www.math.tau.ac.il/~ybenja/ExB.html",
+      "https://cris.tau.ac.il/en/publications/controlling-the-false-discovery-rate-a-practical-and-powerful-app-2/"
+    ]
   },
-  "priorityOrder": ["半导体", "电力", "AI 落地"],
+  "priorityOrder": [
+    "半导体",
+    "电力",
+    "AI 落地"
+  ],
   "contentSource": "reuse-qualified-project-evidence",
   "counterintuitivePolicy": {
     "dailyLimit": 5,
-    "topics": ["健康", "生活", "统计", "行为认知"],
-    "targetChineseCharacters": [100, 180],
+    "topics": [
+      "健康",
+      "生活",
+      "统计",
+      "行为认知"
+    ],
+    "targetChineseCharacters": [
+      100,
+      180
+    ],
     "selectionRule": "每天目标5条，上限5条，证据或价值不足可少于5条；按稳定知识点去重，不换标题重复，不把同一论文拆成五条。优先覆盖不同生活问题，不继承美股技术主线。",
     "sourceRule": "优先复用已核验论文和项目证据；需要新增外部资料时先Grok发现，再核对原始论文或官方统计/教育资料。Grok不可用如实记缺口，允许这些限定非X科普来源，不放宽新闻采集路径。不用模型记忆代替证据。",
     "refreshRule": "沿用每日学习批次：工作日20:30、周末08:00，每天一组，已有条目不覆盖，失败保留往期；不单独触发采集或部署，随常规批次统一发布。"
@@ -32,10 +70,41 @@
   "journalPolicy": {
     "dailyLimitPerJournal": 3,
     "preferredRecentDays": 30,
-    "targetChineseCharacters": [200, 400],
-    "journals": [{"id":"nature","name":"Nature","doiPrefixes":["10.1038/s41586-","10.1038/nature"],"urlPrefix":"https://www.nature.com/articles/"},{"id":"science","name":"Science","doiPrefixes":["10.1126/science."],"urlPrefix":"https://www.science.org/doi/"}],
-    "accessLabels": {"full-text":"正文已核对","partial":"正文节选已核对","abstract":"摘要速读"},
-    "recommendedTopics": ["健康：睡眠、运动、饮食与习惯","生活：幸福感、人际关系与消费选择","统计：相关与因果、样本与风险表达","反直觉：有证据的常识修正，不追求猎奇"],
+    "targetChineseCharacters": [
+      200,
+      400
+    ],
+    "journals": [
+      {
+        "id": "nature",
+        "name": "Nature",
+        "doiPrefixes": [
+          "10.1038/s41586-",
+          "10.1038/nature",
+          "10.1038/415137a"
+        ],
+        "urlPrefix": "https://www.nature.com/articles/"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "doiPrefixes": [
+          "10.1126/science."
+        ],
+        "urlPrefix": "https://www.science.org/doi/"
+      }
+    ],
+    "accessLabels": {
+      "full-text": "正文已核对",
+      "partial": "正文节选已核对",
+      "abstract": "摘要速读"
+    },
+    "recommendedTopics": [
+      "健康：睡眠、运动、饮食与习惯",
+      "生活：幸福感、人际关系与消费选择",
+      "统计：相关与因果、样本与风险表达",
+      "反直觉：有证据的常识修正，不追求猎奇"
+    ],
     "focusRule": "论文栏目独立于美股的半导体、电力、AI优先级；不主推技术机制、芯片或模型性能，不强行联系股票。",
     "selectionRule": "每天每刊目标3篇、上限3篇；优先近30天，允许标注往期精选，不重复DOI，不用子刊替代；来源或价值不足可空缺，不凑数。先写明确结论，再写对象、对照、干预、测量与结果，不展示阅读/检索过程。",
     "sourceRule": "Grok可用时先发现，再回正刊及合法公开资料核对；Grok不可用记录原因，允许直接检索期刊、Crossref/PubMed及作者/机构公开版本。此例外仅限论文。",

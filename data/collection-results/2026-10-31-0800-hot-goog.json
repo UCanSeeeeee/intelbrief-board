@@ -1,0 +1,19 @@
+{
+  "runId": "2026-10-31-0800",
+  "cutoff": "2026-10-31T08:00:00+08:00",
+  "results": [
+    {
+      "unit": "tickers:goog:hotspots",
+      "start": "2026-10-30T00:00:00.000Z",
+      "end": "2026-10-31T00:00:00.000Z",
+      "status": "searched",
+      "queries": [
+        "给我过去24小时内包含“GOOG”或“GOOGL”的浏览量最高五个X帖子。除关键词和24小时外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。截止时间：2026-10-31T08:00:00+08:00。",
+        "仅定点纠正已知覆盖问题：可见工具加了min_faves与from:Jason，且一条时间条件是32小时；请按[2026-10-30T00:00:00Z,2026-10-31T00:00:00Z)和GOOG或GOOGL、去掉其他限制，只核因此可能遗漏的更高views帖。已有5帖正文/UTC秒合格不重读。原整数views是否工具实际返回、而非估算？如有更高漏帖补其原文摘要/作者/精确UTC/实测views；不能穷尽全X保留partial。"
+      ],
+      "note": "初查min_faves/from及32h条件已定点纠正至严格24h；纠正仍出现-filter:replies变体，明确留覆盖缺口。5帖UTC秒/整数views为工具实测，未穷尽全X、不混旧views。",
+      "evidenceFile": "data/collection-runs/2026-10-31-0800.json"
+    }
+  ],
+  "pending": []
+}

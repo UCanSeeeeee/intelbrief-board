@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-30T00:18:29.985Z",
+  "updatedAt": "2026-10-31T00:54:06.246Z",
   "reviews": [
     {
       "id": "nature-2026-10-19-walkability",
@@ -2435,54 +2435,367 @@
         "status": "bounded-search-completed",
         "note": "已查DOI正式更正/撤稿及相关复现线索；Crossref作者日期核对成功，update-to为空不等于穷尽更正。主要争议进入边界；未重跑原始数据。"
       }
+    },
+    {
+      "id": "nature-altruistic-punishment-20261031",
+      "journal": "nature",
+      "journalName": "Nature",
+      "doi": "10.1038/415137a",
+      "title": "自费惩罚可以维持实验中的合作，但动机不止一种",
+      "originalTitle": "Altruistic punishment in humans",
+      "authors": [
+        "Ernst Fehr"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Ernst Fehr",
+          "intro": "实验经济学研究者"
+        }
+      ],
+      "publishedDate": "2002-01-10",
+      "selectedDate": "2026-10-31",
+      "selectionKind": "classic",
+      "paperUrl": "https://www.nature.com/articles/415137a",
+      "category": "健康、生活与统计",
+      "stage": "公共品实验及后续动机争议",
+      "accessLevel": "partial",
+      "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+      "takeaway": "在这组匿名公共品实验里，允许自费惩罚时合作更容易维持；这不能证明惩罚总有益，或只有一种动机。",
+      "summary": {
+        "problem": "自费惩罚可以维持实验中的合作，但动机不止一种",
+        "method": "240名学生以真实货币参与公共品实验，4人一组，比较有无自费惩罚。每轮匿名更换成员以限制直接互惠，记录贡献和惩罚；惩罚者每付1单位，被罚者损失3单位。",
+        "findings": "允许惩罚时合作较高并可维持，没有惩罚时合作下降。后续对原数据的重析提出，减少不平等也可能驱动惩罚，不能把动机唯一归为维护合作。",
+        "statistics": "原始大学PDF核到240人；不以惩罚次数替代独立样本数，也不补未核的统一效果百分比。",
+        "limitations": "这是学生和特定收益规则下的实验。2003/2005评论质疑演化解释与动机；后续田野研究也未发现惩罚随违规程度增加，不能直接推为现实处罚原则。",
+        "meaning": "把对象、测量终点与可推广范围分开理解，不用单项结果替代全部判断。"
+      },
+      "accessNote": "独立核原刊公开摘要、大学原PDF设计/结果节选，2003/2005评论摘要与2016田野研究公开摘要；未重跑原数据。",
+      "sources": [
+        {
+          "label": "Nature原文摘要与元数据",
+          "url": "https://www.nature.com/articles/415137a"
+        },
+        {
+          "label": "作者大学公开原文",
+          "url": "https://www.econ.uzh.ch/dam/jcr:ffffffff-9758-127f-ffff-fffffd123b6f/AltruisticPunishment.pdf"
+        },
+        {
+          "label": "2005原数据重析",
+          "url": "https://www.nature.com/articles/nature03256"
+        },
+        {
+          "label": "后续田野实验边界",
+          "url": "https://www.nature.com/articles/ncomms13327"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+        "status": "bounded-search-completed",
+        "note": "Crossref把nature03256关联标为erratum；已核Nature出版类型为Brief Communications Arising、PubMed为Comment，是2005原数据重析争议，不是原文正式数据勘误。2003 421911b也为理论评论。未发现本次检索中的正式撤稿。"
+      },
+      "corrections": [],
+      "replicationNotes": [
+        {
+          "doi": "10.1038/nature03256",
+          "type": "independent-reanalysis-comment",
+          "date": "2005-01-05",
+          "impact": "平等动机可解释部分惩罚；不推翻特定条件下的贡献差异。"
+        },
+        {
+          "doi": "10.1038/ncomms13327",
+          "type": "related-field-experiment",
+          "date": "2016-11-01",
+          "impact": "田野中的惩罚强度未随违规程度增加，限制实验外推。"
+        }
+      ]
+    },
+    {
+      "id": "nature-punishment-cooperation-payoff-20261031",
+      "journal": "nature",
+      "journalName": "Nature",
+      "doi": "10.1038/nature06723",
+      "title": "惩罚可增加合作，却未显示平均收益上升",
+      "originalTitle": "Winners don’t punish",
+      "authors": [
+        "Anna Dreber"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Anna Dreber",
+          "intro": "行为经济学研究者"
+        }
+      ],
+      "publishedDate": "2008-03-20",
+      "selectedDate": "2026-10-31",
+      "selectionKind": "classic",
+      "paperUrl": "https://www.nature.com/articles/nature06723",
+      "category": "健康、生活与统计",
+      "stage": "重复博弈实验及后续情境研究",
+      "accessLevel": "partial",
+      "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+      "takeaway": "在这组重复博弈里，加入惩罚选项提高了合作频率，却未检出群体平均收益显著增加。",
+      "summary": {
+        "problem": "惩罚可增加合作，却未显示平均收益上升",
+        "method": "104人匿名两两进行重复囚徒困境；两种收益参数分别比较“合作/背叛”与另加“自费惩罚”。每轮继续概率为0.75，结束后重新匹配，记录选择与累计收益。",
+        "findings": "两组参数下，合作比例分别由21.2%到52.4%、43.0%到59.7%；平均收益未显示显著增加。惩罚使用与个人总收益负相关，但这不是“同一个人只要不惩罚就会赚更多”的因果证明。",
+        "statistics": "总样本104人；1230次两两互动不是1230名独立受试者。未见显著收益差异不等于已经证明两条件完全等效。",
+        "limitations": "惩罚成本与反向报复会影响收益；现实制度与关系不同。2017后续实验显示实名/匿名会改变合作和收益关系，不能推广为一切惩罚无用。",
+        "meaning": "把对象、测量终点与可推广范围分开理解，不用单项结果替代全部判断。"
+      },
+      "accessNote": "核PMC作者稿正文设计/结果节选、原刊及PubMed元数据，后续实名/匿名实验摘要与图注；补充材料未通读。",
+      "sources": [
+        {
+          "label": "Nature原文",
+          "url": "https://www.nature.com/articles/nature06723"
+        },
+        {
+          "label": "合法公开作者稿",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2292414/"
+        },
+        {
+          "label": "后续实名与匿名实验",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28435860/"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+        "status": "bounded-search-completed",
+        "note": "PubMed/Crossref及逐题更正查询未检得本研究正式撤稿/数据勘误；2017相关实验是情境扩展，不是原文更正。"
+      },
+      "corrections": [],
+      "replicationNotes": [
+        {
+          "doi": "10.1126/sciadv.1601444",
+          "type": "related-experimental-extension",
+          "date": "2017-03-29",
+          "impact": "实名/匿名改变合作收益关联，惩罚负关联仍出现；不是所有现实场景验证。"
+        }
+      ]
+    },
+    {
+      "id": "science-intrinsic-lifespan-heritability-20261031",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.adz1187",
+      "title": "寿命遗传力的估计，会随所研究的死亡风险而变",
+      "originalTitle": "Heritability of intrinsic human life span is about 50% when confounding factors are addressed",
+      "authors": [
+        "Ben Shenhar"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Ben Shenhar",
+          "intro": "分子细胞生物学研究者"
+        }
+      ],
+      "publishedDate": "2026-01-29",
+      "selectedDate": "2026-10-31",
+      "selectionKind": "classic",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.adz1187",
+      "category": "健康、生活与统计",
+      "stage": "历史双胞胎队列再分析与死亡模型",
+      "accessLevel": "partial",
+      "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+      "takeaway": "在校正外因死亡的模型下，内源性寿命遗传力估计约为一半；这不是说一个人的寿命有一半由基因决定。",
+      "summary": {
+        "problem": "寿命遗传力的估计，会随所研究的死亡风险而变",
+        "method": "研究比较同卵/异卵双胞胎寿命关联，并以死亡模型校正事故、感染等外因死亡及入组年龄。资料含丹麦2872对、瑞典9880对双胞胎，另用共同/分开抚养的SATSA及美国百岁者手足资料检验。",
+        "findings": "作者估计校正后的内源性寿命遗传力约55%，高于许多未校正估计。这里估计的是特定人群的寿命变异，不是个人寿命的分配比例。",
+        "statistics": "表1：丹麦MZ1033/DZ1839对；瑞典MZ3477/DZ6403对；SATSA表列MZ196/DZ325对及分开抚养MZ150/DZ371对。US手足nsiblings2092为人数，不与双胞胎对相加；5000对模拟不是实际新增样本。",
+        "limitations": "校正依赖死亡模型和双胞胎等环境假设，历史队列缺详细死因；其余变异也不全是生活方式。遗传力随人群环境变化，不能预测某个人能活多久。",
+        "meaning": "把对象、测量终点与可推广范围分开理解，不用单项结果替代全部判断。"
+      },
+      "accessNote": "核PubMed摘要、Crossref与大学公开期刊PDF设计/表1/讨论/更正页，未读全补充材料或重跑模拟。",
+      "sources": [
+        {
+          "label": "Science原文",
+          "url": "https://www.science.org/doi/10.1126/science.adz1187"
+        },
+        {
+          "label": "PubMed摘要与作者单位",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41610249/"
+        },
+        {
+          "label": "大学合法公开期刊稿",
+          "url": "https://www.zoology.ubc.ca/edg/pdfs/Shenhar_etal_2025.pdf"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+        "status": "bounded-search-completed",
+        "note": "2026-02-20更正只修正Funding首句经费编号（大学PDF末页明示），不改结果；本轮PubMed/Crossref无其他结果更正。原文模型与等环境假设局限进入正文。"
+      },
+      "corrections": [
+        {
+          "date": "2026-02-20",
+          "type": "administrative-funding-correction",
+          "impact": "资助编号，不改变统计结果",
+          "sourceUrl": "https://www.zoology.ubc.ca/edg/pdfs/Shenhar_etal_2025.pdf"
+        }
+      ],
+      "replicationNotes": []
+    },
+    {
+      "id": "science-longitudinal-molecular-aging-20261031",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.aed6452",
+      "title": "群体平均衰老趋势，未必代表一个人的分子轨迹",
+      "originalTitle": "Longitudinal dynamics of gene expression and metabolomics in an aging population cohort",
+      "authors": [
+        "Julia S El-Sayed Moustafa"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Julia S El-Sayed Moustafa",
+          "intro": "遗传流行病学研究者"
+        }
+      ],
+      "publishedDate": "2026-09-03",
+      "selectedDate": "2026-10-31",
+      "selectionKind": "classic",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.aed6452",
+      "category": "健康、生活与统计",
+      "stage": "女性队列纵向多组学观察",
+      "accessLevel": "abstract",
+      "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+      "takeaway": "同一群体中，个人的分子变化常会偏离群体平均轨迹，不能只按年龄推定每个人如何衰老。",
+      "summary": {
+        "problem": "群体平均衰老趋势，未必代表一个人的分子轨迹",
+        "method": "研究在8年间反复测量335名女性的全血基因表达及代谢物，比较同一个人的变化与群体时间趋势，并分析细胞类型及遗传、节律、季节和环境暴露的关联。",
+        "findings": "5061个基因与181个代谢物水平随时间变化，个体轨迹常偏离群体趋势，且存在细胞类型差异。环境因素与轨迹有关联，未被随机分配为干预。",
+        "statistics": "335为队列人数；5061/181为变化特征数，不是人数。各时点/终点有效样本与具体效应量未在公开摘要完整列示，不补造。",
+        "limitations": "这是女性全血队列，不能直接推广到所有性别或器官；观察关联不证明污染物导致某一种衰老路径，也尚不能转成个人诊断工具。",
+        "meaning": "把对象、测量终点与可推广范围分开理解，不用单项结果替代全部判断。"
+      },
+      "accessNote": "核PubMed公开摘要/作者单位、官方NLM XML与Crossref；Science直开403，未读受限全文或补充材料。",
+      "sources": [
+        {
+          "label": "Science原文",
+          "url": "https://www.science.org/doi/10.1126/science.aed6452"
+        },
+        {
+          "label": "PubMed原始摘要",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42691178/"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+        "status": "bounded-search-completed",
+        "note": "已查逐DOI更正/撤稿、NLM CommentsCorrections与Crossref update记录，本次未检出；不是穷尽复现文献保证。"
+      },
+      "corrections": [],
+      "replicationNotes": []
+    },
+    {
+      "id": "science-collective-intelligence-20261031",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.1193147",
+      "title": "团队表现不只是个人智力的平均值，共同因子仍有争议",
+      "originalTitle": "Evidence for a collective intelligence factor in the performance of human groups",
+      "authors": [
+        "Anita Williams Woolley"
+      ],
+      "authorsTruncated": true,
+      "people": [
+        {
+          "name": "Anita Williams Woolley",
+          "intro": "集体智力研究者"
+        }
+      ],
+      "publishedDate": "2010-09-30",
+      "selectedDate": "2026-10-31",
+      "selectionKind": "classic",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.1193147",
+      "category": "健康、生活与统计",
+      "stage": "小组任务实验与后续统计重析争议",
+      "accessLevel": "partial",
+      "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+      "takeaway": "原研究在多种小组任务中观察到共同表现因子；后续重析质疑其稳健性，不能据此开出团队组成配方。",
+      "summary": {
+        "problem": "团队表现不只是个人智力的平均值，共同因子仍有争议",
+        "method": "两项研究共699人，组成2—5人小组完成推理、协商等任务；研究1为40个3人组，研究2为152组。研究测量个人智力、群体多任务成绩及互动特征，再分析共同因子和预测关系。",
+        "findings": "原研究提取的c因子与平均/最高个人智力关联较弱，与社会敏感性、轮流发言等相关。2017年对6份既有样本的重析认为支持偏弱，并指出低努力作答和嵌套资料可能夸大共同变化。",
+        "statistics": "699人为两项研究总人数，40+152为组数；研究2首因子解释44%方差。随机分组不等于随机操纵社会敏感性、性别比例或发言均衡。",
+        "limitations": "实验任务和统计模型的选择会影响因子结论。2017重析属于实质方法争议，不能把原研究当成普遍团队智力定律，更不能推出增加某类成员必然提高表现。",
+        "meaning": "把对象、测量终点与可推广范围分开理解，不用单项结果替代全部判断。"
+      },
+      "accessNote": "核PubMed摘要/作者单位、大学原文中本论文设计/结果/讨论节选及2017重析摘要；PDF首段另属前一论文，未混用。未重跑因子分析。",
+      "sources": [
+        {
+          "label": "Science原文",
+          "url": "https://www.science.org/doi/10.1126/science.1193147"
+        },
+        {
+          "label": "PubMed摘要/日期",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20929725/"
+        },
+        {
+          "label": "大学公开原文",
+          "url": "https://ofew.berkeley.edu/sites/default/files/evidence_for_a_collective_intelligence_factor_in_the_performance_of_human_groups_woolley_et_al.pdf"
+        },
+        {
+          "label": "2017原数据重析评论",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29016184/"
+        }
+      ],
+      "correctionCheck": {
+        "checkedAt": "2026-10-31T00:47:40.907278+00:00",
+        "status": "bounded-search-completed",
+        "note": "原早期稿说明2010-10-01修正三名作者单位编号，非结果更正；PubMed关联2017评论质疑构念，作为实质边界进入正文。未发现本次检索中的正式撤稿。"
+      },
+      "corrections": [
+        {
+          "date": "2010-10-01",
+          "type": "author-affiliation-number-correction",
+          "sourceUrl": "https://citeseerx.ist.psu.edu/document?doi=90903b62fff9ffa578d748c66dde541c6e6b7fe2&repid=rep1&type=pdf",
+          "impact": "三名作者单位编号，不改变研究结果。"
+        }
+      ],
+      "replicationNotes": [
+        {
+          "doi": "10.1037/apl0000176",
+          "type": "independent-reanalysis-comment",
+          "date": "2017-10",
+          "impact": "6份样本共同因子支持较弱，并指出低努力/嵌套结构可能影响结果。"
+        }
+      ],
+      "publicationDateNote": "首次在线2010-09-30；印刷2010-10-29。"
     }
   ],
   "coverage": {
     "nature": {
-      "date": "2026-10-30",
-      "status": "complete",
-      "checkedAt": "2026-10-30T00:18:19.837380+00:00",
+      "date": "2026-10-31",
+      "status": "partial",
+      "note": "Nature2篇往期精选，目标缺1；两次Grok发现仍有重复/不足，不凑第三篇。",
       "queries": [
-        "Nature正刊近30天健康生活统计原始研究，限定结论/样本/比较/测量/结果",
-        "Science正刊同范围，不用子刊替代，缺额不凑数",
-        "逐DOI去重/作者及首次发表日期/正式更正撤稿与独立复现核对",
-        "site:nature.com/articles/s41586-026 health exercise diet sleep randomized humans October2026",
-        "site:science.org/doi October2026 health behavior randomized trial",
-        "Nature cash transfers mortality",
-        "Nature artificial sweeteners glucose intolerance",
-        "Science true and false news online",
-        "逐篇DOI作者日期公开全文/图注/方法核对",
-        "六篇更正/撤稿/replication及sleep-clearance不同测量反证",
-        "Emotion/Diet近期正刊，Cash/End-history/Sleep如实标往期；子刊只作独立反证",
-        "Crossref六候选metadata作者/日期/updates",
-        "逐DOI correction/retraction/replication",
-        "Nature Neuroscience2024小染料反向研究、更正及2025双方Matters Arising",
-        "End-of-history2019独立纵向生活满意度研究及2020作者回应"
+        "每日学习论文候选发现，两刊独立：Nature和Science正刊（不含子刊/新闻），围绕普通成年人健康、生活、统计、行为与反直觉；优先近30天，人类研究优先，缺合格新作才明确往期精选。每刊目标3篇、上限3篇，不凑数；可提供4个候选方便本机核验及DOI去重。每项给原题、准确DOI、作者、首次发表日期、正刊URL、明确结论与对象/样本N/对照/干预或比较/测量/结果、合法公开摘要或作者稿URL、重大更正/撤稿/复现线索；未知明示，不能只给研究亮点。近期已读/排除：Nature s41586-026-11203-1,11181-4,11162-7,10524-5,11154-7,11077-3,10928-3,11152-9,10380-3,10634-0；Science aed8630,aee7240,aef7249,aee6213,adq1814。另此前Science10.1126/science.aed8207因精确样本与eLetters边界未核清待定，可提供原始证据线索但不假称已完成核验。只发现论文，不采集X新闻。",
+        "定点纠正论文去重：你给的Nature3篇均是明确排除/已入库，不能作今日候选。请仅找未重复的Nature正刊实证研究，缺近期可用往期精选，不给子刊或综述，健康/生活/学习/行为统计方向，给4项以便核验且不凑数。可检索旧作Altruistic punishment in humans、Winners don’t punish作为至多一个合作主题候选，另外优先不同生活问题；不要只围绕惩罚提供3篇。Science已有2候选adz1187、aed6452，另找1–2个不同生活/统计问题的未入库正刊实证研究，可核Evidence for a collective intelligence factor in the performance of human groups（1193147），不作已选。每项给精确DOI/原题/作者/日期/样本对照干预测量结果/合法原文与更正线索；未知明示。已入库Nature还包括nature09042,nature11421,nature23018,nature02223,s41586-021-03380-y,04128-4,03344-2,03843-2,s41586-023-06137-x,06116-2,s41586-024-07591-x,07500-2,s41586-025-08800-x,09321-3,09797-z。不重复这组及初始排除组，不扩展X新闻。",
+        "各DOI PubMed/Crossref原始元数据及更正查询",
+        "原刊/作者大学合法全文或摘要核样本、对照、测量与结果",
+        "Nature03256出版类型 vs Crossref erratum消歧",
+        "collective intelligence 2017原数据重析；惩罚田野/实名扩展反证"
       ],
-      "note": "Nature三篇（两篇近期、一篇往期）已核；保留所有往期。"
+      "checkedAt": "2026-10-31T00:47:40.907278+00:00"
     },
     "science": {
-      "date": "2026-10-30",
-      "status": "partial",
-      "checkedAt": "2026-10-30T00:18:19.837380+00:00",
+      "date": "2026-10-31",
+      "status": "complete",
+      "note": "Science3篇均往期精选，明确研究对象/方法/边界。",
       "queries": [
-        "Nature正刊近30天健康生活统计原始研究，限定结论/样本/比较/测量/结果",
-        "Science正刊同范围，不用子刊替代，缺额不凑数",
-        "逐DOI去重/作者及首次发表日期/正式更正撤稿与独立复现核对",
-        "site:nature.com/articles/s41586-026 health exercise diet sleep randomized humans October2026",
-        "site:science.org/doi October2026 health behavior randomized trial",
-        "Nature cash transfers mortality",
-        "Nature artificial sweeteners glucose intolerance",
-        "Science true and false news online",
-        "逐篇DOI作者日期公开全文/图注/方法核对",
-        "六篇更正/撤稿/replication及sleep-clearance不同测量反证",
-        "Emotion/Diet近期正刊，Cash/End-history/Sleep如实标往期；子刊只作独立反证",
-        "Crossref六候选metadata作者/日期/updates",
-        "逐DOI correction/retraction/replication",
-        "Nature Neuroscience2024小染料反向研究、更正及2025双方Matters Arising",
-        "End-of-history2019独立纵向生活满意度研究及2020作者回应"
+        "每日学习论文候选发现，两刊独立：Nature和Science正刊（不含子刊/新闻），围绕普通成年人健康、生活、统计、行为与反直觉；优先近30天，人类研究优先，缺合格新作才明确往期精选。每刊目标3篇、上限3篇，不凑数；可提供4个候选方便本机核验及DOI去重。每项给原题、准确DOI、作者、首次发表日期、正刊URL、明确结论与对象/样本N/对照/干预或比较/测量/结果、合法公开摘要或作者稿URL、重大更正/撤稿/复现线索；未知明示，不能只给研究亮点。近期已读/排除：Nature s41586-026-11203-1,11181-4,11162-7,10524-5,11154-7,11077-3,10928-3,11152-9,10380-3,10634-0；Science aed8630,aee7240,aef7249,aee6213,adq1814。另此前Science10.1126/science.aed8207因精确样本与eLetters边界未核清待定，可提供原始证据线索但不假称已完成核验。只发现论文，不采集X新闻。",
+        "定点纠正论文去重：你给的Nature3篇均是明确排除/已入库，不能作今日候选。请仅找未重复的Nature正刊实证研究，缺近期可用往期精选，不给子刊或综述，健康/生活/学习/行为统计方向，给4项以便核验且不凑数。可检索旧作Altruistic punishment in humans、Winners don’t punish作为至多一个合作主题候选，另外优先不同生活问题；不要只围绕惩罚提供3篇。Science已有2候选adz1187、aed6452，另找1–2个不同生活/统计问题的未入库正刊实证研究，可核Evidence for a collective intelligence factor in the performance of human groups（1193147），不作已选。每项给精确DOI/原题/作者/日期/样本对照干预测量结果/合法原文与更正线索；未知明示。已入库Nature还包括nature09042,nature11421,nature23018,nature02223,s41586-021-03380-y,04128-4,03344-2,03843-2,s41586-023-06137-x,06116-2,s41586-024-07591-x,07500-2,s41586-025-08800-x,09321-3,09797-z。不重复这组及初始排除组，不扩展X新闻。",
+        "各DOI PubMed/Crossref原始元数据及更正查询",
+        "原刊/作者大学合法全文或摘要核样本、对照、测量与结果",
+        "Nature03256出版类型 vs Crossref erratum消歧",
+        "collective intelligence 2017原数据重析；惩罚田野/实名扩展反证"
       ],
-      "note": "两篇往期证据闭环；近期高血压/关节炎候选样本规模与eLetters尚有缺口，不凑第三篇。"
+      "checkedAt": "2026-10-31T00:47:40.907278+00:00"
     }
   }
 }
