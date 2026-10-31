@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-10-31T07:57:30+08:00",
-  "updatedAt": "2026-10-31T08:54:13+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-10-31T08:55:30+08:00",
+  "finishedAt": "2026-10-31T08:55:30+08:00",
   "gitHeadAtStart": "66b0de46d7a6dd5d4c4faf9dc9dc92395a8e337f",
   "stages": [
     {
@@ -16,71 +16,73 @@
     },
     {
       "name": "read",
-      "status": "pending",
-      "at": null,
+      "status": "ok",
+      "at": "2026-10-31T08:54:52+08:00",
       "detail": null
     },
     {
       "name": "search",
-      "status": "pending",
-      "at": null,
+      "status": "ok",
+      "at": "2026-10-31T08:54:52+08:00",
       "detail": null
     },
     {
       "name": "write",
-      "status": "pending",
-      "at": "2026-10-31T08:54:13+08:00",
+      "status": "ok",
+      "at": "2026-10-31T08:54:52+08:00",
       "detail": null
     },
     {
       "name": "validate",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "skipped",
+      "at": "2026-10-31T08:54:52+08:00",
+      "detail": "用户明确不运行本地test/check/build/预览或额外回归；仅数据契约和来源/保留审查。"
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
+      "status": "ok",
+      "at": "2026-10-31T08:54:52+08:00",
       "detail": null
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-10-31T08:55:30+08:00",
+      "detail": "Cloudflare内容提交success；15/15公共JSON字节一致；只读VIX/CNN API核对完成。"
     }
   ],
   "pages": {
     "news": {
-      "status": "pending",
-      "detail": null
+      "status": "partial",
+      "detail": "两轮发现/六主题包完成，2卡；候选缺口保留"
     },
     "people": {
-      "status": "pending",
-      "detail": null
+      "status": "partial",
+      "detail": "1规则/6热度；主体/研报与覆盖缺口保留"
     },
     "tickers": {
-      "status": "pending",
-      "detail": null
+      "status": "partial",
+      "detail": "2事实/35热点样本；全7股覆盖partial"
     },
     "ai": {
-      "status": "pending",
-      "detail": null
+      "status": "partial",
+      "detail": "3卡，额度/验证范围边界留档"
     },
     "earnings": {
-      "status": "pending",
-      "detail": null
+      "status": "ok",
+      "detail": "3686原始/103精选，pending0，恢复SNDK与9简介"
     },
     "macro": {
-      "status": "pending",
-      "detail": null
+      "status": "unchanged",
+      "detail": "无新到期/过时触发，缓存官方核对"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "d523b35d55a7c628bedd55156c3822884443af38",
+  "notes": [
+    "部署与15项资源核对成功；Nature缺1、X覆盖/原件缺口留档。Bot0；未运行本地test/check/build/预览。"
+  ],
   "timings": [
     {
       "page": "news",
