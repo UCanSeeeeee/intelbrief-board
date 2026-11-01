@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-11-01T20:05:55+08:00",
-  "updatedAt": "2026-11-01T21:02:17+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-11-01T21:03:56+08:00",
+  "finishedAt": "2026-11-01T21:03:56+08:00",
   "gitHeadAtStart": "e3e375b3a7fdabbf7341137f28d006c2c168e746",
   "stages": [
     {
@@ -16,9 +16,9 @@
     },
     {
       "name": "read",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-11-01T21:03:55+08:00",
+      "detail": "已实际读取项目规则/契约/KB；此处为闭环登记时间，不充当读取起点"
     },
     {
       "name": "search",
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-11-01T21:03:55+08:00",
+      "detail": "内容8e404e592977d1ba52dd6b4fcdf7c25c52a53865已推送master且远端一致"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-11-01T21:03:55+08:00",
+      "detail": "Cloudflare同提交成功；15发布JSON字节一致；VIX/CNN API200"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "本轮独立来源批次已完成，见审计"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "8e404e592977d1ba52dd6b4fcdf7c25c52a53865",
+  "notes": [
+    "七批完成并发布；X覆盖与未确证候选保留partial。无本地test/check/build/预览，线上结果已核对。"
+  ],
   "timings": [
     {
       "page": "news",
