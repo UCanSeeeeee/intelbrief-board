@@ -22,7 +22,7 @@
 
 ## 每次定时执行
 
-1. 在本仓库根目录（`git rev-parse --show-toplevel`；不要写死机器路径）按 AGENTS.md 在修改前执行 `git pull --ff-only origin master`，读取 `CONTEXT.md`、`TASKS.md`、本文件及 `config/research-guidance.json` 指向的项目知识库与采集 SOP，检查 git 状态，保留其他工作。项目内版本是采集时强制采用的当前快照；共享 `us-equity-x-intelligence`、`us-equity-multidisciplinary-knowledge` 和质量技能仅在当前环境可用时用于补充与复核；云端无本机技能时直接使用仓库契约，不能跳过项目 SOP。
+1. 在本仓库根目录（`git rev-parse --show-toplevel`；不要写死机器路径）按 AGENTS.md 在修改前执行 `git pull --ff-only origin master`，读取 `CONTEXT.md`、`TASKS.md`、本文件及 `config/research-guidance.json` 指向的项目知识库与采集 SOP，检查 git 状态，保留其他工作。项目内版本是采集时强制采用的当前快照；共享 `us-equity-x-intelligence` 技能（内含多学科知识库与简报质量控制模块）仅在当前环境可用时用于补充与复核；云端无本机技能时直接使用仓库契约，不能跳过项目 SOP。
 2. 运行 `npm run brief:slot` 确定最近已到期时段。若该期 JSON 已存在，不覆盖。若仅部署未成功，重试该文件发布即可，不重采集。错过多个时段只制作最近一期，明确延迟和漏期，不伪造过去快照。
 2a. **禁止空等截止**：period id 与 `scheduledFor` 必须来自 `config/stock-brief.json` 当前 slots（`0800`/`2000` 对应 `08:00`/`20:00`）；旧时段只保留历史归档兼容。写完内容后若 `now >= scheduledFor`（或 `brief:slot` 的 previous 已到期），**立即**进入 publish→提交推送→线上核验（不运行本地测试/check/build/预览）；**禁止**为空等整点或平台挂起上限。可用程序语义：`isPublishDue(scheduledFor)` 为 true 就发。
 3. 计划期次仍为08:00 / 20:00；信息截止取实际开始采集时冻结的当前时间，精确到秒、带时区。运行 `npm run brief:context -- 实际截止` 获取北京时间阅读周期period、展示/检索窗口、待补查区间和完整待阅池。按 TRADING_DAY_READING 执行，按collectionUnits从上次成功采集截止接至实际截止；手动已成功部分可推进。候选不足与请求失败分开，旧证据无变化复用，不重新研究全池。截止之后的帖子留给下一期。原帖时间与首次收录时间分开，延迟发现要标注，不补造过去期次。
