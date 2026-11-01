@@ -1,58 +1,114 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-31T12:49:09.564Z",
-  "cutoff": "2026-10-31T20:00:00+08:00",
+  "updatedAt": "2026-11-01T13:01:04.764Z",
+  "cutoff": "2026-11-01T20:05:43+08:00",
   "source": "X only",
-  "status": "complete",
+  "status": "partial",
   "coverage": {
     "tabs": [
       {
         "id": "openai",
-        "status": "complete",
-        "note": "实际精确增量查询完成；新卡/证据不足/旧闻分列，不表示全X覆盖。",
-        "cutoff": "2026-10-31T20:00:00+08:00"
+        "status": "partial",
+        "note": "精确增量发现、原始追源及必要反证已完成；本窗二传仍未取得官方原X，不新增规则。",
+        "cutoff": "2026-11-01T20:05:43+08:00"
       },
       {
         "id": "anthropic",
-        "status": "complete",
-        "note": "实际精确增量查询完成；新卡/证据不足/旧闻分列，不表示全X覆盖。",
-        "cutoff": "2026-10-31T20:00:00+08:00"
+        "status": "partial",
+        "note": "精确增量发现、原始追源及必要反证已完成；本窗二传仍未取得官方原X，不新增规则。",
+        "cutoff": "2026-11-01T20:05:43+08:00"
       },
       {
         "id": "goog-ai",
-        "status": "complete",
-        "note": "实际精确增量查询完成；新卡/证据不足/旧闻分列，不表示全X覆盖。",
-        "cutoff": "2026-10-31T20:00:00+08:00"
+        "status": "partial",
+        "note": "精确增量发现、原始追源及必要反证已完成；只收最小已支持事实，阶段/日期未知保留。",
+        "cutoff": "2026-11-01T20:05:43+08:00"
       },
       {
         "id": "ai-others",
-        "status": "complete",
-        "note": "实际精确增量查询完成；新卡/证据不足/旧闻分列，不表示全X覆盖。",
-        "cutoff": "2026-10-31T20:00:00+08:00"
+        "status": "partial",
+        "note": "精确增量发现、原始追源及必要反证已完成；只收最小已支持事实，阶段/日期未知保留。",
+        "cutoff": "2026-11-01T20:05:43+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "anthropic-automated-subtle-emergent-misalignment-20261031",
+      "eventKey": "deepseek-autonomous-coding-prototype-20261101",
       "tabIds": [
-        "anthropic"
+        "ai-others"
       ],
-      "title": "Anthropic公布自动化红队安全研究",
-      "fact": "Anthropic公布自动化研究：让数千个Claude智能体尝试绕过训练数据监测器，生成表面无害、却能教出失配行为的数据。团队认为这些例子可用于改进未来监测器，并明确表示这仍是第一步，未来或可用更强模型和更多算力继续推进。这里是研究公告，未披露产品防护已上线或实际部署事故。",
-      "whyItMatters": "自动化红队若能扩大测试覆盖，可能缓解人工安全研究的时间瓶颈；但研究样本能否推广到其他模型与真实工作流，仍需复现和部署验证，不能据此推导已消除风险。",
-      "counterCase": "若其他模型或监测器无法复现该效应，或加强监测已能阻断同类样本，研究的可推广性会改变；当前原帖没有量化实际部署防护效果。",
-      "affected": [],
-      "author": "AnthropicAI",
-      "publishedAt": "2026-10-31T01:59:06Z",
-      "url": "https://x.com/AnthropicAI/status/2116349211549843666",
+      "title": "Bloomberg报道DeepSeek发布更自主的编程智能体原型",
+      "fact": "Bloomberg报道，DeepSeek发布了更自主的编程智能体原型，试图挑战Claude Code。另有官方账号转发的超智能体设计长文；准确首发时刻、许可、权重、基准测试与生产可用性仍未知。",
+      "whyItMatters": "原型体现编程智能体竞争路线的变化，但原型发布与可靠付费产品之间仍有部署、安全和单位成本等门槛。能否形成企业替代需求，取决于独立可复核的任务表现及实际交付。",
+      "counterCase": "若仅研究设计、缺少生产可用实现或可靠评估，不能据此推定已争夺Claude Code收入。",
+      "affected": [
+        "DeepSeek",
+        "编程智能体",
+        "Anthropic"
+      ],
+      "author": "business",
+      "publishedAt": "2026-11-01T04:50:08Z",
+      "url": "https://x.com/business/status/2116754642222616835",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "New Anthropic research: Automating subtle emergent misalignment research. Red-teaming is a vital part of model safety testing, but it’s also limited by researchers’ time. To see if we could automate it, we set thousands of Claude agents the task of evading a training data monitor. These agents developed training data that looked harmless to monitors (like a veteran wrestler mentoring a newcomer, or a Q&A about professional beekeeping), but that in fact taught misaligned behavior. Examples like these can be used to directly improve future training data monitors. This research is only a first step, but it suggests that future red-teaming efforts could improve much further, using better models and more compute. Read the full post on the Alignment Science Blog:",
-      "firstIncludedAt": "2026-10-31T12:49:09.564Z",
-      "lastMaterialAt": "2026-10-31T12:49:09.564Z",
+      "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
+      "originalText": "DeepSeek has released a prototype of a more autonomous coding agent as it seeks to challenge Anthropic's popular Claude Code",
+      "firstIncludedAt": "2026-11-01T13:01:04.764Z",
+      "lastMaterialAt": "2026-11-01T13:01:04.764Z",
+      "people": []
+    },
+    {
+      "eventKey": "xai-air-pollution-dismissal-report-20261031",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "媒体报道数据中心污染诉讼的撤诉请求被拒",
+      "fact": "CNBC报道，围绕孟菲斯数据中心空气污染的NAACP诉讼，撤诉请求未获支持。TechCrunch的原帖及媒体标题同样指向xAI相关诉讼继续推进。已取得的帖文未确认停运、禁令、发电机台数或实体违法裁决，裁定实际日期未知。",
+      "whyItMatters": "算力扩张除了芯片，还受现场电源、环保许可和诉讼约束影响。诉讼继续可能增加时间和合规成本的不确定性，但不能直接等同算力已下线或建设被叫停。",
+      "counterCase": "只有进一步原始裁定、许可或运行变化才能确认具体产能影响；程序性请求被拒不能代替实体判决。",
+      "affected": [
+        "xAI",
+        "数据中心供电",
+        "环保许可"
+      ],
+      "author": "CNBC",
+      "publishedAt": "2026-10-31T18:59:42Z",
+      "url": "https://x.com/CNBC/status/2116606055492833317",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
+      "originalText": "SpaceX loses bid to toss NAACP lawsuit over Memphis data center air pollution",
+      "firstIncludedAt": "2026-11-01T13:01:04.764Z",
+      "lastMaterialAt": "2026-11-01T13:01:04.764Z",
+      "people": []
+    },
+    {
+      "eventKey": "google-planassist-councils-20261031",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "PlanAssist向更多英国地方议会开放",
+      "fact": "Google DeepMind称，基于Gemini的PlanAssist可帮助规划官员评估住户申请，并正向另外12个地方议会开放。公司称所花时间最多可缩短58%；原帖没有给样本、基线、平均值或付费部署阶段。",
+      "whyItMatters": "这是AI进入政府工作流的一条具体渠道扩展线索。开放范围增加可能带来使用反馈，但尚不能换算为新增收入或平均生产率提升；后续应观察实际采用、人工复核和服务成本。",
+      "counterCase": "58%是公司报告的上限，不是平均效果；若只是试用或少数任务有效，商业化和整体行政效率的推断会减弱。",
+      "affected": [
+        "Google",
+        "Gemini",
+        "公共部门AI"
+      ],
+      "author": "GoogleDeepMind",
+      "publishedAt": "2026-10-31T13:33:39Z",
+      "url": "https://x.com/GoogleDeepMind/status/2116524000977285321",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
+      "originalText": "We built PlanAssist to help UK Government planning officers speed up building and renovations across the country. Built with Gemini, it has shown it can cut the time planning officers spend assessing householder applications by up to 58%. It is now being made available to 12 more councils to help them to make faster decisions.",
+      "firstIncludedAt": "2026-11-01T13:01:04.764Z",
+      "lastMaterialAt": "2026-11-01T13:01:04.764Z",
       "people": []
     },
     {
@@ -471,6 +527,105 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "deepseek-autonomous-coding-prototype-20261101",
+        "tabIds": [
+          "ai-others"
+        ],
+        "title": "Bloomberg报道DeepSeek发布更自主的编程智能体原型",
+        "fact": "Bloomberg报道，DeepSeek发布了更自主的编程智能体原型，试图挑战Claude Code。另有官方账号转发的超智能体设计长文；准确首发时刻、许可、权重、基准测试与生产可用性仍未知。",
+        "whyItMatters": "原型体现编程智能体竞争路线的变化，但原型发布与可靠付费产品之间仍有部署、安全和单位成本等门槛。能否形成企业替代需求，取决于独立可复核的任务表现及实际交付。",
+        "counterCase": "若仅研究设计、缺少生产可用实现或可靠评估，不能据此推定已争夺Claude Code收入。",
+        "affected": [
+          "DeepSeek",
+          "编程智能体",
+          "Anthropic"
+        ],
+        "author": "business",
+        "publishedAt": "2026-11-01T04:50:08Z",
+        "url": "https://x.com/business/status/2116754642222616835",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
+        "originalText": "DeepSeek has released a prototype of a more autonomous coding agent as it seeks to challenge Anthropic's popular Claude Code",
+        "firstIncludedAt": "2026-11-01T13:01:04.764Z",
+        "lastMaterialAt": "2026-11-01T13:01:04.764Z",
+        "people": []
+      },
+      "tabIds": [
+        "ai-others"
+      ],
+      "at": "2026-11-01T13:01:04.764Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "xai-air-pollution-dismissal-report-20261031",
+        "tabIds": [
+          "ai-others"
+        ],
+        "title": "媒体报道数据中心污染诉讼的撤诉请求被拒",
+        "fact": "CNBC报道，围绕孟菲斯数据中心空气污染的NAACP诉讼，撤诉请求未获支持。TechCrunch的原帖及媒体标题同样指向xAI相关诉讼继续推进。已取得的帖文未确认停运、禁令、发电机台数或实体违法裁决，裁定实际日期未知。",
+        "whyItMatters": "算力扩张除了芯片，还受现场电源、环保许可和诉讼约束影响。诉讼继续可能增加时间和合规成本的不确定性，但不能直接等同算力已下线或建设被叫停。",
+        "counterCase": "只有进一步原始裁定、许可或运行变化才能确认具体产能影响；程序性请求被拒不能代替实体判决。",
+        "affected": [
+          "xAI",
+          "数据中心供电",
+          "环保许可"
+        ],
+        "author": "CNBC",
+        "publishedAt": "2026-10-31T18:59:42Z",
+        "url": "https://x.com/CNBC/status/2116606055492833317",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
+        "originalText": "SpaceX loses bid to toss NAACP lawsuit over Memphis data center air pollution",
+        "firstIncludedAt": "2026-11-01T13:01:04.764Z",
+        "lastMaterialAt": "2026-11-01T13:01:04.764Z",
+        "people": []
+      },
+      "tabIds": [
+        "ai-others"
+      ],
+      "at": "2026-11-01T13:01:04.764Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "google-planassist-councils-20261031",
+        "tabIds": [
+          "goog-ai"
+        ],
+        "title": "PlanAssist向更多英国地方议会开放",
+        "fact": "Google DeepMind称，基于Gemini的PlanAssist可帮助规划官员评估住户申请，并正向另外12个地方议会开放。公司称所花时间最多可缩短58%；原帖没有给样本、基线、平均值或付费部署阶段。",
+        "whyItMatters": "这是AI进入政府工作流的一条具体渠道扩展线索。开放范围增加可能带来使用反馈，但尚不能换算为新增收入或平均生产率提升；后续应观察实际采用、人工复核和服务成本。",
+        "counterCase": "58%是公司报告的上限，不是平均效果；若只是试用或少数任务有效，商业化和整体行政效率的推断会减弱。",
+        "affected": [
+          "Google",
+          "Gemini",
+          "公共部门AI"
+        ],
+        "author": "GoogleDeepMind",
+        "publishedAt": "2026-10-31T13:33:39Z",
+        "url": "https://x.com/GoogleDeepMind/status/2116524000977285321",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
+        "originalText": "We built PlanAssist to help UK Government planning officers speed up building and renovations across the country. Built with Gemini, it has shown it can cut the time planning officers spend assessing householder applications by up to 58%. It is now being made available to 12 more councils to help them to make faster decisions.",
+        "firstIncludedAt": "2026-11-01T13:01:04.764Z",
+        "lastMaterialAt": "2026-11-01T13:01:04.764Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog-ai"
+      ],
+      "at": "2026-11-01T13:01:04.764Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "anthropic-automated-subtle-emergent-misalignment-20261031",
         "tabIds": [
           "anthropic"
@@ -687,166 +842,6 @@
         "anthropic"
       ],
       "at": "2026-10-30T07:48:54.946Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "ai-2115592371224346734",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Claude Code团队称正修复部分会话token消耗问题",
-        "fact": "Anthropic侧账号表示，调查反馈会话后发现一些导致token比预期消耗更快的小问题，正在逐步推出修复；厂商称未发现单一根因或Claude Code回归，多数较快触达限额的情况与重型会话有关。帖中没有具体版本号、受影响比例或全量完成时点。",
-        "whyItMatters": "单位任务用量既受产品问题，也受任务长度、effort及并行会话等因素影响；正在修复的披露有助于定位成本变化，但不能据此否定所有用户反馈。",
-        "counterCase": "如果仍有未识别问题、修复尚未覆盖或同类任务用量仍异常，当前解释需继续修订。",
-        "affected": [],
-        "author": "bcherny",
-        "publishedAt": "2026-10-28T23:51:41Z",
-        "url": "https://x.com/bcherny/status/2115592371224346734",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "anthropic": 4
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
-        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "We found a few smaller things along the way that made some sessions burn through tokens faster than they should have, and we're rolling out fixes to those right now."
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-29T04:21:29.257Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "ai-2115583698074755078",
-        "tabIds": [
-          "openai"
-        ],
-        "title": "ChatGPT Pro与Business合资格订阅者可领取API额度",
-        "fact": "OpenAI Developers 表示，合资格的ChatGPT Pro和Business订阅者现可主动领取每月最高500美元API额度，用于构建应用和智能体；实际额度按套餐或付费席位计算。原帖未列明完整资格细则、额度有效期及叠加规则。",
-        "whyItMatters": "订阅与API使用之间增加了试用入口，可能降低已有付费用户的开发启动成本；领取额度不等于新增现金收入，后续要看额度用完后的留存与付费。",
-        "counterCase": "资格限制、领取率、额度有效期和后续付费不足，都可能限制采用效果。",
-        "affected": [],
-        "author": "OpenAIDevs",
-        "publishedAt": "2026-10-28T23:17:13Z",
-        "url": "https://x.com/OpenAIDevs/status/2115583698074755078",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "openai": 3
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
-        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Starting today, eligible ChatGPT Pro and Business subscribers can claim up to $500 per month in API credits to build apps and agents."
-      },
-      "tabIds": [
-        "openai"
-      ],
-      "at": "2026-10-29T04:21:29.257Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "ai-2115491259381072269",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "厂商报告Utah四周Claude Code试点的自报节时",
-        "fact": "Anthropic侧账号报告，Utah在10个州机构向34名开发者提供Claude Code；报告称80%在30分钟内搭好工作环境，71%自报在四周试点结束前节省20小时以上。各指标有效回应人数与完整测量方式未披露，未取得Utah本方原帖，也没有随机或对照组依据。",
-        "whyItMatters": "该试点提供组织部署速度和用户感受的线索；样本小、节时自报，不能直接换算成经审计的人力成本节省或推广到所有机构。",
-        "counterCase": "若选择偏差、无回应者、质量复核和后续使用改变结果，自报节时不一定能持续或转化为净效率。",
-        "affected": [],
-        "author": "bcherny",
-        "publishedAt": "2026-10-28T17:09:54Z",
-        "url": "https://x.com/bcherny/status/2115491259381072269",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "anthropic": 5
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
-        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Utah gave Claude Code to 34 developers across 10 state agencies."
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-29T04:21:29.257Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "ai-2115489219804352921",
-        "tabIds": [
-          "goog-ai"
-        ],
-        "title": "Gemini 4 Carbon先向部分网络防御者逐步开放",
-        "fact": "Sundar Pichai 介绍Gemini 4 Carbon，并表示本周起向部分可信网络防御者开放，经Fairwind Program逐步扩展合作伙伴，更广可用性仍为“soon”。发布方强调网络安全与长程任务能力，尚不能由榜单直接推定生产环境效果。",
-        "whyItMatters": "受限的先期访问意味着产品能力与全面可用之间仍有阶段差；商业化传导取决于实际开放范围、安全约束及客户采用。",
-        "counterCase": "若开放延期、访问资格严格或真实任务质量未达预期，模型发布不能直接转为广泛付费收入。",
-        "affected": [],
-        "author": "sundarpichai",
-        "publishedAt": "2026-10-28T17:01:48Z",
-        "url": "https://x.com/sundarpichai/status/2115489219804352921",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "goog-ai": 2
-        },
-        "people": [
-          {
-            "name": "Sundar Pichai",
-            "intro": "谷歌及Alphabet CEO"
-          }
-        ],
-        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
-        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Some trusted cyber defenders will get access starting this week."
-      },
-      "tabIds": [
-        "goog-ai"
-      ],
-      "at": "2026-10-29T04:21:29.257Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "ai-2115467192276025500",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Claude for Legal新增预制artifact工作流库",
-        "fact": "Claude 宣布法律工作流的预制artifact库，涉及合同审查、监管动态扫描和引文检查；可从示例加入自己的文档与连接器，并在企业内部分享。可见帖未列明地区、订阅等级或完整开放资格。",
-        "whyItMatters": "预制流程有助于缩短从演示到实际团队工作流的配置路径；效率与采用仍取决于文档权限、人工审阅和真实使用。",
-        "counterCase": "如果可用资格有限、内容准确性不足或人工复核成本抵消节时，功能发布不必然形成持续付费。",
-        "affected": [],
-        "author": "claudeai",
-        "publishedAt": "2026-10-28T15:34:16Z",
-        "url": "https://x.com/claudeai/status/2115467192276025500",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "anthropic": 5
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-29T04:21:29.257Z",
-        "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "New in Claude for Legal: a gallery of ready-made artifacts for contract review, regulatory horizon scans, cite checks, and more."
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-29T04:21:29.257Z",
       "legacy": false
     }
   ]

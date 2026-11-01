@@ -1,0 +1,68 @@
+{
+  "runId": "2026-11-01-2000",
+  "cutoff": "2026-11-01T20:05:43+08:00",
+  "results": [
+    {
+      "unit": "people:elon-musk",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "from:elonmusk -is:retweet (AI OR chip OR chips OR GPU OR compute OR power OR energy OR Colossus OR xAI OR Tesla OR fab OR solar OR battery)",
+        "from:elonmusk -is:retweet"
+      ],
+      "note": "五对象价值与独立热度已查询；1条集群配置事件，10条热度，归因不足不补造，旧有效周榜保留。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "people:jensen-huang",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(\"Jensen Huang\" OR from:nvidia) (said OR says OR interview OR keynote OR GTC OR demand OR Blackwell OR Rubin OR power) -is:retweet (from:Reuters OR from:business OR from:CNBC OR from:FT OR from:WSJ OR from:nvidia OR from:technology OR from:markets)",
+        "\"Jensen Huang\" -is:retweet",
+        "(\"Jensen Huang\" OR from:nvidia OR from:NVIDIANewsroom) (interview OR told OR said OR says OR spoke OR appearance OR attends OR speech OR remarks OR podcast) -is:retweet -is:reply"
+      ],
+      "note": "五对象价值与独立热度已查询；1条集群配置事件，10条热度，归因不足不补造，旧有效周榜保留。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "people:donald-trump",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) -is:retweet (tariff OR tariffs OR China OR chips OR AI OR energy OR power OR Fed OR rates OR trade OR deal OR Xi)",
+        "(from:TrumpDailyPosts OR from:POTUS OR from:WhiteHouse) -is:retweet"
+      ],
+      "note": "五对象价值与独立热度已查询；1条集群配置事件，10条热度，归因不足不补造，旧有效周榜保留。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "people:trillion-leaders",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(from:satyanadella OR from:ajassy OR from:sundarpichai OR from:tim_cook OR from:LisaSu OR from:finkd OR from:zuck OR from:sama) -is:retweet (AI OR capex OR compute OR capacity OR datacenter OR \"data center\" OR demand OR power OR chips OR investment)",
+        "(from:satyanadella OR from:ajassy OR from:sundarpichai OR from:tim_cook OR from:LisaSu OR from:finkd OR from:zuck) -is:retweet"
+      ],
+      "note": "五对象价值与独立热度已查询；1条集群配置事件，10条热度，归因不足不补造，旧有效周榜保留。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "people:research-reports",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(Nomura OR \"Goldman Sachs\" OR \"Morgan Stanley\" OR JPMorgan OR \"BofA\" OR \"Bank of America\") (upgrade OR downgrade OR \"price target\" OR forecast OR estimates OR raises OR cuts) (semiconductor OR chip OR Nvidia OR HBM OR memory OR power OR utilities OR AI) -is:retweet (from:Reuters OR from:business OR from:CNBC OR from:markets OR from:WSJ OR from:FT OR from:GoldmanSachs OR from:MorganStanley OR from:jpmorgan)",
+        "(from:GoldmanSachs OR from:MorganStanley OR from:jpmorgan OR from:BankofAmerica OR from:NomuraHoldings OR from:Nomura OR from:BofA_News OR from:GSResearch)"
+      ],
+      "note": "五对象价值与独立热度已查询；1条集群配置事件，10条热度，归因不足不补造，旧有效周榜保留。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    }
+  ],
+  "pending": []
+}

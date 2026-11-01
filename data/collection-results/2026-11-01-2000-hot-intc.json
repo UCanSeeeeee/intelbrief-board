@@ -1,0 +1,31 @@
+{
+  "runId": "2026-11-01-2000",
+  "cutoff": "2026-11-01T20:05:43+08:00",
+  "results": [
+    {
+      "unit": "tickers:intc:hotspots",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "给我发布时间从 2026-10-31T12:00:00.000Z（含）至 2026-11-01T12:05:43.000Z（不含）的、包含“INTC”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。",
+        "INTC stock OR Intel since:2026-10-31",
+        "INTC since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC",
+        "INTC since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC min_faves:10",
+        "INTC since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC min_faves:50",
+        "INTC since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC min_retweets:10",
+        "$INTC since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC",
+        "INTC since:2026-10-31_12:00:00_UTC until:2026-10-31_18:00:00_UTC",
+        "INTC since:2026-10-31_18:00:00_UTC until:2026-11-01_00:00:00_UTC",
+        "INTC since:2026-11-01_00:00:00_UTC until:2026-11-01_12:05:43_UTC",
+        "from:WatcherGuru INTC since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC",
+        "INTC since:2026-10-31_13:00:00_UTC until:2026-10-31_16:00:00_UTC",
+        "INTC since:2026-10-31_16:00:00_UTC until:2026-10-31_20:00:00_UTC",
+        "初答加了min_faves/min_retweets且漏掉已知匹配帖WatcherGuru/2116602601886110065（2026-10-31T18:45:59Z，正文有$INTC，刚才另一股票会话实测views约41万）。请针对遗漏核对该URL当前views/正文/时间，并去掉所有附加筛选，只用INTC及2026-10-31T12:00:00Z含至2026-11-01T12:05:43Z不含重新比较前五。仅X搜索，不用普通网页补X来源。返回当前views、作者、准确UTC、原文摘录、中文摘要、链接、实际查询和有限样本缺口；不混旧views。"
+      ],
+      "note": "已查询本股完整增量窗。初答漏WatcherGuru且自行加互动门槛；已定点纠正并重新取views。Grok自行使用分区和from:WatcherGuru定点核验，执行器未指定分区方法；普通网络搜索不采纳为X证据。仅已检索样本，不保证全X前五。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    }
+  ],
+  "pending": []
+}

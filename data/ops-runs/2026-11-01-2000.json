@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "period": "2026-11-01-2000",
+  "trigger": "scheduled",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-11-01T20:05:55+08:00",
+  "updatedAt": "2026-11-01T21:02:17+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "e3e375b3a7fdabbf7341137f28d006c2c168e746",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-11-01T20:05:56+08:00",
+      "detail": null
+    },
+    {
+      "name": "read",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-11-01T21:02:02+08:00",
+      "detail": "七批已关闭；X覆盖partial，非X学习等完成"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-11-01T21:02:02+08:00",
+      "detail": "发布数据与存量保留已完成"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-11-01T21:02:02+08:00",
+      "detail": "用户要求跳过本地test/check/build/预览"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "见同批审计完整输出与缺口"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "见同批审计完整输出与缺口"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "见同批审计完整输出与缺口"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "见同批审计完整输出与缺口"
+    },
+    "earnings": {
+      "status": "ok",
+      "detail": "本轮独立来源批次已完成，见审计"
+    },
+    "macro": {
+      "status": "ok",
+      "detail": "本轮独立来源批次已完成，见审计"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:05:56+08:00",
+      "endedAt": "2026-11-01T20:13:58+08:00",
+      "durationMs": 482000,
+      "detail": "已完成精确增量查询、两轮独立发现及候选追源反证；Expert补查仍有原始来源缺口，保留旧内容。"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:05:56+08:00",
+      "endedAt": "2026-11-01T20:08:54+08:00",
+      "durationMs": 178000,
+      "detail": null
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:08:54+08:00",
+      "endedAt": "2026-11-01T20:10:47+08:00",
+      "durationMs": 113000,
+      "detail": null
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:10:47+08:00",
+      "endedAt": "2026-11-01T20:13:58+08:00",
+      "durationMs": 191000,
+      "detail": ""
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:14:07+08:00",
+      "endedAt": "2026-11-01T20:19:56+08:00",
+      "durationMs": 349000,
+      "detail": "五对象价值与独立热度已查询；1条集群配置事件，10条热度，归因不足不补造，旧有效周榜保留。"
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:14:07+08:00",
+      "endedAt": "2026-11-01T20:16:17+08:00",
+      "durationMs": 130000,
+      "detail": null
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:16:17+08:00",
+      "endedAt": "2026-11-01T20:18:04+08:00",
+      "durationMs": 107000,
+      "detail": null
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:18:04+08:00",
+      "endedAt": "2026-11-01T20:19:56+08:00",
+      "durationMs": 112000,
+      "detail": ""
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:19:56+08:00",
+      "endedAt": "2026-11-01T20:38:17+08:00",
+      "durationMs": 1101000,
+      "detail": "七股事实及各自独立热点已完成并保存；1事实/35热点，全部保留样本缺口。"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:19:56+08:00",
+      "endedAt": "2026-11-01T20:23:12+08:00",
+      "durationMs": 196000,
+      "detail": null
+    },
+    {
+      "page": "tickers",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:23:12+08:00",
+      "endedAt": "2026-11-01T20:24:29+08:00",
+      "durationMs": 77000,
+      "detail": null
+    },
+    {
+      "page": "tickers",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:24:29+08:00",
+      "endedAt": "2026-11-01T20:27:03+08:00",
+      "durationMs": 154000,
+      "detail": "已完成事实候选独立反证；GOOG无候选和旧TSMC/VRT复用证据，未空跑。"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:38:17+08:00",
+      "endedAt": "2026-11-01T20:47:34+08:00",
+      "durationMs": 557000,
+      "detail": "四对象Bot查询后由Expert补过滤缺口；3条最小事实，水印/额度等二传待核，旧有效周榜保留。"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:38:17+08:00",
+      "endedAt": "2026-11-01T20:40:47+08:00",
+      "durationMs": 150000,
+      "detail": null
+    },
+    {
+      "page": "ai",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:40:48+08:00",
+      "endedAt": "2026-11-01T20:45:13+08:00",
+      "durationMs": 265000,
+      "detail": null
+    },
+    {
+      "page": "ai",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:45:13+08:00",
+      "endedAt": "2026-11-01T20:47:34+08:00",
+      "durationMs": 141000,
+      "detail": ""
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:47:34+08:00",
+      "endedAt": "2026-11-01T20:59:49+08:00",
+      "durationMs": 735000,
+      "detail": "两刊6篇、寓言1篇、小知识5条；摘要/节选边界已保留。"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:47:34+08:00",
+      "endedAt": "2026-11-01T20:59:49+08:00",
+      "durationMs": 735000,
+      "detail": "两刊6篇、寓言1篇、小知识5条；摘要/节选边界已保留。"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:48:07+08:00",
+      "endedAt": "2026-11-01T20:59:49+08:00",
+      "durationMs": 702000,
+      "detail": "两刊6篇、寓言1篇、小知识5条；摘要/节选边界已保留。"
+    },
+    {
+      "page": "learning",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-11-01T20:53:05+08:00",
+      "endedAt": "2026-11-01T20:59:49+08:00",
+      "durationMs": 404000,
+      "detail": "两刊6篇、寓言1篇、小知识5条；摘要/节选边界已保留。"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-01T21:00:09+08:00",
+      "endedAt": "2026-11-01T21:00:43+08:00",
+      "durationMs": 34000,
+      "detail": "近期官方排期无需改动，保留历史资料时间"
+    },
+    {
+      "page": "macro",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-01T21:00:09+08:00",
+      "endedAt": "2026-11-01T21:00:43+08:00",
+      "durationMs": 34000,
+      "detail": "近期官方排期无需改动，保留历史资料时间"
+    },
+    {
+      "page": "macro",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-11-01T21:00:17+08:00",
+      "endedAt": "2026-11-01T21:00:43+08:00",
+      "durationMs": 26000,
+      "detail": "近期官方排期无需改动，保留历史资料时间"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-01T21:00:25+08:00",
+      "endedAt": "2026-11-01T21:01:04+08:00",
+      "durationMs": 39000,
+      "detail": "日历已更新、SNDK存量保留"
+    },
+    {
+      "page": "earnings",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-01T21:00:25+08:00",
+      "endedAt": "2026-11-01T21:01:04+08:00",
+      "durationMs": 39000,
+      "detail": "真实抓取3694原始，恢复后103精选，pending0"
+    },
+    {
+      "page": "macro",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-11-01T21:00:43+08:00",
+      "durationMs": 0,
+      "detail": "无新增日期或争议候选，不扩大为新闻研究"
+    },
+    {
+      "page": "earnings",
+      "name": "source-verification",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-11-01T21:01:04+08:00",
+      "durationMs": 0,
+      "detail": "无新已披露待评价公司，不重复研究旧评分"
+    },
+    {
+      "page": "earnings",
+      "name": "counter-evidence",
+      "startedAt": null,
+      "status": "skipped",
+      "endedAt": "2026-11-01T21:01:04+08:00",
+      "durationMs": 0,
+      "detail": "无新已披露待评价公司，不重复研究旧评分"
+    }
+  ]
+}

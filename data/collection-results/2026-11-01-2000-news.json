@@ -1,0 +1,86 @@
+{
+  "runId": "2026-11-01-2000",
+  "cutoff": "2026-11-01T20:05:43+08:00",
+  "results": [
+    {
+      "unit": "news:market-focus",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(Fed OR Treasury OR tariff OR \"export controls\" OR OPEC) (from:Reuters OR from:business OR from:WSJ OR from:FT OR from:CNBC) -is:retweet",
+        "(Nvidia OR TSMC OR OpenAI OR Microsoft OR Meta OR Amazon OR Alphabet) (capex OR \"data center\" OR financing OR deal OR power OR chips) -is:retweet lang:en",
+        "(Nscale OR \"export controls\" OR Hormuz OR \"power grid\" OR Blackstone Anthropic) (from:Reuters OR from:business OR from:WSJ OR from:FT OR from:CNBC OR from:theinformation OR from:markets) -is:retweet"
+      ],
+      "note": "已完成精确增量查询、两轮独立发现及候选追源反证；Expert补查仍有原始来源缺口，保留旧内容。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "news:semiconductors",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(HBM OR CoWoS OR \"2nm\" OR \"advanced packaging\" OR \"lead times\" OR yield) (TSMC OR SK Hynix OR Samsung OR Micron OR Nvidia OR Broadcom) -is:retweet lang:en"
+      ],
+      "note": "已完成精确增量查询、两轮独立发现及候选追源反证；Expert补查仍有原始来源缺口，保留旧内容。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "news:power",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(\"data center\" OR datacenter) (interconnection OR transformer OR \"gas turbine\" OR cooling OR permit OR PJM OR ERCOT OR FERC OR utility) -is:retweet lang:en"
+      ],
+      "note": "已完成精确增量查询、两轮独立发现及候选追源反证；Expert补查仍有原始来源缺口，保留旧内容。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "news:ai-adoption",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(\"inference cost\" OR \"paid seats\" OR \"annualized revenue\" OR ARR OR \"enterprise customers\" OR renewals) (OpenAI OR Anthropic OR Copilot OR Gemini OR Salesforce OR ServiceNow) -is:retweet lang:en"
+      ],
+      "note": "已完成精确增量查询、两轮独立发现及候选追源反证；Expert补查仍有原始来源缺口，保留旧内容。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "news:capital-cost",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(from:federalreserve OR from:USTreasury OR from:NewYorkFed OR from:Reuters OR from:business OR from:WSJ OR from:FT) (Treasury OR yields OR \"credit spreads\" OR refunding OR \"real yields\" OR dollar OR Fed) -is:retweet"
+      ],
+      "note": "已完成精确增量查询、两轮独立发现及候选追源反证；Expert补查仍有原始来源缺口，保留旧内容。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "news:geopolitics",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(OPEC OR Hormuz OR tariff OR tariffs OR \"export controls\" OR sanctions OR shipping) (from:Reuters OR from:business OR from:WSJ OR from:FT OR from:AP OR from:CommerceGov OR from:USTradeRep) -is:retweet"
+      ],
+      "note": "已完成精确增量查询、两轮独立发现及候选追源反证；Expert补查仍有原始来源缺口，保留旧内容。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    },
+    {
+      "unit": "news:market-structure",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "(breadth OR \"advance-decline\" OR \"fund positioning\" OR \"gamma\" OR \"0DTE\" OR \"CTA\" OR \"high yield spreads\" OR \"fund flows\") (stocks OR SPX OR S&P OR semis) -is:retweet lang:en"
+      ],
+      "note": "已完成精确增量查询、两轮独立发现及候选追源反证；Expert补查仍有原始来源缺口，保留旧内容。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    }
+  ],
+  "pending": []
+}

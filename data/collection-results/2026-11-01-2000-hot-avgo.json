@@ -1,0 +1,28 @@
+{
+  "runId": "2026-11-01-2000",
+  "cutoff": "2026-11-01T20:05:43+08:00",
+  "results": [
+    {
+      "unit": "tickers:avgo:hotspots",
+      "start": "2026-10-31T12:00:00.000Z",
+      "end": "2026-11-01T12:05:43.000Z",
+      "status": "searched",
+      "queries": [
+        "给我发布时间从 2026-10-31T12:00:00.000Z（含）至 2026-11-01T12:05:43.000Z（不含）的、包含“AVGO”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。",
+        "AVGO since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC",
+        "\"\\\"$AVGO\\\" OR AVGO since:2026-10-31_18:00:00_UTC until:2026-11-01_12:05:43_UTC\"",
+        "AVGO OR \"$AVGO\" since:2026-10-31_12:00:00_UTC until:2026-11-01_00:00:00_UTC",
+        "AVGO OR \"$AVGO\" since:2026-10-31_12:00:00_UTC until:2026-10-31_18:00:00_UTC",
+        "AVGO OR \"$AVGO\" since:2026-10-31_18:00:00_UTC until:2026-11-01_06:00:00_UTC",
+        "AVGO OR \"$AVGO\" since:2026-11-01_00:00:00_UTC until:2026-11-01_12:05:43_UTC",
+        "AVGO OR \"$AVGO\" since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC min_faves:10",
+        "AVGO OR \"$AVGO\" since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC min_faves:20",
+        "AVGO OR \"$AVGO\" since:2026-10-31_12:00:00_UTC until:2026-11-01_12:05:43_UTC",
+        "初答遗漏已知匹配高views帖AnessHusseinAli/2116544142503182842（2026-10-31T14:53:41Z，正文含$AVGO，另一会话刚实测约7.5万views），且工具加min_faves。请定点拉取该帖当前views，并去掉全部附加筛选，仅AVGO及2026-10-31T12:00:00Z含至2026-11-01T12:05:43Z不含重新比较已知样本前五。前五都给当前实际views（非估算）、作者、准确UTC、原文摘录、中文摘要、URL；实际查询和有限样本缺口明确。只用X，不用普通网页补证。"
+      ],
+      "note": "已检索本股完整增量窗；初答附加min_faves并漏AnessHusseinAli较高views帖，已定点重新拉取并去掉附加门槛重排。Grok自主分区/普通网络搜索只留过程，未采纳网络结果为X证据；仅有限样本，不保证全X前五。",
+      "evidenceFile": "data/collection-runs/2026-11-01-2000.json"
+    }
+  ],
+  "pending": []
+}

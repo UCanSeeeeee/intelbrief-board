@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-31T12:45:47.132Z",
+  "updatedAt": "2026-11-01T13:00:31.470Z",
   "timezone": "Asia/Shanghai",
   "activeWeekId": "current",
   "source": {
@@ -50,7 +50,7 @@
   },
   "counts": {
     "weeks": 3,
-    "raw": 3686,
+    "raw": 3694,
     "important": 103
   },
   "weeks": [
@@ -61,7 +61,7 @@
       "weekEnd": "2026-10-30",
       "counts": {
         "days": 5,
-        "raw": 874,
+        "raw": 882,
         "important": 50
       },
       "days": [
@@ -252,73 +252,88 @@
           "rawCount": 173,
           "items": [
             {
-              "symbol": "V",
-              "name": "Visa Inc.",
+              "symbol": "BBAI",
+              "name": "BigBear.ai, Inc.",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$733,534,490,000",
-              "marketCapUsd": 733534490000,
-              "epsForecast": "$3.43",
+              "marketCap": "$1,285,313,790",
+              "marketCapUsd": 1285313790,
+              "epsForecast": "($0.06)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
-                "老牛股/质量股"
+                "新兴科技"
               ],
               "selection": "theme",
-              "selectionReason": "主题：老牛股/质量股",
+              "selectionReason": "主题：新兴科技",
               "source": "nasdaq",
               "result": {
                 "status": "unknown",
                 "score": null,
                 "band": null,
                 "bandLabel": null,
-                "summary": "Visa官方10月27日公告确认财报已经发布；但官方季度页本次加载仍只列2026年Q1–Q3附件，未取得Q4原始报表和量化指引。二手转载称调整EPS 3.48美元、营收121亿美元，公开预期约3.43–3.44美元；这些数字尚未与官方Q4附件直接核对，暂不给分，等待原始附件补齐。",
+                "summary": "官方营收4358.1万美元、同比增31%，全年营收指引上调至1.50亿–1.65亿美元；毛利率31.2%，调整EBITDA仍亏损910万美元。GAAP每股亏损0.19美元，含商誉减值影响。日历预期亏损0.05美元的调整口径未核清，也未取得可比营收一致预期，不能只靠指引上调判超预期，暂不给分。合同总值与积压不是当季收入。",
                 "facts": {
-                  "officialDisclosureConfirmed": true,
-                  "missing": "官方Q4原始报表、调整口径与指引；本轮季度页未列Q4附件"
+                  "revenueUsdMn": 43.581,
+                  "revenueGrowthPct": 31,
+                  "grossMarginPct": 31.2,
+                  "adjustedEbitdaUsdMn": -9.1,
+                  "gaapDilutedEps": -0.19,
+                  "goodwillImpairmentUsdMn": 76.737,
+                  "fyRevenueGuidanceUsdMn": [
+                    150,
+                    165
+                  ],
+                  "consensusComparability": "Nasdaq EPS -0.05 basis unverified; comparable revenue consensus not found"
                 },
                 "sources": [
-                  "https://investor.visa.com/news/news-details/2026/Visa-Fiscal-Fourth-Quarter-and-Full-Year-2026-Financial-Results/default.aspx",
-                  "https://investor.visa.com/financial-information/quarterly-earnings/default.aspx",
-                  "https://www.newsquawk.com/headlines/visa-v-q4-2026-usd-adj-eps-348-exp-344-revenue-121bln-exp-1209bln"
+                  "https://ir.bigbear.ai/news-events/press-releases/detail/150/bigbear-ai-announces-third-quarter-2026-results-and-raises",
+                  "https://api.nasdaq.com/api/calendar/earnings?date=2026-10-27"
                 ],
                 "reportedDate": "2026-10-27",
                 "checkedAt": "2026-10-28T01:13:36.292615+00:00"
               }
             },
             {
-              "symbol": "KO",
-              "name": "Coca-Cola Company (The)",
+              "symbol": "ENPH",
+              "name": "Enphase Energy, Inc.",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$399,302,590,000",
-              "marketCapUsd": 399302590000,
-              "epsForecast": "$0.87",
+              "marketCap": "$3,421,647,100",
+              "marketCapUsd": 3421647100,
+              "epsForecast": "$0.18",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
-                "老牛股/质量股"
+                "电力"
               ],
               "selection": "theme",
-              "selectionReason": "主题：老牛股/质量股",
+              "selectionReason": "主题：电力",
               "source": "nasdaq",
               "result": {
                 "status": "scored",
-                "score": 82,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "营收134亿美元、可比EPS 0.91美元，均高于公开预期约129.3亿美元、0.88美元；全球销量增长5%，全年可比EPS增长指引从9%–10%升至至少11%，自由现金流指引从124亿升至至少130亿美元。北美销量持平，汇率亦贡献利润增长；收入、盈利与指引共振，评82分。Nasdaq日历EPS预期0.87美元与公开调整口径0.88美元不同，采用已注明口径的后者。",
+                "score": 48,
+                "band": "miss",
+                "bandLabel": "不及预期",
+                "summary": "营收2.933亿美元、非GAAP EPS 0.41美元，低于公开非GAAP预期0.47美元及营收3.037亿美元。全球终端销售环比仅增1%，低于公司此前10%的假设；第四季营收指引2.25亿–2.55亿美元、非GAAP毛利率40%–43%，较本季继续走弱。EPS另受投资减值拖累0.14美元，不能全部归因经营；综合季度与展望评48分，不把Nasdaq未明口径0.18美元直接比较调整EPS。",
                 "facts": {
-                  "revenueUsdBn": 13.4,
-                  "comparableEps": 0.91,
-                  "gaapEps": 0.93,
-                  "consensusComparableEps": 0.88,
-                  "consensusRevenueUsdBn": 12.93,
-                  "unitCaseVolumeGrowthPct": 5,
-                  "fyComparableEpsGrowthMinimumPct": 11,
-                  "fyFcfMinimumUsdBn": 13
+                  "revenueUsdMn": 293.329,
+                  "consensusRevenueUsdMn": 303.72,
+                  "nonGaapEps": 0.41,
+                  "consensusNonGaapEps": 0.47,
+                  "gaapEps": 0.17,
+                  "impairmentNonGaapEpsImpact": 0.14,
+                  "q4RevenueGuidanceUsdMn": [
+                    225,
+                    255
+                  ],
+                  "q4NonGaapGrossMarginPct": [
+                    40,
+                    43
+                  ]
                 },
                 "sources": [
-                  "https://investors.coca-colacompany.com/news-events/press-releases/detail/1176/coca-cola-reports-third-quarter-2026-results-and-raises-full-year-guidance",
-                  "https://finance.yahoo.com/markets/stocks/articles/coca-cola-raises-2026-earnings-142720693.html",
+                  "https://enphaseenergy.gcs-web.com/news-releases/news-release-details/enphase-energy-reports-financial-results-third-quarter-2026/",
+                  "https://beta.earningswhispers.com/stocks/ENPH",
+                  "https://www.earningswhispers.com/article/ENPH/r502",
                   "https://api.nasdaq.com/api/calendar/earnings?date=2026-10-27"
                 ],
                 "reportedDate": "2026-10-27",
@@ -371,6 +386,46 @@
               }
             },
             {
+              "symbol": "HSBC",
+              "name": "HSBC Holdings plc",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$296,637,923,000",
+              "marketCapUsd": 296637923000,
+              "epsForecast": "$2.13",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：全球系统性银行，亚洲财富业务、净利息收入与信用风险影响金融板块及跨境资本配置。",
+              "source": "nasdaq",
+              "result": {
+                "status": "unknown",
+                "score": null,
+                "band": null,
+                "bandLabel": null,
+                "summary": "官方税前利润96亿美元、同比增32%，其中包含去年法律拨备不再发生的利好；剔显著项目税前利润100亿美元、收入187亿美元，全年银行净利息收入至少460亿美元及RoTE至少17%的目标维持。公开EPS预期2.13/2.20/2.22美元并存，本轮未核清ADR与普通股、调整利润的可比口径，暂不评分；同比利润高增长不能等同超预期。",
+                "facts": {
+                  "reportedPbtUsdBn": 9.6,
+                  "reportedPbtGrowthPct": 32,
+                  "pbtExNotableItemsUsdBn": 10,
+                  "revenueExNotableItemsUsdBn": 18.7,
+                  "bankingNiiUsdBn": 11.7,
+                  "fyBankingNiiMinimumUsdBn": 46,
+                  "roteMinimumPct": 17,
+                  "cet1Pct": 13.9,
+                  "consensusComparability": "ADR/ordinary share and adjusted basis not reconciled"
+                },
+                "sources": [
+                  "https://www.hsbc.com/news-and-views/news/media-releases/2026/hsbc-holdings-plc-3q-2026-earnings-release",
+                  "https://www.hsbc.com/investors/results-and-announcements/all-reporting/3q-2026-quick-read",
+                  "https://www.marketbeat.com/earnings/reports/2026-10-27-hsbc-holdings-plc-stock/",
+                  "https://api.nasdaq.com/api/calendar/earnings?date=2026-10-27"
+                ],
+                "reportedDate": "2026-10-27",
+                "checkedAt": "2026-10-28T01:13:36.292615+00:00"
+              }
+            },
+            {
               "symbol": "HUBB",
               "name": "Hubbell Inc",
               "timeCode": "unspecified",
@@ -415,93 +470,44 @@
               }
             },
             {
-              "symbol": "ENPH",
-              "name": "Enphase Energy, Inc.",
+              "symbol": "KO",
+              "name": "Coca-Cola Company (The)",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$3,421,647,100",
-              "marketCapUsd": 3421647100,
-              "epsForecast": "$0.18",
+              "marketCap": "$399,302,590,000",
+              "marketCapUsd": 399302590000,
+              "epsForecast": "$0.87",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
-                "电力"
+                "老牛股/质量股"
               ],
               "selection": "theme",
-              "selectionReason": "主题：电力",
+              "selectionReason": "主题：老牛股/质量股",
               "source": "nasdaq",
               "result": {
                 "status": "scored",
-                "score": 48,
-                "band": "miss",
-                "bandLabel": "不及预期",
-                "summary": "营收2.933亿美元、非GAAP EPS 0.41美元，低于公开非GAAP预期0.47美元及营收3.037亿美元。全球终端销售环比仅增1%，低于公司此前10%的假设；第四季营收指引2.25亿–2.55亿美元、非GAAP毛利率40%–43%，较本季继续走弱。EPS另受投资减值拖累0.14美元，不能全部归因经营；综合季度与展望评48分，不把Nasdaq未明口径0.18美元直接比较调整EPS。",
+                "score": 82,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "营收134亿美元、可比EPS 0.91美元，均高于公开预期约129.3亿美元、0.88美元；全球销量增长5%，全年可比EPS增长指引从9%–10%升至至少11%，自由现金流指引从124亿升至至少130亿美元。北美销量持平，汇率亦贡献利润增长；收入、盈利与指引共振，评82分。Nasdaq日历EPS预期0.87美元与公开调整口径0.88美元不同，采用已注明口径的后者。",
                 "facts": {
-                  "revenueUsdMn": 293.329,
-                  "consensusRevenueUsdMn": 303.72,
-                  "nonGaapEps": 0.41,
-                  "consensusNonGaapEps": 0.47,
-                  "gaapEps": 0.17,
-                  "impairmentNonGaapEpsImpact": 0.14,
-                  "q4RevenueGuidanceUsdMn": [
-                    225,
-                    255
-                  ],
-                  "q4NonGaapGrossMarginPct": [
-                    40,
-                    43
-                  ]
+                  "revenueUsdBn": 13.4,
+                  "comparableEps": 0.91,
+                  "gaapEps": 0.93,
+                  "consensusComparableEps": 0.88,
+                  "consensusRevenueUsdBn": 12.93,
+                  "unitCaseVolumeGrowthPct": 5,
+                  "fyComparableEpsGrowthMinimumPct": 11,
+                  "fyFcfMinimumUsdBn": 13
                 },
                 "sources": [
-                  "https://enphaseenergy.gcs-web.com/news-releases/news-release-details/enphase-energy-reports-financial-results-third-quarter-2026/",
-                  "https://beta.earningswhispers.com/stocks/ENPH",
-                  "https://www.earningswhispers.com/article/ENPH/r502",
+                  "https://investors.coca-colacompany.com/news-events/press-releases/detail/1176/coca-cola-reports-third-quarter-2026-results-and-raises-full-year-guidance",
+                  "https://finance.yahoo.com/markets/stocks/articles/coca-cola-raises-2026-earnings-142720693.html",
                   "https://api.nasdaq.com/api/calendar/earnings?date=2026-10-27"
                 ],
                 "reportedDate": "2026-10-27",
                 "checkedAt": "2026-10-28T01:13:36.292615+00:00",
                 "scoredAt": "2026-10-28T01:13:36.292615+00:00"
-              }
-            },
-            {
-              "symbol": "BBAI",
-              "name": "BigBear.ai, Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$1,285,313,790",
-              "marketCapUsd": 1285313790,
-              "epsForecast": "($0.06)",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "新兴科技"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：新兴科技",
-              "source": "nasdaq",
-              "result": {
-                "status": "unknown",
-                "score": null,
-                "band": null,
-                "bandLabel": null,
-                "summary": "官方营收4358.1万美元、同比增31%，全年营收指引上调至1.50亿–1.65亿美元；毛利率31.2%，调整EBITDA仍亏损910万美元。GAAP每股亏损0.19美元，含商誉减值影响。日历预期亏损0.05美元的调整口径未核清，也未取得可比营收一致预期，不能只靠指引上调判超预期，暂不给分。合同总值与积压不是当季收入。",
-                "facts": {
-                  "revenueUsdMn": 43.581,
-                  "revenueGrowthPct": 31,
-                  "grossMarginPct": 31.2,
-                  "adjustedEbitdaUsdMn": -9.1,
-                  "gaapDilutedEps": -0.19,
-                  "goodwillImpairmentUsdMn": 76.737,
-                  "fyRevenueGuidanceUsdMn": [
-                    150,
-                    165
-                  ],
-                  "consensusComparability": "Nasdaq EPS -0.05 basis unverified; comparable revenue consensus not found"
-                },
-                "sources": [
-                  "https://ir.bigbear.ai/news-events/press-releases/detail/150/bigbear-ai-announces-third-quarter-2026-results-and-raises",
-                  "https://api.nasdaq.com/api/calendar/earnings?date=2026-10-27"
-                ],
-                "reportedDate": "2026-10-27",
-                "checkedAt": "2026-10-28T01:13:36.292615+00:00"
               }
             },
             {
@@ -542,46 +548,6 @@
                 "reportedDate": "2026-10-27",
                 "checkedAt": "2026-10-28T01:13:36.292615+00:00",
                 "scoredAt": "2026-10-28T01:13:36.292615+00:00"
-              }
-            },
-            {
-              "symbol": "HSBC",
-              "name": "HSBC Holdings plc",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$296,637,923,000",
-              "marketCapUsd": 296637923000,
-              "epsForecast": "$2.13",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：全球系统性银行，亚洲财富业务、净利息收入与信用风险影响金融板块及跨境资本配置。",
-              "source": "nasdaq",
-              "result": {
-                "status": "unknown",
-                "score": null,
-                "band": null,
-                "bandLabel": null,
-                "summary": "官方税前利润96亿美元、同比增32%，其中包含去年法律拨备不再发生的利好；剔显著项目税前利润100亿美元、收入187亿美元，全年银行净利息收入至少460亿美元及RoTE至少17%的目标维持。公开EPS预期2.13/2.20/2.22美元并存，本轮未核清ADR与普通股、调整利润的可比口径，暂不评分；同比利润高增长不能等同超预期。",
-                "facts": {
-                  "reportedPbtUsdBn": 9.6,
-                  "reportedPbtGrowthPct": 32,
-                  "pbtExNotableItemsUsdBn": 10,
-                  "revenueExNotableItemsUsdBn": 18.7,
-                  "bankingNiiUsdBn": 11.7,
-                  "fyBankingNiiMinimumUsdBn": 46,
-                  "roteMinimumPct": 17,
-                  "cet1Pct": 13.9,
-                  "consensusComparability": "ADR/ordinary share and adjusted basis not reconciled"
-                },
-                "sources": [
-                  "https://www.hsbc.com/news-and-views/news/media-releases/2026/hsbc-holdings-plc-3q-2026-earnings-release",
-                  "https://www.hsbc.com/investors/results-and-announcements/all-reporting/3q-2026-quick-read",
-                  "https://www.marketbeat.com/earnings/reports/2026-10-27-hsbc-holdings-plc-stock/",
-                  "https://api.nasdaq.com/api/calendar/earnings?date=2026-10-27"
-                ],
-                "reportedDate": "2026-10-27",
-                "checkedAt": "2026-10-28T01:13:36.292615+00:00"
               }
             },
             {
@@ -629,6 +595,40 @@
                 "checkedAt": "2026-10-29T04:21:23.333845+00:00",
                 "scoredAt": "2026-10-29T04:21:23.333845+00:00"
               }
+            },
+            {
+              "symbol": "V",
+              "name": "Visa Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$733,534,490,000",
+              "marketCapUsd": 733534490000,
+              "epsForecast": "$3.43",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "老牛股/质量股"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：老牛股/质量股",
+              "source": "nasdaq",
+              "result": {
+                "status": "unknown",
+                "score": null,
+                "band": null,
+                "bandLabel": null,
+                "summary": "Visa官方10月27日公告确认财报已经发布；但官方季度页本次加载仍只列2026年Q1–Q3附件，未取得Q4原始报表和量化指引。二手转载称调整EPS 3.48美元、营收121亿美元，公开预期约3.43–3.44美元；这些数字尚未与官方Q4附件直接核对，暂不给分，等待原始附件补齐。",
+                "facts": {
+                  "officialDisclosureConfirmed": true,
+                  "missing": "官方Q4原始报表、调整口径与指引；本轮季度页未列Q4附件"
+                },
+                "sources": [
+                  "https://investor.visa.com/news/news-details/2026/Visa-Fiscal-Fourth-Quarter-and-Full-Year-2026-Financial-Results/default.aspx",
+                  "https://investor.visa.com/financial-information/quarterly-earnings/default.aspx",
+                  "https://www.newsquawk.com/headlines/visa-v-q4-2026-usd-adj-eps-348-exp-344-revenue-121bln-exp-1209bln"
+                ],
+                "reportedDate": "2026-10-27",
+                "checkedAt": "2026-10-28T01:13:36.292615+00:00"
+              }
             }
           ]
         },
@@ -640,13 +640,97 @@
           "rawCount": 249,
           "items": [
             {
-              "symbol": "MSFT",
-              "name": "Microsoft Corporation",
+              "symbol": "AEP",
+              "name": "American Electric Power Company, Inc.",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$3,936,922,890,000",
-              "marketCapUsd": 3936922890000,
-              "epsForecast": "$4.71",
+              "marketCap": "$70,429,032,000",
+              "marketCapUsd": 70429032000,
+              "epsForecast": "$2.04",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 80,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "官方经营EPS 2.23美元、GAAP EPS 2.18美元；高于财报前公开经营EPS预期约2.04美元（不同预期汇总存在差异，不将其当唯一市场门槛）。全年经营EPS预计达到或超过6.25–6.55美元区间高端，并提出2027–2031年经营盈利年增9%–11%、五年1000亿美元资本计划。盈利与成长展望提高，评80分；巨额资本计划仍取决于融资、监管回收与负荷合约落地。",
+                "facts": {
+                  "operatingEps": 2.23,
+                  "gaapEps": 2.18,
+                  "publishedPreReportEpsEstimate": 2.04,
+                  "fyOperatingEpsPriorRange": [
+                    6.25,
+                    6.55
+                  ],
+                  "fyOutlook": "at or above high end",
+                  "fiveYearCapitalPlanUsdBn": 100
+                },
+                "sources": [
+                  "https://pr.aep.com/news/releases/read/12347/AEP-Reports-ThirdQuarter-2026-Earnings-Expands-Capital-Plan-and-Increases-Growth-Outlook",
+                  "https://www.stocktitan.net/articles/earnings-calendar-week-of-october-26-2026"
+                ],
+                "reportedDate": "2026-10-28",
+                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
+                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
+              }
+            },
+            {
+              "symbol": "APH",
+              "name": "Amphenol Corporation",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$202,406,560,000",
+              "marketCapUsd": 202406560000,
+              "epsForecast": "$0.73",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 90,
+                "band": "smash",
+                "bandLabel": "远超预期",
+                "summary": "销售102亿美元、调整EPS 0.80美元，高于公开预期94.4亿美元和0.72美元；有机销售增长37%，调整营业利润率29.7%，自由现金流16亿美元。下季调整EPS指引0.81–0.83美元高于公开预期0.76美元，销售指引103亿–105亿美元；盈利、收入及展望共振，评90分。总销售增长65%含并购，不能全部归为有机增长；未交割收购未纳入展望。",
+                "facts": {
+                  "revenueUsdBn": 10.2,
+                  "consensusRevenueUsdBn": 9.44,
+                  "adjustedEps": 0.8,
+                  "consensusAdjustedEps": 0.72,
+                  "gaapEps": 0.79,
+                  "organicSalesGrowthPct": 37,
+                  "fcfUsdBn": 1.6,
+                  "nextAdjustedEpsGuidance": [
+                    0.81,
+                    0.83
+                  ],
+                  "nextConsensusEps": 0.76
+                },
+                "sources": [
+                  "https://investors.amphenol.com/news-and-events/news-details/2026/Amphenol-Reports-Record-Third-Quarter-2026-Results-and-Announces-Dividend-Increase-and-New-Stock-Repurchase-Program/default.aspx",
+                  "https://www.streetinsider.com/Earnings/Amphenol%2B%28APH%29%2BTops%2BQ3%2BEPS%2Bby%2B8c%2B%3B%2BOffers%2BGuidance/27245134.html",
+                  "https://www.investing.com/news/stock-market-news/amphenol-earnings-analysis-questions-answered-and-next-catalysts-93CH-4980500"
+                ],
+                "reportedDate": "2026-10-28",
+                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
+                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
+              }
+            },
+            {
+              "symbol": "FTNT",
+              "name": "Fortinet, Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$102,059,565,000",
+              "marketCapUsd": 102059565000,
+              "epsForecast": "$0.77",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "软件"
@@ -659,20 +743,116 @@
                 "score": 78,
                 "band": "beat",
                 "bandLabel": "超预期",
-                "summary": "营收922.79亿美元，高于公开预期约906.2亿美元；非GAAP EPS 4.89美元高于4.72美元，GAAP EPS为4.92美元，含OpenAI投资净收益影响0.03美元。Cloud收入639亿美元、增长30%，Azure增长48%；商业RPO增长73%至6770亿美元，但RPO不等于当期现金。盈利与收入均超预期，评78分；调整口径同比盈利增18%，不能把GAAP的32%增长全部当经营改善。",
+                "summary": "营收20.8亿美元、高于公开预期20.6亿美元；非GAAP EPS 0.91美元高于0.86美元，GAAP EPS亦为0.86美元，二者不得混为同一口径。账单额增长29%，产品收入增长37%，自由现金流8.65亿美元；全年收入指引81.25亿–82.15亿美元、非GAAP EPS 3.54–3.58美元。增长与现金流较强、季度温和超预期，评78分；账单增长不等于即时确认收入。",
                 "facts": {
-                  "revenueUsdBn": 92.279,
-                  "consensusRevenueUsdBn": 90.62,
-                  "nonGaapEps": 4.89,
-                  "gaapEps": 4.92,
-                  "consensusNonGaapEps": 4.72,
-                  "cloudRevenueUsdBn": 63.9,
-                  "azureRevenueGrowthPct": 48
+                  "revenueUsdBn": 2.08,
+                  "consensusRevenueUsdBn": 2.06,
+                  "nonGaapEps": 0.91,
+                  "consensusNonGaapEps": 0.86,
+                  "gaapEps": 0.86,
+                  "billingsGrowthPct": 29,
+                  "fcfUsdMn": 865,
+                  "fyRevenueGuidanceUsdBn": [
+                    8.125,
+                    8.215
+                  ],
+                  "fyNonGaapEpsGuidance": [
+                    3.54,
+                    3.58
+                  ]
                 },
                 "sources": [
-                  "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast",
-                  "https://finance.yahoo.com/quote/MSFT/analysis/",
-                  "https://www.marketbeat.com/stocks/NASDAQ/MSFT/earnings/"
+                  "https://investor.fortinet.com/news-releases/news-release-details/fortinet-reports-strong-third-quarter-2026-financial-results",
+                  "https://www.marketbeat.com/earnings/reports/2026-10-28-fortinet-inc-stock/",
+                  "https://www.google.com/finance/beta/quote/FTNT%3ANASDAQ"
+                ],
+                "reportedDate": "2026-10-28",
+                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
+                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
+              }
+            },
+            {
+              "symbol": "GEV",
+              "name": "GE Vernova Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$234,993,533,000",
+              "marketCapUsd": 234993533000,
+              "epsForecast": "$4.03",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 85,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "官方营收约126亿美元，高于公开预期119.9亿美元；有机增长18%，订单293亿美元、有机增长96%，积压1970亿美元。调整EBITDA约19亿美元、利润率15.4%；全年营收指引升至465亿–475亿美元，调整EBITDA利润率13.5%–14.5%，自由现金流160亿–170亿美元。季度自由现金流54亿美元主要受营运资本改善推动，不能直接年化；收入与指引明显上修，评85分。",
+                "facts": {
+                  "revenueUsdBnRounded": 12.6,
+                  "consensusRevenueUsdBn": 11.99,
+                  "organicRevenueGrowthPct": 18,
+                  "ordersUsdBn": 29.3,
+                  "fcfUsdBn": 5.4,
+                  "fyRevenueGuidanceUsdBn": [
+                    46.5,
+                    47.5
+                  ],
+                  "fyFcfGuidanceUsdBn": [
+                    16,
+                    17
+                  ]
+                },
+                "sources": [
+                  "https://www.gevernova.com/news/ge-vernova-reports-strong-third-quarter-2026-financial-performance",
+                  "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000162/gev3q2026form8-k10282026.pdf",
+                  "https://www.marketbeat.com/earnings/reports/2026-10-28-ge-vernova-stock/"
+                ],
+                "reportedDate": "2026-10-28",
+                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
+                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
+              }
+            },
+            {
+              "symbol": "GNRC",
+              "name": "Generac Holdings Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$11,999,534,100",
+              "marketCapUsd": 11999534100,
+              "epsForecast": "$2.38",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 68,
+                "band": "inline",
+                "bandLabel": "符合预期",
+                "summary": "营收约12.9亿美元，低于TheFly公开预期13.2亿美元；调整EPS 2.54美元高于2.43美元，GAAP EPS为1.83美元。C&I收入增长28%、住宅增长9%，自由现金流1.32亿美元；全年收入增长指引维持中高双位数，调整EBITDA利润率下限从20%升至20.5%。盈利改善与收入不足并存，评68分；Amazon备电长期协议此前已披露，不能重复当新签约或立即确认为收入。",
+                "facts": {
+                  "revenueUsdBnRounded": 1.29,
+                  "consensusRevenueUsdBn": 1.32,
+                  "adjustedEps": 2.54,
+                  "consensusAdjustedEps": 2.43,
+                  "gaapEps": 1.83,
+                  "fcfUsdMn": 132,
+                  "fyAdjustedEbitdaMarginPct": [
+                    20.5,
+                    21
+                  ]
+                },
+                "sources": [
+                  "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+                  "https://www.tipranks.com/news/the-fly/generac-reports-q3-adjusted-eps-2-54-consensus-2-43-thefly-news"
                 ],
                 "reportedDate": "2026-10-28",
                 "checkedAt": "2026-10-29T04:21:23.333845+00:00",
@@ -764,52 +944,6 @@
               }
             },
             {
-              "symbol": "GEV",
-              "name": "GE Vernova Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$234,993,533,000",
-              "marketCapUsd": 234993533000,
-              "epsForecast": "$4.03",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 85,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "官方营收约126亿美元，高于公开预期119.9亿美元；有机增长18%，订单293亿美元、有机增长96%，积压1970亿美元。调整EBITDA约19亿美元、利润率15.4%；全年营收指引升至465亿–475亿美元，调整EBITDA利润率13.5%–14.5%，自由现金流160亿–170亿美元。季度自由现金流54亿美元主要受营运资本改善推动，不能直接年化；收入与指引明显上修，评85分。",
-                "facts": {
-                  "revenueUsdBnRounded": 12.6,
-                  "consensusRevenueUsdBn": 11.99,
-                  "organicRevenueGrowthPct": 18,
-                  "ordersUsdBn": 29.3,
-                  "fcfUsdBn": 5.4,
-                  "fyRevenueGuidanceUsdBn": [
-                    46.5,
-                    47.5
-                  ],
-                  "fyFcfGuidanceUsdBn": [
-                    16,
-                    17
-                  ]
-                },
-                "sources": [
-                  "https://www.gevernova.com/news/ge-vernova-reports-strong-third-quarter-2026-financial-performance",
-                  "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000162/gev3q2026form8-k10282026.pdf",
-                  "https://www.marketbeat.com/earnings/reports/2026-10-28-ge-vernova-stock/"
-                ],
-                "reportedDate": "2026-10-28",
-                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
-                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
-              }
-            },
-            {
               "symbol": "KLAC",
               "name": "KLA Corporation ",
               "timeCode": "unspecified",
@@ -850,6 +984,46 @@
                 "sources": [
                   "https://ir.kla.com/sec-filings/all-sec-filings/content/0000319201-26-000032/exhibit991earningsrelease0.htm",
                   "https://www.investing.com/equities/kla-tencor-corp"
+                ],
+                "reportedDate": "2026-10-28",
+                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
+                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
+              }
+            },
+            {
+              "symbol": "MSFT",
+              "name": "Microsoft Corporation",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$3,936,922,890,000",
+              "marketCapUsd": 3936922890000,
+              "epsForecast": "$4.71",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "软件"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：软件",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 78,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "营收922.79亿美元，高于公开预期约906.2亿美元；非GAAP EPS 4.89美元高于4.72美元，GAAP EPS为4.92美元，含OpenAI投资净收益影响0.03美元。Cloud收入639亿美元、增长30%，Azure增长48%；商业RPO增长73%至6770亿美元，但RPO不等于当期现金。盈利与收入均超预期，评78分；调整口径同比盈利增18%，不能把GAAP的32%增长全部当经营改善。",
+                "facts": {
+                  "revenueUsdBn": 92.279,
+                  "consensusRevenueUsdBn": 90.62,
+                  "nonGaapEps": 4.89,
+                  "gaapEps": 4.92,
+                  "consensusNonGaapEps": 4.72,
+                  "cloudRevenueUsdBn": 63.9,
+                  "azureRevenueGrowthPct": 48
+                },
+                "sources": [
+                  "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast",
+                  "https://finance.yahoo.com/quote/MSFT/analysis/",
+                  "https://www.marketbeat.com/stocks/NASDAQ/MSFT/earnings/"
                 ],
                 "reportedDate": "2026-10-28",
                 "checkedAt": "2026-10-29T04:21:23.333845+00:00",
@@ -899,47 +1073,107 @@
               }
             },
             {
-              "symbol": "FTNT",
-              "name": "Fortinet, Inc.",
+              "symbol": "SAN",
+              "name": "Banco Santander, S.A.",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$102,059,565,000",
-              "marketCapUsd": 102059565000,
-              "epsForecast": "$0.77",
+              "marketCap": "$166,862,963,000",
+              "marketCapUsd": 166862963000,
+              "epsForecast": "$0.26",
               "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "软件"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：软件",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：跨欧洲与美洲的零售银行，跟踪信用成本、融资与居民需求对跨地区金融环境的传导",
+              "source": "nasdaq",
+              "result": {
+                "status": "unknown",
+                "score": null,
+                "band": null,
+                "bandLabel": null,
+                "summary": "官方监管披露Q3基础利润38.48亿欧元、增长19%，归属利润34.32亿欧元、下降2%；前九月基础利润111.76亿欧元，不是单季度结果。全年目标维持，CET1为12.7%，收购影响增长及资本占用。本轮未核清美国ADR EPS一致预期与普通股、基础利润口径，暂不给分，不以同比增幅代替超预期判断。",
+                "facts": {
+                  "q3UnderlyingProfitEurBn": 3.848,
+                  "q3AttributableProfitEurBn": 3.432,
+                  "nineMonthUnderlyingProfitEurBn": 11.176,
+                  "cet1Pct": 12.7,
+                  "missing": "ADR/普通股与调整盈利的一致预期比较"
+                },
+                "sources": [
+                  "https://www.cnmv.es/webservices/verdocumento/ver?t=%7B0aa44b41-426d-48c8-bd4c-efba88da8ad2%7D"
+                ],
+                "reportedDate": "2026-10-28",
+                "checkedAt": "2026-10-29T04:21:23.333845+00:00"
+              }
+            },
+            {
+              "symbol": "SKHY",
+              "name": "SK hynix Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$1,181,418,130,000",
+              "marketCapUsd": 1181418130000,
+              "epsForecast": "$5.96",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：HBM、DRAM和NAND核心供应商；AI内存供需、长约与扩产对半导体链有直接传导。",
+              "source": "nasdaq",
+              "result": {
+                "status": "unknown",
+                "score": null,
+                "band": null,
+                "summary": "已核对公司10月28日官方初步结果：营收104.6155万亿韩元、营业利润83.3338万亿韩元，营业利润率80%；净利润39.7756万亿韩元。收入与营业利润环比增32%和38%，净利润环比降58%，不可混同。尚未取得与Nasdaq所列ADR每股预期$5.96可比的实际EPS及统一一致预期，不能仅凭高增长认定超预期，暂不评分。公司说明审阅尚未完成。",
+                "facts": {
+                  "revenueKrwTrillion": 104.6155,
+                  "operatingProfitKrwTrillion": 83.3338,
+                  "operatingMarginPct": 80,
+                  "netProfitKrwTrillion": 39.7756,
+                  "revenueQoQPct": 32,
+                  "operatingProfitQoQPct": 38,
+                  "netProfitQoQPct": -58,
+                  "calendarAdrEpsForecastUsd": 5.96,
+                  "epsComparability": "未核ADR换算/实际每股口径及可比一致预期，不计算惊喜或打分",
+                  "financialBasis": "consolidated K-IFRS preliminary, review not finalized"
+                },
+                "sources": [
+                  "https://news.skhynix.com/en/q3-2026-business-results/",
+                  "https://news.skhynix.com/en/q3-2026-earnings-conference-call-invitation/"
+                ],
+                "reportedDate": "2026-10-28",
+                "checkedAt": "2026-10-29T12:59:48.535144+00:00"
+              }
+            },
+            {
+              "symbol": "TMUS",
+              "name": "T-Mobile US, Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$156,020,261,000",
+              "marketCapUsd": 156020261000,
+              "epsForecast": "$2.86",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
                 "status": "scored",
-                "score": 78,
+                "score": 82,
                 "band": "beat",
                 "bandLabel": "超预期",
-                "summary": "营收20.8亿美元、高于公开预期20.6亿美元；非GAAP EPS 0.91美元高于0.86美元，GAAP EPS亦为0.86美元，二者不得混为同一口径。账单额增长29%，产品收入增长37%，自由现金流8.65亿美元；全年收入指引81.25亿–82.15亿美元、非GAAP EPS 3.54–3.58美元。增长与现金流较强、季度温和超预期，评78分；账单增长不等于即时确认收入。",
+                "summary": "官方EPS 3.22美元，高于公开预期2.89美元；服务收入194亿美元、增长6%，后付费ARPA增长4%至155.73美元，净增账户27.4万。核心调整EBITDA增长11%，调整自由现金流51亿美元、增长5%，公司提高盈利与现金流展望中点。用户质量、盈利和展望改善，评82分；经营现金流同比下降2%，不能把调整自由现金流增长理解为全部现金指标上行。",
                 "facts": {
-                  "revenueUsdBn": 2.08,
-                  "consensusRevenueUsdBn": 2.06,
-                  "nonGaapEps": 0.91,
-                  "consensusNonGaapEps": 0.86,
-                  "gaapEps": 0.86,
-                  "billingsGrowthPct": 29,
-                  "fcfUsdMn": 865,
-                  "fyRevenueGuidanceUsdBn": [
-                    8.125,
-                    8.215
-                  ],
-                  "fyNonGaapEpsGuidance": [
-                    3.54,
-                    3.58
-                  ]
+                  "eps": 3.22,
+                  "consensusEps": 2.89,
+                  "serviceRevenueUsdBn": 19.4,
+                  "postpaidArpa": 155.73,
+                  "netAccountAddsThousands": 274,
+                  "adjustedFcfUsdBn": 5.1,
+                  "operatingCashFlowGrowthPct": -2
                 },
                 "sources": [
-                  "https://investor.fortinet.com/news-releases/news-release-details/fortinet-reports-strong-third-quarter-2026-financial-results",
-                  "https://www.marketbeat.com/earnings/reports/2026-10-28-fortinet-inc-stock/",
-                  "https://www.google.com/finance/beta/quote/FTNT%3ANASDAQ"
+                  "https://www.t-mobile.com/news/business/t-mobile-q3-2026-earnings",
+                  "https://www.investing.com/equities/metropcs-communications-earnings"
                 ],
                 "reportedDate": "2026-10-28",
                 "checkedAt": "2026-10-29T04:21:23.333845+00:00",
@@ -986,240 +1220,6 @@
                 "checkedAt": "2026-10-29T04:21:23.333845+00:00",
                 "scoredAt": "2026-10-29T04:21:23.333845+00:00"
               }
-            },
-            {
-              "symbol": "AEP",
-              "name": "American Electric Power Company, Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$70,429,032,000",
-              "marketCapUsd": 70429032000,
-              "epsForecast": "$2.04",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 80,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "官方经营EPS 2.23美元、GAAP EPS 2.18美元；高于财报前公开经营EPS预期约2.04美元（不同预期汇总存在差异，不将其当唯一市场门槛）。全年经营EPS预计达到或超过6.25–6.55美元区间高端，并提出2027–2031年经营盈利年增9%–11%、五年1000亿美元资本计划。盈利与成长展望提高，评80分；巨额资本计划仍取决于融资、监管回收与负荷合约落地。",
-                "facts": {
-                  "operatingEps": 2.23,
-                  "gaapEps": 2.18,
-                  "publishedPreReportEpsEstimate": 2.04,
-                  "fyOperatingEpsPriorRange": [
-                    6.25,
-                    6.55
-                  ],
-                  "fyOutlook": "at or above high end",
-                  "fiveYearCapitalPlanUsdBn": 100
-                },
-                "sources": [
-                  "https://pr.aep.com/news/releases/read/12347/AEP-Reports-ThirdQuarter-2026-Earnings-Expands-Capital-Plan-and-Increases-Growth-Outlook",
-                  "https://www.stocktitan.net/articles/earnings-calendar-week-of-october-26-2026"
-                ],
-                "reportedDate": "2026-10-28",
-                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
-                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
-              }
-            },
-            {
-              "symbol": "GNRC",
-              "name": "Generac Holdings Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$11,999,534,100",
-              "marketCapUsd": 11999534100,
-              "epsForecast": "$2.38",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 68,
-                "band": "inline",
-                "bandLabel": "符合预期",
-                "summary": "营收约12.9亿美元，低于TheFly公开预期13.2亿美元；调整EPS 2.54美元高于2.43美元，GAAP EPS为1.83美元。C&I收入增长28%、住宅增长9%，自由现金流1.32亿美元；全年收入增长指引维持中高双位数，调整EBITDA利润率下限从20%升至20.5%。盈利改善与收入不足并存，评68分；Amazon备电长期协议此前已披露，不能重复当新签约或立即确认为收入。",
-                "facts": {
-                  "revenueUsdBnRounded": 1.29,
-                  "consensusRevenueUsdBn": 1.32,
-                  "adjustedEps": 2.54,
-                  "consensusAdjustedEps": 2.43,
-                  "gaapEps": 1.83,
-                  "fcfUsdMn": 132,
-                  "fyAdjustedEbitdaMarginPct": [
-                    20.5,
-                    21
-                  ]
-                },
-                "sources": [
-                  "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
-                  "https://www.tipranks.com/news/the-fly/generac-reports-q3-adjusted-eps-2-54-consensus-2-43-thefly-news"
-                ],
-                "reportedDate": "2026-10-28",
-                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
-                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
-              }
-            },
-            {
-              "symbol": "SKHY",
-              "name": "SK hynix Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$1,181,418,130,000",
-              "marketCapUsd": 1181418130000,
-              "epsForecast": "$5.96",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：HBM、DRAM和NAND核心供应商；AI内存供需、长约与扩产对半导体链有直接传导。",
-              "source": "nasdaq",
-              "result": {
-                "status": "unknown",
-                "score": null,
-                "band": null,
-                "summary": "已核对公司10月28日官方初步结果：营收104.6155万亿韩元、营业利润83.3338万亿韩元，营业利润率80%；净利润39.7756万亿韩元。收入与营业利润环比增32%和38%，净利润环比降58%，不可混同。尚未取得与Nasdaq所列ADR每股预期$5.96可比的实际EPS及统一一致预期，不能仅凭高增长认定超预期，暂不评分。公司说明审阅尚未完成。",
-                "facts": {
-                  "revenueKrwTrillion": 104.6155,
-                  "operatingProfitKrwTrillion": 83.3338,
-                  "operatingMarginPct": 80,
-                  "netProfitKrwTrillion": 39.7756,
-                  "revenueQoQPct": 32,
-                  "operatingProfitQoQPct": 38,
-                  "netProfitQoQPct": -58,
-                  "calendarAdrEpsForecastUsd": 5.96,
-                  "epsComparability": "未核ADR换算/实际每股口径及可比一致预期，不计算惊喜或打分",
-                  "financialBasis": "consolidated K-IFRS preliminary, review not finalized"
-                },
-                "sources": [
-                  "https://news.skhynix.com/en/q3-2026-business-results/",
-                  "https://news.skhynix.com/en/q3-2026-earnings-conference-call-invitation/"
-                ],
-                "reportedDate": "2026-10-28",
-                "checkedAt": "2026-10-29T12:59:48.535144+00:00"
-              }
-            },
-            {
-              "symbol": "APH",
-              "name": "Amphenol Corporation",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$202,406,560,000",
-              "marketCapUsd": 202406560000,
-              "epsForecast": "$0.73",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 90,
-                "band": "smash",
-                "bandLabel": "远超预期",
-                "summary": "销售102亿美元、调整EPS 0.80美元，高于公开预期94.4亿美元和0.72美元；有机销售增长37%，调整营业利润率29.7%，自由现金流16亿美元。下季调整EPS指引0.81–0.83美元高于公开预期0.76美元，销售指引103亿–105亿美元；盈利、收入及展望共振，评90分。总销售增长65%含并购，不能全部归为有机增长；未交割收购未纳入展望。",
-                "facts": {
-                  "revenueUsdBn": 10.2,
-                  "consensusRevenueUsdBn": 9.44,
-                  "adjustedEps": 0.8,
-                  "consensusAdjustedEps": 0.72,
-                  "gaapEps": 0.79,
-                  "organicSalesGrowthPct": 37,
-                  "fcfUsdBn": 1.6,
-                  "nextAdjustedEpsGuidance": [
-                    0.81,
-                    0.83
-                  ],
-                  "nextConsensusEps": 0.76
-                },
-                "sources": [
-                  "https://investors.amphenol.com/news-and-events/news-details/2026/Amphenol-Reports-Record-Third-Quarter-2026-Results-and-Announces-Dividend-Increase-and-New-Stock-Repurchase-Program/default.aspx",
-                  "https://www.streetinsider.com/Earnings/Amphenol%2B%28APH%29%2BTops%2BQ3%2BEPS%2Bby%2B8c%2B%3B%2BOffers%2BGuidance/27245134.html",
-                  "https://www.investing.com/news/stock-market-news/amphenol-earnings-analysis-questions-answered-and-next-catalysts-93CH-4980500"
-                ],
-                "reportedDate": "2026-10-28",
-                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
-                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
-              }
-            },
-            {
-              "symbol": "SAN",
-              "name": "Banco Santander, S.A.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$166,862,963,000",
-              "marketCapUsd": 166862963000,
-              "epsForecast": "$0.26",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：跨欧洲与美洲的零售银行，跟踪信用成本、融资与居民需求对跨地区金融环境的传导",
-              "source": "nasdaq",
-              "result": {
-                "status": "unknown",
-                "score": null,
-                "band": null,
-                "bandLabel": null,
-                "summary": "官方监管披露Q3基础利润38.48亿欧元、增长19%，归属利润34.32亿欧元、下降2%；前九月基础利润111.76亿欧元，不是单季度结果。全年目标维持，CET1为12.7%，收购影响增长及资本占用。本轮未核清美国ADR EPS一致预期与普通股、基础利润口径，暂不给分，不以同比增幅代替超预期判断。",
-                "facts": {
-                  "q3UnderlyingProfitEurBn": 3.848,
-                  "q3AttributableProfitEurBn": 3.432,
-                  "nineMonthUnderlyingProfitEurBn": 11.176,
-                  "cet1Pct": 12.7,
-                  "missing": "ADR/普通股与调整盈利的一致预期比较"
-                },
-                "sources": [
-                  "https://www.cnmv.es/webservices/verdocumento/ver?t=%7B0aa44b41-426d-48c8-bd4c-efba88da8ad2%7D"
-                ],
-                "reportedDate": "2026-10-28",
-                "checkedAt": "2026-10-29T04:21:23.333845+00:00"
-              }
-            },
-            {
-              "symbol": "TMUS",
-              "name": "T-Mobile US, Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$156,020,261,000",
-              "marketCapUsd": 156020261000,
-              "epsForecast": "$2.86",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 82,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "官方EPS 3.22美元，高于公开预期2.89美元；服务收入194亿美元、增长6%，后付费ARPA增长4%至155.73美元，净增账户27.4万。核心调整EBITDA增长11%，调整自由现金流51亿美元、增长5%，公司提高盈利与现金流展望中点。用户质量、盈利和展望改善，评82分；经营现金流同比下降2%，不能把调整自由现金流增长理解为全部现金指标上行。",
-                "facts": {
-                  "eps": 3.22,
-                  "consensusEps": 2.89,
-                  "serviceRevenueUsdBn": 19.4,
-                  "postpaidArpa": 155.73,
-                  "netAccountAddsThousands": 274,
-                  "adjustedFcfUsdBn": 5.1,
-                  "operatingCashFlowGrowthPct": -2
-                },
-                "sources": [
-                  "https://www.t-mobile.com/news/business/t-mobile-q3-2026-earnings",
-                  "https://www.investing.com/equities/metropcs-communications-earnings"
-                ],
-                "reportedDate": "2026-10-28",
-                "checkedAt": "2026-10-29T04:21:23.333845+00:00",
-                "scoredAt": "2026-10-29T04:21:23.333845+00:00"
-              }
             }
           ]
         },
@@ -1231,7 +1231,7 @@
           "stale": false,
           "date": "2026-10-29",
           "weekday": "周四",
-          "rawCount": 325,
+          "rawCount": 323,
           "items": [
             {
               "symbol": "AMZN",
@@ -1277,239 +1277,34 @@
               }
             },
             {
-              "symbol": "MA",
-              "name": "Mastercard Incorporated",
+              "symbol": "CAT",
+              "name": "Caterpillar, Inc.",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$556,879,510,000",
-              "marketCapUsd": 556879510000,
-              "epsForecast": "$5.14",
+              "marketCap": "$297,588,916,000",
+              "marketCapUsd": 297588916000,
+              "epsForecast": "$7.12",
               "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "老牛股/质量股"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：老牛股/质量股",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
                 "status": "scored",
-                "score": 78,
+                "score": 73,
                 "band": "beat",
                 "bandLabel": "超预期",
-                "summary": "营收$98.07亿、调整EPS $5.31，超过Zacks的$96.3亿/$5.14；调整营业利润率60.5%，跨境交易量增长11%。收入与利润同时超预期，评78分；未以GAAP $5.28替代可比调整口径。",
+                "summary": "官方营收约$207亿、同比增长17%；调整EPS $7.20略高于Zacks预期$7.12，GAAP EPS $7.13。量价改善支持业绩，但EPS超预期幅度不大，评73分；未将同比高增长等同大幅预期差，未计入未核量化指引。",
                 "facts": {
-                  "revenueUsdBn": 9.807,
-                  "adjustedEps": 5.31,
-                  "gaapEps": 5.28,
-                  "consensusAdjustedEps": 5.14,
-                  "consensusRevenueUsdBn": 9.63,
-                  "adjustedOperatingMarginPct": 60.5
+                  "revenueUsdBn": 20.7,
+                  "revenueYoyPct": 17,
+                  "adjustedEps": 7.2,
+                  "gaapEps": 7.13,
+                  "consensusAdjustedEps": 7.12
                 },
                 "sources": [
-                  "https://s25.q4cdn.com/479285134/files/content_files/3Q26-Mastercard-Earnings-Release.pdf",
-                  "https://www.zacks.com/stock/news/3018647/mastercard-ma-beats-q3-earnings-and-revenue-estimates"
-                ],
-                "reportedDate": "2026-10-29",
-                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
-                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
-              }
-            },
-            {
-              "symbol": "INTC",
-              "name": "Intel Corporation",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$486,596,346,000",
-              "marketCapUsd": 486596346000,
-              "epsForecast": "$0.28",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "AI半导体"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：AI半导体",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 55,
-                "band": "miss",
-                "bandLabel": "不及预期",
-                "summary": "营收$165亿，调整EPS $0.52高于StreetInsider可比预期$0.40；但Q4营收指引$150—160亿、调整EPS $0.25，低于$170.8亿/$0.44预期。当前兑现好、前瞻明显弱，评55分；未将GAAP $0.60与调整预期混比。",
-                "facts": {
-                  "revenueUsdBn": 16.5,
-                  "gaapEps": 0.6,
-                  "adjustedEps": 0.52,
-                  "consensusAdjustedEps": 0.4,
-                  "q4RevenueGuidanceUsdBn": [
-                    15,
-                    16
-                  ],
-                  "q4AdjustedEpsGuidance": 0.25,
-                  "q4ConsensusRevenueUsdBn": 17.08,
-                  "q4ConsensusAdjustedEps": 0.44
-                },
-                "sources": [
-                  "https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results",
-                  "https://www.streetinsider.com/Earnings/Intel%2B%28INTC%29%2BTops%2BQ3%2BEPS%2Bby%2B12c%2C%2BGuidance%2BMisses/27257624.html"
-                ],
-                "reportedDate": "2026-10-29",
-                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
-                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
-              }
-            },
-            {
-              "symbol": "PWR",
-              "name": "Quanta Services, Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$93,580,927,000",
-              "marketCapUsd": 93580927000,
-              "epsForecast": "$4.68",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 93,
-                "band": "smash",
-                "bandLabel": "远超预期",
-                "summary": "营收$120.1亿、调整EPS $6.06，大幅超过AP/Zacks的$109.9亿/$5.03；经营现金流$15亿、自由现金流$12亿，积压订单$637亿。公司显著上调全年各项财务预期，增长、利润和现金流共振，评93分。",
-                "facts": {
-                  "revenueUsdBn": 12.01,
-                  "adjustedEps": 6.06,
-                  "gaapEps": 4.55,
-                  "consensusAdjustedEps": 5.03,
-                  "consensusRevenueUsdBn": 10.99,
-                  "operatingCashFlowUsdBn": 1.5,
-                  "freeCashFlowUsdBn": 1.2,
-                  "backlogUsdBn": 63.7
-                },
-                "sources": [
-                  "https://investors.quantaservices.com/news-events/press-releases/detail/407/quanta-services-reports-third-quarter-2026-results",
-                  "https://www.ctpost.com/business/article/quanta-services-q3-earnings-snapshot-22500106.php"
-                ],
-                "reportedDate": "2026-10-29",
-                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
-                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
-              }
-            },
-            {
-              "symbol": "MSTR",
-              "name": "Strategy Inc",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$59,760,513,000",
-              "marketCapUsd": 59760513000,
-              "epsForecast": "$21.50",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "新兴科技"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：新兴科技",
-              "source": "nasdaq",
-              "result": {
-                "status": "unknown",
-                "score": null,
-                "band": null,
-                "bandLabel": "待确认",
-                "summary": "官方EPS $44.75，经营利润中含约$209.1亿数字资产估值收益；软件营收$1.254亿、同比下降3%。未取得与估值收益处理及稀释股数相匹配的可靠公开EPS预期，暂不评分；账面比特币收益不等于软件经营改善。",
-                "facts": {
-                  "gaapEps": 44.75,
-                  "digitalAssetGainUsdBn": 20.91,
-                  "softwareRevenueUsdMn": 125.4,
-                  "softwareRevenueYoyPct": -3,
-                  "gap": "未核实可比一致预期与稀释股数/估值处理口径"
-                },
-                "sources": [
-                  "https://www.strategy.com/pl/press/strategy-announces-third-quarter-2026-financial-results_10-29-2026"
-                ],
-                "reportedDate": "2026-10-29",
-                "checkedAt": "2026-10-30T00:29:04.174364+00:00"
-              }
-            },
-            {
-              "symbol": "MPWR",
-              "name": "Monolithic Power Systems, Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$58,913,120,000",
-              "marketCapUsd": 58913120000,
-              "epsForecast": "$6.80",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "AI半导体"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：AI半导体",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 85,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "营收$12.024亿、调整EPS $8.19，超过StreetInsider的$11.5亿/$7.71；Q4收入指引$13.15—13.85亿，高于预期$12.2亿。企业数据业务增长164.6%，但GAAP营业利润率环比回落且股权薪酬增加；综合评85分。",
-                "facts": {
-                  "revenueUsdBn": 1.2024,
-                  "gaapEps": 5.51,
-                  "adjustedEps": 8.19,
-                  "consensusAdjustedEps": 7.71,
-                  "consensusRevenueUsdBn": 1.15,
-                  "q4RevenueGuidanceUsdBn": [
-                    1.315,
-                    1.385
-                  ],
-                  "q4ConsensusRevenueUsdBn": 1.22
-                },
-                "sources": [
-                  "https://media.monolithicpower.com/investor-relations/press-releases/Q3_2026_MPS_Earnings_Commentary.pdf",
-                  "https://www.streetinsider.com/Earnings/Monolithic%2BPower%2BSystems%2B%28MPWR%29%2BTops%2BQ3%2BEPS%2Bby%2B48c%3B%2Boffers%2Bguidance/27258105.html"
-                ],
-                "reportedDate": "2026-10-29",
-                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
-                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
-              }
-            },
-            {
-              "symbol": "XEL",
-              "name": "Xcel Energy Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$49,371,095,000",
-              "marketCapUsd": 49371095000,
-              "epsForecast": "$1.39",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 78,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "持续经营EPS $1.52高于EarningsWhispers预期$1.39；基础设施回收、权益投资和偏暖天气带动盈利，融资成本形成抵消。全年持续经营EPS范围由$4.04—4.16收窄至$4.10—4.16，2027年指引$4.48—4.62。评78分，天气贡献不外推为永久增速。",
-                "facts": {
-                  "ongoingEps": 1.52,
-                  "consensusOngoingEps": 1.39,
-                  "fyOngoingEpsGuidance": [
-                    4.1,
-                    4.16
-                  ],
-                  "nextFyOngoingEpsGuidance": [
-                    4.48,
-                    4.62
-                  ]
-                },
-                "sources": [
-                  "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-Third-Quarter-2026-Earnings-Report/default.aspx",
-                  "https://delta.earningswhispers.com/epsdetails/XEL/202609"
+                  "https://investors.caterpillar.com/news/news-details/2026/Caterpillar-Reports-Third-Quarter-2026-Results/default.aspx",
+                  "https://www.zacks.com/stock/news/3018789/cat-q3-earnings-beat-estimates-on-higher-volume-and-pricing"
                 ],
                 "reportedDate": "2026-10-29",
                 "checkedAt": "2026-10-30T00:29:04.174364+00:00",
@@ -1590,6 +1385,90 @@
               }
             },
             {
+              "symbol": "INTC",
+              "name": "Intel Corporation",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$486,596,346,000",
+              "marketCapUsd": 486596346000,
+              "epsForecast": "$0.28",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "AI半导体"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：AI半导体",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 55,
+                "band": "miss",
+                "bandLabel": "不及预期",
+                "summary": "营收$165亿，调整EPS $0.52高于StreetInsider可比预期$0.40；但Q4营收指引$150—160亿、调整EPS $0.25，低于$170.8亿/$0.44预期。当前兑现好、前瞻明显弱，评55分；未将GAAP $0.60与调整预期混比。",
+                "facts": {
+                  "revenueUsdBn": 16.5,
+                  "gaapEps": 0.6,
+                  "adjustedEps": 0.52,
+                  "consensusAdjustedEps": 0.4,
+                  "q4RevenueGuidanceUsdBn": [
+                    15,
+                    16
+                  ],
+                  "q4AdjustedEpsGuidance": 0.25,
+                  "q4ConsensusRevenueUsdBn": 17.08,
+                  "q4ConsensusAdjustedEps": 0.44
+                },
+                "sources": [
+                  "https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results",
+                  "https://www.streetinsider.com/Earnings/Intel%2B%28INTC%29%2BTops%2BQ3%2BEPS%2Bby%2B12c%2C%2BGuidance%2BMisses/27257624.html"
+                ],
+                "reportedDate": "2026-10-29",
+                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
+                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
+              }
+            },
+            {
+              "symbol": "LIN",
+              "name": "Linde plc",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$231,942,177,000",
+              "marketCapUsd": 231942177000,
+              "epsForecast": "$4.52",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 77,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "营收$94.04亿、调整EPS $4.59，高于Zacks的$91.8亿/$4.52；基础销售增长5%，经营现金流$31.69亿。全年调整EPS指引$17.82—17.92；调整营业利润率29.4%，同比下降30基点，评77分。",
+                "facts": {
+                  "revenueUsdBn": 9.404,
+                  "adjustedEps": 4.59,
+                  "gaapEps": 3.66,
+                  "consensusAdjustedEps": 4.52,
+                  "consensusRevenueUsdBn": 9.18,
+                  "operatingCashFlowUsdBn": 3.169,
+                  "adjustedOperatingMarginPct": 29.4,
+                  "fyAdjustedEpsGuidance": [
+                    17.82,
+                    17.92
+                  ]
+                },
+                "sources": [
+                  "https://assets.linde.com/-/media/global/corporate/corporate/documents/press-releases/2026/linde-3q26-earnings-release-tables.pdf",
+                  "https://www.zacks.com/stock/news/3018972/lin-q3-earnings-beat-estimates-on-higher-americas-pricing-volumes?cid=CS-YAHOO-FT-analyst_blog%7Cearnings_article-3018972"
+                ],
+                "reportedDate": "2026-10-29",
+                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
+                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
+              }
+            },
+            {
               "symbol": "LLY",
               "name": "Eli Lilly and Company",
               "timeCode": "unspecified",
@@ -1636,6 +1515,86 @@
               }
             },
             {
+              "symbol": "MA",
+              "name": "Mastercard Incorporated",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$556,879,510,000",
+              "marketCapUsd": 556879510000,
+              "epsForecast": "$5.14",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "老牛股/质量股"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：老牛股/质量股",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 78,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "营收$98.07亿、调整EPS $5.31，超过Zacks的$96.3亿/$5.14；调整营业利润率60.5%，跨境交易量增长11%。收入与利润同时超预期，评78分；未以GAAP $5.28替代可比调整口径。",
+                "facts": {
+                  "revenueUsdBn": 9.807,
+                  "adjustedEps": 5.31,
+                  "gaapEps": 5.28,
+                  "consensusAdjustedEps": 5.14,
+                  "consensusRevenueUsdBn": 9.63,
+                  "adjustedOperatingMarginPct": 60.5
+                },
+                "sources": [
+                  "https://s25.q4cdn.com/479285134/files/content_files/3Q26-Mastercard-Earnings-Release.pdf",
+                  "https://www.zacks.com/stock/news/3018647/mastercard-ma-beats-q3-earnings-and-revenue-estimates"
+                ],
+                "reportedDate": "2026-10-29",
+                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
+                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
+              }
+            },
+            {
+              "symbol": "MPWR",
+              "name": "Monolithic Power Systems, Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$58,913,120,000",
+              "marketCapUsd": 58913120000,
+              "epsForecast": "$6.80",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "AI半导体"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：AI半导体",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 85,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "营收$12.024亿、调整EPS $8.19，超过StreetInsider的$11.5亿/$7.71；Q4收入指引$13.15—13.85亿，高于预期$12.2亿。企业数据业务增长164.6%，但GAAP营业利润率环比回落且股权薪酬增加；综合评85分。",
+                "facts": {
+                  "revenueUsdBn": 1.2024,
+                  "gaapEps": 5.51,
+                  "adjustedEps": 8.19,
+                  "consensusAdjustedEps": 7.71,
+                  "consensusRevenueUsdBn": 1.15,
+                  "q4RevenueGuidanceUsdBn": [
+                    1.315,
+                    1.385
+                  ],
+                  "q4ConsensusRevenueUsdBn": 1.22
+                },
+                "sources": [
+                  "https://media.monolithicpower.com/investor-relations/press-releases/Q3_2026_MPS_Earnings_Commentary.pdf",
+                  "https://www.streetinsider.com/Earnings/Monolithic%2BPower%2BSystems%2B%28MPWR%29%2BTops%2BQ3%2BEPS%2Bby%2B48c%3B%2Boffers%2Bguidance/27258105.html"
+                ],
+                "reportedDate": "2026-10-29",
+                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
+                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
+              }
+            },
+            {
               "symbol": "MRK",
               "name": "Merck & Company, Inc.",
               "timeCode": "unspecified",
@@ -1672,34 +1631,74 @@
               }
             },
             {
-              "symbol": "CAT",
-              "name": "Caterpillar, Inc.",
+              "symbol": "MSTR",
+              "name": "Strategy Inc",
               "timeCode": "unspecified",
               "timeLabel": "时段未公布",
-              "marketCap": "$297,588,916,000",
-              "marketCapUsd": 297588916000,
-              "epsForecast": "$7.12",
+              "marketCap": "$59,760,513,000",
+              "marketCapUsd": 59760513000,
+              "epsForecast": "$21.50",
               "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
+              "themes": [
+                "新兴科技"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：新兴科技",
+              "source": "nasdaq",
+              "result": {
+                "status": "unknown",
+                "score": null,
+                "band": null,
+                "bandLabel": "待确认",
+                "summary": "官方EPS $44.75，经营利润中含约$209.1亿数字资产估值收益；软件营收$1.254亿、同比下降3%。未取得与估值收益处理及稀释股数相匹配的可靠公开EPS预期，暂不评分；账面比特币收益不等于软件经营改善。",
+                "facts": {
+                  "gaapEps": 44.75,
+                  "digitalAssetGainUsdBn": 20.91,
+                  "softwareRevenueUsdMn": 125.4,
+                  "softwareRevenueYoyPct": -3,
+                  "gap": "未核实可比一致预期与稀释股数/估值处理口径"
+                },
+                "sources": [
+                  "https://www.strategy.com/pl/press/strategy-announces-third-quarter-2026-financial-results_10-29-2026"
+                ],
+                "reportedDate": "2026-10-29",
+                "checkedAt": "2026-10-30T00:29:04.174364+00:00"
+              }
+            },
+            {
+              "symbol": "PWR",
+              "name": "Quanta Services, Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$93,580,927,000",
+              "marketCapUsd": 93580927000,
+              "epsForecast": "$4.68",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
               "source": "nasdaq",
               "result": {
                 "status": "scored",
-                "score": 73,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "官方营收约$207亿、同比增长17%；调整EPS $7.20略高于Zacks预期$7.12，GAAP EPS $7.13。量价改善支持业绩，但EPS超预期幅度不大，评73分；未将同比高增长等同大幅预期差，未计入未核量化指引。",
+                "score": 93,
+                "band": "smash",
+                "bandLabel": "远超预期",
+                "summary": "营收$120.1亿、调整EPS $6.06，大幅超过AP/Zacks的$109.9亿/$5.03；经营现金流$15亿、自由现金流$12亿，积压订单$637亿。公司显著上调全年各项财务预期，增长、利润和现金流共振，评93分。",
                 "facts": {
-                  "revenueUsdBn": 20.7,
-                  "revenueYoyPct": 17,
-                  "adjustedEps": 7.2,
-                  "gaapEps": 7.13,
-                  "consensusAdjustedEps": 7.12
+                  "revenueUsdBn": 12.01,
+                  "adjustedEps": 6.06,
+                  "gaapEps": 4.55,
+                  "consensusAdjustedEps": 5.03,
+                  "consensusRevenueUsdBn": 10.99,
+                  "operatingCashFlowUsdBn": 1.5,
+                  "freeCashFlowUsdBn": 1.2,
+                  "backlogUsdBn": 63.7
                 },
                 "sources": [
-                  "https://investors.caterpillar.com/news/news-details/2026/Caterpillar-Reports-Third-Quarter-2026-Results/default.aspx",
-                  "https://www.zacks.com/stock/news/3018789/cat-q3-earnings-beat-estimates-on-higher-volume-and-pricing"
+                  "https://investors.quantaservices.com/news-events/press-releases/detail/407/quanta-services-reports-third-quarter-2026-results",
+                  "https://www.ctpost.com/business/article/quanta-services-q3-earnings-snapshot-22500106.php"
                 ],
                 "reportedDate": "2026-10-29",
                 "checkedAt": "2026-10-30T00:29:04.174364+00:00",
@@ -1735,80 +1734,6 @@
                 "sources": [
                   "https://www.shell.com/investors/results-and-reporting/quarterly-results/_jcr_content/root/main/section/simple/promo_1962010312_cop/links/item0.stream/1793238861562/c51182ec68b70b120e29f5a1ede9bd4911d54432/q3-2026-quarterly-press-release.pdf",
                   "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/10/shell-earnings-preview-q3-2026"
-                ],
-                "reportedDate": "2026-10-29",
-                "checkedAt": "2026-10-30T00:29:04.174364+00:00"
-              }
-            },
-            {
-              "symbol": "LIN",
-              "name": "Linde plc",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$231,942,177,000",
-              "marketCapUsd": 231942177000,
-              "epsForecast": "$4.52",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 77,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "营收$94.04亿、调整EPS $4.59，高于Zacks的$91.8亿/$4.52；基础销售增长5%，经营现金流$31.69亿。全年调整EPS指引$17.82—17.92；调整营业利润率29.4%，同比下降30基点，评77分。",
-                "facts": {
-                  "revenueUsdBn": 9.404,
-                  "adjustedEps": 4.59,
-                  "gaapEps": 3.66,
-                  "consensusAdjustedEps": 4.52,
-                  "consensusRevenueUsdBn": 9.18,
-                  "operatingCashFlowUsdBn": 3.169,
-                  "adjustedOperatingMarginPct": 29.4,
-                  "fyAdjustedEpsGuidance": [
-                    17.82,
-                    17.92
-                  ]
-                },
-                "sources": [
-                  "https://assets.linde.com/-/media/global/corporate/corporate/documents/press-releases/2026/linde-3q26-earnings-release-tables.pdf",
-                  "https://www.zacks.com/stock/news/3018972/lin-q3-earnings-beat-estimates-on-higher-americas-pricing-volumes?cid=CS-YAHOO-FT-analyst_blog%7Cearnings_article-3018972"
-                ],
-                "reportedDate": "2026-10-29",
-                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
-                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
-              }
-            },
-            {
-              "symbol": "TTE",
-              "name": "TotalEnergies SE",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$214,202,368,000",
-              "marketCapUsd": 214202368000,
-              "epsForecast": "$4.11",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
-              "source": "nasdaq",
-              "result": {
-                "status": "unknown",
-                "score": null,
-                "band": null,
-                "bandLabel": "待确认",
-                "summary": "官方Q3调整净利润约$91亿、剔除营运资金影响后的经营现金流CFFO约$123亿，杠杆率9.1%。公开EPS有欧元/美元及不同预期快照差异，尚未闭合可比口径，暂不评分；不把CFFO与含营运资金变动的现金流混用。该公司由既有自主筛选保留，未因每日截断丢弃。",
-                "facts": {
-                  "adjustedNetIncomeUsdBn": 9.1,
-                  "cffoUsdBn": 12.3,
-                  "gearingPct": 9.1,
-                  "gap": "美元/欧元及共识快照差异，实际EPS与预期未形成可靠同口径对照"
-                },
-                "sources": [
-                  "https://totalenergies.com/newsroom/resultats-du-troisieme-trimestre-2026-516472/?lang=eng",
-                  "https://www.zacks.com/stock/news/3018906/tte-q3-earnings-miss-estimates-middle-east-crisis-impacts-production"
                 ],
                 "reportedDate": "2026-10-29",
                 "checkedAt": "2026-10-30T00:29:04.174364+00:00"
@@ -1860,24 +1785,48 @@
                 "checkedAt": "2026-10-30T00:29:04.174364+00:00",
                 "scoredAt": "2026-10-30T00:29:04.174364+00:00"
               }
-            }
-          ]
-        },
-        {
-          "truncated": [],
-          "stale": false,
-          "date": "2026-10-30",
-          "weekday": "周五",
-          "rawCount": 56,
-          "items": [
+            },
             {
-              "symbol": "D",
-              "name": "Dominion Energy, Inc.",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$57,274,728,000",
-              "marketCapUsd": 57274728000,
-              "epsForecast": "$1.20",
+              "symbol": "TTE",
+              "name": "TotalEnergies SE",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$214,202,368,000",
+              "marketCapUsd": 214202368000,
+              "epsForecast": "$4.11",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
+              "source": "nasdaq",
+              "result": {
+                "status": "unknown",
+                "score": null,
+                "band": null,
+                "bandLabel": "待确认",
+                "summary": "官方Q3调整净利润约$91亿、剔除营运资金影响后的经营现金流CFFO约$123亿，杠杆率9.1%。公开EPS有欧元/美元及不同预期快照差异，尚未闭合可比口径，暂不评分；不把CFFO与含营运资金变动的现金流混用。该公司由既有自主筛选保留，未因每日截断丢弃。",
+                "facts": {
+                  "adjustedNetIncomeUsdBn": 9.1,
+                  "cffoUsdBn": 12.3,
+                  "gearingPct": 9.1,
+                  "gap": "美元/欧元及共识快照差异，实际EPS与预期未形成可靠同口径对照"
+                },
+                "sources": [
+                  "https://totalenergies.com/newsroom/resultats-du-troisieme-trimestre-2026-516472/?lang=eng",
+                  "https://www.zacks.com/stock/news/3018906/tte-q3-earnings-miss-estimates-middle-east-crisis-impacts-production"
+                ],
+                "reportedDate": "2026-10-29",
+                "checkedAt": "2026-10-30T00:29:04.174364+00:00"
+              }
+            },
+            {
+              "symbol": "XEL",
+              "name": "Xcel Energy Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$49,371,095,000",
+              "marketCapUsd": 49371095000,
+              "epsForecast": "$1.39",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "电力"
@@ -1887,24 +1836,81 @@
               "source": "nasdaq",
               "result": {
                 "status": "scored",
-                "score": 76,
+                "score": 78,
                 "band": "beat",
                 "bandLabel": "超预期",
-                "summary": "公司Business Wire正式稿：Q3经营EPS（非GAAP）$1.28，高于Zacks四位分析师预期$1.20；GAAP为$1.30。公司预计全年经营EPS落在原$3.45—3.69区间的上半部，并维持其余指引。利润小幅超预期，评76分；未将“上半部”写成上调全年区间，未使用截止后的电话会。",
+                "summary": "持续经营EPS $1.52高于EarningsWhispers预期$1.39；基础设施回收、权益投资和偏暖天气带动盈利，融资成本形成抵消。全年持续经营EPS范围由$4.04—4.16收窄至$4.10—4.16，2027年指引$4.48—4.62。评78分，天气贡献不外推为永久增速。",
                 "facts": {
-                  "operatingEps": 1.28,
-                  "gaapEps": 1.3,
-                  "zacksConsensusAdjustedEps": 1.2,
-                  "fyOperatingEpsGuidance": [
-                    3.45,
-                    3.69
+                  "ongoingEps": 1.52,
+                  "consensusOngoingEps": 1.39,
+                  "fyOngoingEpsGuidance": [
+                    4.1,
+                    4.16
                   ],
-                  "guidancePosition": "upper half; range reaffirmed"
+                  "nextFyOngoingEpsGuidance": [
+                    4.48,
+                    4.62
+                  ]
                 },
                 "sources": [
-                  "https://www.businesswire.com/news/home/20261029767761/en/Dominion-Energy-Announces-Third-Quarter-2026-Results/",
-                  "https://www.marketscreener.com/news/dominion-energy-announces-third-quarter-2026-results-ce785fdbda80f326",
-                  "https://www.ctinsider.com/business/article/dominion-energy-q3-earnings-snapshot-22502143.php"
+                  "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-Third-Quarter-2026-Earnings-Report/default.aspx",
+                  "https://delta.earningswhispers.com/epsdetails/XEL/202609"
+                ],
+                "reportedDate": "2026-10-29",
+                "checkedAt": "2026-10-30T00:29:04.174364+00:00",
+                "scoredAt": "2026-10-30T00:29:04.174364+00:00"
+              }
+            }
+          ]
+        },
+        {
+          "truncated": [],
+          "stale": false,
+          "date": "2026-10-30",
+          "weekday": "周五",
+          "rawCount": 66,
+          "items": [
+            {
+              "symbol": "ABBV",
+              "name": "AbbVie Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$513,860,043,000",
+              "marketCapUsd": 513860043000,
+              "epsForecast": "$3.74",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 78,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "官方Q3调整EPS $3.82，高于公开可比预期$3.74；收入$174.04亿，小幅高于公开预期约$173.2—173.7亿。全年调整EPS由$13.76—13.96上修至$13.95—13.99，GAAP季度EPS为$2.37。盈利小幅超预期并收窄上修指引，评78分；区分调整与GAAP，也不把小幅超出写成远超预期。",
+                "facts": {
+                  "adjustedEps": 3.82,
+                  "gaapEps": 2.37,
+                  "consensusAdjustedEps": 3.74,
+                  "revenueUsdBn": 17.404,
+                  "publicConsensusRevenueUsdBnRange": [
+                    17.32,
+                    17.37
+                  ],
+                  "fyAdjustedEpsGuidance": [
+                    13.95,
+                    13.99
+                  ],
+                  "priorFyAdjustedEpsGuidance": [
+                    13.76,
+                    13.96
+                  ]
+                },
+                "sources": [
+                  "https://news.abbvie.com/2026-10-30-AbbVie-Reports-Third-Quarter-2026-Financial-Results",
+                  "https://www.marketbeat.com/earnings/reports/2026-10-30-abbvie-inc-stock/",
+                  "https://www.earningswhispers.com/stocks/ABBV"
                 ],
                 "reportedDate": "2026-10-30",
                 "checkedAt": "2026-10-30T13:34:13.617302+00:00",
@@ -1912,53 +1918,49 @@
               }
             },
             {
-              "symbol": "EXC",
-              "name": "Exelon Corporation",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$47,390,781,000",
-              "marketCapUsd": 47390781000,
-              "epsForecast": "$0.80",
+              "symbol": "AZN",
+              "name": "AstraZeneca PLC",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$263,788,495,000",
+              "marketCapUsd": 263788495000,
+              "epsForecast": "$2.60",
               "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
               "source": "nasdaq",
               "result": {
-                "status": "unknown",
-                "score": null,
-                "band": "unknown",
-                "bandLabel": "待核",
-                "summary": "官方Q3调整后经营EPS为$0.87（上年$0.86），GAAP为$0.70（上年$0.86）；全年调整后经营EPS收窄至$2.85—2.91。费率提高抵消部分风暴、利息及折旧成本。公开预期$0.78—0.80来源不同，未明确核定与经营EPS完全同口径，暂不评分；公司“高于预期”表述不替代市场一致预期。",
+                "status": "scored",
+                "score": 77,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "官方Q3收入$162.09亿，Core EPS $2.79，高于公开Core EPS预期$2.62；报告EPS为$2.02。全年固定汇率收入中高个位数、Core EPS低双位数增长指引重申。利润超预期但全年指引未上修，评77分；2026年2月起纽约交易为普通股，不套用旧ADS折半口径，未采用截止后的电话会或二传量化指引。",
                 "facts": {
-                  "adjustedOperatingEps": 0.87,
-                  "priorAdjustedOperatingEps": 0.86,
-                  "gaapEps": 0.7,
-                  "priorGaapEps": 0.86,
-                  "fyAdjustedOperatingEpsGuidance": [
-                    2.85,
-                    2.91
-                  ],
-                  "calendarEpsForecast": 0.8,
-                  "otherPublicForecast": 0.78,
-                  "consensusComparability": "adjusted operating basis not explicitly verified"
+                  "revenueUsdBn": 16.209,
+                  "coreEps": 2.79,
+                  "reportedEps": 2.02,
+                  "publicConsensusCoreEps": 2.62,
+                  "calendarEpsForecast": 2.6,
+                  "guidance": "reconfirmed at CER: revenue mid-to-high single digit; core EPS low double digit",
+                  "shareBasis": "NYSE ordinary shares since 2026-02-02, old ADS ratio not applied"
                 },
                 "sources": [
-                  "https://www.exeloncorp.com/newsroom/exelon-reports-third-quarter-2026-results",
-                  "https://therighttrader.com/earnings-calendar/exc",
-                  "https://www.tipranks.com/stocks/exc/earnings"
+                  "https://www.astrazeneca.com/media-centre/press-releases/2026/9m-and-q3-2026-results.html",
+                  "https://au.investing.com/news/earnings/astrazeneca-q3-revenue-up-7-at-constant-rates-keeps-2026-outlook-4728393",
+                  "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-begins-trading-on-NYSE.html",
+                  "https://www.astrazeneca.com/investor-relations/9m-and-q3-2026-results-event.html"
                 ],
                 "reportedDate": "2026-10-30",
-                "checkedAt": "2026-10-30T13:34:13.617302+00:00"
+                "checkedAt": "2026-10-30T13:34:13.617302+00:00",
+                "scoredAt": "2026-10-30T13:34:13.617302+00:00"
               }
             },
             {
               "symbol": "CCJ",
               "name": "Cameco Corporation",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
               "marketCap": "$36,316,598,000",
               "marketCapUsd": 36316598000,
               "epsForecast": "$0.23",
@@ -2003,100 +2005,10 @@
               }
             },
             {
-              "symbol": "XOM",
-              "name": "ExxonMobil Holdings Corporation",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$753,672,320,000",
-              "marketCapUsd": 753672320000,
-              "epsForecast": "$3.90",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 79,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "官方Q3调整EPS $4.23，高于Zacks截至10月27日预期$3.90；GAAP EPS $3.72不与调整预期混比。经营现金流$256.50亿、自由现金流$191.09亿，2027年计划回购$200亿以合理市场条件为前提。利润与现金表现支持超预期，评79分；其他平台预期$3.99—4.14不同，不声称唯一市场预期，也未采用截止后电话会。",
-                "facts": {
-                  "adjustedEps": 4.23,
-                  "gaapEps": 3.72,
-                  "zacksConsensusAdjustedEps": 3.9,
-                  "consensusAsOf": "2026-10-27",
-                  "otherPublicForecastRange": [
-                    3.99,
-                    4.14
-                  ],
-                  "cashFlowFromOperationsUsdBn": 25.65,
-                  "freeCashFlowUsdBn": 19.109,
-                  "planned2027BuybacksUsdBn": 20,
-                  "buybackCondition": "reasonable market conditions"
-                },
-                "sources": [
-                  "https://investor.exxonmobil.com/company-information/press-releases/detail/1213/exxonmobil-announces-third-quarter-2026-results",
-                  "https://www.stocktitan.net/articles/exxon-q3-2026-earnings-refineries-vs-oil-fields",
-                  "https://investor.exxonmobil.com/company-information/press-releases/detail/1212/exxonmobil-to-release-third-quarter-2026-financial-results"
-                ],
-                "reportedDate": "2026-10-30",
-                "checkedAt": "2026-10-30T13:34:13.617302+00:00",
-                "scoredAt": "2026-10-30T13:34:13.617302+00:00"
-              }
-            },
-            {
-              "symbol": "ABBV",
-              "name": "AbbVie Inc.",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$513,860,043,000",
-              "marketCapUsd": 513860043000,
-              "epsForecast": "$3.74",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：超大市值，可能影响指数/板块定价",
-              "source": "nasdaq",
-              "result": {
-                "status": "scored",
-                "score": 78,
-                "band": "beat",
-                "bandLabel": "超预期",
-                "summary": "官方Q3调整EPS $3.82，高于公开可比预期$3.74；收入$174.04亿，小幅高于公开预期约$173.2—173.7亿。全年调整EPS由$13.76—13.96上修至$13.95—13.99，GAAP季度EPS为$2.37。盈利小幅超预期并收窄上修指引，评78分；区分调整与GAAP，也不把小幅超出写成远超预期。",
-                "facts": {
-                  "adjustedEps": 3.82,
-                  "gaapEps": 2.37,
-                  "consensusAdjustedEps": 3.74,
-                  "revenueUsdBn": 17.404,
-                  "publicConsensusRevenueUsdBnRange": [
-                    17.32,
-                    17.37
-                  ],
-                  "fyAdjustedEpsGuidance": [
-                    13.95,
-                    13.99
-                  ],
-                  "priorFyAdjustedEpsGuidance": [
-                    13.76,
-                    13.96
-                  ]
-                },
-                "sources": [
-                  "https://news.abbvie.com/2026-10-30-AbbVie-Reports-Third-Quarter-2026-Financial-Results",
-                  "https://www.marketbeat.com/earnings/reports/2026-10-30-abbvie-inc-stock/",
-                  "https://www.earningswhispers.com/stocks/ABBV"
-                ],
-                "reportedDate": "2026-10-30",
-                "checkedAt": "2026-10-30T13:34:13.617302+00:00",
-                "scoredAt": "2026-10-30T13:34:13.617302+00:00"
-              }
-            },
-            {
               "symbol": "CVX",
               "name": "Chevron Corporation",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
               "marketCap": "$457,312,010,000",
               "marketCapUsd": 457312010000,
               "epsForecast": "$4.78",
@@ -2131,13 +2043,97 @@
               }
             },
             {
-              "symbol": "AZN",
-              "name": "AstraZeneca PLC",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$263,788,495,000",
-              "marketCapUsd": 263788495000,
-              "epsForecast": "$2.60",
+              "symbol": "D",
+              "name": "Dominion Energy, Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$57,274,728,000",
+              "marketCapUsd": 57274728000,
+              "epsForecast": "$1.20",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
+              "source": "nasdaq",
+              "result": {
+                "status": "scored",
+                "score": 76,
+                "band": "beat",
+                "bandLabel": "超预期",
+                "summary": "公司Business Wire正式稿：Q3经营EPS（非GAAP）$1.28，高于Zacks四位分析师预期$1.20；GAAP为$1.30。公司预计全年经营EPS落在原$3.45—3.69区间的上半部，并维持其余指引。利润小幅超预期，评76分；未将“上半部”写成上调全年区间，未使用截止后的电话会。",
+                "facts": {
+                  "operatingEps": 1.28,
+                  "gaapEps": 1.3,
+                  "zacksConsensusAdjustedEps": 1.2,
+                  "fyOperatingEpsGuidance": [
+                    3.45,
+                    3.69
+                  ],
+                  "guidancePosition": "upper half; range reaffirmed"
+                },
+                "sources": [
+                  "https://www.businesswire.com/news/home/20261029767761/en/Dominion-Energy-Announces-Third-Quarter-2026-Results/",
+                  "https://www.marketscreener.com/news/dominion-energy-announces-third-quarter-2026-results-ce785fdbda80f326",
+                  "https://www.ctinsider.com/business/article/dominion-energy-q3-earnings-snapshot-22502143.php"
+                ],
+                "reportedDate": "2026-10-30",
+                "checkedAt": "2026-10-30T13:34:13.617302+00:00",
+                "scoredAt": "2026-10-30T13:34:13.617302+00:00"
+              }
+            },
+            {
+              "symbol": "EXC",
+              "name": "Exelon Corporation",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$47,390,781,000",
+              "marketCapUsd": 47390781000,
+              "epsForecast": "$0.80",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
+              "source": "nasdaq",
+              "result": {
+                "status": "unknown",
+                "score": null,
+                "band": "unknown",
+                "bandLabel": "待核",
+                "summary": "官方Q3调整后经营EPS为$0.87（上年$0.86），GAAP为$0.70（上年$0.86）；全年调整后经营EPS收窄至$2.85—2.91。费率提高抵消部分风暴、利息及折旧成本。公开预期$0.78—0.80来源不同，未明确核定与经营EPS完全同口径，暂不评分；公司“高于预期”表述不替代市场一致预期。",
+                "facts": {
+                  "adjustedOperatingEps": 0.87,
+                  "priorAdjustedOperatingEps": 0.86,
+                  "gaapEps": 0.7,
+                  "priorGaapEps": 0.86,
+                  "fyAdjustedOperatingEpsGuidance": [
+                    2.85,
+                    2.91
+                  ],
+                  "calendarEpsForecast": 0.8,
+                  "otherPublicForecast": 0.78,
+                  "consensusComparability": "adjusted operating basis not explicitly verified"
+                },
+                "sources": [
+                  "https://www.exeloncorp.com/newsroom/exelon-reports-third-quarter-2026-results",
+                  "https://therighttrader.com/earnings-calendar/exc",
+                  "https://www.tipranks.com/stocks/exc/earnings"
+                ],
+                "reportedDate": "2026-10-30",
+                "checkedAt": "2026-10-30T13:34:13.617302+00:00"
+              }
+            },
+            {
+              "symbol": "XOM",
+              "name": "ExxonMobil Holdings Corporation",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$753,672,320,000",
+              "marketCapUsd": 753672320000,
+              "epsForecast": "$3.90",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [],
               "selection": "autonomous",
@@ -2145,24 +2141,28 @@
               "source": "nasdaq",
               "result": {
                 "status": "scored",
-                "score": 77,
+                "score": 79,
                 "band": "beat",
                 "bandLabel": "超预期",
-                "summary": "官方Q3收入$162.09亿，Core EPS $2.79，高于公开Core EPS预期$2.62；报告EPS为$2.02。全年固定汇率收入中高个位数、Core EPS低双位数增长指引重申。利润超预期但全年指引未上修，评77分；2026年2月起纽约交易为普通股，不套用旧ADS折半口径，未采用截止后的电话会或二传量化指引。",
+                "summary": "官方Q3调整EPS $4.23，高于Zacks截至10月27日预期$3.90；GAAP EPS $3.72不与调整预期混比。经营现金流$256.50亿、自由现金流$191.09亿，2027年计划回购$200亿以合理市场条件为前提。利润与现金表现支持超预期，评79分；其他平台预期$3.99—4.14不同，不声称唯一市场预期，也未采用截止后电话会。",
                 "facts": {
-                  "revenueUsdBn": 16.209,
-                  "coreEps": 2.79,
-                  "reportedEps": 2.02,
-                  "publicConsensusCoreEps": 2.62,
-                  "calendarEpsForecast": 2.6,
-                  "guidance": "reconfirmed at CER: revenue mid-to-high single digit; core EPS low double digit",
-                  "shareBasis": "NYSE ordinary shares since 2026-02-02, old ADS ratio not applied"
+                  "adjustedEps": 4.23,
+                  "gaapEps": 3.72,
+                  "zacksConsensusAdjustedEps": 3.9,
+                  "consensusAsOf": "2026-10-27",
+                  "otherPublicForecastRange": [
+                    3.99,
+                    4.14
+                  ],
+                  "cashFlowFromOperationsUsdBn": 25.65,
+                  "freeCashFlowUsdBn": 19.109,
+                  "planned2027BuybacksUsdBn": 20,
+                  "buybackCondition": "reasonable market conditions"
                 },
                 "sources": [
-                  "https://www.astrazeneca.com/media-centre/press-releases/2026/9m-and-q3-2026-results.html",
-                  "https://au.investing.com/news/earnings/astrazeneca-q3-revenue-up-7-at-constant-rates-keeps-2026-outlook-4728393",
-                  "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-begins-trading-on-NYSE.html",
-                  "https://www.astrazeneca.com/investor-relations/9m-and-q3-2026-results-event.html"
+                  "https://investor.exxonmobil.com/company-information/press-releases/detail/1213/exxonmobil-announces-third-quarter-2026-results",
+                  "https://www.stocktitan.net/articles/exxon-q3-2026-earnings-refineries-vs-oil-fields",
+                  "https://investor.exxonmobil.com/company-information/press-releases/detail/1212/exxonmobil-to-release-third-quarter-2026-financial-results"
                 ],
                 "reportedDate": "2026-10-30",
                 "checkedAt": "2026-10-30T13:34:13.617302+00:00",
@@ -2205,6 +2205,29 @@
               ],
               "selection": "theme",
               "selectionReason": "主题：软件",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "ON",
+              "name": "ON Semiconductor Corporation",
+              "timeCode": "amc",
+              "timeLabel": "盘后",
+              "marketCap": "$29,292,333,100",
+              "marketCapUsd": 29292333100,
+              "epsForecast": "$0.88",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "AI半导体"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：AI半导体",
               "source": "nasdaq",
               "result": {
                 "status": "unreviewed",
@@ -2261,29 +2284,6 @@
               }
             },
             {
-              "symbol": "ON",
-              "name": "ON Semiconductor Corporation",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
-              "marketCap": "$29,292,333,100",
-              "marketCapUsd": 29292333100,
-              "epsForecast": "$0.88",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "AI半导体"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：AI半导体",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
               "symbol": "TEM",
               "name": "Tempus AI, Inc.",
               "timeCode": "bmo",
@@ -2316,6 +2316,29 @@
           "rawCount": 282,
           "items": [
             {
+              "symbol": "ALAB",
+              "name": "Astera Labs, Inc.",
+              "timeCode": "amc",
+              "timeLabel": "盘后",
+              "marketCap": "$50,385,277,000",
+              "marketCapUsd": 50385277000,
+              "epsForecast": "$0.83",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "AI半导体"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：AI半导体",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
               "symbol": "AMD",
               "name": "Advanced Micro Devices, Inc.",
               "timeCode": "amc",
@@ -2339,6 +2362,27 @@
               }
             },
             {
+              "symbol": "AMGN",
+              "name": "Amgen Inc.",
+              "timeCode": "amc",
+              "timeLabel": "盘后",
+              "marketCap": "$249,085,379,000",
+              "marketCapUsd": 249085379000,
+              "epsForecast": "$5.74",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：生物药需求与研发投入，补充医疗行业盈利及资本配置观察",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
               "symbol": "ANET",
               "name": "Arista Networks, Inc.",
               "timeCode": "amc",
@@ -2346,75 +2390,6 @@
               "marketCap": "$232,342,798,000",
               "marketCapUsd": 232342798000,
               "epsForecast": "$0.99",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "AI半导体"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：AI半导体",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "SHOP",
-              "name": "Shopify Inc.",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$216,508,137,000",
-              "marketCapUsd": 216508137000,
-              "epsForecast": "$0.33",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "软件"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：软件",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "ETN",
-              "name": "Eaton Corporation, PLC",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$152,920,850,000",
-              "marketCapUsd": 152920850000,
-              "epsForecast": "$3.54",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "ALAB",
-              "name": "Astera Labs, Inc.",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
-              "marketCap": "$50,385,277,000",
-              "marketCapUsd": 50385277000,
-              "epsForecast": "$0.83",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "AI半导体"
@@ -2454,13 +2429,36 @@
               }
             },
             {
-              "symbol": "TLN",
-              "name": "Talen Energy Corporation",
+              "symbol": "SWKS",
+              "name": "Skyworks Solutions, Inc.",
+              "timeCode": "amc",
+              "timeLabel": "盘后",
+              "marketCap": "$13,296,431,100",
+              "marketCapUsd": 13296431100,
+              "epsForecast": "$0.89",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "AI半导体"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：AI半导体",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "ETN",
+              "name": "Eaton Corporation, PLC",
               "timeCode": "bmo",
               "timeLabel": "盘前",
-              "marketCap": "$16,714,889,200",
-              "marketCapUsd": 16714889200,
-              "epsForecast": "$8.42",
+              "marketCap": "$152,920,850,000",
+              "marketCapUsd": 152920850000,
+              "epsForecast": "$3.54",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "电力"
@@ -2477,19 +2475,63 @@
               }
             },
             {
-              "symbol": "SWKS",
-              "name": "Skyworks Solutions, Inc.",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
-              "marketCap": "$13,296,431,100",
-              "marketCapUsd": 13296431100,
-              "epsForecast": "$0.89",
+              "symbol": "PFE",
+              "name": "Pfizer, Inc.",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$170,705,224,000",
+              "marketCapUsd": 170705224000,
+              "epsForecast": "$0.72",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：药品与疫苗需求及研发投入，观察医疗行业经营变化",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "SHOP",
+              "name": "Shopify Inc.",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$216,508,137,000",
+              "marketCapUsd": 216508137000,
+              "epsForecast": "$0.33",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
-                "AI半导体"
+                "软件"
               ],
               "selection": "theme",
-              "selectionReason": "主题：AI半导体",
+              "selectionReason": "主题：软件",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "TLN",
+              "name": "Talen Energy Corporation",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$16,714,889,200",
+              "marketCapUsd": 16714889200,
+              "epsForecast": "$8.42",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
               "source": "nasdaq",
               "result": {
                 "status": "unreviewed",
@@ -2521,48 +2563,6 @@
                 "summary": null,
                 "checkedAt": null
               }
-            },
-            {
-              "symbol": "AMGN",
-              "name": "Amgen Inc.",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
-              "marketCap": "$249,085,379,000",
-              "marketCapUsd": 249085379000,
-              "epsForecast": "$5.74",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：生物药需求与研发投入，补充医疗行业盈利及资本配置观察",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "PFE",
-              "name": "Pfizer, Inc.",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$170,705,224,000",
-              "marketCapUsd": 170705224000,
-              "epsForecast": "$0.72",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：药品与疫苗需求及研发投入，观察医疗行业经营变化",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
             }
           ]
         },
@@ -2574,6 +2574,29 @@
           "rawCount": 480,
           "items": [
             {
+              "symbol": "APP",
+              "name": "Applovin Corporation",
+              "timeCode": "amc",
+              "timeLabel": "盘后",
+              "marketCap": "$85,305,885,000",
+              "marketCapUsd": 85305885000,
+              "epsForecast": "$3.94",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "新兴科技"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：新兴科技",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
               "symbol": "ARM",
               "name": "Arm Holdings plc",
               "timeCode": "amc",
@@ -2581,6 +2604,29 @@
               "marketCap": "$243,423,920,000",
               "marketCapUsd": 243423920000,
               "epsForecast": "$0.22",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "AI半导体"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：AI半导体",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "COHR",
+              "name": "Coherent Corp.",
+              "timeCode": "amc",
+              "timeLabel": "盘后",
+              "marketCap": "$46,716,838,000",
+              "marketCapUsd": 46716838000,
+              "epsForecast": "$1.78",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "AI半导体"
@@ -2610,52 +2656,6 @@
               ],
               "selection": "theme",
               "selectionReason": "主题：AI半导体",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "MCD",
-              "name": "McDonald's Corporation",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$182,132,785,000",
-              "marketCapUsd": 182132785000,
-              "epsForecast": "$3.36",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "老牛股/质量股"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：老牛股/质量股",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "UBER",
-              "name": "Uber Technologies, Inc.",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$134,277,906,000",
-              "marketCapUsd": 134277906000,
-              "epsForecast": "$0.94",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "软件"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：软件",
               "source": "nasdaq",
               "result": {
                 "status": "unreviewed",
@@ -2712,19 +2712,19 @@
               }
             },
             {
-              "symbol": "APP",
-              "name": "Applovin Corporation",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
-              "marketCap": "$85,305,885,000",
-              "marketCapUsd": 85305885000,
-              "epsForecast": "$3.94",
+              "symbol": "MCD",
+              "name": "McDonald's Corporation",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$182,132,785,000",
+              "marketCapUsd": 182132785000,
+              "epsForecast": "$3.36",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
-                "新兴科技"
+                "老牛股/质量股"
               ],
               "selection": "theme",
-              "selectionReason": "主题：新兴科技",
+              "selectionReason": "主题：老牛股/质量股",
               "source": "nasdaq",
               "result": {
                 "status": "unreviewed",
@@ -2735,19 +2735,17 @@
               }
             },
             {
-              "symbol": "COHR",
-              "name": "Coherent Corp.",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
-              "marketCap": "$46,716,838,000",
-              "marketCapUsd": 46716838000,
-              "epsForecast": "$1.78",
+              "symbol": "NVO",
+              "name": "Novo Nordisk A/S",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$173,309,198,000",
+              "marketCapUsd": 173309198000,
+              "epsForecast": "$0.81",
               "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "AI半导体"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：AI半导体",
+              "themes": [],
+              "selection": "autonomous",
+              "selectionReason": "自主判断：慢性病治疗需求、产能与支付约束，关系医疗增长质量",
               "source": "nasdaq",
               "result": {
                 "status": "unreviewed",
@@ -2781,6 +2779,29 @@
               }
             },
             {
+              "symbol": "UBER",
+              "name": "Uber Technologies, Inc.",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$134,277,906,000",
+              "marketCapUsd": 134277906000,
+              "epsForecast": "$0.94",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "软件"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：软件",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
               "symbol": "TM",
               "name": "Toyota Motor Corp Ltd Ord",
               "timeCode": "unspecified",
@@ -2800,27 +2821,6 @@
                 "summary": null,
                 "checkedAt": null
               }
-            },
-            {
-              "symbol": "NVO",
-              "name": "Novo Nordisk A/S",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$173,309,198,000",
-              "marketCapUsd": 173309198000,
-              "epsForecast": "$0.81",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [],
-              "selection": "autonomous",
-              "selectionReason": "自主判断：慢性病治疗需求、产能与支付约束，关系医疗增长质量",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
             }
           ]
         },
@@ -2832,52 +2832,6 @@
           "rawCount": 618,
           "items": [
             {
-              "symbol": "NET",
-              "name": "Cloudflare, Inc.",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
-              "marketCap": "$110,491,533,000",
-              "marketCapUsd": 110491533000,
-              "epsForecast": "$0.02",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "软件"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：软件",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "SO",
-              "name": "Southern Company (The)",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$106,972,250,000",
-              "marketCapUsd": 106972250000,
-              "epsForecast": "$1.71",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
               "symbol": "ABNB",
               "name": "Airbnb, Inc.",
               "timeCode": "amc",
@@ -2885,75 +2839,6 @@
               "marketCap": "$99,667,878,000",
               "marketCapUsd": 99667878000,
               "epsForecast": "$2.89",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "软件"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：软件",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "DUK",
-              "name": "Duke Energy Corporation",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$98,164,507,000",
-              "marketCapUsd": 98164507000,
-              "epsForecast": "$1.87",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "SRE",
-              "name": "Sempra ",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$56,163,500,000",
-              "marketCapUsd": 56163500000,
-              "epsForecast": "$1.18",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "TEAM",
-              "name": "Atlassian Corporation ",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
-              "marketCap": "$51,465,159,000",
-              "marketCapUsd": 51465159000,
-              "epsForecast": "$0.24",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "软件"
@@ -3016,6 +2901,29 @@
               }
             },
             {
+              "symbol": "NET",
+              "name": "Cloudflare, Inc.",
+              "timeCode": "amc",
+              "timeLabel": "盘后",
+              "marketCap": "$110,491,533,000",
+              "marketCapUsd": 110491533000,
+              "epsForecast": "$0.02",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "软件"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：软件",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
               "symbol": "SMR",
               "name": "NuScale Power Corporation",
               "timeCode": "amc",
@@ -3062,6 +2970,29 @@
               }
             },
             {
+              "symbol": "TEAM",
+              "name": "Atlassian Corporation ",
+              "timeCode": "amc",
+              "timeLabel": "盘后",
+              "marketCap": "$51,465,159,000",
+              "marketCapUsd": 51465159000,
+              "epsForecast": "$0.24",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "软件"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：软件",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
               "symbol": "COP",
               "name": "ConocoPhillips",
               "timeCode": "bmo",
@@ -3073,6 +3004,52 @@
               "themes": [],
               "selection": "autonomous",
               "selectionReason": "自主判断：油气供给、成本和资本开支，对能源与通胀传导有直接参考",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "DUK",
+              "name": "Duke Energy Corporation",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$98,164,507,000",
+              "marketCapUsd": 98164507000,
+              "epsForecast": "$1.87",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "SO",
+              "name": "Southern Company (The)",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$106,972,250,000",
+              "marketCapUsd": 106972250000,
+              "epsForecast": "$1.71",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
               "source": "nasdaq",
               "result": {
                 "status": "unreviewed",
@@ -3102,6 +3079,29 @@
                 "summary": null,
                 "checkedAt": null
               }
+            },
+            {
+              "symbol": "SRE",
+              "name": "Sempra ",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$56,163,500,000",
+              "marketCapUsd": 56163500000,
+              "epsForecast": "$1.18",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
             }
           ]
         },
@@ -3113,19 +3113,19 @@
           "rawCount": 115,
           "items": [
             {
-              "symbol": "BRK.B",
-              "name": "Berkshire Hathaway Inc.",
-              "timeCode": "unspecified",
-              "timeLabel": "时段未公布",
-              "marketCap": "$1,174,292,140,000",
-              "marketCapUsd": 1174292140000,
-              "epsForecast": "$5.91",
+              "symbol": "OKLO",
+              "name": "Oklo Inc.",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$4,987,133,400",
+              "marketCapUsd": 4987133400,
+              "epsForecast": "($0.28)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
-                "老牛股/质量股"
+                "电力"
               ],
               "selection": "theme",
-              "selectionReason": "主题：老牛股/质量股",
+              "selectionReason": "主题：电力",
               "source": "nasdaq",
               "result": {
                 "status": "unreviewed",
@@ -3143,29 +3143,6 @@
               "marketCap": "$47,307,780,000",
               "marketCapUsd": 47307780000,
               "epsForecast": "$2.26",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "OKLO",
-              "name": "Oklo Inc.",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$4,987,133,400",
-              "marketCapUsd": 4987133400,
-              "epsForecast": "($0.28)",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "电力"
@@ -3201,6 +3178,29 @@
                 "summary": null,
                 "checkedAt": null
               }
+            },
+            {
+              "symbol": "BRK.B",
+              "name": "Berkshire Hathaway Inc.",
+              "timeCode": "unspecified",
+              "timeLabel": "时段未公布",
+              "marketCap": "$1,174,292,140,000",
+              "marketCapUsd": 1174292140000,
+              "epsForecast": "$5.91",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "老牛股/质量股"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：老牛股/质量股",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
             }
           ]
         }
@@ -3224,52 +3224,6 @@
           "weekday": "周一",
           "rawCount": 235,
           "items": [
-            {
-              "symbol": "CEG",
-              "name": "Constellation Energy Corporation",
-              "timeCode": "bmo",
-              "timeLabel": "盘前",
-              "marketCap": "$93,742,645,000",
-              "marketCapUsd": 93742645000,
-              "epsForecast": "$3.90",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "电力"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：电力",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
-            {
-              "symbol": "RKLB",
-              "name": "Rocket Lab Corporation",
-              "timeCode": "amc",
-              "timeLabel": "盘后",
-              "marketCap": "$37,100,601,000",
-              "marketCapUsd": 37100601000,
-              "epsForecast": "($0.05)",
-              "fiscalQuarterEnding": "Sep/2026",
-              "themes": [
-                "新兴科技"
-              ],
-              "selection": "theme",
-              "selectionReason": "主题：新兴科技",
-              "source": "nasdaq",
-              "result": {
-                "status": "unreviewed",
-                "score": null,
-                "band": null,
-                "summary": null,
-                "checkedAt": null
-              }
-            },
             {
               "symbol": "ASTS",
               "name": "AST SpaceMobile, Inc.",
@@ -3324,6 +3278,52 @@
               "marketCap": "$1,984,017,280",
               "marketCapUsd": 1984017280,
               "epsForecast": "($0.07)",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "电力"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：电力",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "RKLB",
+              "name": "Rocket Lab Corporation",
+              "timeCode": "amc",
+              "timeLabel": "盘后",
+              "marketCap": "$37,100,601,000",
+              "marketCapUsd": 37100601000,
+              "epsForecast": "($0.05)",
+              "fiscalQuarterEnding": "Sep/2026",
+              "themes": [
+                "新兴科技"
+              ],
+              "selection": "theme",
+              "selectionReason": "主题：新兴科技",
+              "source": "nasdaq",
+              "result": {
+                "status": "unreviewed",
+                "score": null,
+                "band": null,
+                "summary": null,
+                "checkedAt": null
+              }
+            },
+            {
+              "symbol": "CEG",
+              "name": "Constellation Energy Corporation",
+              "timeCode": "bmo",
+              "timeLabel": "盘前",
+              "marketCap": "$93,742,645,000",
+              "marketCapUsd": 93742645000,
+              "epsForecast": "$3.90",
               "fiscalQuarterEnding": "Sep/2026",
               "themes": [
                 "电力"
