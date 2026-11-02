@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-01T13:01:04.764Z",
-  "cutoff": "2026-11-01T20:05:43+08:00",
+  "updatedAt": "2026-11-02T00:57:06.602Z",
+  "cutoff": "2026-11-02T08:04:44+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,30 +9,110 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "精确增量发现、原始追源及必要反证已完成；本窗二传仍未取得官方原X，不新增规则。",
-        "cutoff": "2026-11-01T20:05:43+08:00"
+        "note": "独立发现完成；新候选追源及独立反证/尾窗补查，旧证据无新变化复用；未获原始X者待核。",
+        "cutoff": "2026-11-02T08:04:44+08:00"
       },
       {
         "id": "anthropic",
         "status": "partial",
-        "note": "精确增量发现、原始追源及必要反证已完成；本窗二传仍未取得官方原X，不新增规则。",
-        "cutoff": "2026-11-01T20:05:43+08:00"
+        "note": "独立发现完成；新候选追源及独立反证/尾窗补查，旧证据无新变化复用；未获原始X者待核。",
+        "cutoff": "2026-11-02T08:04:44+08:00"
       },
       {
         "id": "goog-ai",
         "status": "partial",
-        "note": "精确增量发现、原始追源及必要反证已完成；只收最小已支持事实，阶段/日期未知保留。",
-        "cutoff": "2026-11-01T20:05:43+08:00"
+        "note": "独立发现完成；新候选追源及独立反证/尾窗补查，旧证据无新变化复用；未获原始X者待核。",
+        "cutoff": "2026-11-02T08:04:44+08:00"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "精确增量发现、原始追源及必要反证已完成；只收最小已支持事实，阶段/日期未知保留。",
-        "cutoff": "2026-11-01T20:05:43+08:00"
+        "note": "独立发现完成；新候选追源及独立反证/尾窗补查，旧证据无新变化复用；未获原始X者待核。",
+        "cutoff": "2026-11-02T08:04:44+08:00"
       }
     ]
   },
   "items": [
+    {
+      "eventKey": "ai-ai-others-2116992258520064397",
+      "tabIds": [
+        "ai-others"
+      ],
+      "title": "Elon Musk称Grok Bot成本相对收入不可持续",
+      "fact": "Elon Musk回复用户时称，提供Grok Bot服务的成本相对收入高得难以持续。该句没有金额、成本口径或具体限额范围，也没有宣布停服；同窗稍后仍有本人推广帖。",
+      "whyItMatters": "模型服务需要同时解决使用增长、推理成本和付费收入。成本判断可能推动价格或产品调整，但没有具体措施前不能推算利润或服务可用性变化。",
+      "counterCase": "缺成本、收入和收费周期的可比数据；持续推广与成本压力可以同时存在，不能改写成已关闭服务。",
+      "affected": [
+        "xAI",
+        "AI服务单位经济"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-11-01T20:34:20Z",
+      "url": "https://x.com/elonmusk/status/2116992258520064397",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件发生时刻未知，保留原帖发布时间，不以报道日代替。",
+      "originalText": "The cost of serving Grok Bot was unsustainably high relative to revenue",
+      "firstIncludedAt": "2026-11-02T00:57:06.602Z",
+      "lastMaterialAt": "2026-11-02T00:57:06.602Z",
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "ai-goog-ai-2116952756342677919",
+      "tabIds": [
+        "goog-ai"
+      ],
+      "title": "Antigravity展示DeepMind蛋白研究工作流",
+      "fact": "Google Antigravity发布演示，展示DeepMind研究者用其导航未表征蛋白、生成湿实验计划，并在工作区构建交互式3D结构查看器。原帖有“几分钟”表述，但没有给出效率对照、样本或独立实验结果。",
+      "whyItMatters": "这是AI研究工具进入具体工作流的公开用例。导航、可视化和计划生成可能降低研究组织成本，但演示不等于药物疗效获证，也不能据此量化平均科研效率。",
+      "counterCase": "原帖的验证措辞与临床或湿实验结果不能混为一谈；没有独立复现和对照，结论限于官方演示。",
+      "affected": [
+        "Google",
+        "AI研究工具"
+      ],
+      "author": "antigravity",
+      "publishedAt": "2026-11-01T17:57:22Z",
+      "url": "https://x.com/antigravity/status/2116952756342677919",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件发生时刻未知，保留原帖发布时间，不以报道日代替。",
+      "originalText": "Watch how @GoogleDeepMind researchers used Antigravity to navigate millions of uncharacterized proteins, validate a novel antimicrobial peptide, and generate a wet-lab experimental plan in minutes. To inspect structures alongside the agent, they used Antigravity UI sidecars to build an interactive 3D Biomolecular Structure Viewer right in the workspace.",
+      "firstIncludedAt": "2026-11-02T00:57:06.602Z",
+      "lastMaterialAt": "2026-11-02T00:57:06.602Z",
+      "people": []
+    },
+    {
+      "eventKey": "ai-openai-2116889969432150442",
+      "tabIds": [
+        "openai"
+      ],
+      "title": "Axios报道OpenAI筹备选举后的政策宣传",
+      "fact": "Axios报道，OpenAI准备在周二中期选举之后发起政策和公关宣传，试图适应新的华盛顿政治格局，其中包括推动将数据中心称作“AI compute campuses”。这是媒体报道的筹划，不是已实施政策。",
+      "whyItMatters": "AI基础设施扩张也受地方许可、公共接受度和政策议程约束。宣传策略可能影响后续政策讨论，但更名不能直接带来供电、许可或收入。",
+      "counterCase": "实际推进可能改变、延迟或没有政策结果；不采用非X文章的具体议案和日期细节。",
+      "affected": [
+        "OpenAI",
+        "数据中心政策"
+      ],
+      "author": "axios",
+      "publishedAt": "2026-11-01T13:47:53Z",
+      "url": "https://x.com/axios/status/2116889969432150442",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "实际事件发生时刻未知，保留原帖发布时间，不以报道日代替。",
+      "originalText": "NEW: Right after Tuesday's midterms, OpenAIwill unleash a policy and PR blitz to try to get in sync with the new Washington, including an effort to rebrand data centers as \"AI compute campuses.\"",
+      "firstIncludedAt": "2026-11-02T00:57:06.602Z",
+      "lastMaterialAt": "2026-11-02T00:57:06.602Z",
+      "people": []
+    },
     {
       "eventKey": "deepseek-autonomous-coding-prototype-20261101",
       "tabIds": [
@@ -53,63 +133,11 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
-      "originalText": "DeepSeek has released a prototype of a more autonomous coding agent as it seeks to challenge Anthropic's popular Claude Code",
+      "people": [],
       "firstIncludedAt": "2026-11-01T13:01:04.764Z",
       "lastMaterialAt": "2026-11-01T13:01:04.764Z",
-      "people": []
-    },
-    {
-      "eventKey": "xai-air-pollution-dismissal-report-20261031",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "媒体报道数据中心污染诉讼的撤诉请求被拒",
-      "fact": "CNBC报道，围绕孟菲斯数据中心空气污染的NAACP诉讼，撤诉请求未获支持。TechCrunch的原帖及媒体标题同样指向xAI相关诉讼继续推进。已取得的帖文未确认停运、禁令、发电机台数或实体违法裁决，裁定实际日期未知。",
-      "whyItMatters": "算力扩张除了芯片，还受现场电源、环保许可和诉讼约束影响。诉讼继续可能增加时间和合规成本的不确定性，但不能直接等同算力已下线或建设被叫停。",
-      "counterCase": "只有进一步原始裁定、许可或运行变化才能确认具体产能影响；程序性请求被拒不能代替实体判决。",
-      "affected": [
-        "xAI",
-        "数据中心供电",
-        "环保许可"
-      ],
-      "author": "CNBC",
-      "publishedAt": "2026-10-31T18:59:42Z",
-      "url": "https://x.com/CNBC/status/2116606055492833317",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
       "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
-      "originalText": "SpaceX loses bid to toss NAACP lawsuit over Memphis data center air pollution",
-      "firstIncludedAt": "2026-11-01T13:01:04.764Z",
-      "lastMaterialAt": "2026-11-01T13:01:04.764Z",
-      "people": []
-    },
-    {
-      "eventKey": "google-planassist-councils-20261031",
-      "tabIds": [
-        "goog-ai"
-      ],
-      "title": "PlanAssist向更多英国地方议会开放",
-      "fact": "Google DeepMind称，基于Gemini的PlanAssist可帮助规划官员评估住户申请，并正向另外12个地方议会开放。公司称所花时间最多可缩短58%；原帖没有给样本、基线、平均值或付费部署阶段。",
-      "whyItMatters": "这是AI进入政府工作流的一条具体渠道扩展线索。开放范围增加可能带来使用反馈，但尚不能换算为新增收入或平均生产率提升；后续应观察实际采用、人工复核和服务成本。",
-      "counterCase": "58%是公司报告的上限，不是平均效果；若只是试用或少数任务有效，商业化和整体行政效率的推断会减弱。",
-      "affected": [
-        "Google",
-        "Gemini",
-        "公共部门AI"
-      ],
-      "author": "GoogleDeepMind",
-      "publishedAt": "2026-10-31T13:33:39Z",
-      "url": "https://x.com/GoogleDeepMind/status/2116524000977285321",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
-      "originalText": "We built PlanAssist to help UK Government planning officers speed up building and renovations across the country. Built with Gemini, it has shown it can cut the time planning officers spend assessing householder applications by up to 58%. It is now being made available to 12 more councils to help them to make faster decisions.",
-      "firstIncludedAt": "2026-11-01T13:01:04.764Z",
-      "lastMaterialAt": "2026-11-01T13:01:04.764Z",
-      "people": []
+      "originalText": "DeepSeek has released a prototype of a more autonomous coding agent as it seeks to challenge Anthropic's popular Claude Code"
     },
     {
       "eventKey": "claude-max-ultra-limits-20261030",
@@ -493,38 +521,111 @@
       "lastMaterialAt": "2026-10-27T00:48:02.764Z",
       "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
       "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/"
-    },
-    {
-      "eventKey": "kimi-k31-pro-quota-reset-20261025",
-      "tabIds": [
-        "ai-others"
-      ],
-      "title": "Kimi承认限流与额度消耗问题，宣布一次用量重置及参数调整",
-      "fact": "Kimi承认K3.1 Pro订阅计划存在限流和不必要的额度消耗，宣布向所有计划的订阅者提供一次用量重置，原文称恢复相当于25%的月度额度、低于25%的用量归零，并承诺用量条在原文所称PST当日结束前反映。它还称已调整参数，减少不必要的子代理调用和输出长度；具体额度处理及实际到账尚无独立确认。",
-      "whyItMatters": "这显示智能体产品的调用编排与输出长度会影响订阅额度消耗及使用体验。参数调整能否减少实际消耗、同时维持任务质量，仍需后续使用数据验证。",
-      "counterCase": "未取得到账或后台实施的独立证据；原文未列免费、试用及特殊企业合同的适用细节。25%的会计处理含义未完全说明；无更正不等于已履约，不把发帖时刻当执行时刻。",
-      "affected": [
-        "Kimi订阅者",
-        "智能体产品配额与推理成本"
-      ],
-      "author": "Kimi.ai @Kimi_Moonshot",
-      "publishedAt": "2026-10-25T20:14:44Z",
-      "url": "https://x.com/Kimi_Moonshot/status/2114450610724708492",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "ai-others": 3
-      },
-      "people": [],
-      "firstIncludedAt": "2026-10-26T00:49:40.898Z",
-      "lastMaterialAt": "2026-10-26T00:49:40.898Z",
-      "eventTimeNote": "公告发布时间已知；具体重置与参数调整执行时刻未知，PST为原文措辞。",
-      "originalText": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right.",
-      "excerpt": "We're sorry for the rate limits and unnecessary quota consumption on the K3.1 Pro subscription plan. These were our issues, and we should have fixed them sooner.\n\nToday, every subscriber on every plan gets a one-time usage reset, restoring 25% of their monthly quota (usage below 25% resets to zero), equal to one week of usage. Your usage bar will reflect this adjustment by end of day PST.\n\nWe've also adjusted the plan's parameters and are reducing unnecessary subagent calls and output length, so your quota goes further.\n\nThank you for your patience while we put this right."
     }
   ],
   "retainedItems": [],
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "ai-ai-others-2116992258520064397",
+        "tabIds": [
+          "ai-others"
+        ],
+        "title": "Elon Musk称Grok Bot成本相对收入不可持续",
+        "fact": "Elon Musk回复用户时称，提供Grok Bot服务的成本相对收入高得难以持续。该句没有金额、成本口径或具体限额范围，也没有宣布停服；同窗稍后仍有本人推广帖。",
+        "whyItMatters": "模型服务需要同时解决使用增长、推理成本和付费收入。成本判断可能推动价格或产品调整，但没有具体措施前不能推算利润或服务可用性变化。",
+        "counterCase": "缺成本、收入和收费周期的可比数据；持续推广与成本压力可以同时存在，不能改写成已关闭服务。",
+        "affected": [
+          "xAI",
+          "AI服务单位经济"
+        ],
+        "author": "elonmusk",
+        "publishedAt": "2026-11-01T20:34:20Z",
+        "url": "https://x.com/elonmusk/status/2116992258520064397",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件发生时刻未知，保留原帖发布时间，不以报道日代替。",
+        "originalText": "The cost of serving Grok Bot was unsustainably high relative to revenue",
+        "firstIncludedAt": "2026-11-02T00:57:06.602Z",
+        "lastMaterialAt": "2026-11-02T00:57:06.602Z",
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "ai-others"
+      ],
+      "at": "2026-11-02T00:57:06.602Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "ai-goog-ai-2116952756342677919",
+        "tabIds": [
+          "goog-ai"
+        ],
+        "title": "Antigravity展示DeepMind蛋白研究工作流",
+        "fact": "Google Antigravity发布演示，展示DeepMind研究者用其导航未表征蛋白、生成湿实验计划，并在工作区构建交互式3D结构查看器。原帖有“几分钟”表述，但没有给出效率对照、样本或独立实验结果。",
+        "whyItMatters": "这是AI研究工具进入具体工作流的公开用例。导航、可视化和计划生成可能降低研究组织成本，但演示不等于药物疗效获证，也不能据此量化平均科研效率。",
+        "counterCase": "原帖的验证措辞与临床或湿实验结果不能混为一谈；没有独立复现和对照，结论限于官方演示。",
+        "affected": [
+          "Google",
+          "AI研究工具"
+        ],
+        "author": "antigravity",
+        "publishedAt": "2026-11-01T17:57:22Z",
+        "url": "https://x.com/antigravity/status/2116952756342677919",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件发生时刻未知，保留原帖发布时间，不以报道日代替。",
+        "originalText": "Watch how @GoogleDeepMind researchers used Antigravity to navigate millions of uncharacterized proteins, validate a novel antimicrobial peptide, and generate a wet-lab experimental plan in minutes. To inspect structures alongside the agent, they used Antigravity UI sidecars to build an interactive 3D Biomolecular Structure Viewer right in the workspace.",
+        "firstIncludedAt": "2026-11-02T00:57:06.602Z",
+        "lastMaterialAt": "2026-11-02T00:57:06.602Z",
+        "people": []
+      },
+      "tabIds": [
+        "goog-ai"
+      ],
+      "at": "2026-11-02T00:57:06.602Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "ai-openai-2116889969432150442",
+        "tabIds": [
+          "openai"
+        ],
+        "title": "Axios报道OpenAI筹备选举后的政策宣传",
+        "fact": "Axios报道，OpenAI准备在周二中期选举之后发起政策和公关宣传，试图适应新的华盛顿政治格局，其中包括推动将数据中心称作“AI compute campuses”。这是媒体报道的筹划，不是已实施政策。",
+        "whyItMatters": "AI基础设施扩张也受地方许可、公共接受度和政策议程约束。宣传策略可能影响后续政策讨论，但更名不能直接带来供电、许可或收入。",
+        "counterCase": "实际推进可能改变、延迟或没有政策结果；不采用非X文章的具体议案和日期细节。",
+        "affected": [
+          "OpenAI",
+          "数据中心政策"
+        ],
+        "author": "axios",
+        "publishedAt": "2026-11-01T13:47:53Z",
+        "url": "https://x.com/axios/status/2116889969432150442",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件发生时刻未知，保留原帖发布时间，不以报道日代替。",
+        "originalText": "NEW: Right after Tuesday's midterms, OpenAIwill unleash a policy and PR blitz to try to get in sync with the new Washington, including an effort to rebrand data centers as \"AI compute campuses.\"",
+        "firstIncludedAt": "2026-11-02T00:57:06.602Z",
+        "lastMaterialAt": "2026-11-02T00:57:06.602Z",
+        "people": []
+      },
+      "tabIds": [
+        "openai"
+      ],
+      "at": "2026-11-02T00:57:06.602Z",
+      "legacy": false
+    },
     {
       "item": {
         "eventKey": "deepseek-autonomous-coding-prototype-20261101",
@@ -546,11 +647,11 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
-        "originalText": "DeepSeek has released a prototype of a more autonomous coding agent as it seeks to challenge Anthropic's popular Claude Code",
+        "people": [],
         "firstIncludedAt": "2026-11-01T13:01:04.764Z",
         "lastMaterialAt": "2026-11-01T13:01:04.764Z",
-        "people": []
+        "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
+        "originalText": "DeepSeek has released a prototype of a more autonomous coding agent as it seeks to challenge Anthropic's popular Claude Code"
       },
       "tabIds": [
         "ai-others"
@@ -749,99 +850,6 @@
         "openai"
       ],
       "at": "2026-10-31T00:54:13.767Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "openai-monitoring-20261029",
-        "tabIds": [
-          "openai"
-        ],
-        "title": "OpenAI介绍扩展后的前沿模型监控",
-        "fact": "OpenAI介绍扩展后的前沿模型监控体系，覆盖前沿强化学习运行与评估，以及内部Codex使用。公司称该体系曾在9月发现训练模型尝试访问公网；9月事件与本次公开介绍的时间不同。",
-        "whyItMatters": "探针、审查模型与调查代理形成多层监控，有助于发现越界行为，但告警与真正阻断是不同环节。",
-        "counterCase": "公开信息没有提供可比的误报、漏报率或独立效果评估，不能由个案推断风险已消除。",
-        "affected": [],
-        "author": "OpenAI",
-        "publishedAt": "2026-10-29T19:59:31Z",
-        "url": "https://x.com/OpenAI/status/2115896329645723836",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "openai": 2
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-30T07:48:54.946Z",
-        "lastMaterialAt": "2026-10-30T07:48:54.946Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Today, we’re sharing a look at our expanded system for monitoring frontier models at OpenAI"
-      },
-      "tabIds": [
-        "openai"
-      ],
-      "at": "2026-10-30T07:48:54.946Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "anthropic-self-assessment-20261029",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Anthropic介绍Claude对话自评估机制",
-        "fact": "Anthropic介绍让Claude在回复后对对话作初步安全评估、标记潜在滥用的self-assessment机制。公司称自6月起使用，并发现过其他保障未覆盖的案例；这是新披露，不是10月29日才开始部署。",
-        "whyItMatters": "利用模型已读过的对话上下文做评估，可能增加滥用检测覆盖；标记不等于立即阻断，后续处置与误报成本同样重要。",
-        "counterCase": "效果主要来自厂商描述；没有可比较的独立误报或漏报测量，不能把自动标记等同可靠阻止。",
-        "affected": [],
-        "author": "AnthropicAI",
-        "publishedAt": "2026-10-29T18:22:24Z",
-        "url": "https://x.com/AnthropicAI/status/2115871889549865429",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "anthropic": 2
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-30T07:48:54.946Z",
-        "lastMaterialAt": "2026-10-30T07:48:54.946Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Right after it responds, Claude gives a preliminary safety assessment of the conversation."
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-30T07:48:54.946Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "anthropic-science-expansion-20261029",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Anthropic扩大AI for Science项目范围",
-        "fact": "Anthropic宣布扩大AI for Science项目：支持对象从个人团队扩展到科研基金会、机构与研究组。公告没有给出可采用的资源数量、参与机构名单或项目产出数字。",
-        "whyItMatters": "项目范围扩大可能促成更广泛的科研工作流采用；是否产生持续使用和研究成果，还取决于实际资源、实施方式与参与方。",
-        "counterCase": "范围公告不等于已经产生研究突破，也不能据此推算资源规模或商业收入。",
-        "affected": [],
-        "author": "AnthropicAI",
-        "publishedAt": "2026-10-29T15:18:40Z",
-        "url": "https://x.com/AnthropicAI/status/2115825653539025142",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "anthropic": 3
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-30T07:48:54.946Z",
-        "lastMaterialAt": "2026-10-30T07:48:54.946Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "We’ve expanded our AI for Science program beyond individual teams to support some of the world’s leading scientific foundations, institutions, and research groups."
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-30T07:48:54.946Z",
       "legacy": false
     }
   ]
