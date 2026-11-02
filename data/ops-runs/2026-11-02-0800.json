@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-11-02T08:04:45+08:00",
-  "updatedAt": "2026-11-02T08:57:49+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-11-02T08:59:35+08:00",
+  "finishedAt": "2026-11-02T08:59:35+08:00",
   "gitHeadAtStart": "6d2744c5f1991fdfd8e128ee1b6706f5e8720155",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-11-02T08:58:33+08:00",
+      "detail": "内容7214296已推送origin/master，无强推；已有未跟踪审计及work未纳入。"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-11-02T08:59:35+08:00",
+      "detail": "7214296 Cloudflare成功；15/15静态JSON逐字节一致，两API200。"
     }
   ],
   "pages": {
@@ -77,10 +77,12 @@
       "detail": "无到期/过时触发，复用11/1官方日历证据。"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
-  "notes": [],
+  "commitHash": "72142964f57a346b373448c9e0603df54aca1b57",
+  "notes": [
+    "发布成功；X有限样本与待核原始事实缺口明确保留，不以部分检索宣称全X覆盖。无本地test/check/build/预览。"
+  ],
   "timings": [
     {
       "page": "news",
