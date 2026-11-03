@@ -240,7 +240,9 @@ body[data-page] .brief-primary-source a, .signal-card footer a, .learning-card f
   body[data-page] .page-header h1 { font-size: 22px; }
   .people-selector { gap: 2px 18px; margin-right: 0; margin-bottom: 18px; padding-right: 0; }
   .people-selector [role="tab"] { padding: 9px 2px 11px; font-size: 14px; }
-  .daily-category-head { padding-left: 52px; }
+  .daily-category { scroll-margin-top: 56px; }
+  .daily-category-head { top: 56px; }
+  .daily-entry { scroll-margin-top: 144px; }
   .reading-profile .profile-copy { gap: 4px 10px; }
   body[data-page] .brief-card-top h3, .signal-card h4, .learning-card h2 { font-size: 20px; }
   body[data-page] .brief-copy > p, .signal-copy > p, .learning-card p { font-size: 16px; line-height: 1.85; }
