@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-02T00:57:06.622Z",
-  "asOf": "2026-11-02T08:04:44+08:00",
+  "updatedAt": "2026-11-03T00:58:19.902Z",
+  "asOf": "2026-11-03T08:04:34+08:00",
   "events": [
     {
       "eventKey": "trump-ru-ua-energy-ceasefire-2026-10-11",
@@ -15931,96 +15931,169 @@
       "eventKey": "anthropic-unit-econ-ipo-path-2026-10-14",
       "firstSeenAt": "2026-10-15T01:01:55.654Z",
       "firstEdition": "2026-10-15-0900",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-10-15-0900",
+          "event": {
+            "eventKey": "anthropic-unit-econ-ipo-path-2026-10-14",
+            "title": "Anthropic 调整后盈利与算力回报叙事：终端付费能否撑起上游资本开支",
+            "fact": "FT 转述显示 Anthropic Q3 营收约 168 亿美元并称调整后盈利；部分转述称每 1 美元算力支出对应约 1.70 美元营收。同窗亦有开源模型低价压制毛利的讨论。",
+            "impact": "事件→单位经济改善声称→IPO/融资条件→云与 GPU 需求可持续性预期。",
+            "direction": "双向",
+            "horizon": "IPO 前后数月",
+            "affected": [
+              "AI 应用层估值",
+              "云资本开支预期"
+            ],
+            "counterCase": "调整后口径若剔除大额算力合约或股权成本，现金利润仍可能为负。",
+            "selectionReason": "AI 落地包：把营收接到可证伪的单位经济。",
+            "credibilityReason": "二手转述；缺审计附注。",
+            "change": "新增",
+            "eventTime": "2026-10-14T22:14:10.000Z",
+            "knowledgeCards": [
+              "I02",
+              "I01",
+              "R04"
+            ],
+            "disciplines": [
+              "AI商业化",
+              "资本开支"
+            ],
+            "knowledgeApplication": "I02：区分独立付费客户与循环融资；I01：实验室盈利改善不一定立刻降低供应商订单；R04：事前写明审计口径变化即证伪点。",
+            "sources": [
+              {
+                "url": "https://x.com/unusual_whales/status/2110497515334521195",
+                "postId": "2110497515334521195",
+                "username": "unusual_whales",
+                "publishedAt": "2026-10-14T22:26:33.000Z",
+                "checkedAt": "2026-10-15T00:45:00.000Z",
+                "excerpt": "Anthropic says it was profitable in the third quarter, on an adjusted basis, per the Financial Times.",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/TheLatentCo/status/2110528610469867528",
+                "postId": "2110528610469867528",
+                "username": "TheLatentCo",
+                "publishedAt": "2026-10-15T00:30:07.000Z",
+                "checkedAt": "2026-10-15T00:45:00.000Z",
+                "excerpt": "generated $1.70 in revenue per $1 spent on computing power during the quarter",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 33,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 31,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 4,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "people": [],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "二手转述；缺审计附注。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-11-03T00:58:19.902Z"
+        }
+      ],
       "group": "insights",
       "event": {
         "eventKey": "anthropic-unit-econ-ipo-path-2026-10-14",
-        "title": "Anthropic 调整后盈利与算力回报叙事：终端付费能否撑起上游资本开支",
-        "fact": "FT 转述显示 Anthropic Q3 营收约 168 亿美元并称调整后盈利；部分转述称每 1 美元算力支出对应约 1.70 美元营收。同窗亦有开源模型低价压制毛利的讨论。",
-        "impact": "事件→单位经济改善声称→IPO/融资条件→云与 GPU 需求可持续性预期。",
+        "collectionUnit": "news:ai-adoption",
+        "title": "The Information：Anthropic短期算力支出拖累经营利润",
+        "fact": "The Information在解读修订后的S-1时报道，Anthropic第三季度短期算力支出为50亿美元，推动公司回到经营亏损。原帖未支持本轮流传的精确总收入、采购承诺和客户履约义务数字；经营亏损也不等于净亏损或同额现金流出。",
+        "impact": "临时补充算力可能支持需求，却以更高成本压低经营利润。若稳定需求可通过更早采购或长期安排满足，成本结构可能改善；但锁定长期供给又增加固定承诺，需与终端付费和融资能力一起观察。",
         "direction": "双向",
-        "horizon": "IPO 前后数月",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
         "affected": [
-          "AI 应用层估值",
-          "云资本开支预期"
+          "模型服务",
+          "算力采购",
+          "AI资本回报"
         ],
-        "counterCase": "调整后口径若剔除大额算力合约或股权成本，现金利润仍可能为负。",
-        "selectionReason": "AI 落地包：把营收接到可证伪的单位经济。",
-        "credibilityReason": "二手转述；缺审计附注。",
-        "change": "新增",
-        "eventTime": "2026-10-14T22:14:10.000Z",
-        "knowledgeCards": [
-          "I02",
-          "I01",
-          "R04"
-        ],
-        "disciplines": [
-          "AI商业化",
-          "资本开支"
-        ],
-        "knowledgeApplication": "I02：区分独立付费客户与循环融资；I01：实验室盈利改善不一定立刻降低供应商订单；R04：事前写明审计口径变化即证伪点。",
+        "counterCase": "若临时支出只为一次性需求峰值或随后成本下降，不能外推长期利润率；本轮未核长期承诺、现金支出和调整后利润口径。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "进展",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
         "sources": [
           {
-            "url": "https://x.com/unusual_whales/status/2110497515334521195",
-            "postId": "2110497515334521195",
-            "username": "unusual_whales",
-            "publishedAt": "2026-10-14T22:26:33.000Z",
-            "checkedAt": "2026-10-15T00:45:00.000Z",
-            "excerpt": "Anthropic says it was profitable in the third quarter, on an adjusted basis, per the Financial Times.",
+            "url": "https://x.com/theinformation/status/2117406524653900139",
+            "postId": "2117406524653900139",
+            "username": "theinformation",
+            "publishedAt": "2026-11-03T00:00:29Z",
+            "checkedAt": "2026-11-03T00:17:43.387584+00:00",
+            "excerpt": "Anthropic spent $5 billion on short-term compute in Q3 alone, helping push it back into an operating loss.",
             "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
             "credibility": {
               "version": "1.0.0",
               "status": "auto-provisional",
-              "overall": 30,
+              "overall": 31,
               "band": "low",
               "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
               "sourceScore": 35,
-              "claimScore": 27,
+              "claimScore": 29,
               "breakdown": {
                 "directness": 10,
                 "traceableEvidence": 7,
                 "independentCorroboration": 0,
-                "specificity": 0,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          },
-          {
-            "url": "https://x.com/TheLatentCo/status/2110528610469867528",
-            "postId": "2110528610469867528",
-            "username": "TheLatentCo",
-            "publishedAt": "2026-10-15T00:30:07.000Z",
-            "checkedAt": "2026-10-15T00:45:00.000Z",
-            "excerpt": "generated $1.70 in revenue per $1 spent on computing power during the quarter",
-            "verification": "collector-report",
-            "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 33,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 31,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 4,
+                "specificity": 2,
                 "recordIntegrity": 10,
                 "penalties": 0
               },
@@ -16039,22 +16112,34 @@
             }
           }
         ],
+        "knowledgeCards": [
+          "I01",
+          "I02",
+          "R06"
+        ],
+        "disciplines": [
+          "运营与采购",
+          "会计与金融"
+        ],
+        "knowledgeApplication": "I01与I02要求将终端需求、采购安排和现金来源连接；R06比较临时灵活性与长期固定承诺的取舍，不把当前经营亏损直接推成需求消失或融资必然失败。",
         "people": [],
         "credibility": {
-          "score": 30,
+          "score": 31,
           "label": "规则初评，未校准",
-          "reason": "二手转述；缺审计附注。",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
           "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
         }
       },
-      "rank": 2,
-      "lastEdition": "2026-10-15-0900",
-      "lastCheckedAt": "2026-10-15T01:01:55.654Z",
-      "state": "served",
-      "retentionAnchor": "2026-10-15T01:01:55.654Z",
-      "readingDate": "2026-10-15",
-      "retainUntil": "2026-10-16T00:00:00.000Z",
-      "lateDiscovery": false
+      "rank": 3,
+      "lastEdition": "2026-11-03-0800",
+      "lastCheckedAt": "2026-11-03T00:58:19.902Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lateDiscovery": false,
+      "lastMaterialAt": "2026-11-03T00:58:19.902Z",
+      "lastMaterialEdition": "2026-11-03-0800"
     },
     {
       "eventKey": "openai-eu-agents-adoption-2026-10-14",
@@ -30364,6 +30449,16 @@
             "sourceUrl": "https://x.com/Microsoft/status/2115535611801248094",
             "checkedAt": "2026-11-02T00:57:06.622Z"
           }
+        },
+        {
+          "edition": "2026-11-02-2000",
+          "decision": {
+            "eventKey": "microsoft-fy27q1-cloud-20261028",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/Microsoft/status/2115535611801248094",
+            "checkedAt": "2026-11-03T00:58:19.744Z"
+          }
         }
       ],
       "group": "focus",
@@ -30442,18 +30537,18 @@
       "lastEdition": "2026-10-29-0800",
       "lastCheckedAt": "2026-10-29T04:21:29.275Z",
       "state": "active",
-      "retentionAnchor": "2026-11-02T00:57:06.622Z",
-      "readingDate": "2026-11-02",
-      "retainUntil": "2026-11-03T00:00:00.000Z",
+      "retentionAnchor": "2026-11-03T00:58:19.744Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
       "lastMaterialAt": "2026-10-29T04:21:29.275Z",
       "lastMaterialEdition": "2026-10-29-0800",
       "lateDiscovery": false,
       "review": {
         "eventKey": "microsoft-fy27q1-cloud-20261028",
         "action": "keep",
-        "reason": "复核存量卡及其已保存原帖和现有更正记录；无本轮已知实质失效线索，按当前阅读日续留。精选次序将新能源/供给政策置前，旧卡继续在累计有效池展开，不当本轮新增或重新直读。",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
         "sourceUrl": "https://x.com/Microsoft/status/2115535611801248094",
-        "checkedAt": "2026-11-02T00:57:06.622Z"
+        "checkedAt": "2026-11-03T00:58:19.744Z"
       }
     },
     {
@@ -30519,6 +30614,16 @@
             "reason": "复核存量卡及其已保存原帖和现有更正记录；无本轮已知实质失效线索，按当前阅读日续留。精选次序将新能源/供给政策置前，旧卡继续在累计有效池展开，不当本轮新增或重新直读。",
             "sourceUrl": "https://x.com/Reuters/status/2115624781789728982",
             "checkedAt": "2026-11-02T00:57:06.622Z"
+          }
+        },
+        {
+          "edition": "2026-11-02-2000",
+          "decision": {
+            "eventKey": "samsung-q326-ai-memory-profit-20261029",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/Reuters/status/2115624781789728982",
+            "checkedAt": "2026-11-03T00:58:19.744Z"
           }
         }
       ],
@@ -30636,18 +30741,18 @@
       "lastEdition": "2026-10-29-2030",
       "lastCheckedAt": "2026-10-29T13:02:38.240Z",
       "state": "active",
-      "retentionAnchor": "2026-11-02T00:57:06.622Z",
-      "readingDate": "2026-11-02",
-      "retainUntil": "2026-11-03T00:00:00.000Z",
+      "retentionAnchor": "2026-11-03T00:58:19.744Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
       "lastMaterialAt": "2026-10-29T13:02:38.240Z",
       "lastMaterialEdition": "2026-10-29-2030",
       "lateDiscovery": false,
       "review": {
         "eventKey": "samsung-q326-ai-memory-profit-20261029",
         "action": "keep",
-        "reason": "复核存量卡及其已保存原帖和现有更正记录；无本轮已知实质失效线索，按当前阅读日续留。精选次序将新能源/供给政策置前，旧卡继续在累计有效池展开，不当本轮新增或重新直读。",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
         "sourceUrl": "https://x.com/Reuters/status/2115624781789728982",
-        "checkedAt": "2026-11-02T00:57:06.622Z"
+        "checkedAt": "2026-11-03T00:58:19.744Z"
       }
     },
     {
@@ -30703,6 +30808,16 @@
             "reason": "复核存量卡及其已保存原帖和现有更正记录；无本轮已知实质失效线索，按当前阅读日续留。精选次序将新能源/供给政策置前，旧卡继续在累计有效池展开，不当本轮新增或重新直读。",
             "sourceUrl": "https://x.com/intel/status/2115906522383315431",
             "checkedAt": "2026-11-02T00:57:06.622Z"
+          }
+        },
+        {
+          "edition": "2026-11-02-2000",
+          "decision": {
+            "eventKey": "intel-q3-20261029",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/intel/status/2115906522383315431",
+            "checkedAt": "2026-11-03T00:58:19.744Z"
           }
         }
       ],
@@ -30781,18 +30896,18 @@
       "lastEdition": "2026-10-30-1500",
       "lastCheckedAt": "2026-10-30T07:48:54.962Z",
       "state": "active",
-      "retentionAnchor": "2026-11-02T00:57:06.622Z",
-      "readingDate": "2026-11-02",
-      "retainUntil": "2026-11-03T00:00:00.000Z",
+      "retentionAnchor": "2026-11-03T00:58:19.744Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
       "lastMaterialAt": "2026-10-30T07:48:54.962Z",
       "lastMaterialEdition": "2026-10-30-1500",
       "lateDiscovery": false,
       "review": {
         "eventKey": "intel-q3-20261029",
         "action": "keep",
-        "reason": "复核存量卡及其已保存原帖和现有更正记录；无本轮已知实质失效线索，按当前阅读日续留。精选次序将新能源/供给政策置前，旧卡继续在累计有效池展开，不当本轮新增或重新直读。",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
         "sourceUrl": "https://x.com/intel/status/2115906522383315431",
-        "checkedAt": "2026-11-02T00:57:06.622Z"
+        "checkedAt": "2026-11-03T00:58:19.744Z"
       }
     },
     {
@@ -30925,7 +31040,7 @@
       "rank": 1,
       "lastEdition": "2026-10-30-1500",
       "lastCheckedAt": "2026-10-30T07:48:54.962Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-11-02T00:57:06.622Z",
       "readingDate": "2026-11-02",
       "retainUntil": "2026-11-03T00:00:00.000Z",
@@ -31071,7 +31186,7 @@
       "rank": 2,
       "lastEdition": "2026-10-30-1500",
       "lastCheckedAt": "2026-10-30T07:48:54.962Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-11-02T00:57:06.622Z",
       "readingDate": "2026-11-02",
       "retainUntil": "2026-11-03T00:00:00.000Z",
@@ -31444,7 +31559,7 @@
       "rank": 0,
       "lastEdition": "2026-10-31-0800",
       "lastCheckedAt": "2026-10-31T00:54:13.784Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-31T00:54:13.784Z",
       "readingDate": "2026-11-02",
       "retainUntil": "2026-11-03T00:00:00.000Z",
@@ -31534,7 +31649,7 @@
       "rank": 1,
       "lastEdition": "2026-10-31-0800",
       "lastCheckedAt": "2026-10-31T00:54:13.784Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-31T00:54:13.784Z",
       "readingDate": "2026-11-02",
       "retainUntil": "2026-11-03T00:00:00.000Z",
@@ -31619,7 +31734,7 @@
       "rank": 0,
       "lastEdition": "2026-10-31-2000",
       "lastCheckedAt": "2026-10-31T12:47:02.441Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-31T12:47:02.441Z",
       "readingDate": "2026-11-02",
       "retainUntil": "2026-11-03T00:00:00.000Z",
@@ -31704,7 +31819,7 @@
       "rank": 1,
       "lastEdition": "2026-10-31-2000",
       "lastCheckedAt": "2026-10-31T12:47:02.441Z",
-      "state": "active",
+      "state": "served",
       "retentionAnchor": "2026-10-31T12:47:02.441Z",
       "readingDate": "2026-11-02",
       "retainUntil": "2026-11-03T00:00:00.000Z",
@@ -31829,6 +31944,16 @@
             }
           },
           "changedAt": "2026-11-02T00:57:06.622Z"
+        },
+        {
+          "edition": "2026-11-02-2000",
+          "decision": {
+            "eventKey": "opec-december-quota-principle-20261031",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/business/status/2116884240335782107",
+            "checkedAt": "2026-11-03T00:58:19.744Z"
+          }
         }
       ],
       "group": "focus",
@@ -31906,12 +32031,19 @@
       "lastEdition": "2026-11-02-0800",
       "lastCheckedAt": "2026-11-02T00:57:06.622Z",
       "state": "active",
-      "retentionAnchor": "2026-11-02T00:57:06.622Z",
-      "readingDate": "2026-11-02",
-      "retainUntil": "2026-11-03T00:00:00.000Z",
+      "retentionAnchor": "2026-11-03T00:58:19.744Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
       "lastMaterialAt": "2026-11-02T00:57:06.622Z",
       "lastMaterialEdition": "2026-11-02-0800",
-      "lateDiscovery": false
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "opec-december-quota-principle-20261031",
+        "action": "keep",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+        "sourceUrl": "https://x.com/business/status/2116884240335782107",
+        "checkedAt": "2026-11-03T00:58:19.744Z"
+      }
     },
     {
       "eventKey": "taiwan-east-coast-patrol-shipping-20261031",
@@ -31926,6 +32058,26 @@
             "reason": "复核存量卡及其已保存原帖和现有更正记录；无本轮已知实质失效线索，按当前阅读日续留。精选次序将新能源/供给政策置前，旧卡继续在累计有效池展开，不当本轮新增或重新直读。",
             "sourceUrl": "https://x.com/Reuters/status/2116714382369435897",
             "checkedAt": "2026-11-02T00:57:06.622Z"
+          }
+        },
+        {
+          "edition": "2026-11-02-2000",
+          "decision": {
+            "eventKey": "taiwan-east-coast-patrol-shipping-20261031",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/Reuters/status/2116714382369435897",
+            "checkedAt": "2026-11-03T00:58:19.744Z"
+          }
+        },
+        {
+          "edition": "2026-11-03-0800",
+          "decision": {
+            "eventKey": "taiwan-east-coast-patrol-shipping-20261031",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/Reuters/status/2116714382369435897",
+            "checkedAt": "2026-11-03T00:58:19.902Z"
           }
         }
       ],
@@ -32051,25 +32203,36 @@
       "lastEdition": "2026-11-01-2000",
       "lastCheckedAt": "2026-11-01T13:01:04.784Z",
       "state": "active",
-      "retentionAnchor": "2026-11-02T00:57:06.622Z",
-      "readingDate": "2026-11-02",
-      "retainUntil": "2026-11-03T00:00:00.000Z",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
       "lastMaterialAt": "2026-11-01T13:01:04.784Z",
       "lastMaterialEdition": "2026-11-01-2000",
       "lateDiscovery": false,
       "review": {
         "eventKey": "taiwan-east-coast-patrol-shipping-20261031",
         "action": "keep",
-        "reason": "复核存量卡及其已保存原帖和现有更正记录；无本轮已知实质失效线索，按当前阅读日续留。精选次序将新能源/供给政策置前，旧卡继续在累计有效池展开，不当本轮新增或重新直读。",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
         "sourceUrl": "https://x.com/Reuters/status/2116714382369435897",
-        "checkedAt": "2026-11-02T00:57:06.622Z"
+        "checkedAt": "2026-11-03T00:58:19.902Z"
       }
     },
     {
       "eventKey": "hormuz-two-tankers-20261101",
       "firstSeenAt": "2026-11-02T00:57:06.622Z",
       "firstEdition": "2026-11-02-0800",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-11-02-2000",
+          "decision": {
+            "eventKey": "hormuz-two-tankers-20261101",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/Reuters/status/2116988698508005466",
+            "checkedAt": "2026-11-03T00:58:19.744Z"
+          }
+        }
+      ],
       "group": "focus",
       "event": {
         "eventKey": "hormuz-two-tankers-20261101",
@@ -32145,18 +32308,46 @@
       "lastEdition": "2026-11-02-0800",
       "lastCheckedAt": "2026-11-02T00:57:06.622Z",
       "state": "active",
-      "retentionAnchor": "2026-11-02T00:57:06.622Z",
-      "readingDate": "2026-11-02",
-      "retainUntil": "2026-11-03T00:00:00.000Z",
+      "retentionAnchor": "2026-11-03T00:58:19.744Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
       "lastMaterialAt": "2026-11-02T00:57:06.622Z",
       "lastMaterialEdition": "2026-11-02-0800",
-      "lateDiscovery": false
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "hormuz-two-tankers-20261101",
+        "action": "keep",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+        "sourceUrl": "https://x.com/Reuters/status/2116988698508005466",
+        "checkedAt": "2026-11-03T00:58:19.744Z"
+      }
     },
     {
       "eventKey": "mhi-us-gas-turbine-20261101",
       "firstSeenAt": "2026-11-02T00:57:06.622Z",
       "firstEdition": "2026-11-02-0800",
-      "history": [],
+      "history": [
+        {
+          "edition": "2026-11-02-2000",
+          "decision": {
+            "eventKey": "mhi-us-gas-turbine-20261101",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/NikkeiAsia/status/2116947605976498455",
+            "checkedAt": "2026-11-03T00:58:19.744Z"
+          }
+        },
+        {
+          "edition": "2026-11-03-0800",
+          "decision": {
+            "eventKey": "mhi-us-gas-turbine-20261101",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/NikkeiAsia/status/2116947605976498455",
+            "checkedAt": "2026-11-03T00:58:19.902Z"
+          }
+        }
+      ],
       "group": "insights",
       "event": {
         "eventKey": "mhi-us-gas-turbine-20261101",
@@ -32240,11 +32431,1378 @@
       "lastEdition": "2026-11-02-0800",
       "lastCheckedAt": "2026-11-02T00:57:06.622Z",
       "state": "active",
-      "retentionAnchor": "2026-11-02T00:57:06.622Z",
-      "readingDate": "2026-11-02",
-      "retainUntil": "2026-11-03T00:00:00.000Z",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
       "lastMaterialAt": "2026-11-02T00:57:06.622Z",
       "lastMaterialEdition": "2026-11-02-0800",
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "mhi-us-gas-turbine-20261101",
+        "action": "keep",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+        "sourceUrl": "https://x.com/NikkeiAsia/status/2116947605976498455",
+        "checkedAt": "2026-11-03T00:58:19.902Z"
+      }
+    },
+    {
+      "eventKey": "oil-diplomacy-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.744Z",
+      "firstEdition": "2026-11-02-2000",
+      "history": [
+        {
+          "edition": "2026-11-02-2000",
+          "event": {
+            "eventKey": "oil-diplomacy-20261102",
+            "collectionUnit": "news:market-focus",
+            "title": "美伊外交预期伴随油价回落，尚非和平协议",
+            "fact": "CNBC报道，在美国与伊朗据报均寻求外交解决的背景下油价下跌；WSJ Markets随后报道油价跌逾3%，并归因为和平谈判缓解供应担忧。这是媒体对当时市场变化的描述，未证实已达成和平、恢复通航或解除制裁。",
+            "impact": "若外交预期转成可执行安排，运输保险、能源成本和通胀风险溢价可能回落，影响用能企业利润与折现率。若谈判停滞或实物流仍受阻，预期与交付可能背离；不将报道时点跌幅当当前报价。",
+            "direction": "双向",
+            "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+            "affected": [
+              "能源",
+              "航运",
+              "用能行业",
+              "美股整体"
+            ],
+            "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+            "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+            "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+            "change": "新增",
+            "eventTime": null,
+            "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+            "sources": [
+              {
+                "url": "https://x.com/CNBC/status/2117122673935364119",
+                "postId": "2117122673935364119",
+                "username": "CNBC",
+                "publishedAt": "2026-11-02T05:12:34Z",
+                "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+                "excerpt": "Oil prices fall amid reports that the U.S. and Iran are both seeking diplomacy",
+                "verification": "collector-report",
+                "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/WSJmarkets/status/2117155223135248837",
+                "postId": "2117155223135248837",
+                "username": "WSJmarkets",
+                "publishedAt": "2026-11-02T07:21:54Z",
+                "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+                "excerpt": "Oil Prices Fall More Than 3% as Iran Peace Talks Ease Supply Fears",
+                "verification": "collector-report",
+                "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 31,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 29,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 2,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+            "people": [],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-11-03T00:58:19.902Z"
+        },
+        {
+          "edition": "2026-11-03-0800",
+          "decision": {
+            "eventKey": "oil-diplomacy-20261102",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/CNBC/status/2117122673935364119",
+            "checkedAt": "2026-11-03T00:58:19.902Z"
+          }
+        }
+      ],
+      "group": "focus",
+      "event": {
+        "eventKey": "oil-diplomacy-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Reuters：伊朗接触仍继续，谈判未获突破",
+        "fact": "Reuters报道，伊朗称结束战争的接触仍在继续，此轮谈判结束但没有突破。另一则Reuters原帖将新一轮中东谈判与油价回落联系，并引述地缘风险溢价可能继续存在的解释；未据此确认和平协议、霍尔木兹复航或具体跌幅。",
+        "impact": "外交预期可能先影响能源风险溢价，实际运输、保险与交付则要等待可执行安排。预期改善和实物流仍受阻可以同时存在，影响用能成本与通胀贴现的时点也可能不同。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "能源",
+          "航运",
+          "美股整体"
+        ],
+        "counterCase": "若交易未获必要批准、融资未落实或实物供给没有改善，当前传导会减弱；未搜到更正不能作为独立确认。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "进展",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "attentionEvidence": "第一轮独立发现后追到原始X，有限样本内比较，不宣称全X排名。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2117252922564104509",
+            "postId": "2117252922564104509",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T13:50:08Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "Iran says contacts over ending war continue as talks end with no breakthrough",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/Reuters/status/2117265472991154327",
+            "postId": "2117265472991154327",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T14:40:00Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "With renewed Middle East talks lowering oil prices, Amanda Rastovic from Expana explains how geopolitical risks may keep a premium in place",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 2,
+      "lastEdition": "2026-11-03-0800",
+      "lastCheckedAt": "2026-11-03T00:58:19.902Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.902Z",
+      "lastMaterialEdition": "2026-11-03-0800",
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "oil-diplomacy-20261102",
+        "action": "keep",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+        "sourceUrl": "https://x.com/CNBC/status/2117122673935364119",
+        "checkedAt": "2026-11-03T00:58:19.902Z"
+      }
+    },
+    {
+      "eventKey": "openai-uae-energy-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.744Z",
+      "firstEdition": "2026-11-02-2000",
+      "history": [
+        {
+          "edition": "2026-11-03-0800",
+          "decision": {
+            "eventKey": "openai-uae-energy-20261102",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/business/status/2117221025532317816",
+            "checkedAt": "2026-11-03T00:58:19.902Z"
+          }
+        }
+      ],
+      "group": "focus",
+      "event": {
+        "eventKey": "openai-uae-energy-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Bloomberg报道OpenAI签约向阿联酋能源企业部署技术",
+        "fact": "Bloomberg报道，OpenAI签下一项向阿联酋能源企业部署技术的协议；Sam Altman表示AI会改变能源行业的经济性。可见原帖未披露合同金额、付费规模、已经上线的范围或实际效率提升。",
+        "impact": "能源工作流若形成持续付费与可测量产出，可能为模型公司的终端收入提供新证据，并影响能源企业成本。签约还不能证明规模收入、毛利改善或上游算力投资已获回报。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+        "affected": [
+          "AI应用",
+          "能源企业",
+          "模型服务"
+        ],
+        "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+        "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+        "sources": [
+          {
+            "url": "https://x.com/business/status/2117221025532317816",
+            "postId": "2117221025532317816",
+            "username": "business",
+            "publishedAt": "2026-11-02T11:43:23Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "OpenAI signs a deal to deploy its technology across energy companies in the UAE",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 1,
+      "lastEdition": "2026-11-02-2000",
+      "lastCheckedAt": "2026-11-03T00:58:19.744Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.744Z",
+      "lastMaterialEdition": "2026-11-02-2000",
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "openai-uae-energy-20261102",
+        "action": "keep",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+        "sourceUrl": "https://x.com/business/status/2117221025532317816",
+        "checkedAt": "2026-11-03T00:58:19.902Z"
+      }
+    },
+    {
+      "eventKey": "sttgdc-loan-talks-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.744Z",
+      "firstEdition": "2026-11-02-2000",
+      "history": [
+        {
+          "edition": "2026-11-03-0800",
+          "decision": {
+            "eventKey": "sttgdc-loan-talks-20261102",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/business/status/2117078020418572383",
+            "checkedAt": "2026-11-03T00:58:19.902Z"
+          }
+        }
+      ],
+      "group": "focus",
+      "event": {
+        "eventKey": "sttgdc-loan-talks-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Bloomberg：STTGDC正洽谈24亿美元银团贷款",
+        "fact": "Bloomberg援引消息人士称，新加坡数据中心运营商STTGDC正与银行洽谈24亿美元银团贷款。当前支持的状态是洽谈，不是已签约、已放款或新增可运行容量。利率、期限、抵押与资金用途细目未披露。",
+        "impact": "数据中心需求经融资转成建设投入，才会影响芯片、电力与设备订单。若融资成本高于项目现金回报或贷款未落实，需求可能停留在规划阶段；谈判金额不能直接换算为设备采购或终端付费。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+        "affected": [
+          "数据中心",
+          "信贷融资",
+          "AI基础设施"
+        ],
+        "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+        "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+        "sources": [
+          {
+            "url": "https://x.com/business/status/2117078020418572383",
+            "postId": "2117078020418572383",
+            "username": "business",
+            "publishedAt": "2026-11-02T02:15:08Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "STTGDC is in talks with banks for a $2.4 billion syndicated loan, according to sources",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 2,
+      "lastEdition": "2026-11-02-2000",
+      "lastCheckedAt": "2026-11-03T00:58:19.744Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.744Z",
+      "lastMaterialEdition": "2026-11-02-2000",
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "sttgdc-loan-talks-20261102",
+        "action": "keep",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+        "sourceUrl": "https://x.com/business/status/2117078020418572383",
+        "checkedAt": "2026-11-03T00:58:19.902Z"
+      }
+    },
+    {
+      "eventKey": "national-grid-teesside-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.744Z",
+      "firstEdition": "2026-11-02-2000",
+      "history": [
+        {
+          "edition": "2026-11-03-0800",
+          "decision": {
+            "eventKey": "national-grid-teesside-20261102",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/TeessideLive/status/2117171582179201025",
+            "checkedAt": "2026-11-03T00:58:19.902Z"
+          }
+        }
+      ],
+      "group": "focus",
+      "event": {
+        "eventKey": "national-grid-teesside-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Teesside变电站完成土地交易，供电仍在规划阶段",
+        "fact": "Teesside Live报道National Grid已就原钢铁厂地块达成购地协议；Construction Index称交易涉及Dorman Point的73.3英亩土地，拟建大型变电站，由Balfour Beatty交付。DCD将规划容量报道为3.2GW；购地和规划不等于已建成、并网或为AI机房实际供电。",
+        "impact": "电网扩建能否缓解算力瓶颈取决于变电设备、施工、许可、上游供电与负荷投产能否接续。土地交易提供项目阶段的新线索，但不意味着芯片订单立刻转成云收入，也不能将3.2GW全算作当前AI用电。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+        "affected": [
+          "电网",
+          "数据中心",
+          "电力设备"
+        ],
+        "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+        "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+        "sources": [
+          {
+            "url": "https://x.com/TeessideLive/status/2117171582179201025",
+            "postId": "2117171582179201025",
+            "username": "TeessideLive",
+            "publishedAt": "2026-11-02T08:26:54Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "National Grid has agreed a deal for 73 acres of land at the former steelworks site",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/TCIndex/status/2117194570366636040",
+            "postId": "2117194570366636040",
+            "username": "TCIndex",
+            "publishedAt": "2026-11-02T09:58:15Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "UK's largest substation planned in Teesside",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/dcdnews/status/2117206397993812392",
+            "postId": "2117206397993812392",
+            "username": "dcdnews",
+            "publishedAt": "2026-11-02T10:45:15Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "National Grid buys land in Teesside, UK, for 3.2GW substation to power AI data center",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 3,
+      "lastEdition": "2026-11-02-2000",
+      "lastCheckedAt": "2026-11-03T00:58:19.744Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.744Z",
+      "lastMaterialEdition": "2026-11-02-2000",
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "national-grid-teesside-20261102",
+        "action": "keep",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+        "sourceUrl": "https://x.com/TeessideLive/status/2117171582179201025",
+        "checkedAt": "2026-11-03T00:58:19.902Z"
+      }
+    },
+    {
+      "eventKey": "google-malaysia-water-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.744Z",
+      "firstEdition": "2026-11-02-2000",
+      "history": [
+        {
+          "edition": "2026-11-03-0800",
+          "decision": {
+            "eventKey": "google-malaysia-water-20261102",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/NewsBFM/status/2117180169110892638",
+            "checkedAt": "2026-11-03T00:58:19.902Z"
+          }
+        }
+      ],
+      "group": "focus",
+      "event": {
+        "eventKey": "google-malaysia-water-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Google拟投1.6亿美元建设兼供公众与数据中心的水设施",
+        "fact": "BFM News报道，Google将向马来西亚森美兰州的水库和水处理厂投资1.6亿美元，设施计划每天最多供应6500万升处理水供公众使用，也服务Springhill Industrial Park即将建设的数据中心园区。报道是未来投资与设施计划，不能把全部供水量视为Google用水。",
+        "impact": "水与电一样可能约束数据中心投产。共用水设施若落实，可能降低项目资源约束；是否改善AI业务收入还取决于建设、运营、许可及客户使用。公共供水容量和机房用水量的口径必须分开。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+        "affected": [
+          "数据中心",
+          "水务基础设施",
+          "Google"
+        ],
+        "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+        "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+        "sources": [
+          {
+            "url": "https://x.com/NewsBFM/status/2117180169110892638",
+            "postId": "2117180169110892638",
+            "username": "NewsBFM",
+            "publishedAt": "2026-11-02T09:01:02Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "Google will invest US$160 million in a reservoir and water treatment plant in Negeri Sembilan",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 4,
+      "lastEdition": "2026-11-02-2000",
+      "lastCheckedAt": "2026-11-03T00:58:19.744Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.744Z",
+      "lastMaterialEdition": "2026-11-02-2000",
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "google-malaysia-water-20261102",
+        "action": "keep",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+        "sourceUrl": "https://x.com/NewsBFM/status/2117180169110892638",
+        "checkedAt": "2026-11-03T00:58:19.902Z"
+      }
+    },
+    {
+      "eventKey": "trendforce-dram-lead-time-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.744Z",
+      "firstEdition": "2026-11-02-2000",
+      "history": [
+        {
+          "edition": "2026-11-03-0800",
+          "decision": {
+            "eventKey": "trendforce-dram-lead-time-20261102",
+            "action": "keep",
+            "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+            "sourceUrl": "https://x.com/trendforce/status/2117225223888015524",
+            "checkedAt": "2026-11-03T00:58:19.902Z"
+          }
+        }
+      ],
+      "group": "insights",
+      "event": {
+        "eventKey": "trendforce-dram-lead-time-20261102",
+        "collectionUnit": "news:semiconductors",
+        "title": "TrendForce：DRAM交期缩短一周至19周，市场仍很紧",
+        "fact": "TrendForce在Weekly Radar相关帖中报告，DRAM交期缩短一周至19周，但市场仍处于“Very Tight”，不同容量间的分化扩大。这是该机构跟踪口径；可见原帖未说明样本构成，不能外推为所有DRAM客户或容量均同步改善。",
+        "impact": "交期边际缩短可能降低部分客户的备货压力，但紧张程度与容量分化意味着供应改善并不均匀。只有进一步看到具体产品交付、定价和库存，才能判断利润从存储供应商向下游迁移；交期缩短本身不证明需求下降。",
+        "direction": "双向",
+        "horizon": "未来两周跟踪具体容量交期、价格及客户供给",
+        "affected": [
+          "存储",
+          "DRAM客户",
+          "半导体供应链"
+        ],
+        "counterCase": "若该变化只来自样本或容量结构变化，不能解释为普遍松动；原帖仍报告Very Tight。独立检索未返更正不等于已独立确认。",
+        "selectionReason": "独立第二轮候选追源时发现的机构原始X，准确时间与正文可回查，优于无法确认机构口径的DRAM价格二传。",
+        "credibilityReason": "机构原帖由采集器转述，执行器未独立直读，样本范围未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "原始观测时点未披露；发帖时间另列。",
+        "sources": [
+          {
+            "url": "https://x.com/trendforce/status/2117225223888015524",
+            "postId": "2117225223888015524",
+            "username": "trendforce",
+            "publishedAt": "2026-11-02T12:00:04Z",
+            "checkedAt": "2026-11-02T12:15:30.513064+00:00",
+            "excerpt": "DRAM lead times eased by a week to 19 weeks, but the market remains Very Tight, with a widening split by capacity.",
+            "verification": "collector-report",
+            "verificationNote": "Bot第二轮追源发现，Expert线程读取和独立反证；执行器未独立直读。Weekly Radar口径，未打开非X全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "I04",
+          "I06",
+          "R01"
+        ],
+        "disciplines": [
+          "产业供需",
+          "统计与测量"
+        ],
+        "knowledgeApplication": "I04用供应链观测校验总量叙事；I06关注不同容量的价值分配而非将所有存储股视为同一方向。R01提醒交期同时受供给、需求和样本结构影响，单指标不足以辨认原因。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "机构原帖由采集器转述，执行器未独立直读，样本范围未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-11-02-2000",
+      "lastCheckedAt": "2026-11-03T00:58:19.744Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.744Z",
+      "lastMaterialEdition": "2026-11-02-2000",
+      "lateDiscovery": false,
+      "review": {
+        "eventKey": "trendforce-dram-lead-time-20261102",
+        "action": "keep",
+        "reason": "复核已保存原卡、来源与本轮已知更正线索；保持原始归因及不确定性继续可读，不当本轮新增或重新直读X。",
+        "sourceUrl": "https://x.com/trendforce/status/2117225223888015524",
+        "checkedAt": "2026-11-03T00:58:19.902Z"
+      }
+    },
+    {
+      "eventKey": "marvell-lumentum-combination-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.902Z",
+      "firstEdition": "2026-11-03-0800",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "marvell-lumentum-combination-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Marvell与Lumentum同意合并，尚未完成",
+        "fact": "Marvell和Lumentum分别宣布已达成合并协议，Lumentum称采用全股票交易。公司X帖与二传的估值口径有差异，金额和换股细节暂不采用；同意交易不等于已获批准或完成交割。",
+        "impact": "若交易完成，连接芯片、光子和激光制造的协同可能改变AI数据中心互连供应与议价。能否兑现取决于审批、客户选择、研发整合和交付；合并预期不是订单或利润已经增加。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "AI互连",
+          "光通信",
+          "半导体"
+        ],
+        "counterCase": "若交易未获必要批准、融资未落实或实物供给没有改善，当前传导会减弱；未搜到更正不能作为独立确认。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "attentionEvidence": "第一轮独立发现后追到原始X，有限样本内比较，不宣称全X排名。",
+        "sources": [
+          {
+            "url": "https://x.com/MarvellTech/status/2117305094639399309",
+            "postId": "2117305094639399309",
+            "username": "MarvellTech",
+            "publishedAt": "2026-11-02T17:17:26Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "Today, Marvell announced an agreement to combine with @Lumentum",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/Lumentum/status/2117331420406243601",
+            "postId": "2117331420406243601",
+            "username": "Lumentum",
+            "publishedAt": "2026-11-02T19:02:03Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "@Lumentum has agreed to combine with @MarvellTech in an all-stock transaction",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-11-03-0800",
+      "lastCheckedAt": "2026-11-03T00:58:19.902Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.902Z",
+      "lastMaterialEdition": "2026-11-03-0800",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "alphabet-euro-bond-sale-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.902Z",
+      "firstEdition": "2026-11-03-0800",
+      "history": [],
+      "group": "focus",
+      "event": {
+        "eventKey": "alphabet-euro-bond-sale-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Reuters：Alphabet启动60亿欧元债券发行",
+        "fact": "Reuters报道Alphabet启动60亿欧元债券发行，测试市场对科技债务的需求。启动销售并不等于已完成融资；本次可见原帖未披露利率、期限或资金用途明细。",
+        "impact": "债务融资能否支持重资本扩张取决于资金成本和经营现金回报。若发行落实可增加资金来源，但不能仅据此确认全部用于AI，或推断资本开支回报已经改善。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "Alphabet",
+          "科技债务",
+          "资本成本"
+        ],
+        "counterCase": "若交易未获必要批准、融资未落实或实物供给没有改善，当前传导会减弱；未搜到更正不能作为独立确认。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "attentionEvidence": "第一轮独立发现后追到原始X，有限样本内比较，不宣称全X排名。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2117339757923512782",
+            "postId": "2117339757923512782",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T19:35:11Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "Alphabet kicks off €6 billion bond sale, tests appetite for tech debt",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 1,
+      "lastEdition": "2026-11-03-0800",
+      "lastCheckedAt": "2026-11-03T00:58:19.902Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.902Z",
+      "lastMaterialEdition": "2026-11-03-0800",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "palantir-q3-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.902Z",
+      "firstEdition": "2026-11-03-0800",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "palantir-q3-20261102",
+        "collectionUnit": "news:ai-adoption",
+        "title": "Palantir：美国商业收入增长148%，上调全年增长指引",
+        "fact": "Palantir官方报告，第三季度美国商业收入为9.84亿美元，同比增长148%、环比增长29%，首次超过美国政府业务收入；总营收同比增长96%。公司将全年营收增长指引提高至91%，并报告季度GAAP净利润11.28亿美元。",
+        "impact": "公司披露为AI工作流采用转成收入提供线索，但单季增长和会计净利不能直接推断持续现金回报。实际客户续约、合同期限、获客与计算成本仍需核对；公司称超越一致预期，不等于本次已独立核对预期。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "企业AI应用",
+          "软件商业化"
+        ],
+        "counterCase": "若收入增长依赖短期合同或交付成本与资本开支上升，增长未必等额转为自由现金流；本轮X正文未支持NDR或RPO的精确二传数字。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "sources": [
+          {
+            "url": "https://x.com/PalantirTech/status/2117362675743093025",
+            "postId": "2117362675743093025",
+            "username": "PalantirTech",
+            "publishedAt": "2026-11-02T21:06:15Z",
+            "checkedAt": "2026-11-03T00:16:12.393359+00:00",
+            "excerpt": "Palantir reports Q3 ‘26 US comm revenue growth of 148% Y/Y and revenue growth of 96% Y/Y",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 34,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 33,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 6,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "I01",
+          "I02",
+          "R01"
+        ],
+        "disciplines": [
+          "企业经营",
+          "会计与金融"
+        ],
+        "knowledgeApplication": "I01与I02用已确认客户收入检验上游投入的需求基础；R01要求区分营收、会计利润和可持续现金回款，不从同比增长直接推出资本回报。",
+        "people": [],
+        "credibility": {
+          "score": 34,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 0,
+      "lastEdition": "2026-11-03-0800",
+      "lastCheckedAt": "2026-11-03T00:58:19.902Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.902Z",
+      "lastMaterialEdition": "2026-11-03-0800",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "treasury-q4-borrowing-estimate-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.902Z",
+      "firstEdition": "2026-11-03-0800",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "treasury-q4-borrowing-estimate-20261102",
+        "collectionUnit": "news:capital-cost",
+        "title": "Reuters：美国财政部下调第四季度借款估算至6180亿美元",
+        "fact": "Reuters报道，美国财政部将第四季度借款估算下调至6180亿美元。这是估算调整，不能写成已完成发债或政府支出已经相应减少；现金余额、期限结构和下一季度数字未在该原帖正文披露。",
+        "impact": "融资需求会经国债供给、期限结构和资金需求影响资本成本，进而改变重资本项目的回报门槛。但借款估算也受现金余额影响，不能仅据总额下降推断财政紧缩、长端收益率必降或AI融资压力解除。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "国债供给",
+          "资本成本",
+          "重资本企业"
+        ],
+        "counterCase": "若下调主要来自期初现金较高或发行结构变化，对长端供给的影响可能较小；原帖未给这些拆分，不能使用口径冲突的739B或800B补齐。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2117391506713489471",
+            "postId": "2117391506713489471",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T23:00:49Z",
+            "checkedAt": "2026-11-03T00:16:12.393359+00:00",
+            "excerpt": "US Treasury cuts fourth-quarter borrowing estimate to $618 billion",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "M02",
+          "M05",
+          "R01"
+        ],
+        "disciplines": [
+          "财政制度",
+          "金融市场"
+        ],
+        "knowledgeApplication": "M02将财政融资需求连接到期限溢价，M05观察企业再融资门槛；R01提醒现金余额与发行期限会改变传导，估算下降不自动代表政策紧缩。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 1,
+      "lastEdition": "2026-11-03-0800",
+      "lastCheckedAt": "2026-11-03T00:58:19.902Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.902Z",
+      "lastMaterialEdition": "2026-11-03-0800",
+      "lateDiscovery": false
+    },
+    {
+      "eventKey": "petronet-qatar-delayed-lng-20261102",
+      "firstSeenAt": "2026-11-03T00:58:19.902Z",
+      "firstEdition": "2026-11-03-0800",
+      "history": [],
+      "group": "insights",
+      "event": {
+        "eventKey": "petronet-qatar-delayed-lng-20261102",
+        "collectionUnit": "news:geopolitics",
+        "title": "Reuters：Petronet与Qatar洽谈延迟LNG交付",
+        "fact": "Reuters报道，印度Petronet正与Qatar就延迟的液化天然气船货交付进行洽谈。原帖支持洽谈状态，没有确认货物已收到、供应已恢复，或不可抗力具体延长至12月。",
+        "impact": "能源价格对谈判预期的反应可能快于实物交付恢复。若延迟持续，替代采购与库存会影响进口方成本和气源竞争；实际影响仍取决于货量、合同和替代渠道，不能用谈判本身证明短缺解除。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "LNG",
+          "能源供应链",
+          "进口成本"
+        ],
+        "counterCase": "若延迟船货恢复、替代供应足够或合同限制成本转嫁，成本冲击可能减弱；本轮未取得原始交付数量和完成确认。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2117354837310361634",
+            "postId": "2117354837310361634",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T20:35:06Z",
+            "checkedAt": "2026-11-03T00:17:43.387584+00:00",
+            "excerpt": "India Petronet in talks with Qatar for delivery of delayed LNG cargoes",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "M07",
+          "R02",
+          "R06"
+        ],
+        "disciplines": [
+          "能源供应链",
+          "合同与金融"
+        ],
+        "knowledgeApplication": "M07区分交付、库存与替代气源；R02与R06区分价格预期反馈和实际船货到达的时间，不把外交预期等同供给已经恢复。",
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "rank": 2,
+      "lastEdition": "2026-11-03-0800",
+      "lastCheckedAt": "2026-11-03T00:58:19.902Z",
+      "state": "active",
+      "retentionAnchor": "2026-11-03T00:58:19.902Z",
+      "readingDate": "2026-11-03",
+      "retainUntil": "2026-11-04T00:00:00.000Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.902Z",
+      "lastMaterialEdition": "2026-11-03-0800",
       "lateDiscovery": false
     }
   ],
@@ -32306,19 +33864,26 @@
     "2026-10-31-0800:2026-10-31T00:54:13.784Z",
     "2026-10-31-2000:2026-10-31T12:47:02.441Z",
     "2026-11-01-2000:2026-11-01T13:01:04.784Z",
-    "2026-11-02-0800:2026-11-02T00:57:06.622Z"
+    "2026-11-02-0800:2026-11-02T00:57:06.622Z",
+    "2026-11-02-2000:2026-11-03T00:58:19.744Z",
+    "2026-11-03-0800:2026-11-03T00:58:19.902Z"
   ],
   "warnings": [],
   "lastStatus": "partial",
   "selected": {
     "focus": [
-      "hormuz-two-tankers-20261101",
-      "opec-december-quota-principle-20261031",
-      "microsoft-fy27q1-cloud-20261028",
-      "samsung-q326-ai-memory-profit-20261029",
-      "intel-q3-20261029"
+      "marvell-lumentum-combination-20261102",
+      "alphabet-euro-bond-sale-20261102",
+      "oil-diplomacy-20261102",
+      "openai-uae-energy-20261102",
+      "sttgdc-loan-talks-20261102"
     ],
     "insights": [
+      "palantir-q3-20261102",
+      "treasury-q4-borrowing-estimate-20261102",
+      "petronet-qatar-delayed-lng-20261102",
+      "anthropic-unit-econ-ipo-path-2026-10-14",
+      "trendforce-dram-lead-time-20261102",
       "mhi-us-gas-turbine-20261101",
       "taiwan-east-coast-patrol-shipping-20261031"
     ]
@@ -32328,16 +33893,1345 @@
   "period": {
     "policy": "beijing-batches-v1",
     "timezone": "Asia/Shanghai",
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "weekendCarry": false,
-    "retainUntil": "2026-11-03T00:00:00.000Z"
+    "retainUntil": "2026-11-04T00:00:00.000Z"
   },
-  "latestEditionId": "2026-11-02-0800",
-  "lastUsableCutoff": "2026-11-02T08:04:44+08:00",
+  "latestEditionId": "2026-11-03-0800",
+  "lastUsableCutoff": "2026-11-03T08:04:34+08:00",
   "coverage": {
     "status": "partial"
   },
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "oil-diplomacy-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Reuters：伊朗接触仍继续，谈判未获突破",
+        "fact": "Reuters报道，伊朗称结束战争的接触仍在继续，此轮谈判结束但没有突破。另一则Reuters原帖将新一轮中东谈判与油价回落联系，并引述地缘风险溢价可能继续存在的解释；未据此确认和平协议、霍尔木兹复航或具体跌幅。",
+        "impact": "外交预期可能先影响能源风险溢价，实际运输、保险与交付则要等待可执行安排。预期改善和实物流仍受阻可以同时存在，影响用能成本与通胀贴现的时点也可能不同。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "能源",
+          "航运",
+          "美股整体"
+        ],
+        "counterCase": "若交易未获必要批准、融资未落实或实物供给没有改善，当前传导会减弱；未搜到更正不能作为独立确认。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "进展",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "attentionEvidence": "第一轮独立发现后追到原始X，有限样本内比较，不宣称全X排名。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2117252922564104509",
+            "postId": "2117252922564104509",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T13:50:08Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "Iran says contacts over ending war continue as talks end with no breakthrough",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/Reuters/status/2117265472991154327",
+            "postId": "2117265472991154327",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T14:40:00Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "With renewed Middle East talks lowering oil prices, Amanda Rastovic from Expana explains how geopolitical risks may keep a premium in place",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.902Z",
+      "group": "focus",
+      "review": null,
+      "history": [
+        {
+          "edition": "2026-11-02-2000",
+          "event": {
+            "eventKey": "oil-diplomacy-20261102",
+            "collectionUnit": "news:market-focus",
+            "title": "美伊外交预期伴随油价回落，尚非和平协议",
+            "fact": "CNBC报道，在美国与伊朗据报均寻求外交解决的背景下油价下跌；WSJ Markets随后报道油价跌逾3%，并归因为和平谈判缓解供应担忧。这是媒体对当时市场变化的描述，未证实已达成和平、恢复通航或解除制裁。",
+            "impact": "若外交预期转成可执行安排，运输保险、能源成本和通胀风险溢价可能回落，影响用能企业利润与折现率。若谈判停滞或实物流仍受阻，预期与交付可能背离；不将报道时点跌幅当当前报价。",
+            "direction": "双向",
+            "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+            "affected": [
+              "能源",
+              "航运",
+              "用能行业",
+              "美股整体"
+            ],
+            "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+            "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+            "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+            "change": "新增",
+            "eventTime": null,
+            "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+            "sources": [
+              {
+                "url": "https://x.com/CNBC/status/2117122673935364119",
+                "postId": "2117122673935364119",
+                "username": "CNBC",
+                "publishedAt": "2026-11-02T05:12:34Z",
+                "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+                "excerpt": "Oil prices fall amid reports that the U.S. and Iran are both seeking diplomacy",
+                "verification": "collector-report",
+                "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/WSJmarkets/status/2117155223135248837",
+                "postId": "2117155223135248837",
+                "username": "WSJmarkets",
+                "publishedAt": "2026-11-02T07:21:54Z",
+                "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+                "excerpt": "Oil Prices Fall More Than 3% as Iran Peace Talks Ease Supply Fears",
+                "verification": "collector-report",
+                "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 31,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 29,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 2,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+            "people": [],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-11-03T00:58:19.902Z"
+        }
+      ]
+    },
+    {
+      "item": {
+        "eventKey": "anthropic-unit-econ-ipo-path-2026-10-14",
+        "collectionUnit": "news:ai-adoption",
+        "title": "The Information：Anthropic短期算力支出拖累经营利润",
+        "fact": "The Information在解读修订后的S-1时报道，Anthropic第三季度短期算力支出为50亿美元，推动公司回到经营亏损。原帖未支持本轮流传的精确总收入、采购承诺和客户履约义务数字；经营亏损也不等于净亏损或同额现金流出。",
+        "impact": "临时补充算力可能支持需求，却以更高成本压低经营利润。若稳定需求可通过更早采购或长期安排满足，成本结构可能改善；但锁定长期供给又增加固定承诺，需与终端付费和融资能力一起观察。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "模型服务",
+          "算力采购",
+          "AI资本回报"
+        ],
+        "counterCase": "若临时支出只为一次性需求峰值或随后成本下降，不能外推长期利润率；本轮未核长期承诺、现金支出和调整后利润口径。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "进展",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "sources": [
+          {
+            "url": "https://x.com/theinformation/status/2117406524653900139",
+            "postId": "2117406524653900139",
+            "username": "theinformation",
+            "publishedAt": "2026-11-03T00:00:29Z",
+            "checkedAt": "2026-11-03T00:17:43.387584+00:00",
+            "excerpt": "Anthropic spent $5 billion on short-term compute in Q3 alone, helping push it back into an operating loss.",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "I01",
+          "I02",
+          "R06"
+        ],
+        "disciplines": [
+          "运营与采购",
+          "会计与金融"
+        ],
+        "knowledgeApplication": "I01与I02要求将终端需求、采购安排和现金来源连接；R06比较临时灵活性与长期固定承诺的取舍，不把当前经营亏损直接推成需求消失或融资必然失败。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.902Z",
+      "group": "insights",
+      "history": [
+        {
+          "edition": "2026-10-15-0900",
+          "event": {
+            "eventKey": "anthropic-unit-econ-ipo-path-2026-10-14",
+            "title": "Anthropic 调整后盈利与算力回报叙事：终端付费能否撑起上游资本开支",
+            "fact": "FT 转述显示 Anthropic Q3 营收约 168 亿美元并称调整后盈利；部分转述称每 1 美元算力支出对应约 1.70 美元营收。同窗亦有开源模型低价压制毛利的讨论。",
+            "impact": "事件→单位经济改善声称→IPO/融资条件→云与 GPU 需求可持续性预期。",
+            "direction": "双向",
+            "horizon": "IPO 前后数月",
+            "affected": [
+              "AI 应用层估值",
+              "云资本开支预期"
+            ],
+            "counterCase": "调整后口径若剔除大额算力合约或股权成本，现金利润仍可能为负。",
+            "selectionReason": "AI 落地包：把营收接到可证伪的单位经济。",
+            "credibilityReason": "二手转述；缺审计附注。",
+            "change": "新增",
+            "eventTime": "2026-10-14T22:14:10.000Z",
+            "knowledgeCards": [
+              "I02",
+              "I01",
+              "R04"
+            ],
+            "disciplines": [
+              "AI商业化",
+              "资本开支"
+            ],
+            "knowledgeApplication": "I02：区分独立付费客户与循环融资；I01：实验室盈利改善不一定立刻降低供应商订单；R04：事前写明审计口径变化即证伪点。",
+            "sources": [
+              {
+                "url": "https://x.com/unusual_whales/status/2110497515334521195",
+                "postId": "2110497515334521195",
+                "username": "unusual_whales",
+                "publishedAt": "2026-10-14T22:26:33.000Z",
+                "checkedAt": "2026-10-15T00:45:00.000Z",
+                "excerpt": "Anthropic says it was profitable in the third quarter, on an adjusted basis, per the Financial Times.",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 30,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 27,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 0,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              },
+              {
+                "url": "https://x.com/TheLatentCo/status/2110528610469867528",
+                "postId": "2110528610469867528",
+                "username": "TheLatentCo",
+                "publishedAt": "2026-10-15T00:30:07.000Z",
+                "checkedAt": "2026-10-15T00:45:00.000Z",
+                "excerpt": "generated $1.70 in revenue per $1 spent on computing power during the quarter",
+                "verification": "collector-report",
+                "verificationNote": "Grok Bot X+github 自身 X 工具（search_posts_all / get_users_posts / search_news）返回正文、时间与链接；按项目规则标为采集器转述，未在 X 页面按帖子 ID 独立直读。",
+                "credibility": {
+                  "version": "1.0.0",
+                  "status": "auto-provisional",
+                  "overall": 33,
+                  "band": "low",
+                  "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+                  "sourceScore": 35,
+                  "claimScore": 31,
+                  "breakdown": {
+                    "directness": 10,
+                    "traceableEvidence": 7,
+                    "independentCorroboration": 0,
+                    "specificity": 4,
+                    "recordIntegrity": 10,
+                    "penalties": 0
+                  },
+                  "reasons": [],
+                  "warnings": [
+                    "作者未进入人工维护的来源表",
+                    "帖子所附可追溯证据有限",
+                    "尚无人工确认的独立 X 帖交叉印证",
+                    "原帖尚未独立读取；当前证据为采集器返回"
+                  ],
+                  "limitations": [
+                    "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                    "蓝标、点赞量和转发量不自动提高可信度",
+                    "只有人工复核过独立帖子后，交叉印证项才会加分"
+                  ]
+                }
+              }
+            ],
+            "people": [],
+            "credibility": {
+              "score": 30,
+              "label": "规则初评，未校准",
+              "reason": "二手转述；缺审计附注。",
+              "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+            }
+          },
+          "changedAt": "2026-11-03T00:58:19.902Z"
+        }
+      ]
+    },
+    {
+      "item": {
+        "eventKey": "marvell-lumentum-combination-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Marvell与Lumentum同意合并，尚未完成",
+        "fact": "Marvell和Lumentum分别宣布已达成合并协议，Lumentum称采用全股票交易。公司X帖与二传的估值口径有差异，金额和换股细节暂不采用；同意交易不等于已获批准或完成交割。",
+        "impact": "若交易完成，连接芯片、光子和激光制造的协同可能改变AI数据中心互连供应与议价。能否兑现取决于审批、客户选择、研发整合和交付；合并预期不是订单或利润已经增加。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "AI互连",
+          "光通信",
+          "半导体"
+        ],
+        "counterCase": "若交易未获必要批准、融资未落实或实物供给没有改善，当前传导会减弱；未搜到更正不能作为独立确认。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "attentionEvidence": "第一轮独立发现后追到原始X，有限样本内比较，不宣称全X排名。",
+        "sources": [
+          {
+            "url": "https://x.com/MarvellTech/status/2117305094639399309",
+            "postId": "2117305094639399309",
+            "username": "MarvellTech",
+            "publishedAt": "2026-11-02T17:17:26Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "Today, Marvell announced an agreement to combine with @Lumentum",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/Lumentum/status/2117331420406243601",
+            "postId": "2117331420406243601",
+            "username": "Lumentum",
+            "publishedAt": "2026-11-02T19:02:03Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "@Lumentum has agreed to combine with @MarvellTech in an all-stock transaction",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.902Z",
+      "group": "focus",
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "alphabet-euro-bond-sale-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Reuters：Alphabet启动60亿欧元债券发行",
+        "fact": "Reuters报道Alphabet启动60亿欧元债券发行，测试市场对科技债务的需求。启动销售并不等于已完成融资；本次可见原帖未披露利率、期限或资金用途明细。",
+        "impact": "债务融资能否支持重资本扩张取决于资金成本和经营现金回报。若发行落实可增加资金来源，但不能仅据此确认全部用于AI，或推断资本开支回报已经改善。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "Alphabet",
+          "科技债务",
+          "资本成本"
+        ],
+        "counterCase": "若交易未获必要批准、融资未落实或实物供给没有改善，当前传导会减弱；未搜到更正不能作为独立确认。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "attentionEvidence": "第一轮独立发现后追到原始X，有限样本内比较，不宣称全X排名。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2117339757923512782",
+            "postId": "2117339757923512782",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T19:35:11Z",
+            "checkedAt": "2026-11-03T00:11:36.162233+00:00",
+            "excerpt": "Alphabet kicks off €6 billion bond sale, tests appetite for tech debt",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.902Z",
+      "group": "focus",
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "palantir-q3-20261102",
+        "collectionUnit": "news:ai-adoption",
+        "title": "Palantir：美国商业收入增长148%，上调全年增长指引",
+        "fact": "Palantir官方报告，第三季度美国商业收入为9.84亿美元，同比增长148%、环比增长29%，首次超过美国政府业务收入；总营收同比增长96%。公司将全年营收增长指引提高至91%，并报告季度GAAP净利润11.28亿美元。",
+        "impact": "公司披露为AI工作流采用转成收入提供线索，但单季增长和会计净利不能直接推断持续现金回报。实际客户续约、合同期限、获客与计算成本仍需核对；公司称超越一致预期，不等于本次已独立核对预期。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "企业AI应用",
+          "软件商业化"
+        ],
+        "counterCase": "若收入增长依赖短期合同或交付成本与资本开支上升，增长未必等额转为自由现金流；本轮X正文未支持NDR或RPO的精确二传数字。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "sources": [
+          {
+            "url": "https://x.com/PalantirTech/status/2117362675743093025",
+            "postId": "2117362675743093025",
+            "username": "PalantirTech",
+            "publishedAt": "2026-11-02T21:06:15Z",
+            "checkedAt": "2026-11-03T00:16:12.393359+00:00",
+            "excerpt": "Palantir reports Q3 ‘26 US comm revenue growth of 148% Y/Y and revenue growth of 96% Y/Y",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 34,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 33,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 6,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [
+                "主张包含较具体、可核验的对象或数字"
+              ],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "I01",
+          "I02",
+          "R01"
+        ],
+        "disciplines": [
+          "企业经营",
+          "会计与金融"
+        ],
+        "knowledgeApplication": "I01与I02用已确认客户收入检验上游投入的需求基础；R01要求区分营收、会计利润和可持续现金回款，不从同比增长直接推出资本回报。",
+        "people": [],
+        "credibility": {
+          "score": 34,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.902Z",
+      "group": "insights",
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "treasury-q4-borrowing-estimate-20261102",
+        "collectionUnit": "news:capital-cost",
+        "title": "Reuters：美国财政部下调第四季度借款估算至6180亿美元",
+        "fact": "Reuters报道，美国财政部将第四季度借款估算下调至6180亿美元。这是估算调整，不能写成已完成发债或政府支出已经相应减少；现金余额、期限结构和下一季度数字未在该原帖正文披露。",
+        "impact": "融资需求会经国债供给、期限结构和资金需求影响资本成本，进而改变重资本项目的回报门槛。但借款估算也受现金余额影响，不能仅据总额下降推断财政紧缩、长端收益率必降或AI融资压力解除。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "国债供给",
+          "资本成本",
+          "重资本企业"
+        ],
+        "counterCase": "若下调主要来自期初现金较高或发行结构变化，对长端供给的影响可能较小；原帖未给这些拆分，不能使用口径冲突的739B或800B补齐。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2117391506713489471",
+            "postId": "2117391506713489471",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T23:00:49Z",
+            "checkedAt": "2026-11-03T00:16:12.393359+00:00",
+            "excerpt": "US Treasury cuts fourth-quarter borrowing estimate to $618 billion",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "M02",
+          "M05",
+          "R01"
+        ],
+        "disciplines": [
+          "财政制度",
+          "金融市场"
+        ],
+        "knowledgeApplication": "M02将财政融资需求连接到期限溢价，M05观察企业再融资门槛；R01提醒现金余额与发行期限会改变传导，估算下降不自动代表政策紧缩。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.902Z",
+      "group": "insights",
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "petronet-qatar-delayed-lng-20261102",
+        "collectionUnit": "news:geopolitics",
+        "title": "Reuters：Petronet与Qatar洽谈延迟LNG交付",
+        "fact": "Reuters报道，印度Petronet正与Qatar就延迟的液化天然气船货交付进行洽谈。原帖支持洽谈状态，没有确认货物已收到、供应已恢复，或不可抗力具体延长至12月。",
+        "impact": "能源价格对谈判预期的反应可能快于实物交付恢复。若延迟持续，替代采购与库存会影响进口方成本和气源竞争；实际影响仍取决于货量、合同和替代渠道，不能用谈判本身证明短缺解除。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露，合并执行和建设兑现可能更久",
+        "affected": [
+          "LNG",
+          "能源供应链",
+          "进口成本"
+        ],
+        "counterCase": "若延迟船货恢复、替代供应足够或合同限制成本转嫁，成本冲击可能减弱；本轮未取得原始交付数量和完成确认。",
+        "selectionReason": "在两条获准路径的有限候选中，优先可识别原始公司或媒体X支持的新事实，按传导广度比较，不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "事件精确发生时刻未知；发帖时间另存。",
+        "sources": [
+          {
+            "url": "https://x.com/Reuters/status/2117354837310361634",
+            "postId": "2117354837310361634",
+            "username": "Reuters",
+            "publishedAt": "2026-11-02T20:35:06Z",
+            "checkedAt": "2026-11-03T00:17:43.387584+00:00",
+            "excerpt": "India Petronet in talks with Qatar for delivery of delayed LNG cargoes",
+            "verification": "collector-report",
+            "verificationNote": "X+github发现，Grok网页Expert线程追源与独立反证；本模型未独立直读X。仅采用可见正文，非X外链未读取。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "M07",
+          "R02",
+          "R06"
+        ],
+        "disciplines": [
+          "能源供应链",
+          "合同与金融"
+        ],
+        "knowledgeApplication": "M07区分交付、库存与替代气源；R02与R06区分价格预期反馈和实际船货到达的时间，不把外交预期等同供给已经恢复。",
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，未独立直读；未确认的金额、阶段和事件时间不补写。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.902Z",
+      "group": "insights",
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "openai-uae-energy-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Bloomberg报道OpenAI签约向阿联酋能源企业部署技术",
+        "fact": "Bloomberg报道，OpenAI签下一项向阿联酋能源企业部署技术的协议；Sam Altman表示AI会改变能源行业的经济性。可见原帖未披露合同金额、付费规模、已经上线的范围或实际效率提升。",
+        "impact": "能源工作流若形成持续付费与可测量产出，可能为模型公司的终端收入提供新证据，并影响能源企业成本。签约还不能证明规模收入、毛利改善或上游算力投资已获回报。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+        "affected": [
+          "AI应用",
+          "能源企业",
+          "模型服务"
+        ],
+        "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+        "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+        "sources": [
+          {
+            "url": "https://x.com/business/status/2117221025532317816",
+            "postId": "2117221025532317816",
+            "username": "business",
+            "publishedAt": "2026-11-02T11:43:23Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "OpenAI signs a deal to deploy its technology across energy companies in the UAE",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.744Z",
+      "group": "focus",
+      "review": null,
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "sttgdc-loan-talks-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Bloomberg：STTGDC正洽谈24亿美元银团贷款",
+        "fact": "Bloomberg援引消息人士称，新加坡数据中心运营商STTGDC正与银行洽谈24亿美元银团贷款。当前支持的状态是洽谈，不是已签约、已放款或新增可运行容量。利率、期限、抵押与资金用途细目未披露。",
+        "impact": "数据中心需求经融资转成建设投入，才会影响芯片、电力与设备订单。若融资成本高于项目现金回报或贷款未落实，需求可能停留在规划阶段；谈判金额不能直接换算为设备采购或终端付费。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+        "affected": [
+          "数据中心",
+          "信贷融资",
+          "AI基础设施"
+        ],
+        "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+        "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+        "sources": [
+          {
+            "url": "https://x.com/business/status/2117078020418572383",
+            "postId": "2117078020418572383",
+            "username": "business",
+            "publishedAt": "2026-11-02T02:15:08Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "STTGDC is in talks with banks for a $2.4 billion syndicated loan, according to sources",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.744Z",
+      "group": "focus",
+      "review": null,
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "national-grid-teesside-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Teesside变电站完成土地交易，供电仍在规划阶段",
+        "fact": "Teesside Live报道National Grid已就原钢铁厂地块达成购地协议；Construction Index称交易涉及Dorman Point的73.3英亩土地，拟建大型变电站，由Balfour Beatty交付。DCD将规划容量报道为3.2GW；购地和规划不等于已建成、并网或为AI机房实际供电。",
+        "impact": "电网扩建能否缓解算力瓶颈取决于变电设备、施工、许可、上游供电与负荷投产能否接续。土地交易提供项目阶段的新线索，但不意味着芯片订单立刻转成云收入，也不能将3.2GW全算作当前AI用电。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+        "affected": [
+          "电网",
+          "数据中心",
+          "电力设备"
+        ],
+        "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+        "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+        "sources": [
+          {
+            "url": "https://x.com/TeessideLive/status/2117171582179201025",
+            "postId": "2117171582179201025",
+            "username": "TeessideLive",
+            "publishedAt": "2026-11-02T08:26:54Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "National Grid has agreed a deal for 73 acres of land at the former steelworks site",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/TCIndex/status/2117194570366636040",
+            "postId": "2117194570366636040",
+            "username": "TCIndex",
+            "publishedAt": "2026-11-02T09:58:15Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "UK's largest substation planned in Teesside",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 30,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 27,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 0,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          },
+          {
+            "url": "https://x.com/dcdnews/status/2117206397993812392",
+            "postId": "2117206397993812392",
+            "username": "dcdnews",
+            "publishedAt": "2026-11-02T10:45:15Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "National Grid buys land in Teesside, UK, for 3.2GW substation to power AI data center",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 30,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.744Z",
+      "group": "focus",
+      "review": null,
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "google-malaysia-water-20261102",
+        "collectionUnit": "news:market-focus",
+        "title": "Google拟投1.6亿美元建设兼供公众与数据中心的水设施",
+        "fact": "BFM News报道，Google将向马来西亚森美兰州的水库和水处理厂投资1.6亿美元，设施计划每天最多供应6500万升处理水供公众使用，也服务Springhill Industrial Park即将建设的数据中心园区。报道是未来投资与设施计划，不能把全部供水量视为Google用水。",
+        "impact": "水与电一样可能约束数据中心投产。共用水设施若落实，可能降低项目资源约束；是否改善AI业务收入还取决于建设、运营、许可及客户使用。公共供水容量和机房用水量的口径必须分开。",
+        "direction": "双向",
+        "horizon": "未来两周观察后续披露；实物建设和商业兑现可能更久",
+        "affected": [
+          "数据中心",
+          "水务基础设施",
+          "Google"
+        ],
+        "counterCase": "若原报道被更正、计划未执行或没有新增现金回款，当前传导会减弱；未找到反证不等于独立确认。",
+        "selectionReason": "有限候选间比较后保留可识别原始媒体X所支持的最小事实；不以互动量证明真实性。",
+        "credibilityReason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "具体事件发生时刻未知；准确发帖时间另存，不作替代。",
+        "sources": [
+          {
+            "url": "https://x.com/NewsBFM/status/2117180169110892638",
+            "postId": "2117180169110892638",
+            "username": "NewsBFM",
+            "publishedAt": "2026-11-02T09:01:02Z",
+            "checkedAt": "2026-11-02T12:08:59.029363+00:00",
+            "excerpt": "Google will invest US$160 million in a reservoir and water treatment plant in Negeri Sembilan",
+            "verification": "collector-report",
+            "verificationNote": "X+github Bot发现，Grok网页Expert读取线程并补原始来源；执行器未独立直读X，非X外链未采用。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "attentionEvidence": "独立第一轮发现并经原始媒体X追源和独立反证；有限样本内比较优先级，不称全X热度排名。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "采集器转述，执行器未独立直读；标题及可见正文之外的数量、合同条件和发生时刻保留未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.744Z",
+      "group": "focus",
+      "review": null,
+      "history": []
+    },
+    {
+      "item": {
+        "eventKey": "trendforce-dram-lead-time-20261102",
+        "collectionUnit": "news:semiconductors",
+        "title": "TrendForce：DRAM交期缩短一周至19周，市场仍很紧",
+        "fact": "TrendForce在Weekly Radar相关帖中报告，DRAM交期缩短一周至19周，但市场仍处于“Very Tight”，不同容量间的分化扩大。这是该机构跟踪口径；可见原帖未说明样本构成，不能外推为所有DRAM客户或容量均同步改善。",
+        "impact": "交期边际缩短可能降低部分客户的备货压力，但紧张程度与容量分化意味着供应改善并不均匀。只有进一步看到具体产品交付、定价和库存，才能判断利润从存储供应商向下游迁移；交期缩短本身不证明需求下降。",
+        "direction": "双向",
+        "horizon": "未来两周跟踪具体容量交期、价格及客户供给",
+        "affected": [
+          "存储",
+          "DRAM客户",
+          "半导体供应链"
+        ],
+        "counterCase": "若该变化只来自样本或容量结构变化，不能解释为普遍松动；原帖仍报告Very Tight。独立检索未返更正不等于已独立确认。",
+        "selectionReason": "独立第二轮候选追源时发现的机构原始X，准确时间与正文可回查，优于无法确认机构口径的DRAM价格二传。",
+        "credibilityReason": "机构原帖由采集器转述，执行器未独立直读，样本范围未知。",
+        "change": "新增",
+        "eventTime": null,
+        "eventTimeNote": "原始观测时点未披露；发帖时间另列。",
+        "sources": [
+          {
+            "url": "https://x.com/trendforce/status/2117225223888015524",
+            "postId": "2117225223888015524",
+            "username": "trendforce",
+            "publishedAt": "2026-11-02T12:00:04Z",
+            "checkedAt": "2026-11-02T12:15:30.513064+00:00",
+            "excerpt": "DRAM lead times eased by a week to 19 weeks, but the market remains Very Tight, with a widening split by capacity.",
+            "verification": "collector-report",
+            "verificationNote": "Bot第二轮追源发现，Expert线程读取和独立反证；执行器未独立直读。Weekly Radar口径，未打开非X全文。",
+            "credibility": {
+              "version": "1.0.0",
+              "status": "auto-provisional",
+              "overall": 31,
+              "band": "low",
+              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
+              "sourceScore": 35,
+              "claimScore": 29,
+              "breakdown": {
+                "directness": 10,
+                "traceableEvidence": 7,
+                "independentCorroboration": 0,
+                "specificity": 2,
+                "recordIntegrity": 10,
+                "penalties": 0
+              },
+              "reasons": [],
+              "warnings": [
+                "作者未进入人工维护的来源表",
+                "帖子所附可追溯证据有限",
+                "尚无人工确认的独立 X 帖交叉印证",
+                "原帖尚未独立读取；当前证据为采集器返回"
+              ],
+              "limitations": [
+                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
+                "蓝标、点赞量和转发量不自动提高可信度",
+                "只有人工复核过独立帖子后，交叉印证项才会加分"
+              ]
+            }
+          }
+        ],
+        "knowledgeCards": [
+          "I04",
+          "I06",
+          "R01"
+        ],
+        "disciplines": [
+          "产业供需",
+          "统计与测量"
+        ],
+        "knowledgeApplication": "I04用供应链观测校验总量叙事；I06关注不同容量的价值分配而非将所有存储股视为同一方向。R01提醒交期同时受供给、需求和样本结构影响，单指标不足以辨认原因。",
+        "people": [],
+        "credibility": {
+          "score": 31,
+          "label": "规则初评，未校准",
+          "reason": "机构原帖由采集器转述，执行器未独立直读，样本范围未知。",
+          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
+        }
+      },
+      "at": "2026-11-03T00:58:19.744Z",
+      "group": "insights",
+      "review": null,
+      "history": []
+    },
     {
       "item": {
         "eventKey": "opec-december-quota-principle-20261031",
@@ -32411,6 +35305,7 @@
       },
       "at": "2026-11-02T00:57:06.622Z",
       "group": "focus",
+      "review": null,
       "history": [
         {
           "edition": "2026-11-01-2000",
@@ -32600,6 +35495,7 @@
       },
       "at": "2026-11-02T00:57:06.622Z",
       "group": "focus",
+      "review": null,
       "history": []
     },
     {
@@ -32683,6 +35579,7 @@
       },
       "at": "2026-11-02T00:57:06.622Z",
       "group": "insights",
+      "review": null,
       "history": []
     },
     {
@@ -32796,7 +35693,8 @@
         }
       },
       "at": "2026-11-01T13:01:04.784Z",
-      "group": "focus"
+      "group": "focus",
+      "review": null
     },
     {
       "item": {
@@ -32919,304 +35817,6 @@
       "at": "2026-11-01T13:01:04.784Z",
       "group": "insights",
       "review": null,
-      "history": []
-    },
-    {
-      "item": {
-        "eventKey": "openai-fundraising-target-cut-20261031",
-        "collectionUnit": "news:market-focus",
-        "title": "Bloomberg援引FT：OpenAI融资目标下调100亿美元",
-        "fact": "Bloomberg援引Financial Times报道，AI股票抛售使投资者承诺更难落实，OpenAI将融资目标下调100亿美元。这里是融资目标的变化；该帖没有披露实际已募金额，也不足以确认二传中的估值或已募110亿美元。",
-        "impact": "融资目标收缩若延缓资金到位，可能限制算力采购与基础设施扩张，也可能促使支出安排更谨慎。目标变化尚不能证明GPU订单取消，仍需观察正式融资和资本开支执行。",
-        "direction": "双向",
-        "horizon": "未来两周",
-        "affected": [
-          "AI融资",
-          "算力供应链"
-        ],
-        "counterCase": "若后续资金承诺补足、其他融资渠道到位或采购已有保障，融资目标调整未必转化为算力订单减少。",
-        "selectionReason": "本窗权威账号独立报道，追源修复后仅采用可支持的最小事实。",
-        "credibilityReason": "Grok网页Expert转述原始X，未由执行器独立直读；融资报道仍为Bloomberg援引FT。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "会面仅知周六日期；融资调整实际时刻未知，不以发帖时刻替代。",
-        "attentionEvidence": "本轮候选横向比较，不代表全X热度最高。",
-        "sources": [
-          {
-            "url": "https://x.com/business/status/2116407352857440572",
-            "postId": "2116407352857440572",
-            "username": "business",
-            "publishedAt": "2026-10-31T05:50:08Z",
-            "checkedAt": "2026-10-31T12:09:31.788374+00:00",
-            "excerpt": "OpenAI cut its fundraising target by $10 billion as an AI stock selloff complicates its efforts to secure investor commitments, the Financial Times reported.",
-            "verification": "collector-report",
-            "verificationNote": "已登录Grok Expert追源、回查与独立反证；执行器未直接访问X或文章外链。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 31,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 29,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 2,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          }
-        ],
-        "people": [],
-        "credibility": {
-          "score": 31,
-          "label": "规则初评，未校准",
-          "reason": "Grok网页Expert转述原始X，未由执行器独立直读；融资报道仍为Bloomberg援引FT。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        }
-      },
-      "at": "2026-10-31T12:47:02.441Z",
-      "group": "focus",
-      "history": []
-    },
-    {
-      "item": {
-        "eventKey": "altman-samsung-meeting-20261031",
-        "collectionUnit": "news:market-focus",
-        "title": "Bloomberg：Sam Altman与Samsung高层讨论存储和AI基础设施",
-        "fact": "Bloomberg报道，Sam Altman周六在韩国与Samsung Group高层会面，以深化存储芯片和AI基础设施合作。该帖未披露新合同、订单量、价格或交付安排；Samsung会面与SK相关二传分别处理。",
-        "impact": "会面显示模型公司继续寻求存储与基础设施合作，潜在需求需经过合同、产能与交付才能成为供应商收入。只有会面不能说明新增订单已兑现，也不能据此估算竞争对手份额变化。",
-        "direction": "双向",
-        "horizon": "未来两周",
-        "affected": [
-          "存储供应链",
-          "AI基础设施"
-        ],
-        "counterCase": "若后续没有可执行协议、产能或交付安排，合作讨论不会立即增加供应商收入。",
-        "selectionReason": "本窗权威账号独立报道，追源修复后仅采用可支持的最小事实。",
-        "credibilityReason": "Grok网页Expert转述原始X，未由执行器独立直读；融资报道仍为Bloomberg援引FT。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "会面仅知周六日期；融资调整实际时刻未知，不以发帖时刻替代。",
-        "attentionEvidence": "本轮候选横向比较，不代表全X热度最高。",
-        "sources": [
-          {
-            "url": "https://x.com/business/status/2116422453131989212",
-            "postId": "2116422453131989212",
-            "username": "business",
-            "publishedAt": "2026-10-31T06:50:08Z",
-            "checkedAt": "2026-10-31T12:09:31.788374+00:00",
-            "excerpt": "OpenAI Chief Executive Officer Sam Altman met with Samsung Group’s top executives in South Korea on Saturday to deepen cooperation on memory chips and AI infrastructure as global shortages intensify.",
-            "verification": "collector-report",
-            "verificationNote": "已登录Grok Expert追源、回查与独立反证；执行器未直接访问X或文章外链。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 30,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 27,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 0,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          }
-        ],
-        "people": [],
-        "credibility": {
-          "score": 30,
-          "label": "规则初评，未校准",
-          "reason": "Grok网页Expert转述原始X，未由执行器独立直读；融资报道仍为Bloomberg援引FT。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        }
-      },
-      "at": "2026-10-31T12:47:02.441Z",
-      "group": "focus",
-      "history": []
-    },
-    {
-      "item": {
-        "eventKey": "google-golden-dome-talks-20261030",
-        "collectionUnit": "news:market-focus",
-        "title": "Bloomberg：Google正就Golden Dome数据安全展开谈判",
-        "fact": "Bloomberg援引知情人士称，Google正与美国国防部讨论支持Golden Dome导弹防御计划的数据安全工作。现阶段是谈判，尚无已核实的合同授予；1850亿美元是整个计划的规模，不能算作Google订单或收入。",
-        "impact": "国防数据安全若转为正式合同，可能增加云与安全服务需求；谈判范围、承包份额和执行时间仍未知，短期不能据此计算盈利增量。",
-        "direction": "双向",
-        "horizon": "未来两周",
-        "affected": [
-          "GOOG",
-          "云服务",
-          "国防数据安全"
-        ],
-        "counterCase": "若谈判未签约、范围有限或预算受限，收入传导不会按计划总额兑现。",
-        "selectionReason": "窗口内权威账号新披露；仅采用原帖支持的最小带归因事实。",
-        "credibilityReason": "Grok网页版Expert返回原始X，未由本机独立直读；未取得另一方官方确认。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "实际谈判/授权发生时刻未知，不把发帖时间替代事件时刻。",
-        "attentionEvidence": "本轮横向比较的独立事件，未测全X热度；市场影响判断为条件性分析。",
-        "sources": [
-          {
-            "url": "https://x.com/business/status/2116311752816173230",
-            "postId": "2116311752816173230",
-            "username": "business",
-            "publishedAt": "2026-10-30T23:30:15Z",
-            "checkedAt": "2026-10-31T00:03:46.055562+00:00",
-            "excerpt": "Google is in talks with the US Defense Department",
-            "verification": "collector-report",
-            "verificationNote": "已登录Expert网页追源和反证返回，未读外链。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 30,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 27,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 0,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          }
-        ],
-        "people": [],
-        "credibility": {
-          "score": 30,
-          "label": "规则初评，未校准",
-          "reason": "Grok网页版Expert返回原始X，未由本机独立直读；未取得另一方官方确认。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        }
-      },
-      "at": "2026-10-31T00:54:13.784Z",
-      "group": "focus",
-      "history": []
-    },
-    {
-      "item": {
-        "eventKey": "ukraine-pac3-authorization-20261030",
-        "collectionUnit": "news:market-focus",
-        "title": "Zelenskyy：美方授权乌克兰购买500枚PAC-3，交付仍可能数年后开始",
-        "fact": "Zelenskyy在本人账号表示，美国国务院授权乌克兰购买500枚PAC-3拦截弹，同时指出交付可能要到数年后才开始，并呼吁加快。这里记录乌方声明，未取得美方同步原帖；授权不等于已经下单或交付，未采用二传金额。",
-        "impact": "授权与交付之间的差距反映国防供应链的时间约束。潜在需求需经合同、产能和交付才成为承包商收入，对短期美股共同定价的影响主要仍是地缘风险与预期。",
-        "direction": "双向",
-        "horizon": "未来两周",
-        "affected": [
-          "国防供应链",
-          "地缘风险"
-        ],
-        "counterCase": "美方详细条件、采购合同及交付计划尚缺；若数量或授权范围获修订，应据原始文件更正。",
-        "selectionReason": "窗口内权威账号新披露；仅采用原帖支持的最小带归因事实。",
-        "credibilityReason": "Grok网页版Expert返回原始X，未由本机独立直读；未取得另一方官方确认。",
-        "change": "新增",
-        "eventTime": null,
-        "eventTimeNote": "实际谈判/授权发生时刻未知，不把发帖时间替代事件时刻。",
-        "attentionEvidence": "本轮横向比较的独立事件，未测全X热度；市场影响判断为条件性分析。",
-        "sources": [
-          {
-            "url": "https://x.com/ZelenskyyUa/status/2116299987856306255",
-            "postId": "2116299987856306255",
-            "username": "ZelenskyyUa",
-            "publishedAt": "2026-10-30T22:43:30Z",
-            "checkedAt": "2026-10-31T00:03:46.055562+00:00",
-            "excerpt": "Five hundred PAC-3 interceptors ... deliveries may begin ONLY IN A FEW YEARS.",
-            "verification": "collector-report",
-            "verificationNote": "已登录Expert网页追源和反证返回，未读外链。",
-            "credibility": {
-              "version": "1.0.0",
-              "status": "auto-provisional",
-              "overall": 31,
-              "band": "low",
-              "meaning": "采集器返回，原帖未独立直读；仅作待核验线索",
-              "sourceScore": 35,
-              "claimScore": 29,
-              "breakdown": {
-                "directness": 10,
-                "traceableEvidence": 7,
-                "independentCorroboration": 0,
-                "specificity": 2,
-                "recordIntegrity": 10,
-                "penalties": 0
-              },
-              "reasons": [],
-              "warnings": [
-                "作者未进入人工维护的来源表",
-                "帖子所附可追溯证据有限",
-                "尚无人工确认的独立 X 帖交叉印证",
-                "原帖尚未独立读取；当前证据为采集器返回"
-              ],
-              "limitations": [
-                "分数衡量可追溯性与当前证据强弱，不等同于真伪概率",
-                "蓝标、点赞量和转发量不自动提高可信度",
-                "只有人工复核过独立帖子后，交叉印证项才会加分"
-              ]
-            }
-          }
-        ],
-        "people": [
-          {
-            "name": "Volodymyr Zelensky",
-            "intro": "乌克兰总统"
-          }
-        ],
-        "credibility": {
-          "score": 31,
-          "label": "规则初评，未校准",
-          "reason": "Grok网页版Expert返回原始X，未由本机独立直读；未取得另一方官方确认。",
-          "limitation": "反映当前来源与证据条件，不是真实概率；事件排序另由影响判断决定。"
-        }
-      },
-      "at": "2026-10-31T00:54:13.784Z",
-      "group": "focus",
       "history": []
     }
   ]

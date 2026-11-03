@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-02T00:57:06.550Z",
-  "cutoff": "2026-11-02T08:04:44+08:00",
+  "updatedAt": "2026-11-03T00:58:19.696Z",
+  "cutoff": "2026-11-03T08:04:34+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,350 +9,291 @@
       {
         "id": "elon-musk",
         "status": "partial",
-        "note": "价值和独立热度实际检索；已知漏项/归因错误补查，仍限工具样本，不保证全X。",
-        "cutoff": "2026-11-02T08:04:44+08:00"
+        "note": "价值与无主题过滤热度均实际检查，缺额与有限来源池保留。",
+        "cutoff": "2026-11-03T08:04:34+08:00"
       },
       {
         "id": "jensen-huang",
         "status": "partial",
-        "note": "价值和独立热度实际检索；已知漏项/归因错误补查，仍限工具样本，不保证全X。",
-        "cutoff": "2026-11-02T08:04:44+08:00"
+        "note": "价值与无主题过滤热度均实际检查，缺额与有限来源池保留。",
+        "cutoff": "2026-11-03T08:04:34+08:00"
       },
       {
         "id": "donald-trump",
         "status": "partial",
-        "note": "价值和独立热度实际检索；已知漏项/归因错误补查，仍限工具样本，不保证全X。",
-        "cutoff": "2026-11-02T08:04:44+08:00"
+        "note": "价值与无主题过滤热度均实际检查，缺额与有限来源池保留。",
+        "cutoff": "2026-11-03T08:04:34+08:00"
       },
       {
         "id": "trillion-leaders",
         "status": "partial",
-        "note": "价值和独立热度实际检索；已知漏项/归因错误补查，仍限工具样本，不保证全X。",
-        "cutoff": "2026-11-02T08:04:44+08:00"
+        "note": "价值与无主题过滤热度均实际检查，缺额与有限来源池保留。",
+        "cutoff": "2026-11-03T08:04:34+08:00"
       },
       {
         "id": "research-reports",
         "status": "partial",
-        "note": "价值和独立热度实际检索；已知漏项/归因错误补查，仍限工具样本，不保证全X。",
-        "cutoff": "2026-11-02T08:04:44+08:00"
+        "note": "价值与无主题过滤热度均实际检查，缺额与有限来源池保留。",
+        "cutoff": "2026-11-03T08:04:34+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "person-donald-trump-2117011225879970299",
+      "eventKey": "person-elon-musk-2117360990119506022",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk简短回应Grok Bot相关讨论",
+      "fact": "Elon Musk对一则Grok Bot相关讨论写道“This is the way”。不从这句短回应推断产品采用、收入或性能变化。",
+      "whyItMatters": "记录其公开互动，未提供可量化经营数据。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+      "affected": [
+        "公开传播与研究观察"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-11-02T20:59:33Z",
+      "url": "https://x.com/elonmusk/status/2117360990119506022",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "This is the way",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 5901,
+        "reposts": 611,
+        "replies": 1238,
+        "quotes": 80,
+        "views": 1235130,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "person-donald-trump-2117359293024416144",
       "tabIds": [
         "donald-trump"
       ],
-      "title": "WhiteHouse宣传渔业监管减负",
-      "fact": "WhiteHouse宣称政府为美国渔业带来监管减负。取得的文案没有文件编号，尚不足以确认本窗口新增的法律动作或适用范围。",
-      "whyItMatters": "可观察官方宣传主题；实质行业影响仍取决于具体规则、范围和生效时间。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
+      "title": "WhiteHouse引用Donald Trump对油价下跌的表态",
+      "fact": "WhiteHouse引用Donald Trump称油价正在大幅下跌，并使用“接近每桶10美元”和“纪录”等表述。这些是被引发言，具体品种、时段及纪录口径未在本条核实。",
+      "whyItMatters": "保留发言归因；不当当前报价或能源供应已经恢复的证明。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
       "affected": [
-        "政策传播"
+        "公开传播与研究观察"
       ],
       "author": "WhiteHouse",
-      "publishedAt": "2026-11-01T21:49:43Z",
-      "url": "https://x.com/WhiteHouse/status/2117011225879970299",
+      "publishedAt": "2026-11-02T20:52:48Z",
+      "url": "https://x.com/WhiteHouse/status/2117359293024416144",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "President Trump has delivered historic wins for America's fishing industry… providing critical regulatory relief.",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "\"Oil Prices are DROPPING LIKE A ROCK, down almost $10 a Barrel, A RECORD...\" - President Donald J. Trump",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 2203,
-        "reposts": 502,
-        "replies": 238,
-        "quotes": 21,
-        "capturedAt": "2026-11-02T00:18:24.847700+00:00",
-        "source": "grok-bot X+github public_metrics返回；本机读取快照"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "person-donald-trump-2116993211730104436",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse宣传边境与小费税政绩",
-      "fact": "WhiteHouse以“承诺兑现”为主题，提到边境和小费免税。当前取得的是宣传文案摘录，没有本窗口内新签署或新实施的依据。",
-      "whyItMatters": "反映政策传播重点；不能把回顾式宣传当作新的生效日或执行进展。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
-      "affected": [
-        "政策传播"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-11-01T20:38:08Z",
-      "url": "https://x.com/WhiteHouse/status/2116993211730104436",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "PROMISES MADE. PROMISES KEPT. From securing the southern border to No Tax on Tips…",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 4704,
-        "reposts": 1180,
-        "replies": 693,
-        "quotes": 42,
-        "capturedAt": "2026-11-02T00:18:24.847700+00:00",
-        "source": "grok-bot X+github public_metrics返回；本机读取快照"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "person-elon-musk-2116992258520064397",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk称Grok Bot服务成本相对收入过高",
-      "fact": "Elon Musk回复称，提供Grok Bot服务的成本相对收入高得难以持续。这是对服务单位经济的定性判断；原句没有金额、统计周期或明确停服范围。",
-      "whyItMatters": "AI服务采用不自动形成可持续利润。成本与收入的约束可能促使调整产品、价格或供给，但不能把这句回复直接当作某套餐停用公告。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
-      "affected": [
-        "AI服务"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-11-01T20:34:20Z",
-      "url": "https://x.com/elonmusk/status/2116992258520064397",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "The cost of serving Grok Bot was unsustainably high relative to revenue",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
-      "selection": "rule",
-      "engagement": {
-        "likes": 7508,
-        "reposts": 320,
-        "replies": 1585,
-        "quotes": 800,
-        "views": 1558751,
-        "capturedAt": "2026-11-02T00:20:30.749609+00:00",
-        "source": "grok-web Expert thread_fetch返回快照"
+        "likes": 7875,
+        "reposts": 1645,
+        "replies": 2070,
+        "quotes": 159,
+        "views": 436152,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
       },
       "people": [
         {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
+          "name": "Donald Trump",
+          "intro": "美国总统"
         }
       ]
     },
     {
-      "eventKey": "person-elon-musk-2116990933103509723",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk发布一句评论与视频",
-      "fact": "Elon Musk写道：“这就是他们从我们手中夺走的东西”，并附视频。视频内容未核对，指代对象未知。",
-      "whyItMatters": "这条反映本人账号的传播热度；缺失的指代和视频内容不足以支持具体事件结论。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
-      "affected": [
-        "AI服务"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-11-01T20:29:04Z",
-      "url": "https://x.com/elonmusk/status/2116990933103509723",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "This is what they stole from us",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 80223,
-        "reposts": 7122,
-        "replies": 4074,
-        "quotes": 1482,
-        "capturedAt": "2026-11-02T00:18:24.847700+00:00",
-        "source": "grok-bot X+github public_metrics返回；本机读取快照"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "person-elon-musk-2116969654849868192",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk批评James Talarico的性别政策立场",
-      "fact": "Elon Musk指责James Talarico会投票支持儿童性别转换。这是其政治性指控；本次没有取得具体法案或投票记录来确认该主张。",
-      "whyItMatters": "热度反映政治争论，不能把作者指控当作已核政策事实。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
-      "affected": [
-        "AI服务"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-11-01T19:04:31Z",
-      "url": "https://x.com/elonmusk/status/2116969654849868192",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "Talarico will vote to trans your kids",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 32596,
-        "reposts": 5210,
-        "replies": 3989,
-        "quotes": 369,
-        "capturedAt": "2026-11-02T00:20:30.749609+00:00",
-        "source": "grok-web Expert补已知早段缺口，真实返回快照"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        },
-        {
-          "name": "James Talarico",
-          "intro": "Texas州众议员"
-        }
-      ]
-    },
-    {
-      "eventKey": "person-research-reports-2116966274060165561",
+      "eventKey": "person-research-reports-2117342634083803487",
       "tabIds": [
         "research-reports"
       ],
-      "title": "SemiAnalysis关注数据中心建设的政治阻力",
-      "fact": "SemiAnalysis认为数据中心反对力量正跨党派扩大，并把长期德州许可冻结列为2028年建设风险。这是研究预测；没有据此确认政府已经实施冻结。",
-      "whyItMatters": "许可可能影响设备订单兑现与建设时点，但报告的条件情景不等于已发生的项目停建。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
+      "title": "Dylan Patel作简短回复",
+      "fact": "Dylan Patel在回复中写道“I’ll let my cousin know”。本条只记录公开互动，不为短句补造产业含义。",
+      "whyItMatters": "按机构及具名研究者来源池互动补位，不作为经营或供需事实。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
       "affected": [
-        "产业研究"
+        "公开传播与研究观察"
       ],
-      "author": "SemiAnalysis_",
-      "publishedAt": "2026-11-01T18:51:05Z",
-      "url": "https://x.com/SemiAnalysis_/status/2116966274060165561",
+      "author": "dylan522p",
+      "publishedAt": "2026-11-02T19:46:36Z",
+      "url": "https://x.com/dylan522p/status/2117342634083803487",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "The Datacenter Backlash Goes Bipartisan… 2027 is largely locked in. 2028 is less secure: a prolonged Texas permit freeze is now the biggest single risk to the US buildout…",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "I'll let my cousin know",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 72,
-        "reposts": 7,
-        "replies": 10,
-        "quotes": 9,
-        "capturedAt": "2026-11-02T00:18:24.847700+00:00",
-        "source": "grok-bot X+github public_metrics返回；本机读取快照"
+        "likes": 170,
+        "reposts": 0,
+        "replies": 4,
+        "quotes": 0,
+        "views": 10109,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
       },
-      "people": []
+      "people": [
+        {
+          "name": "Dylan Patel",
+          "intro": "行业研究作者"
+        }
+      ]
     },
     {
-      "eventKey": "person-donald-trump-2116959456127050054",
-      "tabIds": [
-        "donald-trump"
-      ],
-      "title": "WhiteHouse发布“America First”视频帖",
-      "fact": "WhiteHouse写道“America First, always”，并附视频；原句没有具体政策动作。",
-      "whyItMatters": "这是官方账号的传播动态，视频未核内容不能当成新增政策。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
-      "affected": [
-        "政策传播"
-      ],
-      "author": "WhiteHouse",
-      "publishedAt": "2026-11-01T18:24:00Z",
-      "url": "https://x.com/WhiteHouse/status/2116959456127050054",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "America First, always. 🇺🇸",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 14381,
-        "reposts": 2547,
-        "replies": 2270,
-        "quotes": 200,
-        "capturedAt": "2026-11-02T00:18:24.847700+00:00",
-        "source": "grok-bot X+github public_metrics返回；本机读取快照"
-      },
-      "people": []
-    },
-    {
-      "eventKey": "person-research-reports-2116950855718998288",
+      "eventKey": "person-research-reports-2117316103546294587",
       "tabIds": [
         "research-reports"
       ],
-      "title": "SemiAnalysis讨论NVIDIA提交的推理测试",
-      "fact": "SemiAnalysis转述NVIDIA提交的一组推理性能测试，讨论HBM及系统内存配置。同线程的KV缓存说明归为同一事件；完整测试条件、成本基准和独立复现未取得。",
-      "whyItMatters": "可观察机构对推理系统效率的关注；来源是供应商提交结果，不把摘录中的性能倍数当成已独立验证的可比结论。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
+      "title": "SemiAnalysis讨论Crusoe自制中压开关设备",
+      "fact": "SemiAnalysis讨论Crusoe自制中压开关设备及交期，其引用的一手披露来自10月30日。该机构还用自己的模型估计开关设备与变压器交期；此处作为研究讨论保留，未当本窗口新增投产事实。",
+      "whyItMatters": "原始公司主张的时间早于本窗口，模型估计也不是已实现交付数据。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
       "affected": [
-        "产业研究"
+        "公开传播与研究观察"
       ],
       "author": "SemiAnalysis_",
-      "publishedAt": "2026-11-01T17:49:49Z",
-      "url": "https://x.com/SemiAnalysis_/status/2116950855718998288",
+      "publishedAt": "2026-11-02T18:01:11Z",
+      "url": "https://x.com/SemiAnalysis_/status/2117316103546294587",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "HBM CHIPS CAN REACH OVER 1000 tok/s/user on giant 700B+ models … NVIDIA AgentX submission… Rubin NVL72 … 20.9x better perf per TCO than GB300 NVL72 at… 325 tok/s/user and up to 9.11x… at 200 tok/s/user.",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "Crusoe says building its own medium-voltage (MV) switchgear cuts lead times by 40%...",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 366,
-        "reposts": 26,
-        "replies": 31,
-        "quotes": 14,
-        "capturedAt": "2026-11-02T00:18:24.847700+00:00",
-        "source": "grok-bot X+github public_metrics返回；本机读取快照"
+        "likes": 257,
+        "reposts": 16,
+        "replies": 17,
+        "quotes": 8,
+        "views": 38333,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
       },
       "people": []
     },
     {
-      "eventKey": "person-trillion-leaders-2116913722878820528",
+      "eventKey": "person-research-reports-2117302841702227986",
+      "tabIds": [
+        "research-reports"
+      ],
+      "title": "IEA预计2026年全球能源投资增长",
+      "fact": "IEA预计2026年全球能源投资将增至3.4万亿美元，发达经济体与中国将占其中逾70%。这是该机构的预测口径，不是全年实际投入已经完成。",
+      "whyItMatters": "区分投资预测与已支付、已建成及已投产规模。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+      "affected": [
+        "公开传播与研究观察"
+      ],
+      "author": "IEA",
+      "publishedAt": "2026-11-02T17:08:29Z",
+      "url": "https://x.com/IEA/status/2117302841702227986",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "Despite the destabilising effect of the Middle East conflict, global energy investment is set to grow to $3.4 trillion in 2026.",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 32,
+        "reposts": 11,
+        "replies": 1,
+        "quotes": 1,
+        "views": 2718,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+      },
+      "people": []
+    },
+    {
+      "eventKey": "person-donald-trump-2117294779939553547",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse发布为公众努力的宣传帖",
+      "fact": "WhiteHouse表示Donald Trump正在更努力地为美国公众工作，并称其为历史上最勤奋的总统。这是宣传评价，不是本窗口新法律或政策实施记录。",
+      "whyItMatters": "按本来源池互动排序保留，未读附带视频不补其内容。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+      "affected": [
+        "公开传播与研究观察"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-11-02T16:36:27Z",
+      "url": "https://x.com/WhiteHouse/status/2117294779939553547",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "Fighting harder than ever for the American people. 🥊🇺🇸 THE HARDEST WORKING PRESIDENT IN HISTORY.",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 7621,
+        "reposts": 1858,
+        "replies": 1123,
+        "quotes": 117,
+        "views": 195598,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
+    {
+      "eventKey": "person-trillion-leaders-2117288542879805748",
       "tabIds": [
         "trillion-leaders"
       ],
-      "title": "Mustafa Suleyman讨论有意识的超级智能",
-      "fact": "Mustafa Suleyman回应其模型福利文章引发的争论，认为不应建造有意识的AI。他称当下AI没有意识；这是作者立场，不作为已获学界共识的意识判定。",
-      "whyItMatters": "这是管理者的安全观点传播，尚不能换算为研发路线或商业部署变更。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
+      "title": "Mustafa Suleyman邀请反馈Humanist AI行为准则",
+      "fact": "Mustafa Suleyman介绍Microsoft的Humanist AI Code of Conduct并邀请公众反馈，表示征求意见期还剩三周。这是公司的公开讨论安排，不是已生效的政府监管规则。",
+      "whyItMatters": "观察高层的AI治理沟通；未将征求意见等同实施或商业结果。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
       "affected": [
-        "AI安全讨论"
+        "公开传播与研究观察"
       ],
       "author": "mustafasuleyman",
-      "publishedAt": "2026-11-01T15:22:16Z",
-      "url": "https://x.com/mustafasuleyman/status/2116913722878820528",
+      "publishedAt": "2026-11-02T16:11:40Z",
+      "url": "https://x.com/mustafasuleyman/status/2117288542879805748",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "I’m concerned about some of the reactions to my recent essay on model welfare. A surprising number of people on X think we should take AI rights seriously.",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "Our Humanist AI Code of Conduct lays out how we’re thinking about this at Microsoft... The public consultation period is closing in 3 weeks.",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
       "selection": "engagement",
       "engagement": {
-        "likes": 523,
-        "reposts": 82,
-        "replies": 132,
-        "quotes": 76,
-        "capturedAt": "2026-11-02T00:18:24.847700+00:00",
-        "source": "grok-bot X+github public_metrics返回；本机读取快照"
+        "likes": 144,
+        "reposts": 32,
+        "replies": 46,
+        "quotes": 10,
+        "views": 14487,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
       },
       "people": [
         {
@@ -362,127 +303,171 @@
       ]
     },
     {
-      "eventKey": "person-research-reports-2116911828886274311",
+      "eventKey": "person-elon-musk-2117272748112154651",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk预测超级智能算力将集中在太空",
+      "fact": "Elon Musk预测，未来超级智能的算力几乎全部会位于太空。这是长期判断，不是已建成容量、已经签署的部署计划或已验证成本优势。",
+      "whyItMatters": "可观察其基础设施方向判断；工程与经济可行性仍需独立证据。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+      "affected": [
+        "公开传播与研究观察"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-11-02T15:08:54Z",
+      "url": "https://x.com/elonmusk/status/2117272748112154651",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "Future super intelligence compute will obviously be overwhelmingly in space. By “overwhelmingly”, I mean that it will round up to 100%! You have to be an utter moron not to realize this.",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 11645,
+        "reposts": 957,
+        "replies": 1199,
+        "quotes": 239,
+        "views": 1261586,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "person-elon-musk-2117252866503290905",
+      "tabIds": [
+        "elon-musk"
+      ],
+      "title": "Elon Musk称Starlink能救命",
+      "fact": "Elon Musk引用一则Starlink相关帖子并写道“Starlink saves lives”。此处保留他的评价，未核对被引救援事件的全部背景。",
+      "whyItMatters": "本人公开评价，不作为本轮新增救援或服务效果的独立证明。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+      "affected": [
+        "公开传播与研究观察"
+      ],
+      "author": "elonmusk",
+      "publishedAt": "2026-11-02T13:49:54Z",
+      "url": "https://x.com/elonmusk/status/2117252866503290905",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "Starlink saves lives",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 23867,
+        "reposts": 2889,
+        "replies": 2396,
+        "quotes": 237,
+        "views": 1884432,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+      },
+      "people": [
+        {
+          "name": "Elon Musk",
+          "intro": "特斯拉与SpaceX CEO"
+        }
+      ]
+    },
+    {
+      "eventKey": "person-donald-trump-2117236347559899544",
+      "tabIds": [
+        "donald-trump"
+      ],
+      "title": "WhiteHouse赞扬Donald Trump工作投入",
+      "fact": "WhiteHouse发布“The hardest working president for YOU”的宣传文案。本条记录官方账号的表达，不把最高级修辞当成可比统计结论。",
+      "whyItMatters": "官方传播动态，没有据此确认新增政策动作。",
+      "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+      "affected": [
+        "公开传播与研究观察"
+      ],
+      "author": "WhiteHouse",
+      "publishedAt": "2026-11-02T12:44:16Z",
+      "url": "https://x.com/WhiteHouse/status/2117236347559899544",
+      "verification": "collector-report",
+      "tier": "watch",
+      "weeklyRanks": {},
+      "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+      "originalText": "The hardest working president for YOU.",
+      "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+      "selection": "engagement",
+      "engagement": {
+        "likes": 14512,
+        "reposts": 2777,
+        "replies": 3195,
+        "quotes": 228,
+        "views": 274262,
+        "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+        "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+      },
+      "people": [
+        {
+          "name": "Donald Trump",
+          "intro": "美国总统"
+        }
+      ]
+    },
+    {
+      "eventKey": "person-research-reports-2117225223888015524",
       "tabIds": [
         "research-reports"
       ],
-      "title": "GoldmanSachs播客讨论风投组合纪律",
-      "fact": "GoldmanSachs推广Exchanges: Great Investors播客，介绍在创新加速背景下，风险投资仍需有纪律的组合构建。这里只收录机构的公开节目介绍，未取得节目的完整论证。",
-      "whyItMatters": "这是机构公开观点传播；节目推广不等于盈利预测或评级发生变化。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
+      "title": "TrendForce：DRAM交期缩短，市场仍很紧",
+      "fact": "TrendForce报告DRAM交期缩短一周至19周，但市场仍很紧，不同容量间分化扩大。其Weekly Radar具体样本构成未在可见帖中披露；同线程的GPU和MLCC观察已合并留在证据，不另拆名额。",
+      "whyItMatters": "交期边际改善与供应仍紧可以同时发生；不能单独据此推断行业需求或所有容量供需。",
+      "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
       "affected": [
-        "产业研究"
+        "公开观点与产业观察"
       ],
-      "author": "GoldmanSachs",
-      "publishedAt": "2026-11-01T15:14:44Z",
-      "url": "https://x.com/GoldmanSachs/status/2116911828886274311",
+      "author": "trendforce",
+      "publishedAt": "2026-11-02T12:00:04Z",
+      "url": "https://x.com/trendforce/status/2117225223888015524",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "Innovation is accelerating, creating significant opportunity for venture capital investors.",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
-      "selection": "engagement",
+      "people": [],
+      "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+      "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+      "originalText": "DRAM lead times eased by a week to 19 weeks, but the market remains Very Tight, with a widening split by capacity.",
+      "selection": "rule",
       "engagement": {
-        "likes": 50,
-        "reposts": 11,
-        "replies": 6,
-        "quotes": 2,
-        "capturedAt": "2026-11-02T00:18:24.847700+00:00",
-        "source": "grok-bot X+github public_metrics返回；本机读取快照"
-      },
-      "people": []
+        "likes": 1,
+        "reposts": 1,
+        "replies": 2,
+        "quotes": 0,
+        "views": 898,
+        "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+        "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
+      }
     },
     {
-      "eventKey": "person-elon-musk-2116879037175898424",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk称赞X平台",
-      "fact": "Elon Musk以“有脑子的人都在X上”称赞该平台，并引用一条网站访问时长比较帖；未独立核实比较数据。",
-      "whyItMatters": "反映平台所有者的推广立场；不能据此判断各平台用户质量或使用时长。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
-      "affected": [
-        "AI服务"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-11-01T13:04:26Z",
-      "url": "https://x.com/elonmusk/status/2116879037175898424",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "Anyone with a brain is on 𝕏",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 37489,
-        "reposts": 4700,
-        "replies": 3657,
-        "quotes": 629,
-        "capturedAt": "2026-11-02T00:20:30.749609+00:00",
-        "source": "grok-web Expert补已知早段缺口，真实返回快照"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "person-elon-musk-2116875604889112772",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk讲“消除遗憾”的虚构药物笑话",
-      "fact": "Elon Musk虚构一种名为Regretamine的药物，笑称一剂能消除所有遗憾，连服药本身的遗憾也会消失。它是笑话，没有真实药物或疗效依据。",
-      "whyItMatters": "这条按本人账号的传播热度保留，不当作药物研究或健康信息。",
-      "counterCase": "未核对的上下文、视频或外链不作事实；观点与宣传不升级为已实施政策或独立性能结论。",
-      "affected": [
-        "AI服务"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-11-01T12:50:48Z",
-      "url": "https://x.com/elonmusk/status/2116875604889112772",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-      "originalText": "I have this great idea for a drug called Regretamine. One dose and all your regrets are gone! Including, obviously, having taken Regretamine in the first place.",
-      "firstIncludedAt": "2026-11-02T00:57:06.550Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.550Z",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 66880,
-        "reposts": 4944,
-        "replies": 9302,
-        "quotes": 1440,
-        "capturedAt": "2026-11-02T00:20:30.749609+00:00",
-        "source": "grok-web Expert补已知早段缺口，真实返回快照"
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "person-trillion-leaders-2116722517239087535",
+      "eventKey": "person-trillion-leaders-2117113121102045347",
       "tabIds": [
         "trillion-leaders"
       ],
-      "title": "Sundar Pichai庆祝球队夺冠",
-      "fact": "Sundar Pichai称现场气氛难以置信，为Valks夺冠庆祝并表示“创造历史”。",
-      "whyItMatters": "这是高管本人关于体育活动的公开动态，未涉及Alphabet业务变化。",
-      "counterCase": "庆祝内容不能作为公司营收或AI需求证据。",
-      "affected": [],
+      "title": "Sundar Pichai称赞GDPx基准与Carbon成本曲线",
+      "fact": "Sundar Pichai引用SemiAnalysis的GDPx帖子，称赞基准质量及仍有提升空间，并提示关注Carbon的成本曲线。Demis Hassabis对同一基准的回应归为同一事件，不另占一席。",
+      "whyItMatters": "这是高层对基准的公开评价；不等于产品收入、实际客户效果或独立成本审计。",
+      "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
+      "affected": [
+        "公开传播"
+      ],
       "author": "sundarpichai",
-      "publishedAt": "2026-11-01T02:42:29Z",
-      "url": "https://x.com/sundarpichai/status/2116722517239087535",
+      "publishedAt": "2026-11-02T04:34:36Z",
+      "url": "https://x.com/sundarpichai/status/2117113121102045347",
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {},
@@ -492,19 +477,19 @@
           "intro": "谷歌及Alphabet CEO"
         }
       ],
-      "firstIncludedAt": "2026-11-01T13:01:04.714Z",
-      "lastMaterialAt": "2026-11-01T13:01:04.714Z",
-      "eventTimeNote": "具体事件发生时刻未知，发帖时刻另列。",
-      "originalText": "CHAMPIONS!! Unbelievable energy in Ballhalla tonight. History made 🏆 Let's go Valks!💜⚔️",
+      "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+      "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+      "originalText": "Great to see high quality benchmarks with headroom and look at that cost line for Carbon🚀",
       "selection": "engagement",
       "engagement": {
-        "likes": 2092,
-        "reposts": 83,
-        "replies": 112,
-        "quotes": 12,
-        "views": 185710,
-        "capturedAt": "2026-11-01T12:17:48.404713+00:00",
-        "source": "grok-app-observed"
+        "likes": 2849,
+        "reposts": 181,
+        "replies": 237,
+        "quotes": 45,
+        "views": 263356,
+        "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+        "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
       }
     },
     {
@@ -543,38 +528,6 @@
         "quotes": 748,
         "views": 1545660,
         "capturedAt": "2026-10-31T00:10:17.773644+00:00",
-        "source": "grok-web-observed"
-      }
-    },
-    {
-      "eventKey": "people-2115805371961131305",
-      "tabIds": [
-        "research-reports"
-      ],
-      "title": "Delphi Digital发布AI电力约束报告",
-      "fact": "Delphi Digital发布《The AI Boom Has a Power Problem》报告，并提出电力建设周期可能比芯片供给更难约束AI扩张、快速供电者可能拥有定价权的观点。可见帖未提供可采用的新数据或相对旧报告的假设变化。",
-      "whyItMatters": "这是机构报告公告与观点，未将通用电力约束判断当作新增产业事实。",
-      "counterCase": "未找到更正不构成证明；若原始上下文、作者归属或数字被修订，应保留原证据并更正。",
-      "affected": [],
-      "author": "Delphi_Digital",
-      "publishedAt": "2026-10-29T13:58:05Z",
-      "url": "https://x.com/Delphi_Digital/status/2115805371961131305",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "people": [],
-      "firstIncludedAt": "2026-10-30T07:48:54.910Z",
-      "lastMaterialAt": "2026-10-30T07:48:54.910Z",
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Our new report “The AI Boom Has a Power Problem” is live! Power has become a harder constraint on AI than chips because it takes years to build, leaving pricing power with anyone who can deliver electricity faster than the grid.",
-      "selection": "engagement",
-      "engagement": {
-        "likes": 35,
-        "reposts": 10,
-        "replies": 6,
-        "quotes": 3,
-        "views": 10961,
-        "capturedAt": "2026-10-30T07:14:13.299014+00:00",
         "source": "grok-web-observed"
       }
     },
@@ -688,89 +641,6 @@
         "views": 23327742,
         "capturedAt": "2026-10-28T00:17:37.965311+00:00",
         "source": "grok-web-observed"
-      }
-    },
-    {
-      "eventKey": "elon-supervised-fsd-latvia-20261026",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk称监督式FSD已获拉脱维亚批准",
-      "fact": "Elon Musk表示监督式FSD已获拉脱维亚批准。Tesla欧洲账号同日称“现已获批，部署即将开始”。两处均为公司及本人表述，未取得监管机构X原帖；监督式辅助驾驶不等于无人监督驾驶，也不能把即将部署写成已全面开放。",
-      "whyItMatters": "若实际部署推进，Tesla辅助驾驶软件的可用市场可扩大；真正付费采用仍取决于监管条件、上线节奏及使用体验，获批陈述不能直接计作收入。",
-      "counterCase": "许可范围、监督义务、部署或付费转化不及预期，会削弱市场扩展；仍缺监管文件独立确认。",
-      "affected": [
-        "TSLA",
-        "辅助驾驶软件"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-26T17:33:26Z",
-      "url": "https://x.com/elonmusk/status/2114772404463337693",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "elon-musk": 2
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "eventTimeNote": "批准实际生效时刻未披露；保留公司及本人公开表述时间。",
-      "originalText": "Supervised FSD approved in Latvia! 🇱🇻",
-      "selection": "rule",
-      "engagement": {
-        "likes": 7515,
-        "reposts": 706,
-        "replies": 459,
-        "quotes": 70,
-        "capturedAt": "2026-10-27T00:17:24.060Z",
-        "source": "Grok网页版Expert X工具实际返回"
-      }
-    },
-    {
-      "eventKey": "elon-starlink-easyjet-20261026",
-      "tabIds": [
-        "elon-musk"
-      ],
-      "title": "Elon Musk预告Starlink将进入easyJet",
-      "fact": "Elon Musk表示“Starlink coming to EasyJet”；easyJet同日官方账号也预告由Starlink提供的机上Wi-Fi“COMING SOON”。这确认双方对未来服务的公开表述，不能写成机队已经装好或服务已开通；具体价格、合同收入与履行进度仍待披露。",
-      "whyItMatters": "航空公司这一客户场景可能增加Starlink服务收入来源；收入仍要经过机队安装、服务启用及合同履行，预告不等于已确认销售。",
-      "counterCase": "若部署延迟、覆盖机队或付费条款小于预期，收入传导将受限；未取得完整合同。",
-      "affected": [
-        "SpaceX",
-        "Starlink",
-        "航空连接服务"
-      ],
-      "author": "elonmusk",
-      "publishedAt": "2026-10-26T13:16:04Z",
-      "url": "https://x.com/elonmusk/status/2114707637506117956",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "elon-musk": 3
-      },
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ],
-      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "eventTimeNote": "合作决定及签署时刻未公开，所列为Musk发帖时间。",
-      "originalText": "Starlink coming to EasyJet",
-      "selection": "rule",
-      "engagement": {
-        "likes": 17671,
-        "reposts": 1252,
-        "replies": 1216,
-        "quotes": 133,
-        "capturedAt": "2026-10-27T00:15:42.890Z",
-        "source": "Grok网页版Expert X工具返回"
       }
     },
     {
@@ -1251,6 +1121,803 @@
   "dailyRecords": [
     {
       "item": {
+        "eventKey": "person-elon-musk-2117360990119506022",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk简短回应Grok Bot相关讨论",
+        "fact": "Elon Musk对一则Grok Bot相关讨论写道“This is the way”。不从这句短回应推断产品采用、收入或性能变化。",
+        "whyItMatters": "记录其公开互动，未提供可量化经营数据。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "elonmusk",
+        "publishedAt": "2026-11-02T20:59:33Z",
+        "url": "https://x.com/elonmusk/status/2117360990119506022",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "This is the way",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 5901,
+          "reposts": 611,
+          "replies": 1238,
+          "quotes": 80,
+          "views": 1235130,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-donald-trump-2117359293024416144",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "WhiteHouse引用Donald Trump对油价下跌的表态",
+        "fact": "WhiteHouse引用Donald Trump称油价正在大幅下跌，并使用“接近每桶10美元”和“纪录”等表述。这些是被引发言，具体品种、时段及纪录口径未在本条核实。",
+        "whyItMatters": "保留发言归因；不当当前报价或能源供应已经恢复的证明。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "WhiteHouse",
+        "publishedAt": "2026-11-02T20:52:48Z",
+        "url": "https://x.com/WhiteHouse/status/2117359293024416144",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "\"Oil Prices are DROPPING LIKE A ROCK, down almost $10 a Barrel, A RECORD...\" - President Donald J. Trump",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 7875,
+          "reposts": 1645,
+          "replies": 2070,
+          "quotes": 159,
+          "views": 436152,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ]
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-research-reports-2117342634083803487",
+        "tabIds": [
+          "research-reports"
+        ],
+        "title": "Dylan Patel作简短回复",
+        "fact": "Dylan Patel在回复中写道“I’ll let my cousin know”。本条只记录公开互动，不为短句补造产业含义。",
+        "whyItMatters": "按机构及具名研究者来源池互动补位，不作为经营或供需事实。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "dylan522p",
+        "publishedAt": "2026-11-02T19:46:36Z",
+        "url": "https://x.com/dylan522p/status/2117342634083803487",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "I'll let my cousin know",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 170,
+          "reposts": 0,
+          "replies": 4,
+          "quotes": 0,
+          "views": 10109,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": [
+          {
+            "name": "Dylan Patel",
+            "intro": "行业研究作者"
+          }
+        ]
+      },
+      "tabIds": [
+        "research-reports"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-research-reports-2117316103546294587",
+        "tabIds": [
+          "research-reports"
+        ],
+        "title": "SemiAnalysis讨论Crusoe自制中压开关设备",
+        "fact": "SemiAnalysis讨论Crusoe自制中压开关设备及交期，其引用的一手披露来自10月30日。该机构还用自己的模型估计开关设备与变压器交期；此处作为研究讨论保留，未当本窗口新增投产事实。",
+        "whyItMatters": "原始公司主张的时间早于本窗口，模型估计也不是已实现交付数据。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "SemiAnalysis_",
+        "publishedAt": "2026-11-02T18:01:11Z",
+        "url": "https://x.com/SemiAnalysis_/status/2117316103546294587",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "Crusoe says building its own medium-voltage (MV) switchgear cuts lead times by 40%...",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 257,
+          "reposts": 16,
+          "replies": 17,
+          "quotes": 8,
+          "views": 38333,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "research-reports"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-research-reports-2117302841702227986",
+        "tabIds": [
+          "research-reports"
+        ],
+        "title": "IEA预计2026年全球能源投资增长",
+        "fact": "IEA预计2026年全球能源投资将增至3.4万亿美元，发达经济体与中国将占其中逾70%。这是该机构的预测口径，不是全年实际投入已经完成。",
+        "whyItMatters": "区分投资预测与已支付、已建成及已投产规模。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "IEA",
+        "publishedAt": "2026-11-02T17:08:29Z",
+        "url": "https://x.com/IEA/status/2117302841702227986",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "Despite the destabilising effect of the Middle East conflict, global energy investment is set to grow to $3.4 trillion in 2026.",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 32,
+          "reposts": 11,
+          "replies": 1,
+          "quotes": 1,
+          "views": 2718,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "research-reports"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-donald-trump-2117294779939553547",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "WhiteHouse发布为公众努力的宣传帖",
+        "fact": "WhiteHouse表示Donald Trump正在更努力地为美国公众工作，并称其为历史上最勤奋的总统。这是宣传评价，不是本窗口新法律或政策实施记录。",
+        "whyItMatters": "按本来源池互动排序保留，未读附带视频不补其内容。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "WhiteHouse",
+        "publishedAt": "2026-11-02T16:36:27Z",
+        "url": "https://x.com/WhiteHouse/status/2117294779939553547",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "Fighting harder than ever for the American people. 🥊🇺🇸 THE HARDEST WORKING PRESIDENT IN HISTORY.",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 7621,
+          "reposts": 1858,
+          "replies": 1123,
+          "quotes": 117,
+          "views": 195598,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ]
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-trillion-leaders-2117288542879805748",
+        "tabIds": [
+          "trillion-leaders"
+        ],
+        "title": "Mustafa Suleyman邀请反馈Humanist AI行为准则",
+        "fact": "Mustafa Suleyman介绍Microsoft的Humanist AI Code of Conduct并邀请公众反馈，表示征求意见期还剩三周。这是公司的公开讨论安排，不是已生效的政府监管规则。",
+        "whyItMatters": "观察高层的AI治理沟通；未将征求意见等同实施或商业结果。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "mustafasuleyman",
+        "publishedAt": "2026-11-02T16:11:40Z",
+        "url": "https://x.com/mustafasuleyman/status/2117288542879805748",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "Our Humanist AI Code of Conduct lays out how we’re thinking about this at Microsoft... The public consultation period is closing in 3 weeks.",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 144,
+          "reposts": 32,
+          "replies": 46,
+          "quotes": 10,
+          "views": 14487,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": [
+          {
+            "name": "Mustafa Suleyman",
+            "intro": "微软AI首席执行官"
+          }
+        ]
+      },
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-elon-musk-2117272748112154651",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk预测超级智能算力将集中在太空",
+        "fact": "Elon Musk预测，未来超级智能的算力几乎全部会位于太空。这是长期判断，不是已建成容量、已经签署的部署计划或已验证成本优势。",
+        "whyItMatters": "可观察其基础设施方向判断；工程与经济可行性仍需独立证据。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "elonmusk",
+        "publishedAt": "2026-11-02T15:08:54Z",
+        "url": "https://x.com/elonmusk/status/2117272748112154651",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "Future super intelligence compute will obviously be overwhelmingly in space. By “overwhelmingly”, I mean that it will round up to 100%! You have to be an utter moron not to realize this.",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 11645,
+          "reposts": 957,
+          "replies": 1199,
+          "quotes": 239,
+          "views": 1261586,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-elon-musk-2117252866503290905",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk称Starlink能救命",
+        "fact": "Elon Musk引用一则Starlink相关帖子并写道“Starlink saves lives”。此处保留他的评价，未核对被引救援事件的全部背景。",
+        "whyItMatters": "本人公开评价，不作为本轮新增救援或服务效果的独立证明。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "elonmusk",
+        "publishedAt": "2026-11-02T13:49:54Z",
+        "url": "https://x.com/elonmusk/status/2117252866503290905",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "Starlink saves lives",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 23867,
+          "reposts": 2889,
+          "replies": 2396,
+          "quotes": 237,
+          "views": 1884432,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-donald-trump-2117236347559899544",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "WhiteHouse赞扬Donald Trump工作投入",
+        "fact": "WhiteHouse发布“The hardest working president for YOU”的宣传文案。本条记录官方账号的表达，不把最高级修辞当成可比统计结论。",
+        "whyItMatters": "官方传播动态，没有据此确认新增政策动作。",
+        "counterCase": "互动量表示传播，观点、宣传及预测不当已独立核实的事实；未读媒体内容不补写。",
+        "affected": [
+          "公开传播与研究观察"
+        ],
+        "author": "WhiteHouse",
+        "publishedAt": "2026-11-02T12:44:16Z",
+        "url": "https://x.com/WhiteHouse/status/2117236347559899544",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "记录发言发布时间；所谈事件精确发生时间未知。",
+        "originalText": "The hardest working president for YOU.",
+        "firstIncludedAt": "2026-11-03T00:58:19.696Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.696Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 14512,
+          "reposts": 2777,
+          "replies": 3195,
+          "quotes": 228,
+          "views": 274262,
+          "capturedAt": "2026-11-03T00:25:08.311296+00:00",
+          "source": "X+github与Grok Expert返回的可见指标；本机观察时刻，非独立直读，早晚快照差异保留原返回。"
+        },
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ]
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-11-03T00:58:19.696Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-research-reports-2117225223888015524",
+        "tabIds": [
+          "research-reports"
+        ],
+        "title": "TrendForce：DRAM交期缩短，市场仍很紧",
+        "fact": "TrendForce报告DRAM交期缩短一周至19周，但市场仍很紧，不同容量间分化扩大。其Weekly Radar具体样本构成未在可见帖中披露；同线程的GPU和MLCC观察已合并留在证据，不另拆名额。",
+        "whyItMatters": "交期边际改善与供应仍紧可以同时发生；不能单独据此推断行业需求或所有容量供需。",
+        "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
+        "affected": [
+          "公开观点与产业观察"
+        ],
+        "author": "trendforce",
+        "publishedAt": "2026-11-02T12:00:04Z",
+        "url": "https://x.com/trendforce/status/2117225223888015524",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "people": [],
+        "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+        "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+        "originalText": "DRAM lead times eased by a week to 19 weeks, but the market remains Very Tight, with a widening split by capacity.",
+        "selection": "rule",
+        "engagement": {
+          "likes": 1,
+          "reposts": 1,
+          "replies": 2,
+          "quotes": 0,
+          "views": 898,
+          "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+          "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
+        }
+      },
+      "tabIds": [
+        "research-reports"
+      ],
+      "at": "2026-11-03T00:58:19.683Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-research-reports-2117206361867976732",
+        "tabIds": [
+          "research-reports"
+        ],
+        "title": "IEA讨论拉美与加勒比能源就业增长",
+        "fact": "IEA称拉美与加勒比地区能源行业自2019年以来新增超过75万个岗位，并讨论技能需求。这里只记录机构公开传播的历史统计主张，未将多年增长当成本日新增就业。",
+        "whyItMatters": "机构关注能源劳动力约束；未读统计全文，不推算特定公司的成本或利润。",
+        "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
+        "affected": [
+          "公开传播"
+        ],
+        "author": "IEA",
+        "publishedAt": "2026-11-02T10:45:07Z",
+        "url": "https://x.com/IEA/status/2117206361867976732",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+        "originalText": "The energy sector in Latin America & the Caribbean is booming – with over 750 thousand jobs added since 2019…",
+        "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 9,
+          "reposts": 5,
+          "replies": 1,
+          "quotes": 1,
+          "views": 1681,
+          "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+          "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "research-reports"
+      ],
+      "at": "2026-11-03T00:58:19.683Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-trillion-leaders-2117113121102045347",
+        "tabIds": [
+          "trillion-leaders"
+        ],
+        "title": "Sundar Pichai称赞GDPx基准与Carbon成本曲线",
+        "fact": "Sundar Pichai引用SemiAnalysis的GDPx帖子，称赞基准质量及仍有提升空间，并提示关注Carbon的成本曲线。Demis Hassabis对同一基准的回应归为同一事件，不另占一席。",
+        "whyItMatters": "这是高层对基准的公开评价；不等于产品收入、实际客户效果或独立成本审计。",
+        "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
+        "affected": [
+          "公开传播"
+        ],
+        "author": "sundarpichai",
+        "publishedAt": "2026-11-02T04:34:36Z",
+        "url": "https://x.com/sundarpichai/status/2117113121102045347",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "people": [
+          {
+            "name": "Sundar Pichai",
+            "intro": "谷歌及Alphabet CEO"
+          }
+        ],
+        "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+        "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+        "originalText": "Great to see high quality benchmarks with headroom and look at that cost line for Carbon🚀",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 2849,
+          "reposts": 181,
+          "replies": 237,
+          "quotes": 45,
+          "views": 263356,
+          "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+          "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
+        }
+      },
+      "tabIds": [
+        "trillion-leaders"
+      ],
+      "at": "2026-11-03T00:58:19.683Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-research-reports-2117100035611697628",
+        "tabIds": [
+          "research-reports"
+        ],
+        "title": "TrendForce概述CXMT供应与技术动向",
+        "fact": "TrendForce概述CXMT的长约、4F² DRAM和LPDDR6动向。可见主帖没有给出明确合同对象或新增量；引用内容中的毛利数字尚未核实，因此本条仅作为机构热度动态。",
+        "whyItMatters": "用于观察研究议题，不将引用帖中的89.5%毛利或技术规划升级为已独立核实的经营事实。",
+        "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
+        "affected": [
+          "公开传播"
+        ],
+        "author": "trendforce",
+        "publishedAt": "2026-11-02T03:42:36Z",
+        "url": "https://x.com/trendforce/status/2117100035611697628",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+        "originalText": "Beyond the memory price boom, #CXMT is making moves on multiple fronts—from long-term supply deals to next-gen 4F² DRAM and LPDDR6 expansion.",
+        "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 8,
+          "reposts": 2,
+          "replies": 2,
+          "quotes": 1,
+          "views": 2716,
+          "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+          "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "research-reports"
+      ],
+      "at": "2026-11-03T00:58:19.683Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-research-reports-2117075900575477855",
+        "tabIds": [
+          "research-reports"
+        ],
+        "title": "SemiAnalysis发布GDPx任务基准",
+        "fact": "SemiAnalysis宣布发布衡量高价值领域智能体能力的GDPx基准，并称当时最强模型仅得12%。这是发布者的测试口径，本轮没有独立复现；同一七帖线程合并为一个事件。",
+        "whyItMatters": "可观察研究机构如何衡量复杂任务；分数不能直接换算为经济产出、市场份额或采用率。",
+        "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
+        "affected": [
+          "公开传播"
+        ],
+        "author": "SemiAnalysis_",
+        "publishedAt": "2026-11-02T02:06:42Z",
+        "url": "https://x.com/SemiAnalysis_/status/2117075900575477855",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+        "originalText": "Today we’re releasing GDPx, a benchmark for measuring agentic capabilities across the most valuable domains… even the best model scores just 12% (1/7)",
+        "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 2286,
+          "reposts": 219,
+          "replies": 241,
+          "quotes": 278,
+          "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+          "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
+        },
+        "people": []
+      },
+      "tabIds": [
+        "research-reports"
+      ],
+      "at": "2026-11-03T00:58:19.683Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-elon-musk-2117070572433875075",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk转发Grok Bot用户体验赞语",
+        "fact": "Elon Musk转发了一则称赞Grok Bot使用体验的帖子。这是用户体验宣传，没有提供对照测试、留存或收入数据。",
+        "whyItMatters": "反映产品推广，不作为性能、付费采用或单位经济的证明。",
+        "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
+        "affected": [
+          "公开传播"
+        ],
+        "author": "elonmusk",
+        "publishedAt": "2026-11-02T01:45:32Z",
+        "url": "https://x.com/elonmusk/status/2117070572433875075",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+        "originalText": "RT @stevenmarkryan: It's true. Every single person I've told to try Grok Bot: - \"Holy fk it's really THAT GOOD\"...",
+        "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 0,
+          "reposts": 162,
+          "replies": 0,
+          "quotes": 0,
+          "views": 588774,
+          "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+          "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-11-03T00:58:19.683Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-elon-musk-2117070283077292148",
+        "tabIds": [
+          "elon-musk"
+        ],
+        "title": "Elon Musk转发一则Texas选举资金指控",
+        "fact": "Elon Musk转发了关于Texas参议员选举资金来源的政治指控。此处记录其转发行为；没有核对竞选财务记录，不能据此确认原作者的比例或动机判断。",
+        "whyItMatters": "反映其政治传播立场；转发不是独立证实原帖。",
+        "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
+        "affected": [
+          "公开传播"
+        ],
+        "author": "elonmusk",
+        "publishedAt": "2026-11-02T01:44:23Z",
+        "url": "https://x.com/elonmusk/status/2117070283077292148",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+        "originalText": "RT @Rothmus: California is trying to buy a Texas Senate seat. Talarico is getting 53% of his itemized money from outside the state...",
+        "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 0,
+          "reposts": 1103,
+          "replies": 0,
+          "quotes": 0,
+          "views": 463382,
+          "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+          "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
+        },
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ]
+      },
+      "tabIds": [
+        "elon-musk"
+      ],
+      "at": "2026-11-03T00:58:19.683Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "person-donald-trump-2117049993269850617",
+        "tabIds": [
+          "donald-trump"
+        ],
+        "title": "WhiteHouse发布上周政绩汇总",
+        "fact": "WhiteHouse发布过去一周政府工作成果的汇总帖，并表示Donald Trump将继续为公众努力。当前取得的是汇总文案和图片入口，没有据此确认本窗口新增的法律动作。",
+        "whyItMatters": "按官方来源热度收录；具体政策范围与生效时间仍需对应文件。",
+        "counterCase": "互动量只表示传播，转述、评论和计划不升级为已确认政策、收入或实验结论；未读视频/外链不补写。",
+        "affected": [
+          "公开传播"
+        ],
+        "author": "WhiteHouse",
+        "publishedAt": "2026-11-02T00:23:45Z",
+        "url": "https://x.com/WhiteHouse/status/2117049993269850617",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {},
+        "eventTimeNote": "实际事件时刻未知；转发帖记录转发发布时间，原文作者身份保留。",
+        "originalText": "The biggest wins you may have missed from the Trump Administration over the past week. President Trump won't stop fighting for the American people.",
+        "firstIncludedAt": "2026-11-03T00:58:19.683Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.683Z",
+        "selection": "engagement",
+        "engagement": {
+          "likes": 6608,
+          "reposts": 1971,
+          "replies": 787,
+          "quotes": 63,
+          "views": 241228,
+          "capturedAt": "2026-11-02T12:22:59.255400+00:00",
+          "source": "grok-web Expert线程返回；与Bot列表值冲突保留审计，未借用原帖热度。"
+        },
+        "people": [
+          {
+            "name": "Donald Trump",
+            "intro": "美国总统"
+          }
+        ]
+      },
+      "tabIds": [
+        "donald-trump"
+      ],
+      "at": "2026-11-03T00:58:19.683Z",
+      "legacy": false
+    },
+    {
+      "item": {
         "eventKey": "person-donald-trump-2117011225879970299",
         "tabIds": [
           "donald-trump"
@@ -1308,10 +1975,11 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-        "originalText": "PROMISES MADE. PROMISES KEPT. From securing the southern border to No Tax on Tips…",
+        "people": [],
         "firstIncludedAt": "2026-11-02T00:57:06.550Z",
         "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
+        "originalText": "PROMISES MADE. PROMISES KEPT. From securing the southern border to No Tax on Tips…",
         "selection": "engagement",
         "engagement": {
           "likes": 4704,
@@ -1320,8 +1988,7 @@
           "quotes": 42,
           "capturedAt": "2026-11-02T00:18:24.847700+00:00",
           "source": "grok-bot X+github public_metrics返回；本机读取快照"
-        },
-        "people": []
+        }
       },
       "tabIds": [
         "donald-trump"
@@ -1348,10 +2015,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-        "originalText": "The cost of serving Grok Bot was unsustainably high relative to revenue",
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ],
         "firstIncludedAt": "2026-11-02T00:57:06.550Z",
         "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
+        "originalText": "The cost of serving Grok Bot was unsustainably high relative to revenue",
         "selection": "rule",
         "engagement": {
           "likes": 7508,
@@ -1361,13 +2034,7 @@
           "views": 1558751,
           "capturedAt": "2026-11-02T00:20:30.749609+00:00",
           "source": "grok-web Expert thread_fetch返回快照"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "elon-musk"
@@ -1394,10 +2061,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-        "originalText": "This is what they stole from us",
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ],
         "firstIncludedAt": "2026-11-02T00:57:06.550Z",
         "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
+        "originalText": "This is what they stole from us",
         "selection": "engagement",
         "engagement": {
           "likes": 80223,
@@ -1406,13 +2079,7 @@
           "quotes": 1482,
           "capturedAt": "2026-11-02T00:18:24.847700+00:00",
           "source": "grok-bot X+github public_metrics返回；本机读取快照"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "elon-musk"
@@ -1528,10 +2195,11 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-        "originalText": "America First, always. 🇺🇸",
+        "people": [],
         "firstIncludedAt": "2026-11-02T00:57:06.550Z",
         "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
+        "originalText": "America First, always. 🇺🇸",
         "selection": "engagement",
         "engagement": {
           "likes": 14381,
@@ -1540,8 +2208,7 @@
           "quotes": 200,
           "capturedAt": "2026-11-02T00:18:24.847700+00:00",
           "source": "grok-bot X+github public_metrics返回；本机读取快照"
-        },
-        "people": []
+        }
       },
       "tabIds": [
         "donald-trump"
@@ -1608,10 +2275,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-        "originalText": "I’m concerned about some of the reactions to my recent essay on model welfare. A surprising number of people on X think we should take AI rights seriously.",
+        "people": [
+          {
+            "name": "Mustafa Suleyman",
+            "intro": "微软AI首席执行官"
+          }
+        ],
         "firstIncludedAt": "2026-11-02T00:57:06.550Z",
         "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
+        "originalText": "I’m concerned about some of the reactions to my recent essay on model welfare. A surprising number of people on X think we should take AI rights seriously.",
         "selection": "engagement",
         "engagement": {
           "likes": 523,
@@ -1620,13 +2293,7 @@
           "quotes": 76,
           "capturedAt": "2026-11-02T00:18:24.847700+00:00",
           "source": "grok-bot X+github public_metrics返回；本机读取快照"
-        },
-        "people": [
-          {
-            "name": "Mustafa Suleyman",
-            "intro": "微软AI首席执行官"
-          }
-        ]
+        }
       },
       "tabIds": [
         "trillion-leaders"
@@ -1738,10 +2405,16 @@
         "verification": "collector-report",
         "tier": "watch",
         "weeklyRanks": {},
-        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
-        "originalText": "I have this great idea for a drug called Regretamine. One dose and all your regrets are gone! Including, obviously, having taken Regretamine in the first place.",
+        "people": [
+          {
+            "name": "Elon Musk",
+            "intro": "特斯拉与SpaceX CEO"
+          }
+        ],
         "firstIncludedAt": "2026-11-02T00:57:06.550Z",
         "lastMaterialAt": "2026-11-02T00:57:06.550Z",
+        "eventTimeNote": "实际事件发生时刻未知，原帖发布时间另列。",
+        "originalText": "I have this great idea for a drug called Regretamine. One dose and all your regrets are gone! Including, obviously, having taken Regretamine in the first place.",
         "selection": "engagement",
         "engagement": {
           "likes": 66880,
@@ -1750,13 +2423,7 @@
           "quotes": 1440,
           "capturedAt": "2026-11-02T00:20:30.749609+00:00",
           "source": "grok-web Expert补已知早段缺口，真实返回快照"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
+        }
       },
       "tabIds": [
         "elon-musk"
@@ -2235,525 +2902,6 @@
         "donald-trump"
       ],
       "at": "2026-11-01T13:01:04.714Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116423168613130550",
-        "tabIds": [
-          "elon-musk"
-        ],
-        "title": "Elon Musk简短回应Grok相关图片",
-        "fact": "Elon Musk以“还不错”回应一张配有“Grok选出了象限”说明的图片。这是一则本人互动，没有提供产品能力、开放范围或经营数字的新证据。",
-        "whyItMatters": "仅作为本来源公开动态观察；互动量不证明内容真实性，预测尚需合同、产能与交付验证。",
-        "counterCase": "若出现正式更正或可执行合同/部署证据，再按实质变化重新评价；当前不将个人预测或宣传当作已兑现事实。",
-        "affected": [],
-        "author": "elonmusk",
-        "publishedAt": "2026-10-31T06:52:59Z",
-        "url": "https://x.com/elonmusk/status/2116423168613130550",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Not bad",
-        "firstIncludedAt": "2026-10-31T12:47:02.392Z",
-        "lastMaterialAt": "2026-10-31T12:47:02.392Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 1670,
-          "reposts": 57,
-          "quotes": 10,
-          "replies": 200,
-          "views": 94183,
-          "capturedAt": "2026-10-31T12:13:26.697983+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
-      },
-      "tabIds": [
-        "elon-musk"
-      ],
-      "at": "2026-10-31T12:47:02.392Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116414789194789254",
-        "tabIds": [
-          "elon-musk"
-        ],
-        "title": "Elon Musk回应政治讨论视频",
-        "fact": "Elon Musk以“有严重问题”的措辞批评所引政治讨论视频涉及的人物。这里记录其个人评论，视频中的主张没有被独立核实，也不构成政策或商业进展。",
-        "whyItMatters": "仅作为本来源公开动态观察；互动量不证明内容真实性，预测尚需合同、产能与交付验证。",
-        "counterCase": "若出现正式更正或可执行合同/部署证据，再按实质变化重新评价；当前不将个人预测或宣传当作已兑现事实。",
-        "affected": [],
-        "author": "elonmusk",
-        "publishedAt": "2026-10-31T06:19:41Z",
-        "url": "https://x.com/elonmusk/status/2116414789194789254",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Something seriously wrong with Talarico",
-        "firstIncludedAt": "2026-10-31T12:47:02.392Z",
-        "lastMaterialAt": "2026-10-31T12:47:02.392Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 14252,
-          "reposts": 1848,
-          "quotes": 76,
-          "replies": 1543,
-          "views": 1316644,
-          "capturedAt": "2026-10-31T12:13:26.697973+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
-      },
-      "tabIds": [
-        "elon-musk"
-      ],
-      "at": "2026-10-31T12:47:02.392Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116359819258990946",
-        "tabIds": [
-          "elon-musk"
-        ],
-        "title": "Elon Musk预测轨道算力部署可能在2028年底超过地面",
-        "fact": "Elon Musk预测，每月新增的轨道算力可能在2028年底左右超过地面算力，并在2029年大幅超过。这是他对未来部署的预测，没有给出已投产数量、资本开支或具体合同，不能当成当前已兑现的供给。",
-        "whyItMatters": "仅作为本来源公开动态观察；互动量不证明内容真实性，预测尚需合同、产能与交付验证。",
-        "counterCase": "若出现正式更正或可执行合同/部署证据，再按实质变化重新评价；当前不将个人预测或宣传当作已兑现事实。",
-        "affected": [],
-        "author": "elonmusk",
-        "publishedAt": "2026-10-31T02:41:15Z",
-        "url": "https://x.com/elonmusk/status/2116359819258990946",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Terrestrial compute will be peanuts compared to orbital compute. Orbital compute deployed per month probably exceeds terrestrial around the end of 2028 and then far exceeds it in 2029.",
-        "firstIncludedAt": "2026-10-31T12:47:02.392Z",
-        "lastMaterialAt": "2026-10-31T12:47:02.392Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 5767,
-          "reposts": 589,
-          "quotes": 130,
-          "replies": 263,
-          "views": 249304,
-          "capturedAt": "2026-10-31T12:13:26.697967+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
-      },
-      "tabIds": [
-        "elon-musk"
-      ],
-      "at": "2026-10-31T12:47:02.392Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116333656801189961",
-        "tabIds": [
-          "donald-trump"
-        ],
-        "title": "WhiteHouse回顾America.gov上线",
-        "fact": "WhiteHouse回顾Donald Trump一个月前推出America.gov，宣传该政府服务面向公众、尊重用户时间。帖子回顾此前上线，不代表本轮新增政策或新的上线事件。",
-        "whyItMatters": "仅作为本来源公开动态观察；互动量不证明内容真实性，预测尚需合同、产能与交付验证。",
-        "counterCase": "若出现正式更正或可执行合同/部署证据，再按实质变化重新评价；当前不将个人预测或宣传当作已兑现事实。",
-        "affected": [],
-        "author": "WhiteHouse",
-        "publishedAt": "2026-10-31T00:57:18Z",
-        "url": "https://x.com/WhiteHouse/status/2116333656801189961",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "One month ago, President Trump launched https://America.gov a government built around you. It puts you first. Respects your time. And actually works for YOU. See the historic launch yourself in Hello, America. 🇺🇸",
-        "firstIncludedAt": "2026-10-31T12:47:02.392Z",
-        "lastMaterialAt": "2026-10-31T12:47:02.392Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 4306,
-          "reposts": 1120,
-          "quotes": 67,
-          "replies": 580,
-          "views": 276284,
-          "capturedAt": "2026-10-31T12:13:26.697991+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Donald Trump",
-            "intro": "美国总统"
-          }
-        ]
-      },
-      "tabIds": [
-        "donald-trump"
-      ],
-      "at": "2026-10-31T12:47:02.392Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116325425282420771",
-        "tabIds": [
-          "donald-trump"
-        ],
-        "title": "WhiteHouse发布万圣节政治短评",
-        "fact": "WhiteHouse以万圣节口吻批评民主党执政，称“没有比这更吓人的了”。这是官方账号的政治评论，没有公布新的可执行政策。",
-        "whyItMatters": "仅作为本来源公开动态观察；互动量不证明内容真实性，预测尚需合同、产能与交付验证。",
-        "counterCase": "若出现正式更正或可执行合同/部署证据，再按实质变化重新评价；当前不将个人预测或宣传当作已兑现事实。",
-        "affected": [],
-        "author": "WhiteHouse",
-        "publishedAt": "2026-10-31T00:24:35Z",
-        "url": "https://x.com/WhiteHouse/status/2116325425282420771",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Dems in charge? Nothing scarier. 🎃",
-        "firstIncludedAt": "2026-10-31T12:47:02.392Z",
-        "lastMaterialAt": "2026-10-31T12:47:02.392Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 6258,
-          "reposts": 1181,
-          "quotes": 125,
-          "replies": 713,
-          "views": 233845,
-          "capturedAt": "2026-10-31T12:13:26.697986+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": []
-      },
-      "tabIds": [
-        "donald-trump"
-      ],
-      "at": "2026-10-31T12:47:02.392Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116291813732495578",
-        "tabIds": [
-          "elon-musk"
-        ],
-        "title": "Elon Musk回应SpaceX股份捐赠帖",
-        "fact": "Elon Musk以“Cool ❤️”回应Gwynne Shotwell关于捐赠SpaceX股份至儿童Trump账户的帖子。这是本人互动，不证明捐赠交割或新增公司资本开支。",
-        "whyItMatters": "按本人或本Tab来源的公开互动记录；不由互动量推定主张真实性或商业化进展。",
-        "counterCase": "正式更正、归因或开放范围变化会改变理解；未独立核实的宣传与指控不作为事实。",
-        "affected": [],
-        "author": "elonmusk",
-        "publishedAt": "2026-10-30T22:11:01Z",
-        "url": "https://x.com/elonmusk/status/2116291813732495578",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Cool ❤️",
-        "firstIncludedAt": "2026-10-31T00:54:13.684Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.684Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 10886,
-          "reposts": 895,
-          "replies": 537,
-          "quotes": 42,
-          "views": 841088,
-          "capturedAt": "2026-10-31T00:10:17.773630+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          },
-          {
-            "name": "Donald Trump",
-            "intro": "美国总统"
-          }
-        ]
-      },
-      "tabIds": [
-        "elon-musk"
-      ],
-      "at": "2026-10-31T00:54:13.684Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116289989914787912",
-        "tabIds": [
-          "elon-musk"
-        ],
-        "title": "Elon Musk转述X账号触达限制查询功能",
-        "fact": "Elon Musk表示，现在可以查看账号是否受到触达限制，并引用XOpenSource。这里记录其产品介绍，未独立核实功能对所有账号的开放范围。",
-        "whyItMatters": "按本人或本Tab来源的公开互动记录；不由互动量推定主张真实性或商业化进展。",
-        "counterCase": "正式更正、归因或开放范围变化会改变理解；未独立核实的宣传与指控不作为事实。",
-        "affected": [],
-        "author": "elonmusk",
-        "publishedAt": "2026-10-30T22:03:47Z",
-        "url": "https://x.com/elonmusk/status/2116289989914787912",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "You can now find out if any reach limitations have been applied to your account",
-        "firstIncludedAt": "2026-10-31T00:54:13.684Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.684Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 5729,
-          "reposts": 817,
-          "replies": 943,
-          "quotes": 186,
-          "views": 860661,
-          "capturedAt": "2026-10-31T00:10:17.773634+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
-      },
-      "tabIds": [
-        "elon-musk"
-      ],
-      "at": "2026-10-31T00:54:13.684Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116269048811983234",
-        "tabIds": [
-          "donald-trump"
-        ],
-        "title": "WhiteHouse发布Artemis III宇航员到访内容",
-        "fact": "WhiteHouse以“美国正重返月球”为题，发布Artemis III宇航员到访白宫的内容。这是一则官方公开动态，不据此确认发射日期或任务已经完成。",
-        "whyItMatters": "按本人或本Tab来源的公开互动记录；不由互动量推定主张真实性或商业化进展。",
-        "counterCase": "正式更正、归因或开放范围变化会改变理解；未独立核实的宣传与指控不作为事实。",
-        "affected": [],
-        "author": "WhiteHouse",
-        "publishedAt": "2026-10-30T20:40:34Z",
-        "url": "https://x.com/WhiteHouse/status/2116269048811983234",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "AMERICA IS GOING BACK TO THE MOON. Artemis III astronauts visit the White House.",
-        "firstIncludedAt": "2026-10-31T00:54:13.684Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.684Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 5106,
-          "reposts": 669,
-          "replies": 393,
-          "quotes": 85,
-          "views": 179661,
-          "capturedAt": "2026-10-31T00:10:17.773639+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": []
-      },
-      "tabIds": [
-        "donald-trump"
-      ],
-      "at": "2026-10-31T00:54:13.684Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116251512666222885",
-        "tabIds": [
-          "donald-trump"
-        ],
-        "title": "WhiteHouse介绍报税季平均退税",
-        "fact": "WhiteHouse表示，本报税季平均退税超过3300美元、较上个报税季增加11%。这是该账号的数字表述，未在本窗X独立核验，也不构成新税法或财政措施确认。",
-        "whyItMatters": "按本人或本Tab来源的公开互动记录；不由互动量推定主张真实性或商业化进展。",
-        "counterCase": "正式更正、归因或开放范围变化会改变理解；未独立核实的宣传与指控不作为事实。",
-        "affected": [],
-        "author": "WhiteHouse",
-        "publishedAt": "2026-10-30T19:30:53Z",
-        "url": "https://x.com/WhiteHouse/status/2116251512666222885",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Average tax refund over $3300; 11% increase",
-        "firstIncludedAt": "2026-10-31T00:54:13.684Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.684Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 2101,
-          "reposts": 559,
-          "replies": 676,
-          "quotes": 43,
-          "views": 104379,
-          "capturedAt": "2026-10-31T00:10:17.773641+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": []
-      },
-      "tabIds": [
-        "donald-trump"
-      ],
-      "at": "2026-10-31T00:54:13.684Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116217692931924007",
-        "tabIds": [
-          "elon-musk"
-        ],
-        "title": "Elon Musk谈及与Bill Gates的争议",
-        "fact": "Elon Musk发帖指称Bill Gates资助批评他的人，并仍持有Tesla空头。这里仅记录Musk的公开指控，资金关系和持仓均未独立核实。",
-        "whyItMatters": "按本人或本Tab来源的公开互动记录；不由互动量推定主张真实性或商业化进展。",
-        "counterCase": "正式更正、归因或开放范围变化会改变理解；未独立核实的宣传与指控不作为事实。",
-        "affected": [],
-        "author": "elonmusk",
-        "publishedAt": "2026-10-30T17:16:30Z",
-        "url": "https://x.com/elonmusk/status/2116217692931924007",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Gates funding/short position allegation; unverified",
-        "firstIncludedAt": "2026-10-31T00:54:13.684Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.684Z",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 25819,
-          "reposts": 2474,
-          "replies": 1254,
-          "quotes": 118,
-          "views": 538581,
-          "capturedAt": "2026-10-31T00:10:17.773624+00:00",
-          "source": "grok-web-observed"
-        },
-        "people": [
-          {
-            "name": "Elon Musk",
-            "intro": "特斯拉与SpaceX CEO"
-          }
-        ]
-      },
-      "tabIds": [
-        "elon-musk"
-      ],
-      "at": "2026-10-31T00:54:13.684Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116214866444943853",
-        "tabIds": [
-          "trillion-leaders"
-        ],
-        "title": "Sundar Pichai：轨道TPU收到首次完整响应",
-        "fact": "Sundar Pichai表示，Project Suncatcher原型卫星于数周前发射后，团队已向轨道发送命令、启动TPU并运行提示词，在地面收到首个完整响应：一首俳句。这是原型实验里程碑，尚非规模化商业算力服务。",
-        "whyItMatters": "原型演示若继续通过可靠性、通信与成本验证，才可能改变未来算力供给；目前不能据此计算收入。",
-        "counterCase": "正式更正、归因或开放范围变化会改变理解；未独立核实的宣传与指控不作为事实。",
-        "affected": [],
-        "author": "sundarpichai",
-        "publishedAt": "2026-10-30T17:05:16Z",
-        "url": "https://x.com/sundarpichai/status/2116214866444943853",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "trillion-leaders": 1
-        },
-        "people": [
-          {
-            "name": "Sundar Pichai",
-            "intro": "谷歌及Alphabet CEO"
-          }
-        ],
-        "firstIncludedAt": "2026-10-31T00:54:13.684Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.684Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Suncatcher hello world; orbital TPU received first complete haiku response",
-        "selection": "rule",
-        "engagement": {
-          "likes": 16879,
-          "reposts": 1631,
-          "replies": 924,
-          "quotes": 748,
-          "views": 1545660,
-          "capturedAt": "2026-10-31T00:10:17.773644+00:00",
-          "source": "grok-web-observed"
-        }
-      },
-      "tabIds": [
-        "trillion-leaders"
-      ],
-      "at": "2026-10-31T00:54:13.684Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "people-2116207871402635391",
-        "tabIds": [
-          "donald-trump"
-        ],
-        "title": "WhiteHouse宣传美国投资成果",
-        "fact": "WhiteHouse声称Donald Trump吸引的美国投资超过历任总统。该帖为官方账号的宣传表述，未给出本窗新政策条款；这里不将投资承诺等同已落地支出。",
-        "whyItMatters": "按本人或本Tab来源的公开互动记录；不由互动量推定主张真实性或商业化进展。",
-        "counterCase": "正式更正、归因或开放范围变化会改变理解；未独立核实的宣传与指控不作为事实。",
-        "affected": [],
-        "author": "WhiteHouse",
-        "publishedAt": "2026-10-30T16:37:28Z",
-        "url": "https://x.com/WhiteHouse/status/2116207871402635391",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "people": [
-          {
-            "name": "Donald Trump",
-            "intro": "美国总统"
-          }
-        ],
-        "firstIncludedAt": "2026-10-31T00:54:13.684Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.684Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "More investment than any other President claim",
-        "selection": "engagement",
-        "engagement": {
-          "likes": 5255,
-          "reposts": 1494,
-          "replies": 1825,
-          "quotes": 220,
-          "views": 214740,
-          "capturedAt": "2026-10-31T00:10:17.773636+00:00",
-          "source": "grok-web-observed"
-        }
-      },
-      "tabIds": [
-        "donald-trump"
-      ],
-      "at": "2026-10-31T00:54:13.684Z",
       "legacy": false
     }
   ]

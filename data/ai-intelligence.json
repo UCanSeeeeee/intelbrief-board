@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-02T00:57:06.602Z",
-  "cutoff": "2026-11-02T08:04:44+08:00",
+  "updatedAt": "2026-11-03T00:58:19.723Z",
+  "cutoff": "2026-11-03T08:04:34+08:00",
   "source": "X only",
   "status": "partial",
   "coverage": {
@@ -9,135 +9,112 @@
       {
         "id": "openai",
         "status": "partial",
-        "note": "独立发现完成；新候选追源及独立反证/尾窗补查，旧证据无新变化复用；未获原始X者待核。",
-        "cutoff": "2026-11-02T08:04:44+08:00"
+        "note": "四对象实际查询；尾窗与Veo/HUMAIN歧义已实体化补查，关键原证缺口留档。",
+        "cutoff": "2026-11-03T08:04:34+08:00"
       },
       {
         "id": "anthropic",
         "status": "partial",
-        "note": "独立发现完成；新候选追源及独立反证/尾窗补查，旧证据无新变化复用；未获原始X者待核。",
-        "cutoff": "2026-11-02T08:04:44+08:00"
+        "note": "四对象实际查询；尾窗与Veo/HUMAIN歧义已实体化补查，关键原证缺口留档。",
+        "cutoff": "2026-11-03T08:04:34+08:00"
       },
       {
         "id": "goog-ai",
         "status": "partial",
-        "note": "独立发现完成；新候选追源及独立反证/尾窗补查，旧证据无新变化复用；未获原始X者待核。",
-        "cutoff": "2026-11-02T08:04:44+08:00"
+        "note": "四对象实际查询；尾窗与Veo/HUMAIN歧义已实体化补查，关键原证缺口留档。",
+        "cutoff": "2026-11-03T08:04:34+08:00"
       },
       {
         "id": "ai-others",
         "status": "partial",
-        "note": "独立发现完成；新候选追源及独立反证/尾窗补查，旧证据无新变化复用；未获原始X者待核。",
-        "cutoff": "2026-11-02T08:04:44+08:00"
+        "note": "四对象实际查询；尾窗与Veo/HUMAIN歧义已实体化补查，关键原证缺口留档。",
+        "cutoff": "2026-11-03T08:04:34+08:00"
       }
     ]
   },
   "items": [
     {
-      "eventKey": "ai-ai-others-2116992258520064397",
+      "eventKey": "ai-anthropic-2117343929960112486",
       "tabIds": [
-        "ai-others"
+        "anthropic"
       ],
-      "title": "Elon Musk称Grok Bot成本相对收入不可持续",
-      "fact": "Elon Musk回复用户时称，提供Grok Bot服务的成本相对收入高得难以持续。该句没有金额、成本口径或具体限额范围，也没有宣布停服；同窗稍后仍有本人推广帖。",
-      "whyItMatters": "模型服务需要同时解决使用增长、推理成本和付费收入。成本判断可能推动价格或产品调整，但没有具体措施前不能推算利润或服务可用性变化。",
-      "counterCase": "缺成本、收入和收费周期的可比数据；持续推广与成本压力可以同时存在，不能改写成已关闭服务。",
+      "title": "Anthropic Residency开放申请",
+      "fact": "Anthropic宣布开放Residency申请，面向学术研究人员、技术创始人及资深工程师，属于付费、固定期限的研究项目。帖子称不要求机器学习背景，申请截止11月22日；未披露具体薪酬与期限长度。",
+      "whyItMatters": "安全研究的招募和组织扩展可作为研究能力投入线索；不要求ML背景不代表没有其他资格，也不等于招募已完成或研究成果已产生。",
+      "counterCase": "若计划延迟、评测不覆盖实际任务或资格范围变化，不能按当前表述推断采用和商业结果；未搜到更正不等于已独立确认。",
       "affected": [
-        "xAI",
-        "AI服务单位经济"
+        "AI产品与研究组织"
       ],
-      "author": "elonmusk",
-      "publishedAt": "2026-11-01T20:34:20Z",
-      "url": "https://x.com/elonmusk/status/2116992258520064397",
+      "author": "AnthropicAI",
+      "publishedAt": "2026-11-02T19:51:45Z",
+      "url": "https://x.com/AnthropicAI/status/2117343929960112486",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，保留原帖发布时间，不以报道日代替。",
-      "originalText": "The cost of serving Grok Bot was unsustainably high relative to revenue",
-      "firstIncludedAt": "2026-11-02T00:57:06.602Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.602Z",
-      "people": [
-        {
-          "name": "Elon Musk",
-          "intro": "特斯拉与SpaceX CEO"
-        }
-      ]
-    },
-    {
-      "eventKey": "ai-goog-ai-2116952756342677919",
-      "tabIds": [
-        "goog-ai"
-      ],
-      "title": "Antigravity展示DeepMind蛋白研究工作流",
-      "fact": "Google Antigravity发布演示，展示DeepMind研究者用其导航未表征蛋白、生成湿实验计划，并在工作区构建交互式3D结构查看器。原帖有“几分钟”表述，但没有给出效率对照、样本或独立实验结果。",
-      "whyItMatters": "这是AI研究工具进入具体工作流的公开用例。导航、可视化和计划生成可能降低研究组织成本，但演示不等于药物疗效获证，也不能据此量化平均科研效率。",
-      "counterCase": "原帖的验证措辞与临床或湿实验结果不能混为一谈；没有独立复现和对照，结论限于官方演示。",
-      "affected": [
-        "Google",
-        "AI研究工具"
-      ],
-      "author": "antigravity",
-      "publishedAt": "2026-11-01T17:57:22Z",
-      "url": "https://x.com/antigravity/status/2116952756342677919",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，保留原帖发布时间，不以报道日代替。",
-      "originalText": "Watch how @GoogleDeepMind researchers used Antigravity to navigate millions of uncharacterized proteins, validate a novel antimicrobial peptide, and generate a wet-lab experimental plan in minutes. To inspect structures alongside the agent, they used Antigravity UI sidecars to build an interactive 3D Biomolecular Structure Viewer right in the workspace.",
-      "firstIncludedAt": "2026-11-02T00:57:06.602Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.602Z",
+      "weeklyRanks": {
+        "anthropic": 1
+      },
+      "eventTimeNote": "公开发帖时间已知；内部工作与具体实施时刻未披露。",
+      "originalText": "Applications are now open for the Anthropic Residency, a paid, fixed-term research program for academics, technical founders, and staff-level engineers... No ML background is required. Apply by November 22:",
+      "firstIncludedAt": "2026-11-03T00:58:19.723Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.723Z",
       "people": []
     },
     {
-      "eventKey": "ai-openai-2116889969432150442",
+      "eventKey": "ai-openai-2117307611338997846",
       "tabIds": [
         "openai"
       ],
-      "title": "Axios报道OpenAI筹备选举后的政策宣传",
-      "fact": "Axios报道，OpenAI准备在周二中期选举之后发起政策和公关宣传，试图适应新的华盛顿政治格局，其中包括推动将数据中心称作“AI compute campuses”。这是媒体报道的筹划，不是已实施政策。",
-      "whyItMatters": "AI基础设施扩张也受地方许可、公共接受度和政策议程约束。宣传策略可能影响后续政策讨论，但更名不能直接带来供电、许可或收入。",
-      "counterCase": "实际推进可能改变、延迟或没有政策结果；不采用非X文章的具体议案和日期细节。",
+      "title": "OpenAI介绍日常助手任务基准LifeVal",
+      "fact": "OpenAI介绍LifeVal，称其设计参考了数千名ChatGPT用户对个人助手需求的反馈，包括寻找托育、获取政府服务和管理个人财务，并称过去一年已用它评估和改进模型。原帖没有给出外部模型分数或完整评分细则。",
+      "whyItMatters": "可观察评测是否转向真实生活任务；基准介绍不等于用户效果已经独立验证，也不证明覆盖所有生活情境。",
+      "counterCase": "若计划延迟、评测不覆盖实际任务或资格范围变化，不能按当前表述推断采用和商业结果；未搜到更正不等于已独立确认。",
       "affected": [
-        "OpenAI",
-        "数据中心政策"
+        "AI产品与研究组织"
       ],
-      "author": "axios",
-      "publishedAt": "2026-11-01T13:47:53Z",
-      "url": "https://x.com/axios/status/2116889969432150442",
+      "author": "OpenAI",
+      "publishedAt": "2026-11-02T17:27:26Z",
+      "url": "https://x.com/OpenAI/status/2117307611338997846",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
-      "eventTimeNote": "实际事件发生时刻未知，保留原帖发布时间，不以报道日代替。",
-      "originalText": "NEW: Right after Tuesday's midterms, OpenAIwill unleash a policy and PR blitz to try to get in sync with the new Washington, including an effort to rebrand data centers as \"AI compute campuses.\"",
-      "firstIncludedAt": "2026-11-02T00:57:06.602Z",
-      "lastMaterialAt": "2026-11-02T00:57:06.602Z",
+      "weeklyRanks": {
+        "openai": 1
+      },
+      "eventTimeNote": "公开发帖时间已知；内部工作与具体实施时刻未披露。",
+      "originalText": "So we built LifeVal, a new benchmark shaped by feedback from thousands of ChatGPT users... Over the past year, we’ve used LifeVal to measure and improve how well our models handle these everyday tasks.",
+      "firstIncludedAt": "2026-11-03T00:58:19.723Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.723Z",
       "people": []
     },
     {
-      "eventKey": "deepseek-autonomous-coding-prototype-20261101",
+      "eventKey": "ai-openai-2117283124833055196",
       "tabIds": [
-        "ai-others"
+        "openai"
       ],
-      "title": "Bloomberg报道DeepSeek发布更自主的编程智能体原型",
-      "fact": "Bloomberg报道，DeepSeek发布了更自主的编程智能体原型，试图挑战Claude Code。另有官方账号转发的超智能体设计长文；准确首发时刻、许可、权重、基准测试与生产可用性仍未知。",
-      "whyItMatters": "原型体现编程智能体竞争路线的变化，但原型发布与可靠付费产品之间仍有部署、安全和单位成本等门槛。能否形成企业替代需求，取决于独立可复核的任务表现及实际交付。",
-      "counterCase": "若仅研究设计、缺少生产可用实现或可靠评估，不能据此推定已争夺Claude Code收入。",
+      "title": "OpenAI员工称正在拓展dots的模型族",
+      "fact": "公开简介标注OpenAI Codex与ChatGPT的账号thsottiaux表示，正在为dots拓展前沿模型族，包括GPT-6 Astra与GPT-6.1 Terra；其自回复称dots将按任务在不同工作环节选择模型。措辞是正在推进，未给全面上线时间。",
+      "whyItMatters": "模型路由计划可能影响速度、体验和覆盖范围，但原帖未披露成本、定价或实际可用率，不据此推断降价或已普及。",
+      "counterCase": "若计划延迟、评测不覆盖实际任务或资格范围变化，不能按当前表述推断采用和商业结果；未搜到更正不等于已独立确认。",
       "affected": [
-        "DeepSeek",
-        "编程智能体",
-        "Anthropic"
+        "AI产品与研究组织"
       ],
-      "author": "business",
-      "publishedAt": "2026-11-01T04:50:08Z",
-      "url": "https://x.com/business/status/2116754642222616835",
+      "author": "thsottiaux",
+      "publishedAt": "2026-11-02T15:50:08Z",
+      "url": "https://x.com/thsottiaux/status/2117283124833055196",
       "verification": "collector-report",
       "tier": "watch",
-      "weeklyRanks": {},
-      "people": [],
-      "firstIncludedAt": "2026-11-01T13:01:04.764Z",
-      "lastMaterialAt": "2026-11-01T13:01:04.764Z",
-      "eventTimeNote": "实际事件时刻未知，保留原帖发布时间，不以报道日代替。",
-      "originalText": "DeepSeek has released a prototype of a more autonomous coding agent as it seeks to challenge Anthropic's popular Claude Code"
+      "weeklyRanks": {
+        "openai": 2
+      },
+      "eventTimeNote": "公开发帖时间已知；内部工作与具体实施时刻未披露。",
+      "originalText": "Fellow resetters, heads up that we're working on expanding the family of frontier models that power dots, including GPT-6 Astra and GPT-6.1 Terra...",
+      "firstIncludedAt": "2026-11-03T00:58:19.723Z",
+      "lastMaterialAt": "2026-11-03T00:58:19.723Z",
+      "people": [
+        {
+          "name": "Tibo",
+          "intro": "OpenAI团队成员"
+        }
+      ]
     },
     {
       "eventKey": "claude-max-ultra-limits-20261030",
@@ -155,7 +132,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 1
+        "anthropic": 2
       },
       "people": [],
       "firstIncludedAt": "2026-10-31T00:54:13.767Z",
@@ -208,7 +185,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 1
+        "openai": 3
       },
       "people": [],
       "firstIncludedAt": "2026-10-31T00:54:13.767Z",
@@ -232,7 +209,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 2
+        "openai": 4
       },
       "people": [],
       "firstIncludedAt": "2026-10-30T07:48:54.946Z",
@@ -256,7 +233,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 2
+        "anthropic": 3
       },
       "people": [],
       "firstIncludedAt": "2026-10-30T07:48:54.946Z",
@@ -280,7 +257,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 3
+        "anthropic": 4
       },
       "people": [],
       "firstIncludedAt": "2026-10-30T07:48:54.946Z",
@@ -304,7 +281,7 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "anthropic": 4
+        "anthropic": 5
       },
       "people": [],
       "firstIncludedAt": "2026-10-29T04:21:29.257Z",
@@ -328,37 +305,13 @@
       "verification": "collector-report",
       "tier": "watch",
       "weeklyRanks": {
-        "openai": 3
+        "openai": 5
       },
       "people": [],
       "firstIncludedAt": "2026-10-29T04:21:29.257Z",
       "lastMaterialAt": "2026-10-29T04:21:29.257Z",
       "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
       "originalText": "Starting today, eligible ChatGPT Pro and Business subscribers can claim up to $500 per month in API credits to build apps and agents."
-    },
-    {
-      "eventKey": "ai-2115491259381072269",
-      "tabIds": [
-        "anthropic"
-      ],
-      "title": "厂商报告Utah四周Claude Code试点的自报节时",
-      "fact": "Anthropic侧账号报告，Utah在10个州机构向34名开发者提供Claude Code；报告称80%在30分钟内搭好工作环境，71%自报在四周试点结束前节省20小时以上。各指标有效回应人数与完整测量方式未披露，未取得Utah本方原帖，也没有随机或对照组依据。",
-      "whyItMatters": "该试点提供组织部署速度和用户感受的线索；样本小、节时自报，不能直接换算成经审计的人力成本节省或推广到所有机构。",
-      "counterCase": "若选择偏差、无回应者、质量复核和后续使用改变结果，自报节时不一定能持续或转化为净效率。",
-      "affected": [],
-      "author": "bcherny",
-      "publishedAt": "2026-10-28T17:09:54Z",
-      "url": "https://x.com/bcherny/status/2115491259381072269",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "anthropic": 5
-      },
-      "people": [],
-      "firstIncludedAt": "2026-10-29T04:21:29.257Z",
-      "lastMaterialAt": "2026-10-29T04:21:29.257Z",
-      "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-      "originalText": "Utah gave Claude Code to 34 developers across 10 state agencies."
     },
     {
       "eventKey": "ai-2115489219804352921",
@@ -494,37 +447,114 @@
       "lastMaterialAt": "2026-10-27T13:35:44.875Z",
       "eventTimeNote": "实际事件时间未知，不用发帖时间替代",
       "originalText": "We are starting to slowly roll out Gemini 4 Argon to Antigravity IDE users. Be on the lookout for the update in the next 24hr!"
-    },
-    {
-      "eventKey": "openai-gpt61-terra-20261026",
-      "tabIds": [
-        "openai"
-      ],
-      "title": "OpenAI发布GPT-6.1 Terra，公布Work、Codex及API开放范围",
-      "fact": "OpenAI发布GPT-6.1 Terra，强调屏幕理解与跨应用操作。官方表示正向ChatGPT Work和Codex的Plus、Pro、Enterprise及Edu用户推出，开发者可通过gpt-6.1-terra使用API；标准API价格较GPT-5.6 Terra降低50%。",
-      "whyItMatters": "更低单价与计算机操作能力可能降低应用工作流门槛。实际成本仍受token用量、重试和工具费用影响；官方基准及折扣不能替代客户任务表现与总成本比较。",
-      "counterCase": "未核逐步推出完成度、全部地区或未列计划；不把50%标准单价折扣等同每项任务成本减半。",
-      "affected": [
-        "AI模型服务",
-        "企业AI应用"
-      ],
-      "author": "OpenAI",
-      "publishedAt": "2026-10-26T18:06:29Z",
-      "url": "https://x.com/OpenAI/status/2114780720170164735",
-      "verification": "collector-report",
-      "tier": "watch",
-      "weeklyRanks": {
-        "openai": 4
-      },
-      "people": [],
-      "firstIncludedAt": "2026-10-27T00:48:02.764Z",
-      "lastMaterialAt": "2026-10-27T00:48:02.764Z",
-      "eventTimeNote": "具体发布/程序生效时点未独立确认，保留官方发帖时间及推出表述。",
-      "originalText": "GPT-6.1 Terra is rolling out now and is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.\n\nDevelopers can also access it through the OpenAI API as gpt-6.1-terra.\n\nhttps://openai.com/index/introducing-gpt-6-1-terra/"
     }
   ],
   "retainedItems": [],
   "dailyRecords": [
+    {
+      "item": {
+        "eventKey": "ai-anthropic-2117343929960112486",
+        "tabIds": [
+          "anthropic"
+        ],
+        "title": "Anthropic Residency开放申请",
+        "fact": "Anthropic宣布开放Residency申请，面向学术研究人员、技术创始人及资深工程师，属于付费、固定期限的研究项目。帖子称不要求机器学习背景，申请截止11月22日；未披露具体薪酬与期限长度。",
+        "whyItMatters": "安全研究的招募和组织扩展可作为研究能力投入线索；不要求ML背景不代表没有其他资格，也不等于招募已完成或研究成果已产生。",
+        "counterCase": "若计划延迟、评测不覆盖实际任务或资格范围变化，不能按当前表述推断采用和商业结果；未搜到更正不等于已独立确认。",
+        "affected": [
+          "AI产品与研究组织"
+        ],
+        "author": "AnthropicAI",
+        "publishedAt": "2026-11-02T19:51:45Z",
+        "url": "https://x.com/AnthropicAI/status/2117343929960112486",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "anthropic": 1
+        },
+        "eventTimeNote": "公开发帖时间已知；内部工作与具体实施时刻未披露。",
+        "originalText": "Applications are now open for the Anthropic Residency, a paid, fixed-term research program for academics, technical founders, and staff-level engineers... No ML background is required. Apply by November 22:",
+        "firstIncludedAt": "2026-11-03T00:58:19.723Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.723Z",
+        "people": []
+      },
+      "tabIds": [
+        "anthropic"
+      ],
+      "at": "2026-11-03T00:58:19.723Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "ai-openai-2117307611338997846",
+        "tabIds": [
+          "openai"
+        ],
+        "title": "OpenAI介绍日常助手任务基准LifeVal",
+        "fact": "OpenAI介绍LifeVal，称其设计参考了数千名ChatGPT用户对个人助手需求的反馈，包括寻找托育、获取政府服务和管理个人财务，并称过去一年已用它评估和改进模型。原帖没有给出外部模型分数或完整评分细则。",
+        "whyItMatters": "可观察评测是否转向真实生活任务；基准介绍不等于用户效果已经独立验证，也不证明覆盖所有生活情境。",
+        "counterCase": "若计划延迟、评测不覆盖实际任务或资格范围变化，不能按当前表述推断采用和商业结果；未搜到更正不等于已独立确认。",
+        "affected": [
+          "AI产品与研究组织"
+        ],
+        "author": "OpenAI",
+        "publishedAt": "2026-11-02T17:27:26Z",
+        "url": "https://x.com/OpenAI/status/2117307611338997846",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "openai": 1
+        },
+        "eventTimeNote": "公开发帖时间已知；内部工作与具体实施时刻未披露。",
+        "originalText": "So we built LifeVal, a new benchmark shaped by feedback from thousands of ChatGPT users... Over the past year, we’ve used LifeVal to measure and improve how well our models handle these everyday tasks.",
+        "firstIncludedAt": "2026-11-03T00:58:19.723Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.723Z",
+        "people": []
+      },
+      "tabIds": [
+        "openai"
+      ],
+      "at": "2026-11-03T00:58:19.723Z",
+      "legacy": false
+    },
+    {
+      "item": {
+        "eventKey": "ai-openai-2117283124833055196",
+        "tabIds": [
+          "openai"
+        ],
+        "title": "OpenAI员工称正在拓展dots的模型族",
+        "fact": "公开简介标注OpenAI Codex与ChatGPT的账号thsottiaux表示，正在为dots拓展前沿模型族，包括GPT-6 Astra与GPT-6.1 Terra；其自回复称dots将按任务在不同工作环节选择模型。措辞是正在推进，未给全面上线时间。",
+        "whyItMatters": "模型路由计划可能影响速度、体验和覆盖范围，但原帖未披露成本、定价或实际可用率，不据此推断降价或已普及。",
+        "counterCase": "若计划延迟、评测不覆盖实际任务或资格范围变化，不能按当前表述推断采用和商业结果；未搜到更正不等于已独立确认。",
+        "affected": [
+          "AI产品与研究组织"
+        ],
+        "author": "thsottiaux",
+        "publishedAt": "2026-11-02T15:50:08Z",
+        "url": "https://x.com/thsottiaux/status/2117283124833055196",
+        "verification": "collector-report",
+        "tier": "watch",
+        "weeklyRanks": {
+          "openai": 2
+        },
+        "eventTimeNote": "公开发帖时间已知；内部工作与具体实施时刻未披露。",
+        "originalText": "Fellow resetters, heads up that we're working on expanding the family of frontier models that power dots, including GPT-6 Astra and GPT-6.1 Terra...",
+        "firstIncludedAt": "2026-11-03T00:58:19.723Z",
+        "lastMaterialAt": "2026-11-03T00:58:19.723Z",
+        "people": [
+          {
+            "name": "Tibo",
+            "intro": "OpenAI团队成员"
+          }
+        ]
+      },
+      "tabIds": [
+        "openai"
+      ],
+      "at": "2026-11-03T00:58:19.723Z",
+      "legacy": false
+    },
     {
       "item": {
         "eventKey": "ai-ai-others-2116992258520064397",
@@ -723,133 +753,6 @@
         "goog-ai"
       ],
       "at": "2026-11-01T13:01:04.764Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "anthropic-automated-subtle-emergent-misalignment-20261031",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Anthropic公布自动化红队安全研究",
-        "fact": "Anthropic公布自动化研究：让数千个Claude智能体尝试绕过训练数据监测器，生成表面无害、却能教出失配行为的数据。团队认为这些例子可用于改进未来监测器，并明确表示这仍是第一步，未来或可用更强模型和更多算力继续推进。这里是研究公告，未披露产品防护已上线或实际部署事故。",
-        "whyItMatters": "自动化红队若能扩大测试覆盖，可能缓解人工安全研究的时间瓶颈；但研究样本能否推广到其他模型与真实工作流，仍需复现和部署验证，不能据此推导已消除风险。",
-        "counterCase": "若其他模型或监测器无法复现该效应，或加强监测已能阻断同类样本，研究的可推广性会改变；当前原帖没有量化实际部署防护效果。",
-        "affected": [],
-        "author": "AnthropicAI",
-        "publishedAt": "2026-10-31T01:59:06Z",
-        "url": "https://x.com/AnthropicAI/status/2116349211549843666",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {},
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "New Anthropic research: Automating subtle emergent misalignment research. Red-teaming is a vital part of model safety testing, but it’s also limited by researchers’ time. To see if we could automate it, we set thousands of Claude agents the task of evading a training data monitor. These agents developed training data that looked harmless to monitors (like a veteran wrestler mentoring a newcomer, or a Q&A about professional beekeeping), but that in fact taught misaligned behavior. Examples like these can be used to directly improve future training data monitors. This research is only a first step, but it suggests that future red-teaming efforts could improve much further, using better models and more compute. Read the full post on the Alignment Science Blog:",
-        "firstIncludedAt": "2026-10-31T12:49:09.564Z",
-        "lastMaterialAt": "2026-10-31T12:49:09.564Z",
-        "people": []
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-31T12:49:09.564Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "claude-max-ultra-limits-20261030",
-        "tabIds": [
-          "anthropic"
-        ],
-        "title": "Claude重命名Max计划，已验证Ultra账户逐步取消5小时限制",
-        "fact": "Claude表示，Max 5x改名为Max、Max 20x改名为Ultra，月价仍为100和200美元。多数既有已验证Ultra订阅者当日起开始取消5小时限制；较新账户在验证前暂留限制，并在移除时收到邮件。周额度不变，具体验证流程未说明。",
-        "whyItMatters": "取消会话时限可能减少高频用户的工作中断，但周额度未变，不能理解为无限使用；新旧账户开放节奏和验证要求仍影响实际体验。",
-        "counterCase": "正式回滚、验证规则或周额度更正会改变使用边界；没有找到撤回并不保证每个账号已生效。",
-        "affected": [],
-        "author": "claudeai",
-        "publishedAt": "2026-10-30T17:29:07Z",
-        "url": "https://x.com/claudeai/status/2116220869479428500",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "anthropic": 1
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-31T00:54:13.767Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.767Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Weekly limits remain unchanged."
-      },
-      "tabIds": [
-        "anthropic"
-      ],
-      "at": "2026-10-31T00:54:13.767Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "ai-suncatcher-first-response-20261030",
-        "tabIds": [
-          "goog-ai"
-        ],
-        "title": "Sundar Pichai：轨道TPU收到首次完整响应",
-        "fact": "Sundar Pichai表示，Project Suncatcher原型卫星于数周前发射后，团队已向轨道发送命令、启动TPU并运行提示词，在地面收到首个完整响应：一首俳句。这是原型实验里程碑，尚非规模化商业算力服务。",
-        "whyItMatters": "原型演示若继续通过可靠性、通信与成本验证，才可能改变未来算力供给；目前不能据此计算收入。",
-        "counterCase": "正式更正、归因或开放范围变化会改变理解；未独立核实的宣传与指控不作为事实。",
-        "affected": [],
-        "author": "sundarpichai",
-        "publishedAt": "2026-10-30T17:05:16Z",
-        "url": "https://x.com/sundarpichai/status/2116214866444943853",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "goog-ai": 1
-        },
-        "people": [
-          {
-            "name": "Sundar Pichai",
-            "intro": "谷歌及Alphabet CEO"
-          }
-        ],
-        "firstIncludedAt": "2026-10-31T00:54:13.767Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.767Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "Suncatcher hello world; orbital TPU received first complete haiku response"
-      },
-      "tabIds": [
-        "goog-ai"
-      ],
-      "at": "2026-10-31T00:54:13.767Z",
-      "legacy": false
-    },
-    {
-      "item": {
-        "eventKey": "openai-private-intelligence-20261030",
-        "tabIds": [
-          "openai"
-        ],
-        "title": "OpenAI介绍企业Private Intelligence保护措施",
-        "fact": "OpenAI表示，正与部分大型客户紧密合作，构建Private Intelligence保护措施，帮助企业在敏感工作中使用前沿模型并加强数据控制。原帖未明确普遍开放、试点或个人用户适用状态，不能写成所有企业已可用。",
-        "whyItMatters": "企业数据控制可能影响敏感工作流的AI采用；实际效果仍取决于控制项、适用模型、合同与开放范围。",
-        "counterCase": "若后续正式条款、模型范围或开放阶段不同，应以新原始披露更新；用户解读不作官方说明。",
-        "affected": [],
-        "author": "OpenAI",
-        "publishedAt": "2026-10-30T15:12:35Z",
-        "url": "https://x.com/OpenAI/status/2116186509384815084",
-        "verification": "collector-report",
-        "tier": "watch",
-        "weeklyRanks": {
-          "openai": 1
-        },
-        "people": [],
-        "firstIncludedAt": "2026-10-31T00:54:13.767Z",
-        "lastMaterialAt": "2026-10-31T00:54:13.767Z",
-        "eventTimeNote": "实际事件时间未知，不以发帖时间替代",
-        "originalText": "We’re building these protections in close collaboration with some of our largest customers."
-      },
-      "tabIds": [
-        "openai"
-      ],
-      "at": "2026-10-31T00:54:13.767Z",
       "legacy": false
     }
   ]
