@@ -2,7 +2,7 @@
 
 一个只收录 X/Twitter 原帖、保留证据链并提供可解释可信度初评的个人情报看板。
 
-**LLM入口：[AGENTS.md](AGENTS.md) → [当前上下文](CONTEXT.md) → [任务断点](TASKS.md)。** 当前由本机Codex按侧边栏Tab分批运营内容，Grok Bot优先、Grok网页版备用；改动前拉取，改动后直接提交推送，默认不做本地验证。入口能力与使用方法见 [AGENT_ENTRY](docs/AGENT_ENTRY.md)。
+**LLM入口：[AGENTS.md](AGENTS.md) → [当前上下文](CONTEXT.md) → [任务断点](TASKS.md)。** 本机Codex定时运营当前暂停，未经用户明确要求不得恢复。获准采集时按侧边栏Tab分批，Grok Bot优先、Grok网页版备用；改动前拉取，改动后直接提交推送，默认不做本地验证。入口能力与使用方法见 [AGENT_ENTRY](docs/AGENT_ENTRY.md)。
 
 共同维护、定时采集、数据填充与网页发布的完整说明见 [项目工作流 SOP](docs/PROJECT_WORKFLOW_SOP.md)。
 
@@ -17,8 +17,8 @@
 
 - 网页是只读信息看板，不提供“更新”按钮、登录、任务队列或手动触发接口；X新闻由本机定时运营生成。顶部[CNN恐惧与贪婪指数](docs/MARKET_SENTIMENT.md)独立只读按需获取并缓存，显示来源及原始时间，失败保留发布快照，不触发新闻采集。
 
-- 美股板块北京时间周一至周五08:00/20:00、周六08:00、周日20:00启动，最多 **5条市场焦点 + 10条多学科认知与夜雨知识库洞察**，支持归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。当前运行证据与可靠性边界见[运营说明](docs/GROK_BOT_OPERATIONS.md)。
-- 项目内置[美股研究知识库](knowledge/US_EQUITY_RESEARCH_KB.md)和[Grok 采集 SOP](knowledge/GROK_X_COLLECTION_SOP.md)，每次更新由程序自动注入，固定以半导体、电力、AI落地为优先级并要求独立追源与反证。
+- 美股板块原定北京时间周一至周五08:00/20:00、周六08:00、周日20:00运行，当前暂停；每期最多 **5条市场焦点 + 10条多学科认知与夜雨知识库洞察**，支持归档、缺额和失败提示；[执行约定](docs/STOCK_BRIEF.md)。当前运行证据与可靠性边界见[运营说明](docs/GROK_BOT_OPERATIONS.md)。
+- 项目内置[美股研究知识库](knowledge/US_EQUITY_RESEARCH_KB.md)和[Grok 采集 SOP](knowledge/GROK_X_COLLECTION_SOP.md)，本机读取后提取本批所需公开问题，不把整库外发；以半导体、电力、AI落地为优先级并要求独立追源与反证。
 - 前台侧边栏八个Tab：「每日更新」（[四栏连续阅读](docs/DAILY_UPDATES.md)）、「美股讯息」、「具体人物」、「具体个股」（见 `docs/TICKER_INTELLIGENCE.md`）、「AI板块」（见 `docs/AI_INTELLIGENCE.md`）、「每日学习」（见 `docs/DAILY_LEARNING.md`）、「宏观大事」（见 `docs/MACRO_EVENTS.md`）、「财报日历」（见 `docs/EARNINGS_CALENDAR.md`）。所有配置股票都有独立“X热点 · 非官方”，不作为空白补位。每日学习有「基础知识讲解」「Nature」「Science」「反直觉小知识」四个顶部Tab；知识点提供专业版与18+故事版，两刊周一至周六08:00、周日20:00各目标3篇（[论文SOP](docs/JOURNAL_PAPERS.md)），另每天目标5条[反直觉小知识](docs/COUNTERINTUITIVE_KNOWLEDGE.md)，偏健康生活、不凑数、可回看。未发布功能见[TASKS](TASKS.md)。加密已暂时停用。原帖档案、来源管理和评分作为后台能力保留，不另设前台页面。
 
 - 每个定时点只触发一次总编排，再按来源栏目独立分批；每日更新仅展示，不增加采集批次。X内容优先使用Grok Bot，失败或覆盖不足时使用Grok网页版Expert；调度验收见 [运营记录](docs/GROK_BOT_OPERATIONS.md)
