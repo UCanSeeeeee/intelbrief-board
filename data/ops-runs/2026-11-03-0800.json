@@ -4,8 +4,8 @@
   "trigger": "scheduled",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-11-03T08:04:35+08:00",
-  "updatedAt": "2026-11-03T08:59:05+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-11-03T09:03:11+08:00",
+  "finishedAt": "2026-11-03T09:03:11+08:00",
   "gitHeadAtStart": "34e5f53963e4bb432d91f708d646d05e204070c1",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-11-03T09:03:11+08:00",
+      "detail": "内容提交ce23ff1475fa3b873aae5850d2c266ac36c899a5已push origin master并核远端一致。"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-11-03T09:03:11+08:00",
+      "detail": "Cloudflare对应内容提交success；16公开JSON逐字节/SHA256一致；固定只读API结果见publication。"
     }
   ],
   "pages": {
@@ -77,9 +77,9 @@
       "detail": "官方临近日程无变化，未虚刷新宏观数据。"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "ce23ff1475fa3b873aae5850d2c266ac36c899a5",
   "notes": [],
   "timings": [
     {
