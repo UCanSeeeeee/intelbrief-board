@@ -1,7 +1,7 @@
 /* News-only structure. Shared type, surfaces and spacing live in reading.css. */
 .news-page-header { align-items: center; grid-template-columns: minmax(0, 1fr) auto; }
-.news-page-header .brief-edition-only { grid-column: 2; grid-row: 1 / span 2; border: 0; margin: 0; padding: 0; background: transparent; }
-.news-page-header #reading-context { grid-column: 1; grid-row: 2; margin: 0; }
+.news-page-header .brief-edition-only { grid-column: 2; grid-row: 1; border: 0; margin: 0; padding: 0; background: transparent; }
+.news-page-header #reading-context { grid-column: 1 / -1; grid-row: 2; margin: 0; }
 .brief-edition-only .brief-toolbar { gap: 10px; margin: 0; }
 .brief-edition-only .brief-toolbar select { flex: 0 1 236px; width: 236px; min-height: 44px; padding: 9px 12px; border-color: var(--border-subtle); }
 .market-metrics { grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr); gap: 16px; margin: 0; }
