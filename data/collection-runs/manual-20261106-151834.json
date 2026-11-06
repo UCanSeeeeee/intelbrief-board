@@ -3,7 +3,7 @@
   "cutoff": "2026-11-06T15:18:34+08:00",
   "trigger": "manual",
   "authorization": "用户授权节流后手动全项目内容更新；定时仍暂停",
-  "status": "collected-partial",
+  "status": "published-partial",
   "plan": [
     {
       "id": "news:market-focus",
@@ -6280,7 +6280,7 @@
     }
   ],
   "usageMeasurement": {
-    "status": "observed-x-phase",
+    "status": "observed-run",
     "method": "同一账号UI开始/结束观察；仅能比较显示变化，共享其他活动及整数精度会干扰归因。",
     "accountData": "具体账户用量只保存在本轮本地工作记录，不发布到公开仓库。",
     "completedAt": "2026-11-06T08:28:31Z",
@@ -6289,10 +6289,11 @@
       "web": 11,
       "note": "web含7股初始独立请求、误路由VRT及恢复GOOG两次额外提交、TSM两次定点纠漏；窗口是3天以上补齐而非正常半日。"
     },
-    "interpretation": "账户UI开始/结束已观察，具体数值仅本地私密记录。没有对照组，不宣称节省比例；不能把显示差值当精确单次成本。"
+    "interpretation": "实际账户已观察开始/X结束/发布后数次；X结束后无新Grok请求时显示仍变化，存在计量滞后或共享活动，不能精确归因。无对照不宣称节省比例。具体值不公开。",
+    "finalObservationAt": "2026-11-06T08:56:20Z"
   },
   "publication": {
-    "status": "local-artifacts-ready",
+    "status": "verified",
     "briefId": "manual-9cc9dbbd-48b7-4f02-b177-e2c16dfac1c7",
     "preparedAt": "2026-11-06T08:47:51.950Z",
     "briefFile": "data/stock-briefs/manual-9cc9dbbd-48b7-4f02-b177-e2c16dfac1c7.json",
@@ -6313,7 +6314,85 @@
       "tickers": "12 件入选事件；7 个Tab未完整检查；热点存在采集缺口",
       "ai": "14 件入选事件；4 个Tab未完整检查"
     },
-    "localChecks": "按项目规则未运行本地test/check/build/预览；只通过发布器的数据写入契约。"
+    "localChecks": "按项目规则未运行本地test/check/build/预览；只通过发布器的数据写入契约。",
+    "contentCommit": "9d66988ae59e025818d02f6523d8a7356fab7681",
+    "remoteMasterObserved": "9d66988ae59e025818d02f6523d8a7356fab7681",
+    "verifiedAt": "2026-11-06T08:54:24.586Z",
+    "production": "https://intelbrief-board.pages.dev/",
+    "cloudflare": {
+      "status": "completed",
+      "conclusion": "success",
+      "deploymentId": "965d659a-c24b-4d6c-b5a7-72ba2199abec",
+      "evidence": "GitHub公开check-runs Cloudflare Pages completed/success；gh连接EOF后curl同一公开API取得"
+    },
+    "resources": [
+      {
+        "file": "data/stock-briefs/index.json",
+        "match": true,
+        "sha256": "35de69ffebfdd6bde23b81cd75bd98a6188a5ed1b11efa2b21e998d1448a0ea4",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      },
+      {
+        "file": "data/stock-briefs/manual-9cc9dbbd-48b7-4f02-b177-e2c16dfac1c7.json",
+        "match": true,
+        "sha256": "1c53a705392ef156757c5ec0257157148cf6ec18001fc4ac8b1d1ac7e79f210e",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      },
+      {
+        "file": "data/reading-board.json",
+        "match": true,
+        "sha256": "13a8412a1a81109ab29578491d2e65b1fd6badfb7a7f9fd32cc2531484197d75",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      },
+      {
+        "file": "data/people-intelligence.json",
+        "match": true,
+        "sha256": "acf18222b9954704043e044e5575c9f287627ca94ea7a9bca907fd6056f8982d",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      },
+      {
+        "file": "data/ticker-intelligence.json",
+        "match": true,
+        "sha256": "b2e631de504311b3e7bcd12cb5f3b0ec754c8e4ded24d6622877830b33bffd0f",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      },
+      {
+        "file": "data/ai-intelligence.json",
+        "match": true,
+        "sha256": "9491c525d9beedcf55591a7c31556c1448bf2617b6f8bcb494a45059f811c129",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      },
+      {
+        "file": "data/journal-learning.json",
+        "match": true,
+        "sha256": "10c74733c7f7d9b9240270285e7e3491a7dd60d6f23cc270ac22854d2730fa08",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      },
+      {
+        "file": "data/earnings-calendar.json",
+        "match": true,
+        "sha256": "ffd06cde5c02b48d4b870e1fc9178df23dc1b9278a7b61479471e89c770134db",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      },
+      {
+        "file": "data/market-sentiment.json",
+        "match": true,
+        "sha256": "9461d7485609faf4ec50eed0fb59ee4f1076964ce0c9d265c1190f143f64eb63",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      },
+      {
+        "file": "data/market-volatility.json",
+        "match": true,
+        "sha256": "04153ac7cca9fbb0ebf84014b86979c06c0bcd0340b8ebdbf2b86d4e964d745a",
+        "comparison": "线上原始响应与已推送本地源文件SHA-256一致"
+      }
+    ],
+    "timing": {
+      "logStartedAt": "2026-11-06T15:18:45+08:00",
+      "contentVerifiedAt": "2026-11-06T08:54:24.586Z",
+      "elapsedSeconds": 5739.586,
+      "scope": "日志启动至内容线上逐资源核对；不含此前准备和此后回执收尾；非纯模型时间"
+    }
   },
   "collectionCompletedAt": "2026-11-06T08:47:51Z",
   "executionReview": {
