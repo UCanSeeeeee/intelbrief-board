@@ -1,0 +1,72 @@
+{
+  "runId": "manual-20261106-151834",
+  "cutoff": "2026-11-06T15:18:34+08:00",
+  "results": [
+    {
+      "unit": "ai:openai",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：AI板块。只X，只查UTC [2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)，不重读仓库、不改代码、不发布。分4栏：OpenAI（模型/ChatGPT/Codex/API/企业部署/安全）、Anthropic（Claude/API/渠道/安全）、Google/DeepMind（Gemini/Veo/Agent/TPU产品研究，不放纯股价）、其他（xAI/中国AI/开源/政府AI政策）。先逐栏发现新增有价值事实，有候选才定向找本人/公司/原始媒体X及更正、否认、阶段与首次出现；复用已查同事件证据，不排除跨栏同帖，不为数量补水。每栏最多5条，其他最多10，7天精选最多5，过24h可周榜不冒充最新。每条给唯一作者、准确ISO发布时间、status链接、短关键原文、中文事实和阶段（预告/可用/计划/交付）、主要限制与影响；本人主张不当独立证实。末尾逐栏给实际查询、候选淘汰、追源及反证记录/缺口。不要热度促销、不要站外搜，不报全量覆盖。输出紧凑，合计优先8-12条。",
+        "(OpenAI OR ChatGPT OR Codex) (model OR GPT OR API OR enterprise OR safety OR deploy OR release) -is:retweet",
+        "from:OpenAI",
+        "(from:sama OR from:gdb OR from:OpenAIDevs) (API OR Codex OR ChatGPT OR safety OR model OR release)",
+        "(GPT-6 Cyber OR Images 2.6 OR Private Safety Processing) (denied OR correction OR previously)",
+        "窗前from:OpenAI (Images 2.6 OR GPT-6 Cyber OR 948)"
+      ],
+      "note": "四个AI对象独立发现，10卡已保存；原始X、首次出现与反证记录完整，覆盖有限。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "ai:anthropic",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：AI板块。只X，只查UTC [2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)，不重读仓库、不改代码、不发布。分4栏：OpenAI（模型/ChatGPT/Codex/API/企业部署/安全）、Anthropic（Claude/API/渠道/安全）、Google/DeepMind（Gemini/Veo/Agent/TPU产品研究，不放纯股价）、其他（xAI/中国AI/开源/政府AI政策）。先逐栏发现新增有价值事实，有候选才定向找本人/公司/原始媒体X及更正、否认、阶段与首次出现；复用已查同事件证据，不排除跨栏同帖，不为数量补水。每栏最多5条，其他最多10，7天精选最多5，过24h可周榜不冒充最新。每条给唯一作者、准确ISO发布时间、status链接、短关键原文、中文事实和阶段（预告/可用/计划/交付）、主要限制与影响；本人主张不当独立证实。末尾逐栏给实际查询、候选淘汰、追源及反证记录/缺口。不要热度促销、不要站外搜，不报全量覆盖。输出紧凑，合计优先8-12条。",
+        "(Anthropic OR Claude) (API OR safety OR partner OR channel OR release)",
+        "from:AnthropicAI",
+        "from:claudeai",
+        "FlashProve / Personal Finance 更正、否认、窗前首次出现"
+      ],
+      "note": "四个AI对象独立发现，10卡已保存；原始X、首次出现与反证记录完整，覆盖有限。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "ai:goog-ai",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：AI板块。只X，只查UTC [2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)，不重读仓库、不改代码、不发布。分4栏：OpenAI（模型/ChatGPT/Codex/API/企业部署/安全）、Anthropic（Claude/API/渠道/安全）、Google/DeepMind（Gemini/Veo/Agent/TPU产品研究，不放纯股价）、其他（xAI/中国AI/开源/政府AI政策）。先逐栏发现新增有价值事实，有候选才定向找本人/公司/原始媒体X及更正、否认、阶段与首次出现；复用已查同事件证据，不排除跨栏同帖，不为数量补水。每栏最多5条，其他最多10，7天精选最多5，过24h可周榜不冒充最新。每条给唯一作者、准确ISO发布时间、status链接、短关键原文、中文事实和阶段（预告/可用/计划/交付）、主要限制与影响；本人主张不当独立证实。末尾逐栏给实际查询、候选淘汰、追源及反证记录/缺口。不要热度促销、不要站外搜，不报全量覆盖。输出紧凑，合计优先8-12条。",
+        "(Gemini OR Veo OR DeepMind) (model OR agent OR TPU OR research OR release)",
+        "from:GoogleDeepMind",
+        "(from:GoogleDeepMind OR from:demishassabis OR from:GoogleAI OR from:GeminiApp) (Gemini OR Veo OR TPU OR agent OR model OR release)",
+        "公司Omni 1.2窗前、否认和更正"
+      ],
+      "note": "四个AI对象独立发现，10卡已保存；原始X、首次出现与反证记录完整，覆盖有限。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "ai:ai-others",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：AI板块。只X，只查UTC [2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)，不重读仓库、不改代码、不发布。分4栏：OpenAI（模型/ChatGPT/Codex/API/企业部署/安全）、Anthropic（Claude/API/渠道/安全）、Google/DeepMind（Gemini/Veo/Agent/TPU产品研究，不放纯股价）、其他（xAI/中国AI/开源/政府AI政策）。先逐栏发现新增有价值事实，有候选才定向找本人/公司/原始媒体X及更正、否认、阶段与首次出现；复用已查同事件证据，不排除跨栏同帖，不为数量补水。每栏最多5条，其他最多10，7天精选最多5，过24h可周榜不冒充最新。每条给唯一作者、准确ISO发布时间、status链接、短关键原文、中文事实和阶段（预告/可用/计划/交付）、主要限制与影响；本人主张不当独立证实。末尾逐栏给实际查询、候选淘汰、追源及反证记录/缺口。不要热度促销、不要站外搜，不报全量覆盖。输出紧凑，合计优先8-12条。",
+        "(xAI OR Grok) (model OR API OR compute OR release)",
+        "from:xai",
+        "(Qwen OR DeepSeek OR Moonshot OR Kimi OR MiniMax) (model OR release OR API)",
+        "from:Kimi_Moonshot",
+        "from:CNBC (Moonshot OR Kimi) Blackwell",
+        "from:TencentHunyuan OR Hy4",
+        "(AI policy OR executive order OR NIST OR BIS) (AI OR model)",
+        "Kimi 10-23首次型号公布与本窗权重阶段比较、Hy4 preview与正式版比较"
+      ],
+      "note": "四个AI对象独立发现，10卡已保存；原始X、首次出现与反证记录完整，覆盖有限。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    }
+  ],
+  "pending": []
+}

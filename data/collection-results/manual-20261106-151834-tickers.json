@@ -1,0 +1,192 @@
+{
+  "runId": "manual-20261106-151834",
+  "cutoff": "2026-11-06T15:18:34+08:00",
+  "results": [
+    {
+      "unit": "tickers:nvda",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：具体个股的价值信息，不查热度榜，不写仓库，不重复读取项目文档。只查X，发布时间[2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)。逐股独立覆盖NVDA（交付/产品/出口/客户资本投入）、MU（HBM/存储价格订单产能）、INTC（代工/Xeon/客户及融资）、GOOG/GOOGL（云收入/资本开支/融资）、AVGO（定制ASIC/网络/订单及客户）、VRT（电力冷却/订单/交付）、TSM（产能/良率/定价/客户）。每股返回有实质新增的最重要事件，最多5、可以0；一般价格波动、喊单和未证实传闻不当价值事实。有新候选才追公司/主管机构/原始可识别媒体X，另独立查更正反证；无候选不空跑。跨栏目相同原帖可重复，已完成的同一证据可直接复用，不能因新闻或人物用过就排除。每项用紧凑字段给股票、作者、准确ISO时间、status链接、关键原文、中文摘要、事件时间或未知、条件性传导与反证；每股保存实际查询/范围/缺口。财报/价格/政策数字只有普通二传则标不足，不编造。",
+        "个股批定点补一个新缺口，只X、原时间窗不变，不改仓库：热点中 @aleabitoreddit 2118422637320007721（2026-11-05T19:18:09Z）称Google正式公布怀俄明170亿美元数据中心并用Bloom Energy燃料电池。请找Google/主管机构/原始Reuters或Bloomberg等媒体本窗X，给唯一准确时间、status链接及可见关键原文，核对是新宣布/旧闻/多年投资总额还是单站规模；另查更正、否认和阶段。没有原始证据就明确不足，不重复全股检索，不用站外网页。",
+        "(NVDA OR NVIDIA) (delivery OR Blackwell OR Rubin OR export OR orders OR capex OR capacity)",
+        "(from:NVIDIA OR from:Reuters OR from:business OR from:CNBC) (Nvidia OR Moonshot)",
+        "(Nvidia OR Moonshot) (denies OR denied OR correction OR corrected)"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:nvda:hotspots",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "给我发布时间从 2026-11-03T00:04:34.000Z（含）至 2026-11-06T07:18:34.000Z（不含）的、包含“NVDA”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:mu",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：具体个股的价值信息，不查热度榜，不写仓库，不重复读取项目文档。只查X，发布时间[2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)。逐股独立覆盖NVDA（交付/产品/出口/客户资本投入）、MU（HBM/存储价格订单产能）、INTC（代工/Xeon/客户及融资）、GOOG/GOOGL（云收入/资本开支/融资）、AVGO（定制ASIC/网络/订单及客户）、VRT（电力冷却/订单/交付）、TSM（产能/良率/定价/客户）。每股返回有实质新增的最重要事件，最多5、可以0；一般价格波动、喊单和未证实传闻不当价值事实。有新候选才追公司/主管机构/原始可识别媒体X，另独立查更正反证；无候选不空跑。跨栏目相同原帖可重复，已完成的同一证据可直接复用，不能因新闻或人物用过就排除。每项用紧凑字段给股票、作者、准确ISO时间、status链接、关键原文、中文摘要、事件时间或未知、条件性传导与反证；每股保存实际查询/范围/缺口。财报/价格/政策数字只有普通二传则标不足，不编造。",
+        "个股批定点补一个新缺口，只X、原时间窗不变，不改仓库：热点中 @aleabitoreddit 2118422637320007721（2026-11-05T19:18:09Z）称Google正式公布怀俄明170亿美元数据中心并用Bloom Energy燃料电池。请找Google/主管机构/原始Reuters或Bloomberg等媒体本窗X，给唯一准确时间、status链接及可见关键原文，核对是新宣布/旧闻/多年投资总额还是单站规模；另查更正、否认和阶段。没有原始证据就明确不足，不重复全股检索，不用站外网页。",
+        "(Micron OR MU) (HBM OR memory OR prices OR orders OR capacity)",
+        "(from:MicronTech OR from:Reuters OR from:business OR from:CNBC) Micron",
+        "Micron (Taiwan OR Taoyuan) (denies OR correction OR resumed OR labor)"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:mu:hotspots",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "给我发布时间从 2026-11-03T00:04:34.000Z（含）至 2026-11-06T07:18:34.000Z（不含）的、包含“$MU”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:intc",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：具体个股的价值信息，不查热度榜，不写仓库，不重复读取项目文档。只查X，发布时间[2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)。逐股独立覆盖NVDA（交付/产品/出口/客户资本投入）、MU（HBM/存储价格订单产能）、INTC（代工/Xeon/客户及融资）、GOOG/GOOGL（云收入/资本开支/融资）、AVGO（定制ASIC/网络/订单及客户）、VRT（电力冷却/订单/交付）、TSM（产能/良率/定价/客户）。每股返回有实质新增的最重要事件，最多5、可以0；一般价格波动、喊单和未证实传闻不当价值事实。有新候选才追公司/主管机构/原始可识别媒体X，另独立查更正反证；无候选不空跑。跨栏目相同原帖可重复，已完成的同一证据可直接复用，不能因新闻或人物用过就排除。每项用紧凑字段给股票、作者、准确ISO时间、status链接、关键原文、中文摘要、事件时间或未知、条件性传导与反证；每股保存实际查询/范围/缺口。财报/价格/政策数字只有普通二传则标不足，不编造。",
+        "个股批定点补一个新缺口，只X、原时间窗不变，不改仓库：热点中 @aleabitoreddit 2118422637320007721（2026-11-05T19:18:09Z）称Google正式公布怀俄明170亿美元数据中心并用Bloom Energy燃料电池。请找Google/主管机构/原始Reuters或Bloomberg等媒体本窗X，给唯一准确时间、status链接及可见关键原文，核对是新宣布/旧闻/多年投资总额还是单站规模；另查更正、否认和阶段。没有原始证据就明确不足，不重复全股检索，不用站外网页。",
+        "(Intel OR INTC) (foundry OR Xeon OR customers OR financing OR orders OR capacity)",
+        "Intel (\"14A\" OR \"PDK 0.9\") (from:intel OR from:tomshardware)",
+        "Intel (\"PDK 0.9\" OR \"14A\") (denied OR denies OR correction)"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:intc:hotspots",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "给我发布时间从 2026-11-03T00:04:34.000Z（含）至 2026-11-06T07:18:34.000Z（不含）的、包含“INTC”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:goog",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：具体个股的价值信息，不查热度榜，不写仓库，不重复读取项目文档。只查X，发布时间[2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)。逐股独立覆盖NVDA（交付/产品/出口/客户资本投入）、MU（HBM/存储价格订单产能）、INTC（代工/Xeon/客户及融资）、GOOG/GOOGL（云收入/资本开支/融资）、AVGO（定制ASIC/网络/订单及客户）、VRT（电力冷却/订单/交付）、TSM（产能/良率/定价/客户）。每股返回有实质新增的最重要事件，最多5、可以0；一般价格波动、喊单和未证实传闻不当价值事实。有新候选才追公司/主管机构/原始可识别媒体X，另独立查更正反证；无候选不空跑。跨栏目相同原帖可重复，已完成的同一证据可直接复用，不能因新闻或人物用过就排除。每项用紧凑字段给股票、作者、准确ISO时间、status链接、关键原文、中文摘要、事件时间或未知、条件性传导与反证；每股保存实际查询/范围/缺口。财报/价格/政策数字只有普通二传则标不足，不编造。",
+        "个股批定点补一个新缺口，只X、原时间窗不变，不改仓库：热点中 @aleabitoreddit 2118422637320007721（2026-11-05T19:18:09Z）称Google正式公布怀俄明170亿美元数据中心并用Bloom Energy燃料电池。请找Google/主管机构/原始Reuters或Bloomberg等媒体本窗X，给唯一准确时间、status链接及可见关键原文，核对是新宣布/旧闻/多年投资总额还是单站规模；另查更正、否认和阶段。没有原始证据就明确不足，不重复全股检索，不用站外网页。",
+        "(Google OR Alphabet OR GOOG OR GOOGL) (capex OR financing OR bonds OR TPU)",
+        "Google Malaysia (\"15 billion\" OR \"data center\")",
+        "Google Malaysia (denied OR correction OR delay OR \"2024\" OR additional)",
+        "个股批定点补一个新缺口，只X、原时间窗不变，不改仓库：热点中 @aleabitoreddit 2118422637320007721（2026-11-05T19:18:09Z）称Google正式公布怀俄明170亿美元数据中心并用Bloom Energy燃料电池。请找Google/主管机构/原始Reuters或Bloomberg等媒体本窗X，给唯一准确时间、status链接及可见关键原文，核对是新宣布/旧闻/多年投资总额还是单站规模；另查更正、否认和阶段。没有原始证据就明确不足，不重复全股检索，不用站外网页。"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:goog:hotspots",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "给我发布时间从 2026-11-03T00:04:34.000Z（含）至 2026-11-06T07:18:34.000Z（不含）的、包含“GOOG”或“GOOGL”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:avgo",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：具体个股的价值信息，不查热度榜，不写仓库，不重复读取项目文档。只查X，发布时间[2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)。逐股独立覆盖NVDA（交付/产品/出口/客户资本投入）、MU（HBM/存储价格订单产能）、INTC（代工/Xeon/客户及融资）、GOOG/GOOGL（云收入/资本开支/融资）、AVGO（定制ASIC/网络/订单及客户）、VRT（电力冷却/订单/交付）、TSM（产能/良率/定价/客户）。每股返回有实质新增的最重要事件，最多5、可以0；一般价格波动、喊单和未证实传闻不当价值事实。有新候选才追公司/主管机构/原始可识别媒体X，另独立查更正反证；无候选不空跑。跨栏目相同原帖可重复，已完成的同一证据可直接复用，不能因新闻或人物用过就排除。每项用紧凑字段给股票、作者、准确ISO时间、status链接、关键原文、中文摘要、事件时间或未知、条件性传导与反证；每股保存实际查询/范围/缺口。财报/价格/政策数字只有普通二传则标不足，不编造。",
+        "个股批定点补一个新缺口，只X、原时间窗不变，不改仓库：热点中 @aleabitoreddit 2118422637320007721（2026-11-05T19:18:09Z）称Google正式公布怀俄明170亿美元数据中心并用Bloom Energy燃料电池。请找Google/主管机构/原始Reuters或Bloomberg等媒体本窗X，给唯一准确时间、status链接及可见关键原文，核对是新宣布/旧闻/多年投资总额还是单站规模；另查更正、否认和阶段。没有原始证据就明确不足，不重复全股检索，不用站外网页。",
+        "(Broadcom OR AVGO) (ASIC OR networking OR orders OR customers)",
+        "(from:Celestica_Inc OR from:Broadcom OR from:ServeTheHome OR from:tomshardware) (\"DS6005\" OR Tomahawk OR \"102.4\")",
+        "(\"DS6005\" OR \"Tomahawk 6\") (correction OR denied OR delay OR \"2025\")"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:avgo:hotspots",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "给我发布时间从 2026-11-03T00:04:34.000Z（含）至 2026-11-06T07:18:34.000Z（不含）的、包含“AVGO”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:vrt",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：具体个股的价值信息，不查热度榜，不写仓库，不重复读取项目文档。只查X，发布时间[2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)。逐股独立覆盖NVDA（交付/产品/出口/客户资本投入）、MU（HBM/存储价格订单产能）、INTC（代工/Xeon/客户及融资）、GOOG/GOOGL（云收入/资本开支/融资）、AVGO（定制ASIC/网络/订单及客户）、VRT（电力冷却/订单/交付）、TSM（产能/良率/定价/客户）。每股返回有实质新增的最重要事件，最多5、可以0；一般价格波动、喊单和未证实传闻不当价值事实。有新候选才追公司/主管机构/原始可识别媒体X，另独立查更正反证；无候选不空跑。跨栏目相同原帖可重复，已完成的同一证据可直接复用，不能因新闻或人物用过就排除。每项用紧凑字段给股票、作者、准确ISO时间、status链接、关键原文、中文摘要、事件时间或未知、条件性传导与反证；每股保存实际查询/范围/缺口。财报/价格/政策数字只有普通二传则标不足，不编造。",
+        "个股批定点补一个新缺口，只X、原时间窗不变，不改仓库：热点中 @aleabitoreddit 2118422637320007721（2026-11-05T19:18:09Z）称Google正式公布怀俄明170亿美元数据中心并用Bloom Energy燃料电池。请找Google/主管机构/原始Reuters或Bloomberg等媒体本窗X，给唯一准确时间、status链接及可见关键原文，核对是新宣布/旧闻/多年投资总额还是单站规模；另查更正、否认和阶段。没有原始证据就明确不足，不重复全股检索，不用站外网页。",
+        "(Vertiv OR VRT) (cooling OR power OR orders OR delivery OR contract OR capacity)",
+        "from:Vertiv",
+        "Vertiv Infineon (denies OR correction OR cancelled OR delay)"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:vrt:hotspots",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "给我发布时间从 2026-11-03T00:04:34.000Z（含）至 2026-11-06T07:18:34.000Z（不含）的、包含“$VRT”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:tsm",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "新独立批次：具体个股的价值信息，不查热度榜，不写仓库，不重复读取项目文档。只查X，发布时间[2026-11-03T00:04:34Z,2026-11-06T07:18:34Z)。逐股独立覆盖NVDA（交付/产品/出口/客户资本投入）、MU（HBM/存储价格订单产能）、INTC（代工/Xeon/客户及融资）、GOOG/GOOGL（云收入/资本开支/融资）、AVGO（定制ASIC/网络/订单及客户）、VRT（电力冷却/订单/交付）、TSM（产能/良率/定价/客户）。每股返回有实质新增的最重要事件，最多5、可以0；一般价格波动、喊单和未证实传闻不当价值事实。有新候选才追公司/主管机构/原始可识别媒体X，另独立查更正反证；无候选不空跑。跨栏目相同原帖可重复，已完成的同一证据可直接复用，不能因新闻或人物用过就排除。每项用紧凑字段给股票、作者、准确ISO时间、status链接、关键原文、中文摘要、事件时间或未知、条件性传导与反证；每股保存实际查询/范围/缺口。财报/价格/政策数字只有普通二传则标不足，不编造。",
+        "个股批定点补一个新缺口，只X、原时间窗不变，不改仓库：热点中 @aleabitoreddit 2118422637320007721（2026-11-05T19:18:09Z）称Google正式公布怀俄明170亿美元数据中心并用Bloom Energy燃料电池。请找Google/主管机构/原始Reuters或Bloomberg等媒体本窗X，给唯一准确时间、status链接及可见关键原文，核对是新宣布/旧闻/多年投资总额还是单站规模；另查更正、否认和阶段。没有原始证据就明确不足，不重复全股检索，不用站外网页。",
+        "(TSMC OR TSM) (capacity OR yield OR pricing OR customers OR orders OR production)",
+        "(from:TSMC OR from:Reuters OR from:business OR from:trendforce) TSMC",
+        "TSMC (\"8-inch\" OR \"265 billion\" OR Texas) (denies OR correction OR previously OR \"2025\")"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    },
+    {
+      "unit": "tickers:tsm:hotspots",
+      "start": "2026-11-03T00:04:34.000Z",
+      "end": "2026-11-06T07:18:34.000Z",
+      "status": "searched",
+      "queries": [
+        "给我发布时间从 2026-11-03T00:04:34.000Z（含）至 2026-11-06T07:18:34.000Z（不含）的、包含“$TSM”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。",
+        "你这个TSM榜有已知漏项：同一时间窗内，https://x.com/aleabitoreddit/status/2118049698733064433 明确含$TSM，刚才其他股票查询返回约30.9万浏览；https://x.com/burrytracker/status/2118359756091863364 也含$TSM，约15.4万浏览。都高于你榜首2.1万。请只针对这个缺口核对它们实际原文、作者、准确时间和本次浏览量，再按原条件（只有$TSM和原时间窗）由你重新搜索比较并给浏览量前五，不加作者、观点或内容过滤。不要沿用其他查询旧浏览量，不要声称全X覆盖。附每条原文摘录、中文摘要和status链接。",
+        "已知6条比较：核对semivision_tw当前浏览量并由Grok返回最终样本榜"
+      ],
+      "note": "完整增量窗检索已完成；候选、证据、补查和缺口已保存；浏览量排名仅采集器样本，不保证全量。",
+      "evidenceFile": "data/collection-runs/manual-20261106-151834.json"
+    }
+  ],
+  "pending": []
+}

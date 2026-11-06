@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-03T00:54:42.170Z",
+  "updatedAt": "2026-11-06T08:35:30.351Z",
   "reviews": [
     {
       "id": "nature-2026-10-19-walkability",
@@ -3736,30 +3736,340 @@
         "checkedAt": "2026-11-03T00:51:07.554696+00:00",
         "scope": "Crossref update/relation及PubMed关联记录，独立更正/复现检索另见本期论文审计；不声称穷尽全部文献。"
       }
+    },
+    {
+      "id": "doi-1038-s41586-026-11220-0",
+      "journal": "nature",
+      "journalName": "Nature",
+      "doi": "10.1038/s41586-026-11220-0",
+      "originalTitle": "Microbiome-wide PheWAS links gut microbial SNVs to health and exposures",
+      "title": "同一种肠道菌，也可能不是同一种作用",
+      "selectedDate": "2026-11-06",
+      "publishedDate": "2026-11-04",
+      "selectionKind": "recent",
+      "paperUrl": "https://www.nature.com/articles/s41586-026-11220-0",
+      "authors": [
+        "Daoming Wang"
+      ],
+      "people": [
+        {
+          "name": "Daoming Wang",
+          "intro": "肠道微生物遗传研究者"
+        }
+      ],
+      "category": "健康与统计",
+      "stage": "六个人群队列的基因关联研究",
+      "takeaway": "菌种名称相同，内部基因差异仍与健康指标相关；这些关联尚不是改菌治病的证据。",
+      "summary": {
+        "problem": "只看肠道里有什么菌，会不会漏掉同一菌种内部的差异？",
+        "method": "研究整合六个队列10,781人的粪便测序，比较约1,280万个微生物单碱基变异与244项健康、环境因素，并校正菌群谱系等混杂。",
+        "findings": "找到涉及69项宿主因素的940个独立关联；部分变异位于蛋白质关键区域，为解释菌株功能差异提供线索。",
+        "statistics": "10,781是人数，11,831是样本数，不能混用；不同指标的有效样本不同。多个队列中的一致性也不等于随机干预证明。",
+        "limitations": "主要是关联及结构分析，不能排除全部混杂或确定因果方向；不能据此断言补某种菌或修改基因就会延缓衰老。",
+        "meaning": "菌种有无和菌株怎样工作，是两层问题。判断健康建议应看功能与人体干预证据，而非只看菌名。"
+      },
+      "accessLevel": "partial",
+      "accessNote": "读取Nature检索返回的原摘要、正文/方法及图注节选，并用Crossref核书目；规范页面直接打开遇身份重定向，未通读全文或补充材料。",
+      "sources": [
+        {
+          "label": "Nature正刊",
+          "url": "https://www.nature.com/articles/s41586-026-11220-0"
+        },
+        {
+          "label": "Crossref原始书目与关系",
+          "url": "https://api.crossref.org/works/10.1038/s41586-026-11220-0"
+        }
+      ],
+      "checkedAt": "2026-11-06T08:35:29Z",
+      "correctionCheck": {
+        "checkedAt": "2026-11-06T08:35:29Z",
+        "scope": "逐DOI/题名加correction、retraction、replication独立检索；Crossref关系为空，Science另核PubMed关联。未发现改变结论的更正线索；近期发表、索引及检索覆盖有限，未宣称穷尽或已有独立复现。"
+      }
+    },
+    {
+      "id": "doi-1038-s41586-026-11229-5",
+      "journal": "nature",
+      "journalName": "Nature",
+      "doi": "10.1038/s41586-026-11229-5",
+      "originalTitle": "The neural basis of flavour–nutrient learning",
+      "title": "身体会在吃下之后，重新给味道打分",
+      "selectedDate": "2026-11-06",
+      "publishedDate": "2026-11-04",
+      "selectionKind": "recent",
+      "paperUrl": "https://www.nature.com/articles/s41586-026-11229-5",
+      "authors": [
+        "James C. R. Grove"
+      ],
+      "people": [
+        {
+          "name": "James C. R. Grove",
+          "intro": "营养与神经科学研究者"
+        }
+      ],
+      "category": "饮食与生活",
+      "stage": "小鼠神经回路干预与人体反应观察",
+      "takeaway": "对食物味道的偏好不只来自舌头；摄入后的营养信号也能参与学习。",
+      "summary": {
+        "problem": "为什么有些味道不是一开始就喜欢，吃过几次却越来越有吸引力？",
+        "method": "研究在小鼠中追踪口腔和摄入后营养信号，记录并干预连接杏仁核的多巴胺通路；另观察人体摄入营养后的相关区域活动。",
+        "findings": "小鼠的特定通路对建立味道与营养的联系是必要的；刺激相关末梢可促成这种学习，沉默目标神经元则阻止它。人体观察到对应区域偏侧激活。",
+        "statistics": "公开原摘要未给本轮可核定的各组数量及效应大小，不补数；人体激活与小鼠因果干预不是同一级证据。",
+        "limitations": "小鼠机制不等于人体全过程已被证实，也未测试某套戒糖或减重方案；不能把多巴胺简单说成快乐开关。",
+        "meaning": "吃下后的身体反馈会参与塑造偏好，味道与营养是被学习连接起来的，而非完全先天固定。"
+      },
+      "accessLevel": "abstract",
+      "accessNote": "读取Nature原始摘要及图题，Crossref核对DOI/原题/第一作者与线上首发日；未取得完整方法和补充材料。",
+      "sources": [
+        {
+          "label": "Nature正刊",
+          "url": "https://www.nature.com/articles/s41586-026-11229-5"
+        },
+        {
+          "label": "Crossref原始书目与关系",
+          "url": "https://api.crossref.org/works/10.1038/s41586-026-11229-5"
+        }
+      ],
+      "checkedAt": "2026-11-06T08:35:29Z",
+      "correctionCheck": {
+        "checkedAt": "2026-11-06T08:35:29Z",
+        "scope": "逐DOI/题名加correction、retraction、replication独立检索；Crossref关系为空，Science另核PubMed关联。未发现改变结论的更正线索；近期发表、索引及检索覆盖有限，未宣称穷尽或已有独立复现。"
+      }
+    },
+    {
+      "id": "doi-1038-s41586-026-11217-9",
+      "journal": "nature",
+      "journalName": "Nature",
+      "doi": "10.1038/s41586-026-11217-9",
+      "originalTitle": "Aggression experience and observation drive shared behavioural and neural changes",
+      "title": "只是旁观，也可能改变下一次的应对",
+      "selectedDate": "2026-11-06",
+      "publishedDate": "2026-11-04",
+      "selectionKind": "recent",
+      "paperUrl": "https://www.nature.com/articles/s41586-026-11217-9",
+      "authors": [
+        "Jorge M. Iravedra-García"
+      ],
+      "people": [
+        {
+          "name": "Jorge M. Iravedra-García",
+          "intro": "社会行为神经科学研究者"
+        }
+      ],
+      "category": "行为与反直觉",
+      "stage": "雄性小鼠观察学习与神经回路干预",
+      "takeaway": "雄性小鼠仅旁观争斗，也会形成部分接近亲身经历者的警觉与应对变化；这不是鼓励人接触暴力。",
+      "summary": {
+        "problem": "观察别人的冲突，能否改变自己后来面对冲突时的行为？",
+        "method": "研究将雄鼠置于亲历、旁观或无相关训练的条件，纵向记录行为和多脑区活动，再在新冲突场景测试；另重新激活关键抑制性回路。",
+        "findings": "亲历与旁观者都出现更主动、警觉的应对及相似神经变化；重新激活部分抑制性区域，会逆转旁观者的行为改变。",
+        "statistics": "不同记录和干预使用不同小组，不能把图中个别组数当全研究总数；此处不编总样本量或统一效应值。",
+        "limitations": "仅雄性小鼠，特定冲突实验中的主动防御不能直接套到人类，也不代表旁观者变得普遍更暴力。",
+        "meaning": "社会学习可能通过改变后续行为策略体现；判断观察影响，需要比较新场景表现，而不只是当下脑区是否活跃。"
+      },
+      "accessLevel": "partial",
+      "accessNote": "读取Nature原摘要、结果、方法和图注节选，并与Crossref核书目；未通读补充材料；2024预印本只是同研究早期版本，不算独立复现。",
+      "sources": [
+        {
+          "label": "Nature正刊",
+          "url": "https://www.nature.com/articles/s41586-026-11217-9"
+        },
+        {
+          "label": "Crossref原始书目与关系",
+          "url": "https://api.crossref.org/works/10.1038/s41586-026-11217-9"
+        }
+      ],
+      "checkedAt": "2026-11-06T08:35:29Z",
+      "correctionCheck": {
+        "checkedAt": "2026-11-06T08:35:29Z",
+        "scope": "逐DOI/题名加correction、retraction、replication独立检索；Crossref关系为空，Science另核PubMed关联。未发现改变结论的更正线索；近期发表、索引及检索覆盖有限，未宣称穷尽或已有独立复现。"
+      }
+    },
+    {
+      "id": "doi-1126-science.aed8952",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.aed8952",
+      "originalTitle": "Targeting hormone conversion through dietary fiber improves polyendocrine metabolic ovarian syndrome",
+      "title": "纤维影响激素，可能绕了一条肠道路线",
+      "selectedDate": "2026-11-06",
+      "publishedDate": "2026-11-05",
+      "selectionKind": "recent",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.aed8952",
+      "authors": [
+        "Xinyu Qi"
+      ],
+      "people": [
+        {
+          "name": "Xinyu Qi",
+          "intro": "生殖与代谢医学研究者"
+        }
+      ],
+      "category": "饮食与健康",
+      "stage": "患者临床试验、微生物机制与小鼠验证",
+      "takeaway": "特定纤维组合在原文称PMOS的卵巢代谢综合征患者中降低了血浆雄激素，提示肠道菌可能参与激素转化。",
+      "summary": {
+        "problem": "膳食纤维改善代谢，是否也可能通过肠道影响激素？",
+        "method": "临床试验给予菊粉、抗性淀粉和β-葡聚糖组合并测量雄激素；研究再追踪相关菌及代谢产物，并用小鼠验证转化通路。",
+        "findings": "患者雄激素下降，相关拟杆菌增多；该菌能把雄烯二酮转为不具雄激素作用的代谢产物，随后再由菌群加工。",
+        "statistics": "原摘要未列可核对的样本量、随机/对照设计、疗程和下降幅度，不补造，不能仅凭摘要判定疗效强弱。",
+        "limitations": "这是特定患者和特定配方的结果，不代表所有纤维均可治病；机制在小鼠验证也不能替代人体长期安全及结局证据。",
+        "meaning": "饮食—微生物—激素之间可能有可检验的链路，但尚不足以据此自行替代治疗。"
+      },
+      "accessLevel": "abstract",
+      "accessNote": "独立读取Crossref出版社摘要及PubMed EFetch原始摘要/关联字段；规范Science页面和PubMed网页访问受限，未读全文。",
+      "sources": [
+        {
+          "label": "Science正刊",
+          "url": "https://www.science.org/doi/10.1126/science.aed8952"
+        },
+        {
+          "label": "Crossref原始书目与关系",
+          "url": "https://api.crossref.org/works/10.1126/science.aed8952"
+        },
+        {
+          "label": "PubMed原始摘要与书目",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42986964/"
+        }
+      ],
+      "checkedAt": "2026-11-06T08:35:29Z",
+      "correctionCheck": {
+        "checkedAt": "2026-11-06T08:35:29Z",
+        "scope": "逐DOI/题名加correction、retraction、replication独立检索；Crossref关系为空，Science另核PubMed关联。未发现改变结论的更正线索；近期发表、索引及检索覆盖有限，未宣称穷尽或已有独立复现。"
+      }
+    },
+    {
+      "id": "doi-1126-science.aeh9311",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.aeh9311",
+      "originalTitle": "The first 1000 days: Modeling language learning from individual children’s everyday speech",
+      "title": "听过还要回想：一个学语言的模拟实验",
+      "selectedDate": "2026-11-06",
+      "publishedDate": "2026-11-05",
+      "selectionKind": "recent",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.aeh9311",
+      "authors": [
+        "Hadas Raviv"
+      ],
+      "people": [
+        {
+          "name": "Hadas Raviv",
+          "intro": "计算认知科学研究者"
+        }
+      ],
+      "category": "学习与生活",
+      "stage": "八名儿童家庭录音的个体化学习建模",
+      "takeaway": "按儿童真实日常语音训练的模型，结合近期内容回放后能形成类似语音和词形的表示；模型不是儿童本身。",
+      "summary": {
+        "problem": "日常听到的语言，是否含有足够结构支持早期学习？",
+        "method": "研究使用八名儿童生命前1,000天的家庭录音，逐日训练各自模型，不预先给语言知识，并比较密集输入和近期内容回放对学习的作用。",
+        "findings": "模型逐渐形成近似音素和词形的表示，学习轨迹可追踪儿童间差异；密集日常采样及近期回放对表现都重要。",
+        "statistics": "八名儿童对应八份环境资料，不是八个随机教育干预组；模型拟合发展速度不等于已在新人群证明因果。",
+        "limitations": "模型缺少儿童身体、社会动机与完整生物机制；模拟回放不能直接证明某种睡眠安排或家教方案有效。",
+        "meaning": "研究把“从经验学会”变成可运行、可比较的假设；重复接触的时序和记忆过程可能同输入总量一样值得观察。"
+      },
+      "accessLevel": "abstract",
+      "accessNote": "独立读取Crossref出版社摘要与PubMed EFetch摘要，另读研究团队Princeton官方说明；未读Science全文或补充材料。",
+      "sources": [
+        {
+          "label": "Science正刊",
+          "url": "https://www.science.org/doi/10.1126/science.aeh9311"
+        },
+        {
+          "label": "Crossref原始书目与关系",
+          "url": "https://api.crossref.org/works/10.1126/science.aeh9311"
+        },
+        {
+          "label": "PubMed原始摘要与书目",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42986948/"
+        },
+        {
+          "label": "研究团队官方说明",
+          "url": "https://pni.princeton.edu/news/2026/princeton-researchers-train-ai-model-learn-language-way-children-do"
+        }
+      ],
+      "checkedAt": "2026-11-06T08:35:29Z",
+      "correctionCheck": {
+        "checkedAt": "2026-11-06T08:35:29Z",
+        "scope": "逐DOI/题名加correction、retraction、replication独立检索；Crossref关系为空，Science另核PubMed关联。未发现改变结论的更正线索；近期发表、索引及检索覆盖有限，未宣称穷尽或已有独立复现。"
+      }
+    },
+    {
+      "id": "doi-1126-science.adu9593",
+      "journal": "science",
+      "journalName": "Science",
+      "doi": "10.1126/science.adu9593",
+      "originalTitle": "Echoes of the Anthropocene: Noise pollution as a global threat",
+      "title": "噪声不只是烦：跨物种实验看到了什么",
+      "selectedDate": "2026-11-06",
+      "publishedDate": "2026-11-05",
+      "selectionKind": "recent",
+      "paperUrl": "https://www.science.org/doi/10.1126/science.adu9593",
+      "authors": [
+        "Hansjoerg P. Kunc"
+      ],
+      "people": [
+        {
+          "name": "Hansjoerg P. Kunc",
+          "intro": "动物行为与声学生态研究者"
+        }
+      ],
+      "category": "生活环境与统计",
+      "stage": "214项实验的跨物种荟萃分析",
+      "takeaway": "汇总实验显示，噪声可改变许多动物的生理、发育或行为；不同物种的反应并不相同。",
+      "summary": {
+        "problem": "噪声影响是少数物种的特殊现象，还是跨栖息地普遍存在？",
+        "method": "研究汇总跨六大洲、177个水生与陆生物种的214项实验，用考虑物种亲缘关系的统计方法比较噪声暴露影响。",
+        "findings": "约80%的受研究物种至少有一种生理、发育或行为特征改变；还观察到适合度、数量或捕食关系的变化，但部分反应有输有赢。",
+        "statistics": "80%的分母是纳入研究的物种，不是全世界物种，也不是每只动物或每个终点受损80%；214是实验研究数。",
+        "limitations": "不同物种、噪声和指标不能简单等同；摘要不足以给出人类安全分贝阈值，亦不能据此计算个人患病风险。",
+        "meaning": "保护生活环境也要考虑声音；跨物种综合证据可以揭示广泛压力，却仍需针对具体环境制定措施。"
+      },
+      "accessLevel": "abstract",
+      "accessNote": "独立读取Crossref出版社摘要及PubMed EFetch原始摘要；确认为Meta-Analysis，未把综合分析写成一场新的人体实验。",
+      "sources": [
+        {
+          "label": "Science正刊",
+          "url": "https://www.science.org/doi/10.1126/science.adu9593"
+        },
+        {
+          "label": "Crossref原始书目与关系",
+          "url": "https://api.crossref.org/works/10.1126/science.adu9593"
+        },
+        {
+          "label": "PubMed原始摘要与书目",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42986958/"
+        }
+      ],
+      "checkedAt": "2026-11-06T08:35:29Z",
+      "correctionCheck": {
+        "checkedAt": "2026-11-06T08:35:29Z",
+        "scope": "逐DOI/题名加correction、retraction、replication独立检索；Crossref关系为空，Science另核PubMed关联。未发现改变结论的更正线索；近期发表、索引及检索覆盖有限，未宣称穷尽或已有独立复现。"
+      }
     }
   ],
   "coverage": {
     "nature": {
-      "date": "2026-11-03",
+      "date": "2026-11-06",
       "status": "complete",
-      "checkedAt": "2026-11-03T00:51:07.554696+00:00",
+      "checkedAt": "2026-11-06T08:35:29Z",
       "queries": [
-        "Grok Bot逐刊近期发现、公开原63 DOI去重",
-        "六DOI Crossref书目与update/relation，PubMed逐篇原始摘要/Epub/作者单位",
-        "独立更正/撤稿/复现查询；普通检索与EFetch两次连接失败，正常PubMed浏览器可读，Expert补查缺口"
+        "Nature 11月4日正刊研究发现、69 DOI去重",
+        "三个DOI Crossref书目、作者和线上日；原刊摘要及正文节选",
+        "逐DOI更正/撤稿/复现独立检索"
       ],
-      "note": "三篇近30天正刊摘要速读；样本、方法与结论边界按原始摘要，不补未知。更正及复现检索覆盖有限，见本轮审计。"
+      "note": "三篇近期研究已收录；阅读范围逐卡标注。正常网页部分受限，使用已授权原始API/期刊检索节选，不调用Grok，不声称近期全刊或复现文献穷尽覆盖。"
     },
     "science": {
-      "date": "2026-11-03",
+      "date": "2026-11-06",
       "status": "complete",
-      "checkedAt": "2026-11-03T00:51:07.554696+00:00",
+      "checkedAt": "2026-11-06T08:35:29Z",
       "queries": [
-        "Grok Bot逐刊近期发现、公开原63 DOI去重",
-        "六DOI Crossref书目与update/relation，PubMed逐篇原始摘要/Epub/作者单位",
-        "独立更正/撤稿/复现查询；普通检索与EFetch两次连接失败，正常PubMed浏览器可读，Expert补查缺口"
+        "Science Crossref近30日目录100条，排除新闻/子刊与旧DOI",
+        "三个DOI出版社摘要及PubMed ESearch/EFetch，核作者/日期/文章类型",
+        "逐题名更正/撤稿/复现独立检索；Crossref关系与PubMed关联"
       ],
-      "note": "三篇近30天正刊摘要速读；样本、方法与结论边界按原始摘要，不补未知。更正及复现检索覆盖有限，见本轮审计。"
+      "note": "三篇近期研究已收录；阅读范围逐卡标注。正常网页部分受限，使用已授权原始API/期刊检索节选，不调用Grok，不声称近期全刊或复现文献穷尽覆盖。"
     }
   }
 }

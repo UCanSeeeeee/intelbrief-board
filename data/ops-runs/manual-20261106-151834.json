@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "period": "manual-20261106-151834",
+  "trigger": "manual",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-11-06T15:18:45+08:00",
+  "updatedAt": "2026-11-06T16:51:18+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "7f03b48704fc73627d69e377668e3318bb30345b",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-11-06T15:18:45+08:00",
+      "detail": null
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-11-06T15:38:22+08:00",
+      "detail": "已读取各批次来源、契约、知识及增量规则；按手动最近08:00政策执行papers，其他学习组件未到期。"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-11-06T16:51:18+08:00",
+      "detail": "30X对象已查询保存，严格增量窗；有限覆盖和真实缺额见审计；非X分别处理，无Grok"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-11-06T16:51:18+08:00",
+      "detail": "正常发布器已保存手动不可覆盖期次及各数据；阅读244→254、论文69→75；只3期目录"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-11-06T16:51:18+08:00",
+      "detail": "按用户和项目规则未运行本地test/check/build/预览；来源核对及发布器固有数据契约仍执行"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "5+5，六包完成，缺额与来源边界已保存。"
+    },
+    "people": {
+      "status": "partial",
+      "detail": "17条本窗待发布；Jensen仅一条可归因旧访热度，未凑数；修正来源/补位错误。"
+    },
+    "tickers": {
+      "status": "partial",
+      "detail": "新增8事实、35本窗样本热点；原12有效事实事件保留；7对象原始来源/榜单非全量覆盖"
+    },
+    "ai": {
+      "status": "partial",
+      "detail": "新增10卡并合并有效旧周榜，当前14卡；4对象窗口记录已保存"
+    },
+    "earnings": {
+      "status": "partial",
+      "detail": "37待评逐家查官方：6分数注明基准、31未评分保留已获事实/具体缺口；旧有效评价恢复，pending0"
+    },
+    "macro": {
+      "status": "unchanged",
+      "detail": "核BLS/Fed/BEA临近排期无变，不改原数据更新时间"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [
+    "用户授权节流后手动全项目更新试跑；具体账户用量保存在本轮本地工作记录，不进入公开仓库。定时仍暂停。"
+  ],
+  "timings": [
+    {
+      "page": "news",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:18:45+08:00",
+      "endedAt": "2026-11-06T15:36:39+08:00",
+      "durationMs": 1074000,
+      "detail": "5焦点+5洞察，完整输出先保存后推进7对象。"
+    },
+    {
+      "page": "news",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:18:45+08:00",
+      "endedAt": "2026-11-06T15:28:09+08:00",
+      "durationMs": 564000,
+      "detail": "市场焦点8个候选，六包独立发现7个候选；真实查询已保存。"
+    },
+    {
+      "page": "news",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:28:19+08:00",
+      "endedAt": "2026-11-06T15:36:39+08:00",
+      "durationMs": 500000,
+      "detail": "原始X最小事实与数字口径核对完成；与反证请求跨度交叠，不相加。"
+    },
+    {
+      "page": "news",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:28:27+08:00",
+      "endedAt": "2026-11-06T15:36:39+08:00",
+      "durationMs": 492000,
+      "detail": "独立反证完成；无法分离内部耗时，详情在审计。"
+    },
+    {
+      "page": "people",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:36:39+08:00",
+      "endedAt": "2026-11-06T15:50:49+08:00",
+      "durationMs": 850000,
+      "detail": null
+    },
+    {
+      "page": "people",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:36:39+08:00",
+      "endedAt": "2026-11-06T15:50:49+08:00",
+      "durationMs": 850000,
+      "detail": null
+    },
+    {
+      "page": "people",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:38:22+08:00",
+      "endedAt": "2026-11-06T15:50:49+08:00",
+      "durationMs": 747000,
+      "detail": null
+    },
+    {
+      "page": "people",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:38:22+08:00",
+      "endedAt": "2026-11-06T15:50:49+08:00",
+      "durationMs": 747000,
+      "detail": null
+    },
+    {
+      "page": "tickers",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:50:50+08:00",
+      "endedAt": "2026-11-06T16:20:14+08:00",
+      "durationMs": 1764000,
+      "detail": "8条事实、35条样本热点，14单元增量窗口已推进；不声称全X浏览量覆盖"
+    },
+    {
+      "page": "tickers",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-06T15:50:50+08:00",
+      "endedAt": "2026-11-06T16:20:14+08:00",
+      "durationMs": 1764000,
+      "detail": "7股事实与35条热点已保存；含TSM两次纠漏及GOOG/VRT会话恢复，见采集审计；阶段含追源反证，无法分开计时"
+    },
+    {
+      "page": "ai",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-06T16:20:35+08:00",
+      "endedAt": "2026-11-06T16:27:54+08:00",
+      "durationMs": 439000,
+      "detail": "四AI对象完成实际增量窗查询，完整结果先保存后推进4对象进度；10卡"
+    },
+    {
+      "page": "ai",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-06T16:20:36+08:00",
+      "endedAt": "2026-11-06T16:27:54+08:00",
+      "durationMs": 438000,
+      "detail": "单次Bot请求返回10条；含来源/反证，内部阶段无法拆分；复用Moonshot已核同帖"
+    },
+    {
+      "page": "learning",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-06T16:28:31+08:00",
+      "endedAt": "2026-11-06T16:35:53+08:00",
+      "durationMs": 442000,
+      "detail": "两刊各3篇近期研究；基础与小知识不属本批组件，保留旧内容；0次Grok"
+    },
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-06T16:28:32+08:00",
+      "endedAt": "2026-11-06T16:33:19+08:00",
+      "durationMs": 287000,
+      "detail": "直接检索Nature期刊及Science Crossref近30日目录100条；剔除新闻/子刊/69已收DOI，选择6篇11月4-5日研究"
+    },
+    {
+      "page": "learning",
+      "name": "source-verification",
+      "status": "ok",
+      "startedAt": "2026-11-06T16:33:19+08:00",
+      "endedAt": "2026-11-06T16:35:52+08:00",
+      "durationMs": 153000,
+      "detail": "6篇原摘要/节选+Crossref书目已整理；作者登记，正常发布器保存75篇保留原69；未运行本地测试"
+    },
+    {
+      "page": "learning",
+      "name": "counter-evidence",
+      "status": "ok",
+      "startedAt": "2026-11-06T16:33:19+08:00",
+      "endedAt": "2026-11-06T16:35:53+08:00",
+      "durationMs": 154000,
+      "detail": "逐题名/DOI更正撤稿复现检索，限定范围未发现影响结论的新线索；不宣称全部文献核完"
+    },
+    {
+      "page": "macro",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-06T16:35:53+08:00",
+      "endedAt": "2026-11-06T16:36:24+08:00",
+      "durationMs": 31000,
+      "detail": "BLS近期非农/CPI、Fed12月、BEA未来PCE日期与既有一致；无日期更改，不虚刷updatedAt"
+    },
+    {
+      "page": "earnings",
+      "name": "batch",
+      "status": "ok",
+      "startedAt": "2026-11-06T16:36:24+08:00",
+      "endedAt": "2026-11-06T16:47:51+08:00",
+      "durationMs": 687000,
+      "detail": "37待评已逐家查官方材料；6有明确基准评分，31 unknown写具体缺口；保留旧STX/SNDK/TTE与已有自主理由；pending0；0 Grok"
+    }
+  ]
+}
