@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "period": "manual-20261121-182906",
+  "trigger": "manual",
+  "timezone": "Asia/Shanghai",
+  "startedAt": "2026-11-21T18:29:27+08:00",
+  "updatedAt": "2026-11-21T18:45:53+08:00",
+  "finishedAt": null,
+  "gitHeadAtStart": "e06edbe3d6cdc663144ab79ef1dd48775fb3540f",
+  "stages": [
+    {
+      "name": "pull",
+      "status": "ok",
+      "at": "2026-11-21T18:45:53+08:00",
+      "detail": "首次写入前已成功git pull --ff-only origin master"
+    },
+    {
+      "name": "read",
+      "status": "ok",
+      "at": "2026-11-21T18:45:53+08:00",
+      "detail": "已读取项目内容契约、知识库、非X栏目SOP"
+    },
+    {
+      "name": "search",
+      "status": "ok",
+      "at": "2026-11-21T18:45:53+08:00",
+      "detail": "非X查询及8家财报核验完成；X请求未启动，预算待用户回复"
+    },
+    {
+      "name": "write",
+      "status": "ok",
+      "at": "2026-11-21T18:45:53+08:00",
+      "detail": "新学习、指标、宏观和财报已保存；X存量与进度未改变"
+    },
+    {
+      "name": "validate",
+      "status": "skipped",
+      "at": "2026-11-21T18:45:53+08:00",
+      "detail": "按用户要求未运行本地test/check/build/预览；来源核验及发布器自身数据契约照常执行"
+    },
+    {
+      "name": "push",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    },
+    {
+      "name": "verify",
+      "status": "pending",
+      "at": null,
+      "detail": null
+    }
+  ],
+  "pages": {
+    "news": {
+      "status": "partial",
+      "detail": "只更新CNN与VIX，X简报未采集；预算选择待确认"
+    },
+    "people": {
+      "status": "skipped",
+      "detail": "未启动X检索；保留原截止和内容，不能解释为无新增"
+    },
+    "tickers": {
+      "status": "skipped",
+      "detail": "未启动X检索；保留事实及原热点榜，不混排旧浏览量"
+    },
+    "ai": {
+      "status": "skipped",
+      "detail": "未启动X检索；保留原截止和内容"
+    },
+    "earnings": {
+      "status": "partial",
+      "detail": "8家已回看，7评分、BABA缺同口径基准保留unknown；pending0"
+    },
+    "macro": {
+      "status": "ok",
+      "detail": "新增11月18日FOMC纪要；近期待发布官方日期核对无变"
+    }
+  },
+  "status": "running",
+  "error": null,
+  "commitHash": null,
+  "notes": [
+    "用户手动更新；不恢复定时，先核定采集预算并处理授权公开来源。"
+  ],
+  "timings": [
+    {
+      "page": "learning",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-21T18:30:23+08:00",
+      "endedAt": "2026-11-21T18:36:04+08:00",
+      "durationMs": 341000,
+      "detail": "6篇论文、1篇原创寓言和5条小知识已保存；含核验和更正查询，独立子阶段起点未分开记录，0次Grok。"
+    },
+    {
+      "page": "macro",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-21T18:36:35+08:00",
+      "endedAt": "2026-11-21T18:38:06+08:00",
+      "durationMs": 91000,
+      "detail": "官方日历核对；新增11月18日会议纪要，其余近期待发布日期未变；0次Grok。"
+    },
+    {
+      "page": "earnings",
+      "name": "discovery",
+      "status": "ok",
+      "startedAt": "2026-11-21T18:38:06+08:00",
+      "endedAt": "2026-11-21T18:44:52+08:00",
+      "durationMs": 406000,
+      "detail": "Nasdaq694原始、25精选；8家回看，7家按公司原指引或同口径预期评分、BABA缺基准不评分；pending0，0次Grok。"
+    }
+  ]
+}

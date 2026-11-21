@@ -1,0 +1,1224 @@
+{
+  "id": "manual-20261121-182906",
+  "cutoff": "2026-11-21T18:29:06+08:00",
+  "trigger": "manual",
+  "authorization": "用户2026-11-21要求更新网站内容；仅本次手动更新，定时保持暂停。",
+  "status": "partial-awaiting-budget",
+  "plan": {
+    "cutoff": "2026-11-21T18:29:06+08:00",
+    "scheduledFor": "2026-11-21T08:00:00+08:00",
+    "scheduled": true,
+    "batches": [
+      {
+        "id": "news",
+        "action": "run",
+        "collectionUnits": [
+          {
+            "id": "news:market-focus",
+            "page": "news",
+            "object": "market-focus",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "news:semiconductors",
+            "page": "news",
+            "object": "semiconductors",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "news:power",
+            "page": "news",
+            "object": "power",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "news:ai-adoption",
+            "page": "news",
+            "object": "ai-adoption",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "news:capital-cost",
+            "page": "news",
+            "object": "capital-cost",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "news:geopolitics",
+            "page": "news",
+            "object": "geopolitics",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "news:market-structure",
+            "page": "news",
+            "object": "market-structure",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          }
+        ]
+      },
+      {
+        "id": "people",
+        "action": "run",
+        "collectionUnits": [
+          {
+            "id": "people:elon-musk",
+            "page": "people",
+            "object": "elon-musk",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "people:jensen-huang",
+            "page": "people",
+            "object": "jensen-huang",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "people:donald-trump",
+            "page": "people",
+            "object": "donald-trump",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "people:trillion-leaders",
+            "page": "people",
+            "object": "trillion-leaders",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "people:research-reports",
+            "page": "people",
+            "object": "research-reports",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          }
+        ]
+      },
+      {
+        "id": "tickers",
+        "action": "run",
+        "collectionUnits": [
+          {
+            "id": "tickers:nvda",
+            "page": "tickers",
+            "object": "nvda",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "tickers:nvda:hotspots",
+            "page": "tickers",
+            "object": "nvda:hotspots",
+            "kind": "hotspots",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": false
+          },
+          {
+            "id": "tickers:mu",
+            "page": "tickers",
+            "object": "mu",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "tickers:mu:hotspots",
+            "page": "tickers",
+            "object": "mu:hotspots",
+            "kind": "hotspots",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": false
+          },
+          {
+            "id": "tickers:intc",
+            "page": "tickers",
+            "object": "intc",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "tickers:intc:hotspots",
+            "page": "tickers",
+            "object": "intc:hotspots",
+            "kind": "hotspots",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": false
+          },
+          {
+            "id": "tickers:goog",
+            "page": "tickers",
+            "object": "goog",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "tickers:goog:hotspots",
+            "page": "tickers",
+            "object": "goog:hotspots",
+            "kind": "hotspots",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": false
+          },
+          {
+            "id": "tickers:avgo",
+            "page": "tickers",
+            "object": "avgo",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "tickers:avgo:hotspots",
+            "page": "tickers",
+            "object": "avgo:hotspots",
+            "kind": "hotspots",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": false
+          },
+          {
+            "id": "tickers:vrt",
+            "page": "tickers",
+            "object": "vrt",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "tickers:vrt:hotspots",
+            "page": "tickers",
+            "object": "vrt:hotspots",
+            "kind": "hotspots",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": false
+          },
+          {
+            "id": "tickers:tsm",
+            "page": "tickers",
+            "object": "tsm",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "tickers:tsm:hotspots",
+            "page": "tickers",
+            "object": "tsm:hotspots",
+            "kind": "hotspots",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": false
+          }
+        ],
+        "hotspotPrompts": [
+          {
+            "id": "nvda",
+            "keywords": [
+              "NVDA"
+            ],
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "prompt": "给我发布时间从 2026-11-06T07:18:34.000Z（含）至 2026-11-21T10:29:06.000Z（不含）的、包含“NVDA”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+          },
+          {
+            "id": "mu",
+            "keywords": [
+              "$MU"
+            ],
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "prompt": "给我发布时间从 2026-11-06T07:18:34.000Z（含）至 2026-11-21T10:29:06.000Z（不含）的、包含“$MU”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+          },
+          {
+            "id": "intc",
+            "keywords": [
+              "INTC"
+            ],
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "prompt": "给我发布时间从 2026-11-06T07:18:34.000Z（含）至 2026-11-21T10:29:06.000Z（不含）的、包含“INTC”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+          },
+          {
+            "id": "goog",
+            "keywords": [
+              "GOOG",
+              "GOOGL"
+            ],
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "prompt": "给我发布时间从 2026-11-06T07:18:34.000Z（含）至 2026-11-21T10:29:06.000Z（不含）的、包含“GOOG”或“GOOGL”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+          },
+          {
+            "id": "avgo",
+            "keywords": [
+              "AVGO"
+            ],
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "prompt": "给我发布时间从 2026-11-06T07:18:34.000Z（含）至 2026-11-21T10:29:06.000Z（不含）的、包含“AVGO”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+          },
+          {
+            "id": "vrt",
+            "keywords": [
+              "$VRT"
+            ],
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "prompt": "给我发布时间从 2026-11-06T07:18:34.000Z（含）至 2026-11-21T10:29:06.000Z（不含）的、包含“$VRT”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+          },
+          {
+            "id": "tsm",
+            "keywords": [
+              "$TSM"
+            ],
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "prompt": "给我发布时间从 2026-11-06T07:18:34.000Z（含）至 2026-11-21T10:29:06.000Z（不含）的、包含“$TSM”的浏览量最高五个X帖子。除关键词和时间外不加其他筛选。附作者、发帖时间、浏览量、原文摘录、中文摘要和原帖链接。"
+          }
+        ]
+      },
+      {
+        "id": "ai",
+        "action": "run",
+        "collectionUnits": [
+          {
+            "id": "ai:openai",
+            "page": "ai",
+            "object": "openai",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "ai:anthropic",
+            "page": "ai",
+            "object": "anthropic",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "ai:goog-ai",
+            "page": "ai",
+            "object": "goog-ai",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          },
+          {
+            "id": "ai:ai-others",
+            "page": "ai",
+            "object": "ai-others",
+            "start": "2026-11-06T07:18:34.000Z",
+            "end": "2026-11-20T07:18:34.000Z",
+            "cutoff": "2026-11-21T10:29:06.000Z",
+            "needsQuery": true,
+            "catchingUp": true
+          }
+        ]
+      },
+      {
+        "id": "learning",
+        "action": "run",
+        "components": {
+          "papers": true,
+          "basics": true,
+          "counterintuitive": true
+        },
+        "collectionUnits": []
+      },
+      {
+        "id": "macro",
+        "action": "check-due",
+        "collectionUnits": []
+      },
+      {
+        "id": "earnings",
+        "action": "run",
+        "collectionUnits": []
+      }
+    ]
+  },
+  "executionBudget": {
+    "status": "awaiting-user-choice",
+    "grokRequests": {
+      "bot": 0,
+      "webExpert": 0
+    },
+    "note": "本轮已询问额度预算，尚未收到选择。未启动X检索，也未修改其原有截止；已完成非X来源独立批次。"
+  },
+  "batches": [
+    {
+      "id": "news",
+      "page": "news",
+      "status": "partial-indicators-only",
+      "preSearchChecklist": [
+        {
+          "unit": "news:market-focus",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "news:semiconductors",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "news:power",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "news:ai-adoption",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "news:capital-cost",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "news:geopolitics",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "news:market-structure",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        }
+      ],
+      "queries": [],
+      "output": null,
+      "indicatorChecklist": [
+        {
+          "object": "CNN恐惧与贪婪指数",
+          "sources": [
+            "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+            "https://raw.githubusercontent.com/whit3rabbit/fear-greed-data/main/json/cnn_output.json"
+          ],
+          "question": "最新有效数值、上游实际时间及是否镜像",
+          "status": "planned"
+        },
+        {
+          "object": "VIX",
+          "sources": [
+            "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+          ],
+          "question": "最新正式美东收盘值及交易日期；不伪装盘中实时",
+          "status": "planned"
+        }
+      ],
+      "nonXIndicators": {
+        "cnn": {
+          "score": 9.7,
+          "timestamp": "2026-11-20T23:59:52+00:00",
+          "source": "CNN直连"
+        },
+        "vix": {
+          "value": 35.89,
+          "marketDate": "2026-11-20",
+          "source": "Cboe官方CSV"
+        },
+        "timingNote": "独立阶段起点记录命令失败；保留fetchedAt，不补造起点。"
+      },
+      "note": "X检索尚未执行：预算选择待用户回复；保留旧数据与逐对象成功截止，不能写成没有新增。"
+    },
+    {
+      "id": "people",
+      "page": "people",
+      "status": "not-run-budget-pending",
+      "preSearchChecklist": [
+        {
+          "unit": "people:elon-musk",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "people:jensen-huang",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "people:donald-trump",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "people:trillion-leaders",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "people:research-reports",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        }
+      ],
+      "queries": [],
+      "output": null,
+      "note": "X检索尚未执行：预算选择待用户回复；保留旧数据与逐对象成功截止，不能写成没有新增。"
+    },
+    {
+      "id": "tickers",
+      "page": "tickers",
+      "status": "not-run-budget-pending",
+      "preSearchChecklist": [
+        {
+          "unit": "tickers:nvda",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:nvda:hotspots",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-21T10:29:06.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:mu",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:mu:hotspots",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-21T10:29:06.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:intc",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:intc:hotspots",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-21T10:29:06.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:goog",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:goog:hotspots",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-21T10:29:06.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:avgo",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:avgo:hotspots",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-21T10:29:06.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:vrt",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:vrt:hotspots",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-21T10:29:06.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:tsm",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "tickers:tsm:hotspots",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-21T10:29:06.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        }
+      ],
+      "queries": [],
+      "output": null,
+      "note": "X检索尚未执行：预算选择待用户回复；保留旧数据与逐对象成功截止，不能写成没有新增。"
+    },
+    {
+      "id": "ai",
+      "page": "ai",
+      "status": "not-run-budget-pending",
+      "preSearchChecklist": [
+        {
+          "unit": "ai:openai",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "ai:anthropic",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "ai:goog-ai",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        },
+        {
+          "unit": "ai:ai-others",
+          "start": "2026-11-06T07:18:34.000Z",
+          "end": "2026-11-20T07:18:34.000Z",
+          "question": "本对象新增事实/进展、原始出处及纠正线索",
+          "status": "insufficient",
+          "note": "未启动检索；执行预算待确认。"
+        }
+      ],
+      "queries": [],
+      "output": null,
+      "note": "X检索尚未执行：预算选择待用户回复；保留旧数据与逐对象成功截止，不能写成没有新增。"
+    },
+    {
+      "id": "learning",
+      "page": "learning",
+      "status": "completed",
+      "preSearchChecklist": [
+        {
+          "object": "Nature",
+          "window": "2026-10-22至2026-11-21；优先最新未收录正刊",
+          "question": "健康、生活、统计、反直觉中最多3篇独立研究；核对原题DOI、摘要/方法/结果、更正",
+          "queries": [
+            "Nature research November 2026 health behavior sleep diet social statistics",
+            "Nature 2026-11 articles correction retraction"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "Science",
+          "window": "2026-10-22至2026-11-21；优先最新未收录正刊",
+          "question": "健康、生活、统计、反直觉中最多3篇独立研究；核对原题DOI、摘要/方法/结果、更正",
+          "queries": [
+            "Science research November 2026 health behavior social diet statistics",
+            "Science 2026-11 papers correction retraction"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "基础知识",
+          "question": "选择未重复的研究生概念，寓言先行后揭示；本轮拟核对动态不一致与准双曲折扣β-δ模型",
+          "queries": [
+            "university economics quasi-hyperbolic discounting beta delta time inconsistency lecture"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "反直觉小知识",
+          "question": "优先复用本轮合格论文及未讲过的既有证据，最多5个独立知识点；核对更正、适用人群和机制边界",
+          "queries": [
+            "本轮六篇论文与既有知识点对照；原始摘要与更正线索复用"
+          ],
+          "status": "covered"
+        }
+      ],
+      "queries": [
+        "Crossref Nature ISSN0028-0836：2026-10-22至2026-11-21，200条，剔除非正刊研究及旧DOI",
+        "Crossref Science ISSN0036-8075：同窗100条，排除新闻评论；按DOI与PubMed核对",
+        "Nature三个DOI原页/开放PDF正文节选；Science原页403，改读出版社摘要及PubMed",
+        "六篇论文逐题名/DOI correction retraction replication",
+        "MIT14.123第7章准双曲折扣与动态不一致",
+        "本轮五个独立知识点对照全部历史知识点"
+      ],
+      "output": {
+        "papers": [
+          "reading-20261121-1038-s41586-026-11237-5",
+          "reading-20261121-1038-s41586-026-11305-w",
+          "reading-20261121-1038-s41586-026-11283-z",
+          "reading-20261121-1126-science-aef8963",
+          "reading-20261121-1126-science-adx5757",
+          "reading-20261121-1126-science-aef6714"
+        ],
+        "basics": "fable-town-two-lunchboxes",
+        "counterintuitive": [
+          "counter-20261121-1",
+          "counter-20261121-2",
+          "counter-20261121-3",
+          "counter-20261121-4",
+          "counter-20261121-5"
+        ]
+      },
+      "accessLimits": [
+        "Science原页403，仅按Crossref与PubMed摘要整理，不声称取得方法全文",
+        "Nature未通读全部补充材料",
+        "首次4-DOI Promise.all有空JSON响应导致整体未返回，已逐DOI单次恢复，未用Grok"
+      ],
+      "grokRequests": 0,
+      "timing": {
+        "sourceVerification": "与发现交叠；独立起点未记录，不补造",
+        "counterEvidence": "更正与复现检查已执行；独立起点未记录，不补造"
+      }
+    },
+    {
+      "id": "macro",
+      "page": "macro",
+      "status": "completed",
+      "preSearchChecklist": [
+        {
+          "object": "FOMC",
+          "question": "10月会议纪要是否已正式公布；12月8—9日会议是否变更",
+          "queries": [
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "BLS CPI与就业",
+          "question": "核对12月非农和CPI官方日期",
+          "queries": [
+            "https://www.bls.gov/schedule/2026/"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "BEA PCE",
+          "question": "核对11月25日、12月23日官方个人收入支出排期",
+          "queries": [
+            "https://www.bea.gov/news/schedule/full"
+          ],
+          "status": "covered"
+        }
+      ],
+      "queries": [
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "https://www.bls.gov/schedule/2026/",
+        "https://www.bea.gov/news/schedule/full",
+        "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm"
+      ],
+      "output": {
+        "added": [
+          "fomc-minutes-2026-11-18"
+        ],
+        "unchangedDates": [
+          "2026-11-25 PCE",
+          "2026-12-04 非农",
+          "2026-12-09 FOMC",
+          "2026-12-10 CPI",
+          "2026-12-23 PCE"
+        ],
+        "gaps": [
+          "12月会议纪要公布日仍未列出，不补造"
+        ]
+      },
+      "grokRequests": 0
+    },
+    {
+      "id": "earnings",
+      "page": "earnings",
+      "status": "completed",
+      "preSearchChecklist": [
+        {
+          "object": "Nasdaq三周日历",
+          "window": "按2026-11-21北京时间周末口径：上周11月16—20日、本周11月23—27日、下周11月30—12月4日",
+          "question": "按既有主题池及自主判断更新日期，保留已有评分和选择理由；枚举已过披露日未评价公司",
+          "queries": [
+            "https://api.nasdaq.com/api/calendar/earnings?date=YYYY-MM-DD"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "pendingReview",
+          "question": "获取日历后冻结待查公司清单；逐家查询公司官方结果与可比预期，已评价不重查；证据不足具体写unknown",
+          "queries": [
+            "逐家官方IR新闻稿/公开业绩报告；不使用Grok"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "NVDA",
+          "question": "核对2026年11月17—19日官方财报；区分GAAP/非GAAP、营收与预期/原指引，证据不足不评分",
+          "queries": [
+            "NVDA investor relations November 2026 quarterly financial results"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "HD",
+          "question": "核对2026年11月17—19日官方财报；区分GAAP/非GAAP、营收与预期/原指引，证据不足不评分",
+          "queries": [
+            "HD investor relations November 2026 quarterly financial results"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "DIS",
+          "question": "核对2026年11月17—19日官方财报；区分GAAP/非GAAP、营收与预期/原指引，证据不足不评分",
+          "queries": [
+            "DIS investor relations November 2026 quarterly financial results"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "PANW",
+          "question": "核对2026年11月17—19日官方财报；区分GAAP/非GAAP、营收与预期/原指引，证据不足不评分",
+          "queries": [
+            "PANW investor relations November 2026 quarterly financial results"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "TJX",
+          "question": "核对2026年11月17—19日官方财报；区分GAAP/非GAAP、营收与预期/原指引，证据不足不评分",
+          "queries": [
+            "TJX investor relations November 2026 quarterly financial results"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "WMT",
+          "question": "核对2026年11月17—19日官方财报；区分GAAP/非GAAP、营收与预期/原指引，证据不足不评分",
+          "queries": [
+            "WMT investor relations November 2026 quarterly financial results"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "INTU",
+          "question": "核对2026年11月17—19日官方财报；区分GAAP/非GAAP、营收与预期/原指引，证据不足不评分",
+          "queries": [
+            "INTU investor relations November 2026 quarterly financial results"
+          ],
+          "status": "covered"
+        },
+        {
+          "object": "BABA",
+          "question": "核对2026年11月17—19日官方财报；区分GAAP/非GAAP、营收与预期/原指引，证据不足不评分",
+          "queries": [
+            "BABA investor relations November 2026 quarterly financial results"
+          ],
+          "status": "insufficient",
+          "note": "官方结果已核；缺少同口径的预期基准，保留经营事实、不评分。"
+        }
+      ],
+      "queries": [
+        "https://api.nasdaq.com/api/calendar/earnings?date=YYYY-MM-DD",
+        "逐家官方IR新闻稿/公开业绩报告；不使用Grok",
+        "NVDA investor relations November 2026 quarterly financial results",
+        "HD investor relations November 2026 quarterly financial results",
+        "DIS investor relations November 2026 quarterly financial results",
+        "PANW investor relations November 2026 quarterly financial results",
+        "TJX investor relations November 2026 quarterly financial results",
+        "WMT investor relations November 2026 quarterly financial results",
+        "INTU investor relations November 2026 quarterly financial results",
+        "BABA investor relations November 2026 quarterly financial results"
+      ],
+      "output": {
+        "raw": 694,
+        "selected": 25,
+        "pendingReview": 0,
+        "results": {
+          "NVDA": {
+            "status": "scored",
+            "score": 83,
+            "band": "超预期",
+            "summary": "营收1158亿美元，超过原1080亿美元±2%指引上沿约5%；非GAAP毛利率74.9%，也高于原指引区间。第四季收入指引1300亿美元±3%，包含额外一周；毛利率降至71%—72%是主要观察点。评分基于公司原指引，不把同比翻倍当作预期差。",
+            "comparisonBasis": "2026-08-26公司Q3收入1080亿美元±2%、毛利率74.0%±0.5个百分点；不是盘前动态一致预期。",
+            "metrics": {
+              "revenueUsdBillion": 115.8,
+              "nonGaapEps": 2.68,
+              "gaapEps": 2.7,
+              "nonGaapGrossMarginPct": 74.9
+            },
+            "sources": [
+              {
+                "name": "第三季官方结果",
+                "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx"
+              },
+              {
+                "name": "此前第三季指引",
+                "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/"
+              }
+            ],
+            "checkedAt": "2026-11-21T10:43:38Z"
+          },
+          "HD": {
+            "status": "scored",
+            "score": 68,
+            "band": "符合预期",
+            "summary": "营收434亿美元、同店销售增2.2%，调整EPS为3.86美元。公司称季度结果高于内部预期，但全年调整EPS增幅约2%，仍在此前0%—4%区间中部，未构成全面上修；住房需求和利润率仍需观察。",
+            "comparisonBasis": "对比公司8月维持的全年调整EPS增幅0%—4%及本期约2%；季度“超内部预期”为管理层表述，未将未核口径的Nasdaq EPS直接混比。",
+            "metrics": {
+              "revenueUsdBillion": 43.4,
+              "adjustedEps": 3.86,
+              "gaapEps": 3.72,
+              "comparableSalesGrowthPct": 2.2
+            },
+            "sources": [
+              {
+                "name": "第三季官方结果",
+                "url": "https://ir.homedepot.com/~/media/Files/H/HomeDepot-IR/press-release/q3-2026-earnings-release.pdf"
+              },
+              {
+                "name": "此前全年指引",
+                "url": "https://ir.homedepot.com/news-releases/2026/08-18-2026-110040463"
+              }
+            ],
+            "checkedAt": "2026-11-21T10:43:38Z"
+          },
+          "DIS": {
+            "status": "scored",
+            "score": 80,
+            "band": "超预期",
+            "summary": "调整EPS为1.77美元，高于AP披露的FactSet预期1.67美元；营收约259.5亿美元，高于预期252亿美元。财季多一周，不能把全部同比增长当成业务加速；剔除该周后调整EPS为1.59美元，仍同比增长。",
+            "comparisonBasis": "公司非GAAP调节表核对1.77美元，AP当期FactSet调查1.67美元及营收252亿美元；额外一周的影响按公司调节表单列。",
+            "metrics": {
+              "adjustedEps": 1.77,
+              "gaapEps": 1.51,
+              "consensusAdjustedEps": 1.67,
+              "revenueUsdBillion": 25.95,
+              "consensusRevenueUsdBillion": 25.2,
+              "adjustedEpsExExtraWeek": 1.59
+            },
+            "sources": [
+              {
+                "name": "官方财务调节表",
+                "url": "https://s206.q4cdn.com/979796730/files/content_files/q4-fy26-financial-reconciliations.pdf"
+              },
+              {
+                "name": "官方股东信",
+                "url": "https://s206.q4cdn.com/979796730/files/content_files/q4-fy26-earnings-final.pdf"
+              },
+              {
+                "name": "AP披露的FactSet预期",
+                "url": "https://apnews.com/article/c88bd38270c828fec937466caa6e4784"
+              }
+            ],
+            "checkedAt": "2026-11-21T10:43:38Z"
+          },
+          "PANW": {
+            "status": "scored",
+            "score": 83,
+            "band": "超预期",
+            "summary": "营收34.4亿美元，超过原33.0亿—33.1亿美元指引；非GAAP EPS为1.05美元，高于原0.96—0.98美元。NGS ARR和RPO也超原目标，全年指引上调；但GAAP营业利润同比下降，不能只看调整后利润。",
+            "comparisonBasis": "公司2026-09-01给出的Q1收入、非GAAP EPS、ARR和RPO原指引，分别与本期同口径结果比较。",
+            "metrics": {
+              "revenueUsdBillion": 3.44,
+              "nonGaapEps": 1.05,
+              "gaapEps": 0.57,
+              "ngsArrUsdBillion": 9.73,
+              "rpoUsdBillion": 21
+            },
+            "sources": [
+              {
+                "name": "第一季官方结果",
+                "url": "https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-reports-fiscal-first-quarter-2027-financial"
+              },
+              {
+                "name": "此前第一季指引",
+                "url": "https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-reports-fiscal-fourth-quarter-and-fiscal-10"
+              }
+            ],
+            "checkedAt": "2026-11-21T10:43:38Z"
+          },
+          "TJX": {
+            "status": "scored",
+            "score": 76,
+            "band": "超预期",
+            "summary": "同店销售增4%、调整EPS为1.34美元，公司披露销售和利润均高于计划。GAAP EPS为1.39美元，含关税退款净收益；调整后税前利润率12.5%，同比仍低0.2个百分点，不能把一次性退款全部当经营改善。",
+            "comparisonBasis": "公司披露的同店、利润率和EPS高于原计划；未取得独立同口径市场一致预期，评分采用公司计划比较而非全市场排名。",
+            "metrics": {
+              "revenueUsdBillion": 16,
+              "gaapEps": 1.39,
+              "adjustedEps": 1.34,
+              "comparableSalesGrowthPct": 4,
+              "adjustedPretaxMarginPct": 12.5
+            },
+            "sources": [
+              {
+                "name": "第三季官方结果",
+                "url": "https://investor.tjx.com/news-releases/news-release-details/tjx-companies-inc-reports-q3-fy27-results-comp-sales-growth-4"
+              }
+            ],
+            "checkedAt": "2026-11-21T10:43:38Z"
+          },
+          "WMT": {
+            "status": "scored",
+            "score": 76,
+            "band": "超预期",
+            "summary": "营收1888亿美元、全球电商增17%，调整EPS为0.65美元。全年调整EPS指引从2.80—2.87美元上调至2.84—2.89美元，营业利润预期也上调；库存增长与Flipkart促销跨季影响需一并看。",
+            "comparisonBasis": "同一官方结果中并列的8月20日与11月19日全年指引，使用调整EPS和固定汇率营业利润同口径比较。",
+            "metrics": {
+              "revenueUsdBillion": 188.8,
+              "adjustedEps": 0.65,
+              "gaapEps": 0.62,
+              "ecommerceGrowthPct": 17,
+              "fullYearAdjustedEpsLow": 2.84,
+              "fullYearAdjustedEpsHigh": 2.89
+            },
+            "sources": [
+              {
+                "name": "官方结果及新旧指引对照",
+                "url": "https://stock.walmart.com/sec-filings/all-sec-filings/content/0000104169-26-000168/earningsreleasefy27q3.htm"
+              }
+            ],
+            "checkedAt": "2026-11-21T10:43:38Z"
+          },
+          "INTU": {
+            "status": "scored",
+            "score": 78,
+            "band": "超预期",
+            "summary": "营收44亿美元、非GAAP EPS为2.91美元，公司披露季度结果高于原指引上端。在线业务增长20%，但全年EPS指引未提高，Credit Karma带来收入指引调整；拟售Mailchimp的影响尚未计入全年预测。",
+            "comparisonBasis": "管理层明确披露Q1高于原指引上端；全年GAAP/非GAAP EPS维持原区间，不将出售资产或同比增长冒充预期差。",
+            "metrics": {
+              "revenueUsdBillion": 4.4,
+              "nonGaapEps": 2.91,
+              "gaapEps": 2.59,
+              "onlineEcosystemGrowthPct": 20
+            },
+            "sources": [
+              {
+                "name": "官方第一季结果与全年指引",
+                "url": "https://investors.intuit.com/sec-filings/all-sec-filings/content/0000896878-26-000043/fy27q1earningspressrelease.htm"
+              }
+            ],
+            "checkedAt": "2026-11-21T10:43:38Z"
+          },
+          "BABA": {
+            "status": "unknown",
+            "score": null,
+            "band": null,
+            "summary": "营收2715亿元人民币、同比增10%，云外部客户收入增64%，云调整EBITA利润率14.5%。经营数据已核，但缺少同口径的季度盈利一致预期或公司原指引，暂不评分；不拿人民币每股、美元ADS或半年数字混比。",
+            "comparisonBasis": "缺少已核实的本季度同口径基准；不是财报未发布，也不以单纯增长代替超预期判断。",
+            "metrics": {
+              "revenueRmbBillion": 271.519,
+              "revenueGrowthPct": 10,
+              "cloudExternalRevenueGrowthPct": 64,
+              "cloudAdjustedEbitaMarginPct": 14.5
+            },
+            "sources": [
+              {
+                "name": "官方季度业绩公告",
+                "url": "https://data.alibabagroup.com/ecms-files/1532295521/e676aff4-e76d-489b-960a-47b9cf36485d/Alibaba%20Group%20Announces%20September%20Quarter%202026%20Results%20and%20Interim%20Results%20for%20the%20Six%20Months%20Ended%20September%2030%2C%202026.pdf"
+              }
+            ],
+            "checkedAt": "2026-11-21T10:43:38Z"
+          }
+        }
+      },
+      "pendingCompanies": [
+        "NVDA",
+        "HD",
+        "DIS",
+        "PANW",
+        "TJX",
+        "WMT",
+        "INTU",
+        "BABA"
+      ],
+      "grokRequests": 0,
+      "accessLimits": [
+        "Disney股东信PDF超过浏览工具单次大小限制，改核对公司财务调节表与可见原文；仅预期数值引用AP的FactSet调查",
+        "未将Nasdaq单列EPS预测与未经确认口径的GAAP/非GAAP直接比较"
+      ]
+    }
+  ],
+  "collectionResults": [],
+  "publication": {
+    "status": "ready-to-push",
+    "scope": "仅非X来源内容；X栏目未更新",
+    "localVerification": "未运行本地test/check/build/预览；已做来源核对、发布器写入及差异审阅",
+    "resources": [
+      "data/journal-learning.json",
+      "data/learning.json",
+      "data/counterintuitive-learning.json",
+      "data/earnings-calendar.json",
+      "data/macro-events.json",
+      "data/market-sentiment.json",
+      "data/market-volatility.json",
+      "config/person-registry.json",
+      "config/company-blurbs.json"
+    ]
+  },
+  "recordingNote": "CNN/VIX固定来源清单在调用前已于执行上下文明确；落盘晚于获取完成，独立阶段起点未成功记录，不补造。",
+  "uiObservation": {
+    "bot": "Grok Bot更新完成，X+github空输入可见；例行任务/Webhook/探针三项仍显示off。",
+    "requestsSubmitted": 0,
+    "privateAccountData": "账户具体显示只保存在work本地，不公开。"
+  }
+}
