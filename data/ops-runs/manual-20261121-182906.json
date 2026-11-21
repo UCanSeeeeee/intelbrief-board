@@ -4,8 +4,8 @@
   "trigger": "manual",
   "timezone": "Asia/Shanghai",
   "startedAt": "2026-11-21T18:29:27+08:00",
-  "updatedAt": "2026-11-21T18:45:53+08:00",
-  "finishedAt": null,
+  "updatedAt": "2026-11-21T18:48:49+08:00",
+  "finishedAt": "2026-11-21T18:48:49+08:00",
   "gitHeadAtStart": "e06edbe3d6cdc663144ab79ef1dd48775fb3540f",
   "stages": [
     {
@@ -40,15 +40,15 @@
     },
     {
       "name": "push",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-11-21T18:48:49+08:00",
+      "detail": "内容提交286f9ae已推送并核对远端master"
     },
     {
       "name": "verify",
-      "status": "pending",
-      "at": null,
-      "detail": null
+      "status": "ok",
+      "at": "2026-11-21T18:48:49+08:00",
+      "detail": "Cloudflare成功，14项公开资源SHA-256与内容提交一致；未做UI渲染测试"
     }
   ],
   "pages": {
@@ -77,11 +77,12 @@
       "detail": "新增11月18日FOMC纪要；近期待发布官方日期核对无变"
     }
   },
-  "status": "running",
+  "status": "partial",
   "error": null,
-  "commitHash": null,
+  "commitHash": "286f9aecfcddc948fefb41b0227c367a3e5009ba",
   "notes": [
-    "用户手动更新；不恢复定时，先核定采集预算并处理授权公开来源。"
+    "用户手动更新；不恢复定时，先核定采集预算并处理授权公开来源。",
+    "非X内容已上线；X预算选择待用户回复，未发出Grok请求，旧内容和进度保留，定时未恢复。"
   ],
   "timings": [
     {

@@ -1200,25 +1200,111 @@
   ],
   "collectionResults": [],
   "publication": {
-    "status": "ready-to-push",
+    "status": "published-non-x",
     "scope": "仅非X来源内容；X栏目未更新",
-    "localVerification": "未运行本地test/check/build/预览；已做来源核对、发布器写入及差异审阅",
-    "resources": [
-      "data/journal-learning.json",
-      "data/learning.json",
-      "data/counterintuitive-learning.json",
-      "data/earnings-calendar.json",
-      "data/macro-events.json",
-      "data/market-sentiment.json",
-      "data/market-volatility.json",
-      "config/person-registry.json",
-      "config/company-blurbs.json"
-    ]
+    "contentCommit": "286f9aecfcddc948fefb41b0227c367a3e5009ba",
+    "pushed": true,
+    "cloudflare": {
+      "status": "completed",
+      "conclusion": "success",
+      "deploymentId": "037c5182-db5c-43d5-bf1c-2ed5f144f7ee"
+    },
+    "verification": {
+      "verifiedAt": "2026-11-21T10:47:45.113Z",
+      "resources": [
+        {
+          "path": "data/journal-learning.json",
+          "status": 200,
+          "sha256": "cb21448a1df12ed429835b028ed498a8ca41d7f524d9bef8208b9b9a2a3aa024",
+          "matches": true
+        },
+        {
+          "path": "data/learning.json",
+          "status": 200,
+          "sha256": "edad183eb87cc424808cd979a5d998d3de089cdbaa9876f87ea65e561b2f7733",
+          "matches": true
+        },
+        {
+          "path": "data/counterintuitive-learning.json",
+          "status": 200,
+          "sha256": "7e268f9e00b53f41fd93df5ed0599b20b7a5fcf3f201f4387b284cd151a0bcb9",
+          "matches": true
+        },
+        {
+          "path": "data/earnings-calendar.json",
+          "status": 200,
+          "sha256": "6579986bc4642a27cfc86565328d01a5cf46ab6dabb592f3a4aa586be0e87a21",
+          "matches": true
+        },
+        {
+          "path": "data/macro-events.json",
+          "status": 200,
+          "sha256": "9505262f980013f8ae41fb137bd89d94f6d908fb3bf7ee4db41e15caae6ebde2",
+          "matches": true
+        },
+        {
+          "path": "data/market-sentiment.json",
+          "status": 200,
+          "sha256": "8bf9630d4add425c674e29c476c2ed20dc1056d109dde2b3f207a74a7124f94e",
+          "matches": true
+        },
+        {
+          "path": "data/market-volatility.json",
+          "status": 200,
+          "sha256": "77131cd54074a66fa1d9db10debce79197248ab14a72de78d8187693349b5fe7",
+          "matches": true
+        },
+        {
+          "path": "config/learning.json",
+          "status": 200,
+          "sha256": "a0068dd3d686d90111dd2b4070157fc445d865fe4077d92856e1dad08bb1b0f5",
+          "matches": true
+        },
+        {
+          "path": "config/company-blurbs.json",
+          "status": 200,
+          "sha256": "17d75014496d1cb522ce2ed7b9e226e249dfd246fc1194fb2e741a8bfe2b0d1c",
+          "matches": true
+        },
+        {
+          "path": "config/macro-events.json",
+          "status": 200,
+          "sha256": "9cefdfc20b7c802e23c2c46579893444bd296646121295be7cecd3feee2b0561",
+          "matches": true
+        },
+        {
+          "path": "data/reading-board.json",
+          "status": 200,
+          "sha256": "13a8412a1a81109ab29578491d2e65b1fd6badfb7a7f9fd32cc2531484197d75",
+          "matches": true
+        },
+        {
+          "path": "data/people-intelligence.json",
+          "status": 200,
+          "sha256": "acf18222b9954704043e044e5575c9f287627ca94ea7a9bca907fd6056f8982d",
+          "matches": true
+        },
+        {
+          "path": "data/ticker-intelligence.json",
+          "status": 200,
+          "sha256": "b2e631de504311b3e7bcd12cb5f3b0ec754c8e4ded24d6622877830b33bffd0f",
+          "matches": true
+        },
+        {
+          "path": "data/ai-intelligence.json",
+          "status": 200,
+          "sha256": "9491c525d9beedcf55591a7c31556c1448bf2617b6f8bcb494a45059f811c129",
+          "matches": true
+        }
+      ]
+    },
+    "localVerification": "按用户要求未运行本地test/check/build/预览；来源核验与发布器自身契约照常执行。"
   },
   "recordingNote": "CNN/VIX固定来源清单在调用前已于执行上下文明确；落盘晚于获取完成，独立阶段起点未成功记录，不补造。",
   "uiObservation": {
     "bot": "Grok Bot更新完成，X+github空输入可见；例行任务/Webhook/探针三项仍显示off。",
     "requestsSubmitted": 0,
     "privateAccountData": "账户具体显示只保存在work本地，不公开。"
-  }
+  },
+  "collectionCompletedAt": "2026-11-21T10:47:45.113Z"
 }
